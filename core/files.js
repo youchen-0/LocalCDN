@@ -65,6 +65,14 @@ var files = {
         'resources/backbone.js/1.2.1/backbone-min.jsm': true,
         'resources/backbone.js/1.2.2/backbone-min.jsm': true,
         'resources/backbone.js/1.2.3/backbone-min.jsm': true,
+        
+        // Bootstrap.js
+        'resources/bootstrap.js/4.3.1/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/4.4.1/bootstrap.min.jsm': true,
+
+        // Bootstrap.css
+        'resources/bootstrap.css/4.3.1/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/4.4.1/bootstrap.min.cssm': true,
 
         // Dojo
         'resources/dojo/1.4.1/dojo/dojo.jsm': true,

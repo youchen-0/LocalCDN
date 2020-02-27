@@ -174,6 +174,8 @@ helpers.determineCdnName = function (domainName) {
         return 'Geekzu Public Service [Mirror]';
     case 'ajax.proxy.ustclug.org':
         return 'USTC Linux User Group [Mirror]';
+    case 'stackpath.bootstrapcdn.com':
+        return 'StackPath BootstrapCDN';
     default:
         return 'Unknown';
     }
@@ -211,6 +213,10 @@ helpers.determineResourceName = function (filename) {
         return 'Underscore.js';
     case 'webfont.jsm':
         return 'Web Font Loader';
+    case 'bootstrap.min.cssm':
+        return 'Bootstrap CSS';
+    case 'bootstrap.min.jsm':
+        return 'Bootstrap JS';
     default:
         return 'Unknown';
     }
