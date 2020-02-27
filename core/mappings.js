@@ -292,9 +292,9 @@ var mappings = {
     },
     // BootstrapCDN
     'stackpath.bootstrapcdn.com': {
-        '/': {
-            'bootstrap.js/{version}/bootstrap.min.': resources.bootstrapJS,
-            'bootstrap.css/{version}/bootstrap.min.': resources.bootstrapCSS
+        '/bootstrap/': {
+            '{version}/js/bootstrap.min.': resources.bootstrapJS,
+            '{version}/css/bootstrap.min.': resources.bootstrapCSS
         }
     }
 };
