@@ -289,6 +289,13 @@ var mappings = {
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'webfont/{version}/webfontloader.': resources.webfont
         }
+    },
+    // BootstrapCDN
+    'stackpath.bootstrapcdn.com': {
+        '/': {
+            'bootstrap.js/{version}/bootstrap.min.': resources.bootstrapJS,
+            'bootstrap.css/{version}/bootstrap.min.': resources.bootstrapCSS
+        }
     }
 };
 
