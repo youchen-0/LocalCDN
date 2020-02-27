@@ -69,6 +69,9 @@ var files = {
         // Bootstrap.js
         'resources/bootstrap.js/4.4.1/bootstrap.min.jsm': true,
 
+        // Bootstrap.css
+        'resources/bootstrap.css/4.4.1/bootstrap.min.cssm': true,
+
         // Dojo
         'resources/dojo/1.4.1/dojo/dojo.jsm': true,
         'resources/dojo/1.4.5/dojo/dojo.jsm': true,
