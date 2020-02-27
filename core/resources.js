@@ -37,7 +37,7 @@ var resources = {
     // Bootstrap.css
     'bootstrapCSS': {
         'path': 'resources/bootstrap.css/{version}/bootstrap.min.cssm',
-        'type': 'application/stylesheet'
+        'type': 'text/css'
     },
     // Dojo
     'dojo': {

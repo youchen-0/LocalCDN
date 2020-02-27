@@ -290,11 +290,11 @@ var mappings = {
             'webfont/{version}/webfontloader.': resources.webfont
         }
     },
-    // BootstrapCDN
+    // StackPath BootstrapCDN
     'stackpath.bootstrapcdn.com': {
         '/bootstrap/': {
-            '{version}/js/bootstrap.min.': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.': resources.bootstrapCSS
+            '{version}/js/bootstrap.min.js': resources.bootstrapJS,
+            '{version}/css/bootstrap.min.css': resources.bootstrapCSS
         }
     }
 };
