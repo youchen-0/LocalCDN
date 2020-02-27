@@ -1,0 +1,70 @@
+{
+  "extensionDescription": {
+    "message": "Véd attól, hogy az „ingyenes”, centralizált tartalomszolgáltatók kövessenek.",
+    "description": "Extension description."
+  },
+  "disableProtectionTitle": {
+    "message": "Védelem kikapcsolása ezen az oldalon",
+    "description": "Disable protection title."
+  },
+  "enableProtectionTitle": {
+    "message": "Védelem bekapcsolása",
+    "description": "Enable protection title."
+  },
+  "amountInjectedTitle": {
+    "message": "Helyből beszúrt erőforrások számlálója",
+    "description": "Amount injected title."
+  },
+  "amountInjectedDescription": {
+    "message": "Telepítés óta beszúrt helyi Content Delivery Network erőforrások száma.",
+    "description": "Amount injected description."
+  },
+  "optionsTitle": {
+    "message": "Beállítások",
+    "description": "Options title."
+  },
+  "showIconBadgeTitle": {
+    "message": "Beszúrások számlálójának megjelenítése az ikonon",
+    "description": "Show icon badge title."
+  },
+  "showIconBadgeDescription": {
+    "message": "A beszúrt erőforrások számának megjelenítése a bővítmény ikonján.",
+    "description": "Show icon badge description."
+  },
+  "blockMissingTitle": {
+    "message": "Hiányzó erőforrások blokkolása",
+    "description": "Block requests for missing resources title."
+  },
+  "blockMissingDescription": {
+    "message": "Megszakított kérések blokkolása, amennyiben a kért erőforrás nem érhető el helyben.",
+    "description": "Block requests for missing resources description."
+  },
+  "disablePrefetchTitle": {
+    "message": "Link prefetching letiltása",
+    "description": "Disable prefetch title."
+  },
+  "disablePrefetchDescription": {
+    "message": "Letiltott kérések kiszivárgásának megakadályozása.",
+    "description": "Disable prefetch description."
+  },
+  "stripMetadataTitle": {
+    "message": "Metaadatok törlése az engedélyezett kérésekből",
+    "description": "Strip metadata title."
+  },
+  "stripMetadataDescription": {
+    "message": "Érzékeny adatok törlése az engedélyezett CDN kérésekből.",
+    "description": "Strip metadata description."
+  },
+  "whitelistedDomainsTitle": {
+    "message": "Domainek vizsgálatának elhagyása",
+    "description": "Whitelisted domains title."
+  },
+  "whitelistedDomainsDescription": {
+    "message": "Írj be domaineket, amik ne legyenek megvizsgálva. Az elemeket pontosvesszővel (;) kell elválasztani.",
+    "description": "Whitelisted domains description."
+  },
+  "advancedLabel": {
+    "message": "Haladó",
+    "description": "Advanced label."
+  }
+}

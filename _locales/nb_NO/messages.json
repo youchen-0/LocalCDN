@@ -1,0 +1,70 @@
+{
+  "extensionDescription": {
+    "message": "Beskytter mot sporing gjort av \"gratis\" sentralisert innholdslevering.",
+    "description": "Extension description."
+  },
+  "disableProtectionTitle": {
+    "message": "Skru av beskyttelse på dette nettstedet",
+    "description": "Disable protection title."
+  },
+  "enableProtectionTitle": {
+    "message": "Skru på beskyttelse",
+    "description": "Enable protection title."
+  },
+  "amountInjectedTitle": {
+    "message": "Teller for lokalt innsmettede ressurser",
+    "description": "Amount injected title."
+  },
+  "amountInjectedDescription": {
+    "message": "Antall lokale ressursinnsmettinger i innholdsleveringsnettverk siden installasjonen.",
+    "description": "Amount injected description."
+  },
+  "optionsTitle": {
+    "message": "Innstillinger",
+    "description": "Options title."
+  },
+  "showIconBadgeTitle": {
+    "message": "Vis innsmettingstelleren oppå ikonet",
+    "description": "Show icon badge title."
+  },
+  "showIconBadgeDescription": {
+    "message": "Vis antall innsmettede ressurser oppå utvidelsens ikon.",
+    "description": "Show icon badge description."
+  },
+  "blockMissingTitle": {
+    "message": "Blokker forespørsler som spør etter manglende ressurser",
+    "description": "Block requests for missing resources title."
+  },
+  "blockMissingDescription": {
+    "message": "Avbryt oppsnappede forespørsler dersom den påkrevde ressursen ikke er lokalt tilgjengelig.",
+    "description": "Block requests for missing resources description."
+  },
+  "disablePrefetchTitle": {
+    "message": "Skru av forhåndsinnlasting av lenker",
+    "description": "Disable prefetch title."
+  },
+  "disablePrefetchDescription": {
+    "message": "Hindre nektede forespørsler fra å lekke ut til leveringsnettverker.",
+    "description": "Disable prefetch description."
+  },
+  "stripMetadataTitle": {
+    "message": "Fjern metadata fra tillatte forespørsler",
+    "description": "Strip metadata title."
+  },
+  "stripMetadataDescription": {
+    "message": "Slett sensitive data fra tillatte CDN-forespørsler for ytterligere privatliv.",
+    "description": "Strip metadata description."
+  },
+  "whitelistedDomainsTitle": {
+    "message": "Ekskluder domener fra inspeksjoner",
+    "description": "Whitelisted domains title."
+  },
+  "whitelistedDomainsDescription": {
+    "message": "Skriv inn domener her for å hviteliste dem. Adskill flere oppføringer med semikoloner (;).",
+    "description": "Whitelisted domains description."
+  },
+  "advancedLabel": {
+    "message": "Avansert",
+    "description": "Advanced label."
+  }
+}

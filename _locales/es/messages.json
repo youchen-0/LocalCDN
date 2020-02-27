@@ -1,0 +1,70 @@
+{
+  "extensionDescription": {
+    "message": "Protege contra el rastreo con la entrega centralizada y «gratuita» de contenido.",
+    "description": "Extension description."
+  },
+  "disableProtectionTitle": {
+    "message": "Desactivar protección en este sitio",
+    "description": "Disable protection title."
+  },
+  "enableProtectionTitle": {
+    "message": "Activar protección",
+    "description": "Enable protection title."
+  },
+  "amountInjectedTitle": {
+    "message": "Contador de recursos inyectados localmente",
+    "description": "Amount injected title."
+  },
+  "amountInjectedDescription": {
+    "message": "Cifra de inyecciones de fuentes de Redes de Entrega de Contenido desde instalación.",
+    "description": "Amount injected description."
+  },
+  "optionsTitle": {
+    "message": "Opciones",
+    "description": "Options title."
+  },
+  "showIconBadgeTitle": {
+    "message": "Mostrar el conteo de inyecciones en el icono",
+    "description": "Show icon badge title."
+  },
+  "showIconBadgeDescription": {
+    "message": "Mostrar el número de recursos inyectados en el icono de extensión.",
+    "description": "Show icon badge description."
+  },
+  "blockMissingTitle": {
+    "message": "Bloquear peticiones de fuentes faltantes",
+    "description": "Block requests for missing resources title."
+  },
+  "blockMissingDescription": {
+    "message": "Cancelar las peticiones interceptadas cuando el recurso requerido no se encuentra localmente.",
+    "description": "Block requests for missing resources description."
+  },
+  "disablePrefetchTitle": {
+    "message": "Deshabilitar la captura previa de enlaces",
+    "description": "Disable prefetch title."
+  },
+  "disablePrefetchDescription": {
+    "message": "Impedir que las peticiones no permitidas se escapen hacia redes de distribución.",
+    "description": "Disable prefetch description."
+  },
+  "stripMetadataTitle": {
+    "message": "Remover metadatos de las solicitudes permitidas",
+    "description": "Strip metadata title."
+  },
+  "stripMetadataDescription": {
+    "message": "Borrar datos sensibles de solicitudes CDN autorizadas para mejorar la privacidad.",
+    "description": "Strip metadata description."
+  },
+  "whitelistedDomainsTitle": {
+    "message": "Excluir dominios de inspecciones",
+    "description": "Whitelisted domains title."
+  },
+  "whitelistedDomainsDescription": {
+    "message": "Ingresa los dominios que serán ignorados. Separa múltiples entradas con punto y coma (;).",
+    "description": "Whitelisted domains description."
+  },
+  "advancedLabel": {
+    "message": "Avanzado",
+    "description": "Advanced label."
+  }
+}

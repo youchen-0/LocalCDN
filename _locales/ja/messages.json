@@ -1,0 +1,70 @@
+{
+  "extensionDescription": {
+    "message": "「無料」と称してあなたを追跡する大規模なCDNを迂回して、プライバシーを守ります。",
+    "description": "Extension description."
+  },
+  "disableProtectionTitle": {
+    "message": "このサイトでは保護を無効にする",
+    "description": "Disable protection title."
+  },
+  "enableProtectionTitle": {
+    "message": "保護を有効にする",
+    "description": "Enable protection title."
+  },
+  "amountInjectedTitle": {
+    "message": "ローカルのリソースを使用した回数",
+    "description": "Amount injected title."
+  },
+  "amountInjectedDescription": {
+    "message": "インストール後にローカルのCDNリソースを使用した回数です。",
+    "description": "Amount injected description."
+  },
+  "optionsTitle": {
+    "message": "オプション",
+    "description": "Options title."
+  },
+  "showIconBadgeTitle": {
+    "message": "ローカルのリソースを使用した回数をアイコンに表示する",
+    "description": "Show icon badge title."
+  },
+  "showIconBadgeDescription": {
+    "message": "拡張機能のアイコンに、ローカルのリソースを使用した回数を表示します。",
+    "description": "Show icon badge description."
+  },
+  "blockMissingTitle": {
+    "message": "アドオンに含まれないリソースへのリクエストをブロックする",
+    "description": "Block requests for missing resources title."
+  },
+  "blockMissingDescription": {
+    "message": "必要なリソースがローカルで利用できない場合、リクエストを取り消します。",
+    "description": "Block requests for missing resources description."
+  },
+  "disablePrefetchTitle": {
+    "message": "リンクプリフェッチを無効にする",
+    "description": "Disable prefetch title."
+  },
+  "disablePrefetchDescription": {
+    "message": "許可されていないリクエストをネットワークに発行しないようにする",
+    "description": "Disable prefetch description."
+  },
+  "stripMetadataTitle": {
+    "message": "許可されたリクエストからメタデータを取り除く",
+    "description": "Strip metadata title."
+  },
+  "stripMetadataDescription": {
+    "message": "プライバシー向上のために許可されたCDNリクエストから機密データを消去する。",
+    "description": "Strip metadata description."
+  },
+  "whitelistedDomainsTitle": {
+    "message": "保護から除外するドメイン",
+    "description": "Whitelisted domains title."
+  },
+  "whitelistedDomainsDescription": {
+    "message": "ホワイトリストに登録したいドメインを入力してください。エントリが複数ある場合、セミコロン (;) で区切ってください。",
+    "description": "Whitelisted domains description."
+  },
+  "advancedLabel": {
+    "message": "エラー内容",
+    "description": "Advanced label."
+  }
+}
