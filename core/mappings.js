@@ -181,12 +181,14 @@ var mappings = {
             'webfont/{version}/webfont_debug.': resources.webfont
         }
     },
-    // Baidu CDN [Deprecated]
+    // Baidu CDN
     'libs.baidu.com': {
         '/': {
-            'backbone/{version}/backbone.': resources.backbone,
-            'backbone/{version}/backbone-min.': resources.backbone,
+            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'backbone.js/{version}/backbone.': resources.backbone,
+            'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
+            'ember.js/{version}/ember.min.js': resources.ember.js,
             'ext-core/{version}/ext-core.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
@@ -196,8 +198,123 @@ var mappings = {
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
-            'underscore/{version}/underscore.': resources.underscore,
-            'underscore/{version}/underscore-min.': resources.underscore,
+            'underscore.js/{version}/underscore.': resources.underscore,
+            'underscore.js/{version}/underscore-min.': resources.underscore,
+            'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfont_debug.': resources.webfont
+        },
+        '/libs/': {
+            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'backbone.js/{version}/backbone.': resources.backbone,
+            'backbone.js/{version}/backbone-min.': resources.backbone,
+            'dojo/{version}/dojo.': resources.dojo,
+            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ext-core/{version}/ext-core.': resources.extCore,
+            'jquery/{version}/jquery.': resources.jQuery,
+            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
+            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
+            'prototype/{version}/prototype.': resources.prototypeJS,
+            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'swfobject/{version}/swfobject.': resources.swfobject,
+            'underscore.js/{version}/underscore.': resources.underscore,
+            'underscore.js/{version}/underscore-min.': resources.underscore,
+            'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfont_debug.': resources.webfont
+        }
+    },
+    // Baidu CDN
+    'apps.bdimg.com': {
+        '/libs/': {
+            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'backbone.js/{version}/backbone.': resources.backbone,
+            'backbone.js/{version}/backbone-min.': resources.backbone,
+            'dojo/{version}/dojo.': resources.dojo,
+            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ext-core/{version}/ext-core.': resources.extCore,
+            'jquery/{version}/jquery.': resources.jQuery,
+            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
+            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
+            'prototype/{version}/prototype.': resources.prototypeJS,
+            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'swfobject/{version}/swfobject.': resources.swfobject,
+            'underscore.js/{version}/underscore.': resources.underscore,
+            'underscore.js/{version}/underscore-min.': resources.underscore,
+            'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfont_debug.': resources.webfont
+        }
+    },
+    // Staticfile CDN
+    'cdn.staticfile.org': {
+        '/': {
+            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'backbone.js/{version}/backbone.': resources.backbone,
+            'backbone.js/{version}/backbone-min.': resources.backbone,
+            'dojo/{version}/dojo.': resources.dojo,
+            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ext-core/{version}/ext-core.': resources.extCore,
+            'jquery/{version}/jquery.': resources.jQuery,
+            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
+            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'modernizr/{version}/modernizr.': resources.modernizr,
+            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
+            'prototype/{version}/prototype.': resources.prototypeJS,
+            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'swfobject/{version}/swfobject.': resources.swfobject,
+            'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfont_debug.': resources.webfont
+        }
+    },
+    // BootCDN
+    'cdn.bootcss.com': {
+        '/': {
+            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'backbone.js/{version}/backbone.': resources.backbone,
+            'backbone.js/{version}/backbone-min.': resources.backbone,
+            'dojo/{version}/dojo.': resources.dojo,
+            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ext-core/{version}/ext-core.': resources.extCore,
+            'jquery/{version}/jquery.': resources.jQuery,
+            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
+            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'modernizr/{version}/modernizr.': resources.modernizr,
+            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
+            'prototype/{version}/prototype.': resources.prototypeJS,
+            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'swfobject/{version}/swfobject.': resources.swfobject,
+            'underscore.js/{version}/underscore.': resources.underscore,
+            'underscore.js/{version}/underscore-min.': resources.underscore,
+            'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfont_debug.': resources.webfont
+        }
+    },
+    // Tencent Public Libraries
+    'mat1.gtimg.com': {
+        '/libs/' :{
+            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'jquery/{version}/jquery.': resources.jQuery,
+        }
+    },
+    // Qihoo 360 CDN
+    'lib.baomitu.com': {
+        '/': {
+            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'backbone.js/{version}/backbone.': resources.backbone,
+            'backbone.js/{version}/backbone-min.': resources.backbone,
+            'dojo/{version}/dojo.': resources.dojo,
+            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ext-core/{version}/ext-core.': resources.extCore,
+            'jquery/{version}/jquery.': resources.jQuery,
+            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
+            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'modernizr/{version}/modernizr.': resources.modernizr,
+            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
+            'prototype/{version}/prototype.': resources.prototypeJS,
+            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'swfobject/{version}/swfobject.': resources.swfobject,
+            'underscore.js/{version}/underscore.': resources.underscore,
+            'underscore.js/{version}/underscore-min.': resources.underscore,
             'webfont/{version}/webfont.': resources.webfont,
             'webfont/{version}/webfont_debug.': resources.webfont
         }
