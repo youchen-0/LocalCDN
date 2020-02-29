@@ -106,6 +106,7 @@ var mappings = {
             'dojo/{version}/dojo.': resources.dojo,
             'emberjs/{version}/ember.': resources.ember,
             'jquery/{version}/jquery.': resources.jQuery,
+            'npm/jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery.ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery.ui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'momentjs/{version}/moment.': resources.moment,
