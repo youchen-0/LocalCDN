@@ -50,6 +50,75 @@ var files = {
         'resources/angularjs/1.4.0/angular.min.jsm': true,
         'resources/angularjs/1.4.2/angular.min.jsm': true,
         'resources/angularjs/1.4.8/angular.min.jsm': true,
+        'resources/angularjs/1.5.8/angular.min.jsm': true,
+        'resources/angularjs/1.6.1/angular.min.jsm': true,
+        'resources/angularjs/1.6.5/angular.min.jsm': true,
+
+        'resources/angularjs/1.6.9/angular.min.jsm': true,
+        'resources/angularjs/1.6.9/angular-animated.min.jsm': true,
+        'resources/angularjs/1.6.9/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.6.9/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.6.9/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.0/angular.min.jsm': true,
+        'resources/angularjs/1.7.0/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.0/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.0/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.0/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.1/angular.min.jsm': true,
+        'resources/angularjs/1.7.1/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.1/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.1/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.1/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.2/angular.min.jsm': true,
+        'resources/angularjs/1.7.2/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.2/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.2/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.2/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.3/angular.min.jsm': true,
+        'resources/angularjs/1.7.3/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.3/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.3/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.3/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.4/angular.min.jsm': true,
+        'resources/angularjs/1.7.4/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.4/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.4/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.4/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.5/angular.min.jsm': true,
+        'resources/angularjs/1.7.5/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.5/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.5/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.5/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.6/angular.min.jsm': true,
+        'resources/angularjs/1.7.6/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.6/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.6/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.6/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.7/angular.min.jsm': true,
+        'resources/angularjs/1.7.7/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.7/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.7/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.7/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.8/angular.min.jsm': true,
+        'resources/angularjs/1.7.8/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.8/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.8/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.8/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.7.9/angular.min.jsm': true,
+        'resources/angularjs/1.7.9/angular-animated.min.jsm': true,
+        'resources/angularjs/1.7.9/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.7.9/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.9/angular-touch.min.jsm': true,
 
         // Backbone.js
         'resources/backbone.js/0.9.0/backbone-min.jsm': true,
@@ -289,9 +358,6 @@ var files = {
     [Environment.STAGING]: {
 
         // AngularJS
-        'resources/angularjs/1.5.8/angular.min.jsm': true,
-        'resources/angularjs/1.6.1/angular.min.jsm': true,
-        'resources/angularjs/1.6.5/angular.min.jsm': true,
 
         // Backbone.js
         'resources/backbone.js/1.3.3/backbone-min.jsm': true,

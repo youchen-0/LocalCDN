@@ -187,6 +187,14 @@ helpers.determineResourceName = function (filename) {
 
     case 'angular.min.jsm':
         return 'AngularJS';
+    case 'angular-animate.min.jsm':
+        return 'AngularJS Animate';
+    case 'angular-cookies.min.jsm':
+        return 'AngularJS Cookies';
+    case 'angular-sanitize.min.jsm':
+        return 'AngularJS Sanitize';
+    case 'angular-touch.min.jsm':
+        return 'AngularJS Touch';
     case 'backbone-min.jsm':
         return 'Backbone.js';
     case 'dojo.jsm':

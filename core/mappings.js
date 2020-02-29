@@ -23,6 +23,10 @@ var mappings = {
     'ajax.googleapis.com': {
         '/ajax/libs/': {
             'angularjs/{version}/angular.': resources.angular,
+            'angularjs/{version}/angular-animate.': resources.angularAnimate,
+            'angularjs/{version}/angular-sanitize.': resources.angularSanitize,
+            'angularjs/{version}/angular-cookies.': resources.angularCookies,
+            'angularjs/{version}/angular-touch.': resources.angularTouch,
             'dojo/{version}/dojo/dojo.': resources.dojo,
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,

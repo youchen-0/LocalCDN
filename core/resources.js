@@ -24,6 +24,22 @@ var resources = {
         'path': 'resources/angularjs/{version}/angular.min.jsm',
         'type': 'application/javascript'
     },
+    'angularAnimate': {
+        'path': 'resources/angularjs/{version}/angular-animate.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularSanitize': {
+        'path': 'resources/angularjs/{version}/angular-sanitize.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularCookies': {
+        'path': 'resources/angularjs/{version}/angular-cookies.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularTouch': {
+        'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
+        'type': 'application/javascript'
+    },
     // Backbone.js
     'backbone': {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
