@@ -381,6 +381,20 @@ var mappings = {
             '{version}/js/bootstrap.min.js': resources.bootstrapJS,
             '{version}/css/bootstrap.min.css': resources.bootstrapCSS
         }
+    },
+    // MaxCDN Bootstrap
+    'maxcdn.bootstrapcdn.com': {
+        '/bootstrap/': {
+            '{version}/js/bootstrap.min.js': resources.bootstrapJS,
+            '{version}/css/bootstrap.min.css': resources.bootstrapCSS
+        }
+    },
+    // NetDNA Bootstrap
+    'netdna.bootstrapcdn.com': {
+        '/bootstrap/': {
+            '{version}/js/bootstrap.min.js': resources.bootstrapJS,
+            '{version}/css/bootstrap.min.css': resources.bootstrapCSS
+        }
     }
 };
 
