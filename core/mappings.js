@@ -69,7 +69,6 @@ var mappings = {
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
-            'mathjax/{version}/MathJax.js': resources.MathJax,
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,

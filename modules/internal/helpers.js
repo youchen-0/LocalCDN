@@ -225,8 +225,6 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap CSS';
     case 'bootstrap.min.jsm':
         return 'Bootstrap JS';
-    case 'MathJax.jsm':
-        return 'MathJax';
     default:
         return 'Unknown';
     }
