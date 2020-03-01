@@ -247,6 +247,9 @@ var files = {
         'resources/jqueryui/1.11.3/jquery-ui.min.jsm': true,
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
 
+        // MathJax.js
+        'resources/mathjax.js/2.7.5/MathJax.jsm': true,
+
         // Modernizr
         'resources/modernizr/2.6.2/modernizr.min.jsm': true,
         'resources/modernizr/2.7.1/modernizr.min.jsm': true,

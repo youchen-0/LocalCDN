@@ -80,6 +80,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    // MathJax
+    'MathJax': {
+        'path': 'resources/mathjax.js/{version}/MathJax.jsm',
+        'type': 'application/javascript'
+    },
     // Modernizr
     'modernizr': {
         'path': 'resources/modernizr/{version}/modernizr.min.jsm',
