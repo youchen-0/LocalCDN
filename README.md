@@ -16,7 +16,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 ## We need you!
 
-<img src="https://gitlab.com/nobody42/localcdn/raw/master/welcome/we-need-you.png" width="350" alt="We Need You!">
+<img src="https://gitlab.com/nobody42/localcdn/-/raw/master/pages/welcome/we-need-you.png" alt="We Need You!">
 
 The whole Internet is full of different frameworks and CDNs that negatively affect your privacy. If you find a website that embeds another unsupported version of a framework, please report that website.
 
