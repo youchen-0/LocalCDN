@@ -3,7 +3,24 @@ LocalCDN (forked from Decentraleyes)
 
 A web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://decentraleyes.org/test/) to find out if you are properly protected. For more information, please read this [basic introduction](https://git.synz.io/Synzvato/decentraleyes/wikis/Simple-Introduction).
 
+## Differences between LocalCDN and Decentraleyes
+
+LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
+
+* jQuery up to 3.4.1
+* Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
+* Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
+* AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch
+
 > **Note:** LocalCDN is no silver bullet, but it does prevent a lot of websites from making you send these kinds of requests. Ultimately, you can make LocalCDN block requests for any missing CDN resources, too.
+
+## We need you!
+
+<img src="https://gitlab.com/nobody42/localcdn/raw/master/welcome/we-need-you.png" width="350" alt="We Need You!">
+
+The whole Internet is full of different frameworks and CDNs that negatively affect your privacy. If you find a website that embeds another unsupported version of a framework, please report that website.
+
+On behalf of everyone: Thank you!
 
 ## Contributing Code
 

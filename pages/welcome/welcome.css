@@ -32,11 +32,21 @@ a {
     color: #777;
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
 .btn-panel {
     cursor: default;
     font-family: 'Noto Sans', Arial, sans-serif;
     margin: 35px auto;
     max-width: 750px;
+    display: flex;
 }
 
 .topic-badge {
@@ -97,10 +107,7 @@ a {
     margin-right: 15px;
     padding: 11px 17px;
     text-decoration: none;
-}
-
-.btn-text {
-    margin-left: 10px;
+    text-align: center;
 }
 
 .btn-gitlab {
@@ -141,7 +148,6 @@ a {
 
 .notice {
     align-items: center;
-    display: flex;
     font-family: 'Noto Sans', Arial, sans-serif;
     margin-left: auto;
     margin-right: auto;
@@ -165,6 +171,12 @@ a {
     padding: 8px 11px;
 }
 
+.inherit {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0px;
+}
+
 .topic-label {
     color: #5a8f79;
     font-style: normal;
@@ -173,6 +185,24 @@ a {
 
 .color-purple {
     color: #9e608e;
+}
+
+.uncle-sam,
+.we-need-you-title {
+	margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+	display: block;
+}
+
+.uncle-sam {
+    display: block;
+}
+
+.we-need-you-declaration {
+    color: #777;
+    font-weight: normal;
+    text-align: center;
 }
 
 /**
@@ -187,11 +217,11 @@ a {
 }
 
 @media screen and (max-width: 550px) {
-    
+
     .btn {
         padding: 13px 18px 12px
     }
-    
+
     .btn-text {
         display: none
     }
