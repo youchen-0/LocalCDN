@@ -1,7 +1,7 @@
 LocalCDN (forked from Decentraleyes)
 =============
 
-A web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://decentraleyes.org/test/) to find out if you are properly protected. For more information, please read this [basic introduction](https://git.synz.io/Synzvato/decentraleyes/wikis/Simple-Introduction).
+A web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://decentraleyes.org/test/) to find out if you are properly protected. For more information, please read this [basic introduction from Decentraleyes](https://git.synz.io/Synzvato/decentraleyes/wikis/Simple-Introduction) or our [Wiki pages](https://gitlab.com/nobody42/localcdn/-/wikis/home).
 
 ## Differences between LocalCDN and Decentraleyes
 
@@ -29,6 +29,7 @@ Suggestions in the form of **Issues**, and contributions in the form of **Merge 
 #### Prerequisites
 
 * Mozilla Firefox 63 *(or higher)*.
+* Chromium based browser ([check out the Wiki page](https://gitlab.com/nobody42/localcdn/-/wikis/Install-on-Chromium-based-browsers))
 
 #### Running the Code
 
