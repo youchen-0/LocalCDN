@@ -134,12 +134,26 @@ var files = {
         'resources/backbone.js/1.2.1/backbone-min.jsm': true,
         'resources/backbone.js/1.2.2/backbone-min.jsm': true,
         'resources/backbone.js/1.2.3/backbone-min.jsm': true,
-        
+
         // Bootstrap.js
+        'resources/bootstrap.js/2.3.2/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/3.1.1/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/3.2.0/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/3.3.6/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/3.3.7/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/4.0.0/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/4.1.0/bootstrap.min.jsm': true,
         'resources/bootstrap.js/4.3.1/bootstrap.min.jsm': true,
         'resources/bootstrap.js/4.4.1/bootstrap.min.jsm': true,
 
         // Bootstrap.css
+        'resources/bootstrap.css/2.3.2/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/3.1.1/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/3.2.0/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/3.3.6/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/3.3.7/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/4.0.0/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/4.1.0/bootstrap.min.cssm': true,
         'resources/bootstrap.css/4.3.1/bootstrap.min.cssm': true,
         'resources/bootstrap.css/4.4.1/bootstrap.min.cssm': true,
 

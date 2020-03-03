@@ -67,6 +67,7 @@ var mappings = {
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
+            'jquery/{version}/jquery.min.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'modernizr/{version}/modernizr.': resources.modernizr,
@@ -74,6 +75,8 @@ var mappings = {
             'mootools/{version}/mootools-core': resources.mootools,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
+            '/twitter-bootstrap/{version}/js/bootstrap.min.js': resources.bootstrapJS,
+            '/twitter-bootstrap/{version}/css/bootstrap.min.css': resources.bootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'webfont/{version}/webfont': resources.webfont
