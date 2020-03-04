@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Για προχωρημένους",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Δημιουργία συνόλων κανόνων για uBlock ή uMatrix",
+    "description": "Generate rule set title."
   }
 }

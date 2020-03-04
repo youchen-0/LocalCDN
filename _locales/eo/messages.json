@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Spertula",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Generi regulojn por uBlock aŭ uMatrix",
+    "description": "Generate rule set title."
   }
 }

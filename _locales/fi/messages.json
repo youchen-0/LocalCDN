@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Edistynyt",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Luo sääntöjoukot uBlockille tai uMatrixille",
+    "description": "Generate rule set title."
   }
 }

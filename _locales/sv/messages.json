@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Avancerat",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Generera regeluppsättningar för uBlock eller uMatrix",
+    "description": "Generate rule set title."
   }
 }

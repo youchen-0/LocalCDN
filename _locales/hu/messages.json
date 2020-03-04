@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Haladó",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Szabálykészleteket generálhat az uBlock vagy az uMatrix számára",
+    "description": "Generate rule set title."
   }
 }

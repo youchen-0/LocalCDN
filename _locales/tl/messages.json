@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Naka-usad",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Bumuo ng mga set ng panuntunan para sa uBlock o uMatrix",
+    "description": "Generate rule set title."
   }
 }

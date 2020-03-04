@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Gelişmiş",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "UBlock veya uMatrix için kural kümeleri oluşturma",
+    "description": "Generate rule set title."
   }
 }

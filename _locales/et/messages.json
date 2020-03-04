@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Edasijõudnuile",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Genereerige reeglite komplektid uBlockile või uMatrixile",
+    "description": "Generate rule set title."
   }
 }

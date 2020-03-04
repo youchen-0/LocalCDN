@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Напредно",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Генерисање скупова правила за Блок или Матрицу",
+    "description": "Generate rule set title."
   }
 }

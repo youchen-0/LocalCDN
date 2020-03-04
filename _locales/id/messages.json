@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Canggih",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Buat set aturan untuk uBlock atau uMatrix",
+    "description": "Generate rule set title."
   }
 }

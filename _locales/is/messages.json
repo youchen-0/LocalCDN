@@ -66,5 +66,9 @@
   "advancedLabel": {
     "message": "Ítarlegt",
     "description": "Advanced label."
+  },
+  "generateRuleSetTitle": {
+    "message": "Búðu til reglusett fyrir uBlock eða uMatrix",
+    "description": "Generate rule set title."
   }
 }
