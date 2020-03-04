@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "LocalCDN (fork from Decentraleyes)",
-  "version": "2.0.24",
+  "version": "2.1.0",
 
   "author": "nobody",
 
@@ -46,12 +46,6 @@
 
   "options_ui": {
     "page": "pages/options/options.html"
-  },
-
-  "applications": {
-    "gecko": {
-      "strict_min_version": "63.0"
-    }
   },
 
   "web_accessible_resources": [
