@@ -19,6 +19,8 @@
 
         <script src="../../core/constants.js"></script>
         <script src="../../modules/internal/helpers.js"></script>
+        <script defer src="../../core/resources.js"></script>
+        <script defer src="../../core/mappings.js"></script>
 
         <script src="options.js"></script>
 
@@ -124,7 +126,20 @@
             <div class="title-option" data-i18n-content="whitelistedDomainsTitle"></div>
             <input class="input-text" data-option="whitelistedDomains" type="text">
             <div class="description-option" data-i18n-content="whitelistedDomainsDescription"></div>
+        </section>
 
+        <section class="option">
+            <div class="title-option" data-i18n-content="generateRuleSetTitle"></div>
+            <div>
+                <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                <label for="generate-ublock-rules">uBlock</label>
+            </div>
+            <div>
+                <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                <label for="generate-umatrix-rules">uMatrix</label>
+            </div>
+            <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+            <input id="button-copy-rule-set" type="button" value="Copy">
         </section>
 
         <section class="notice notice-default hidden" id="notice-locale">

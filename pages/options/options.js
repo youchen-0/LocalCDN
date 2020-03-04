@@ -84,6 +84,11 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.disablePrefetch.addEventListener('change', options._onOptionChanged);
     elements.stripMetadata.addEventListener('change', options._onOptionChanged);
     elements.whitelistedDomains.addEventListener('keyup', options._onOptionChanged);
+    let type = elements.ruleSets;
+    for(let i = 0; i < type.length; i++) {
+        type[i].addEventListener('change', options._openRuleSet);
+    }
+    elements.copyRuleSet.addEventListener('click', options._copyRuleSet);
 };
 
 options._registerMiscellaneousEventListeners = function () {
@@ -124,7 +129,9 @@ options._getOptionElements = function () {
         [Setting.BLOCK_MISSING]: options._getOptionElement(Setting.BLOCK_MISSING),
         [Setting.DISABLE_PREFETCH]: options._getOptionElement(Setting.DISABLE_PREFETCH),
         [Setting.STRIP_METADATA]: options._getOptionElement(Setting.STRIP_METADATA),
-        [Setting.WHITELISTED_DOMAINS]: options._getOptionElement(Setting.WHITELISTED_DOMAINS)
+        [Setting.WHITELISTED_DOMAINS]: options._getOptionElement(Setting.WHITELISTED_DOMAINS),
+        ['ruleSets']: document.getElementsByName("rule-sets"),
+        ['copyRuleSet']: document.getElementById("button-copy-rule-set")
     };
 
     return optionElements;
@@ -224,6 +231,42 @@ options._onOptionChanged = function ({target}) {
         [optionKey]: optionValue
     });
 };
+
+options._openRuleSet = function({target}) {
+
+    let urls = mappings;
+    let optionKey = target.getAttribute('data-option');
+    let optionType = target.getAttribute('value');
+
+    let textArea = document.getElementById("generated-rules");
+    let btnCopy = document.getElementById("button-copy-rule-set");
+
+    let content = "";
+    let ruleSyntax = "";
+
+    if (optionKey === "uMatrix") {
+        ruleSyntax = " script allow";
+    } else if (optionKey === "uBlock") {
+        ruleSyntax = " * noop";
+    }
+
+    textArea.style.display = "block";
+    btnCopy.style.display = "block";
+
+    for (var domain in urls) {
+        content += "* " + domain + ruleSyntax + '\n';
+    }
+    textArea.value = content.replace(/\n+$/, "");
+}
+
+options._copyRuleSet = function() {
+    let textArea = document.getElementById("generated-rules");
+    navigator.clipboard.writeText(textArea.value).then(function() {
+        textArea.select();
+    }, function() {
+        alert("Rule set cannot be copied!");
+    });
+}
 
 /**
  * Initializations
