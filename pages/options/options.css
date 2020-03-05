@@ -86,6 +86,10 @@ body {
     max-width: 320px;
 }
 
+input[type=radio] {
+    margin: 10px 10px 10px 0px;
+}
+
 /**
  * Icons
  */
@@ -145,6 +149,9 @@ body {
 
 #button-copy-rule-set {
     display: none;
+    padding: 5px;
+    margin-left: 29px;
+    font-size: 1.3em;
 }
 
 /**
@@ -204,6 +211,13 @@ body {
 
 #generated-rules {
     display: none;
+    margin-left: 29px;
+}
+
+.ruleset-generator {
+    display: flex;
+    align-items: center;
+    margin-left: 29px;
 }
 
 /**
