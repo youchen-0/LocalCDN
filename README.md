@@ -11,6 +11,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
 * AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch
+* **New:** Prepared rules for uBlock/uMatrix
 
 > **Note:** LocalCDN is no silver bullet, but it does prevent a lot of websites from making you send these kinds of requests. Ultimately, you can make LocalCDN block requests for any missing CDN resources, too.
 
