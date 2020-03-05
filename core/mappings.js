@@ -46,10 +46,8 @@ var mappings = {
         '/ajax/': {
             'jQuery/jquery-{version}.': resources.jQuery,
             'jquery/jquery-{version}.': resources.jQuery,
-            'modernizr/modernizr-{version}.': resources.modernizr
-        },
-        '/bootstrap/': {
-            '{version}/bootstrap.min.js': resources.bootstrapJS
+            'modernizr/modernizr-{version}.': resources.modernizr,
+            'bootstrap/{version}/bootstrap.min.js': resources.bootstrapJS
         }
     },
     // Microsoft Ajax CDN [Deprecated]
