@@ -27,10 +27,10 @@ On behalf of everyone: Thank you!
 
 Suggestions in the form of **Issues**, and contributions in the form of **Merge Requests**, are highly welcome.
 
-#### Prerequisites
+#### Installation
 
-* Mozilla Firefox 63 *(or higher)*.
-* Chromium based browser ([check out the Wiki page](https://gitlab.com/nobody42/localcdn/-/wikis/Install-on-Chromium-based-browsers))
+* Mozilla Firefox *(63 or higher)*: [get it on addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/)
+* Chromium based browser: [check out the Wiki page](https://gitlab.com/nobody42/localcdn/-/wikis/Install-on-Chromium-based-browsers)
 
 #### Running the Code
 
