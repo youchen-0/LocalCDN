@@ -220,6 +220,10 @@ input[type=radio] {
     margin-left: 29px;
 }
 
+.last-update {
+    font-weight: bold;
+}
+
 /**
  * Right to Left
  */

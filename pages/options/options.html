@@ -130,7 +130,10 @@
 
         <section class="option">
             <div class="title-option" data-i18n-content="generateRuleSetTitle"></div>
-            <div class="description-option">In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix.</div>
+            <div class="description-option">
+                <p>In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix.</p>
+                <p class="last-update">Last update: <span id="last-mapping-update"></span></p>
+            </div>
             <div class="ruleset-generator">
                 <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
                 <label for="generate-ublock-rules">uBlock</label>

@@ -62,6 +62,7 @@ const Setting = {
     'SHOW_ICON_BADGE': 'showIconBadge',
     'SHOW_RELEASE_NOTES': 'showReleaseNotes',
     'STRIP_METADATA': 'stripMetadata',
+    'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
     'WHITELISTED_DOMAINS': 'whitelistedDomains',
     'XHR_TEST_DOMAIN': 'xhrTestDomain'
 };

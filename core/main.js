@@ -32,6 +32,7 @@ main._initializeSettings = function () {
         [Setting.DISABLE_PREFETCH]: true,
         [Setting.ENFORCE_STAGING]: false,
         [Setting.STRIP_METADATA]: true,
+        [Setting.LAST_MAPPING_UPDATE]: "2020-01-01",
         [Setting.WHITELISTED_DOMAINS]: {}
     };
 
@@ -60,12 +61,12 @@ main._initializeSettings = function () {
 
 main._showReleaseNotes = function (details) {
 
-    let location, previousVersion;
+    let location, updateAdBlockerRules, previousVersion;
 
     location = chrome.extension.getURL('pages/welcome/welcome.html');
+    updateAdBlockerRules = chrome.extension.getURL('pages/updates/updates.html');
 
-    if (details.reason === chrome.runtime.OnInstalledReason.INSTALL ||
-        details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
+    if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
 
         previousVersion = details.previousVersion;
 
@@ -88,6 +89,22 @@ main._showReleaseNotes = function (details) {
                 }
             });
         }
+    } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
+        // If add-on update true, check last update of mappings.js
+        chrome.storage.local.get({[Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate}, function (items) {
+            if (items.lastMappingUpdate !== lastMappingUpdate) {
+                // Updated mappings.js
+                chrome.tabs.create({
+                    'url': updateAdBlockerRules,
+                    'active': true
+                });
+                chrome.storage.local.set({
+                    [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
+                });
+            } else {
+                // No mappings.js update
+            }
+        });
     }
 };
 

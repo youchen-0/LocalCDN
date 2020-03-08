@@ -17,6 +17,8 @@
  * Mappings
  */
 
+var lastMappingUpdate = "2020-03-08";
+
 var mappings = {
 
     // Google Hosted Libraries
