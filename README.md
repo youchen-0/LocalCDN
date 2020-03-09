@@ -17,11 +17,20 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 ## We need you!
 
-<img src="https://gitlab.com/nobody42/localcdn/-/raw/master/pages/welcome/we-need-you.png" alt="We Need You!">
+![We Need You!](/pages/welcome/we-need-you.png?raw=true "We Need You!")
 
 The whole Internet is full of different frameworks and CDNs that negatively affect your privacy. If you find a website that embeds another unsupported version of a framework, please report that website.
 
 On behalf of everyone: Thank you!
+
+## Screenshots
+<img src="/screenshots/screenshot01.png?raw=true" alt="Counter for locally injected resources" width="200px">
+<img src="/screenshots/screenshot02.png?raw=true" alt="Successfully intercepted requests" width="200px">
+<img src="/screenshots/screenshot03.png?raw=true" alt="Successfully intercepted requests" width="200px">
+<img src="/screenshots/screenshot04.png?raw=true" alt="Release notes and uBlock/uMatrix rule generator" width="200px">
+<img src="/screenshots/screenshot05.png?raw=true" alt="Release notes and uBlock/uMatrix rule generator" width="200px">
+<img src="/screenshots/screenshot06.png?raw=true" alt="Preferences page and uBlock/uMatrix rule generator" width="200px">
+<img src="/screenshots/screenshot07.png?raw=true" alt="Preferences page and uBlock/uMatrix rule generator" width="200px">
 
 ## Contributing Code
 
