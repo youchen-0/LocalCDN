@@ -72,7 +72,7 @@ var resources = {
     },
     // jQuery
     'jQuery': {
-        'path': 'resources/jquery/{version}/jquery.min.jsm',
+        'path': 'resources/jquery/latest/jquery.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery UI
