@@ -176,6 +176,8 @@ helpers.determineCdnName = function (domainName) {
         return 'USTC Linux User Group [Mirror]';
     case 'stackpath.bootstrapcdn.com':
         return 'StackPath BootstrapCDN';
+    case 'maxcdn.bootstrapcdn.com':
+        return 'MaxCDN Bootstrap CDN';
     default:
         return 'Unknown';
     }
