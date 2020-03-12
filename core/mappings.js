@@ -383,9 +383,10 @@ var mappings = {
     },
     // StackPath BootstrapCDN
     'stackpath.bootstrapcdn.com': {
-        '/bootstrap/': {
-            '{version}/js/bootstrap.min.js': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.css': resources.bootstrapCSS
+        '/': {
+            'bootstrap/{version}/js/bootstrap.min.js': resources.bootstrapJS,
+            'bootstrap/{version}/css/bootstrap.min.css': resources.bootstrapCSS,
+            'font-awesome/{version}/css/font-awesome.min.': resources.fontawesome
         }
     },
     // MaxCDN Bootstrap

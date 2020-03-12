@@ -203,6 +203,8 @@ helpers.determineResourceName = function (filename) {
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
+    case 'font-awesome.min.cssm':
+        return 'Font Awesome';
     case 'jquery.min.jsm':
         return 'jQuery';
     case 'jquery-ui.min.jsm':

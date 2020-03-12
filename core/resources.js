@@ -70,6 +70,11 @@ var resources = {
         'path': 'resources/ext-core/{version}/ext-core.jsm',
         'type': 'application/javascript'
     },
+    // Font Awesome
+    'fontawesome': {
+        'path': 'resources/fontawesome/{version}/font-awesome.min.cssm',
+        'type': 'text/css'
+    },
     // jQuery
     'jQuery': {
         'path': 'resources/jquery/latest/jquery.min.jsm',

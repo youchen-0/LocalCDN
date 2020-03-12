@@ -186,6 +186,9 @@ var files = {
         'resources/ext-core/3.0.0/ext-core.jsm': true,
         'resources/ext-core/3.1.0/ext-core.jsm': true,
 
+        // Font Awesome
+        'resources/fontawesome/4.7.0/font-awesome.min.cssm': true,
+
         // jQuery v3.4.1
         'resources/jquery/latest/jquery.min.jsm': true,
 
