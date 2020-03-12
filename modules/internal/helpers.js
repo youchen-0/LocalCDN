@@ -176,6 +176,8 @@ helpers.determineCdnName = function (domainName) {
         return 'USTC Linux User Group [Mirror]';
     case 'stackpath.bootstrapcdn.com':
         return 'StackPath BootstrapCDN';
+    case 'maxcdn.bootstrapcdn.com':
+        return 'MaxCDN Bootstrap CDN';
     default:
         return 'Unknown';
     }
@@ -203,6 +205,8 @@ helpers.determineResourceName = function (filename) {
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
+    case 'font-awesome.min.cssm':
+        return 'Font Awesome';
     case 'jquery.min.jsm':
         return 'jQuery';
     case 'jquery-ui.min.jsm':

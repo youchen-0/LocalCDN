@@ -176,6 +176,21 @@ footer {
     color: #339a6f;
 }
 
+#options-button-svg,
+#protection-toggle-button-svg {
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+}
+
+#options-button-svg {
+    background-image: url("../../icons/settings-dark.svg");
+}
+
+#protection-toggle-button-svg {
+    background-image: url("../../icons/disable-dark.svg");
+}
+
 /**
  * Links
  */
@@ -324,6 +339,14 @@ footer {
 
     .button-toggle.active {
         border-color: #323232;
+    }
+
+    #options-button-svg {
+        background-image: url("../../icons/settings-light.svg");
+    }
+
+    #protection-toggle-button-svg {
+        background-image: url("../../icons/disable-light.svg");
     }
 
     /**

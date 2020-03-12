@@ -58,7 +58,7 @@ options._renderOptionsPanel = function () {
         options._renderLocaleNotice();
     }
 
-    document.getElementById('last-mapping-update').innerHTML = lastMappingUpdate;
+    document.getElementById('last-mapping-update').textContent = lastMappingUpdate;
 };
 
 options._renderBlockMissingNotice = function () {
