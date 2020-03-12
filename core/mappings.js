@@ -49,7 +49,7 @@ var mappings = {
             'jQuery/jquery-{version}.': resources.jQuery,
             'jquery/jquery-{version}.': resources.jQuery,
             'modernizr/modernizr-{version}.': resources.modernizr,
-            'bootstrap/{version}/bootstrap.min.js': resources.bootstrapJS
+            'bootstrap/{version}/bootstrap.min.': resources.bootstrapJS
         }
     },
     // Microsoft Ajax CDN [Deprecated]
@@ -78,8 +78,8 @@ var mappings = {
             'mootools/{version}/mootools-core': resources.mootools,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
-            '/twitter-bootstrap/{version}/js/bootstrap.min.js': resources.bootstrapJS,
-            '/twitter-bootstrap/{version}/css/bootstrap.min.css': resources.bootstrapCSS,
+            '/twitter-bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
+            '/twitter-bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'webfont/{version}/webfont': resources.webfont
@@ -384,23 +384,23 @@ var mappings = {
     // StackPath BootstrapCDN
     'stackpath.bootstrapcdn.com': {
         '/': {
-            'bootstrap/{version}/js/bootstrap.min.js': resources.bootstrapJS,
-            'bootstrap/{version}/css/bootstrap.min.css': resources.bootstrapCSS,
+            'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
+            'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'font-awesome/{version}/css/font-awesome.min.': resources.fontawesome
         }
     },
     // MaxCDN Bootstrap
     'maxcdn.bootstrapcdn.com': {
         '/bootstrap/': {
-            '{version}/js/bootstrap.min.js': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.css': resources.bootstrapCSS
+            '{version}/js/bootstrap.min.': resources.bootstrapJS,
+            '{version}/css/bootstrap.min.': resources.bootstrapCSS
         }
     },
     // NetDNA Bootstrap
     'netdna.bootstrapcdn.com': {
         '/bootstrap/': {
-            '{version}/js/bootstrap.min.js': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.css': resources.bootstrapCSS
+            '{version}/js/bootstrap.min.': resources.bootstrapJS,
+            '{version}/css/bootstrap.min.': resources.bootstrapCSS
         }
     }
 };
