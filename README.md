@@ -7,11 +7,12 @@ A web browser extension that emulates Content Delivery Networks to improve your 
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
+* **New: Font Awesome v4.7.0** :tada: :tada: :tada:
 * jQuery up to 3.4.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
 * AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch
-* **New:** Prepared rules for uBlock/uMatrix
+* Prepared rules for uBlock/uMatrix
 
 > **Note:** LocalCDN is no silver bullet, but it does prevent a lot of websites from making you send these kinds of requests. Ultimately, you can make LocalCDN block requests for any missing CDN resources, too.
 
@@ -20,6 +21,11 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 ![We Need You!](/pages/welcome/we-need-you.png?raw=true "We Need You!")
 
 The whole Internet is full of different frameworks and CDNs that negatively affect your privacy. If you find a website that embeds another unsupported version of a framework, please report that website.
+
+
+### :warning: **Important** :warning:
+
+In some cases, it isn't possible to use our framework because the website sets up a strong "Same Origin Policy" (SOP). Please read [Broken JavaScript or CSS on some websites](https://gitlab.com/nobody42/localcdn/-/wikis/Broken-JavaScript-or-CSS-on-some-websites) before opening an issue.
 
 On behalf of everyone: Thank you!
 
