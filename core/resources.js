@@ -47,12 +47,12 @@ var resources = {
     },
     // Bootstrap.js
     'bootstrapJS': {
-        'path': 'resources/bootstrap.js/{version}/bootstrap.min.jsm',
+        'path': 'resources/bootstrap.js/{version}/bootstrap.min.js',
         'type': 'application/javascript'
     },
     // Bootstrap.css
     'bootstrapCSS': {
-        'path': 'resources/bootstrap.css/{version}/bootstrap.min.cssm',
+        'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
     // Dojo
@@ -71,8 +71,13 @@ var resources = {
         'type': 'application/javascript'
     },
     // Font Awesome
-    'fontawesome': {
-        'path': 'resources/fontawesome/{version}/font-awesome.min.cssm',
+    'fontawesome4': {
+        'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
+        'type': 'text/css'
+    },
+    // Font Awesome
+    'fontawesome5': {
+        'path': 'resources/fontawesome/{version}/css/all.css',
         'type': 'text/css'
     },
     // jQuery

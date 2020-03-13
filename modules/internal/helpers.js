@@ -178,6 +178,8 @@ helpers.determineCdnName = function (domainName) {
         return 'StackPath BootstrapCDN';
     case 'maxcdn.bootstrapcdn.com':
         return 'MaxCDN Bootstrap CDN';
+    case 'use.fontawesome.com':
+        return 'Font Awesome CDN';
     default:
         return 'Unknown';
     }
@@ -205,7 +207,9 @@ helpers.determineResourceName = function (filename) {
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
-    case 'font-awesome.min.cssm':
+    case 'font-awesome.min.css':
+        return 'Font Awesome';
+    case 'all.css':
         return 'Font Awesome';
     case 'jquery.min.jsm':
         return 'jQuery';
@@ -225,9 +229,9 @@ helpers.determineResourceName = function (filename) {
         return 'Underscore.js';
     case 'webfont.jsm':
         return 'Web Font Loader';
-    case 'bootstrap.min.cssm':
+    case 'bootstrap.min.css':
         return 'Bootstrap CSS';
-    case 'bootstrap.min.jsm':
+    case 'bootstrap.min.js':
         return 'Bootstrap JS';
     default:
         return 'Unknown';

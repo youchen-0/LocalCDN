@@ -136,26 +136,24 @@ var files = {
         'resources/backbone.js/1.2.3/backbone-min.jsm': true,
 
         // Bootstrap.js
-        'resources/bootstrap.js/2.3.2/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/3.1.1/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/3.2.0/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/3.3.6/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/3.3.7/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/4.0.0/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/4.1.0/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/4.3.1/bootstrap.min.jsm': true,
-        'resources/bootstrap.js/4.4.1/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/3.1.1/bootstrap.min.js': true,
+        'resources/bootstrap.js/3.2.0/bootstrap.min.js': true,
+        'resources/bootstrap.js/3.3.6/bootstrap.min.js': true,
+        'resources/bootstrap.js/3.3.7/bootstrap.min.js': true,
+        'resources/bootstrap.js/4.0.0/bootstrap.min.js': true,
+        'resources/bootstrap.js/4.1.0/bootstrap.min.js': true,
+        'resources/bootstrap.js/4.3.1/bootstrap.min.js': true,
+        'resources/bootstrap.js/4.4.1/bootstrap.min.js': true,
 
         // Bootstrap.css
-        'resources/bootstrap.css/2.3.2/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/3.1.1/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/3.2.0/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/3.3.6/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/3.3.7/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/4.0.0/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/4.1.0/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/4.3.1/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/4.4.1/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/3.1.1/bootstrap.min.css': true,
+        'resources/bootstrap.css/3.2.0/bootstrap.min.css': true,
+        'resources/bootstrap.css/3.3.6/bootstrap.min.css': true,
+        'resources/bootstrap.css/3.3.7/bootstrap.min.css': true,
+        'resources/bootstrap.css/4.0.0/bootstrap.min.css': true,
+        'resources/bootstrap.css/4.1.0/bootstrap.min.css': true,
+        'resources/bootstrap.css/4.3.1/bootstrap.min.css': true,
+        'resources/bootstrap.css/4.4.1/bootstrap.min.css': true,
 
         // Dojo
         'resources/dojo/1.4.1/dojo/dojo.jsm': true,
@@ -187,7 +185,8 @@ var files = {
         'resources/ext-core/3.1.0/ext-core.jsm': true,
 
         // Font Awesome
-        'resources/fontawesome/4.7.0/font-awesome.min.cssm': true,
+        'resources/fontawesome/4.7.0/css/font-awesome.min.css': true,
+        'resources/fontawesome/5.7.2/css/all.css': true,
 
         // jQuery v3.4.1
         'resources/jquery/latest/jquery.min.jsm': true,
