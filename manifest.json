@@ -1,8 +1,13 @@
 {
   "manifest_version": 2,
   "name": "LocalCDN (fork from Decentraleyes)",
-  "version": "2.1.3",
-
+  "version": "2.1.4",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "LocalCDN@nobody42",
+      "strict_min_version": "63.0"
+    }
+  },
   "author": "nobody",
 
   "default_locale": "en_US",

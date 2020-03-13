@@ -17,7 +17,7 @@
  * Mappings
  */
 
-var lastMappingUpdate = "2020-03-12";
+var lastMappingUpdate = "2020-03-13";
 
 var mappings = {
 
@@ -386,7 +386,7 @@ var mappings = {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
-            'font-awesome/{version}/css/font-awesome.min.': resources.fontawesome
+            'font-awesome/{version}/css/font-awesome.min.css': resources.fontawesome4
         }
     },
     // MaxCDN Bootstrap
@@ -402,7 +402,14 @@ var mappings = {
             '{version}/js/bootstrap.min.': resources.bootstrapJS,
             '{version}/css/bootstrap.min.': resources.bootstrapCSS
         }
+    },
+    // Font Awesome CDN
+    'use.fontawesome.com': {
+        '/releases/v': {
+            '{version}/css/all.css': resources.fontawesome5
+        }
     }
+
 };
 
 // Geekzu Public Service [Mirror]
