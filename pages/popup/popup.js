@@ -68,7 +68,7 @@ popup._renderDomainWhitelistPanel = function () {
     let websiteContextElement, protectionToggleElement, domainIndicatorElement;
 
     websiteContextElement = document.getElementById('website-context');
-    protectionToggleElement = document.getElementById('protection-toggle-button');
+    protectionToggleElement = document.getElementById('protection-toggle-switch');
     domainIndicatorElement = document.getElementById('domain-indicator');
 
     protectionToggleElement.setAttribute('dir', popup._scriptDirection);
@@ -78,7 +78,7 @@ popup._renderDomainWhitelistPanel = function () {
 
         let enableProtectionTitle = chrome.i18n.getMessage('enableProtectionTitle');
 
-        protectionToggleElement.setAttribute('class', 'button button-toggle');
+        protectionToggleElement.checked = false;
         protectionToggleElement.addEventListener('click', popup._enableProtection);
         protectionToggleElement.setAttribute('title', enableProtectionTitle);
 
@@ -86,7 +86,7 @@ popup._renderDomainWhitelistPanel = function () {
 
         let disableProtectionTitle = chrome.i18n.getMessage('disableProtectionTitle');
 
-        protectionToggleElement.setAttribute('class', 'button button-toggle active');
+        protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
         protectionToggleElement.setAttribute('title', disableProtectionTitle);
     }

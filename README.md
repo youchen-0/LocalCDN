@@ -7,7 +7,7 @@ A web browser extension that emulates Content Delivery Networks to improve your 
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
-* **New: Font Awesome v4.7.0** :tada: :tada: :tada:
+* **New: Font Awesome v4.7.0 and v5.7.2** :tada: :tada: :tada:
 * jQuery up to 3.4.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)

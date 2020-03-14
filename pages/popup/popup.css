@@ -176,8 +176,7 @@ footer {
     color: #339a6f;
 }
 
-#options-button-svg,
-#protection-toggle-button-svg {
+#options-button-svg {
     background-size: cover;
     width: 15px;
     height: 15px;
@@ -187,8 +186,61 @@ footer {
     background-image: url("../../icons/settings-dark.svg");
 }
 
-#protection-toggle-button-svg {
-    background-image: url("../../icons/disable-dark.svg");
+#protection-toggle {
+  -moz-user-select: none;
+  cursor: pointer;
+  float: right;
+  user-select: none;
+  padding: 6px 0 0 4px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 16px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b40000;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #f9f9fa;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #6bb798;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
 }
 
 /**
@@ -345,8 +397,16 @@ footer {
         background-image: url("../../icons/settings-light.svg");
     }
 
-    #protection-toggle-button-svg {
-        background-image: url("../../icons/disable-light.svg");
+    input:checked + .slider {
+		background-color: #6bb798;
+    }
+
+    .slider {
+		background-color: #b54b4b;
+    }
+
+    .slider:before {
+		background-color: #323232;
     }
 
     /**
