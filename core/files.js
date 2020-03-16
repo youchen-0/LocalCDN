@@ -211,6 +211,9 @@ var files = {
         'resources/modernizr/2.8.2/modernizr.min.jsm': true,
         'resources/modernizr/2.8.3/modernizr.min.jsm': true,
 
+        // Moment.js
+        'resources/moment.js/2.24.0/moment.min.jsm': true,
+
         // MooTools
         'resources/mootools/1.1.1/mootools-yui-compressed.jsm': true,
         'resources/mootools/1.1.2/mootools-yui-compressed.jsm': true,
@@ -314,29 +317,8 @@ var files = {
     // Files [Staging]
     [Environment.STAGING]: {
 
-        // AngularJS
-
         // Backbone.js
         'resources/backbone.js/1.3.3/backbone-min.jsm': true,
-
-        // Moment.js
-        'resources/moment.js/2.8.3/moment.min.jsm': true,
-        'resources/moment.js/2.8.4/moment.min.jsm': true,
-        'resources/moment.js/2.10.2/moment.min.jsm': true,
-        'resources/moment.js/2.10.3/moment.min.jsm': true,
-        'resources/moment.js/2.10.6/moment.min.jsm': true,
-        'resources/moment.js/2.11.1/moment.min.jsm': true,
-        'resources/moment.js/2.11.2/moment.min.jsm': true,
-        'resources/moment.js/2.17.0/moment.min.jsm': true,
-        'resources/moment.js/2.17.1/moment.min.jsm': true,
-        'resources/moment.js/2.18.1/moment.min.jsm': true,
-        'resources/moment.js/2.19.1/moment.min.jsm': true,
-        'resources/moment.js/2.19.2/moment.min.jsm': true,
-        'resources/moment.js/2.19.3/moment.min.jsm': true,
-        'resources/moment.js/2.20.1/moment.min.jsm': true,
-        'resources/moment.js/2.22.0/moment.min.jsm': true,
-        'resources/moment.js/2.22.1/moment.min.jsm': true,
-        'resources/moment.js/2.22.2/moment.min.jsm': true,
 
         // Underscore.js
         'resources/underscore.js/1.9.0/underscore-min.jsm': true,
