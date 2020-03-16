@@ -155,7 +155,7 @@ helpers.determineCdnName = function (domainName) {
     case 'code.jquery.com':
         return 'jQuery CDN (MaxCDN)';
     case 'cdn.jsdelivr.net':
-        return 'jsDelivr (MaxCDN)';
+        return 'jsDelivr (Cloudflare)';
     case 'yastatic.net':
         return 'Yandex CDN';
     case 'yandex.st':
@@ -174,6 +174,8 @@ helpers.determineCdnName = function (domainName) {
         return 'Geekzu Public Service [Mirror]';
     case 'ajax.proxy.ustclug.org':
         return 'USTC Linux User Group [Mirror]';
+    case 'unpkg.com':
+        return 'UNPKG (Cloudflare)';
     case 'stackpath.bootstrapcdn.com':
         return 'StackPath BootstrapCDN';
     case 'maxcdn.bootstrapcdn.com':
