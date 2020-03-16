@@ -55,6 +55,11 @@ var resources = {
         'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
+    // bootstrap-slider (Slider for Bootstrap 3)
+    'bootstrapSlider': {
+        'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.css',
+        'type': 'text/css'
+    },
     // Dojo
     'dojo': {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',

@@ -233,6 +233,8 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap CSS';
     case 'bootstrap.min.js':
         return 'Bootstrap JS';
+    case 'bootstrap-slider.min.css':
+        return 'bootstrap-slider';
     default:
         return 'Unknown';
     }

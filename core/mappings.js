@@ -66,6 +66,7 @@ var mappings = {
             'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
+            'bootstrap-slider/{version}/css/bootstrap-slider.min.': resources.bootstrapSlider,
             'dojo/{version}/dojo.': resources.dojo,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,

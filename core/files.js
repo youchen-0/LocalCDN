@@ -155,6 +155,9 @@ var files = {
         'resources/bootstrap.css/4.3.1/bootstrap.min.css': true,
         'resources/bootstrap.css/4.4.1/bootstrap.min.css': true,
 
+        // bootstrap-slider
+        'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,
+
         // Dojo
         'resources/dojo/1.4.1/dojo/dojo.jsm': true,
         'resources/dojo/1.4.5/dojo/dojo.jsm': true,
