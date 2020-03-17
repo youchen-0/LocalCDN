@@ -45,7 +45,7 @@ var files = {
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,
 
         // Dojo
-        'resources/dojo/1.10.4/dojo/dojo.jsm': true,
+        'resources/dojo/1.14.1/dojo/dojo.jsm': true,
 
         // Ember.js
         'resources/ember.js/1.5.1/ember.min.jsm': true,

@@ -294,7 +294,7 @@ helpers.setLastVersion = function (type) {
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
     } else if (type.includes('/dojo/1.')) {
-        version = '1.10.4';
+        version = '1.14.1';
     } else if (type.includes('/ember.js/1.')) {
         version = '1.5.1';
     } else if (type.includes('/ember.js/2.')) {
