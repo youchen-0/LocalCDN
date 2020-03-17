@@ -320,7 +320,7 @@ helpers.setLastVersion = function (type) {
     } else if (type.includes('/moment.js/2.')) {
         version = '2.24.0';
     } else if (type.includes('/mootools/1.')) {
-        version = '1.5.1';
+        version = '1.6.0';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
     } else if (type.includes('/scriptaculous/1.')) {

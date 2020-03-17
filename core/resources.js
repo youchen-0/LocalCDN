@@ -107,7 +107,7 @@ var resources = {
     },
     // MooTools
     'mootools': {
-        'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
+        'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
     // Prototype

@@ -73,7 +73,7 @@ var files = {
         // Moment.js
 
         // MooTools
-        'resources/mootools/1.5.1/mootools-yui-compressed.jsm': true,
+        'resources/mootools/1.6.0/mootools-core.min.jsm': true,
 
         // Prototype
         'resources/prototype/1.7.3.0/prototype.jsm': true,
