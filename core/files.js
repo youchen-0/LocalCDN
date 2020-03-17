@@ -48,8 +48,9 @@ var files = {
         'resources/dojo/1.14.1/dojo/dojo.jsm': true,
 
         // Ember.js
-        'resources/ember.js/1.5.1/ember.min.jsm': true,
-        'resources/ember.js/2.1.0/ember.min.jsm': true,
+        'resources/ember.js/1.13.13/ember.min.jsm': true,
+        'resources/ember.js/2.18.2/ember.min.jsm': true,
+        'resources/ember.js/3.12.3/ember.min.jsm': true,
 
         // Ext Core
         'resources/ext-core/3.1.0/ext-core.jsm': true,

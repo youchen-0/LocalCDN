@@ -296,9 +296,11 @@ helpers.setLastVersion = function (type) {
     } else if (type.includes('/dojo/1.')) {
         version = '1.14.1';
     } else if (type.includes('/ember.js/1.')) {
-        version = '1.5.1';
+        version = '1.13.13';
     } else if (type.includes('/ember.js/2.')) {
-        version = '2.1.0';
+        version = '2.18.2';
+    } else if (type.includes('/ember.js/3.')) {
+        version = '3.12.3';
     } else if (type.includes('/ext-core/3.')) {
         version = '3.1.0';
     } else if (type.includes('/fontawesome/4.')) {
