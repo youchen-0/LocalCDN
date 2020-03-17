@@ -7,7 +7,7 @@ A web browser extension that emulates Content Delivery Networks to improve your 
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
-* **New: Font Awesome v4.7.0** :tada: :tada: :tada:
+* **New: Font Awesome v4.7.0 and v5.7.2** :tada: :tada: :tada:
 * jQuery up to 3.4.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
@@ -30,13 +30,24 @@ In some cases, it isn't possible to use our framework because the website sets u
 On behalf of everyone: Thank you!
 
 ## Screenshots
-<img src="/screenshots/screenshot01.png?raw=true" alt="Counter for locally injected resources" width="200px">
-<img src="/screenshots/screenshot02.png?raw=true" alt="Successfully intercepted requests" width="200px">
-<img src="/screenshots/screenshot03.png?raw=true" alt="Successfully intercepted requests" width="200px">
-<img src="/screenshots/screenshot04.png?raw=true" alt="Release notes and uBlock/uMatrix rule generator" width="200px">
-<img src="/screenshots/screenshot05.png?raw=true" alt="Release notes and uBlock/uMatrix rule generator" width="200px">
-<img src="/screenshots/screenshot06.png?raw=true" alt="Preferences page and uBlock/uMatrix rule generator" width="200px">
-<img src="/screenshots/screenshot07.png?raw=true" alt="Preferences page and uBlock/uMatrix rule generator" width="200px">
+
+### Light
+<img src="/screenshots/screenshot01_light.png?raw=true" alt="Counter for locally injected resources (enabled)" width="200px">
+<img src="/screenshots/screenshot02_light.png?raw=true" alt="Counter for locally injected resources (disabled)" width="200px">
+<img src="/screenshots/screenshot03_light.png?raw=true" alt="Successfully intercepted requests" width="200px">
+<img src="/screenshots/screenshot04_light.png?raw=true" alt="Successfully intercepted requests" width="200px">
+
+### Dark
+<img src="/screenshots/screenshot01_dark.png?raw=true" alt="Counter for locally injected resources (enabled)" width="200px">
+<img src="/screenshots/screenshot02_dark.png?raw=true" alt="Counter for locally injected resources (disabled)" width="200px">
+<img src="/screenshots/screenshot03_dark.png?raw=true" alt="Successfully intercepted requests" width="200px">
+<img src="/screenshots/screenshot04_dark.png?raw=true" alt="Successfully intercepted requests" width="200px">
+
+### Rule generator for uBlock/uMatrix
+<img src="/screenshots/screenshot06.png?raw=true" alt="Release notes and uBlock/uMatrix rule generator" width="200px">
+<img src="/screenshots/screenshot07.png?raw=true" alt="Release notes and uBlock/uMatrix rule generator" width="200px">
+<img src="/screenshots/screenshot08.png?raw=true" alt="Preferences page and uBlock/uMatrix rule generator" width="200px">
+<img src="/screenshots/screenshot09.png?raw=true" alt="Preferences page and uBlock/uMatrix rule generator" width="200px">
 
 ## Contributing Code
 

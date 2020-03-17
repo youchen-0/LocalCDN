@@ -55,6 +55,11 @@ var resources = {
         'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
+    // bootstrap-slider (Slider for Bootstrap 3)
+    'bootstrapSlider': {
+        'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.css',
+        'type': 'text/css'
+    },
     // Dojo
     'dojo': {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
@@ -82,7 +87,7 @@ var resources = {
     },
     // jQuery
     'jQuery': {
-        'path': 'resources/jquery/latest/jquery.min.jsm',
+        'path': 'resources/jquery/{version}/jquery.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery UI
@@ -102,7 +107,7 @@ var resources = {
     },
     // MooTools
     'mootools': {
-        'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
+        'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
     // Prototype

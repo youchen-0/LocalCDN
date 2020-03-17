@@ -155,7 +155,7 @@ helpers.determineCdnName = function (domainName) {
     case 'code.jquery.com':
         return 'jQuery CDN (MaxCDN)';
     case 'cdn.jsdelivr.net':
-        return 'jsDelivr (MaxCDN)';
+        return 'jsDelivr (Cloudflare)';
     case 'yastatic.net':
         return 'Yandex CDN';
     case 'yandex.st':
@@ -174,6 +174,8 @@ helpers.determineCdnName = function (domainName) {
         return 'Geekzu Public Service [Mirror]';
     case 'ajax.proxy.ustclug.org':
         return 'USTC Linux User Group [Mirror]';
+    case 'unpkg.com':
+        return 'UNPKG (Cloudflare)';
     case 'stackpath.bootstrapcdn.com':
         return 'StackPath BootstrapCDN';
     case 'maxcdn.bootstrapcdn.com':
@@ -233,6 +235,8 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap CSS';
     case 'bootstrap.min.js':
         return 'Bootstrap JS';
+    case 'bootstrap-slider.min.css':
+        return 'bootstrap-slider';
     default:
         return 'Unknown';
     }
@@ -267,4 +271,67 @@ helpers.formatVersion = function (version) {
     } else {
         return 'BETA';
     }
+};
+
+helpers.setLastVersion = function (type) {
+
+    let version;
+
+    if (type.includes('/angularjs/1.')) {
+        version = '1.7.9';
+    } else if (type.includes('/backbone.js/0.')) {
+        version = '0.9.10';
+    } else if (type.includes('/backbone.js/1.')) {
+        version = '1.4.0';
+    } else if (type.includes('/bootstrap.js/3.')) {
+        version = '3.3.7';
+    } else if (type.includes('/bootstrap.js/4.')) {
+        version = '4.4.1';
+    } else if (type.includes('/bootstrap.css/3.')) {
+        version = '3.3.7';
+    } else if (type.includes('/bootstrap.css/4.')) {
+        version = '4.4.1';
+    } else if (type.includes('/bootstrap-slider/10.')) {
+        version = '10.6.2';
+    } else if (type.includes('/dojo/1.')) {
+        version = '1.14.1';
+    } else if (type.includes('/ember.js/1.')) {
+        version = '1.13.13';
+    } else if (type.includes('/ember.js/2.')) {
+        version = '2.18.2';
+    } else if (type.includes('/ember.js/3.')) {
+        version = '3.12.3';
+    } else if (type.includes('/ext-core/3.')) {
+        version = '3.1.0';
+    } else if (type.includes('/fontawesome/4.')) {
+        version = '4.7.0';
+    } else if (type.includes('/fontawesome/5.')) {
+        version = '5.7.2';
+    } else if (type.includes('/jquery/1.')) {
+        version = '1.12.4';
+    } else if (type.includes('/jquery/2.')) {
+        version = '2.2.4';
+    } else if (type.includes('/jquery/3.')) {
+        version = '3.4.1';
+    } else if (type.includes('/jqueryui/1.')) {
+        version = '1.11.4';
+    } else if (type.includes('/modernizr/2.')) {
+        version = '2.8.3';
+    } else if (type.includes('/moment.js/2.')) {
+        version = '2.24.0';
+    } else if (type.includes('/mootools/1.')) {
+        version = '1.6.0';
+    } else if (type.includes('/prototype/1.')) {
+        version = '1.7.3.0';
+    } else if (type.includes('/scriptaculous/1.')) {
+        version = '1.9.0';
+    } else if (type.includes('/swfobject/2.')) {
+        version = '2.2';
+    } else if (type.includes('/underscore.js/1.')) {
+        version = '1.9.1';
+    } else if (type.includes('/webfont/1.')) {
+        version = '1.6.28';
+    }
+
+    return version;
 };

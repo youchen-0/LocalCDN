@@ -66,6 +66,7 @@ var mappings = {
             'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
+            'bootstrap-slider/{version}/css/bootstrap-slider.min.': resources.bootstrapSlider,
             'dojo/{version}/dojo.': resources.dojo,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
@@ -103,8 +104,38 @@ var mappings = {
             }
         }
     },
-    // jsDelivr (MaxCDN)
+    // jsDelivr (Cloudflare)
     'cdn.jsdelivr.net': {
+        '/npm/': {
+            'angular@{version}/angular.': resources.angular,
+            'angular@{version}/angular.min.': resources.angular,
+            'backbone@{version}/backbone.': resources.backbone,
+            'backbone@{version}/backbone-min.': resources.backbone,
+            'backbone@{version}/backbone.min.': resources.backbone,
+            'dojo@{version}/dojo.': resources.dojo,
+            'ember-source@{version}/dist/ember.': resources.ember,
+            'ember-source@{version}/dist/ember.min.': resources.ember,
+            'ember-source@{version}/dist/legacy/ember.': resources.ember,
+            'ember-source@{version}/dist/legacy/ember.min.': resources.ember,
+            'jquery@{version}/dist/jquery.': resources.jQuery,
+            'jquery@{version}/dist/jquery.min.': resources.jQuery,
+            'jquery-ui@{version}/jquery-ui.js': resources.jQueryUI,
+            'jquery-ui@{version}/jquery-ui.min.js': resources.jQueryUI,
+            'jquery-ui-dist@{version}/jquery-ui.js': resources.jQueryUI,
+            'jquery-ui-dist@{version}/jquery-ui.min.js': resources.jQueryUI,
+            'npm-modernizr@{version}/modernizr.': resources.modernizr,
+            'npm-modernizr@{version}/modernizr.min.': resources.modernizr,
+            'moment@{version}/moment.': resources.moment,
+            'moment@{version}/moment.min.': resources.moment,
+            'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
+            'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
+            'swfobject@{version}/index.js': resources.swfobject,
+            'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
+            'underscore@{version}/underscore.': resources.underscore,
+            'underscore@{version}/underscore-min.': resources.underscore,
+            'webfontloader@{version}/webfontloader.': resources.webfont
+        },
+        // Deprecated (?)
         '/': {
             'angularjs/{version}/angular.': resources.angular,
             'backbonejs/{version}/backbone.': resources.backbone,
@@ -419,3 +450,9 @@ mappings['sdn.geekzu.org'] = {
 
 // USTC Linux User Group [Mirror]
 mappings['ajax.proxy.ustclug.org'] = mappings['ajax.googleapis.com'];
+
+
+//UNPKG (Cloudflare)
+mappings['unpkg.com'] = {
+    '/': mappings['cdn.jsdelivr.net']['/npm/']
+};
