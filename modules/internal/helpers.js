@@ -330,7 +330,7 @@ helpers.setLastVersion = function (type) {
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
     } else if (type.includes('/webfont/1.')) {
-        version = '1.5.18';
+        version = '1.6.28';
     }
 
     return version;

@@ -89,7 +89,7 @@ var files = {
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,
 
         // Web Font Loader
-        'resources/webfont/1.5.18/webfont.jsm': true
+        'resources/webfont/1.6.28/webfont.jsm': true
     },
 
     // Files [Staging]
