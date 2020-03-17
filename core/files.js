@@ -31,7 +31,7 @@ var files = {
 
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
-        'resources/backbone.js/1.2.3/backbone-min.jsm': true,
+        'resources/backbone.js/1.4.0/backbone-min.jsm': true,
 
         // Bootstrap.js
         'resources/bootstrap.js/3.3.7/bootstrap.min.js': true,
