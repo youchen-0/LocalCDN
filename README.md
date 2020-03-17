@@ -56,7 +56,7 @@ Suggestions in the form of **Issues**, and contributions in the form of **Merge 
 #### Installation
 
 * Mozilla Firefox *(63 or higher)*: [get it on addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/)
-* Chromium based browser: [check out the Wiki page](https://gitlab.com/nobody42/localcdn/-/wikis/Install-on-Chromium-based-browsers)
+* Chromium based browser: [Chrome Web Store (by Emanuel Bennici :+1:)](https://chrome.google.com/webstore/detail/localcdn-fork-from-decent/njdfdhgcmkocbgbhcioffdbicglldapd)
 
 #### Running the Code
 
