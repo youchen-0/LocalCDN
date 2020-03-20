@@ -60,6 +60,7 @@ var files = {
         'resources/fontawesome/5.7.2/css/all.css': true,
 
         // jQuery
+        'resources/jquery/1.8.3/jquery.min.jsm': true,
         'resources/jquery/1.12.4/jquery.min.jsm': true,
         'resources/jquery/2.2.4/jquery.min.jsm': true,
         'resources/jquery/3.4.1/jquery.min.jsm': true,

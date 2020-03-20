@@ -1,8 +1,9 @@
 /**
  * Internal Helper Module
- * Belongs to Decentraleyes.
+ * Belongs to Decentraleyes/LocalCDN.
  *
  * @author      Thomas Rientjes
+ * @author      nobody42
  * @since       2017-10-26
  * @license     MPL 2.0
  *
@@ -273,9 +274,11 @@ helpers.formatVersion = function (version) {
     }
 };
 
-helpers.setLastVersion = function (type) {
+helpers.setLastVersion = function (type, versionNumber) {
 
-    let version;
+    let version, requestVersion;
+
+    requestVersion = versionNumber.toString();
 
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
@@ -308,7 +311,7 @@ helpers.setLastVersion = function (type) {
     } else if (type.includes('/fontawesome/5.')) {
         version = '5.7.2';
     } else if (type.includes('/jquery/1.')) {
-        version = '1.12.4';
+        version = ( helpers.compareVersion('1.8.3', requestVersion )) ? '1.8.3' : '1.12.4';
     } else if (type.includes('/jquery/2.')) {
         version = '2.2.4';
     } else if (type.includes('/jquery/3.')) {
@@ -335,3 +338,22 @@ helpers.setLastVersion = function (type) {
 
     return version;
 };
+
+
+helpers.compareVersion = function (v1, v2) {
+    /**
+     *  compareVersion( '1.5.7' , '1.5.8' ) is TRUE
+     *  compareVersion( '1.5.8' , '1.5.7' ) is FALSE
+     *  compareVersion( '1.5.7' , '1.5.7' ) is TRUE
+     */
+    v1 = v1.split('.');
+    v2 = v2.split('.');
+    const k = Math.min(v1.length, v2.length);
+    for (let i = 0; i < k; ++ i) {
+        v1[i] = parseInt(v1[i], 10);
+        v2[i] = parseInt(v2[i], 10);
+        if (v1[i] > v2[i]) return true;
+        if (v1[i] < v2[i]) return false;
+    }
+    return v1.length == v2.length ? true: (v1.length < v2.length ? false : true);
+}
