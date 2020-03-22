@@ -104,16 +104,11 @@ interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
         requestUrlSegments.protocol = Address.HTTPS;
         requestUrl = requestUrlSegments.toString();
 
-        return {
-            'redirectUrl': requestUrl
-        };
-
-    } else {
-
-        return {
-            'cancel': false
-        };
     }
+
+    return {
+        'redirectUrl': requestUrl
+    };
 };
 
 interceptor._handleStorageChanged = function (changes) {
