@@ -226,6 +226,8 @@ helpers.determineResourceName = function (filename) {
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
+    case 'page.min.jsm':
+        return 'page.js';
     case 'prototype.jsm':
         return 'Prototype';
     case 'scriptaculous.jsm':
@@ -236,6 +238,8 @@ helpers.determineResourceName = function (filename) {
         return 'Underscore.js';
     case 'webfont.jsm':
         return 'Web Font Loader';
+    case 'vue.jsm':
+        return 'Vue.js';
     case 'bootstrap.min.css':
         return 'Bootstrap CSS';
     case 'bootstrap.min.js':
@@ -340,6 +344,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '2.24.0';
     } else if (type.includes('/mootools/1.')) {
         version = '1.6.0';
+    } else if (type.includes('/page.js/1.')) {
+        version = '1.7.1';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
     } else if (type.includes('/scriptaculous/1.')) {
@@ -348,6 +354,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '2.2';
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
+    } else if (type.includes('/vue/1.')) {
+        version = '1.0.28';
     } else if (type.includes('/webfont/1.')) {
         version = '1.6.28';
     }

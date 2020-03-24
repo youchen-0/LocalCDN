@@ -93,6 +93,9 @@ var files = {
         // Prototype
         'resources/prototype/1.7.3.0/prototype.jsm': true,
 
+        // page.js
+        'resources/page.js/1.7.1/page.min.jsm': true,
+
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
 
@@ -101,6 +104,9 @@ var files = {
 
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,
+
+        // Vue.js
+        'resources/vue/1.0.28/vue.jsm': true,
 
         // Web Font Loader
         'resources/webfont/1.6.28/webfont.jsm': true

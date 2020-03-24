@@ -120,6 +120,11 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
+    // page.js
+    'pageJs': {
+        'path': 'resources/page.js/{version}/page.min.jsm',
+        'type': 'application/javascript'
+    },
     // Prototype
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.jsm',
@@ -138,6 +143,11 @@ var resources = {
     // Underscore.js
     'underscore': {
         'path': 'resources/underscore.js/{version}/underscore-min.jsm',
+        'type': 'application/javascript'
+    },
+    // Vue.js
+    'vueJs': {
+        'path': 'resources/vue/{version}/vue.jsm',
         'type': 'application/javascript'
     },
     // Web Font Loader

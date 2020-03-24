@@ -78,12 +78,14 @@ var mappings = {
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,
+            'page.js/{version}/page.min.': resources.pageJs,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
             '/twitter-bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             '/twitter-bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
+            'vue/{version}/vue.min.js': resources.vueJs,
             'webfont/{version}/webfont': resources.webfont
         }
     },
