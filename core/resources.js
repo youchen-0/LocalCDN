@@ -154,5 +154,9 @@ var resources = {
     'webfont': {
         'path': 'resources/webfont/{version}/webfont.jsm',
         'type': 'application/javascript'
+    },
+    'webfontloader': {
+        'path': 'resources/webfont/{version}/webfontloader.jsm',
+        'type': 'application/javascript'
     }
 };

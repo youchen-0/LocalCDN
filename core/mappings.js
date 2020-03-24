@@ -40,6 +40,8 @@ var mappings = {
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfontloader.js': resources.webfontloader,
+            'webfont/1/webfont.js': resources.webfont
 
         }
     },
@@ -70,6 +72,7 @@ var mappings = {
             'dojo/{version}/dojo.': resources.dojo,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
+            'font-awesome/{version}/css/font-awesome.min.': resources.fontawesome4,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
@@ -86,7 +89,8 @@ var mappings = {
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'vue/{version}/vue.min.js': resources.vueJs,
-            'webfont/{version}/webfont': resources.webfont
+            'webfont/{version}/webfont.js': resources.webfont,
+            'webfont/{version}/webfontloader.js': resources.webfont
         }
     },
     // jQuery CDN (MaxCDN)

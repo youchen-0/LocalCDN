@@ -356,7 +356,7 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '1.9.1';
     } else if (type.includes('/vue/1.')) {
         version = '1.0.28';
-    } else if (type.includes('/webfont/1.')) {
+    } else if (type.includes('webfont')) {
         version = '1.6.28';
     }
 
