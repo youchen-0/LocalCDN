@@ -222,6 +222,8 @@ helpers.determineResourceName = function (filename) {
         return 'lozad.js';
     case 'modernizr.min.jsm':
         return 'Modernizr';
+    case 'moment.min.jsm':
+        return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
     case 'prototype.jsm':

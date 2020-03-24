@@ -85,7 +85,7 @@ var files = {
         'resources/modernizr/2.8.3/modernizr.min.jsm': true,
 
         // Moment.js
-        'resources/moment.js/2.24.0/moment.min.js': true,
+        'resources/moment.js/2.24.0/moment.min.jsm': true,
 
         // MooTools
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
