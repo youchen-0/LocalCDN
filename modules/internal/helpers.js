@@ -218,6 +218,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
+    case 'lozad':
+        return 'lozad.js';
     case 'modernizr.min.jsm':
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
@@ -277,9 +279,9 @@ helpers.formatVersion = function (version) {
 helpers.setLastVersion = function (type, versionNumber) {
 
     let version, requestVersion;
-
-    requestVersion = versionNumber.toString();
-
+    if(versionNumber != null && versionNumber != undefined) {
+        requestVersion = versionNumber.toString();
+    }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
     } else if (type.includes('/backbone.js/0.')) {
@@ -318,6 +320,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.4.1';
     } else if (type.includes('/jqueryui/1.')) {
         version = '1.11.4';
+    } else if (type.includes('lozad')) {
+        version = '1.14.0';
     } else if (type.includes('/modernizr/2.')) {
         version = '2.8.3';
     } else if (type.includes('/moment.js/2.')) {

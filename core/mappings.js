@@ -123,6 +123,7 @@ var mappings = {
             'jquery-ui@{version}/jquery-ui.min.js': resources.jQueryUI,
             'jquery-ui-dist@{version}/jquery-ui.js': resources.jQueryUI,
             'jquery-ui-dist@{version}/jquery-ui.min.js': resources.jQueryUI,
+            'lozad': resources.lozad,
             'npm-modernizr@{version}/modernizr.': resources.modernizr,
             'npm-modernizr@{version}/modernizr.min.': resources.modernizr,
             'moment@{version}/moment.': resources.moment,
