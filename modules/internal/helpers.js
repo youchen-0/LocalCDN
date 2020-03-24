@@ -218,10 +218,16 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
+    case 'lozad':
+        return 'lozad.js';
     case 'modernizr.min.jsm':
+        return 'Modernizr';
+    case 'moment.min.jsm':
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
+    case 'page.min.jsm':
+        return 'page.js';
     case 'prototype.jsm':
         return 'Prototype';
     case 'scriptaculous.jsm':
@@ -232,6 +238,8 @@ helpers.determineResourceName = function (filename) {
         return 'Underscore.js';
     case 'webfont.jsm':
         return 'Web Font Loader';
+    case 'vue.jsm':
+        return 'Vue.js';
     case 'bootstrap.min.css':
         return 'Bootstrap CSS';
     case 'bootstrap.min.js':
@@ -240,6 +248,14 @@ helpers.determineResourceName = function (filename) {
         return 'bootstrap-slider';
     default:
         return 'Unknown';
+    }
+};
+
+helpers.determineBundle = function (path = '') {
+    if (path.includes('findify')) {
+        return 'Findify';
+    } else {
+        return '';
     }
 };
 
@@ -277,9 +293,9 @@ helpers.formatVersion = function (version) {
 helpers.setLastVersion = function (type, versionNumber) {
 
     let version, requestVersion;
-
-    requestVersion = versionNumber.toString();
-
+    if(versionNumber != null && versionNumber != undefined) {
+        requestVersion = versionNumber.toString();
+    }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
     } else if (type.includes('/backbone.js/0.')) {
@@ -306,6 +322,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.12.3';
     } else if (type.includes('/ext-core/3.')) {
         version = '3.1.0';
+    } else if (type.includes('findify')) {
+        version = '6.9.15';
     } else if (type.includes('/fontawesome/4.')) {
         version = '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
@@ -318,12 +336,16 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.4.1';
     } else if (type.includes('/jqueryui/1.')) {
         version = '1.11.4';
+    } else if (type.includes('lozad')) {
+        version = '1.14.0';
     } else if (type.includes('/modernizr/2.')) {
         version = '2.8.3';
     } else if (type.includes('/moment.js/2.')) {
         version = '2.24.0';
     } else if (type.includes('/mootools/1.')) {
         version = '1.6.0';
+    } else if (type.includes('/page.js/1.')) {
+        version = '1.7.1';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
     } else if (type.includes('/scriptaculous/1.')) {
@@ -332,6 +354,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '2.2';
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
+    } else if (type.includes('/vue/1.')) {
+        version = '1.0.28';
     } else if (type.includes('/webfont/1.')) {
         version = '1.6.28';
     }

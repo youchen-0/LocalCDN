@@ -55,6 +55,16 @@ var files = {
         // Ext Core
         'resources/ext-core/3.1.0/ext-core.jsm': true,
 
+        // Finify bundle
+        'resources/findify-bundle/6.9.15/bundle.js': true,
+        'resources/findify-bundle/6.9.15/components.js': true,
+        'resources/findify-bundle/6.9.15/config.js': true,
+        'resources/findify-bundle/6.9.15/initializer.js': true,
+        'resources/findify-bundle/6.9.15/polyfill.js': true,
+        'resources/findify-bundle/6.9.15/vendors~components~initializer.js': true,
+        'resources/findify-bundle/6.9.15/vendors~initializer.js': true,
+        'resources/findify-bundle/6.9.15/vendors~sentry.js': true,
+
         // Font Awesome
         'resources/fontawesome/4.7.0/css/font-awesome.min.css': true,
         'resources/fontawesome/5.7.2/css/all.css': true,
@@ -68,17 +78,23 @@ var files = {
         // jQuery UI
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
 
+        // lozad.js
+        'resources/lozad.js/1.14.0/lozad': true,
+
         // Modernizr
         'resources/modernizr/2.8.3/modernizr.min.jsm': true,
 
         // Moment.js
-        'resources/moment.js/2.24.0/moment.min.js': true,
+        'resources/moment.js/2.24.0/moment.min.jsm': true,
 
         // MooTools
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
 
         // Prototype
         'resources/prototype/1.7.3.0/prototype.jsm': true,
+
+        // page.js
+        'resources/page.js/1.7.1/page.min.jsm': true,
 
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
@@ -88,6 +104,9 @@ var files = {
 
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,
+
+        // Vue.js
+        'resources/vue/1.0.28/vue.jsm': true,
 
         // Web Font Loader
         'resources/webfont/1.6.28/webfont.jsm': true

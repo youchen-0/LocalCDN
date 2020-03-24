@@ -75,6 +75,11 @@ var resources = {
         'path': 'resources/ext-core/{version}/ext-core.jsm',
         'type': 'application/javascript'
     },
+    // Finify bundle
+    'findifyBundle': {
+        'path': 'resources/findify-bundle/{version}/',
+        'type': 'application/javascript'
+    },
     // Font Awesome
     'fontawesome4': {
         'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
@@ -95,6 +100,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    // lozad.js
+    'lozad': {
+        'path': 'resources/lozad.js/{version}/lozad',
+        'type': 'application/javascript'
+    },
     // Modernizr
     'modernizr': {
         'path': 'resources/modernizr/{version}/modernizr.min.jsm',
@@ -108,6 +118,11 @@ var resources = {
     // MooTools
     'mootools': {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
+        'type': 'application/javascript'
+    },
+    // page.js
+    'pageJs': {
+        'path': 'resources/page.js/{version}/page.min.jsm',
         'type': 'application/javascript'
     },
     // Prototype
@@ -128,6 +143,11 @@ var resources = {
     // Underscore.js
     'underscore': {
         'path': 'resources/underscore.js/{version}/underscore-min.jsm',
+        'type': 'application/javascript'
+    },
+    // Vue.js
+    'vueJs': {
+        'path': 'resources/vue/{version}/vue.jsm',
         'type': 'application/javascript'
     },
     // Web Font Loader
