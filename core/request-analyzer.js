@@ -126,7 +126,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             bundle = helpers.determineBundle(channelPath);
             if(bundle !== '') {
                 filename = channelPath.split('/').pop();
-                targetPath = targetPath + filename;
+                targetPath = targetPath + filename + 'm';
             }
 
             // Prepare and return a local target.

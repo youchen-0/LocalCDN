@@ -34,15 +34,15 @@ var files = {
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,
 
         // Bootstrap.js
-        'resources/bootstrap.js/3.3.7/bootstrap.min.js': true,
-        'resources/bootstrap.js/4.4.1/bootstrap.min.js': true,
+        'resources/bootstrap.js/3.3.7/bootstrap.min.jsm': true,
+        'resources/bootstrap.js/4.4.1/bootstrap.min.jsm': true,
 
         // Bootstrap.css
-        'resources/bootstrap.css/3.3.7/bootstrap.min.css': true,
-        'resources/bootstrap.css/4.4.1/bootstrap.min.css': true,
+        'resources/bootstrap.css/3.3.7/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/4.4.1/bootstrap.min.cssm': true,
 
         // bootstrap-slider
-        'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,
+        'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.cssm': true,
 
         // Dojo
         'resources/dojo/1.14.1/dojo/dojo.jsm': true,
@@ -56,18 +56,18 @@ var files = {
         'resources/ext-core/3.1.0/ext-core.jsm': true,
 
         // Finify bundle
-        'resources/findify-bundle/6.9.15/bundle.js': true,
-        'resources/findify-bundle/6.9.15/components.js': true,
-        'resources/findify-bundle/6.9.15/config.js': true,
-        'resources/findify-bundle/6.9.15/initializer.js': true,
-        'resources/findify-bundle/6.9.15/polyfill.js': true,
-        'resources/findify-bundle/6.9.15/vendors~components~initializer.js': true,
-        'resources/findify-bundle/6.9.15/vendors~initializer.js': true,
-        'resources/findify-bundle/6.9.15/vendors~sentry.js': true,
+        'resources/findify-bundle/6.9.15/bundle.jsm': true,
+        'resources/findify-bundle/6.9.15/components.jsm': true,
+        'resources/findify-bundle/6.9.15/config.jsm': true,
+        'resources/findify-bundle/6.9.15/initializer.jsm': true,
+        'resources/findify-bundle/6.9.15/polyfill.jsm': true,
+        'resources/findify-bundle/6.9.15/vendors~components~initializer.jsm': true,
+        'resources/findify-bundle/6.9.15/vendors~initializer.jsm': true,
+        'resources/findify-bundle/6.9.15/vendors~sentry.jsm': true,
 
         // Font Awesome
-        'resources/fontawesome/4.7.0/css/font-awesome.min.css': true,
-        'resources/fontawesome/5.7.2/css/all.css': true,
+        'resources/fontawesome/4.7.0/css/font-awesome.min.cssm': true,
+        'resources/fontawesome/5.7.2/css/all.cssm': true,
 
         // jQuery
         'resources/jquery/1.8.3/jquery.min.jsm': true,

@@ -210,9 +210,9 @@ helpers.determineResourceName = function (filename) {
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
-    case 'font-awesome.min.css':
+    case 'font-awesome.min.cssm':
         return 'Font Awesome';
-    case 'all.css':
+    case 'all.cssm':
         return 'Font Awesome';
     case 'jquery.min.jsm':
         return 'jQuery';
@@ -240,11 +240,11 @@ helpers.determineResourceName = function (filename) {
         return 'Web Font Loader';
     case 'vue.jsm':
         return 'Vue.js';
-    case 'bootstrap.min.css':
+    case 'bootstrap.min.cssm':
         return 'Bootstrap CSS';
-    case 'bootstrap.min.js':
+    case 'bootstrap.min.jsm':
         return 'Bootstrap JS';
-    case 'bootstrap-slider.min.css':
+    case 'bootstrap-slider.min.cssm':
         return 'bootstrap-slider';
     default:
         return 'Unknown';
