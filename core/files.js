@@ -55,6 +55,16 @@ var files = {
         // Ext Core
         'resources/ext-core/3.1.0/ext-core.jsm': true,
 
+        // Finify bundle
+        'resources/findify-bundle/6.9.15/bundle.js': true,
+        'resources/findify-bundle/6.9.15/components.js': true,
+        'resources/findify-bundle/6.9.15/config.js': true,
+        'resources/findify-bundle/6.9.15/initializer.js': true,
+        'resources/findify-bundle/6.9.15/polyfill.js': true,
+        'resources/findify-bundle/6.9.15/vendors~components~initializer.js': true,
+        'resources/findify-bundle/6.9.15/vendors~initializer.js': true,
+        'resources/findify-bundle/6.9.15/vendors~sentry.js': true,
+
         // Font Awesome
         'resources/fontawesome/4.7.0/css/font-awesome.min.css': true,
         'resources/fontawesome/5.7.2/css/all.css': true,

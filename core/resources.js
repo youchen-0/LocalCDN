@@ -75,6 +75,11 @@ var resources = {
         'path': 'resources/ext-core/{version}/ext-core.jsm',
         'type': 'application/javascript'
     },
+    // Finify bundle
+    'findifyBundle': {
+        'path': 'resources/findify-bundle/{version}/',
+        'type': 'application/javascript'
+    },
     // Font Awesome
     'fontawesome4': {
         'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',

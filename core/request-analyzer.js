@@ -89,7 +89,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
 
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath) {
 
-    let resourcePath, versionNumber, resourcePattern;
+    let resourcePath, versionNumber, resourcePattern, filename, bundle;
 
     resourcePath = channelPath.replace(basePath, '');
 
@@ -122,11 +122,19 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
                 version = versionNumber && versionNumber[0] || targetPath.match(Resource.VERSION_EXPRESSION);
             }
 
+            // Get bundle name
+            bundle = helpers.determineBundle(channelPath);
+            if(bundle !== '') {
+                filename = channelPath.split('/').pop();
+                targetPath = targetPath + filename;
+            }
+
             // Prepare and return a local target.
             return {
                 'source': channelHost,
                 'version': version,
-                'path': targetPath
+                'path': targetPath,
+                'bundle': bundle
             };
         }
     }

@@ -3,6 +3,7 @@
  * Belongs to Decentraleyes.
  *
  * @author      Thomas Rientjes
+ * @author      nobody42
  * @since       2016-08-09
  * @license     MPL 2.0
  *
@@ -251,11 +252,17 @@ popup._createInjectionGroupElement = function (source, cdn) {
 
     let injectionGroupElement;
 
+    // Filter duplicates
+    let bundle = [];
+    for (let injection of cdn) {
+        bundle.push(injection);
+    }
+    let filtered = popup._filterDuplicates(bundle, 'bundle');
+
     injectionGroupElement = document.createElement('ul');
     injectionGroupElement.setAttribute('class', 'sublist');
 
-    for (let injection of cdn) {
-
+    for (let injection of filtered) {
         let injectionElement = popup._createInjectionElement(injection);
         injectionGroupElement.appendChild(injectionElement);
     }
@@ -271,7 +278,13 @@ popup._createInjectionElement = function (injection) {
     injectionElement.setAttribute('class', 'sublist-item');
 
     filename = helpers.extractFilenameFromPath(injection.path);
-    name = helpers.determineResourceName(filename);
+
+    // If bundle empty, use filename
+    if (injection.bundle === ''){
+        name = helpers.determineResourceName(filename);
+    } else {
+        name = injection.bundle + ' (Bundle)'
+    }
 
     nameTextNode = document.createTextNode(`- ${name}`);
     injectionElement.appendChild(nameTextNode);
@@ -348,6 +361,22 @@ popup._onProtectionToggled = function () {
 
     chrome.tabs.reload(popup._targetTab.id, {bypassCache});
     popup._close();
+};
+
+popup._filterDuplicates = function(array, key) {
+    /**
+     * Function to remove duplicates from an array, depending on 'key'.
+     * Ignore empty values of the 'key'
+     *
+     */
+
+    let filtered = array
+        .map(e => e[key])
+        .map((value, index, newArray) => (value != '') ? (newArray.indexOf(value) === index && index) : index )
+        .filter(e => array[e])
+        .map(e => array[e]);
+
+    return filtered;
 };
 
 /**

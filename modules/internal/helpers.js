@@ -245,6 +245,14 @@ helpers.determineResourceName = function (filename) {
     }
 };
 
+helpers.determineBundle = function (path = '') {
+    if (path.includes('findify')) {
+        return 'Findify';
+    } else {
+        return '';
+    }
+};
+
 helpers.determineScriptDirection = function (language) {
 
     let rightToLeftLanguages, scriptDirection;
@@ -308,6 +316,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.12.3';
     } else if (type.includes('/ext-core/3.')) {
         version = '3.1.0';
+    } else if (type.includes('findify')) {
+        version = '6.9.15';
     } else if (type.includes('/fontawesome/4.')) {
         version = '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
