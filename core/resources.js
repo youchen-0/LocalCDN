@@ -47,17 +47,17 @@ var resources = {
     },
     // Bootstrap.js
     'bootstrapJS': {
-        'path': 'resources/bootstrap.js/{version}/bootstrap.min.js',
+        'path': 'resources/bootstrap.js/{version}/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
     // Bootstrap.css
     'bootstrapCSS': {
-        'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
+        'path': 'resources/bootstrap.css/{version}/bootstrap.min.cssm',
         'type': 'text/css'
     },
     // bootstrap-slider (Slider for Bootstrap 3)
     'bootstrapSlider': {
-        'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.css',
+        'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.cssm',
         'type': 'text/css'
     },
     // Dojo
@@ -81,13 +81,13 @@ var resources = {
         'type': 'application/javascript'
     },
     // Font Awesome
-    'fontawesome4': {
-        'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
+    'fontawesome': {
+        'path': 'resources/fontawesome/{version}/css/font-awesome.min.cssm',
         'type': 'text/css'
     },
     // Font Awesome
     'fontawesome5': {
-        'path': 'resources/fontawesome/{version}/css/all.css',
+        'path': 'resources/fontawesome/{version}/css/all.cssm',
         'type': 'text/css'
     },
     // jQuery
@@ -130,6 +130,11 @@ var resources = {
         'path': 'resources/prototype/{version}/prototype.jsm',
         'type': 'application/javascript'
     },
+    // Cloudflare Rocket Loader
+    'cfRocketLoader': {
+        'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm',
+        'type': 'application/javascript'
+    },
     // Scriptaculous
     'scriptaculous': {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',
@@ -153,6 +158,10 @@ var resources = {
     // Web Font Loader
     'webfont': {
         'path': 'resources/webfont/{version}/webfont.jsm',
+        'type': 'application/javascript'
+    },
+    'webfontloader': {
+        'path': 'resources/webfont/{version}/webfontloader.jsm',
         'type': 'application/javascript'
     }
 };

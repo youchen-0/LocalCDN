@@ -183,6 +183,8 @@ helpers.determineCdnName = function (domainName) {
         return 'MaxCDN Bootstrap CDN';
     case 'use.fontawesome.com':
         return 'Font Awesome CDN';
+    case 'ajax.cloudflare.com':
+        return 'Cloudflare CDN';
     default:
         return 'Unknown';
     }
@@ -204,15 +206,21 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Touch';
     case 'backbone-min.jsm':
         return 'Backbone.js';
+    case 'bootstrap.min.cssm':
+        return 'Bootstrap CSS';
+    case 'bootstrap.min.jsm':
+        return 'Bootstrap JS';
+    case 'bootstrap-slider.min.cssm':
+        return 'bootstrap-slider';
     case 'dojo.jsm':
         return 'Dojo';
     case 'ember.min.jsm':
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
-    case 'font-awesome.min.css':
+    case 'font-awesome.min.cssm':
         return 'Font Awesome';
-    case 'all.css':
+    case 'all.cssm':
         return 'Font Awesome';
     case 'jquery.min.jsm':
         return 'jQuery';
@@ -230,6 +238,8 @@ helpers.determineResourceName = function (filename) {
         return 'page.js';
     case 'prototype.jsm':
         return 'Prototype';
+    case 'rocket-loader.min.jsm':
+        return 'Rocket Loader'
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
     case 'swfobject.jsm':
@@ -240,12 +250,6 @@ helpers.determineResourceName = function (filename) {
         return 'Web Font Loader';
     case 'vue.jsm':
         return 'Vue.js';
-    case 'bootstrap.min.css':
-        return 'Bootstrap CSS';
-    case 'bootstrap.min.js':
-        return 'Bootstrap JS';
-    case 'bootstrap-slider.min.css':
-        return 'bootstrap-slider';
     default:
         return 'Unknown';
     }
@@ -324,6 +328,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.1.0';
     } else if (type.includes('findify')) {
         version = '6.9.15';
+    } else if (type.includes('/fontawesome/3.')) {
+        version = '3.2.1';
     } else if (type.includes('/fontawesome/4.')) {
         version = '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
@@ -356,7 +362,7 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '1.9.1';
     } else if (type.includes('/vue/1.')) {
         version = '1.0.28';
-    } else if (type.includes('/webfont/1.')) {
+    } else if (type.includes('webfont')) {
         version = '1.6.28';
     }
 

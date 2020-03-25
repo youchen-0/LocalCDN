@@ -17,7 +17,7 @@
  * Mappings
  */
 
-var lastMappingUpdate = "2020-03-13";
+var lastMappingUpdate = "2020-03-25";
 
 var mappings = {
 
@@ -40,6 +40,8 @@ var mappings = {
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfontloader.js': resources.webfontloader,
+            'webfont/1/webfont.js': resources.webfont
 
         }
     },
@@ -67,9 +69,11 @@ var mappings = {
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'bootstrap-slider/{version}/css/bootstrap-slider.min.': resources.bootstrapSlider,
+            'bootstrap-slider/{version}/bootstrap-slider.min.': resources.bootstrapSlider,
             'dojo/{version}/dojo.': resources.dojo,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
@@ -86,7 +90,8 @@ var mappings = {
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'vue/{version}/vue.min.js': resources.vueJs,
-            'webfont/{version}/webfont': resources.webfont
+            'webfont/{version}/webfont.js': resources.webfont,
+            'webfont/{version}/webfontloader.js': resources.webfont
         }
     },
     // jQuery CDN (MaxCDN)
@@ -435,14 +440,15 @@ var mappings = {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
-            'font-awesome/{version}/css/font-awesome.min.css': resources.fontawesome4
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
     },
     // MaxCDN Bootstrap
     'maxcdn.bootstrapcdn.com': {
-        '/bootstrap/': {
-            '{version}/js/bootstrap.min.': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.': resources.bootstrapCSS
+        '/': {
+            'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
+            'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
     },
     // NetDNA Bootstrap
@@ -457,8 +463,13 @@ var mappings = {
         '/releases/v': {
             '{version}/css/all.css': resources.fontawesome5
         }
+    },
+    // Cloudflare Rocket-Loader
+    'ajax.cloudflare.com': {
+        '/': {
+            'cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.': resources.cfRocketLoader
+        }
     }
-
 };
 
 // Geekzu Public Service [Mirror]

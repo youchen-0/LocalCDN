@@ -289,13 +289,13 @@ popup._createInjectionElement = function (injection) {
     nameTextNode = document.createTextNode(`- ${name}`);
     injectionElement.appendChild(nameTextNode);
 
-    noteElement = document.createElement('span');
-    noteElement.setAttribute('class', 'side-note');
-
-    noteTextNode = document.createTextNode(` v${injection.version}`);
-
-    noteElement.appendChild(noteTextNode);
-    injectionElement.appendChild(noteElement);
+    if (injection.version !== null) {
+        noteElement = document.createElement('span');
+        noteElement.setAttribute('class', 'side-note');
+        noteTextNode = document.createTextNode(` v${injection.version}`);
+        noteElement.appendChild(noteTextNode);
+        injectionElement.appendChild(noteElement);
+    }
 
     return injectionElement;
 };
