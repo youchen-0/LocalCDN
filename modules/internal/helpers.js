@@ -328,6 +328,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.1.0';
     } else if (type.includes('findify')) {
         version = '6.9.15';
+    } else if (type.includes('/fontawesome/3.')) {
+        version = '3.2.1';
     } else if (type.includes('/fontawesome/4.')) {
         version = '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {

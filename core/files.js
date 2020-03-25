@@ -66,6 +66,10 @@ var files = {
         'resources/findify-bundle/6.9.15/vendors~sentry.jsm': true,
 
         // Font Awesome
+        'resources/fontawesome/3.2.1/css/font-awesome.min.cssm': true,
+        'resources/fontawesome/3.2.1/css/font-awesome.cssm': true,
+        'resources/fontawesome/3.2.1/css/font-awesome-ie7.cssm': true,
+        'resources/fontawesome/3.2.1/css/font-awesome-ie7.min.cssm': true,
         'resources/fontawesome/4.7.0/css/font-awesome.min.cssm': true,
         'resources/fontawesome/5.7.2/css/all.cssm': true,
 

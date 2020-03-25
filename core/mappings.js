@@ -73,7 +73,7 @@ var mappings = {
             'dojo/{version}/dojo.': resources.dojo,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
-            'font-awesome/{version}/css/font-awesome.min.': resources.fontawesome4,
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
@@ -440,7 +440,7 @@ var mappings = {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
-            'font-awesome/{version}/css/font-awesome.min.css': resources.fontawesome4
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
     },
     // MaxCDN Bootstrap
@@ -448,7 +448,7 @@ var mappings = {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
-            'font-awesome/{version}/css/font-awesome.min.': resources.fontawesome4
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
     },
     // NetDNA Bootstrap

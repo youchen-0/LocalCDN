@@ -81,7 +81,7 @@ var resources = {
         'type': 'application/javascript'
     },
     // Font Awesome
-    'fontawesome4': {
+    'fontawesome': {
         'path': 'resources/fontawesome/{version}/css/font-awesome.min.cssm',
         'type': 'text/css'
     },
