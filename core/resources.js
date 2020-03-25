@@ -130,6 +130,11 @@ var resources = {
         'path': 'resources/prototype/{version}/prototype.jsm',
         'type': 'application/javascript'
     },
+    // Cloudflare Rocket Loader
+    'cfRocketLoader': {
+        'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm',
+        'type': 'application/javascript'
+    },
     // Scriptaculous
     'scriptaculous': {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',

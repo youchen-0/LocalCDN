@@ -183,6 +183,8 @@ helpers.determineCdnName = function (domainName) {
         return 'MaxCDN Bootstrap CDN';
     case 'use.fontawesome.com':
         return 'Font Awesome CDN';
+    case 'ajax.cloudflare.com':
+        return 'Cloudflare CDN';
     default:
         return 'Unknown';
     }
@@ -204,6 +206,12 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Touch';
     case 'backbone-min.jsm':
         return 'Backbone.js';
+    case 'bootstrap.min.cssm':
+        return 'Bootstrap CSS';
+    case 'bootstrap.min.jsm':
+        return 'Bootstrap JS';
+    case 'bootstrap-slider.min.cssm':
+        return 'bootstrap-slider';
     case 'dojo.jsm':
         return 'Dojo';
     case 'ember.min.jsm':
@@ -230,6 +238,8 @@ helpers.determineResourceName = function (filename) {
         return 'page.js';
     case 'prototype.jsm':
         return 'Prototype';
+    case 'rocket-loader.min.jsm':
+        return 'Rocket Loader'
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
     case 'swfobject.jsm':
@@ -240,12 +250,6 @@ helpers.determineResourceName = function (filename) {
         return 'Web Font Loader';
     case 'vue.jsm':
         return 'Vue.js';
-    case 'bootstrap.min.cssm':
-        return 'Bootstrap CSS';
-    case 'bootstrap.min.jsm':
-        return 'Bootstrap JS';
-    case 'bootstrap-slider.min.cssm':
-        return 'bootstrap-slider';
     default:
         return 'Unknown';
     }

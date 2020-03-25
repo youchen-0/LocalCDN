@@ -445,9 +445,10 @@ var mappings = {
     },
     // MaxCDN Bootstrap
     'maxcdn.bootstrapcdn.com': {
-        '/bootstrap/': {
-            '{version}/js/bootstrap.min.': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.': resources.bootstrapCSS
+        '/': {
+            'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
+            'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
+            'font-awesome/{version}/css/font-awesome.min.': resources.fontawesome4
         }
     },
     // NetDNA Bootstrap
@@ -462,8 +463,13 @@ var mappings = {
         '/releases/v': {
             '{version}/css/all.css': resources.fontawesome5
         }
+    },
+    // Cloudflare Rocket-Loader
+    'ajax.cloudflare.com': {
+        '/': {
+            'cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.': resources.cfRocketLoader
+        }
     }
-
 };
 
 // Geekzu Public Service [Mirror]
