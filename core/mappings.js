@@ -17,7 +17,7 @@
  * Mappings
  */
 
-var lastMappingUpdate = "2020-03-13";
+var lastMappingUpdate = "2020-03-25";
 
 var mappings = {
 
