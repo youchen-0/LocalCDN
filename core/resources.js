@@ -102,7 +102,7 @@ var resources = {
     },
     // lozad.js
     'lozad': {
-        'path': 'resources/lozad.js/{version}/lozad',
+        'path': 'resources/lozad.js/{version}/lozad.min.jsm',
         'type': 'application/javascript'
     },
     // Modernizr

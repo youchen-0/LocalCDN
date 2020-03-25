@@ -83,7 +83,7 @@ var files = {
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
 
         // lozad.js
-        'resources/lozad.js/1.14.0/lozad': true,
+        'resources/lozad.js/1.14.0/lozad.min.jsm': true,
 
         // Modernizr
         'resources/modernizr/2.8.3/modernizr.min.jsm': true,

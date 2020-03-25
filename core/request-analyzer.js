@@ -89,7 +89,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
 
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath) {
 
-    let resourcePath, versionNumber, resourcePattern, filename, bundle;
+    let resourcePath, versionNumber, resourcePattern, filename;
 
     resourcePath = channelPath.replace(basePath, '');
 
@@ -123,7 +123,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             }
 
             // Get bundle name
-            bundle = helpers.determineBundle(channelPath);
+            let bundle = helpers.determineBundle(channelPath);
             if(bundle !== '') {
                 filename = channelPath.split('/').pop();
                 targetPath = targetPath + filename + 'm';
@@ -132,7 +132,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             // Prepare and return a local target.
             return {
                 'source': channelHost,
-                'version': version,
+                'version': version.toString(),
                 'path': targetPath,
                 'bundle': bundle
             };
