@@ -185,6 +185,8 @@ helpers.determineCdnName = function (domainName) {
         return 'Font Awesome CDN';
     case 'ajax.cloudflare.com':
         return 'Cloudflare CDN';
+    case 'akamai-webcdn.kgstatic.net':
+        return 'Akamai WebCDN';
     default:
         return 'Unknown';
     }
@@ -226,7 +228,7 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
-    case 'lozad':
+    case 'lozad.min.jsm':
         return 'lozad.js';
     case 'modernizr.min.jsm':
         return 'Modernizr';

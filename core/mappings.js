@@ -469,6 +469,12 @@ var mappings = {
         '/': {
             'cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.': resources.cfRocketLoader
         }
+    },
+    // Akamai WebCDN
+    'akamai-webcdn.kgstatic.net': {
+        '/': {
+            'renewal/static/js/lozad.min.': resources.lozad
+        }
     }
 };
 
