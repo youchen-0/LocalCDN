@@ -174,6 +174,11 @@ var resources = {
         'path': 'resources/page.js/{version}/page.min.jsm',
         'type': 'application/javascript'
     },
+    // plyr CSS
+    'plyrCSS': {
+        'path': 'resources/plyr/{version}/plyr.min.cssm',
+        'type': 'text/css'
+    },
     // Prototype
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.jsm',

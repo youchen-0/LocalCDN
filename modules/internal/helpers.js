@@ -258,6 +258,8 @@ helpers.determineResourceName = function (filename) {
         return 'P2P Media Loader Core';
     case 'page.min.jsm':
         return 'page.js';
+    case 'plyr.min.cssm':
+        return 'plyr CSS';
     case 'prototype.jsm':
         return 'Prototype';
     case 'rocket-loader.min.jsm':
@@ -406,6 +408,8 @@ helpers.setLastVersion = function (type, version) {
         version = '0.6.2';
     } else if (type.includes('/page.js/1.')) {
         version = '1.7.1';
+    } else if (type.includes('/plyr/3.')) {
+        version = '3.5.10';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
     } else if (type.includes('/rickshaw/1.')) {

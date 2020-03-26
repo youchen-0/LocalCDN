@@ -93,6 +93,7 @@ var mappings = {
             'moment.js/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,
             'page.js/{version}/page.min.': resources.pageJs,
+            'plyr/{version}/plyr.css': resources.plyrCSS,
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
