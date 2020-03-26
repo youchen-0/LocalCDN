@@ -214,8 +214,10 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap CSS';
     case 'bootstrap.min.jsm':
         return 'Bootstrap JS';
+    case 'bootstrap-slider.min.jsm':
+        return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.cssm':
-        return 'bootstrap-slider';
+        return 'bootstrap-slider CSS';
     case 'dojo.jsm':
         return 'Dojo';
     case 'ember.min.jsm':

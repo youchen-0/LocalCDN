@@ -61,9 +61,13 @@ var resources = {
         'type': 'text/css'
     },
     // bootstrap-slider (Slider for Bootstrap 3)
-    'bootstrapSlider': {
+    'bootstrapSliderCSS': {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.cssm',
         'type': 'text/css'
+    },
+    'bootstrapSliderJS': {
+        'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.jsm',
+        'type': 'application/javascript'
     },
     // Dojo
     'dojo': {
