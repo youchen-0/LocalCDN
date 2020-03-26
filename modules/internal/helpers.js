@@ -260,6 +260,8 @@ helpers.determineResourceName = function (filename) {
         return 'Web Font Loader';
     case 'vue.jsm':
         return 'Vue.js';
+    case 'wow.min.jsm':
+        return 'WOW';
     default:
         return 'Unknown';
     }
@@ -380,6 +382,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '1.0.28';
     } else if (type.includes('webfont')) {
         version = '1.6.28';
+    } else if (type.includes('/wow/1.')) {
+        version = '1.1.2';
     }
 
     return version;

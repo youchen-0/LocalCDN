@@ -128,7 +128,10 @@ var files = {
         'resources/vue/1.0.28/vue.jsm': true,
 
         // Web Font Loader
-        'resources/webfont/1.6.28/webfont.jsm': true
+        'resources/webfont/1.6.28/webfont.jsm': true,
+
+        // WOW
+        'resources/wow/1.1.2/wow.min.jsm': true
     },
 
     // Files [Staging]

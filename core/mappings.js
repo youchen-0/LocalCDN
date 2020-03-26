@@ -95,7 +95,8 @@ var mappings = {
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'vue/{version}/vue.min.js': resources.vueJs,
             'webfont/{version}/webfont.js': resources.webfont,
-            'webfont/{version}/webfontloader.js': resources.webfont
+            'webfont/{version}/webfontloader.js': resources.webfont,
+            'wow/{version}/wow.min.': resources.wow
         }
     },
     // jQuery CDN (MaxCDN)

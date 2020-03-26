@@ -192,5 +192,10 @@ var resources = {
     'webfontloader': {
         'path': 'resources/webfont/{version}/webfontloader.jsm',
         'type': 'application/javascript'
+    },
+    // WOW
+    'wow': {
+        'path': 'resources/wow/{version}/wow.min.jsm',
+        'type': 'application/javascript'
     }
 };
