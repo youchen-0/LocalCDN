@@ -89,6 +89,9 @@ var files = {
         'resources/jquery/2.2.4/jquery.min.jsm': true,
         'resources/jquery/3.4.1/jquery.min.jsm': true,
 
+        // jQuery BlockUI
+        'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,
+
         // jQuery UI
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
 

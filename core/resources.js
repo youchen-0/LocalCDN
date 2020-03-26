@@ -119,6 +119,11 @@ var resources = {
         'path': 'resources/jquery/{version}/jquery.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery BlockUI
+    'jQueryBlockUI': {
+        'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',

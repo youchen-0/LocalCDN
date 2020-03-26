@@ -82,6 +82,7 @@ var mappings = {
             'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
+            'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'jquery-validate/{version}/jquery.validate.min.js': resources.jqueryValidationPlugin,
