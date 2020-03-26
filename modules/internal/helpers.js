@@ -340,6 +340,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '4.4.1';
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
+    } else if (type.includes('/d3/3.')) {
+        version = '3.5.17';
     } else if (type.includes('/dojo/1.')) {
         version = '1.14.1';
     } else if (type.includes('/ember.js/1.')) {
