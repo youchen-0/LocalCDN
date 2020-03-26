@@ -66,6 +66,7 @@ var mappings = {
     'cdnjs.cloudflare.com': {
         '/ajax/libs/': {
             'angular.js/{version}/angular.': resources.angular,
+            'animate.css/{version}/animate.min.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'bootstrap-slider/{version}/css/bootstrap-slider.min.': resources.bootstrapSlider,

@@ -206,6 +206,8 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
+    case 'animate.cssm':
+        return 'Animate CSS'
     case 'backbone-min.jsm':
         return 'Backbone.js';
     case 'bootstrap.min.cssm':
@@ -304,6 +306,8 @@ helpers.setLastVersion = function (type, versionNumber) {
     }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
+    } else if (type.includes('/animate.css/3.')) {
+        version = '3.7.2';
     } else if (type.includes('/backbone.js/0.')) {
         version = '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {

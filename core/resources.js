@@ -40,6 +40,11 @@ var resources = {
         'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
         'type': 'application/javascript'
     },
+    // Animate CSS
+    'animateCSS': {
+        'path': 'resources/animate.css/{version}/animate.cssm',
+        'type': 'text/css'
+    },
     // Backbone.js
     'backbone': {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',

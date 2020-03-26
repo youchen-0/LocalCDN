@@ -29,6 +29,9 @@ var files = {
         'resources/angularjs/1.7.9/angular-cookies.min.jsm': true,
         'resources/angularjs/1.7.9/angular-touch.min.jsm': true,
 
+        // Animate CSS
+        'resources/animate.css/3.7.2/animate.min.cssm': true,
+
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,
