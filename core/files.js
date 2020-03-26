@@ -89,6 +89,9 @@ var files = {
         // jQuery Validation Plugin
         'resources/jquery-validate/1.19.1/jquery.validate.min.jsm': true,
 
+        // jQuery jeditable
+        'resources/jquery-jeditable/1.8.0/jquery.jeditable.min.jsm': true,
+
         // lazysizes
         'resources/lazysizes/4.1.8/lazysizes.min.jsm': true,
 

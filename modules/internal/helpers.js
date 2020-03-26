@@ -233,6 +233,8 @@ helpers.determineResourceName = function (filename) {
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
     case 'jquery.validate.min.jsm':
+        return 'jQuery jeditable';
+    case 'jquery.jeditable.min.jsm':
         return 'jQuery Validation Plugin';
     case 'lazysizes.min.jsm':
         return 'lazysizes';
@@ -366,7 +368,9 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '1.11.4';
     } else if (type.includes('/jquery-validate/1.')) {
         version = '1.19.1';
-    } else if (type.includes('lazysizes/4.')) {
+    } else if (type.includes('/jquery-jeditable/1.')) {
+        version = '1.8.0';
+    } else if (type.includes('/lazysizes/4.')) {
         version = '4.1.8';
     } else if (type.includes('lozad')) {
         version = '1.14.0';
@@ -380,7 +384,7 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '1.7.1';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
-    } else if (type.includes('rickshaw/1.')) {
+    } else if (type.includes('/rickshaw/1.')) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
         version = '1.9.0';

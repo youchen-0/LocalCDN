@@ -99,6 +99,11 @@ var resources = {
         'path': 'resources/fontawesome/{version}/css/all.cssm',
         'type': 'text/css'
     },
+    // jeditableJS
+    'jeditableJS': {
+        'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery
     'jQuery': {
         'path': 'resources/jquery/{version}/jquery.min.jsm',

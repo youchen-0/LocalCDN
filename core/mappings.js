@@ -76,6 +76,8 @@ var mappings = {
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
+            'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
+            'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
