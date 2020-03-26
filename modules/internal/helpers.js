@@ -220,6 +220,8 @@ helpers.determineResourceName = function (filename) {
         return 'bootstrap-slider CSS';
     case 'clipboard.min.jsm':
         return 'clipboard.js';
+    case 'd3.min.jsm':
+        return 'D3.js';
     case 'dojo.jsm':
         return 'Dojo';
     case 'ember.min.jsm':
