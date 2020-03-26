@@ -249,7 +249,11 @@ helpers.determineResourceName = function (filename) {
     case 'prototype.jsm':
         return 'Prototype';
     case 'rocket-loader.min.jsm':
-        return 'Rocket Loader'
+        return 'Rocket Loader';
+    case 'rickshaw.min.jsm':
+        return 'rickshaw JS';
+    case 'rickshaw.min.cssm':
+        return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
     case 'swfobject.jsm':
@@ -376,6 +380,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '1.7.1';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
+    } else if (type.includes('rickshaw/1.')) {
+        version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
         version = '1.9.0';
     } else if (type.includes('/swfobject/2.')) {

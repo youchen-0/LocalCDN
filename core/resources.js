@@ -149,6 +149,15 @@ var resources = {
         'path': 'resources/prototype/{version}/prototype.jsm',
         'type': 'application/javascript'
     },
+    // rickshaw
+    'rickshawJS': {
+        'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',
+        'type': 'application/javascript'
+    },
+    'rickshawCSS': {
+        'path': 'resources/rickshaw/{version}/rickshaw.min.cssm',
+        'type': 'text/css'
+    },
     // Cloudflare Rocket Loader
     'cfRocketLoader': {
         'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm',

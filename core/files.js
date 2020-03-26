@@ -110,6 +110,10 @@ var files = {
         // page.js
         'resources/page.js/1.7.1/page.min.jsm': true,
 
+        // rickshaw
+        'resources/rickshaw/1.6.6/rickshaw.min.jsm': true,
+        'resources/rickshaw/1.6.6/rickshaw.min.cssm': true,
+
         // Cloudflare Rocket Loader
         'resources/rocket-loader/latest/rocket-loader.min.jsm': true,
 
