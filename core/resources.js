@@ -193,6 +193,11 @@ var resources = {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',
         'type': 'application/javascript'
     },
+    // spin.js
+    'spinJS': {
+        'path': 'resources/spin.js/{version}/spin.min.jsm',
+        'type': 'application/javascript'
+    },
     // SWFObject
     'swfobject': {
         'path': 'resources/swfobject/{version}/swfobject.jsm',

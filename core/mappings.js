@@ -95,6 +95,7 @@ var mappings = {
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'spin.js/{version}/spin.min.js': resources.spinJS,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,

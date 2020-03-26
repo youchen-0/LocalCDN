@@ -264,6 +264,8 @@ helpers.determineResourceName = function (filename) {
         return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
+    case 'spin.min.jsm':
+        return 'spin.js';
     case 'swfobject.jsm':
         return 'SWFObject';
     case 'toastr.min.cssm':
@@ -404,6 +406,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
         version = '1.9.0';
+    } else if (type.includes('/spin.js/2.')) {
+        version = '2.3.2';
     } else if (type.includes('/swfobject/2.')) {
         version = '2.2';
     } else if (type.includes('/twitter-bootstrap/3.')) {

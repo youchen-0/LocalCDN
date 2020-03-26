@@ -135,6 +135,9 @@ var files = {
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
 
+        // spin.js
+        'resources/spin.js/2.3.2/spin.min.jsm': true,
+
         // SWFObject
         'resources/swfobject/2.2/swfobject.jsm': true,
 
