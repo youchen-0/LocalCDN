@@ -155,6 +155,9 @@ var files = {
         // Web Font Loader
         'resources/webfont/1.6.28/webfont.jsm': true,
 
+        // WebRTC adapter
+        'resources/webrtc-adapter/6.4.8/adapter.min.jsm': true,
+
         // WOW
         'resources/wow/1.1.2/wow.min.jsm': true
     },

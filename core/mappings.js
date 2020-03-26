@@ -105,6 +105,7 @@ var mappings = {
             'vue/{version}/vue.min.js': resources.vueJs,
             'webfont/{version}/webfont.js': resources.webfont,
             'webfont/{version}/webfontloader.js': resources.webfont,
+            'webrtc-adapter/{version}/adapter.min.js': resources.webRTCadapter,
             'wow/{version}/wow.min.': resources.wow
         }
     },

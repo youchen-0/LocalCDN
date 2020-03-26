@@ -237,6 +237,11 @@ var resources = {
         'path': 'resources/webfont/{version}/webfontloader.jsm',
         'type': 'application/javascript'
     },
+    // WebRTC adapter
+    'webRTCadapter': {
+        'path': 'resources/webrtc-adapter/{version}/adapter.min.jsm',
+        'type': 'application/javascript'
+    },
     // WOW
     'wow': {
         'path': 'resources/wow/{version}/wow.min.jsm',

@@ -274,6 +274,8 @@ helpers.determineResourceName = function (filename) {
         return 'Underscore.js';
     case 'webfont.jsm':
         return 'Web Font Loader';
+    case 'adapter.min.jsm':
+        return 'WebRTC adapter';
     case 'vue.jsm':
         return 'Vue.js';
     case 'wow.min.jsm':
@@ -414,6 +416,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.0.28';
     } else if (type.includes('webfont')) {
         version = '1.6.28';
+    } else if (type.includes('/webrtc-adapter/6.')) {
+        version = '6.4.8';
     } else if (type.includes('/wow/1.')) {
         version = '1.1.2';
     }
