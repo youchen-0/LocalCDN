@@ -236,6 +236,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery jeditable';
     case 'jquery.jeditable.min.jsm':
         return 'jQuery Validation Plugin';
+    case 'js.cookie.min.jsm':
+        return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
         return 'lazysizes';
     case 'lozad.min.jsm':
@@ -374,6 +376,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
         version = '1.8.0';
+    } else if (type.includes('/js-cookie/2.')) {
+        version = '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
         version = '4.1.8';
     } else if (type.includes('lozad')) {

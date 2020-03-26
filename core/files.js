@@ -95,6 +95,9 @@ var files = {
         // jQuery jeditable
         'resources/jquery-jeditable/1.8.0/jquery.jeditable.min.jsm': true,
 
+        // JavaScript Cookie
+        'resources/js-cookie/2.2.1/js.cookie.min.jsm': true,
+
         // lazysizes
         'resources/lazysizes/4.1.8/lazysizes.min.jsm': true,
 

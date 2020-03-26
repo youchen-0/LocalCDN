@@ -124,6 +124,11 @@ var resources = {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
         'type': 'application/javascript'
     },
+    // resources/js-cookie/2.2.1/js.cookie.min.jsm
+    'jscookie': {
+        'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',
+        'type': 'application/javascript'
+    },
     // lazysizes
     'lazysizes': {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
