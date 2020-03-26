@@ -106,7 +106,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
 
             // Replace the requested version with the latest depending on major version
-            version = helpers.setLastVersion(targetPath, versionNumber);
+            version = helpers.setLastVersion(targetPath, versionNumber).toString();
             targetPath = targetPath.replace(versionNumber, version);
 
             hostShorthands = shorthands[channelHost];
@@ -132,7 +132,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             // Prepare and return a local target.
             return {
                 'source': channelHost,
-                'version': version.toString(),
+                'version': version,
                 'path': targetPath,
                 'bundle': bundle
             };

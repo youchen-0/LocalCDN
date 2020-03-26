@@ -158,6 +158,7 @@ var mappings = {
             'moment@{version}/moment.min.': resources.moment,
             'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
             'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
+            'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
             'swfobject@{version}/index.js': resources.swfobject,
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
             'underscore@{version}/underscore.': resources.underscore,

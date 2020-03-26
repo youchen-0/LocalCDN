@@ -149,6 +149,11 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
+    // P2P Media Loader Core
+    'p2pMediaLoaderCore': {
+        'path': 'resources/p2p-media-loader-core/{version}/p2p-media-loader-core.min.jsm',
+        'type': 'application/javascript'
+    },
     // page.js
     'pageJs': {
         'path': 'resources/page.js/{version}/page.min.jsm',

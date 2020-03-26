@@ -246,6 +246,8 @@ helpers.determineResourceName = function (filename) {
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
+    case 'p2p-media-loader-core.min.jsm':
+        return 'P2P Media Loader Core';
     case 'page.min.jsm':
         return 'page.js';
     case 'prototype.jsm':
@@ -316,11 +318,11 @@ helpers.formatVersion = function (version) {
     }
 };
 
-helpers.setLastVersion = function (type, versionNumber) {
+helpers.setLastVersion = function (type, version) {
 
-    let version, requestVersion;
-    if(versionNumber != null && versionNumber != undefined) {
-        requestVersion = versionNumber.toString();
+    let requestVersion;
+    if(version != null && version != undefined) {
+        requestVersion = version.toString();
     }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
@@ -382,6 +384,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '2.24.0';
     } else if (type.includes('/mootools/1.')) {
         version = '1.6.0';
+    } else if (type.includes('p2p-media-loader-core')) {
+        version = '0.6.2';
     } else if (type.includes('/page.js/1.')) {
         version = '1.7.1';
     } else if (type.includes('/prototype/1.')) {

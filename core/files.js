@@ -110,6 +110,9 @@ var files = {
         // MooTools
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
 
+        // P2P Media Loader Core
+        'resources/p2p-media-loader-core/0.6.2/p2p-media-loader-core.min.jsm': true,
+
         // Prototype
         'resources/prototype/1.7.3.0/prototype.jsm': true,
 
