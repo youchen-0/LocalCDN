@@ -109,6 +109,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    // lazysizes
+    'lazysizes': {
+        'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
+        'type': 'application/javascript'
+    },
     // lozad.js
     'lozad': {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',

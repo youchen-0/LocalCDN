@@ -86,6 +86,9 @@ var files = {
         // jQuery UI
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
 
+        // lazysizes
+        'resources/lazysizes/4.1.8/lazysizes.min.jsm': true,
+
         // lozad.js
         'resources/lozad.js/1.14.0/lozad.min.jsm': true,
 
