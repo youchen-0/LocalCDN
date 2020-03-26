@@ -86,6 +86,9 @@ var files = {
         // jQuery UI
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
 
+        // jQuery Validation Plugin
+        'resources/jquery-validate/1.19.1/jquery.validate.min.jsm': true,
+
         // lazysizes
         'resources/lazysizes/4.1.8/lazysizes.min.jsm': true,
 

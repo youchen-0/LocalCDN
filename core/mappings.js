@@ -80,6 +80,7 @@ var mappings = {
             'jquery/{version}/jquery.min.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'jquery-validate/{version}/jquery.validate.min.js': resources.jqueryValidationPlugin,
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,

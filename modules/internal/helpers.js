@@ -232,6 +232,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
+    case 'jquery.validate.min.jsm':
+        return 'jQuery Validation Plugin';
     case 'lazysizes.min.jsm':
         return 'lazysizes';
     case 'lozad.min.jsm':
@@ -358,6 +360,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.4.1';
     } else if (type.includes('/jqueryui/1.')) {
         version = '1.11.4';
+    } else if (type.includes('/jquery-validate/1.')) {
+        version = '1.19.1';
     } else if (type.includes('lazysizes/4.')) {
         version = '4.1.8';
     } else if (type.includes('lozad')) {

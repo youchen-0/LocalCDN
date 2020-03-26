@@ -109,6 +109,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Validation Plugin
+    'jqueryValidationPlugin': {
+        'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
+        'type': 'application/javascript'
+    },
     // lazysizes
     'lazysizes': {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
