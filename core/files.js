@@ -48,6 +48,9 @@ var files = {
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.cssm': true,
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.jsm': true,
 
+        // clipboard.js
+        'resources/clipboard.js/2.0.6/clipboard.min.jsm': true,
+
         // D3.js
         'resources/d3/3.5.17/d3.min.jsm': true,
 

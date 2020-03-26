@@ -218,6 +218,8 @@ helpers.determineResourceName = function (filename) {
         return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.cssm':
         return 'bootstrap-slider CSS';
+    case 'clipboard.min.jsm':
+        return 'clipboard.js';
     case 'dojo.jsm':
         return 'Dojo';
     case 'ember.min.jsm':
@@ -344,6 +346,8 @@ helpers.setLastVersion = function (type, version) {
         version = '4.4.1';
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
+    } else if (type.includes('/clipboard.js/2.')) {
+        version = '2.0.6';
     } else if (type.includes('/d3/3.')) {
         version = '3.5.17';
     } else if (type.includes('/dojo/1.')) {
