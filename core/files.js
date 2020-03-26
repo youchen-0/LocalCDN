@@ -113,6 +113,10 @@ var files = {
         // SWFObject
         'resources/swfobject/2.2/swfobject.jsm': true,
 
+        // Twitter Bootstrap
+        'resources/twitter-bootstrap/3.4.1/bootstrap.min.jsm': true,
+        'resources/twitter-bootstrap/3.4.1/bootstrap.min.cssm': true,
+
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,
 

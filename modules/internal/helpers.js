@@ -366,6 +366,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '1.9.0';
     } else if (type.includes('/swfobject/2.')) {
         version = '2.2';
+    } else if (type.includes('/twitter-bootstrap/3.')) {
+        version = '3.4.1';
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
     } else if (type.includes('/vue/1.')) {

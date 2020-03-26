@@ -154,6 +154,16 @@ var resources = {
         'path': 'resources/swfobject/{version}/swfobject.jsm',
         'type': 'application/javascript'
     },
+    // Twitter Bootstrap JS
+    'twitterBootstrapJS': {
+        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Twitter Bootstrap CSS
+    'twitterBootstrapCSS': {
+        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.cssm',
+        'type': 'text/css'
+    },
     // Underscore.js
     'underscore': {
         'path': 'resources/underscore.js/{version}/underscore-min.jsm',
