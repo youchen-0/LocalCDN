@@ -87,6 +87,8 @@ var mappings = {
             'page.js/{version}/page.min.': resources.pageJs,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
+            'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
+            'toastr.js/{version}/toastr.min.js': resources.toastrJS,
             'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,
             'twitter-bootstrap/{version}/css/bootstrap.min.css': resources.twitterBootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,

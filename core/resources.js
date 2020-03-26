@@ -164,6 +164,16 @@ var resources = {
         'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.cssm',
         'type': 'text/css'
     },
+    // toastr.js
+    'toastrCSS': {
+        'path': 'resources/toastr.js/{version}/toastr.min.cssm',
+        'type': 'text/css'
+    },
+    // toastr.js
+    'toastrJS': {
+        'path': 'resources/toastr.js/{version}/toastr.min.jsm',
+        'type': 'application/javascript'
+    },
     // Underscore.js
     'underscore': {
         'path': 'resources/underscore.js/{version}/underscore-min.jsm',

@@ -250,6 +250,10 @@ helpers.determineResourceName = function (filename) {
         return 'Scriptaculous';
     case 'swfobject.jsm':
         return 'SWFObject';
+    case 'toastr.min.cssm':
+        return 'toastr.js';
+    case 'toastr.min.jsm':
+        return 'toastr.js';
     case 'underscore-min.jsm':
         return 'Underscore.js';
     case 'webfont.jsm':
@@ -368,6 +372,8 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '2.2';
     } else if (type.includes('/twitter-bootstrap/3.')) {
         version = '3.4.1';
+    } else if (type.includes('/toastr.js/2.')) {
+        version = '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
     } else if (type.includes('/vue/1.')) {

@@ -113,6 +113,10 @@ var files = {
         // SWFObject
         'resources/swfobject/2.2/swfobject.jsm': true,
 
+        // toastr.js
+        'resources/toastr.js/2.1.4/toastr.min.cssm': true,
+        'resources/toastr.js/2.1.4/toastr.min.jsm': true,
+
         // Twitter Bootstrap
         'resources/twitter-bootstrap/3.4.1/bootstrap.min.jsm': true,
         'resources/twitter-bootstrap/3.4.1/bootstrap.min.cssm': true,
