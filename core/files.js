@@ -162,7 +162,8 @@ var files = {
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,
 
         // Vue.js
-        'resources/vue/1.0.28/vue.jsm': true,
+        'resources/vue/1.0.28/vue.min.jsm': true,
+        'resources/vue/2.6.11/vue.min.jsm': true,
 
         // Web Font Loader
         'resources/webfont/1.6.28/webfont.jsm': true,

@@ -245,7 +245,7 @@ var resources = {
     },
     // Vue.js
     'vueJs': {
-        'path': 'resources/vue/{version}/vue.jsm',
+        'path': 'resources/vue/{version}/vue.min.jsm',
         'type': 'application/javascript'
     },
     // Web Font Loader
