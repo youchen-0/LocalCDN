@@ -208,6 +208,11 @@ var resources = {
         'path': 'resources/spin.js/{version}/spin.min.jsm',
         'type': 'application/javascript'
     },
+    // Store.js
+    'storeJS': {
+        'path': 'resources/store.js/{version}/store.legacy.min.jsm',
+        'type': 'application/javascript'
+    },
     // SWFObject
     'swfobject': {
         'path': 'resources/swfobject/{version}/swfobject.jsm',

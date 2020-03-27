@@ -144,6 +144,9 @@ var files = {
         // spin.js
         'resources/spin.js/2.3.2/spin.min.jsm': true,
 
+        // Store.js
+        'resources/store.js/2.0.4/store.legacy.min.jsm': true,
+
         // SWFObject
         'resources/swfobject/2.2/swfobject.jsm': true,
 

@@ -78,6 +78,7 @@ var mappings = {
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
+            'font-awesome/{version}/css/all.min.css': resources.fontawesome5,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
             'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jquery/{version}/jquery.': resources.jQuery,
@@ -135,6 +136,7 @@ var mappings = {
         '/npm/': {
             'angular@{version}/angular.': resources.angular,
             'angular@{version}/angular.min.': resources.angular,
+            'animate.css@{version}/animate.min.css': resources.animateCSS,
             'backbone@{version}/backbone.': resources.backbone,
             'backbone@{version}/backbone-min.': resources.backbone,
             'backbone@{version}/backbone.min.': resources.backbone,
@@ -166,6 +168,7 @@ var mappings = {
             'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
             'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
             'swfobject@{version}/index.js': resources.swfobject,
+            'store-js@{version}/dist/store.legacy.min.js': resources.storeJS,
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
             'underscore@{version}/underscore.': resources.underscore,
             'underscore@{version}/underscore-min.': resources.underscore,

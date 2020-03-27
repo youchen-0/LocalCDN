@@ -272,6 +272,8 @@ helpers.determineResourceName = function (filename) {
         return 'Scriptaculous';
     case 'spin.min.jsm':
         return 'spin.js';
+    case 'store.legacy.min.jsm':
+        return 'Store.js';
     case 'swfobject.jsm':
         return 'SWFObject';
     case 'toastr.min.cssm':
@@ -418,6 +420,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.9.0';
     } else if (type.includes('/spin.js/2.')) {
         version = '2.3.2';
+    } else if (type.includes('/store.js/2.')) {
+        version = '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
         version = '2.2';
     } else if (type.includes('/twitter-bootstrap/3.')) {
