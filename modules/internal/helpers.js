@@ -230,6 +230,8 @@ helpers.determineResourceName = function (filename) {
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
+    case 'flv.min.jsm':
+        return 'flv.js';
     case 'font-awesome.min.cssm':
         return 'Font Awesome';
     case 'all.cssm':
@@ -376,6 +378,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.1.0';
     } else if (type.includes('findify')) {
         version = '6.9.15';
+    } else if (type.includes('/flv.js/')) {
+        version = '1.5.0';
     } else if (type.includes('/fontawesome/3.')) {
         version = '3.2.1';
     } else if (type.includes('/fontawesome/4.')) {

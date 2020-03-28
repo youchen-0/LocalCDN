@@ -153,6 +153,7 @@ var mappings = {
             '@findify/bundle@{version}/dist/vendors~components~initializer.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/vendors~initializer.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/vendors~sentry.js': resources.findifyBundle,
+            'flv.js/dist/flv.min.js': resources.flvJS,
             'jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery@{version}/dist/jquery.min.': resources.jQuery,
             'jquery-ui@{version}/jquery-ui.js': resources.jQueryUI,

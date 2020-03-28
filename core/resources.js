@@ -99,6 +99,12 @@ var resources = {
         'path': 'resources/findify-bundle/{version}/',
         'type': 'application/javascript'
     },
+    // flv.js
+    'flvJS': {
+        'path': 'resources/flv.js/{version}/flv.min.jsm',
+        'type': 'application/javascript'
+    },
+
     // Font Awesome
     'fontawesome': {
         'path': 'resources/fontawesome/{version}/css/font-awesome.min.cssm',

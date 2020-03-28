@@ -75,6 +75,9 @@ var files = {
         'resources/findify-bundle/6.9.15/vendors~initializer.jsm': true,
         'resources/findify-bundle/6.9.15/vendors~sentry.jsm': true,
 
+        // flv.js
+        'resources/flv.js/1.5.0/flv.min.jsm': true,
+
         // Font Awesome
         'resources/fontawesome/3.2.1/css/font-awesome.min.cssm': true,
         'resources/fontawesome/3.2.1/css/font-awesome.cssm': true,
