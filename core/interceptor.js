@@ -42,13 +42,6 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         tabDomain = Address.EXAMPLE;
     }
 
-    if (requestDetails.type === WebRequestType.XHR) {
-
-        if (tabDomain !== interceptor.xhrTestDomain) {
-            return interceptor._handleMissingCandidate(requestDetails.url);
-        }
-    }
-
     if (interceptor.taintedDomains[tabDomain] || (/yandex\./).test(tabDomain) ||
         (/wickedlocal\.com/).test(tabDomain)) {
 
@@ -58,11 +51,7 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
     targetPath = targetDetails.path;
 
-    if (!targetPath) {
-        return interceptor._handleMissingCandidate(requestDetails.url);
-    }
-
-    if (!files.active[targetPath]) {
+    if (!targetDetails) {
         return interceptor._handleMissingCandidate(requestDetails.url);
     }
 
