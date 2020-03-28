@@ -66,7 +66,7 @@ var mappings = {
     'cdnjs.cloudflare.com': {
         '/ajax/libs/': {
             'angular.js/{version}/angular.': resources.angular,
-            'animate.css/{version}/animate.min.': resources.animateCSS,
+            'animate.css/{version}/animate.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'bootstrap-slider/{version}/css/bootstrap-slider.min.css': resources.bootstrapSliderCSS,
@@ -103,7 +103,7 @@ var mappings = {
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,
             'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,
-            'twitter-bootstrap/{version}/css/bootstrap.min.css': resources.twitterBootstrapCSS,
+            'twitter-bootstrap/{version}/css/bootstrap.': resources.twitterBootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'vue/{version}/vue.min.js': resources.vueJs,

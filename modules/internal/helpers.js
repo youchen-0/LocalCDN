@@ -206,11 +206,13 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
-    case 'animate.cssm':
+    case 'animate.min.cssm':
         return 'Animate CSS'
     case 'backbone-min.jsm':
         return 'Backbone.js';
     case 'bootstrap.min.cssm':
+        return 'Bootstrap CSS';
+    case 'bootstrap.min.css':
         return 'Bootstrap CSS';
     case 'bootstrap.min.jsm':
         return 'Bootstrap JS';

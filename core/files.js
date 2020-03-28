@@ -155,8 +155,10 @@ var files = {
         'resources/toastr.js/2.1.4/toastr.min.jsm': true,
 
         // Twitter Bootstrap
-        'resources/twitter-bootstrap/3.4.1/bootstrap.min.jsm': true,
-        'resources/twitter-bootstrap/3.4.1/bootstrap.min.cssm': true,
+        // CSS cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
+        // Please do not change it.
+        'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': true,
+        'resources/twitter-bootstrap/3.4.1/css/bootstrap.min.css': true,
 
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,

@@ -42,7 +42,7 @@ var resources = {
     },
     // Animate CSS
     'animateCSS': {
-        'path': 'resources/animate.css/{version}/animate.cssm',
+        'path': 'resources/animate.css/{version}/animate.min.cssm',
         'type': 'text/css'
     },
     // Backbone.js
@@ -134,7 +134,7 @@ var resources = {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
         'type': 'application/javascript'
     },
-    // resources/js-cookie/2.2.1/js.cookie.min.jsm
+    // js-cookie
     'jscookie': {
         'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',
         'type': 'application/javascript'
@@ -220,12 +220,14 @@ var resources = {
     },
     // Twitter Bootstrap JS
     'twitterBootstrapJS': {
-        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.jsm',
+        'path': 'resources/twitter-bootstrap/{version}/js/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
     // Twitter Bootstrap CSS
+    // cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
+    // Please do not change it.
     'twitterBootstrapCSS': {
-        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.cssm',
+        'path': 'resources/twitter-bootstrap/{version}/css/bootstrap.min.css',
         'type': 'text/css'
     },
     // toastr.js
