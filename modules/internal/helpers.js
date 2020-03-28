@@ -236,6 +236,8 @@ helpers.determineResourceName = function (filename) {
         return 'Font Awesome';
     case 'all.cssm':
         return 'Font Awesome';
+    case 'hls.min.jsm':
+        return 'hls.js';
     case 'jquery.min.jsm':
         return 'jQuery';
     case 'jquery-ui.min.jsm':
@@ -386,6 +388,8 @@ helpers.setLastVersion = function (type, version) {
         version = '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
         version = '5.7.2';
+    } else if (type.includes('/hls.js/')) {
+        version = '0.13.2';
     } else if (type.includes('/jquery/1.')) {
         version = ( helpers.compareVersion('1.8.3', requestVersion )) ? '1.8.3' : '1.12.4';
     } else if (type.includes('/jquery/2.')) {

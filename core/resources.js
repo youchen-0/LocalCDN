@@ -115,6 +115,11 @@ var resources = {
         'path': 'resources/fontawesome/{version}/css/all.cssm',
         'type': 'text/css'
     },
+    // hls.js
+    'hlsJS': {
+        'path': 'resources/hls.js/{version}/hls.min.jsm',
+        'type': 'application/javascript'
+    },
     // jeditableJS
     'jeditableJS': {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',

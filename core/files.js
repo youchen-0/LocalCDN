@@ -86,6 +86,9 @@ var files = {
         'resources/fontawesome/4.7.0/css/font-awesome.min.cssm': true,
         'resources/fontawesome/5.7.2/css/all.cssm': true,
 
+        // hls.js
+        'resources/hls.js/0.13.2/hls.min.jsm': true,
+
         // jQuery
         'resources/jquery/1.8.3/jquery.min.jsm': true,
         'resources/jquery/1.12.4/jquery.min.jsm': true,
