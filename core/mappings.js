@@ -411,6 +411,7 @@ var mappings = {
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
+            'jquery/{version}/jquery-': resources.jQuery,
             'jquery-ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery-ui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'mootools/{version}/mootools.': resources.mootools,
