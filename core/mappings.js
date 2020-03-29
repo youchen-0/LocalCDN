@@ -66,32 +66,51 @@ var mappings = {
     'cdnjs.cloudflare.com': {
         '/ajax/libs/': {
             'angular.js/{version}/angular.': resources.angular,
+            'animate.css/{version}/animate.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
-            'bootstrap-slider/{version}/css/bootstrap-slider.min.': resources.bootstrapSlider,
-            'bootstrap-slider/{version}/bootstrap-slider.min.': resources.bootstrapSlider,
+            'bootstrap-slider/{version}/css/bootstrap-slider.min.css': resources.bootstrapSliderCSS,
+            'bootstrap-slider/{version}/css/bootstrap-slider.css': resources.bootstrapSliderCSS,
+            'bootstrap-slider/{version}/bootstrap-slider.min.js': resources.bootstrapSliderJS,
+            'clipboard.js/{version}/clipboard.min.js': resources.clipboardJS,
+            'd3/{version}/d3.min.js': resources.d3JS,
             'dojo/{version}/dojo.': resources.dojo,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
+            'font-awesome/{version}/css/all.min.css': resources.fontawesome5,
+            'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
+            'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
+            'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'jquery-validate/{version}/jquery.validate.min.js': resources.jqueryValidationPlugin,
+            'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
+            'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,
             'page.js/{version}/page.min.': resources.pageJs,
+            'plyr/{version}/plyr.css': resources.plyrCSS,
+            'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
+            'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'spin.js/{version}/spin.min.js': resources.spinJS,
             'swfobject/{version}/swfobject.': resources.swfobject,
-            '/twitter-bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
-            '/twitter-bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
+            'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
+            'toastr.js/{version}/toastr.min.js': resources.toastrJS,
+            'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,
+            'twitter-bootstrap/{version}/css/bootstrap.': resources.twitterBootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'vue/{version}/vue.min.js': resources.vueJs,
             'webfont/{version}/webfont.js': resources.webfont,
-            'webfont/{version}/webfontloader.js': resources.webfont
+            'webfont/{version}/webfontloader.js': resources.webfont,
+            'webrtc-adapter/{version}/adapter.min.js': resources.webRTCadapter,
+            'wow/{version}/wow.min.': resources.wow
         }
     },
     // jQuery CDN (MaxCDN)
@@ -117,6 +136,7 @@ var mappings = {
         '/npm/': {
             'angular@{version}/angular.': resources.angular,
             'angular@{version}/angular.min.': resources.angular,
+            'animate.css@{version}/animate.min.css': resources.animateCSS,
             'backbone@{version}/backbone.': resources.backbone,
             'backbone@{version}/backbone-min.': resources.backbone,
             'backbone@{version}/backbone.min.': resources.backbone,
@@ -133,6 +153,8 @@ var mappings = {
             '@findify/bundle@{version}/dist/vendors~components~initializer.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/vendors~initializer.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/vendors~sentry.js': resources.findifyBundle,
+            'flv.js/dist/flv.min.js': resources.flvJS,
+            'hls.js/dist/hls.min.js': resources.hlsJS,
             'jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery@{version}/dist/jquery.min.': resources.jQuery,
             'jquery-ui@{version}/jquery-ui.js': resources.jQueryUI,
@@ -146,7 +168,9 @@ var mappings = {
             'moment@{version}/moment.min.': resources.moment,
             'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
             'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
+            'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
             'swfobject@{version}/index.js': resources.swfobject,
+            'store-js@{version}/dist/store.legacy.min.js': resources.storeJS,
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
             'underscore@{version}/underscore.': resources.underscore,
             'underscore@{version}/underscore-min.': resources.underscore,
@@ -387,6 +411,7 @@ var mappings = {
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
+            'jquery/{version}/jquery-': resources.jQuery,
             'jquery-ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery-ui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'mootools/{version}/mootools.': resources.mootools,
@@ -455,7 +480,10 @@ var mappings = {
     'netdna.bootstrapcdn.com': {
         '/bootstrap/': {
             '{version}/js/bootstrap.min.': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.': resources.bootstrapCSS
+            '{version}/css/bootstrap.min.': resources.bootstrapCSS,
+        },
+        '/font-awesome/': {
+            '{version}/css/font-awesome.css': resources.fontawesome
         }
     },
     // Font Awesome CDN

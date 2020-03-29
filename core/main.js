@@ -33,7 +33,8 @@ main._initializeSettings = function () {
         [Setting.ENFORCE_STAGING]: false,
         [Setting.STRIP_METADATA]: true,
         [Setting.LAST_MAPPING_UPDATE]: "2020-01-01",
-        [Setting.WHITELISTED_DOMAINS]: {}
+        [Setting.WHITELISTED_DOMAINS]: {},
+        [Setting.LOGGING]: false
     };
 
     chrome.storage.local.get(settingDefaults, function (items) {

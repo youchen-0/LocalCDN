@@ -64,7 +64,8 @@ const Setting = {
     'STRIP_METADATA': 'stripMetadata',
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
     'WHITELISTED_DOMAINS': 'whitelistedDomains',
-    'XHR_TEST_DOMAIN': 'xhrTestDomain'
+    'XHR_TEST_DOMAIN': 'xhrTestDomain',
+    'LOGGING': 'enableLogging'
 };
 
 const WebRequest = {

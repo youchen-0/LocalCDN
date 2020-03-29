@@ -9,8 +9,9 @@ body {
     font-family: 'Noto Sans', Arial, sans-serif !important;
     font-size: 75%;
     margin: 0 auto;
-    overflow: hidden;
-    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px 15px 0px 15px;
     max-width: 348px;
 }
 

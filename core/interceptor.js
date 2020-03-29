@@ -42,13 +42,6 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         tabDomain = Address.EXAMPLE;
     }
 
-    if (requestDetails.type === WebRequestType.XHR) {
-
-        if (tabDomain !== interceptor.xhrTestDomain) {
-            return interceptor._handleMissingCandidate(requestDetails.url);
-        }
-    }
-
     if (interceptor.taintedDomains[tabDomain] || (/yandex\./).test(tabDomain) ||
         (/wickedlocal\.com/).test(tabDomain)) {
 
@@ -58,11 +51,7 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
     targetPath = targetDetails.path;
 
-    if (!targetPath) {
-        return interceptor._handleMissingCandidate(requestDetails.url);
-    }
-
-    if (!files.active[targetPath]) {
+    if (!targetDetails) {
         return interceptor._handleMissingCandidate(requestDetails.url);
     }
 
@@ -104,11 +93,16 @@ interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
         requestUrlSegments.protocol = Address.HTTPS;
         requestUrl = requestUrlSegments.toString();
 
-    }
+        return {
+            'redirectUrl': requestUrl
+        };
 
-    return {
-        'redirectUrl': requestUrl
-    };
+    } else {
+
+        return {
+            'cancel': false
+        };
+    }
 };
 
 interceptor._handleStorageChanged = function (changes) {

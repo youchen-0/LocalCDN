@@ -91,8 +91,11 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
     let resourcePath, versionNumber, resourcePattern, filename;
 
-    resourcePath = channelPath.replace(basePath, '');
+    chrome.storage.local.get(Setting.LOGGING, function (items) {
+        requestAnalyzer.logging = items.enableLogging;
+    });
 
+    resourcePath = channelPath.replace(basePath, '');
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
     resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
 
@@ -106,7 +109,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
 
             // Replace the requested version with the latest depending on major version
-            version = helpers.setLastVersion(targetPath, versionNumber);
+            version = helpers.setLastVersion(targetPath, versionNumber).toString();
             targetPath = targetPath.replace(versionNumber, version);
 
             hostShorthands = shorthands[channelHost];
@@ -129,16 +132,21 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
                 targetPath = targetPath + filename + 'm';
             }
 
+            if (requestAnalyzer.logging) {
+                console.log('[ LocalCDN ] Replaced resource: ' + targetPath);
+            }
             // Prepare and return a local target.
             return {
                 'source': channelHost,
-                'version': version.toString(),
+                'version': version,
                 'path': targetPath,
                 'bundle': bundle
             };
         }
     }
-
+    if (requestAnalyzer.logging) {
+        console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
+    }
     return false;
 };
 

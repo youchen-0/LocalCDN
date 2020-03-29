@@ -26,17 +26,24 @@ var helpers = {};
 
 helpers.insertI18nContentIntoDocument = function (document) {
 
-    let scriptDirection, i18nElements;
+    let scriptDirection, defaultScriptDirection, i18nElements;
 
     scriptDirection = helpers.determineScriptDirection(navigator.language);
+    defaultScriptDirection = helpers.determineScriptDirection('en_US');
     i18nElements = document.querySelectorAll('[data-i18n-content]');
 
     i18nElements.forEach(function (i18nElement) {
 
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
+        if(chrome.i18n.getMessage(i18nMessageName) === '') {
+            // Select english if configured language is empty
+            i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+            i18nElement.setAttribute('dir', defaultScriptDirection);
+        } else {
+            i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+            i18nElement.setAttribute('dir', scriptDirection);
+        }
 
-        i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
-        i18nElement.setAttribute('dir', scriptDirection);
     });
 };
 
@@ -206,28 +213,52 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
+    case 'animate.min.cssm':
+        return 'Animate CSS'
     case 'backbone-min.jsm':
         return 'Backbone.js';
     case 'bootstrap.min.cssm':
         return 'Bootstrap CSS';
+    case 'bootstrap.min.css':
+        return 'Bootstrap CSS';
     case 'bootstrap.min.jsm':
         return 'Bootstrap JS';
+    case 'bootstrap-slider.min.jsm':
+        return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.cssm':
-        return 'bootstrap-slider';
+        return 'bootstrap-slider CSS';
+    case 'clipboard.min.jsm':
+        return 'clipboard.js';
+    case 'd3.min.jsm':
+        return 'D3.js';
     case 'dojo.jsm':
         return 'Dojo';
     case 'ember.min.jsm':
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
+    case 'flv.min.jsm':
+        return 'flv.js';
     case 'font-awesome.min.cssm':
         return 'Font Awesome';
     case 'all.cssm':
         return 'Font Awesome';
+    case 'hls.min.jsm':
+        return 'hls.js';
     case 'jquery.min.jsm':
         return 'jQuery';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
+    case 'jquery.blockUI.min.jsm':
+        return 'jQuery Block UI';
+    case 'jquery.validate.min.jsm':
+        return 'jQuery jeditable';
+    case 'jquery.jeditable.min.jsm':
+        return 'jQuery Validation Plugin';
+    case 'js.cookie.min.jsm':
+        return 'JavaScript Cookie';
+    case 'lazysizes.min.jsm':
+        return 'lazysizes';
     case 'lozad.min.jsm':
         return 'lozad.js';
     case 'modernizr.min.jsm':
@@ -236,22 +267,42 @@ helpers.determineResourceName = function (filename) {
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
+    case 'p2p-media-loader-core.min.jsm':
+        return 'P2P Media Loader Core';
     case 'page.min.jsm':
         return 'page.js';
+    case 'plyr.min.cssm':
+        return 'plyr CSS';
     case 'prototype.jsm':
         return 'Prototype';
     case 'rocket-loader.min.jsm':
-        return 'Rocket Loader'
+        return 'Rocket Loader';
+    case 'rickshaw.min.jsm':
+        return 'rickshaw JS';
+    case 'rickshaw.min.cssm':
+        return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
+    case 'spin.min.jsm':
+        return 'spin.js';
+    case 'store.legacy.min.jsm':
+        return 'Store.js';
     case 'swfobject.jsm':
         return 'SWFObject';
+    case 'toastr.min.cssm':
+        return 'toastr.js';
+    case 'toastr.min.jsm':
+        return 'toastr.js';
     case 'underscore-min.jsm':
         return 'Underscore.js';
     case 'webfont.jsm':
         return 'Web Font Loader';
+    case 'adapter.min.jsm':
+        return 'WebRTC adapter';
     case 'vue.jsm':
         return 'Vue.js';
+    case 'wow.min.jsm':
+        return 'WOW';
     default:
         return 'Unknown';
     }
@@ -296,14 +347,19 @@ helpers.formatVersion = function (version) {
     }
 };
 
-helpers.setLastVersion = function (type, versionNumber) {
+helpers.setLastVersion = function (type, version) {
 
-    let version, requestVersion;
-    if(versionNumber != null && versionNumber != undefined) {
-        requestVersion = versionNumber.toString();
+    let requestVersion;
+
+    if(version !== null && version !== undefined) {
+        requestVersion = version.toString();
+    } else if (version === null) {
+        return 'latest';
     }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
+    } else if (type.includes('/animate.css/3.')) {
+        version = '3.7.2';
     } else if (type.includes('/backbone.js/0.')) {
         version = '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
@@ -318,6 +374,10 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '4.4.1';
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
+    } else if (type.includes('/clipboard.js/2.')) {
+        version = '2.0.6';
+    } else if (type.includes('/d3/3.')) {
+        version = '3.5.17';
     } else if (type.includes('/dojo/1.')) {
         version = '1.14.1';
     } else if (type.includes('/ember.js/1.')) {
@@ -330,12 +390,16 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.1.0';
     } else if (type.includes('findify')) {
         version = '6.9.15';
+    } else if (type.includes('/flv.js/')) {
+        version = '1.5.0';
     } else if (type.includes('/fontawesome/3.')) {
         version = '3.2.1';
     } else if (type.includes('/fontawesome/4.')) {
         version = '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
         version = '5.7.2';
+    } else if (type.includes('/hls.js/')) {
+        version = '0.13.2';
     } else if (type.includes('/jquery/1.')) {
         version = ( helpers.compareVersion('1.8.3', requestVersion )) ? '1.8.3' : '1.12.4';
     } else if (type.includes('/jquery/2.')) {
@@ -344,6 +408,16 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '3.4.1';
     } else if (type.includes('/jqueryui/1.')) {
         version = '1.11.4';
+    } else if (type.includes('/jquery.blockUI/2.')) {
+        version = '2.70';
+    } else if (type.includes('/jquery-validate/1.')) {
+        version = '1.19.1';
+    } else if (type.includes('/jquery-jeditable/1.')) {
+        version = '1.8.0';
+    } else if (type.includes('/js-cookie/2.')) {
+        version = '2.2.1';
+    } else if (type.includes('/lazysizes/4.')) {
+        version = '4.1.8';
     } else if (type.includes('lozad')) {
         version = '1.14.0';
     } else if (type.includes('/modernizr/2.')) {
@@ -352,20 +426,40 @@ helpers.setLastVersion = function (type, versionNumber) {
         version = '2.24.0';
     } else if (type.includes('/mootools/1.')) {
         version = '1.6.0';
+    } else if (type.includes('p2p-media-loader-core')) {
+        version = '0.6.2';
     } else if (type.includes('/page.js/1.')) {
         version = '1.7.1';
+    } else if (type.includes('/plyr/3.')) {
+        version = '3.5.10';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
+    } else if (type.includes('/rickshaw/1.')) {
+        version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
         version = '1.9.0';
+    } else if (type.includes('/spin.js/2.')) {
+        version = '2.3.2';
+    } else if (type.includes('/store.js/2.')) {
+        version = '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
         version = '2.2';
+    } else if (type.includes('/twitter-bootstrap/3.')) {
+        version = '3.4.1';
+    } else if (type.includes('/toastr.js/2.')) {
+        version = '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
     } else if (type.includes('/vue/1.')) {
         version = '1.0.28';
+    } else if (type.includes('/vue/2.')) {
+        version = '2.6.11';
     } else if (type.includes('webfont')) {
         version = '1.6.28';
+    } else if (type.includes('/webrtc-adapter/6.')) {
+        version = '6.4.8';
+    } else if (type.includes('/wow/1.')) {
+        version = '1.1.2';
     }
 
     return version;
