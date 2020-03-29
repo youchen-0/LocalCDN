@@ -129,6 +129,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
                 targetPath = targetPath + filename + 'm';
             }
 
+            console.log('[ LocalCDN ] Replaced resource: ' + targetPath);
             // Prepare and return a local target.
             return {
                 'source': channelHost,
@@ -138,7 +139,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             };
         }
     }
-
+    console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
     return false;
 };
 
