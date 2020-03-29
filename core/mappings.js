@@ -480,7 +480,7 @@ var mappings = {
     'netdna.bootstrapcdn.com': {
         '/bootstrap/': {
             '{version}/js/bootstrap.min.': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.': resources.bootstrapCSS,
+            '{version}/css/bootstrap.min.': resources.bootstrapCSS
         },
         '/font-awesome/': {
             '{version}/css/font-awesome.css': resources.fontawesome

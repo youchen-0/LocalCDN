@@ -194,6 +194,8 @@ helpers.determineCdnName = function (domainName) {
         return 'Cloudflare CDN';
     case 'akamai-webcdn.kgstatic.net':
         return 'Akamai WebCDN';
+    case 'netdna.bootstrapcdn.com':
+        return 'NetDNA';
     default:
         return 'Unknown';
     }
