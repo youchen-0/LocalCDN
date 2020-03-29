@@ -355,8 +355,6 @@ helpers.setLastVersion = function (type, version) {
 
     if(version !== null && version !== undefined) {
         requestVersion = version.toString();
-    } else if (version === null) {
-        return 'latest';
     }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
@@ -462,6 +460,8 @@ helpers.setLastVersion = function (type, version) {
         version = '6.4.8';
     } else if (type.includes('/wow/1.')) {
         version = '1.1.2';
+    } else if (version === null) {
+        version = 'latest';
     }
 
     return version;
