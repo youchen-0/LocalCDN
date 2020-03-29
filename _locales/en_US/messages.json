@@ -70,5 +70,13 @@
   "generateRuleSetTitle": {
     "message": "Generate rule sets for uBlock or uMatrix",
     "description": "Generate rule set title."
+  },
+  "loggingTitle": {
+    "message": "Enable logging in browser console",
+    "description": "Enable logging in browser console."
+  },
+  "loggingDescription": {
+    "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources",
+    "description": "Generate rule set title."
   }
 }

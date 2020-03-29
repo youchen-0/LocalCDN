@@ -91,8 +91,11 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
     let resourcePath, versionNumber, resourcePattern, filename;
 
-    resourcePath = channelPath.replace(basePath, '');
+    chrome.storage.local.get(Setting.LOGGING, function (items) {
+        requestAnalyzer.logging = items.enableLogging;
+    });
 
+    resourcePath = channelPath.replace(basePath, '');
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
     resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
 
@@ -129,7 +132,9 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
                 targetPath = targetPath + filename + 'm';
             }
 
-            console.log('[ LocalCDN ] Replaced resource: ' + targetPath);
+            if (requestAnalyzer.logging) {
+                console.log('[ LocalCDN ] Replaced resource: ' + targetPath);
+            }
             // Prepare and return a local target.
             return {
                 'source': channelHost,
@@ -139,7 +144,9 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             };
         }
     }
-    console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
+    if (requestAnalyzer.logging) {
+        console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
+    }
     return false;
 };
 
