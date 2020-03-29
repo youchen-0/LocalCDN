@@ -26,17 +26,24 @@ var helpers = {};
 
 helpers.insertI18nContentIntoDocument = function (document) {
 
-    let scriptDirection, i18nElements;
+    let scriptDirection, defaultScriptDirection, i18nElements;
 
     scriptDirection = helpers.determineScriptDirection(navigator.language);
+    defaultScriptDirection = helpers.determineScriptDirection('en_US');
     i18nElements = document.querySelectorAll('[data-i18n-content]');
 
     i18nElements.forEach(function (i18nElement) {
 
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
+        if(chrome.i18n.getMessage(i18nMessageName) === '') {
+            // Select english if configured language is empty
+            i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+            i18nElement.setAttribute('dir', defaultScriptDirection);
+        } else {
+            i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+            i18nElement.setAttribute('dir', scriptDirection);
+        }
 
-        i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
-        i18nElement.setAttribute('dir', scriptDirection);
     });
 };
 
