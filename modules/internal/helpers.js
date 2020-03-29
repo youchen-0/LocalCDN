@@ -343,8 +343,11 @@ helpers.formatVersion = function (version) {
 helpers.setLastVersion = function (type, version) {
 
     let requestVersion;
-    if(version != null && version != undefined) {
+
+    if(version !== null && version !== undefined) {
         requestVersion = version.toString();
+    } else if (version === null) {
+        return 'latest';
     }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
