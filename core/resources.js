@@ -187,7 +187,7 @@ var resources = {
     },
     // plyr CSS
     'plyrCSS': {
-        'path': 'resources/plyr/{version}/plyr.min.cssm',
+        'path': 'resources/plyr/{version}/plyr.min.css',
         'type': 'text/css'
     },
     // Prototype

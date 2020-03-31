@@ -129,7 +129,9 @@ var files = {
         'resources/p2p-media-loader-core/0.6.2/p2p-media-loader-core.min.jsm': true,
 
         // plyr CSS
-        'resources/plyr/3.5.10/plyr.min.cssm': true,
+        // CSS cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
+        // Please do not change it.
+        'resources/plyr/3.5.10/plyr.min.css': true,
 
         // Prototype
         'resources/prototype/1.7.3.0/prototype.jsm': true,
