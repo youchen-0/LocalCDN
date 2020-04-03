@@ -214,6 +214,15 @@ var resources = {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',
         'type': 'application/javascript'
     },
+    // Select2
+    'select2css': {
+        'path': 'resources/select2/{version}/select2.min.cssm',
+        'type': 'text/css'
+    },
+    'select2js': {
+        'path': 'resources/select2/{version}/select2.full.min.jsm',
+        'type': 'application/javascript'
+    },
     // spin.js
     'spinJS': {
         'path': 'resources/spin.js/{version}/spin.min.jsm',

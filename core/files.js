@@ -149,6 +149,10 @@ var files = {
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
 
+        // Select2
+        'resources/select2/4.0.12/select2.full.min.jsm': true,
+        'resources/select2/4.0.12/select2.min.cssm': true,
+
         // spin.js
         'resources/spin.js/2.3.2/spin.min.jsm': true,
 

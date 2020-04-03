@@ -285,6 +285,10 @@ helpers.determineResourceName = function (filename) {
         return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
+    case 'select2.min.cssm':
+        return 'Select2 CSS';
+    case 'select2.full.min.jsm':
+        return 'Select2 JS';
     case 'spin.min.jsm':
         return 'spin.js';
     case 'store.legacy.min.jsm':
@@ -438,6 +442,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
         version = '1.9.0';
+    } else if (type.includes('/select2/4.')) {
+        version = '4.0.12';
     } else if (type.includes('/spin.js/2.')) {
         version = '2.3.2';
     } else if (type.includes('/store.js/2.')) {
