@@ -135,6 +135,11 @@ var resources = {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Migrate
+    'jQueryMigrate': {
+        'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',

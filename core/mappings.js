@@ -84,6 +84,7 @@ var mappings = {
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
             'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
+            'jquery-migrate/{version}/jquery-migrate.min.js': resources.jQueryMigrate,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'jquery-validate/{version}/jquery.validate.min.js': resources.jqueryValidationPlugin,
