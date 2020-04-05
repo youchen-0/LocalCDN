@@ -311,6 +311,8 @@ helpers.determineResourceName = function (filename) {
         return 'Vue.js';
     case 'wow.min.jsm':
         return 'WOW';
+    case 'jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm':
+        return 'jsDelivr combined';
     default:
         return 'Unknown';
     }
