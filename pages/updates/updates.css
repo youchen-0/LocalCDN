@@ -1,4 +1,17 @@
 /**
+ * Titles
+ */
+
+.release-date {
+     font-weight: bold;
+}
+
+ul {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+/**
  * Controls
  */
 
