@@ -30,7 +30,7 @@ var files = {
         'resources/angularjs/1.7.9/angular-touch.min.jsm': true,
 
         // Animate CSS
-        'resources/animate.css/3.7.2/animate.min.cssm': true,
+        'resources/animate.css/3.7.2/animate.min.css': true,
 
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
@@ -41,11 +41,11 @@ var files = {
         'resources/bootstrap.js/4.4.1/bootstrap.min.jsm': true,
 
         // Bootstrap.css
-        'resources/bootstrap.css/3.3.7/bootstrap.min.cssm': true,
-        'resources/bootstrap.css/4.4.1/bootstrap.min.cssm': true,
+        'resources/bootstrap.css/3.3.7/bootstrap.min.css': true,
+        'resources/bootstrap.css/4.4.1/bootstrap.min.css': true,
 
         // bootstrap-slider
-        'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.cssm': true,
+        'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.jsm': true,
 
         // clipboard.js
@@ -79,12 +79,12 @@ var files = {
         'resources/flv.js/1.5.0/flv.min.jsm': true,
 
         // Font Awesome
-        'resources/fontawesome/3.2.1/css/font-awesome.min.cssm': true,
-        'resources/fontawesome/3.2.1/css/font-awesome.cssm': true,
-        'resources/fontawesome/3.2.1/css/font-awesome-ie7.cssm': true,
-        'resources/fontawesome/3.2.1/css/font-awesome-ie7.min.cssm': true,
-        'resources/fontawesome/4.7.0/css/font-awesome.min.cssm': true,
-        'resources/fontawesome/5.7.2/css/all.cssm': true,
+        'resources/fontawesome/3.2.1/css/font-awesome.min.css': true,
+        'resources/fontawesome/3.2.1/css/font-awesome.css': true,
+        'resources/fontawesome/3.2.1/css/font-awesome-ie7.css': true,
+        'resources/fontawesome/3.2.1/css/font-awesome-ie7.min.css': true,
+        'resources/fontawesome/4.7.0/css/font-awesome.min.css': true,
+        'resources/fontawesome/5.7.2/css/all.css': true,
 
         // hls.js
         'resources/hls.js/0.13.2/hls.min.jsm': true,
@@ -145,7 +145,7 @@ var files = {
 
         // rickshaw
         'resources/rickshaw/1.6.6/rickshaw.min.jsm': true,
-        'resources/rickshaw/1.6.6/rickshaw.min.cssm': true,
+        'resources/rickshaw/1.6.6/rickshaw.min.css': true,
 
         // Cloudflare Rocket Loader
         'resources/rocket-loader/latest/rocket-loader.min.jsm': true,
@@ -155,7 +155,7 @@ var files = {
 
         // Select2
         'resources/select2/4.0.12/select2.full.min.jsm': true,
-        'resources/select2/4.0.12/select2.min.cssm': true,
+        'resources/select2/4.0.12/select2.min.css': true,
 
         // spin.js
         'resources/spin.js/2.3.2/spin.min.jsm': true,
@@ -167,7 +167,7 @@ var files = {
         'resources/swfobject/2.2/swfobject.jsm': true,
 
         // toastr.js
-        'resources/toastr.js/2.1.4/toastr.min.cssm': true,
+        'resources/toastr.js/2.1.4/toastr.min.css': true,
         'resources/toastr.js/2.1.4/toastr.min.jsm': true,
 
         // Twitter Bootstrap

@@ -42,7 +42,7 @@ var resources = {
     },
     // Animate CSS
     'animateCSS': {
-        'path': 'resources/animate.css/{version}/animate.min.cssm',
+        'path': 'resources/animate.css/{version}/animate.min.css',
         'type': 'text/css'
     },
     // Backbone.js
@@ -57,12 +57,12 @@ var resources = {
     },
     // Bootstrap.css
     'bootstrapCSS': {
-        'path': 'resources/bootstrap.css/{version}/bootstrap.min.cssm',
+        'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
     // bootstrap-slider (Slider for Bootstrap 3)
     'bootstrapSliderCSS': {
-        'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.cssm',
+        'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.css',
         'type': 'text/css'
     },
     'bootstrapSliderJS': {
@@ -107,12 +107,12 @@ var resources = {
 
     // Font Awesome
     'fontawesome': {
-        'path': 'resources/fontawesome/{version}/css/font-awesome.min.cssm',
+        'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
         'type': 'text/css'
     },
     // Font Awesome
     'fontawesome5': {
-        'path': 'resources/fontawesome/{version}/css/all.cssm',
+        'path': 'resources/fontawesome/{version}/css/all.css',
         'type': 'text/css'
     },
     // hls.js
@@ -206,7 +206,7 @@ var resources = {
         'type': 'application/javascript'
     },
     'rickshawCSS': {
-        'path': 'resources/rickshaw/{version}/rickshaw.min.cssm',
+        'path': 'resources/rickshaw/{version}/rickshaw.min.css',
         'type': 'text/css'
     },
     // Cloudflare Rocket Loader
@@ -221,7 +221,7 @@ var resources = {
     },
     // Select2
     'select2css': {
-        'path': 'resources/select2/{version}/select2.min.cssm',
+        'path': 'resources/select2/{version}/select2.min.css',
         'type': 'text/css'
     },
     'select2js': {
@@ -257,7 +257,7 @@ var resources = {
     },
     // toastr.js
     'toastrCSS': {
-        'path': 'resources/toastr.js/{version}/toastr.min.cssm',
+        'path': 'resources/toastr.js/{version}/toastr.min.css',
         'type': 'text/css'
     },
     // toastr.js

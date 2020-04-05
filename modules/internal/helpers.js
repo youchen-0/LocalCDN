@@ -215,11 +215,11 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
-    case 'animate.min.cssm':
+    case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
         return 'Backbone.js';
-    case 'bootstrap.min.cssm':
+    case 'bootstrap.min.css':
         return 'Bootstrap CSS';
     case 'bootstrap.min.css':
         return 'Bootstrap CSS';
@@ -227,7 +227,7 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap JS';
     case 'bootstrap-slider.min.jsm':
         return 'bootstrap-slider JS';
-    case 'bootstrap-slider.min.cssm':
+    case 'bootstrap-slider.min.css':
         return 'bootstrap-slider CSS';
     case 'clipboard.min.jsm':
         return 'clipboard.js';
@@ -241,9 +241,9 @@ helpers.determineResourceName = function (filename) {
         return 'Ext Core';
     case 'flv.min.jsm':
         return 'flv.js';
-    case 'font-awesome.min.cssm':
+    case 'font-awesome.min.css':
         return 'Font Awesome';
-    case 'all.cssm':
+    case 'all.css':
         return 'Font Awesome';
     case 'hls.min.jsm':
         return 'hls.js';
@@ -275,7 +275,7 @@ helpers.determineResourceName = function (filename) {
         return 'P2P Media Loader Core';
     case 'page.min.jsm':
         return 'page.js';
-    case 'plyr.min.cssm':
+    case 'plyr.min.css':
         return 'plyr CSS';
     case 'prototype.jsm':
         return 'Prototype';
@@ -283,11 +283,11 @@ helpers.determineResourceName = function (filename) {
         return 'Rocket Loader';
     case 'rickshaw.min.jsm':
         return 'rickshaw JS';
-    case 'rickshaw.min.cssm':
+    case 'rickshaw.min.css':
         return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
-    case 'select2.min.cssm':
+    case 'select2.min.css':
         return 'Select2 CSS';
     case 'select2.full.min.jsm':
         return 'Select2 JS';
@@ -297,7 +297,7 @@ helpers.determineResourceName = function (filename) {
         return 'Store.js';
     case 'swfobject.jsm':
         return 'SWFObject';
-    case 'toastr.min.cssm':
+    case 'toastr.min.css':
         return 'toastr.js';
     case 'toastr.min.jsm':
         return 'toastr.js';
