@@ -23,6 +23,29 @@
                         New in LocalCDN:
                     </div>
                         <ul>
+                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/38">"#38"</a></li>
+                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/26">"#26"</a> (bitchute.com)</li>
+                            <li>Added: Select2 v4.0.12 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/44">"Fixed #44"</a>)</li>
+                            <li>Added: jQuery Migrate v3.1.0 and v1.4.1 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/42">"Fixed #42"</a>)</li>
+                            <li>Fixed: jsDelivr combined file (jQuery v2.2.4, Hogan.js v3.0.2, AlgoliaSearch v3.30.0 and Autocomplete.js v0.31.0) <a href="https://gitlab.com/nobody42/localcdn/-/issues/45">"Issue#45"</a> <strong>(Just a workaround!)</strong></li>
+                        </ul>
+                    <div class="topic-label">
+                        Please update your uBlock/uMatrix rules
+                    </div>
+                    <div class="ruleset-generator">
+                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                        <label for="generate-ublock-rules">uBlock</label>
+                    </div>
+                    <div class="ruleset-generator">
+                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                        <label for="generate-umatrix-rules">uMatrix</label>
+                    </div>
+                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+                    <input id="button-copy-rule-set" type="button" value="Copy">
+                    <hr/>
+                    <h2>History</h2>
+                    <p>2020-03-29 (v2.1.9)</p><br/>
+                        <ul>
                             <li>Added animate.css v3.7.2</li>
                             <li>Fixed bootstrap-slider</li>
                             <li>Fixed Twitter Bootstrap CSS & JS v3.4.1</li>
@@ -46,21 +69,6 @@
                             <li>Added flv.js v1.5.0 and hls.js v0.13.2</li>
                             <li>Logging implemented (Wiki page: <a href="https://gitlab.com/nobody42/localcdn/-/wikis/How-to-logging">How to logging</a>)</li>
                         </ul>
-                    <div class="topic-label">
-                        Please update your uBlock/uMatrix rules
-                    </div>
-                    <div class="ruleset-generator">
-                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
-                        <label for="generate-ublock-rules">uBlock</label>
-                    </div>
-                    <div class="ruleset-generator">
-                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
-                        <label for="generate-umatrix-rules">uMatrix</label>
-                    </div>
-                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                    <input id="button-copy-rule-set" type="button" value="Copy">
-                    <hr/>
-                    <h2>History</h2>
                     <p>2020-03-25 (v2.1.7)</p><br/>
                         <ul>
                             <li>New CDN: "akamai-webcdn.kgstatic.net" (Akamai WebCDN)</li>

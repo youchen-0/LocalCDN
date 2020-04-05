@@ -194,6 +194,8 @@ helpers.determineCdnName = function (domainName) {
         return 'Cloudflare CDN';
     case 'akamai-webcdn.kgstatic.net':
         return 'Akamai WebCDN';
+    case 'netdna.bootstrapcdn.com':
+        return 'NetDNA';
     default:
         return 'Unknown';
     }
@@ -251,6 +253,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery UI';
     case 'jquery.blockUI.min.jsm':
         return 'jQuery Block UI';
+    case 'jquery-migrate.min.jsm':
+        return 'jQuery Migrate';
     case 'jquery.validate.min.jsm':
         return 'jQuery jeditable';
     case 'jquery.jeditable.min.jsm':
@@ -283,6 +287,10 @@ helpers.determineResourceName = function (filename) {
         return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
+    case 'select2.min.cssm':
+        return 'Select2 CSS';
+    case 'select2.full.min.jsm':
+        return 'Select2 JS';
     case 'spin.min.jsm':
         return 'spin.js';
     case 'store.legacy.min.jsm':
@@ -303,6 +311,8 @@ helpers.determineResourceName = function (filename) {
         return 'Vue.js';
     case 'wow.min.jsm':
         return 'WOW';
+    case 'jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm':
+        return 'jsDelivr combined';
     default:
         return 'Unknown';
     }
@@ -353,8 +363,6 @@ helpers.setLastVersion = function (type, version) {
 
     if(version !== null && version !== undefined) {
         requestVersion = version.toString();
-    } else if (version === null) {
-        return 'latest';
     }
     if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
@@ -410,6 +418,10 @@ helpers.setLastVersion = function (type, version) {
         version = '1.11.4';
     } else if (type.includes('/jquery.blockUI/2.')) {
         version = '2.70';
+    } else if (type.includes('/jquery-migrate/1.')) {
+        version = '1.4.1';
+    } else if (type.includes('/jquery-migrate/3.')) {
+        version = '3.1.0';
     } else if (type.includes('/jquery-validate/1.')) {
         version = '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
@@ -438,6 +450,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
         version = '1.9.0';
+    } else if (type.includes('/select2/4.')) {
+        version = '4.0.12';
     } else if (type.includes('/spin.js/2.')) {
         version = '2.3.2';
     } else if (type.includes('/store.js/2.')) {
@@ -460,6 +474,8 @@ helpers.setLastVersion = function (type, version) {
         version = '6.4.8';
     } else if (type.includes('/wow/1.')) {
         version = '1.1.2';
+    } else if (version === null) {
+        version = 'latest';
     }
 
     return version;

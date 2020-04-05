@@ -84,6 +84,7 @@ var mappings = {
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
             'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
+            'jquery-migrate/{version}/jquery-migrate.min.js': resources.jQueryMigrate,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'jquery-validate/{version}/jquery.validate.min.js': resources.jqueryValidationPlugin,
@@ -98,6 +99,8 @@ var mappings = {
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
+            'select2/{version}/js/select2.min.js': resources.select2js,
+            'select2/{version}/css/select2.min.css': resources.select2css,
             'spin.js/{version}/spin.min.js': resources.spinJS,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
@@ -480,7 +483,7 @@ var mappings = {
     'netdna.bootstrapcdn.com': {
         '/bootstrap/': {
             '{version}/js/bootstrap.min.': resources.bootstrapJS,
-            '{version}/css/bootstrap.min.': resources.bootstrapCSS,
+            '{version}/css/bootstrap.min.': resources.bootstrapCSS
         },
         '/font-awesome/': {
             '{version}/css/font-awesome.css': resources.fontawesome

@@ -99,6 +99,26 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
     resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
 
+    /*
+        NOTE:
+        jsDelivr allows to load several files in one request
+        This is just a workaround. If there are more websites which use this, we will have to do crazy things here to find and redirect these files.
+
+        It's not possible to respond to a request with multiple redirections
+        https://gitlab.com/nobody42/localcdn/-/issues/45
+    */
+    let regexJsDelivr = RegExp(/\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/);
+    if (channelHost.includes('cdn.jsdelivr.net') && regexJsDelivr.test(channelPath)) {
+        return {
+            'source': channelHost,
+            'version': 'beta',
+            'path': 'resources/jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm',
+            'bundle': ''
+        };
+    }
+
+
+
     for (let resourceMold of Object.keys(resourceMappings)) {
 
         if (resourcePattern.startsWith(resourceMold)) {

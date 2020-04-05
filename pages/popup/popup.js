@@ -292,7 +292,8 @@ popup._createInjectionElement = function (injection) {
     if (injection.version !== null) {
         noteElement = document.createElement('span');
         noteElement.setAttribute('class', 'side-note');
-        noteTextNode = document.createTextNode(` v${injection.version}`);
+        let versionNode = (injection.version === 'beta') ? ` ${injection.version}` : ` v${injection.version}`;
+        noteTextNode = document.createTextNode(versionNode);
         noteElement.appendChild(noteTextNode);
         injectionElement.appendChild(noteElement);
     }

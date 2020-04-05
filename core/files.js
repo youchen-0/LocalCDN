@@ -98,6 +98,10 @@ var files = {
         // jQuery BlockUI
         'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,
 
+        // jQuery Migrate
+        'resources/jquery-migrate/1.4.1/jquery-migrate.min.jsm': true,
+        'resources/jquery-migrate/3.1.0/jquery-migrate.min.jsm': true,
+
         // jQuery UI
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
 
@@ -129,7 +133,9 @@ var files = {
         'resources/p2p-media-loader-core/0.6.2/p2p-media-loader-core.min.jsm': true,
 
         // plyr CSS
-        'resources/plyr/3.5.10/plyr.min.cssm': true,
+        // CSS cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
+        // Please do not change it.
+        'resources/plyr/3.5.10/plyr.min.css': true,
 
         // Prototype
         'resources/prototype/1.7.3.0/prototype.jsm': true,
@@ -146,6 +152,10 @@ var files = {
 
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
+
+        // Select2
+        'resources/select2/4.0.12/select2.full.min.jsm': true,
+        'resources/select2/4.0.12/select2.min.cssm': true,
 
         // spin.js
         'resources/spin.js/2.3.2/spin.min.jsm': true,

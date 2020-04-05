@@ -135,6 +135,11 @@ var resources = {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Migrate
+    'jQueryMigrate': {
+        'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
@@ -187,7 +192,7 @@ var resources = {
     },
     // plyr CSS
     'plyrCSS': {
-        'path': 'resources/plyr/{version}/plyr.min.cssm',
+        'path': 'resources/plyr/{version}/plyr.min.css',
         'type': 'text/css'
     },
     // Prototype
@@ -212,6 +217,15 @@ var resources = {
     // Scriptaculous
     'scriptaculous': {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',
+        'type': 'application/javascript'
+    },
+    // Select2
+    'select2css': {
+        'path': 'resources/select2/{version}/select2.min.cssm',
+        'type': 'text/css'
+    },
+    'select2js': {
+        'path': 'resources/select2/{version}/select2.full.min.jsm',
         'type': 'application/javascript'
     },
     // spin.js
