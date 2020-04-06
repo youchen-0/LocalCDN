@@ -35,6 +35,9 @@ helpers.insertI18nContentIntoDocument = function (document) {
     i18nElements.forEach(function (i18nElement) {
 
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
+        if (i18nElement.id === 'button-copy-rule-set') {
+            i18nElement.value = chrome.i18n.getMessage('copyRuleSet');
+        }
         if(chrome.i18n.getMessage(i18nMessageName) === '') {
             // Select english if configured language is empty
             i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);

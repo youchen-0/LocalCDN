@@ -38,7 +38,7 @@
                 <div class="notice-message">
                     This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains.
                 </div>
-                
+
                 <div class="button button-notice button-warning" id="button-block-missing">
                     Disable
                 </div>
@@ -165,8 +165,8 @@
         <section class="option">
             <div class="title-option" data-i18n-content="generateRuleSetTitle"></div>
             <div class="description-option">
-                <p>In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix.</p>
-                <p class="last-update">Last update: <span id="last-mapping-update"></span></p>
+                <p data-i18n-content="generateRuleSetDescription"></p>
+                <p id="last-mapping-update" class="last-update" data-i18n-content="lastUpdate"></p>
             </div>
             <div class="ruleset-generator">
                 <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
@@ -177,7 +177,7 @@
                 <label for="generate-umatrix-rules">uMatrix</label>
             </div>
             <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-            <input id="button-copy-rule-set" type="button" value="Copy">
+            <input id="button-copy-rule-set" type="button" data-i18n-content="copyRuleSet">
         </section>
 
         <section class="notice notice-default hidden" id="notice-locale">
@@ -190,7 +190,7 @@
                     Your preferred language is not yet fully supported.
 
                 </div>
-                
+
                 <a class="button button-notice" href="https://crowdin.com/project/decentraleyes" target="_blank">
                     Help Translate
                 </a>

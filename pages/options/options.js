@@ -60,7 +60,7 @@ options._renderOptionsPanel = function () {
         options._renderLocaleNotice();
     }
 
-    document.getElementById('last-mapping-update').textContent = lastMappingUpdate;
+    document.getElementById('last-mapping-update').textContent += lastMappingUpdate;
 };
 
 options._renderBlockMissingNotice = function () {
