@@ -60,7 +60,7 @@ const Setting = {
     'DISABLE_PREFETCH': 'disablePrefetch',
     'ENFORCE_STAGING': 'enforceStaging',
     'SHOW_ICON_BADGE': 'showIconBadge',
-    'SHOW_RELEASE_NOTES': 'showReleaseNotes',
+    'HIDE_RELEASE_NOTES': 'hideReleaseNotes',
     'STRIP_METADATA': 'stripMetadata',
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
     'WHITELISTED_DOMAINS': 'whitelistedDomains',

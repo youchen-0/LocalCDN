@@ -77,6 +77,14 @@
   },
   "loggingDescription": {
     "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources",
-    "description": "Generate rule set title."
+    "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+  },
+  "hideReleaseNotesTitle": {
+    "message": "Disable release notes",
+    "description": "Disable release notes"
+  },
+  "hideReleaseNotesDescription": {
+    "message": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.",
+    "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
   }
 }

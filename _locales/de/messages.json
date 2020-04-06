@@ -70,5 +70,21 @@
   "generateRuleSetTitle": {
     "message": "Generiere Regelsätze für uBlock oder uMatrix",
     "description": "Generate rule set title."
+  },
+  "loggingTitle": {
+    "message": "Aktiviere das loggen in die Browser-Konsole",
+    "description": "Aktiviere das loggen in die Browser-Konsole."
+  },
+  "loggingDescription": {
+    "message": "Öffne die \"Browser-Konsole\" ( STRG + UMSCHALT + J ) um fehlende Resourcen anzuzeigen.",
+    "description": "Öffne die \"Browser-Konsole\" ( STRG + UMSCHALT + J ) um fehlende Resourcen anzuzeigen."
+  },
+  "hideReleaseNotesTitle": {
+    "message": "Versionshinweise deaktivieren",
+    "description": "Versionshinweise deaktivieren"
+  },
+  "hideReleaseNotesDescription": {
+    "message": "Falls aktivert, erhälst du keine Hinweise über Neuerungen in LocalCDN. Dazu gehören auch Informationen über neue uBlock/uMatrix-Regeln.",
+    "description": "Falls aktivert, erhälst du keine Hinweise über Neuerungen in LocalCDN. Dazu gehören auch Informationen über neue uBlock/uMatrix-Regeln."
   }
 }
