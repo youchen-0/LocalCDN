@@ -409,7 +409,11 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/hls.js/')) {
         version = '0.13.2';
     } else if (type.includes('/jquery/1.')) {
-        version = ( helpers.compareVersion('1.8.3', requestVersion )) ? '1.8.3' : '1.12.4';
+        if (helpers.compareVersion('1.7.1', requestVersion)) version = '1.7.1'; // < v1.7.1
+        else if (helpers.compareVersion('1.8.3', requestVersion)) version = '1.8.3'; // >= 1.7.2 to <= 1.8.3
+        else version = '1.12.4'; // >= 1.8.4
+    } else if (type.includes('/jquery/1.8.')) {
+        version = '1.8.3';
     } else if (type.includes('/jquery/2.')) {
         version = '2.2.4';
     } else if (type.includes('/jquery/3.')) {

@@ -90,6 +90,7 @@ var files = {
         'resources/hls.js/0.13.2/hls.min.jsm': true,
 
         // jQuery
+        'resources/jquery/1.7.1/jquery.min.jsm': true,
         'resources/jquery/1.8.3/jquery.min.jsm': true,
         'resources/jquery/1.12.4/jquery.min.jsm': true,
         'resources/jquery/2.2.4/jquery.min.jsm': true,
