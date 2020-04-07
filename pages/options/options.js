@@ -25,11 +25,18 @@ var options = {};
 
 options._renderContents = function () {
 
+    let translationComplete = true;
+
     document.body.setAttribute('dir', options._scriptDirection);
-    helpers.insertI18nContentIntoDocument(document);
+    translationComplete = helpers.insertI18nContentIntoDocument(document);
 
     options._determineOptionValues()
         .then(options._renderOptionsPanel);
+// console.log(!translationComplete);
+    if (!translationComplete) {
+        options._renderLocaleNotice();
+    }
+
 };
 
 options._renderOptionsPanel = function () {

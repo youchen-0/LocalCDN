@@ -26,8 +26,9 @@ var helpers = {};
 
 helpers.insertI18nContentIntoDocument = function (document) {
 
-    let scriptDirection, defaultScriptDirection, i18nElements;
+    let scriptDirection, defaultScriptDirection, i18nElements, translationComplete;
 
+    translationComplete = true;
     scriptDirection = helpers.determineScriptDirection(navigator.language);
     defaultScriptDirection = helpers.determineScriptDirection('en_US');
     i18nElements = document.querySelectorAll('[data-i18n-content]');
@@ -35,19 +36,19 @@ helpers.insertI18nContentIntoDocument = function (document) {
     i18nElements.forEach(function (i18nElement) {
 
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
-        if (i18nElement.id === 'button-copy-rule-set') {
+        if (i18nElement.id === 'button-copy-rule-set' && chrome.i18n.getMessage(i18nMessageName) !== '') {
             i18nElement.value = chrome.i18n.getMessage('copyRuleSet');
         }
-        if(chrome.i18n.getMessage(i18nMessageName) === '') {
-            // Select english if configured language is empty
-            i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
-            i18nElement.setAttribute('dir', defaultScriptDirection);
-        } else {
+        if(chrome.i18n.getMessage(i18nMessageName) !== '') {
             i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
             i18nElement.setAttribute('dir', scriptDirection);
+        } else {
+            translationComplete = false;
         }
-
     });
+
+    return translationComplete;
+
 };
 
 helpers.insertI18nTitlesIntoDocument = function (document) {

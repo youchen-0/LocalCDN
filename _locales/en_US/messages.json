@@ -67,10 +67,6 @@
     "message": "Advanced",
     "description": "Advanced label."
   },
-  "lastUpdate": {
-    "message": "Last update: ",
-    "description": "Last update."
-  },
   "generateRuleSetTitle": {
     "message": "Generate rule sets for uBlock or uMatrix",
     "description": "Generate rule set title."
@@ -78,6 +74,10 @@
   "generateRuleSetDescription": {
     "message": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix.",
     "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
+  },
+  "lastUpdate": {
+      "message": "Last update: ",
+      "description": "Last update."
   },
   "copyRuleSet": {
     "message": "Copy",
@@ -98,5 +98,13 @@
   "hideReleaseNotesDescription": {
     "message": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.",
     "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+  },
+  "featureBreaksWebsitesDescription": {
+    "message": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains.",
+    "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+  },
+  "featureBreaksWebsitesButton": {
+    "message": "Disable",
+    "description": "Disable"
   }
 }
