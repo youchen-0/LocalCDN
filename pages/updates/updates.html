@@ -23,11 +23,11 @@
                         New in LocalCDN:
                     </div>
                         <ul>
-                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/38">"#38"</a></li>
-                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/26">"#26"</a> (bitchute.com)</li>
-                            <li>Added: Select2 v4.0.12 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/44">"Fixed #44"</a>)</li>
-                            <li>Added: jQuery Migrate v3.1.0 and v1.4.1 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/42">"Fixed #42"</a>)</li>
-                            <li>Fixed: jsDelivr combined file (jQuery v2.2.4, Hogan.js v3.0.2, AlgoliaSearch v3.30.0 and Autocomplete.js v0.31.0) <a href="https://gitlab.com/nobody42/localcdn/-/issues/45">"Issue#45"</a> <strong>(Just a workaround!)</strong></li>
+                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/28">#28</a> and <a href="https://gitlab.com/nobody42/localcdn/-/issues/44">#44</a></li>
+                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/49">#49</a> (partly)</li>
+                            <li>Fixed storage mechanism of lastMappingUpdate and added option to hide release notes</li>
+                            <li>Updated: Translations</li>
+                            <li>Fixed: Use default language if translation isn't available.</li>
                         </ul>
                     <div class="topic-label">
                         Please update your uBlock/uMatrix rules
@@ -44,7 +44,15 @@
                     <input id="button-copy-rule-set" type="button" value="Copy">
                     <hr/>
                     <h2>History</h2>
-                    <p>2020-03-29 (v2.1.9)</p><br/>
+                    <p class='release-date'>2020-04-05 (v2.1.10)</p>
+                        <ul>
+                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/38">"#38"</a></li>
+                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/26">"#26"</a> (bitchute.com)</li>
+                            <li>Added: Select2 v4.0.12 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/44">"Fixed #44"</a>)</li>
+                            <li>Added: jQuery Migrate v3.1.0 and v1.4.1 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/42">"Fixed #42"</a>)</li>
+                            <li>Fixed: jsDelivr combined file (jQuery v2.2.4, Hogan.js v3.0.2, AlgoliaSearch v3.30.0 and Autocomplete.js v0.31.0) <a href="https://gitlab.com/nobody42/localcdn/-/issues/45">"Issue#45"</a> <strong>(Just a workaround!)</strong></li>
+                        </ul>
+                    <p class='release-date'>2020-03-29 (v2.1.9)</p>
                         <ul>
                             <li>Added animate.css v3.7.2</li>
                             <li>Fixed bootstrap-slider</li>
@@ -69,30 +77,30 @@
                             <li>Added flv.js v1.5.0 and hls.js v0.13.2</li>
                             <li>Logging implemented (Wiki page: <a href="https://gitlab.com/nobody42/localcdn/-/wikis/How-to-logging">How to logging</a>)</li>
                         </ul>
-                    <p>2020-03-25 (v2.1.7)</p><br/>
+                    <p class='release-date'>2020-03-25 (v2.1.7)</p>
                         <ul>
                             <li>New CDN: "akamai-webcdn.kgstatic.net" (Akamai WebCDN)</li>
                             <li>Fixed issue with lozad.js in v2.1.7</li>
                         </ul>
-                    <p>2020-03-25 (v2.1.7)</p><br/>
+                    <p class='release-date'>2020-03-25 (v2.1.7)</p>
                         <ul>
-                        <li>Added lozad v1.14.0</li>
-                        <li>Added Findify v6.9.15</li>
-                        <li>Added detection of framework-bundles (e.g. Findify)</li>
-                        <li>Fixed Moment.js (File extension and detection of resource name)</li>
-                        <li>Added Vue.js v1.0.28 and page.js v1.7.1</li>
-                        <li>Fixed file extensions to prevent warnigns of Mozillas validation tests</li>
-                        <li>Added new endpoint for webfont</li>
-                        <li>Added new endpoint for bootstrap-slider</li>
-                        <li>Added "ajax.cloudflare.com" and "Rocket Loader" (<a href="https://gitlab.com/nobody42/localcdn/-/issues/24">"#24"</a>)</li>
-                        <li>Added Font Awesome v3.2.1</li>
-                    </ul>
-                    <p>2020-03-22 (v2.1.6)</p><br/>
+                            <li>Added lozad v1.14.0</li>
+                            <li>Added Findify v6.9.15</li>
+                            <li>Added detection of framework-bundles (e.g. Findify)</li>
+                            <li>Fixed Moment.js (File extension and detection of resource name)</li>
+                            <li>Added Vue.js v1.0.28 and page.js v1.7.1</li>
+                            <li>Fixed file extensions to prevent warnigns of Mozillas validation tests</li>
+                            <li>Added new endpoint for webfont</li>
+                            <li>Added new endpoint for bootstrap-slider</li>
+                            <li>Added "ajax.cloudflare.com" and "Rocket Loader" (<a href="https://gitlab.com/nobody42/localcdn/-/issues/24">"#24"</a>)</li>
+                            <li>Added Font Awesome v3.2.1</li>
+                        </ul>
+                    <p class='release-date'>2020-03-22 (v2.1.6)</p>
                         <ul>
                             <li>URL of testing utility updated</li>
                             <li>Fixed: <a href="https://gitlab.com/nobody42/localcdn/-/issues/21">"Search on serienjunkies.org not working"</a></li>
                         </ul>
-                    <p>2020-03-17 (v2.1.5)</p><br/>
+                    <p class='release-date'>2020-03-17 (v2.1.5)</p>
                         <ul>
                             <li>Simple enable/disable button replaced with toggle switch</li>
                             <li>Added: Moment.js (v2.24.0)</li>
@@ -105,19 +113,17 @@
                             <li>Updated: MooTools (v1.6.0)</li>
                             <li>Updated: Web Font Loader (v1.6.28)</li>
                         </ul>
-                    <p>2020-03-13 (v2.1.4)<br/>
+                    <p class='release-date'>2020-03-13 (v2.1.4)</p>
                         <ul>
                             <li>Fixed: <a href="https://gitlab.com/nobody42/localcdn/-/issues/16">"Weird behavior of signed extension"</a></li>
                             <li>New CDN: use.fontawesome.com</li>
                             <li>New framework: Font Awesome v5.7.2</li>
                         </ul>
-                    </p>
-                    <p>2020-03-12 (v2.1.3)<br/>
+                    <p class='release-date'>2020-03-12 (v2.1.3)</p>
                         <ul>
                             <li>Fixed file extensions misstakes in mappings.js</li>
                         </ul>
-                    </p>
-                    <p>2020-03-12 (v2.1.2)<br/>
+                    <p class='release-date'>2020-03-12 (v2.1.2)</p>
                         <ul>
                             <li>Added Domain name for maxcdn.bootstrapcdn.com</li>
                             <li>Fixed wrong file extensions in BootstrapJS and BootstrapCSS</li>
@@ -127,25 +133,21 @@
                             <li>Fixed dark mode issue</li>
                             <li>Replaced innerHTML with textContent to remove warning of Mozillas add-on validation</li>
                         </ul>
-                    </p>
-                    <p>2020-03-08 (v2.1.1)<br/>
+                    <p class='release-date'>2020-03-08 (v2.1.1)</p>
                         <ul>
                             <li>CDN: Bootstrap JavaScript to ajax.aspnetcdn.com</li>
                         </ul>
-                    </p>
-                    <p>2020-03-03 (v2.0.24)<br/>
+                    <p class='release-date'>2020-03-03 (v2.0.24)</p>
                         <ul>
                             <li>Framework: Bootstrap CSS v3.3.6, v3.1.1</li>
                             <li>Framework: Bootstrap JavaScript v3.3.6, v3.1.1</li>
                         </ul>
-                    </p>
-                    <p>2020-03-01 (v2.0.22)<br/>
+                    <p class='release-date'>2020-03-01 (v2.0.22)</p>
                         <ul>
                             <li>Framework: Bootstrap CSS v4.1.0</li>
                             <li>Framework: Bootstrap JavaScript v4.1.0</li>
                         </ul>
-                    </p>
-                    <p>2020-02-29 (v2.0.20)<br/>
+                    <p class='release-date'>2020-02-29 (v2.0.20)</p>
                         <ul>
                             <li>CDN: Baidu CDN, Staticfile CDN, BootCDN, Tencent Public Libraries, Qihoo 360 CDN</li>
                             <li>CDN: Added endpoint for jsDelivr</li>
@@ -154,14 +156,12 @@
                             <li>CDN: Added endpoints for Bootstrap (NetDNA Bootstrap, MaxCDN Bootstrap</li>
                             <li>Framework: AngularJS (Standard, Animated, Sanitize, Cookies, Touch) v1.6.9, v1.7.0, v1.7.1, v1.7.2, v1.7.3, v1.7.4, v1.7.5, v1.7.6, v1.7.7, v1.7.8, v1.7.9</li>
                         </ul>
-                    </p>
-                    <p>2020-02-28 (v2.0.19)<br/>
+                    <p class='release-date'>2020-02-28 (v2.0.19)</p>
                         <ul>
                             <li>Framework: Bootstrap CSS v4.0.0, v3.3.7, v3.2.0, v2.3.2</li>
                             <li>Framework: Bootstrap JavaScript v4.0.0, v3.3.7, v3.2.0, v2.3.2</li>
                         </ul>
-                    </p>
-                    <p>2020-02-28 (v2.0.17)<br/>
+                    <p class='release-date'>2020-02-28 (v2.0.17)</p>
                         <ul>
                             <li>CDN: stackpath.bootstrapcdn.com</li>
                             <li>Framework: Bootstrap CSS v4.4.1</li>
@@ -169,7 +169,6 @@
                             <li>Framework: Bootstrap JavaScript v4.4.1</li>
                             <li>Framework: Bootstrap JavaScript v4.3.1</li>
                         </ul>
-                    </p>
                 </div>
             </div>
         </div>

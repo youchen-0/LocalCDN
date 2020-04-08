@@ -149,7 +149,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             let bundle = helpers.determineBundle(channelPath);
             if(bundle !== '') {
                 filename = channelPath.split('/').pop();
-                targetPath = targetPath + filename + 'm';
+                targetPath = ( RegExp('.*\.css$').test(filename) ) ? targetPath + filename : targetPath + filename + 'm';
             }
 
             if (requestAnalyzer.logging) {

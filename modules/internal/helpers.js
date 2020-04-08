@@ -26,8 +26,9 @@ var helpers = {};
 
 helpers.insertI18nContentIntoDocument = function (document) {
 
-    let scriptDirection, defaultScriptDirection, i18nElements;
+    let scriptDirection, defaultScriptDirection, i18nElements, translationComplete;
 
+    translationComplete = true;
     scriptDirection = helpers.determineScriptDirection(navigator.language);
     defaultScriptDirection = helpers.determineScriptDirection('en_US');
     i18nElements = document.querySelectorAll('[data-i18n-content]');
@@ -35,16 +36,19 @@ helpers.insertI18nContentIntoDocument = function (document) {
     i18nElements.forEach(function (i18nElement) {
 
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
-        if(chrome.i18n.getMessage(i18nMessageName) === '') {
-            // Select english if configured language is empty
-            i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
-            i18nElement.setAttribute('dir', defaultScriptDirection);
-        } else {
+        if (i18nElement.id === 'button-copy-rule-set' && chrome.i18n.getMessage(i18nMessageName) !== '') {
+            i18nElement.value = chrome.i18n.getMessage('copyRuleSet');
+        }
+        if(chrome.i18n.getMessage(i18nMessageName) !== '') {
             i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
             i18nElement.setAttribute('dir', scriptDirection);
+        } else {
+            translationComplete = false;
         }
-
     });
+
+    return translationComplete;
+
 };
 
 helpers.insertI18nTitlesIntoDocument = function (document) {
@@ -215,11 +219,11 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
-    case 'animate.min.cssm':
+    case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
         return 'Backbone.js';
-    case 'bootstrap.min.cssm':
+    case 'bootstrap.min.css':
         return 'Bootstrap CSS';
     case 'bootstrap.min.css':
         return 'Bootstrap CSS';
@@ -227,7 +231,7 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap JS';
     case 'bootstrap-slider.min.jsm':
         return 'bootstrap-slider JS';
-    case 'bootstrap-slider.min.cssm':
+    case 'bootstrap-slider.min.css':
         return 'bootstrap-slider CSS';
     case 'clipboard.min.jsm':
         return 'clipboard.js';
@@ -241,9 +245,9 @@ helpers.determineResourceName = function (filename) {
         return 'Ext Core';
     case 'flv.min.jsm':
         return 'flv.js';
-    case 'font-awesome.min.cssm':
+    case 'font-awesome.min.css':
         return 'Font Awesome';
-    case 'all.cssm':
+    case 'all.css':
         return 'Font Awesome';
     case 'hls.min.jsm':
         return 'hls.js';
@@ -275,7 +279,7 @@ helpers.determineResourceName = function (filename) {
         return 'P2P Media Loader Core';
     case 'page.min.jsm':
         return 'page.js';
-    case 'plyr.min.cssm':
+    case 'plyr.min.css':
         return 'plyr CSS';
     case 'prototype.jsm':
         return 'Prototype';
@@ -283,11 +287,11 @@ helpers.determineResourceName = function (filename) {
         return 'Rocket Loader';
     case 'rickshaw.min.jsm':
         return 'rickshaw JS';
-    case 'rickshaw.min.cssm':
+    case 'rickshaw.min.css':
         return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
-    case 'select2.min.cssm':
+    case 'select2.min.css':
         return 'Select2 CSS';
     case 'select2.full.min.jsm':
         return 'Select2 JS';
@@ -297,7 +301,7 @@ helpers.determineResourceName = function (filename) {
         return 'Store.js';
     case 'swfobject.jsm':
         return 'SWFObject';
-    case 'toastr.min.cssm':
+    case 'toastr.min.css':
         return 'toastr.js';
     case 'toastr.min.jsm':
         return 'toastr.js';
@@ -409,7 +413,11 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/hls.js/')) {
         version = '0.13.2';
     } else if (type.includes('/jquery/1.')) {
-        version = ( helpers.compareVersion('1.8.3', requestVersion )) ? '1.8.3' : '1.12.4';
+        if (helpers.compareVersion('1.7.1', requestVersion)) version = '1.7.1'; // < v1.7.1
+        else if (helpers.compareVersion('1.8.3', requestVersion)) version = '1.8.3'; // >= 1.7.2 to <= 1.8.3
+        else version = '1.12.4'; // >= 1.8.4
+    } else if (type.includes('/jquery/1.8.')) {
+        version = '1.8.3';
     } else if (type.includes('/jquery/2.')) {
         version = '2.2.4';
     } else if (type.includes('/jquery/3.')) {

@@ -28,18 +28,17 @@
 
             <div class="notice-head">
 
-                <i class="fai fa-exclamation-triangle icon"></i>
                 <span data-i18n-content="blockMissingTitle"></span>
 
             </div>
 
             <div class="notice-body" dir="ltr">
 
-                <div class="notice-message">
+                <div class="notice-message" data-i18n-content="featureBreaksWebsitesDescription">
                     This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains.
                 </div>
-                
-                <div class="button button-notice button-warning" id="button-block-missing">
+
+                <div class="button button-notice button-warning" id="button-block-missing" data-i18n-content="featureBreaksWebsitesButton">
                     Disable
                 </div>
 
@@ -128,28 +127,48 @@
                 <label class="label-checkbox">
 
                     <input class="input-checkbox" data-option="enableLogging" type="checkbox">
-                    <span data-i18n-content="loggingTitle"></span>
+                    <span data-i18n-content="loggingTitle">Enable logging in browser console</span>
 
                 </label>
 
             </div>
 
-            <div class="description-option" data-i18n-content="loggingDescription"></div>
+            <div class="description-option" data-i18n-content="loggingDescription">Open "Browser Console" ( CTRL + SHIFT + J ) to show missing resources</div>
 
         </section>
 
         <section class="option">
 
-            <div class="title-option" data-i18n-content="whitelistedDomainsTitle"></div>
-            <input class="input-text" data-option="whitelistedDomains" type="text">
-            <div class="description-option" data-i18n-content="whitelistedDomainsDescription"></div>
+            <div class="title-option">
+
+                <label class="label-checkbox">
+
+                    <input class="input-checkbox" data-option="hideReleaseNotes" type="checkbox">
+                    <span data-i18n-content="hideReleaseNotesTitle">Disable release notes</span>
+
+                </label>
+
+                <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
+
+            </div>
+
+            <div class="description-option" data-i18n-content="hideReleaseNotesDescription">If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.</div>
+
         </section>
 
         <section class="option">
-            <div class="title-option" data-i18n-content="generateRuleSetTitle"></div>
-            <div class="description-option">
-                <p>In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix.</p>
-                <p class="last-update">Last update: <span id="last-mapping-update"></span></p>
+            <div class="title-option without-checkbox" data-i18n-content="whitelistedDomainsTitle"></div>
+            <input class="input-text without-checkbox" data-option="whitelistedDomains" type="text">
+            <div class="description-option without-checkbox" data-i18n-content="whitelistedDomainsDescription"></div>
+        </section>
+
+        <section class="option">
+            <div class="title-option without-checkbox" data-i18n-content="generateRuleSetTitle"></div>
+            <div class="description-option without-checkbox">
+                <p class="without-checkbox" data-i18n-content="generateRuleSetDescription"></p>
+            </div>
+            <div class="ruleset-generator">
+                <p id="last-mapping-update" class="description-option last-update without-checkbox" data-i18n-content="lastUpdate">Last update: </p>
             </div>
             <div class="ruleset-generator">
                 <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
@@ -160,7 +179,7 @@
                 <label for="generate-umatrix-rules">uMatrix</label>
             </div>
             <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-            <input id="button-copy-rule-set" type="button" value="Copy">
+            <input id="button-copy-rule-set" type="button" data-i18n-content="copyRuleSet" value="Copy">
         </section>
 
         <section class="notice notice-default hidden" id="notice-locale">
@@ -173,8 +192,8 @@
                     Your preferred language is not yet fully supported.
 
                 </div>
-                
-                <a class="button button-notice" href="https://crowdin.com/project/decentraleyes" target="_blank">
+
+                <a class="button button-notice button-warning" href="https://gitlab.com/nobody42/localcdn/-/tree/master/_locales" target="_blank">
                     Help Translate
                 </a>
 

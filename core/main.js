@@ -31,8 +31,8 @@ main._initializeSettings = function () {
         [Setting.BLOCK_MISSING]: false,
         [Setting.DISABLE_PREFETCH]: true,
         [Setting.ENFORCE_STAGING]: false,
+        [Setting.HIDE_RELEASE_NOTES]: false,
         [Setting.STRIP_METADATA]: true,
-        [Setting.LAST_MAPPING_UPDATE]: "2020-01-01",
         [Setting.WHITELISTED_DOMAINS]: {},
         [Setting.LOGGING]: false
     };
@@ -69,41 +69,55 @@ main._showReleaseNotes = function (details) {
 
     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
 
-        previousVersion = details.previousVersion;
+        chrome.storage.local.set({
+            [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
+        }, function() {
 
-        if (previousVersion && previousVersion.charAt(0) === '2') {
-            return; // Do not show release notes after minor updates.
-        }
+            previousVersion = details.previousVersion;
 
-        if (details.temporary !== true) {
+            if (previousVersion && previousVersion.charAt(0) === '2') {
+                return; // Do not show release notes after minor updates.
+            }
 
-            chrome.storage.local.get({
-                [Setting.SHOW_RELEASE_NOTES]: true
-            }, function (items) {
+            if (details.temporary !== true) {
 
-                if (items.showReleaseNotes === true) {
+                chrome.storage.local.get([Setting.HIDE_RELEASE_NOTES], function (items) {
 
-                    chrome.tabs.create({
-                        'url': location,
-                        'active': false
-                    });
-                }
-            });
-        }
-    } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
-        // If add-on update true, check last update of mappings.js
-        chrome.storage.local.get({[Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate}, function (items) {
-            if (items.lastMappingUpdate !== lastMappingUpdate) {
-                // Updated mappings.js
-                chrome.tabs.create({
-                    'url': updateAdBlockerRules,
-                    'active': true
+                    if (items.hideReleaseNotes !== true) {
+
+                        chrome.tabs.create({
+                            'url': location,
+                            'active': false
+                        });
+                    }
                 });
+            }
+        });
+    } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
+
+        let newValue = lastMappingUpdate;
+        let oldValue = "";
+
+        // If add-on update true, check last update of mappings.js
+        chrome.storage.local.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
+
+            oldValue = items.lastMappingUpdate;
+
+            if (oldValue !== newValue) {
+                // Updated mappings.js
                 chrome.storage.local.set({
-                    [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
+                    [Setting.LAST_MAPPING_UPDATE]: newValue
+                }, function() {
+                    if (!items.hideReleaseNotes) {
+                        chrome.tabs.create({
+                            'url': updateAdBlockerRules,
+                            'active': true
+                        });
+                    }
                 });
             } else {
                 // No mappings.js update
+                return;
             }
         });
     }

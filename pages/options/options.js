@@ -25,11 +25,18 @@ var options = {};
 
 options._renderContents = function () {
 
+    let translationComplete = true;
+
     document.body.setAttribute('dir', options._scriptDirection);
-    helpers.insertI18nContentIntoDocument(document);
+    translationComplete = helpers.insertI18nContentIntoDocument(document);
 
     options._determineOptionValues()
         .then(options._renderOptionsPanel);
+// console.log(!translationComplete);
+    if (!translationComplete) {
+        options._renderLocaleNotice();
+    }
+
 };
 
 options._renderOptionsPanel = function () {
@@ -45,6 +52,7 @@ options._renderOptionsPanel = function () {
     elements.blockMissing.checked = options._optionValues.blockMissing;
     elements.disablePrefetch.checked = options._optionValues.disablePrefetch;
     elements.stripMetadata.checked = options._optionValues.stripMetadata;
+    elements.hideReleaseNotes.checked = options._optionValues.hideReleaseNotes;
     elements.enableLogging.checked = options._optionValues.enableLogging;
     elements.whitelistedDomains.value = domainWhitelist;
 
@@ -59,7 +67,7 @@ options._renderOptionsPanel = function () {
         options._renderLocaleNotice();
     }
 
-    document.getElementById('last-mapping-update').textContent = lastMappingUpdate;
+    document.getElementById('last-mapping-update').textContent += lastMappingUpdate;
 };
 
 options._renderBlockMissingNotice = function () {
@@ -87,6 +95,7 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.disablePrefetch.addEventListener('change', options._onOptionChanged);
     elements.stripMetadata.addEventListener('change', options._onOptionChanged);
     elements.enableLogging.addEventListener('change', options._onOptionChanged);
+    elements.hideReleaseNotes.addEventListener('change', options._onOptionChanged);
     elements.whitelistedDomains.addEventListener('keyup', options._onOptionChanged);
     let type = elements.ruleSets;
     for(let i = 0; i < type.length; i++) {
@@ -134,6 +143,7 @@ options._getOptionElements = function () {
         [Setting.DISABLE_PREFETCH]: options._getOptionElement(Setting.DISABLE_PREFETCH),
         [Setting.STRIP_METADATA]: options._getOptionElement(Setting.STRIP_METADATA),
         [Setting.WHITELISTED_DOMAINS]: options._getOptionElement(Setting.WHITELISTED_DOMAINS),
+        [Setting.HIDE_RELEASE_NOTES]: options._getOptionElement(Setting.HIDE_RELEASE_NOTES),
         [Setting.LOGGING]: options._getOptionElement(Setting.LOGGING),
         ['ruleSets']: document.getElementsByName("rule-sets"),
         ['copyRuleSet']: document.getElementById("button-copy-rule-set")
