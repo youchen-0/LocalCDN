@@ -19,6 +19,11 @@
 
 var resources = {
 
+    // AlgoliaSearch
+    'algoliaSearch': {
+        'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
+        'type': 'application/javascript'
+    },
     // AngularJS
     'angular': {
         'path': 'resources/angularjs/{version}/angular.min.jsm',

@@ -22,6 +22,9 @@ var files = {
     // Files [Stable]
     [Environment.STABLE]: {
 
+        // AlgoliaSearch
+        'resources/algoliasearch/3.35.1/algoliasearch.min.jsm': true,
+
         // AngularJS
         'resources/angularjs/1.7.9/angular.min.jsm': true,
         'resources/angularjs/1.7.9/angular-animated.min.jsm': true,

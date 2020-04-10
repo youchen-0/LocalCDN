@@ -209,6 +209,8 @@ helpers.determineResourceName = function (filename) {
 
     switch (filename) {
 
+    case 'algoliasearch.min.jsm':
+        return 'AlgoliaSearch';
     case 'angular.min.jsm':
         return 'AngularJS';
     case 'angular-animate.min.jsm':
@@ -368,7 +370,9 @@ helpers.setLastVersion = function (type, version) {
     if(version !== null && version !== undefined) {
         requestVersion = version.toString();
     }
-    if (type.includes('/angularjs/1.')) {
+    if (type.includes('/algoliasearch/3.')) {
+        version = '3.35.1';
+    } else if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
     } else if (type.includes('/animate.css/3.')) {
         version = '3.7.2';

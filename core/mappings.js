@@ -65,6 +65,7 @@ var mappings = {
     // CDNJS (Cloudflare)
     'cdnjs.cloudflare.com': {
         '/ajax/libs/': {
+            'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
             'angular.js/{version}/angular.': resources.angular,
             'animate.css/{version}/animate.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
