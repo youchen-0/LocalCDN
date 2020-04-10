@@ -66,6 +66,7 @@ var mappings = {
     'cdnjs.cloudflare.com': {
         '/ajax/libs/': {
             'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
+            'angucomplete-alt/{version}/angucomplete-alt.': resources.anguComplete,
             'angular-ui-bootstrap/{version}/ui-bootstrap-tpls.': resources.angularUiBootstrap,
             'angularjs-slider/{version}/rzslider.': resources.angularJSslider,
             'angular.js/{version}/angular.': resources.angular,

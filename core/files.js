@@ -41,6 +41,9 @@ var files = {
         // Animate CSS
         'resources/animate.css/3.7.2/animate.min.css': true,
 
+        // AnguComplete
+        'resources/angucomplete-alt/3.0.0/angucomplete-alt.min.jsm': true,
+
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,

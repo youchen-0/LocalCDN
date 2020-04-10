@@ -24,6 +24,11 @@ var resources = {
         'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
         'type': 'application/javascript'
     },
+    // AnguComplete
+    'anguComplete': {
+        'path': 'resources/angucomplete-alt/{version}/angucomplete-alt.min.jsm',
+        'type': 'application/javascript'
+    },
     // AngularJS
     'angular': {
         'path': 'resources/angularjs/{version}/angular.min.jsm',

@@ -211,6 +211,8 @@ helpers.determineResourceName = function (filename) {
 
     case 'algoliasearch.min.jsm':
         return 'AlgoliaSearch';
+    case 'angucomplete-alt.min.jsm':
+        return 'AngulComplete';
     case 'angular.min.jsm':
         return 'AngularJS';
     case 'angular-animate.min.jsm':
@@ -382,6 +384,8 @@ helpers.setLastVersion = function (type, version) {
         version = '6.7.0';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
         version = '1.3.3';
+    } else if (type.includes('/angucomplete-alt/3.')) {
+        version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {
         version = '3.7.2';
     } else if (type.includes('/backbone.js/0.')) {
