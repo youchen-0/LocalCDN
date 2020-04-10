@@ -113,6 +113,7 @@ var mappings = {
             'select2/{version}/js/select2.min.js': resources.select2js,
             'select2/{version}/css/select2.min.css': resources.select2css,
             'spin.js/{version}/spin.min.js': resources.spinJS,
+            'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,

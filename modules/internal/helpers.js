@@ -313,6 +313,8 @@ helpers.determineResourceName = function (filename) {
         return 'Select2 CSS';
     case 'select2.full.min.jsm':
         return 'Select2 JS';
+    case 'socket.io.jsm':
+        return 'Socket.IO';
     case 'spin.min.jsm':
         return 'spin.js';
     case 'store.legacy.min.jsm':
@@ -500,6 +502,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.9.0';
     } else if (type.includes('/select2/4.')) {
         version = '4.0.12';
+    } else if (type.includes('/socket.io/2.')) {
+        version = '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
         version = '2.3.2';
     } else if (type.includes('/store.js/2.')) {

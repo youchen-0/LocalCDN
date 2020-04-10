@@ -185,6 +185,9 @@ var files = {
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
 
+        // Socket.IO
+        'resources/socket.io/2.3.0/socket.io.jsm': true,
+
         // Select2
         'resources/select2/4.0.12/select2.full.min.jsm': true,
         'resources/select2/4.0.12/select2.min.css': true,

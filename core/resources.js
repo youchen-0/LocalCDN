@@ -282,6 +282,11 @@ var resources = {
         'path': 'resources/select2/{version}/select2.full.min.jsm',
         'type': 'application/javascript'
     },
+    // socket.io
+    'socketIO': {
+        'path': 'resources/socket.io/{version}/socket.io.jsm',
+        'type': 'application/javascript'
+    },
     // spin.js
     'spinJS': {
         'path': 'resources/spin.js/{version}/spin.min.jsm',
