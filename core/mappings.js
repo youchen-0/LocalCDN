@@ -97,6 +97,7 @@ var mappings = {
             'jquery-validate/{version}/jquery.validate.min.js': resources.jqueryValidationPlugin,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
+            'lodash.js/{version}/lodash.': resources.lodashJS,
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,

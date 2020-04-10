@@ -277,6 +277,8 @@ helpers.determineResourceName = function (filename) {
         return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
         return 'lazysizes';
+    case 'lodash.min.jsm':
+        return 'Lodash';
     case 'lozad.min.jsm':
         return 'lozad.js';
     case 'modernizr.min.jsm':
@@ -466,6 +468,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
         version = '4.1.8';
+    } else if (type.includes('/lodash.js/4.')) {
+        version = '4.17.10';
     } else if (type.includes('lozad')) {
         version = '1.14.0';
     } else if (type.includes('/modernizr/2.')) {

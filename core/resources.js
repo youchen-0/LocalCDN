@@ -195,6 +195,11 @@ var resources = {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
         'type': 'application/javascript'
     },
+    // Lodash
+    'lodashJS': {
+        'path': 'resources/lodash.js/{version}/lodash.min.jsm',
+        'type': 'application/javascript'
+    },
     // lozad.js
     'lozad': {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',

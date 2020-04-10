@@ -139,6 +139,9 @@ var files = {
         // lazysizes
         'resources/lazysizes/4.1.8/lazysizes.min.jsm': true,
 
+        // lodash
+        'resources/lodash.js/4.17.10/lodash.min.jsm': true,
+
         // lozad.js
         'resources/lozad.js/1.14.0/lozad.min.jsm': true,
 
