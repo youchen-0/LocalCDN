@@ -44,6 +44,9 @@ var files = {
         // AnguComplete
         'resources/angucomplete-alt/3.0.0/angucomplete-alt.min.jsm': true,
 
+        // Angular UI Router
+        'resources/angular-ui-router/1.0.25/angular-ui-router.min.jsm': true,
+
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,

@@ -225,6 +225,8 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
+    case 'angular-ui-router.min.jsm':
+        return 'Angular UI Router';
     case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
@@ -384,6 +386,8 @@ helpers.setLastVersion = function (type, version) {
         version = '6.7.0';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
         version = '1.3.3';
+    } else if (type.includes('/angular-ui-router/1.')) {
+        version = '1.0.25';
     } else if (type.includes('/angucomplete-alt/3.')) {
         version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {

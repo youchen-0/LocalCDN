@@ -68,6 +68,7 @@ var mappings = {
             'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
             'angucomplete-alt/{version}/angucomplete-alt.': resources.anguComplete,
             'angular-ui-bootstrap/{version}/ui-bootstrap-tpls.': resources.angularUiBootstrap,
+            'angular-ui-router/{version}/angular-ui-router.': resources.angularUiRouter,
             'angularjs-slider/{version}/rzslider.': resources.angularJSslider,
             'angular.js/{version}/angular.': resources.angular,
             'animate.css/{version}/animate.': resources.animateCSS,

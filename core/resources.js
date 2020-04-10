@@ -60,6 +60,11 @@ var resources = {
         'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',
         'type': 'application/javascript'
     },
+    // AngularUI Router
+    'angularUiRouter': {
+        'path': 'resources/angular-ui-router/{version}/angular-ui-router.min.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',
