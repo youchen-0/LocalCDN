@@ -45,6 +45,11 @@ var resources = {
         'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
         'type': 'application/javascript'
     },
+    // AngularUI Bootstrap
+    'angularUiBootstrap': {
+        'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',

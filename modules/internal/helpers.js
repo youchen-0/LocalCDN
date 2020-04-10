@@ -307,6 +307,8 @@ helpers.determineResourceName = function (filename) {
         return 'toastr.js';
     case 'toastr.min.jsm':
         return 'toastr.js';
+    case 'ui-bootstrap-tpls.min.jsm':
+        return 'Angular UI Bootstrap';
     case 'underscore-min.jsm':
         return 'Underscore.js';
     case 'webfont.jsm':
@@ -374,6 +376,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
+    } else if (type.includes('/angular-ui-bootstrap/1.')) {
+        version = '1.3.3';
     } else if (type.includes('/animate.css/3.')) {
         version = '3.7.2';
     } else if (type.includes('/backbone.js/0.')) {
