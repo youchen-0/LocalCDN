@@ -66,6 +66,9 @@ var files = {
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.jsm': true,
 
+        // Bootstrap Daterangepicker
+        'resources/bootstrap-daterangepicker/2.1.27/daterangepicker.min.jsm': true,
+
         // clipboard.js
         'resources/clipboard.js/2.0.6/clipboard.min.jsm': true,
 

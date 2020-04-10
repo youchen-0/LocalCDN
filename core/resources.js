@@ -90,6 +90,11 @@ var resources = {
         'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
+    // Bootstrap Datepicker
+    'bootstrapDaterangepicker': {
+        'path': 'resources/bootstrap-daterangepicker/{version}/daterangepicker.min.jsm',
+        'type': 'application/javascript'
+    },
     // bootstrap-slider (Slider for Bootstrap 3)
     'bootstrapSliderCSS': {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.css',

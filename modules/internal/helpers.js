@@ -237,6 +237,8 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap CSS';
     case 'bootstrap.min.jsm':
         return 'Bootstrap JS';
+    case 'daterangepicker.min.jsm':
+        return 'Bootstrap Datepicker';
     case 'bootstrap-slider.min.jsm':
         return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.css':
@@ -408,6 +410,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.3.7';
     } else if (type.includes('/bootstrap.css/4.')) {
         version = '4.4.1';
+    } else if (type.includes('/bootstrap-daterangepicker/2.')) {
+        version = '2.1.27';
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
     } else if (type.includes('/clipboard.js/2.')) {
