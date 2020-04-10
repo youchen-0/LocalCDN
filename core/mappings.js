@@ -69,6 +69,7 @@ var mappings = {
             'angucomplete-alt/{version}/angucomplete-alt.': resources.anguComplete,
             'angular-ui-bootstrap/{version}/ui-bootstrap-tpls.': resources.angularUiBootstrap,
             'angular-ui-router/{version}/angular-ui-router.': resources.angularUiRouter,
+            'angular-ui-select/{version}/select.': resources.angularJsUiSelect,
             'angularjs-slider/{version}/rzslider.': resources.angularJSslider,
             'angular.js/{version}/angular.': resources.angular,
             'animate.css/{version}/animate.': resources.animateCSS,

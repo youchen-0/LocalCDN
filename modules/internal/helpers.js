@@ -299,6 +299,8 @@ helpers.determineResourceName = function (filename) {
         return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
+    case 'select.min.jsm':
+        return 'AngularJS ui-select';
     case 'select2.min.css':
         return 'Select2 CSS';
     case 'select2.full.min.jsm':
@@ -388,6 +390,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.3.3';
     } else if (type.includes('/angular-ui-router/1.')) {
         version = '1.0.25';
+    } else if (type.includes('/angular-ui-select/0.')) {
+        version = '0.20.0';
     } else if (type.includes('/angucomplete-alt/3.')) {
         version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {

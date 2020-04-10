@@ -55,6 +55,11 @@ var resources = {
         'path': 'resources/angularjs-slider/{version}/rzslider.min.jsm',
         'type': 'application/javascript'
     },
+    // AngularJS ui-select
+    'angularJsUiSelect': {
+        'path': 'resources/angular-ui-select/{version}/select.min.jsm',
+        'type': 'application/javascript'
+    },
     // AngularUI Bootstrap
     'angularUiBootstrap': {
         'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',

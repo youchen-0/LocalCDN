@@ -47,6 +47,9 @@ var files = {
         // Angular UI Router
         'resources/angular-ui-router/1.0.25/angular-ui-router.min.jsm': true,
 
+        // AngularJS ui-select
+        'resources/angular-ui-select/0.20.0/select.min.jsm': true,
+
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,
