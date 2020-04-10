@@ -308,8 +308,6 @@ var resources = {
         'type': 'application/javascript'
     },
     // Twitter Bootstrap CSS
-    // cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
-    // Please do not change it.
     'twitterBootstrapCSS': {
         'path': 'resources/twitter-bootstrap/{version}/css/bootstrap.min.css',
         'type': 'text/css'
