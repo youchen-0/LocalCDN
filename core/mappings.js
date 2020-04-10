@@ -105,6 +105,8 @@ var mappings = {
             'oclazyload/{version}/ocLazyLoad.': resources.ocLazyLoad,
             'page.js/{version}/page.min.': resources.pageJs,
             'plyr/{version}/plyr.css': resources.plyrCSS,
+            'raven.js/{version}/raven.min.js': resources.ravenJS,
+            'raven.js/{version}/plugins/angular.min.js': resources.ravenPluginAngularJS,
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,

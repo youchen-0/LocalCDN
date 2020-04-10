@@ -245,6 +245,15 @@ var resources = {
         'path': 'resources/prototype/{version}/prototype.jsm',
         'type': 'application/javascript'
     },
+    // Raven.js
+    'ravenJS': {
+        'path': 'resources/raven/{version}/raven.min.jsm',
+        'type': 'application/javascript'
+    },
+    'ravenPluginAngularJS': {
+        'path': 'resources/raven.js/{version}/plugins/angular.min.jsm',
+        'type': 'application/javascript'
+    },
     // rickshaw
     'rickshawJS': {
         'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',

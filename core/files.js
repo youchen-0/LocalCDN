@@ -171,6 +171,10 @@ var files = {
         // page.js
         'resources/page.js/1.7.1/page.min.jsm': true,
 
+        // Raven.js
+        'resources/raven.js/3.26.2/raven.min.jsm': true,
+        'resources/raven.js/3.26.2/plugins/angular.min.jsm': true,
+
         // rickshaw
         'resources/rickshaw/1.6.6/rickshaw.min.jsm': true,
         'resources/rickshaw/1.6.6/rickshaw.min.css': true,

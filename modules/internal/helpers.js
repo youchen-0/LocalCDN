@@ -297,6 +297,8 @@ helpers.determineResourceName = function (filename) {
         return 'plyr CSS';
     case 'prototype.jsm':
         return 'Prototype';
+    case 'raven.min.jsm':
+        return 'Raven.js';
     case 'rocket-loader.min.jsm':
         return 'Rocket Loader';
     case 'rickshaw.min.jsm':
@@ -490,6 +492,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.5.10';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
+    } else if (type.includes('/raven.js/3.')) {
+        version = '3.26.2';
     } else if (type.includes('/rickshaw/1.')) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
