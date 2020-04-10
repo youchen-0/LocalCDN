@@ -287,6 +287,8 @@ helpers.determineResourceName = function (filename) {
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
+    case 'ocLazyLoad.min.jsm':
+        return 'ocLazyLoad';
     case 'p2p-media-loader-core.min.jsm':
         return 'P2P Media Loader Core';
     case 'page.min.jsm':
@@ -478,6 +480,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.24.0';
     } else if (type.includes('/mootools/1.')) {
         version = '1.6.0';
+    } else if (type.includes('/oclazyload/1.')) {
+        version = '1.1.0';
     } else if (type.includes('p2p-media-loader-core')) {
         version = '0.6.2';
     } else if (type.includes('/page.js/1.')) {

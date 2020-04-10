@@ -102,6 +102,7 @@ var mappings = {
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,
+            'oclazyload/{version}/ocLazyLoad.': resources.ocLazyLoad,
             'page.js/{version}/page.min.': resources.pageJs,
             'plyr/{version}/plyr.css': resources.plyrCSS,
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,

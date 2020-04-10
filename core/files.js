@@ -154,6 +154,9 @@ var files = {
         // MooTools
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
 
+        // ocLazyLoad
+        'resources/oclazyload/1.1.0/ocLazyLoad.min.jsm': true,
+
         // P2P Media Loader Core
         'resources/p2p-media-loader-core/0.6.2/p2p-media-loader-core.min.jsm': true,
 
