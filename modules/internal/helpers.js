@@ -215,6 +215,8 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS';
     case 'angular-animate.min.jsm':
         return 'AngularJS Animate';
+    case 'rzslider.min.jsm':
+        return 'AngularJS slider';
     case 'angular-cookies.min.jsm':
         return 'AngularJS Cookies';
     case 'angular-sanitize.min.jsm':
@@ -376,6 +378,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
         version = '1.7.9';
+    } else if (type.includes('/angularjs-slider/6.')) {
+        version = '6.7.0';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
         version = '1.3.3';
     } else if (type.includes('/animate.css/3.')) {

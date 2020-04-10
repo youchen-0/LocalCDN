@@ -35,6 +35,9 @@ var files = {
         'resources/angularjs/1.7.9/angular-cookies.min.jsm': true,
         'resources/angularjs/1.7.9/angular-touch.min.jsm': true,
 
+        // AngularJS Slider
+        'resources/angularjs-slider/6.7.0/rzslider.min.jsm': true,
+
         // Animate CSS
         'resources/animate.css/3.7.2/animate.min.css': true,
 
