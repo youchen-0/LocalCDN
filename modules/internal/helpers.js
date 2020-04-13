@@ -269,6 +269,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery UI';
     case 'jquery.blockUI.min.jsm':
         return 'jQuery Block UI';
+    case 'jquery.lazyload.min.jsm':
+        return 'jQuery Lazy Load';
     case 'jquery-migrate.min.jsm':
         return 'jQuery Migrate';
     case 'jquery.validate.min.jsm':
@@ -464,6 +466,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.11.4';
     } else if (type.includes('/jquery.blockUI/2.')) {
         version = '2.70';
+    } else if (type.includes('/jquery.lazyload/1.')) {
+        version = '1.9.1';
     } else if (type.includes('/jquery-migrate/1.')) {
         version = '1.4.1';
     } else if (type.includes('/jquery-migrate/3.')) {

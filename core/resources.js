@@ -174,6 +174,11 @@ var resources = {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Lazy Load
+    'jQueryLazyLoad': {
+        'path': 'resources/jquery.lazyload/{version}/jquery.lazyload.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Migrate
     'jQueryMigrate': {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',

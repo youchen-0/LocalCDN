@@ -121,6 +121,9 @@ var files = {
         // jQuery BlockUI
         'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,
 
+        // jQuery Lazy Load
+        'resources/jquery.lazyload/1.9.1/jquery.lazyload.min.jsm': true,
+
         // jQuery Migrate
         'resources/jquery-migrate/1.4.1/jquery-migrate.min.jsm': true,
         'resources/jquery-migrate/3.1.0/jquery-migrate.min.jsm': true,
