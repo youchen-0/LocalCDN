@@ -221,6 +221,8 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS slider';
     case 'angular-cookies.min.jsm':
         return 'AngularJS Cookies';
+    case 'angular-resource.min.jsm':
+        return 'AngularJS Resource';
     case 'angular-sanitize.min.jsm':
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':

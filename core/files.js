@@ -33,6 +33,7 @@ var files = {
         'resources/angularjs/1.7.9/angular-animated.min.jsm': true,
         'resources/angularjs/1.7.9/angular-sanitize.min.jsm': true,
         'resources/angularjs/1.7.9/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.9/angular-resource.min.jsm': true,
         'resources/angularjs/1.7.9/angular-touch.min.jsm': true,
 
         // AngularJS Slider

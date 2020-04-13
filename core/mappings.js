@@ -28,6 +28,7 @@ var mappings = {
             'angularjs/{version}/angular-animate.': resources.angularAnimate,
             'angularjs/{version}/angular-sanitize.': resources.angularSanitize,
             'angularjs/{version}/angular-cookies.': resources.angularCookies,
+            'angularjs/{version}/angular-resource.': resources.angularResource,
             'angularjs/{version}/angular-touch.': resources.angularTouch,
             'dojo/{version}/dojo/dojo.': resources.dojo,
             'ext-core/{version}/ext-core.': resources.extCore,

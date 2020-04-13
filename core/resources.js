@@ -46,6 +46,10 @@ var resources = {
         'path': 'resources/angularjs/{version}/angular-cookies.min.jsm',
         'type': 'application/javascript'
     },
+    'angularResource': {
+        'path': 'resources/angularjs/{version}/angular-resource.min.jsm',
+        'type': 'application/javascript'
+    },
     'angularTouch': {
         'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
         'type': 'application/javascript'
