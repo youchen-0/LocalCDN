@@ -22,15 +22,37 @@ var files = {
     // Files [Stable]
     [Environment.STABLE]: {
 
+        // AlgoliaSearch
+        'resources/algoliasearch/3.35.1/algoliasearch.min.jsm': true,
+
+        // Angular Bootstrap
+        'resources/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.jsm': true,
+
         // AngularJS
         'resources/angularjs/1.7.9/angular.min.jsm': true,
         'resources/angularjs/1.7.9/angular-animated.min.jsm': true,
         'resources/angularjs/1.7.9/angular-sanitize.min.jsm': true,
         'resources/angularjs/1.7.9/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.7.9/angular-resource.min.jsm': true,
         'resources/angularjs/1.7.9/angular-touch.min.jsm': true,
+
+        'resources/angularjs/1.6.1/angular.min.jsm': true,
+        'resources/angularjs/1.6.1/angular-resource.min.jsm': true,
+
+        // AngularJS Slider
+        'resources/angularjs-slider/6.7.0/rzslider.min.jsm': true,
 
         // Animate CSS
         'resources/animate.css/3.7.2/animate.min.css': true,
+
+        // AnguComplete
+        'resources/angucomplete-alt/3.0.0/angucomplete-alt.min.jsm': true,
+
+        // Angular UI Router
+        'resources/angular-ui-router/1.0.25/angular-ui-router.min.jsm': true,
+
+        // AngularJS ui-select
+        'resources/angular-ui-select/0.20.0/select.min.jsm': true,
 
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
@@ -47,6 +69,9 @@ var files = {
         // bootstrap-slider
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.jsm': true,
+
+        // Bootstrap Daterangepicker
+        'resources/bootstrap-daterangepicker/2.1.27/daterangepicker.min.jsm': true,
 
         // clipboard.js
         'resources/clipboard.js/2.0.6/clipboard.min.jsm': true,
@@ -99,12 +124,19 @@ var files = {
         // jQuery BlockUI
         'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,
 
+        // jQuery Lazy Load
+        'resources/jquery.lazyload/1.9.1/jquery.lazyload.min.jsm': true,
+
         // jQuery Migrate
         'resources/jquery-migrate/1.4.1/jquery-migrate.min.jsm': true,
         'resources/jquery-migrate/3.1.0/jquery-migrate.min.jsm': true,
 
         // jQuery UI
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
+        'resources/jqueryui/1.8.18/jquery-ui.min.jsm': true,
+
+        // jQuery UI Themes
+        'resources/jqueryui/1.8.18/themes/base/minified/jquery-ui.min.css': true,
 
         // jQuery Validation Plugin
         'resources/jquery-validate/1.19.1/jquery.validate.min.jsm': true,
@@ -118,6 +150,9 @@ var files = {
         // lazysizes
         'resources/lazysizes/4.1.8/lazysizes.min.jsm': true,
 
+        // lodash
+        'resources/lodash.js/4.17.10/lodash.min.jsm': true,
+
         // lozad.js
         'resources/lozad.js/1.14.0/lozad.min.jsm': true,
 
@@ -130,12 +165,13 @@ var files = {
         // MooTools
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
 
+        // ocLazyLoad
+        'resources/oclazyload/1.1.0/ocLazyLoad.min.jsm': true,
+
         // P2P Media Loader Core
         'resources/p2p-media-loader-core/0.6.2/p2p-media-loader-core.min.jsm': true,
 
         // plyr CSS
-        // CSS cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
-        // Please do not change it.
         'resources/plyr/3.5.10/plyr.min.css': true,
 
         // Prototype
@@ -143,6 +179,10 @@ var files = {
 
         // page.js
         'resources/page.js/1.7.1/page.min.jsm': true,
+
+        // Raven.js
+        'resources/raven.js/3.26.2/raven.min.jsm': true,
+        'resources/raven.js/3.26.2/plugins/angular.min.jsm': true,
 
         // rickshaw
         'resources/rickshaw/1.6.6/rickshaw.min.jsm': true,
@@ -153,6 +193,9 @@ var files = {
 
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
+
+        // Socket.IO
+        'resources/socket.io/2.3.0/socket.io.jsm': true,
 
         // Select2
         'resources/select2/4.0.12/select2.full.min.jsm': true,
@@ -172,8 +215,6 @@ var files = {
         'resources/toastr.js/2.1.4/toastr.min.jsm': true,
 
         // Twitter Bootstrap
-        // CSS cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
-        // Please do not change it.
         'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': true,
         'resources/twitter-bootstrap/3.4.1/css/bootstrap.min.css': true,
 

@@ -209,16 +209,26 @@ helpers.determineResourceName = function (filename) {
 
     switch (filename) {
 
+    case 'algoliasearch.min.jsm':
+        return 'AlgoliaSearch';
+    case 'angucomplete-alt.min.jsm':
+        return 'AngulComplete';
     case 'angular.min.jsm':
         return 'AngularJS';
     case 'angular-animate.min.jsm':
         return 'AngularJS Animate';
+    case 'rzslider.min.jsm':
+        return 'AngularJS slider';
     case 'angular-cookies.min.jsm':
         return 'AngularJS Cookies';
+    case 'angular-resource.min.jsm':
+        return 'AngularJS Resource';
     case 'angular-sanitize.min.jsm':
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
+    case 'angular-ui-router.min.jsm':
+        return 'Angular UI Router';
     case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
@@ -229,6 +239,8 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap CSS';
     case 'bootstrap.min.jsm':
         return 'Bootstrap JS';
+    case 'daterangepicker.min.jsm':
+        return 'Bootstrap Datepicker';
     case 'bootstrap-slider.min.jsm':
         return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.css':
@@ -255,8 +267,12 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
+    case 'jquery-ui.min.css':
+        return 'jQuery UI Themes';
     case 'jquery.blockUI.min.jsm':
         return 'jQuery Block UI';
+    case 'jquery.lazyload.min.jsm':
+        return 'jQuery Lazy Load';
     case 'jquery-migrate.min.jsm':
         return 'jQuery Migrate';
     case 'jquery.validate.min.jsm':
@@ -267,6 +283,8 @@ helpers.determineResourceName = function (filename) {
         return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
         return 'lazysizes';
+    case 'lodash.min.jsm':
+        return 'Lodash';
     case 'lozad.min.jsm':
         return 'lozad.js';
     case 'modernizr.min.jsm':
@@ -275,6 +293,8 @@ helpers.determineResourceName = function (filename) {
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
+    case 'ocLazyLoad.min.jsm':
+        return 'ocLazyLoad';
     case 'p2p-media-loader-core.min.jsm':
         return 'P2P Media Loader Core';
     case 'page.min.jsm':
@@ -283,6 +303,8 @@ helpers.determineResourceName = function (filename) {
         return 'plyr CSS';
     case 'prototype.jsm':
         return 'Prototype';
+    case 'raven.min.jsm':
+        return 'Raven.js';
     case 'rocket-loader.min.jsm':
         return 'Rocket Loader';
     case 'rickshaw.min.jsm':
@@ -291,10 +313,14 @@ helpers.determineResourceName = function (filename) {
         return 'rickshaw CSS';
     case 'scriptaculous.jsm':
         return 'Scriptaculous';
+    case 'select.min.jsm':
+        return 'AngularJS ui-select';
     case 'select2.min.css':
         return 'Select2 CSS';
     case 'select2.full.min.jsm':
         return 'Select2 JS';
+    case 'socket.io.jsm':
+        return 'Socket.IO';
     case 'spin.min.jsm':
         return 'spin.js';
     case 'store.legacy.min.jsm':
@@ -305,6 +331,8 @@ helpers.determineResourceName = function (filename) {
         return 'toastr.js';
     case 'toastr.min.jsm':
         return 'toastr.js';
+    case 'ui-bootstrap-tpls.min.jsm':
+        return 'Angular UI Bootstrap';
     case 'underscore-min.jsm':
         return 'Underscore.js';
     case 'webfont.jsm':
@@ -368,8 +396,21 @@ helpers.setLastVersion = function (type, version) {
     if(version !== null && version !== undefined) {
         requestVersion = version.toString();
     }
-    if (type.includes('/angularjs/1.')) {
-        version = '1.7.9';
+    if (type.includes('/algoliasearch/3.')) {
+        version = '3.35.1';
+    } else if (type.includes('/angularjs/1.')) {
+        if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // < v1.6.1
+        else version = '1.7.9';
+    } else if (type.includes('/angularjs-slider/6.')) {
+        version = '6.7.0';
+    } else if (type.includes('/angular-ui-bootstrap/1.')) {
+        version = '1.3.3';
+    } else if (type.includes('/angular-ui-router/1.')) {
+        version = '1.0.25';
+    } else if (type.includes('/angular-ui-select/0.')) {
+        version = '0.20.0';
+    } else if (type.includes('/angucomplete-alt/3.')) {
+        version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {
         version = '3.7.2';
     } else if (type.includes('/backbone.js/0.')) {
@@ -384,6 +425,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.3.7';
     } else if (type.includes('/bootstrap.css/4.')) {
         version = '4.4.1';
+    } else if (type.includes('/bootstrap-daterangepicker/2.')) {
+        version = '2.1.27';
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
     } else if (type.includes('/clipboard.js/2.')) {
@@ -423,9 +466,12 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery/3.')) {
         version = '3.4.1';
     } else if (type.includes('/jqueryui/1.')) {
-        version = '1.11.4';
+        if (helpers.compareVersion('1.8.19', requestVersion)) version = '1.8.18'; // <= v1.8.18
+        else version = '1.11.4';
     } else if (type.includes('/jquery.blockUI/2.')) {
         version = '2.70';
+    } else if (type.includes('/jquery.lazyload/1.')) {
+        version = '1.9.1';
     } else if (type.includes('/jquery-migrate/1.')) {
         version = '1.4.1';
     } else if (type.includes('/jquery-migrate/3.')) {
@@ -438,6 +484,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
         version = '4.1.8';
+    } else if (type.includes('/lodash.js/4.')) {
+        version = '4.17.10';
     } else if (type.includes('lozad')) {
         version = '1.14.0';
     } else if (type.includes('/modernizr/2.')) {
@@ -446,6 +494,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.24.0';
     } else if (type.includes('/mootools/1.')) {
         version = '1.6.0';
+    } else if (type.includes('/oclazyload/1.')) {
+        version = '1.1.0';
     } else if (type.includes('p2p-media-loader-core')) {
         version = '0.6.2';
     } else if (type.includes('/page.js/1.')) {
@@ -454,12 +504,16 @@ helpers.setLastVersion = function (type, version) {
         version = '3.5.10';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
+    } else if (type.includes('/raven.js/3.')) {
+        version = '3.26.2';
     } else if (type.includes('/rickshaw/1.')) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
         version = '1.9.0';
     } else if (type.includes('/select2/4.')) {
         version = '4.0.12';
+    } else if (type.includes('/socket.io/2.')) {
+        version = '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
         version = '2.3.2';
     } else if (type.includes('/store.js/2.')) {

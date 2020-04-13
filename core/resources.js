@@ -19,6 +19,16 @@
 
 var resources = {
 
+    // AlgoliaSearch
+    'algoliaSearch': {
+        'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
+        'type': 'application/javascript'
+    },
+    // AnguComplete
+    'anguComplete': {
+        'path': 'resources/angucomplete-alt/{version}/angucomplete-alt.min.jsm',
+        'type': 'application/javascript'
+    },
     // AngularJS
     'angular': {
         'path': 'resources/angularjs/{version}/angular.min.jsm',
@@ -36,8 +46,32 @@ var resources = {
         'path': 'resources/angularjs/{version}/angular-cookies.min.jsm',
         'type': 'application/javascript'
     },
+    'angularResource': {
+        'path': 'resources/angularjs/{version}/angular-resource.min.jsm',
+        'type': 'application/javascript'
+    },
     'angularTouch': {
         'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
+        'type': 'application/javascript'
+    },
+    // AngularJS slider
+    'angularJSslider': {
+        'path': 'resources/angularjs-slider/{version}/rzslider.min.jsm',
+        'type': 'application/javascript'
+    },
+    // AngularJS ui-select
+    'angularJsUiSelect': {
+        'path': 'resources/angular-ui-select/{version}/select.min.jsm',
+        'type': 'application/javascript'
+    },
+    // AngularUI Bootstrap
+    'angularUiBootstrap': {
+        'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',
+        'type': 'application/javascript'
+    },
+    // AngularUI Router
+    'angularUiRouter': {
+        'path': 'resources/angular-ui-router/{version}/angular-ui-router.min.jsm',
         'type': 'application/javascript'
     },
     // Animate CSS
@@ -59,6 +93,11 @@ var resources = {
     'bootstrapCSS': {
         'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
         'type': 'text/css'
+    },
+    // Bootstrap Datepicker
+    'bootstrapDaterangepicker': {
+        'path': 'resources/bootstrap-daterangepicker/{version}/daterangepicker.min.jsm',
+        'type': 'application/javascript'
     },
     // bootstrap-slider (Slider for Bootstrap 3)
     'bootstrapSliderCSS': {
@@ -135,6 +174,11 @@ var resources = {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Lazy Load
+    'jQueryLazyLoad': {
+        'path': 'resources/jquery.lazyload/{version}/jquery.lazyload.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Migrate
     'jQueryMigrate': {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
@@ -144,6 +188,11 @@ var resources = {
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
+    },
+    // jQuery UI Themes
+    'jQueryUiThemes': {
+        'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
+        'type': 'text/css'
     },
     // jQuery Validation Plugin
     'jqueryValidationPlugin': {
@@ -158,6 +207,11 @@ var resources = {
     // lazysizes
     'lazysizes': {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Lodash
+    'lodashJS': {
+        'path': 'resources/lodash.js/{version}/lodash.min.jsm',
         'type': 'application/javascript'
     },
     // lozad.js
@@ -180,6 +234,11 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
+    // ocLazyLoad
+    'ocLazyLoad': {
+        'path': 'resources/oclazyload/{version}/ocLazyLoad.min.jsm',
+        'type': 'application/javascript'
+    },
     // P2P Media Loader Core
     'p2pMediaLoaderCore': {
         'path': 'resources/p2p-media-loader-core/{version}/p2p-media-loader-core.min.jsm',
@@ -198,6 +257,15 @@ var resources = {
     // Prototype
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.jsm',
+        'type': 'application/javascript'
+    },
+    // Raven.js
+    'ravenJS': {
+        'path': 'resources/raven/{version}/raven.min.jsm',
+        'type': 'application/javascript'
+    },
+    'ravenPluginAngularJS': {
+        'path': 'resources/raven.js/{version}/plugins/angular.min.jsm',
         'type': 'application/javascript'
     },
     // rickshaw
@@ -228,6 +296,11 @@ var resources = {
         'path': 'resources/select2/{version}/select2.full.min.jsm',
         'type': 'application/javascript'
     },
+    // socket.io
+    'socketIO': {
+        'path': 'resources/socket.io/{version}/socket.io.jsm',
+        'type': 'application/javascript'
+    },
     // spin.js
     'spinJS': {
         'path': 'resources/spin.js/{version}/spin.min.jsm',
@@ -249,8 +322,6 @@ var resources = {
         'type': 'application/javascript'
     },
     // Twitter Bootstrap CSS
-    // cannot be loaded with the file extension .cssm (as shown on www.bitchute.com)
-    // Please do not change it.
     'twitterBootstrapCSS': {
         'path': 'resources/twitter-bootstrap/{version}/css/bootstrap.min.css',
         'type': 'text/css'

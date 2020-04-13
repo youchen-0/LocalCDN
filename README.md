@@ -64,6 +64,12 @@ Please read this [developer guide](https://developer.mozilla.org/en-US/Add-ons/W
 
 > **Important:** All tagged commits are signed with GPG. It's likely best to ignore unsigned commits, unless you really know what you're doing. Please send an email if you have any questions or security concerns.
 
+## Donations
+
+LocalCDN is free, open-source and based on Decentraleyes. If you like LocalCDN and/or Decentraleyes you can support continued development by making a donation. Any help would be greatly appreciated!
+* [Donate to LocalCDN](https://localcdn.de/donate/)
+* [Donate to Decentraleyes](https://decentraleyes.org/donate)
+
 ## License
 
 [MPL-2.0](https://www.mozilla.org/MPL/2.0).
