@@ -267,6 +267,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
+    case 'jquery-ui.min.css':
+        return 'jQuery UI Themes';
     case 'jquery.blockUI.min.jsm':
         return 'jQuery Block UI';
     case 'jquery.lazyload.min.jsm':
@@ -464,7 +466,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery/3.')) {
         version = '3.4.1';
     } else if (type.includes('/jqueryui/1.')) {
-        version = '1.11.4';
+        if (helpers.compareVersion('1.8.19', requestVersion)) version = '1.8.18'; // <= v1.8.18
+        else version = '1.11.4';
     } else if (type.includes('/jquery.blockUI/2.')) {
         version = '2.70';
     } else if (type.includes('/jquery.lazyload/1.')) {

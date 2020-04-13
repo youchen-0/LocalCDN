@@ -36,6 +36,7 @@ var mappings = {
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'jqueryui/{version}/themes/base/minified/jquery-ui.min.css': resources.jQueryUiThemes,
             'mootools/{version}/mootools-yui-compressed.': resources.mootools,
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,

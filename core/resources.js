@@ -189,6 +189,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery UI Themes
+    'jQueryUiThemes': {
+        'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
+        'type': 'text/css'
+    },
     // jQuery Validation Plugin
     'jqueryValidationPlugin': {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',

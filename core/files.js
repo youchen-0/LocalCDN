@@ -133,6 +133,10 @@ var files = {
 
         // jQuery UI
         'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
+        'resources/jqueryui/1.8.18/jquery-ui.min.jsm': true,
+
+        // jQuery UI Themes
+        'resources/jqueryui/1.8.18/themes/base/minified/jquery-ui.min.css': true,
 
         // jQuery Validation Plugin
         'resources/jquery-validate/1.19.1/jquery.validate.min.jsm': true,
