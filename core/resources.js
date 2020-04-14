@@ -24,6 +24,12 @@ var resources = {
         'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
         'type': 'application/javascript'
     },
+    // TEMPORARY SOLUTION
+    // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+    'algoliasearchSearchlightHelper': {
+        'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+        'type': 'application/javascript'
+    },
     // AnguComplete
     'anguComplete': {
         'path': 'resources/angucomplete-alt/{version}/angucomplete-alt.min.jsm',

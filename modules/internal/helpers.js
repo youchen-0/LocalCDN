@@ -345,6 +345,8 @@ helpers.determineResourceName = function (filename) {
         return 'WOW';
     case 'jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm':
         return 'jsDelivr combined';
+    case 'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm':
+        return 'jsDelivr combined';
     default:
         return 'Unknown';
     }

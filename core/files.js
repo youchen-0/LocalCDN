@@ -25,6 +25,10 @@ var files = {
         // AlgoliaSearch
         'resources/algoliasearch/3.35.1/algoliasearch.min.jsm': true,
 
+        // TEMPORARY SOLUTION
+        // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+        'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm': true,
+
         // Angular Bootstrap
         'resources/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.jsm': true,
 

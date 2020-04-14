@@ -214,6 +214,10 @@ var mappings = {
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,
             'webfontloader/{version}/webfont': resources.webfont
+        },
+        // TEMPORARY SOLUTION
+        '/g/': {
+            'algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2': resources.algoliasearchSearchlightHelper
         }
     },
     // Yandex CDN
