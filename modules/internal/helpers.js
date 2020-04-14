@@ -3,8 +3,11 @@
  * Belongs to Decentraleyes/LocalCDN.
  *
  * @author      Thomas Rientjes
- * @author      nobody42
  * @since       2017-10-26
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public

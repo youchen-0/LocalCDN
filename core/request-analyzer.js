@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2016-04-11
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
