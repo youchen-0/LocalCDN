@@ -200,6 +200,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
         'type': 'text/css'
     },
+    // jQuery URLive
+    'jqueryURLive': {
+        'path': 'resources/urlive/{version}/jquery.urlive.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Validation Plugin
     'jqueryValidationPlugin': {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
@@ -350,6 +355,11 @@ var resources = {
     // Vue.js
     'vueJs': {
         'path': 'resources/vue/{version}/vue.min.jsm',
+        'type': 'application/javascript'
+    },
+    // WebComponents.js
+    'webcomponentsJS': {
+        'path': 'resources/webcomponentsjs/{version}/webcomponents-loader.jsm',
         'type': 'application/javascript'
     },
     // Web Font Loader

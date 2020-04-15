@@ -152,6 +152,9 @@ var files = {
         // jQuery jeditable
         'resources/jquery-jeditable/1.8.0/jquery.jeditable.min.jsm': true,
 
+        // jQuery URLive
+        'resources/urlive/latest/jquery.urlive.min.jsm': true,
+
         // JavaScript Cookie
         'resources/js-cookie/2.2.1/js.cookie.min.jsm': true,
 
@@ -232,6 +235,9 @@ var files = {
         // Vue.js
         'resources/vue/1.0.28/vue.min.jsm': true,
         'resources/vue/2.6.11/vue.min.jsm': true,
+
+        // WebComponents.js
+        'resources/webcomponentsjs/latest/webcomponents-loader.jsm': true,
 
         // Web Font Loader
         'resources/webfont/1.6.28/webfont.jsm': true,

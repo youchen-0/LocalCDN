@@ -198,6 +198,8 @@ var mappings = {
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
             'underscore@{version}/underscore.': resources.underscore,
             'underscore@{version}/underscore-min.': resources.underscore,
+            'urlize.js/urlize.js': resources.jqueryURLive,
+            '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfont
         },
         // Deprecated (?)

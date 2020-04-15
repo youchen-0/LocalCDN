@@ -282,6 +282,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery jeditable';
     case 'jquery.jeditable.min.jsm':
         return 'jQuery Validation Plugin';
+    case 'jquery.urlive.min.jsm':
+        return 'jQuery URLive';
     case 'js.cookie.min.jsm':
         return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
@@ -350,6 +352,8 @@ helpers.determineResourceName = function (filename) {
         return 'jsDelivr combined';
     case 'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm':
         return 'jsDelivr combined';
+    case 'webcomponents-loader.jsm':
+        return 'WebComponents Loader JS';
     default:
         return 'Unknown';
     }
