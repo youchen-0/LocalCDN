@@ -130,6 +130,7 @@ var mappings = {
             'twitter-bootstrap/{version}/css/bootstrap.': resources.twitterBootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
+            'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
             'webfont/{version}/webfont.js': resources.webfont,
             'webfont/{version}/webfontloader.js': resources.webfont,
@@ -198,7 +199,7 @@ var mappings = {
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
             'underscore@{version}/underscore.': resources.underscore,
             'underscore@{version}/underscore-min.': resources.underscore,
-            'urlize.js/urlize.js': resources.jqueryURLive,
+            'urlize.js/urlize.js': resources.urlize,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfont
         },

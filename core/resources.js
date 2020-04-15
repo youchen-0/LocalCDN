@@ -352,6 +352,11 @@ var resources = {
         'path': 'resources/underscore.js/{version}/underscore-min.jsm',
         'type': 'application/javascript'
     },
+    // urlize
+    'urlize': {
+        'path': 'resources/urlize/{version}/urlize.jsm',
+        'type': 'application/javascript'
+    },
     // Vue.js
     'vueJs': {
         'path': 'resources/vue/{version}/vue.min.jsm',

@@ -346,6 +346,8 @@ helpers.determineResourceName = function (filename) {
         return 'WebRTC adapter';
     case 'vue.jsm':
         return 'Vue.js';
+    case 'urlize.jsm':
+        return 'urlize';
     case 'wow.min.jsm':
         return 'WOW';
     case 'jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm':
@@ -489,6 +491,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
         version = '1.8.0';
+    } else if (type.includes('/urlive/1.')) {
+        version = '1.1.1';
     } else if (type.includes('/js-cookie/2.')) {
         version = '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
@@ -535,6 +539,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
+    } else if (type.includes('/urlive/1.')) {
+        version = '1.1.1';
     } else if (type.includes('/vue/1.')) {
         version = '1.0.28';
     } else if (type.includes('/vue/2.')) {

@@ -153,7 +153,7 @@ var files = {
         'resources/jquery-jeditable/1.8.0/jquery.jeditable.min.jsm': true,
 
         // jQuery URLive
-        'resources/urlive/latest/jquery.urlive.min.jsm': true,
+        'resources/urlive/1.1.1/jquery.urlive.min.jsm': true,
 
         // JavaScript Cookie
         'resources/js-cookie/2.2.1/js.cookie.min.jsm': true,
@@ -231,6 +231,9 @@ var files = {
 
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,
+
+        // urlize
+        'resources/urlize/latest/urlize.jsm': true,
 
         // Vue.js
         'resources/vue/1.0.28/vue.min.jsm': true,
