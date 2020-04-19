@@ -410,7 +410,8 @@ helpers.setLastVersion = function (type, version) {
     if (type.includes('/algoliasearch/3.')) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // < v1.6.1
+        if (helpers.compareVersion('1.3.14', requestVersion)) version = '1.3.13'; // < v1.6.1
+        else if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // >= 1.7.2 to <= 1.8.3
         else version = '1.7.9';
     } else if (type.includes('/angularjs-slider/6.')) {
         version = '6.7.0';
