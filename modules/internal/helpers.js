@@ -3,8 +3,11 @@
  * Belongs to Decentraleyes/LocalCDN.
  *
  * @author      Thomas Rientjes
- * @author      nobody42
  * @since       2017-10-26
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -279,6 +282,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery jeditable';
     case 'jquery.jeditable.min.jsm':
         return 'jQuery Validation Plugin';
+    case 'jquery.urlive.min.jsm':
+        return 'jQuery URLive';
     case 'js.cookie.min.jsm':
         return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
@@ -341,10 +346,16 @@ helpers.determineResourceName = function (filename) {
         return 'WebRTC adapter';
     case 'vue.jsm':
         return 'Vue.js';
+    case 'urlize.jsm':
+        return 'urlize';
     case 'wow.min.jsm':
         return 'WOW';
     case 'jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm':
         return 'jsDelivr combined';
+    case 'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm':
+        return 'jsDelivr combined';
+    case 'webcomponents-loader.jsm':
+        return 'WebComponents Loader JS';
     default:
         return 'Unknown';
     }
@@ -399,7 +410,8 @@ helpers.setLastVersion = function (type, version) {
     if (type.includes('/algoliasearch/3.')) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // < v1.6.1
+        if (helpers.compareVersion('1.3.14', requestVersion)) version = '1.3.13'; // < v1.6.1
+        else if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // >= 1.7.2 to <= 1.8.3
         else version = '1.7.9';
     } else if (type.includes('/angularjs-slider/6.')) {
         version = '6.7.0';
@@ -480,6 +492,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
         version = '1.8.0';
+    } else if (type.includes('/urlive/1.')) {
+        version = '1.1.1';
     } else if (type.includes('/js-cookie/2.')) {
         version = '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
@@ -526,6 +540,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
         version = '1.9.1';
+    } else if (type.includes('/urlive/1.')) {
+        version = '1.1.1';
     } else if (type.includes('/vue/1.')) {
         version = '1.0.28';
     } else if (type.includes('/vue/2.')) {

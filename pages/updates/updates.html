@@ -23,6 +23,28 @@
                         New in LocalCDN:
                     </div>
                         <ul>
+                            <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/55">#55</a></li>
+                            <li>Added WebComponents.js and urlize <a href="https://gitlab.com/nobody42/localcdn/-/issues/56">#56</a></li>
+                            <li>Added jQuery URLive v1.1.1</li>
+                            <li>Added AngularJS v1.3.13 (Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/59">#59</a>)</li>
+                        </ul>
+                    <div class="topic-label">
+                        Please update your uBlock/uMatrix rules
+                    </div>
+                    <div class="ruleset-generator">
+                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                        <label for="generate-ublock-rules">uBlock</label>
+                    </div>
+                    <div class="ruleset-generator">
+                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                        <label for="generate-umatrix-rules">uMatrix</label>
+                    </div>
+                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+                    <input id="button-copy-rule-set" type="button" value="Copy">
+                    <hr/>
+                    <h2>History</h2>
+                    <p class='release-date'>2020-04-13 (v2.1.12)</p>
+                        <ul>
                             <li>Added: AlgoliaSearch v3.35.1</li>
                             <li>Added: Angular UI Bootstrap v1.3.3</li>
                             <li>Added: AngularJS Slider v6.7.0</li>
@@ -40,21 +62,6 @@
                             <li>Added: AngularJS v1.6.1 (angular.min.js and angular-resource.min.js)</li>
                             <li>Added: jQuery UI and jQuery UI Themes v1.8.18</li>
                         </ul>
-                    <div class="topic-label">
-                        Please update your uBlock/uMatrix rules
-                    </div>
-                    <div class="ruleset-generator">
-                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
-                        <label for="generate-ublock-rules">uBlock</label>
-                    </div>
-                    <div class="ruleset-generator">
-                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
-                        <label for="generate-umatrix-rules">uMatrix</label>
-                    </div>
-                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                    <input id="button-copy-rule-set" type="button" value="Copy">
-                    <hr/>
-                    <h2>History</h2>
                     <p class='release-date'>2020-04-08 (v2.1.11)</p>
                         <ul>
                             <li>Fixed <a href="https://gitlab.com/nobody42/localcdn/-/issues/28">#28</a> and <a href="https://gitlab.com/nobody42/localcdn/-/issues/44">#44</a></li>

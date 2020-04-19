@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2014-05-30
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -126,6 +130,7 @@ var mappings = {
             'twitter-bootstrap/{version}/css/bootstrap.': resources.twitterBootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
+            'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
             'webfont/{version}/webfont.js': resources.webfont,
             'webfont/{version}/webfontloader.js': resources.webfont,
@@ -194,6 +199,8 @@ var mappings = {
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
             'underscore@{version}/underscore.': resources.underscore,
             'underscore@{version}/underscore-min.': resources.underscore,
+            'urlize.js/urlize.js': resources.urlize,
+            '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfont
         },
         // Deprecated (?)
@@ -214,6 +221,10 @@ var mappings = {
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,
             'webfontloader/{version}/webfont': resources.webfont
+        },
+        // TEMPORARY SOLUTION
+        '/g/': {
+            'algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2': resources.algoliasearchSearchlightHelper
         }
     },
     // Yandex CDN

@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2014-07-24
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -25,6 +29,10 @@ var files = {
         // AlgoliaSearch
         'resources/algoliasearch/3.35.1/algoliasearch.min.jsm': true,
 
+        // TEMPORARY SOLUTION
+        // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+        'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm': true,
+
         // Angular Bootstrap
         'resources/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.jsm': true,
 
@@ -38,6 +46,8 @@ var files = {
 
         'resources/angularjs/1.6.1/angular.min.jsm': true,
         'resources/angularjs/1.6.1/angular-resource.min.jsm': true,
+
+        'resources/angularjs/1.3.13/angular.min.jsm': true,
 
         // AngularJS Slider
         'resources/angularjs-slider/6.7.0/rzslider.min.jsm': true,
@@ -144,6 +154,9 @@ var files = {
         // jQuery jeditable
         'resources/jquery-jeditable/1.8.0/jquery.jeditable.min.jsm': true,
 
+        // jQuery URLive
+        'resources/urlive/1.1.1/jquery.urlive.min.jsm': true,
+
         // JavaScript Cookie
         'resources/js-cookie/2.2.1/js.cookie.min.jsm': true,
 
@@ -221,9 +234,15 @@ var files = {
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,
 
+        // urlize
+        'resources/urlize/latest/urlize.jsm': true,
+
         // Vue.js
         'resources/vue/1.0.28/vue.min.jsm': true,
         'resources/vue/2.6.11/vue.min.jsm': true,
+
+        // WebComponents.js
+        'resources/webcomponentsjs/latest/webcomponents-loader.jsm': true,
 
         // Web Font Loader
         'resources/webfont/1.6.28/webfont.jsm': true,

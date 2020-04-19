@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2014-05-30
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -22,6 +26,12 @@ var resources = {
     // AlgoliaSearch
     'algoliaSearch': {
         'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
+        'type': 'application/javascript'
+    },
+    // TEMPORARY SOLUTION
+    // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+    'algoliasearchSearchlightHelper': {
+        'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
         'type': 'application/javascript'
     },
     // AnguComplete
@@ -194,6 +204,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
         'type': 'text/css'
     },
+    // jQuery URLive
+    'jqueryURLive': {
+        'path': 'resources/urlive/{version}/jquery.urlive.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Validation Plugin
     'jqueryValidationPlugin': {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
@@ -341,9 +356,19 @@ var resources = {
         'path': 'resources/underscore.js/{version}/underscore-min.jsm',
         'type': 'application/javascript'
     },
+    // urlize
+    'urlize': {
+        'path': 'resources/urlize/{version}/urlize.jsm',
+        'type': 'application/javascript'
+    },
     // Vue.js
     'vueJs': {
         'path': 'resources/vue/{version}/vue.min.jsm',
+        'type': 'application/javascript'
+    },
+    // WebComponents.js
+    'webcomponentsJS': {
+        'path': 'resources/webcomponentsjs/{version}/webcomponents-loader.jsm',
         'type': 'application/javascript'
     },
     // Web Font Loader

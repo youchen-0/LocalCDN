@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2016-04-11
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -89,7 +93,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
 
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath) {
 
-    let resourcePath, versionNumber, resourcePattern, filename;
+    let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
 
     chrome.storage.local.get(Setting.LOGGING, function (items) {
         requestAnalyzer.logging = items.enableLogging;
@@ -99,25 +103,10 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
     resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
 
-    /*
-        NOTE:
-        jsDelivr allows to load several files in one request
-        This is just a workaround. If there are more websites which use this, we will have to do crazy things here to find and redirect these files.
-
-        It's not possible to respond to a request with multiple redirections
-        https://gitlab.com/nobody42/localcdn/-/issues/45
-    */
-    let regexJsDelivr = RegExp(/\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/);
-    if (channelHost.includes('cdn.jsdelivr.net') && regexJsDelivr.test(channelPath)) {
-        return {
-            'source': channelHost,
-            'version': 'beta',
-            'path': 'resources/jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm',
-            'bundle': ''
-        };
+    shorthandResource = shorthands.specialFiles(channelHost, channelPath);
+    if (shorthandResource) {
+        return shorthandResource;
     }
-
-
 
     for (let resourceMold of Object.keys(resourceMappings)) {
 

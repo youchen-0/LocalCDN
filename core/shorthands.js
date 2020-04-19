@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2018-02-24
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -80,3 +84,33 @@ shorthands['sdn.geekzu.org'] = shorthands['ajax.googleapis.com'];
 
 // USTC Linux User Group [Mirror]
 shorthands['ajax.proxy.ustclug.org'] = shorthands['ajax.googleapis.com'];
+
+shorthands.specialFiles = function (channelHost, channelPath) {
+    /*
+        NOTE:
+        jsDelivr allows to load several files in one request
+        This is just a workaround. If there are more websites which use this, we will have to do crazy things here to find and redirect these files.
+
+        It's not possible to respond to a request with multiple redirections
+        https://gitlab.com/nobody42/localcdn/-/issues/45
+    */
+    let regexJsDelivr = RegExp(/\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/);
+    if (channelHost.includes('cdn.jsdelivr.net') && regexJsDelivr.test(channelPath)) {
+        return {
+            'source': channelHost,
+            'version': 'beta',
+            'path': 'resources/jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm',
+            'bundle': ''
+        };
+    } else if (channelHost.includes('cdn.jsdelivr.net') && channelPath.includes('algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2')) {
+        // https://gitlab.com/nobody42/localcdn/-/issues/55
+        return {
+            'source': channelHost,
+            'version': 'beta',
+            'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+            'bundle': ''
+        };
+    } else {
+        return false;
+    }
+};
