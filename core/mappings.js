@@ -84,6 +84,7 @@ var mappings = {
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'bootstrap-daterangepicker/{version}/daterangepicker.': resources.bootstrapDaterangepicker,
+            'bootstrap-select/{version}/css/bootstrap-select.': resources.bootstrapSelectCSS,
             'bootstrap-slider/{version}/css/bootstrap-slider.min.css': resources.bootstrapSliderCSS,
             'bootstrap-slider/{version}/css/bootstrap-slider.css': resources.bootstrapSliderCSS,
             'bootstrap-slider/{version}/bootstrap-slider.min.js': resources.bootstrapSliderJS,
