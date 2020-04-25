@@ -47,6 +47,10 @@ var files = {
         'resources/angularjs/1.6.1/angular.min.jsm': true,
         'resources/angularjs/1.6.1/angular-resource.min.jsm': true,
 
+        'resources/angularjs/1.5.11/angular.min.jsm': true,
+        'resources/angularjs/1.5.11/angular-touch.min.jsm': true,
+        'resources/angularjs/1.5.11/angular-animate.min.jsm': true,
+
         'resources/angularjs/1.3.13/angular.min.jsm': true,
 
         // AngularJS Slider
