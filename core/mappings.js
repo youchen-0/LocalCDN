@@ -28,12 +28,18 @@ var mappings = {
     // Google Hosted Libraries
     'ajax.googleapis.com': {
         '/ajax/libs/': {
-            'angularjs/{version}/angular.': resources.angular,
             'angularjs/{version}/angular-animate.': resources.angularAnimate,
-            'angularjs/{version}/angular-sanitize.': resources.angularSanitize,
+            'angularjs/{version}/angular-aria.': resources.angularAria,
             'angularjs/{version}/angular-cookies.': resources.angularCookies,
+            'angularjs/{version}/angular-loader.': resources.angularLoader,
+            'angularjs/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angularjs/{version}/angular-messages.': resources.angularMessages,
+            'angularjs/{version}/angular-parse-ext.': resources.angularParseExt,
             'angularjs/{version}/angular-resource.': resources.angularResource,
+            'angularjs/{version}/angular-route.': resources.angularRoute,
+            'angularjs/{version}/angular-sanitize.': resources.angularSanitize,
             'angularjs/{version}/angular-touch.': resources.angularTouch,
+            'angularjs/{version}/angular.': resources.angular,
             'dojo/{version}/dojo/dojo.': resources.dojo,
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,
@@ -48,7 +54,6 @@ var mappings = {
             'webfont/{version}/webfont.': resources.webfont,
             'webfont/{version}/webfontloader.js': resources.webfontloader,
             'webfont/1/webfont.js': resources.webfont
-
         }
     },
     // Microsoft Ajax CDN
@@ -78,8 +83,18 @@ var mappings = {
             'angular-ui-select/{version}/select.': resources.angularJsUiSelect,
             'angularjs-slider/{version}/rzslider.': resources.angularJSslider,
             'angular-animate/{version}/angular-animate.min.': resources.angularAnimate,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
             'angular.js/{version}/angular.': resources.angular,
-            'angular.js/{version}/angular-animate.min.': resources.angularAnimate,
             'animate.css/{version}/animate.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
@@ -231,6 +246,17 @@ var mappings = {
     // Yandex CDN
     'yastatic.net': {
         '/': {
+            'angularjs/{version}/angular-animate.': resources.angularAnimate,
+            'angularjs/{version}/angular-aria.': resources.angularAria,
+            'angularjs/{version}/angular-cookies.': resources.angularCookies,
+            'angularjs/{version}/angular-loader.': resources.angularLoader,
+            'angularjs/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angularjs/{version}/angular-messages.': resources.angularMessages,
+            'angularjs/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angularjs/{version}/angular-resource.': resources.angularResource,
+            'angularjs/{version}/angular-route.': resources.angularRoute,
+            'angularjs/{version}/angular-sanitize.': resources.angularSanitize,
+            'angularjs/{version}/angular-touch.': resources.angularTouch,
             'angularjs/{version}/angular.': resources.angular,
             'backbone/{version}/backbone.': resources.backbone,
             'backbone/{version}/backbone-min.': resources.backbone,
@@ -273,6 +299,17 @@ var mappings = {
     // Baidu CDN
     'apps.bdimg.com': {
         '/libs/': {
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
             'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
@@ -298,7 +335,18 @@ var mappings = {
     // Baidu CDN
     'libs.baidu.com': {
         '/': {
-            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
+            'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
@@ -319,7 +367,18 @@ var mappings = {
             'webfont/{version}/webfont_debug.': resources.webfont
         },
         '/libs/': {
-            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
+            'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
@@ -341,7 +400,18 @@ var mappings = {
     // Baidu CDN
     'apps.bdimg.com': {
         '/libs/': {
-            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
+            'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
@@ -363,7 +433,18 @@ var mappings = {
     // Staticfile CDN
     'cdn.staticfile.org': {
         '/': {
-            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
+            'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
@@ -384,7 +465,18 @@ var mappings = {
     // BootCDN
     'cdn.bootcss.com': {
         '/': {
-            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
+            'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
@@ -407,14 +499,36 @@ var mappings = {
     // Tencent Public Libraries
     'mat1.gtimg.com': {
         '/libs/' :{
-            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
+            'angular.js/{version}/angular.': resources.angular,
             'jquery/{version}/jquery.': resources.jQuery,
         }
     },
     // Qihoo 360 CDN
     'lib.baomitu.com': {
         '/': {
-            'angular.js/{version}/angular.min.js': resources.angularjs,
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
+            'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
@@ -471,6 +585,17 @@ var mappings = {
     // BootCDN
     'cdn.bootcss.com': {
         '/': {
+            'angular.js/{version}/angular-animate.': resources.angularAnimate,
+            'angular.js/{version}/angular-aria.': resources.angularAria,
+            'angular.js/{version}/angular-cookies.': resources.angularCookies,
+            'angular.js/{version}/angular-loader.': resources.angularLoader,
+            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
+            'angular.js/{version}/angular-messages.': resources.angularMessages,
+            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
+            'angular.js/{version}/angular-resource.': resources.angularResource,
+            'angular.js/{version}/angular-route.': resources.angularRoute,
+            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
+            'angular.js/{version}/angular-touch.': resources.angularTouch,
             'angular.js/{version}/angular.': resources.angular,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,

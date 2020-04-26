@@ -41,28 +41,52 @@ var resources = {
     },
     // AngularJS
     'angular': {
-        'path': 'resources/angularjs/{version}/angular.min.jsm',
-        'type': 'application/javascript'
+    	'path': 'resources/angularjs/{version}/angular.min.jsm',
+    	'type': 'application/javascript'
     },
     'angularAnimate': {
-        'path': 'resources/angularjs/{version}/angular-animate.min.jsm',
-        'type': 'application/javascript'
+    	'path': 'resources/angularjs/{version}/angular-animate.min.jsm',
+    	'type': 'application/javascript'
     },
-    'angularSanitize': {
-        'path': 'resources/angularjs/{version}/angular-sanitize.min.jsm',
-        'type': 'application/javascript'
+    'angularAria': {
+    	'path': 'resources/angularjs/{version}/angular-aria.min.jsm',
+    	'type': 'application/javascript'
     },
     'angularCookies': {
-        'path': 'resources/angularjs/{version}/angular-cookies.min.jsm',
-        'type': 'application/javascript'
+    	'path': 'resources/angularjs/{version}/angular-cookies.min.jsm',
+    	'type': 'application/javascript'
+    },
+    'angularLoader': {
+    	'path': 'resources/angularjs/{version}/angular-loader.min.jsm',
+    	'type': 'application/javascript'
+    },
+    'angularMessageFormat': {
+    	'path': 'resources/angularjs/{version}/angular-message-format.min.jsm',
+    	'type': 'application/javascript'
+    },
+    'angularMessages': {
+    	'path': 'resources/angularjs/{version}/angular-messages.min.jsm',
+    	'type': 'application/javascript'
+    },
+    'angularParseExt': {
+    	'path': 'resources/angularjs/{version}/angular-parse-ext.min.jsm',
+    	'type': 'application/javascript'
     },
     'angularResource': {
-        'path': 'resources/angularjs/{version}/angular-resource.min.jsm',
-        'type': 'application/javascript'
+    	'path': 'resources/angularjs/{version}/angular-resource.min.jsm',
+    	'type': 'application/javascript'
+    },
+    'angularRoute': {
+    	'path': 'resources/angularjs/{version}/angular-route.min.jsm',
+    	'type': 'application/javascript'
+    },
+    'angularSanitize': {
+    	'path': 'resources/angularjs/{version}/angular-sanitize.min.jsm',
+    	'type': 'application/javascript'
     },
     'angularTouch': {
-        'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
-        'type': 'application/javascript'
+    	'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
+    	'type': 'application/javascript'
     },
     // AngularJS slider
     'angularJSslider': {

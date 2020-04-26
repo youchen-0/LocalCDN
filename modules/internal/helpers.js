@@ -216,20 +216,32 @@ helpers.determineResourceName = function (filename) {
         return 'AlgoliaSearch';
     case 'angucomplete-alt.min.jsm':
         return 'AngulComplete';
-    case 'angular.min.jsm':
-        return 'AngularJS';
-    case 'angular-animate.min.jsm':
-        return 'AngularJS Animate';
     case 'rzslider.min.jsm':
         return 'AngularJS slider';
+    case 'angular-animate.min.jsm':
+        return 'AngularJS Animate';
+    case 'angular-aria.min.jsm':
+        return 'AngularJS Aria';
     case 'angular-cookies.min.jsm':
         return 'AngularJS Cookies';
+    case 'angular-loader.min.jsm':
+        return 'AngularJS Loader';
+    case 'angular-message-format.min.jsm':
+        return 'AngularJS Message Format';
+    case 'angular-messages.min.jsm':
+        return 'AngularJS Messages';
+    case 'angular-parse-ext.min.jsm':
+        return 'AngularJS ParseExt';
     case 'angular-resource.min.jsm':
         return 'AngularJS Resource';
+    case 'angular-route.min.jsm':
+        return 'AngularJS Route';
     case 'angular-sanitize.min.jsm':
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
+    case 'angular.min.jsm':
+        return 'AngularJS';
     case 'angular-ui-router.min.jsm':
         return 'Angular UI Router';
     case 'animate.min.css':
