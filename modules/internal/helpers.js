@@ -216,20 +216,32 @@ helpers.determineResourceName = function (filename) {
         return 'AlgoliaSearch';
     case 'angucomplete-alt.min.jsm':
         return 'AngulComplete';
-    case 'angular.min.jsm':
-        return 'AngularJS';
-    case 'angular-animate.min.jsm':
-        return 'AngularJS Animate';
     case 'rzslider.min.jsm':
         return 'AngularJS slider';
+    case 'angular-animate.min.jsm':
+        return 'AngularJS Animate';
+    case 'angular-aria.min.jsm':
+        return 'AngularJS Aria';
     case 'angular-cookies.min.jsm':
         return 'AngularJS Cookies';
+    case 'angular-loader.min.jsm':
+        return 'AngularJS Loader';
+    case 'angular-message-format.min.jsm':
+        return 'AngularJS Message Format';
+    case 'angular-messages.min.jsm':
+        return 'AngularJS Messages';
+    case 'angular-parse-ext.min.jsm':
+        return 'AngularJS ParseExt';
     case 'angular-resource.min.jsm':
         return 'AngularJS Resource';
+    case 'angular-route.min.jsm':
+        return 'AngularJS Route';
     case 'angular-sanitize.min.jsm':
         return 'AngularJS Sanitize';
     case 'angular-touch.min.jsm':
         return 'AngularJS Touch';
+    case 'angular.min.jsm':
+        return 'AngularJS';
     case 'angular-ui-router.min.jsm':
         return 'Angular UI Router';
     case 'animate.min.css':
@@ -244,6 +256,8 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap JS';
     case 'daterangepicker.min.jsm':
         return 'Bootstrap Datepicker';
+    case 'bootstrap-select.min.css':
+        return 'Bootstrap-select CSS';
     case 'bootstrap-slider.min.jsm':
         return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.css':
@@ -410,8 +424,9 @@ helpers.setLastVersion = function (type, version) {
     if (type.includes('/algoliasearch/3.')) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.3.14', requestVersion)) version = '1.3.13'; // < v1.6.1
-        else if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // >= 1.7.2 to <= 1.8.3
+        if (helpers.compareVersion('1.3.14', requestVersion)) version = '1.3.13'; // < v1.3.14
+        else if (helpers.compareVersion('1.5.12', requestVersion)) version = '1.5.11'; // >= 1.3.13 to <= 1.5.12
+        else if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // >= 1.5.13 to <= 1.6.2
         else version = '1.7.9';
     } else if (type.includes('/angularjs-slider/6.')) {
         version = '6.7.0';
@@ -441,6 +456,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.1.27';
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
+    } else if (type.includes('/bootstrap-select/1.')) {
+        version = '1.13.14';
     } else if (type.includes('/clipboard.js/2.')) {
         version = '2.0.6';
     } else if (type.includes('/d3/3.')) {
