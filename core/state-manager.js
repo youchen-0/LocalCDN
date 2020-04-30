@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2017-03-10
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -315,6 +319,30 @@ chrome.storage.local.get(Setting.SHOW_ICON_BADGE, function (items) {
     stateManager.showIconBadge = items.showIconBadge;
 });
 
+stateManager._removeCrossoriginAndIntegrityAttr = function (details) {
+
+    // by Jaap (https://gitlab.com/Jaaap)
+    let filter = chrome.webRequest.filterResponseData(details.requestId);
+    let decoder = new TextDecoder("utf-8"); //FIXME: get content-encoding from headers
+    let encoder = new TextEncoder();
+
+    filter.ondata = evt => {
+        //remove crossorigin and integrity attributes
+        //Note that this will not work if the crossorigin="anonymous" string is divided into two chunks, but we want to flush this data asap.
+        let str = decoder.decode(evt.data, {stream: true})
+            .replace(/<(link|script)[^>]+>/ig, m => m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=\s]+|)/ig, ""));
+        filter.write(encoder.encode(str));
+    }
+
+    filter.onstop = evt => {
+        let str = decoder.decode(); // end-of-stream
+        filter.write(encoder.encode(str));
+
+        filter.close();
+    }
+}
+
+
 /**
  * Event Handlers
  */
@@ -324,6 +352,7 @@ chrome.tabs.onRemoved.addListener(stateManager._removeTab);
 
 chrome.webRequest.onBeforeRequest.addListener(function (requestDetails) {
 
+    stateManager._removeCrossoriginAndIntegrityAttr(requestDetails);
     if (requestDetails.tabId !== -1 && stateManager.tabs[requestDetails.tabId]) {
 
         stateManager.tabs[requestDetails.tabId].details = {
@@ -331,7 +360,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (requestDetails) {
         };
     }
 
-}, {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]});
+}, {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]}, [WebRequest.BLOCKING]);
 
 chrome.webNavigation.onCommitted.addListener(stateManager._updateTab, {
     'url': [{'urlContains': ':'}]
