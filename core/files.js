@@ -238,6 +238,12 @@ var files = {
         'resources/raven.js/3.26.2/raven.min.jsm': true,
         'resources/raven.js/3.26.2/plugins/angular.min.jsm': true,
 
+        // React
+        'resources/react/16.13.1/umd/react.production.min.jsm': true,
+
+        // ReactDOM
+        'resources/react-dom/16.13.1/umd/react-dom.production.min.jsm': true,
+
         // rickshaw
         'resources/rickshaw/1.6.6/rickshaw.min.jsm': true,
         'resources/rickshaw/1.6.6/rickshaw.min.css': true,

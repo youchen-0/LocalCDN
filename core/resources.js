@@ -312,6 +312,16 @@ var resources = {
         'path': 'resources/raven.js/{version}/plugins/angular.min.jsm',
         'type': 'application/javascript'
     },
+    // React
+    'react': {
+        'path': 'resources/react/16.13.1/umd/react.production.min.jsm',
+        'type': 'application/javascript'
+    },
+    // ReactDOM
+    'reactDOM': {
+        'path': 'resources/react-dom/16.13.1/umd/react-dom.production.min.jsm',
+        'type': 'application/javascript'
+    },
     // rickshaw
     'rickshawJS': {
         'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',

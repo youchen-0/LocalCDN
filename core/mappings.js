@@ -132,6 +132,8 @@ var mappings = {
             'plyr/{version}/plyr.css': resources.plyrCSS,
             'raven.js/{version}/raven.min.js': resources.ravenJS,
             'raven.js/{version}/plugins/angular.min.js': resources.ravenPluginAngularJS,
+            'react/{version}/umd/react.production.min.js': resources.react,
+            'react-dom/{version}/umd/react-dom.production.min.js': resources.reactDOM,
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,

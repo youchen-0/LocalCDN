@@ -324,6 +324,10 @@ helpers.determineResourceName = function (filename) {
         return 'Prototype';
     case 'raven.min.jsm':
         return 'Raven.js';
+    case 'react.production.min.jsm':
+        return 'React';
+    case 'react-dom.production.min.jsm':
+        return 'ReactDOM';
     case 'rocket-loader.min.jsm':
         return 'Rocket Loader';
     case 'rickshaw.min.jsm':
@@ -537,6 +541,10 @@ helpers.setLastVersion = function (type, version) {
         version = '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {
         version = '3.26.2';
+    } else if (type.includes('/react/16.')) {
+        version = '16.13.1';
+    } else if (type.includes('/react-dom/16.')) {
+        version = '16.13.1';
     } else if (type.includes('/rickshaw/1.')) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
