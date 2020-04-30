@@ -75,7 +75,8 @@ const Setting = {
 const WebRequest = {
     'GET': 'GET',
     'BLOCKING': 'blocking',
-    'HEADERS': 'requestHeaders'
+    'HEADERS': 'requestHeaders',
+    'RESPONSE_HEADERS': 'responseHeaders'
 };
 
 const WebRequestType = {
