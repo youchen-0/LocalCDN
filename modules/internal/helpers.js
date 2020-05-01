@@ -282,12 +282,16 @@ helpers.determineResourceName = function (filename) {
         return 'hls.js';
     case 'jquery.min.jsm':
         return 'jQuery';
+    case 'jquery.autocomplete.min.jsm':
+        return 'jQuery Ajax AutoComplete';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
     case 'jquery-ui.min.css':
         return 'jQuery UI Themes';
     case 'jquery.blockUI.min.jsm':
         return 'jQuery Block UI';
+    case 'jquery.csv.min.jsm':
+        return 'jQuery-csv';
     case 'jquery.lazyload.min.jsm':
         return 'jQuery Lazy Load';
     case 'jquery-migrate.min.jsm':
@@ -320,6 +324,8 @@ helpers.determineResourceName = function (filename) {
         return 'page.js';
     case 'plyr.min.css':
         return 'plyr CSS';
+    case 'popper.min.jsm':
+        return 'Popper';
     case 'prototype.jsm':
         return 'Prototype';
     case 'raven.min.jsm':
@@ -498,11 +504,15 @@ helpers.setLastVersion = function (type, version) {
         version = '2.2.4';
     } else if (type.includes('/jquery/3.')) {
         version = '3.4.1';
+    } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
+        version = '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
         if (helpers.compareVersion('1.8.19', requestVersion)) version = '1.8.18'; // <= v1.8.18
         else version = '1.11.4';
     } else if (type.includes('/jquery.blockUI/2.')) {
         version = '2.70';
+    } else if (type.includes('/jquery-csv/1.')) {
+        version = '1.0.9';
     } else if (type.includes('/jquery.lazyload/1.')) {
         version = '1.9.1';
     } else if (type.includes('/jquery-migrate/1.')) {
@@ -537,6 +547,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.7.1';
     } else if (type.includes('/plyr/3.')) {
         version = '3.5.10';
+    } else if (type.includes('/popper.js/1.')) {
+        version = '1.16.1';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {

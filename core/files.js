@@ -175,6 +175,12 @@ var files = {
         // jQuery BlockUI
         'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,
 
+        // jQuery-csv
+        'resources/jquery-csv/1.0.9/jquery.csv.min.jsm': true,
+
+        // jQuery Ajax AutoComplete
+        'resources/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.jsm': true,
+
         // jQuery Lazy Load
         'resources/jquery.lazyload/1.9.1/jquery.lazyload.min.jsm': true,
 
@@ -233,6 +239,9 @@ var files = {
 
         // page.js
         'resources/page.js/1.7.1/page.min.jsm': true,
+
+        // popper.js
+        'resources/popper.js/1.16.1/popper.min.jsm': true,
 
         // Raven.js
         'resources/raven.js/3.26.2/raven.min.jsm': true,

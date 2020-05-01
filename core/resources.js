@@ -203,6 +203,11 @@ var resources = {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Ajax AutoComplete
+    'jQueryAjaxAutoComplete': {
+        'path': 'resources/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery
     'jQuery': {
         'path': 'resources/jquery/{version}/jquery.min.jsm',
@@ -211,6 +216,11 @@ var resources = {
     // jQuery BlockUI
     'jQueryBlockUI': {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
+        'type': 'application/javascript'
+    },
+    // jQuery-csv
+    'jQueryCSV': {
+        'path': 'resources/jquery-csv/1.0.9/jquery.csv.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery Lazy Load
@@ -296,6 +306,11 @@ var resources = {
     // plyr CSS
     'plyrCSS': {
         'path': 'resources/plyr/{version}/plyr.min.css',
+        'type': 'text/css'
+    },
+    // Popper
+    'popperJS': {
+        'path': 'resources/popper.js/{version}/umd/popper.min.jsm',
         'type': 'text/css'
     },
     // Prototype
