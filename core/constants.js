@@ -90,5 +90,6 @@ const Whitelist = {
 };
 
 const BrowserType = {
-    'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension")
+    'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension"),
+    'FIREFOX': chrome.runtime.getURL("/").startsWith("moz-extension")
 }

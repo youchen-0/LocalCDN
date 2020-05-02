@@ -281,53 +281,6 @@ stateManager._setIconDisabled = function (tabIdentifier) {
     });
 };
 
-stateManager._getContentType = function (headers) {
-
-    // by Jaap (https://gitlab.com/Jaaap)
-    for (let header of headers) {
-        if (header.name.toLowerCase() === "content-type") { //"text/html; charset=UTF-8"
-            return {
-                mimeType: header.value.replace(/;.*/, '').toLowerCase(),
-                charset: /charset\s*=/.test(header.value) ? header.value.replace(/^.*?charset\s*=\s*/, '') : 'UTF-8'
-            };
-        }
-    }
-    return { mimeType: '', charset: '' };
-};
-
-stateManager._removeCrossoriginAndIntegrityAttr = function (details) {
-
-    // by Jaap (https://gitlab.com/Jaaap)
-    let { mimeType, charset } = stateManager._getContentType(details.responseHeaders);
-
-    let initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
-    let isWhitelisted = requestAnalyzer.whitelistedDomains[initiatorDomain];
-    let cdnDomainsRE = new RegExp("//(" + Object.keys(mappings).map(m => m.replace(/\W/g, '\\$&')).join('|') + ")/");
-
-    if (!isWhitelisted && mimeType === "text/html") {
-        let decoder = new TextDecoder(charset);
-        let encoder = new TextEncoder();
-
-        let filter = browser.webRequest.filterResponseData(details.requestId);
-
-        //Note that this will not work if the '<script crossorigin="anonymous" src="dfgsfgd.com">' string is divided into two chunks, but we want to flush this data asap.
-        filter.ondata = evt => {
-            //remove crossorigin and integrity attributes
-            let str = decoder.decode(evt.data, {stream: true}).replace(/<(link|script)[^>]+>/ig, m => {
-                if (cdnDomainsRE.test(m))
-                    return m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=\s]+|)/ig, "");
-                return m;
-            });
-            filter.write(encoder.encode(str));
-        }
-
-        filter.onstop = evt => {
-            let str = decoder.decode(); // end-of-stream
-            filter.write(encoder.encode(str));
-            filter.close();
-        }
-    }
-};
 
 /**
  * Initializations
@@ -373,12 +326,6 @@ chrome.storage.local.get(Setting.SHOW_ICON_BADGE, function (items) {
 
 chrome.tabs.onCreated.addListener(stateManager._createTab);
 chrome.tabs.onRemoved.addListener(stateManager._removeTab);
-
-chrome.webRequest.onHeadersReceived.addListener(function (response) {
-
-        stateManager._removeCrossoriginAndIntegrityAttr(response)
-
-}, {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]}, [WebRequest.BLOCKING, WebRequest.RESPONSE_HEADERS]);
 
 chrome.webRequest.onBeforeRequest.addListener(function (requestDetails) {
 
