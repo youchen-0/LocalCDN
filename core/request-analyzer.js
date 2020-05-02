@@ -30,6 +30,7 @@ var requestAnalyzer = {};
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 
     let initiatorDomain, isWhitelisted;
+    let fontawesome = new RegExp('\(font-awesome|fontawesome)');
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 
@@ -40,6 +41,12 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     isWhitelisted = requestAnalyzer.whitelistedDomains[initiatorDomain];
 
     if (isWhitelisted) {
+        return false;
+    }
+
+    // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
+    if(BrowserType.CHROMIUM && fontawesome.test(requestDetails.url)) {
+        console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
         return false;
     }
 

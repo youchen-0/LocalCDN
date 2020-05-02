@@ -88,3 +88,7 @@ const Whitelist = {
     'TRIM_EXPRESSION': /^;+|;+$/g,
     'VALUE_SEPARATOR': ';'
 };
+
+const BrowserType = {
+    'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension")
+}
