@@ -65,6 +65,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                 filter.close();
             }
         }
+        return {responseHeaders: details.responseHeaders};
 
     } else if(BrowserType.CHROMIUM) {
 
@@ -73,8 +74,6 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
         console.warn('[ LocalCDN ] browser.webRequest.filterResponseData not supported by your browser.');
 
     }
-    return {responseHeaders: details.responseHeaders};
-
 };
 
 
