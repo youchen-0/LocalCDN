@@ -172,6 +172,19 @@ var resources = {
         'path': 'resources/ext-core/{version}/ext-core.jsm',
         'type': 'application/javascript'
     },
+    // fancyBox
+    'fancyBoxMediaJS': {
+        'path': 'resources/fancybox/{version}/helpers/jquery.fancybox-media.jsm',
+        'type': 'application/javascript'
+    },
+    'fancyBoxCSS': {
+        'path': 'resources/fancybox/{version}/jquery.fancybox.min.css',
+        'type': 'text/css'
+    },
+    'fancyBoxJS': {
+        'path': 'resources/fancybox/{version}/jquery.fancybox.min.jsm',
+        'type': 'application/javascript'
+    },
     // Finify bundle
     'findifyBundle': {
         'path': 'resources/findify-bundle/{version}/',

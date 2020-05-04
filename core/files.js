@@ -141,6 +141,11 @@ var files = {
         // Ext Core
         'resources/ext-core/3.1.0/ext-core.jsm': true,
 
+        // fancyBox
+        'resources/fancybox/2.1.5/helpers/jquery.fancybox-media.jsm': true,
+        'resources/fancybox/2.1.5/jquery.fancybox.min.css': true,
+        'resources/fancybox/2.1.5/jquery.fancybox.min.jsm': true,
+
         // Finify bundle
         'resources/findify-bundle/6.9.15/bundle.jsm': true,
         'resources/findify-bundle/6.9.15/components.jsm': true,
