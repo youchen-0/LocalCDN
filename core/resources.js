@@ -108,6 +108,15 @@ var resources = {
         'path': 'resources/angular-ui-router/{version}/angular-ui-router.min.jsm',
         'type': 'application/javascript'
     },
+    // AngularJS Toaster
+    'angularJsToasterCSS': {
+        'path': 'resources/angularjs-toaster/{version}/toaster.min.css',
+        'type': 'text/css'
+    },
+    'angularJsToasterJS': {
+        'path': 'resources/angularjs-toaster/{version}/toaster.min.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',

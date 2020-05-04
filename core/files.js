@@ -91,6 +91,12 @@ var files = {
         // AngularJS Slider
         'resources/angularjs-slider/6.7.0/rzslider.min.jsm': true,
 
+        // AngularJS Toaster
+        'resources/angularjs-toaster/0.4.18/toaster.min.css': true,
+        'resources/angularjs-toaster/0.4.18/toaster.min.jsm': true,
+        'resources/angularjs-toaster/2.2.0/toaster.min.css': true,
+        'resources/angularjs-toaster/2.2.0/toaster.min.jsm': true,
+
         // Animate CSS
         'resources/animate.css/3.7.2/animate.min.css': true,
 

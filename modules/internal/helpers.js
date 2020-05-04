@@ -242,6 +242,10 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Touch';
     case 'angular.min.jsm':
         return 'AngularJS';
+    case 'toaster.min.css':
+        return 'AngularJS Toaster (CSS)';
+    case 'toaster.min.jsm':
+        return 'AngularJS Toaster (JS)';
     case 'angular-ui-router.min.jsm':
         return 'Angular UI Router';
     case 'animate.min.css':
@@ -446,6 +450,10 @@ helpers.setLastVersion = function (type, version) {
         else version = '1.7.9';
     } else if (type.includes('/angularjs-slider/6.')) {
         version = '6.7.0';
+    } else if (type.includes('/angularjs-toaster/2.')) {
+        version = '2.2.0';
+    } else if (type.includes('/angularjs-toaster/0.')) {
+        version = '0.4.18';
     } else if (type.includes('/angular-ui-bootstrap/0.')) {
         version = '0.14.3';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
