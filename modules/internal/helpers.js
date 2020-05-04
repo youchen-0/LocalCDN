@@ -458,6 +458,8 @@ helpers.setLastVersion = function (type, version) {
         version = '0.14.3';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
         version = '1.3.3';
+    } else if (type.includes('/angular-ui-router/0.')) {
+        version = '0.4.3';
     } else if (type.includes('/angular-ui-router/1.')) {
         version = '1.0.25';
     } else if (type.includes('/angular-ui-select/0.')) {

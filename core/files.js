@@ -105,6 +105,7 @@ var files = {
 
         // Angular UI Router
         'resources/angular-ui-router/1.0.25/angular-ui-router.min.jsm': true,
+        'resources/angular-ui-router/0.4.3/angular-ui-router.min.jsm': true,
 
         // AngularJS ui-select
         'resources/angular-ui-select/0.20.0/select.min.jsm': true,
