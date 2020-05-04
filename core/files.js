@@ -35,6 +35,7 @@ var files = {
 
         // Angular Bootstrap
         'resources/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.jsm': true,
+        'resources/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.jsm': true,
 
         // AngularJS
         'resources/angularjs/1.7.9/angular-animate.min.jsm': true,

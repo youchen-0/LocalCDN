@@ -446,6 +446,8 @@ helpers.setLastVersion = function (type, version) {
         else version = '1.7.9';
     } else if (type.includes('/angularjs-slider/6.')) {
         version = '6.7.0';
+    } else if (type.includes('/angular-ui-bootstrap/0.')) {
+        version = '0.14.3';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
         version = '1.3.3';
     } else if (type.includes('/angular-ui-router/1.')) {
