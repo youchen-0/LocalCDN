@@ -42,6 +42,9 @@ var files = {
         // Angular Payments
         'resources/angular-payments/1.0.7/angular-payments.jsm': true,
 
+        // Angular Stripe Checkout
+        'resources/angular-stripe-checkout/5.1.0/angular-stripe-checkout.jsm': true,
+
         // AngularJS
         'resources/angularjs/1.7.9/angular-animate.min.jsm': true,
         'resources/angularjs/1.7.9/angular-aria.min.jsm': true,

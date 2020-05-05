@@ -250,6 +250,8 @@ helpers.determineResourceName = function (filename) {
         return 'Angular UI Router';
     case 'angular-payments.jsm':
         return 'Angular Payments';
+    case 'angular-stripe-checkout.jsm':
+        return 'Angular Stripe Checkout';
     case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
@@ -461,6 +463,8 @@ helpers.setLastVersion = function (type, version) {
         version = '0.4.18';
     } else if (type.includes('/angular-payments@1.')) {
         version = '1.0.7';
+    } else if (type.includes('/angular-stripe-checkout@5.')) {
+        version = '5.1.0';
     } else if (type.includes('/angular-ui-bootstrap/0.')) {
         version = '0.14.3';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {

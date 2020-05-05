@@ -126,6 +126,11 @@ var resources = {
         'path': 'resources/angular-payments/{version}/angular-payments.jsm',
         'type': 'application/javascript'
     },
+    // Angular Stripe Checkout
+    'angularStripeCheckout': {
+        'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',
