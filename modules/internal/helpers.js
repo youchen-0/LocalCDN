@@ -447,7 +447,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
         if (helpers.compareVersion('1.3.13', requestVersion)) version = '1.3.13'; // <= v1.3.13
-        else if (helpers.compareVersion('1.5.11', requestVersion)) version = '1.5.11'; // > 1.3.13 to <= 1.5.11
+        else if (helpers.compareVersion('1.4.14', requestVersion)) version = '1.4.14'; // > 1.3.13 to <= 1.4.14
+        else if (helpers.compareVersion('1.5.11', requestVersion)) version = '1.5.11'; // > 1.4.14 to <= 1.5.11
         else if (helpers.compareVersion('1.6.10', requestVersion)) version = '1.6.10'; // > 1.5.11 to <= 1.6.10
         else version = '1.7.9'; // >= 1.6.11
     } else if (type.includes('/angularjs-slider/6.')) {
