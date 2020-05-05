@@ -444,10 +444,10 @@ helpers.setLastVersion = function (type, version) {
     if (type.includes('/algoliasearch/3.')) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.3.14', requestVersion)) version = '1.3.13'; // < v1.3.14
-        else if (helpers.compareVersion('1.5.12', requestVersion)) version = '1.5.11'; // >= 1.3.13 to <= 1.5.12
-        else if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // >= 1.5.13 to <= 1.6.2
-        else version = '1.7.9';
+        if (helpers.compareVersion('1.3.13', requestVersion)) version = '1.3.13'; // <= v1.3.13
+        else if (helpers.compareVersion('1.5.11', requestVersion)) version = '1.5.11'; // > 1.3.13 to <= 1.5.11
+        else if (helpers.compareVersion('1.6.10', requestVersion)) version = '1.6.10'; // > 1.5.11 to <= 1.6.10
+        else version = '1.7.9'; // >= 1.6.11
     } else if (type.includes('/angularjs-slider/6.')) {
         version = '6.7.0';
     } else if (type.includes('/angularjs-toaster/2.')) {
@@ -515,8 +515,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/hls.js/')) {
         version = '0.13.2';
     } else if (type.includes('/jquery/1.')) {
-        if (helpers.compareVersion('1.7.1', requestVersion)) version = '1.7.1'; // < v1.7.1
-        else if (helpers.compareVersion('1.8.3', requestVersion)) version = '1.8.3'; // >= 1.7.2 to <= 1.8.3
+        if (helpers.compareVersion('1.7.1', requestVersion)) version = '1.7.1'; // <= v1.7.1
+        else if (helpers.compareVersion('1.8.3', requestVersion)) version = '1.8.3'; // > 1.7.1 to <= 1.8.3
         else version = '1.12.4'; // >= 1.8.4
     } else if (type.includes('/jquery/1.8.')) {
         version = '1.8.3';
@@ -527,8 +527,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
         version = '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
-        if (helpers.compareVersion('1.8.19', requestVersion)) version = '1.8.18'; // <= v1.8.18
-        else version = '1.11.4';
+        if (helpers.compareVersion('1.8.18', requestVersion)) version = '1.8.18'; // <= v1.8.18
+        else version = '1.11.4'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
         version = '2.70';
     } else if (type.includes('/jquery-csv/1.')) {
