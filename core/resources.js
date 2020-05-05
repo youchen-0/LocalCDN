@@ -99,8 +99,12 @@ var resources = {
         'type': 'application/javascript'
     },
     // AngularUI Bootstrap
-    'angularUiBootstrap': {
+    'angularUiBootstrapTPLS': {
         'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularUiBootstrap': {
+        'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap.min.jsm',
         'type': 'application/javascript'
     },
     // AngularUI Router

@@ -78,7 +78,7 @@ var mappings = {
         '/ajax/libs/': {
             'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
             'angucomplete-alt/{version}/angucomplete-alt.': resources.anguComplete,
-            'angular-ui-bootstrap/{version}/ui-bootstrap-tpls.': resources.angularUiBootstrap,
+            'angular-ui-bootstrap/{version}/ui-bootstrap-tpls.': resources.angularUiBootstrapTPLS,
             'angular-ui-bootstrap/{version}/ui-bootstrap.min.js': resources.angularUiBootstrap,
             'angular-ui-router/{version}/angular-ui-router.': resources.angularUiRouter,
             'angular-ui-select/{version}/select.': resources.angularJsUiSelect,

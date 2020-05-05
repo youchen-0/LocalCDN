@@ -372,6 +372,8 @@ helpers.determineResourceName = function (filename) {
         return 'toastr.js';
     case 'ui-bootstrap-tpls.min.jsm':
         return 'Angular UI Bootstrap';
+    case 'ui-bootstrap.min.jsm':
+        return 'Angular UI Bootstrap';
     case 'underscore-min.jsm':
         return 'Underscore.js';
     case 'webfont.jsm':
