@@ -461,10 +461,9 @@ helpers.setLastVersion = function (type, version) {
         version = '0.14.3';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
         version = '1.3.3';
-    } else if (type.includes('/angular-ui-router/0.')) {
-        version = '0.4.3';
-    } else if (type.includes('/angular-ui-router/1.')) {
-        version = '1.0.25';
+    } else if (type.includes('/angular-ui-router/')) {
+        if (helpers.compareVersion('0.4.3', requestVersion)) version = '0.4.3'; // <= 0.4.3
+        else version = '1.0.25'; // > 0.4.3
     } else if (type.includes('/angular-ui-select/0.')) {
         version = '0.20.0';
     } else if (type.includes('/angucomplete-alt/3.')) {
