@@ -248,6 +248,8 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Toaster (JS)';
     case 'angular-ui-router.min.jsm':
         return 'Angular UI Router';
+    case 'angular-payments.jsm':
+        return 'Angular Payments';
     case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
@@ -457,6 +459,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.2.0';
     } else if (type.includes('/angularjs-toaster/0.')) {
         version = '0.4.18';
+    } else if (type.includes('/angular-payments@1.')) {
+        version = '1.0.7';
     } else if (type.includes('/angular-ui-bootstrap/0.')) {
         version = '0.14.3';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {

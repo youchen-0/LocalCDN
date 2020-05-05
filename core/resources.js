@@ -121,6 +121,11 @@ var resources = {
         'path': 'resources/angularjs-toaster/{version}/toaster.min.jsm',
         'type': 'application/javascript'
     },
+    // Angular Payments
+    'angularPayments': {
+        'path': 'resources/angular-payments/{version}/angular-payments.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',

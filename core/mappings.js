@@ -192,6 +192,7 @@ var mappings = {
         '/npm/': {
             'angular@{version}/angular.': resources.angular,
             'angular@{version}/angular.min.': resources.angular,
+            'angular-payments@{version}/lib/angular-payments.js': resources.angularPayments,
             'animate.css@{version}/animate.min.css': resources.animateCSS,
             'backbone@{version}/backbone.': resources.backbone,
             'backbone@{version}/backbone-min.': resources.backbone,

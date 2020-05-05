@@ -39,6 +39,9 @@ var files = {
         'resources/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.jsm': true,
         'resources/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.jsm': true,
 
+        // Angular Payments
+        'resources/angular-payments/1.0.7/angular-payments.jsm': true,
+
         // AngularJS
         'resources/angularjs/1.7.9/angular-animate.min.jsm': true,
         'resources/angularjs/1.7.9/angular-aria.min.jsm': true,
