@@ -4,6 +4,10 @@
  *
  * @author      Thomas Rientjes
  * @since       2017-03-10
+ *
+ * @author      nobody42
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -277,6 +281,7 @@ stateManager._setIconDisabled = function (tabIdentifier) {
     });
 };
 
+
 /**
  * Initializations
  */
@@ -331,7 +336,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (requestDetails) {
         };
     }
 
-}, {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]});
+}, {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]}, [WebRequest.BLOCKING]);
 
 chrome.webNavigation.onCommitted.addListener(stateManager._updateTab, {
     'url': [{'urlContains': ':'}]

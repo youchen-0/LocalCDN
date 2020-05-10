@@ -75,7 +75,8 @@ const Setting = {
 const WebRequest = {
     'GET': 'GET',
     'BLOCKING': 'blocking',
-    'HEADERS': 'requestHeaders'
+    'HEADERS': 'requestHeaders',
+    'RESPONSE_HEADERS': 'responseHeaders'
 };
 
 const WebRequestType = {
@@ -87,3 +88,8 @@ const Whitelist = {
     'TRIM_EXPRESSION': /^;+|;+$/g,
     'VALUE_SEPARATOR': ';'
 };
+
+const BrowserType = {
+    'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension"),
+    'FIREFOX': chrome.runtime.getURL("/").startsWith("moz-extension")
+}

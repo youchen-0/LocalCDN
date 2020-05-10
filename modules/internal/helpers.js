@@ -242,8 +242,16 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Touch';
     case 'angular.min.jsm':
         return 'AngularJS';
+    case 'toaster.min.css':
+        return 'AngularJS Toaster (CSS)';
+    case 'toaster.min.jsm':
+        return 'AngularJS Toaster (JS)';
     case 'angular-ui-router.min.jsm':
         return 'Angular UI Router';
+    case 'angular-payments.jsm':
+        return 'Angular Payments';
+    case 'angular-stripe-checkout.jsm':
+        return 'Angular Stripe Checkout';
     case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
@@ -272,6 +280,12 @@ helpers.determineResourceName = function (filename) {
         return 'Ember.js';
     case 'ext-core.jsm':
         return 'Ext Core';
+    case 'jquery.fancybox.min.css':
+        return 'fancyBox (CSS)';
+    case 'jquery.fancybox-media.jsm':
+        return 'fancyBox Media (JS)';
+    case 'jquery.fancybox.min.jsm':
+        return 'fancyBox (JS)';
     case 'flv.min.jsm':
         return 'flv.js';
     case 'font-awesome.min.css':
@@ -282,12 +296,16 @@ helpers.determineResourceName = function (filename) {
         return 'hls.js';
     case 'jquery.min.jsm':
         return 'jQuery';
+    case 'jquery.autocomplete.min.jsm':
+        return 'jQuery Ajax AutoComplete';
     case 'jquery-ui.min.jsm':
         return 'jQuery UI';
     case 'jquery-ui.min.css':
         return 'jQuery UI Themes';
     case 'jquery.blockUI.min.jsm':
         return 'jQuery Block UI';
+    case 'jquery.csv.min.jsm':
+        return 'jQuery-csv';
     case 'jquery.lazyload.min.jsm':
         return 'jQuery Lazy Load';
     case 'jquery-migrate.min.jsm':
@@ -320,10 +338,16 @@ helpers.determineResourceName = function (filename) {
         return 'page.js';
     case 'plyr.min.css':
         return 'plyr CSS';
+    case 'popper.min.jsm':
+        return 'Popper';
     case 'prototype.jsm':
         return 'Prototype';
     case 'raven.min.jsm':
         return 'Raven.js';
+    case 'react.production.min.jsm':
+        return 'React';
+    case 'react-dom.production.min.jsm':
+        return 'ReactDOM';
     case 'rocket-loader.min.jsm':
         return 'Rocket Loader';
     case 'rickshaw.min.jsm':
@@ -351,6 +375,8 @@ helpers.determineResourceName = function (filename) {
     case 'toastr.min.jsm':
         return 'toastr.js';
     case 'ui-bootstrap-tpls.min.jsm':
+        return 'Angular UI Bootstrap';
+    case 'ui-bootstrap.min.jsm':
         return 'Angular UI Bootstrap';
     case 'underscore-min.jsm':
         return 'Underscore.js';
@@ -424,16 +450,28 @@ helpers.setLastVersion = function (type, version) {
     if (type.includes('/algoliasearch/3.')) {
         version = '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.3.14', requestVersion)) version = '1.3.13'; // < v1.3.14
-        else if (helpers.compareVersion('1.5.12', requestVersion)) version = '1.5.11'; // >= 1.3.13 to <= 1.5.12
-        else if (helpers.compareVersion('1.6.2', requestVersion)) version = '1.6.1'; // >= 1.5.13 to <= 1.6.2
-        else version = '1.7.9';
+        if (helpers.compareVersion('1.3.13', requestVersion)) version = '1.3.13'; // <= v1.3.13
+        else if (helpers.compareVersion('1.4.14', requestVersion)) version = '1.4.14'; // > 1.3.13 to <= 1.4.14
+        else if (helpers.compareVersion('1.5.11', requestVersion)) version = '1.5.11'; // > 1.4.14 to <= 1.5.11
+        else if (helpers.compareVersion('1.6.10', requestVersion)) version = '1.6.10'; // > 1.5.11 to <= 1.6.10
+        else version = '1.7.9'; // >= 1.6.11
     } else if (type.includes('/angularjs-slider/6.')) {
         version = '6.7.0';
+    } else if (type.includes('/angularjs-toaster/2.')) {
+        version = '2.2.0';
+    } else if (type.includes('/angularjs-toaster/0.')) {
+        version = '0.4.18';
+    } else if (type.includes('/angular-payments@1.')) {
+        version = '1.0.7';
+    } else if (type.includes('/angular-stripe-checkout@5.')) {
+        version = '5.1.0';
+    } else if (type.includes('/angular-ui-bootstrap/0.')) {
+        version = '0.14.3';
     } else if (type.includes('/angular-ui-bootstrap/1.')) {
         version = '1.3.3';
-    } else if (type.includes('/angular-ui-router/1.')) {
-        version = '1.0.25';
+    } else if (type.includes('/angular-ui-router/')) {
+        if (helpers.compareVersion('0.4.3', requestVersion)) version = '0.4.3'; // <= 0.4.3
+        else version = '1.0.25'; // > 0.4.3
     } else if (type.includes('/angular-ui-select/0.')) {
         version = '0.20.0';
     } else if (type.includes('/angucomplete-alt/3.')) {
@@ -474,6 +512,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.1.0';
     } else if (type.includes('findify')) {
         version = '6.9.15';
+    } else if (type.includes('/fancybox/2.')) {
+        version = '2.1.5';
     } else if (type.includes('/flv.js/')) {
         version = '1.5.0';
     } else if (type.includes('/fontawesome/3.')) {
@@ -485,8 +525,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/hls.js/')) {
         version = '0.13.2';
     } else if (type.includes('/jquery/1.')) {
-        if (helpers.compareVersion('1.7.1', requestVersion)) version = '1.7.1'; // < v1.7.1
-        else if (helpers.compareVersion('1.8.3', requestVersion)) version = '1.8.3'; // >= 1.7.2 to <= 1.8.3
+        if (helpers.compareVersion('1.7.1', requestVersion)) version = '1.7.1'; // <= v1.7.1
+        else if (helpers.compareVersion('1.8.3', requestVersion)) version = '1.8.3'; // > 1.7.1 to <= 1.8.3
         else version = '1.12.4'; // >= 1.8.4
     } else if (type.includes('/jquery/1.8.')) {
         version = '1.8.3';
@@ -494,11 +534,15 @@ helpers.setLastVersion = function (type, version) {
         version = '2.2.4';
     } else if (type.includes('/jquery/3.')) {
         version = '3.4.1';
+    } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
+        version = '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
-        if (helpers.compareVersion('1.8.19', requestVersion)) version = '1.8.18'; // <= v1.8.18
-        else version = '1.11.4';
+        if (helpers.compareVersion('1.8.18', requestVersion)) version = '1.8.18'; // <= v1.8.18
+        else version = '1.11.4'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
         version = '2.70';
+    } else if (type.includes('/jquery-csv/1.')) {
+        version = '1.0.9';
     } else if (type.includes('/jquery.lazyload/1.')) {
         version = '1.9.1';
     } else if (type.includes('/jquery-migrate/1.')) {
@@ -533,10 +577,16 @@ helpers.setLastVersion = function (type, version) {
         version = '1.7.1';
     } else if (type.includes('/plyr/3.')) {
         version = '3.5.10';
+    } else if (type.includes('/popper.js/1.')) {
+        version = '1.16.1';
     } else if (type.includes('/prototype/1.')) {
         version = '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {
         version = '3.26.2';
+    } else if (type.includes('/react/16.')) {
+        version = '16.13.1';
+    } else if (type.includes('/react-dom/16.')) {
+        version = '16.13.1';
     } else if (type.includes('/rickshaw/1.')) {
         version = '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {

@@ -99,13 +99,36 @@ var resources = {
         'type': 'application/javascript'
     },
     // AngularUI Bootstrap
-    'angularUiBootstrap': {
+    'angularUiBootstrapTPLS': {
         'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularUiBootstrap': {
+        'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap.min.jsm',
         'type': 'application/javascript'
     },
     // AngularUI Router
     'angularUiRouter': {
         'path': 'resources/angular-ui-router/{version}/angular-ui-router.min.jsm',
+        'type': 'application/javascript'
+    },
+    // AngularJS Toaster
+    'angularJsToasterCSS': {
+        'path': 'resources/angularjs-toaster/{version}/toaster.min.css',
+        'type': 'text/css'
+    },
+    'angularJsToasterJS': {
+        'path': 'resources/angularjs-toaster/{version}/toaster.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Angular Payments
+    'angularPayments': {
+        'path': 'resources/angular-payments/{version}/angular-payments.jsm',
+        'type': 'application/javascript'
+    },
+    // Angular Stripe Checkout
+    'angularStripeCheckout': {
+        'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
         'type': 'application/javascript'
     },
     // Animate CSS
@@ -172,6 +195,19 @@ var resources = {
         'path': 'resources/ext-core/{version}/ext-core.jsm',
         'type': 'application/javascript'
     },
+    // fancyBox
+    'fancyBoxMediaJS': {
+        'path': 'resources/fancybox/{version}/helpers/jquery.fancybox-media.jsm',
+        'type': 'application/javascript'
+    },
+    'fancyBoxCSS': {
+        'path': 'resources/fancybox/{version}/jquery.fancybox.min.css',
+        'type': 'text/css'
+    },
+    'fancyBoxJS': {
+        'path': 'resources/fancybox/{version}/jquery.fancybox.min.jsm',
+        'type': 'application/javascript'
+    },
     // Finify bundle
     'findifyBundle': {
         'path': 'resources/findify-bundle/{version}/',
@@ -203,6 +239,11 @@ var resources = {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Ajax AutoComplete
+    'jQueryAjaxAutoComplete': {
+        'path': 'resources/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery
     'jQuery': {
         'path': 'resources/jquery/{version}/jquery.min.jsm',
@@ -211,6 +252,11 @@ var resources = {
     // jQuery BlockUI
     'jQueryBlockUI': {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
+        'type': 'application/javascript'
+    },
+    // jQuery-csv
+    'jQueryCSV': {
+        'path': 'resources/jquery-csv/1.0.9/jquery.csv.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery Lazy Load
@@ -298,6 +344,11 @@ var resources = {
         'path': 'resources/plyr/{version}/plyr.min.css',
         'type': 'text/css'
     },
+    // Popper
+    'popperJS': {
+        'path': 'resources/popper.js/{version}/umd/popper.min.jsm',
+        'type': 'text/css'
+    },
     // Prototype
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.jsm',
@@ -310,6 +361,16 @@ var resources = {
     },
     'ravenPluginAngularJS': {
         'path': 'resources/raven.js/{version}/plugins/angular.min.jsm',
+        'type': 'application/javascript'
+    },
+    // React
+    'react': {
+        'path': 'resources/react/16.13.1/umd/react.production.min.jsm',
+        'type': 'application/javascript'
+    },
+    // ReactDOM
+    'reactDOM': {
+        'path': 'resources/react-dom/16.13.1/umd/react-dom.production.min.jsm',
         'type': 'application/javascript'
     },
     // rickshaw

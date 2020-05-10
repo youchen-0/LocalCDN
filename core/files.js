@@ -35,6 +35,15 @@ var files = {
 
         // Angular Bootstrap
         'resources/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.jsm': true,
+        'resources/angular-ui-bootstrap/1.3.3/ui-bootstrap.min.jsm': true,
+        'resources/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.jsm': true,
+        'resources/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.jsm': true,
+
+        // Angular Payments
+        'resources/angular-payments/1.0.7/angular-payments.jsm': true,
+
+        // Angular Stripe Checkout
+        'resources/angular-stripe-checkout/5.1.0/angular-stripe-checkout.jsm': true,
 
         // AngularJS
         'resources/angularjs/1.7.9/angular-animate.min.jsm': true,
@@ -50,18 +59,31 @@ var files = {
         'resources/angularjs/1.7.9/angular-touch.min.jsm': true,
         'resources/angularjs/1.7.9/angular.min.jsm': true,
 
-        'resources/angularjs/1.6.1/angular-animate.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-aria.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-cookies.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-loader.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-message-format.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-messages.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-parse-ext.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-resource.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-route.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-sanitize.min.jsm': true,
-        'resources/angularjs/1.6.1/angular-touch.min.jsm': true,
-        'resources/angularjs/1.6.1/angular.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-animate.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-aria.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-loader.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-message-format.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-messages.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-parse-ext.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-resource.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-route.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.6.10/angular-touch.min.jsm': true,
+        'resources/angularjs/1.6.10/angular.min.jsm': true,
+
+        'resources/angularjs/1.4.14/angular-animate.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-aria.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-loader.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-message-format.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-messages.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-parse-ext.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-resource.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-route.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.4.14/angular-touch.min.jsm': true,
+        'resources/angularjs/1.4.14/angular.min.jsm': true,
 
         'resources/angularjs/1.5.11/angular-animate.min.jsm': true,
         'resources/angularjs/1.5.11/angular-aria.min.jsm': true,
@@ -90,6 +112,12 @@ var files = {
         // AngularJS Slider
         'resources/angularjs-slider/6.7.0/rzslider.min.jsm': true,
 
+        // AngularJS Toaster
+        'resources/angularjs-toaster/0.4.18/toaster.min.css': true,
+        'resources/angularjs-toaster/0.4.18/toaster.min.jsm': true,
+        'resources/angularjs-toaster/2.2.0/toaster.min.css': true,
+        'resources/angularjs-toaster/2.2.0/toaster.min.jsm': true,
+
         // Animate CSS
         'resources/animate.css/3.7.2/animate.min.css': true,
 
@@ -98,6 +126,7 @@ var files = {
 
         // Angular UI Router
         'resources/angular-ui-router/1.0.25/angular-ui-router.min.jsm': true,
+        'resources/angular-ui-router/0.4.3/angular-ui-router.min.jsm': true,
 
         // AngularJS ui-select
         'resources/angular-ui-select/0.20.0/select.min.jsm': true,
@@ -141,6 +170,11 @@ var files = {
         // Ext Core
         'resources/ext-core/3.1.0/ext-core.jsm': true,
 
+        // fancyBox
+        'resources/fancybox/2.1.5/helpers/jquery.fancybox-media.jsm': true,
+        'resources/fancybox/2.1.5/jquery.fancybox.min.css': true,
+        'resources/fancybox/2.1.5/jquery.fancybox.min.jsm': true,
+
         // Finify bundle
         'resources/findify-bundle/6.9.15/bundle.jsm': true,
         'resources/findify-bundle/6.9.15/components.jsm': true,
@@ -174,6 +208,12 @@ var files = {
 
         // jQuery BlockUI
         'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,
+
+        // jQuery-csv
+        'resources/jquery-csv/1.0.9/jquery.csv.min.jsm': true,
+
+        // jQuery Ajax AutoComplete
+        'resources/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.jsm': true,
 
         // jQuery Lazy Load
         'resources/jquery.lazyload/1.9.1/jquery.lazyload.min.jsm': true,
@@ -234,9 +274,18 @@ var files = {
         // page.js
         'resources/page.js/1.7.1/page.min.jsm': true,
 
+        // popper.js
+        'resources/popper.js/1.16.1/popper.min.jsm': true,
+
         // Raven.js
         'resources/raven.js/3.26.2/raven.min.jsm': true,
         'resources/raven.js/3.26.2/plugins/angular.min.jsm': true,
+
+        // React
+        'resources/react/16.13.1/umd/react.production.min.jsm': true,
+
+        // ReactDOM
+        'resources/react-dom/16.13.1/umd/react-dom.production.min.jsm': true,
 
         // rickshaw
         'resources/rickshaw/1.6.6/rickshaw.min.jsm': true,
