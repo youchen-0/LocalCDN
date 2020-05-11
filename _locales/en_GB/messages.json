@@ -100,11 +100,11 @@
     "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
   },
   "featureBreaksWebsitesDescription": {
-    "message": "",
+    "message": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains.",
     "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
   },
   "featureBreaksWebsitesButton": {
-    "message": "",
+    "message": "Disable",
     "description": "Disable"
   }
 }
