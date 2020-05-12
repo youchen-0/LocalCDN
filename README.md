@@ -7,7 +7,8 @@ A web browser extension that emulates Content Delivery Networks to improve your 
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
-* **New: Font Awesome v4.7.0 and v5.7.2** :tada: :tada: :tada:
+* **NEW: Removed integrity checks of embedded script and style elements** :tada: :tada: :tada:
+* Font Awesome
 * jQuery up to 3.4.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
@@ -63,6 +64,11 @@ Suggestions in the form of **Issues**, and contributions in the form of **Merge 
 Please read this [developer guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_first_WebExtension#Trying_it_out) for information on how to run the extension from source.
 
 > **Important:** All tagged commits are signed with GPG. It's likely best to ignore unsigned commits, unless you really know what you're doing. Please send an email if you have any questions or security concerns.
+
+## Contact
+
+Just open an issue with your question or write an email. The address and a PGP key can be found [here](https://localcdn.de/contact/).
+
 
 ## Donations
 
