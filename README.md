@@ -19,7 +19,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 ## What is the different of LocalCDN in comparison to other CDN emulators?
 
-<img src="//screenshots/replacement.png?raw=true" alt="Replacement of Libraries" width="400px">
+<img src="/screenshots/replacement.png?raw=true" alt="The Replacement of Libraries">
 
 ## We need you!
 
