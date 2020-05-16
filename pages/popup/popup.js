@@ -39,18 +39,20 @@ popup._renderContents = function () {
 
 popup._renderNonContextualContents = function () {
 
-    let versionLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement;
+    let versionLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement;
 
     versionLabelElement = document.getElementById('version-label');
     counterElement = document.getElementById('injection-counter');
     testingUtilityLinkElement = document.getElementById('testing-utility-link');
     optionsButtonElement = document.getElementById('options-button');
+    donationButtonElement = document.getElementById('donate-button');
 
     versionLabelElement.innerText = popup._version;
     counterElement.innerText = helpers.formatNumber(popup._amountInjected);
 
     testingUtilityLinkElement.addEventListener('mouseup', popup._onTestingUtilityLinkClicked);
     optionsButtonElement.addEventListener('mouseup', popup._onOptionsButtonClicked);
+    donationButtonElement.addEventListener('mouseup', popup._onDonationButtonClicked);
 };
 
 popup._renderContextualContents = function () {
@@ -354,6 +356,20 @@ popup._onOptionsButtonClicked = function () {
 
     chrome.runtime.openOptionsPage();
     return window.close();
+};
+
+popup._onDonationButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+
+        chrome.tabs.create({
+            'url': 'https://localcdn.de/donate/',
+            'active': (event.button === 0)
+        });
+    }
+
+    if (event.button === 0) {
+        window.close();
+    }
 };
 
 popup._onProtectionToggled = function () {

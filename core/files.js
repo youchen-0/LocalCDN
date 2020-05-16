@@ -250,6 +250,10 @@ var files = {
         // lozad.js
         'resources/lozad.js/1.14.0/lozad.min.jsm': true,
 
+        // Material Design for Bootstrap
+        'resources/mdbootstrap/4.18.0/js/mdb.min.jsm': true,
+        'resources/mdbootstrap/4.18.0/css/mdb.min.css': true,
+
         // Modernizr
         'resources/modernizr/2.8.3/modernizr.min.jsm': true,
 
@@ -313,6 +317,9 @@ var files = {
         // SWFObject
         'resources/swfobject/2.2/swfobject.jsm': true,
 
+        // Tether JS
+        'resources/tether/1.4.7/js/tether.min.jsm': true,
+
         // toastr.js
         'resources/toastr.js/2.1.4/toastr.min.css': true,
         'resources/toastr.js/2.1.4/toastr.min.jsm': true,
@@ -320,6 +327,8 @@ var files = {
         // Twitter Bootstrap
         'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': true,
         'resources/twitter-bootstrap/3.4.1/css/bootstrap.min.css': true,
+        'resources/twitter-bootstrap/4.5.0/js/bootstrap.min.jsm': true,
+        'resources/twitter-bootstrap/4.5.0/css/bootstrap.min.css': true,
 
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,

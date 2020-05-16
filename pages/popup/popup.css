@@ -20,6 +20,7 @@ header {
     border-bottom: solid #d3d3d3 1px;
     display: flex;
     position: relative;
+    padding: 8px;
 }
 
 .panel {
@@ -76,6 +77,7 @@ footer {
     font-size: 14px;
     font-weight: 600;
     padding-left: 0;
+    width: 100%;
 }
 
 .subheading {
@@ -177,7 +179,8 @@ footer {
     color: #339a6f;
 }
 
-#options-button-svg {
+#options-button-svg,
+#donate-button-svg {
     background-size: cover;
     width: 15px;
     height: 15px;
@@ -185,6 +188,10 @@ footer {
 
 #options-button-svg {
     background-image: url("../../icons/settings-dark.svg");
+}
+
+#donate-button-svg {
+    background-image: url("../../icons/donate.svg");
 }
 
 #protection-toggle {
