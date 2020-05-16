@@ -21,6 +21,16 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 <img src="/screenshots/replacement.png?raw=true" alt="The Replacement of Libraries">
 
+**Advantages of LocalCDN:**
+
+:thumbsup: more frameworks/libraries
+
+:thumbsup: smaller size than other extensions
+
+:thumbsup: remove crossorigin and integrity attributes of script and stylesheet tags to increase replacements
+
+:thumbsup: doesn't matter which version a website requested
+
 ## We need you!
 
 ![We Need You!](/pages/welcome/we-need-you.png?raw=true "We Need You!")
@@ -71,7 +81,7 @@ Please read this [developer guide](https://developer.mozilla.org/en-US/Add-ons/W
 
 ## Contact
 
-Just open an issue with your question or write an email. The address and a PGP key can be found [here](https://localcdn.de/contact/).
+Just open an issue with your question or write an [email](https://localcdn.de/contact/) (PGP possible!).
 
 
 ## Donations
