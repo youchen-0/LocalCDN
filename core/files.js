@@ -317,6 +317,9 @@ var files = {
         // SWFObject
         'resources/swfobject/2.2/swfobject.jsm': true,
 
+        // Tether JS
+        'resources/tether/1.4.7/js/tether.min.jsm': true,
+
         // toastr.js
         'resources/toastr.js/2.1.4/toastr.min.css': true,
         'resources/toastr.js/2.1.4/toastr.min.jsm': true,

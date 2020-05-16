@@ -157,6 +157,7 @@ var mappings = {
             'spin.js/{version}/spin.min.js': resources.spinJS,
             'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,
+            'tether/{version}/js/tether.': resources.tetherJS,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,
             'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,

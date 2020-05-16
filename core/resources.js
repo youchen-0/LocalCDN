@@ -430,6 +430,11 @@ var resources = {
         'path': 'resources/swfobject/{version}/swfobject.jsm',
         'type': 'application/javascript'
     },
+    // Tether JS
+    'tetherJS': {
+        'path': 'resources/tether/{version}/js/tether.min.jsm',
+        'type': 'application/javascript'
+    },
     // Twitter Bootstrap JS
     'twitterBootstrapJS': {
         'path': 'resources/twitter-bootstrap/{version}/js/bootstrap.min.jsm',

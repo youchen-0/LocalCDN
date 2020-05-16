@@ -374,6 +374,8 @@ helpers.determineResourceName = function (filename) {
         return 'Store.js';
     case 'swfobject.jsm':
         return 'SWFObject';
+    case 'tether.min.jsm':
+        return 'Tether JS';
     case 'toastr.min.css':
         return 'toastr.js';
     case 'toastr.min.jsm':
@@ -607,6 +609,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
         version = '2.2';
+    } else if (type.includes('/tether/1.')) {
+        version = '1.4.7';
     } else if (type.includes('/twitter-bootstrap/4.')) {
         version = '4.5.0';
     } else if (type.includes('/twitter-bootstrap/3.')) {
