@@ -26,6 +26,18 @@ var manipulateDOM = {};
  * Private Methods
  */
 
+manipulateDOM._getEncoding = function (domain) {
+
+    let encodingByDomain = CharsetDomains[domain];
+
+    if(typeof encodingByDomain === 'undefined') {
+        return 'UTF-8';
+    }
+
+    return encodingByDomain;
+
+};
+
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
     // by Jaap (https://gitlab.com/Jaaap)
@@ -44,7 +56,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
         if (!isWhitelisted && mimeType === 'text/html') {
 
             header.value = 'text/html; charset=UTF-8';
-            let decoder = new TextDecoder(charset);
+            let decoder = new TextDecoder(manipulateDOM._getEncoding(initiatorDomain));
             let encoder = new TextEncoder();
             let filter = browser.webRequest.filterResponseData(details.requestId);
 
