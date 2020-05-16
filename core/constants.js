@@ -103,6 +103,6 @@ const CharsetDomains = {
     'ekaterinaguseva.ru': 'windows-1251',
     'hobbybrauerversand.de': 'iso-8859-1',
     'pro-linux.de': 'iso-8859-15',
-    'gwdg.de': 'windows-1252',
+    'wwwuser.gwdg.de': 'windows-1252',
     'tyurem.net': 'windows-1251'
 };
