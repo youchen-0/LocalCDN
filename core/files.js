@@ -320,6 +320,8 @@ var files = {
         // Twitter Bootstrap
         'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': true,
         'resources/twitter-bootstrap/3.4.1/css/bootstrap.min.css': true,
+        'resources/twitter-bootstrap/4.5.0/js/bootstrap.min.jsm': true,
+        'resources/twitter-bootstrap/4.5.0/css/bootstrap.min.css': true,
 
         // Underscore.js
         'resources/underscore.js/1.8.3/underscore-min.jsm': true,

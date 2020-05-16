@@ -601,6 +601,8 @@ helpers.setLastVersion = function (type, version) {
         version = '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
         version = '2.2';
+    } else if (type.includes('/twitter-bootstrap/4.')) {
+        version = '4.5.0';
     } else if (type.includes('/twitter-bootstrap/3.')) {
         version = '3.4.1';
     } else if (type.includes('/toastr.js/2.')) {

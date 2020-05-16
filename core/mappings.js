@@ -158,6 +158,8 @@ var mappings = {
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,
             'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,
+            'twitter-bootstrap/{version}-alpha.3/js/bootstrap.min.js': resources.twitterBootstrapJS,
+            'twitter-bootstrap/{version}-alpha.3/css/bootstrap.min.css': resources.twitterBootstrapCSS,
             'twitter-bootstrap/{version}/css/bootstrap.': resources.twitterBootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
