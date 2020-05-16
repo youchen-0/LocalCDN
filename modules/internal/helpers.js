@@ -324,6 +324,10 @@ helpers.determineResourceName = function (filename) {
         return 'Lodash';
     case 'lozad.min.jsm':
         return 'lozad.js';
+    case 'mdb.min.css':
+        return 'MDBootstrap (CSS)';
+    case 'mdb.min.jsm':
+        return 'MDBootstrap (JS)';
     case 'modernizr.min.jsm':
         return 'Modernizr';
     case 'moment.min.jsm':
@@ -563,6 +567,8 @@ helpers.setLastVersion = function (type, version) {
         version = '4.17.10';
     } else if (type.includes('lozad')) {
         version = '1.14.0';
+    } else if (type.includes('/mdbootstrap/4.')) {
+        version = '4.18.0';
     } else if (type.includes('/modernizr/2.')) {
         version = '2.8.3';
     } else if (type.includes('/moment.js/2.')) {

@@ -250,6 +250,10 @@ var files = {
         // lozad.js
         'resources/lozad.js/1.14.0/lozad.min.jsm': true,
 
+        // Material Design for Bootstrap
+        'resources/mdbootstrap/4.18.0/js/mdb.min.jsm': true,
+        'resources/mdbootstrap/4.18.0/css/mdb.min.css': true,
+
         // Modernizr
         'resources/modernizr/2.8.3/modernizr.min.jsm': true,
 

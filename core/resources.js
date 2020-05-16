@@ -309,6 +309,15 @@ var resources = {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',
         'type': 'application/javascript'
     },
+    // Material Design for Bootstrap
+    'mdbootstrapJS': {
+        'path': 'resources/mdbootstrap/{version}/js/mdb.min.jsm',
+        'type': 'application/javascript'
+    },
+    'mdbootstrapCSS': {
+        'path': 'resources/mdbootstrap/{version}/css/mdb.min.css',
+        'type': 'text/css'
+    },
     // Modernizr
     'modernizr': {
         'path': 'resources/modernizr/{version}/modernizr.min.jsm',
