@@ -17,6 +17,10 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 > **Note:** LocalCDN is no silver bullet, but it does prevent a lot of websites from making you send these kinds of requests. Ultimately, you can make LocalCDN block requests for any missing CDN resources, too.
 
+## What is the different of LocalCDN in comparison to other CDN emulators?
+
+<img src="//screenshots/replacement.png?raw=true" alt="Replacement of Libraries" width="400px">
+
 ## We need you!
 
 ![We Need You!](/pages/welcome/we-need-you.png?raw=true "We Need You!")
