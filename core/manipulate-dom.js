@@ -49,14 +49,14 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
         let mimeType, charset, initiatorDomain, isWhitelisted;
 
         mimeType = header.value.replace(/;.*/, '').toLowerCase();
-        charset = /charset\s*=/.test(header.value) ? header.value.replace(/^.*?charset\s*=\s*/, '') : 'UTF-8';
+        charset = /charset\s*=/.test(header.value) ? header.value.replace(/^.*?charset\s*=\s*/, '') : undefined;
         initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
         isWhitelisted = stateManager._domainIsWhitelisted(initiatorDomain);
 
         if (!isWhitelisted && mimeType === 'text/html') {
 
             header.value = 'text/html; charset=UTF-8';
-            let decoder = new TextDecoder(manipulateDOM._getEncoding(initiatorDomain));
+            let decoder = new TextDecoder(charset === undefined ? manipulateDOM._getEncoding(initiatorDomain) : charset);
             let encoder = new TextEncoder();
             let filter = browser.webRequest.filterResponseData(details.requestId);
 
