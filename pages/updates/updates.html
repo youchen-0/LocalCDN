@@ -22,6 +22,27 @@
                     <div class="topic-label">
                         New in LocalCDN:
                         <ul>
+                            <li>Addition to the encoding problem (<a href="https://gitlab.com/nobody42/localcdn/-/issues/75">#75</a>)</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-label">
+                        Please update your uBlock/uMatrix rules
+                    </div>
+                    <div class="ruleset-generator">
+                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                        <label for="generate-ublock-rules">uBlock</label>
+                    </div>
+                    <div class="ruleset-generator">
+                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                        <label for="generate-umatrix-rules">uMatrix</label>
+                    </div>
+                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+                    <input id="button-copy-rule-set" type="button" value="Copy">
+                    <hr/>
+                    <h2>History</h2>
+                    <p class='release-date'>2020-05-16 (v2.2.1)</p>
+                        <ul>
                             <li>Fixed: Encoding problem with some websites (maybe only temporary, because at the moment only 9 websites are affected) (<a href="https://gitlab.com/nobody42/localcdn/-/issues/75">#75</a>)</li>
                             <li>Added: Twitter Bootstrap JS and CSS v4.5.0 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/77">#77</a>)</li>
                             <li>Added: Donation button</li>
@@ -29,7 +50,7 @@
                             <li>Added: Tether v1.4.7 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/77">#77</a>)</li>
                             <li>Addition to the encoding problem (<a href="https://gitlab.com/nobody42/localcdn/-/issues/75">#75</a>)</li>
                         </ul>
-                    </div>
+                    <p class='release-date'>2020-05-10 (v2.2.0)</p>
                         <ul>
                             <li>Fixed typo in urlize</li>
                             <li>Remove crossorigin and integrity attributes (<a href="https://gitlab.com/nobody42/localcdn/-/issues/66">#66</a>) <s>[experimental]</s> <i>It should be working without problems</i></li>
@@ -49,21 +70,6 @@
                             <li>Added Angular Stripe Checkout v5.1.0 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/71">#71</a>)</li>
                             <li>Fixed error in AngularJS Toaster v0.4.18 (<a href="https://gitlab.com/nobody42/localcdn/-/issues/71">#71</a>)</li>
                         </ul>
-                    <div class="topic-label">
-                        Please update your uBlock/uMatrix rules
-                    </div>
-                    <div class="ruleset-generator">
-                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
-                        <label for="generate-ublock-rules">uBlock</label>
-                    </div>
-                    <div class="ruleset-generator">
-                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
-                        <label for="generate-umatrix-rules">uMatrix</label>
-                    </div>
-                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                    <input id="button-copy-rule-set" type="button" value="Copy">
-                    <hr/>
-                    <h2>History</h2>
                     <p class='release-date'>2020-04-26 (v2.1.14)</p>
                         <ul>
                             <li>Added Bootstrap-select v1.13.14</li>

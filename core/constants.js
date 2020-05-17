@@ -104,5 +104,6 @@ const CharsetDomains = {
     'hobbybrauerversand.de': 'iso-8859-1',
     'pro-linux.de': 'iso-8859-15',
     'wwwuser.gwdg.de': 'windows-1252',
-    'tyurem.net': 'windows-1251'
+    'tyurem.net': 'windows-1251',
+    "psi-plus.com": "windows-1251"
 };
