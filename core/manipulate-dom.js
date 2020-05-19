@@ -53,7 +53,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
         if (!isWhitelisted && mimeType === 'text/html') {
 
-            let asciiDecoder, decoder, encoder, charset, isFirstData, , filter;
+            let asciiDecoder, decoder, encoder, charset, isFirstData, filter;
 
             asciiDecoder = new TextDecoder('ASCII');
             encoder = new TextEncoder();
