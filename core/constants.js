@@ -93,17 +93,3 @@ const BrowserType = {
     'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension"),
     'FIREFOX': chrome.runtime.getURL("/").startsWith("moz-extension")
 };
-
-const CharsetDomains = {
-    'dejure.org': 'iso-8859-1',
-    'privacy-handbuch.de': 'iso-8859-1',
-    'winfuture.de': 'iso-8859-1',
-    'drwindows.de': 'iso-8859-1',
-    'sphinx-soft.com': 'iso-8859-1',
-    'ekaterinaguseva.ru': 'windows-1251',
-    'hobbybrauerversand.de': 'iso-8859-1',
-    'pro-linux.de': 'iso-8859-15',
-    'wwwuser.gwdg.de': 'windows-1252',
-    'tyurem.net': 'windows-1251',
-    "psi-plus.com": "windows-1251"
-};
