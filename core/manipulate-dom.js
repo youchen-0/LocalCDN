@@ -41,34 +41,51 @@ manipulateDOM._getEncoding = function (domain) {
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
     // by Jaap (https://gitlab.com/Jaaap)
-    // https://gitlab.com/nobody42/localcdn/-/issues/66
     let header = details.responseHeaders.find(h => h.name.toLowerCase() === 'content-type');
 
     if (header && BrowserType.FIREFOX) {
 
-        let mimeType, charset, initiatorDomain, isWhitelisted;
+        let mimeType, initiatorDomain, isWhitelisted;
 
         mimeType = header.value.replace(/;.*/, '').toLowerCase();
-        charset = /charset\s*=/.test(header.value) ? header.value.replace(/^.*?charset\s*=\s*/, '') : 'UTF-8';
         initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
         isWhitelisted = stateManager._domainIsWhitelisted(initiatorDomain);
 
         if (!isWhitelisted && mimeType === 'text/html') {
 
+            let asciiDecoder, decoder, encoder, charset, isFirstData, filter;
+
+            asciiDecoder = new TextDecoder('ASCII');
+            encoder = new TextEncoder();
+            charset = /charset\s*=/.test(header.value) && header.value.replace(/^.*?charset\s*=\s*/, '');
+            isFirstData = true;
+            filter = browser.webRequest.filterResponseData(details.requestId);
+
             header.value = 'text/html; charset=UTF-8';
-            let decoder = new TextDecoder(manipulateDOM._getEncoding(initiatorDomain));
-            let encoder = new TextEncoder();
-            let filter = browser.webRequest.filterResponseData(details.requestId);
 
             //Note that this will not work if the '<script crossorigin="anonymous" src="dfgsfgd.com">' string is divided into two chunks, but we want to flush this data asap.
             filter.ondata = evt => {
+                if (isFirstData) {
+                    if (!charset) {
+                        //content-type has no charset declared
+                        let htmlHead = asciiDecoder.decode(evt.data, {stream: false});
+                        let charsetMatch = htmlHead.match(/<meta\s+charset=["']?([^>"'\/]+)["'>\/]/i);
+                        if (!charsetMatch) {
+                            charsetMatch = htmlHead.match(/<meta\s+http-equiv=["']?content-type["']?\s+content=["']?text\/html;\s+charset=([^>"'\/]+)["'>\/]/i);
+                        }
+                        charset = charsetMatch ? charsetMatch[1] : "UTF-8";
+                    }
+                    decoder = new TextDecoder(charset);
+                }
                 //remove crossorigin and integrity attributes
                 let str = decoder.decode(evt.data, {stream: true}).replace(/<(link|script)[^>]+>/ig, m => {
-                        if (cdnDomainsRE.test(m))
-                            return m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=\s]+|)/ig, '');
-                        return m;
-                    });
+                    if (cdnDomainsRE.test(m)) {
+                        return m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=\s]+|)/ig, '');
+                    }
+                    return m;
+                });
                 filter.write(encoder.encode(str));
+                isFirstData = false;
             }
 
             filter.onstop = evt => {
@@ -104,5 +121,5 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 chrome.webRequest.onHeadersReceived.addListener(
     manipulateDOM._removeCrossOriginAndIntegrityAttr,
     {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]},
-	[WebRequest.BLOCKING, WebRequest.RESPONSE_HEADERS]
+    [WebRequest.BLOCKING, WebRequest.RESPONSE_HEADERS]
 );
