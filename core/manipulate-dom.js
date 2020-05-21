@@ -71,7 +71,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                         let htmlHead = asciiDecoder.decode(evt.data, {stream: false});
                         let charsetMatch = htmlHead.match(/<meta\s+charset=["']?([^>"'\/]+)["'>\/]/i);
                         if (!charsetMatch) {
-                            charsetMatch = htmlHead.match(/<meta\s+http-equiv=["']?content-type["']?\s+content=["']?text\/html;\s+charset=([^>"'\/]+)["'>\/]/i);
+                            charsetMatch = htmlHead.match(/<meta\s+http-equiv=["']?content-type["']?\s+content=["']?text\/html;\s*charset=([^>"'\/]+)["'>\/]/i);
                         }
                         charset = charsetMatch ? charsetMatch[1] : "UTF-8";
                     }
