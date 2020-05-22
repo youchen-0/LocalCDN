@@ -328,6 +328,8 @@ var files = {
         'resources/toastr.js/2.1.4/toastr.min.jsm': true,
 
         // Twitter Bootstrap
+        'resources/twitter-bootstrap/2.3.2/js/bootstrap.min.jsm': true,
+        'resources/twitter-bootstrap/2.3.2/css/bootstrap.min.css': true,
         'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': true,
         'resources/twitter-bootstrap/3.4.1/css/bootstrap.min.css': true,
         'resources/twitter-bootstrap/4.5.0/js/bootstrap.min.jsm': true,
