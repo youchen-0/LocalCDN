@@ -238,6 +238,9 @@ var files = {
         // jQuery URLive
         'resources/urlive/1.1.1/jquery.urlive.min.jsm': true,
 
+        // jQuery Mobile
+        'resources/jquery-mobile/1.4.5/jquery.mobile.min.jsm': true,
+
         // JavaScript Cookie
         'resources/js-cookie/2.2.1/js.cookie.min.jsm': true,
 

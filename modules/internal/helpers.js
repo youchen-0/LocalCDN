@@ -316,6 +316,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery Validation Plugin';
     case 'jquery.urlive.min.jsm':
         return 'jQuery URLive';
+    case 'jquery.mobile.min.jsm':
+        return 'jQuery Mobile';
     case 'js.cookie.min.jsm':
         return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
@@ -559,6 +561,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
         version = '1.8.0';
+    } else if (type.includes('/mobile/1.')) {
+        version = '1.4.5';
     } else if (type.includes('/urlive/1.')) {
         version = '1.1.1';
     } else if (type.includes('/js-cookie/2.')) {

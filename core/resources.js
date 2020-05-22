@@ -289,6 +289,11 @@ var resources = {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Mobile
+    'jQueryMobile': {
+        'path': 'resources/jquery-mobile/{version}/jquery.mobile.min.jsm',
+        'type': 'application/javascript'
+    },
     // js-cookie
     'jscookie': {
         'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',

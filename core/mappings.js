@@ -180,6 +180,7 @@ var mappings = {
             'jquery-{version}.': resources.jQuery,
             'ui/{version}/jquery-ui.js': resources.jQueryUI,
             'ui/{version}/jquery-ui.min.js': resources.jQueryUI,
+            'mobile/{version}/jquery.mobile': resources.jQueryMobile,
 
             // Basic Shorthand Notations [Deprecated]
             'jquery-latest.': {
