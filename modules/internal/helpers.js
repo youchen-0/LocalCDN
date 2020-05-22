@@ -252,6 +252,8 @@ helpers.determineResourceName = function (filename) {
         return 'Angular Payments';
     case 'angular-stripe-checkout.jsm':
         return 'Angular Stripe Checkout';
+    case 'angular-sanitize.min.js':
+        return 'Angular Sanitize';
     case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
@@ -484,6 +486,8 @@ helpers.setLastVersion = function (type, version) {
         else version = '1.0.25'; // > 0.4.3
     } else if (type.includes('/angular-ui-select/0.')) {
         version = '0.20.0';
+    } else if (type.includes('/angular-sanitize/1.')) {
+        version = '1.7.9';
     } else if (type.includes('/angucomplete-alt/3.')) {
         version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {

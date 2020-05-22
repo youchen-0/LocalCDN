@@ -100,6 +100,7 @@ var mappings = {
             'angularjs-toaster/{version}/toaster.min.js': resources.angularJsToasterJS,
             'angularjs-toaster/{version}/toaster.css': resources.angularJsToasterCSS,
             'angularjs-toaster/{version}/toaster.js': resources.angularJsToasterJS,
+            'angular-sanitize/{version}/angular-sanitize.': resources.angularSanitize,
             'animate.css/{version}/animate.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,

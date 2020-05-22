@@ -131,6 +131,9 @@ var files = {
         // AngularJS ui-select
         'resources/angular-ui-select/0.20.0/select.min.jsm': true,
 
+        // Angular Sanitize
+        'resources/angular-sanitize/1.7.9/angular-sanitize.min.jsm': true,
+
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,
