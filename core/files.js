@@ -145,6 +145,7 @@ var files = {
 
         // Bootstrap-select
         'resources/bootstrap-select/1.13.17/bootstrap-select.min.css': true,
+        'resources/bootstrap-select/1.13.17/bootstrap-select.min.jsm': true,
 
         // bootstrap-slider
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,

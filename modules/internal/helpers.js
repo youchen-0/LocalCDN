@@ -266,6 +266,8 @@ helpers.determineResourceName = function (filename) {
         return 'Bootstrap Datepicker';
     case 'bootstrap-select.min.css':
         return 'Bootstrap-select CSS';
+    case 'bootstrap-select.min.jsm':
+        return 'Bootstrap-select JS';
     case 'bootstrap-slider.min.jsm':
         return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.css':

@@ -161,6 +161,10 @@ var resources = {
         'path': 'resources/bootstrap-select/{version}/css/bootstrap-select.min.css',
         'type': 'text/css'
     },
+    'bootstrapSelectJS': {
+        'path': 'resources/bootstrap-select/{version}/js/bootstrap-select.min.jsm',
+        'type': 'application/javascript'
+    },
     // bootstrap-slider (Slider for Bootstrap 3)
     'bootstrapSliderCSS': {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.css',
