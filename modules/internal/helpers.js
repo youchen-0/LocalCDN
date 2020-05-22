@@ -503,7 +503,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
-        version = '1.13.14';
+        version = '1.13.17';
     } else if (type.includes('/clipboard.js/2.')) {
         version = '2.0.6';
     } else if (type.includes('/d3/3.')) {
