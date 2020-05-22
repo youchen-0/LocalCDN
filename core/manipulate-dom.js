@@ -26,18 +26,6 @@ var manipulateDOM = {};
  * Private Methods
  */
 
-manipulateDOM._getEncoding = function (domain) {
-
-    let encodingByDomain = CharsetDomains[domain];
-
-    if(typeof encodingByDomain === 'undefined') {
-        return 'UTF-8';
-    }
-
-    return encodingByDomain;
-
-};
-
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
     // by Jaap (https://gitlab.com/Jaaap)
