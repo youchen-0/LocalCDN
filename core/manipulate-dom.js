@@ -46,6 +46,12 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
             asciiDecoder = new TextDecoder('ASCII');
             encoder = new TextEncoder();
             charset = /charset\s*=/.test(header.value) && header.value.replace(/^.*?charset\s*=\s*/, '').replace(/["']?/g, '');
+
+            // Check if charset is supported by TextDecoder()
+            if(EncodingTypes[charset.toString().toLowerCase()] == undefined){
+                charset = false;
+            }
+
             isFirstData = true;
             filter = browser.webRequest.filterResponseData(details.requestId);
 
