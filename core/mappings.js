@@ -420,39 +420,6 @@ var mappings = {
             'webfont/{version}/webfont_debug.': resources.webfont
         }
     },
-    // Baidu CDN
-    'apps.bdimg.com': {
-        '/libs/': {
-            'angular.js/{version}/angular-animate.': resources.angularAnimate,
-            'angular.js/{version}/angular-aria.': resources.angularAria,
-            'angular.js/{version}/angular-cookies.': resources.angularCookies,
-            'angular.js/{version}/angular-loader.': resources.angularLoader,
-            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
-            'angular.js/{version}/angular-messages.': resources.angularMessages,
-            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
-            'angular.js/{version}/angular-resource.': resources.angularResource,
-            'angular.js/{version}/angular-route.': resources.angularRoute,
-            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
-            'angular.js/{version}/angular-touch.': resources.angularTouch,
-            'angular.js/{version}/angular.': resources.angular,
-            'backbone.js/{version}/backbone.': resources.backbone,
-            'backbone.js/{version}/backbone-min.': resources.backbone,
-            'dojo/{version}/dojo.': resources.dojo,
-            'ember.js/{version}/ember.min.js': resources.ember.js,
-            'ext-core/{version}/ext-core.': resources.extCore,
-            'jquery/{version}/jquery.': resources.jQuery,
-            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
-            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
-            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
-            'prototype/{version}/prototype.': resources.prototypeJS,
-            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
-            'swfobject/{version}/swfobject.': resources.swfobject,
-            'underscore.js/{version}/underscore.': resources.underscore,
-            'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
-        }
-    },
     // Staticfile CDN
     'cdn.staticfile.org': {
         '/': {
