@@ -157,6 +157,10 @@ var files = {
         // Bootstrap Daterangepicker
         'resources/bootstrap-daterangepicker/2.1.27/daterangepicker.min.jsm': true,
 
+        // Bootstrap Datepicker
+        'resources/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.jsm': true,
+        'resources/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css': true,
+
         // clipboard.js
         'resources/clipboard.js/2.0.6/clipboard.min.jsm': true,
 
