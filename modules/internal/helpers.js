@@ -252,6 +252,8 @@ helpers.determineResourceName = function (filename) {
         return 'Angular Payments';
     case 'angular-stripe-checkout.jsm':
         return 'Angular Stripe Checkout';
+    case 'angular-sanitize.min.js':
+        return 'Angular Sanitize';
     case 'animate.min.css':
         return 'Animate CSS'
     case 'backbone-min.jsm':
@@ -263,9 +265,15 @@ helpers.determineResourceName = function (filename) {
     case 'bootstrap.min.jsm':
         return 'Bootstrap JS';
     case 'daterangepicker.min.jsm':
-        return 'Bootstrap Datepicker';
+        return 'Bootstrap Daterangepicker';
+    case 'bootstrap-datepicker.min.jsm':
+        return 'Bootstrap Datepicker JS';
+    case 'bootstrap-datepicker.standalone.min.css':
+        return 'Bootstrap Datepicker CSS';
     case 'bootstrap-select.min.css':
         return 'Bootstrap-select CSS';
+    case 'bootstrap-select.min.jsm':
+        return 'Bootstrap-select JS';
     case 'bootstrap-slider.min.jsm':
         return 'bootstrap-slider JS';
     case 'bootstrap-slider.min.css':
@@ -316,6 +324,8 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery Validation Plugin';
     case 'jquery.urlive.min.jsm':
         return 'jQuery URLive';
+    case 'jquery.mobile.min.jsm':
+        return 'jQuery Mobile';
     case 'js.cookie.min.jsm':
         return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
@@ -480,6 +490,8 @@ helpers.setLastVersion = function (type, version) {
         else version = '1.0.25'; // > 0.4.3
     } else if (type.includes('/angular-ui-select/0.')) {
         version = '0.20.0';
+    } else if (type.includes('/angular-sanitize/1.')) {
+        version = '1.7.9';
     } else if (type.includes('/angucomplete-alt/3.')) {
         version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {
@@ -498,10 +510,12 @@ helpers.setLastVersion = function (type, version) {
         version = '4.4.1';
     } else if (type.includes('/bootstrap-daterangepicker/2.')) {
         version = '2.1.27';
+    } else if (type.includes('/bootstrap-datepicker/1.')) {
+        version = '1.9.0';
     } else if (type.includes('/bootstrap-slider/10.')) {
         version = '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
-        version = '1.13.14';
+        version = '1.13.17';
     } else if (type.includes('/clipboard.js/2.')) {
         version = '2.0.6';
     } else if (type.includes('/d3/3.')) {
@@ -559,6 +573,8 @@ helpers.setLastVersion = function (type, version) {
         version = '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
         version = '1.8.0';
+    } else if (type.includes('/mobile/1.')) {
+        version = '1.4.5';
     } else if (type.includes('/urlive/1.')) {
         version = '1.1.1';
     } else if (type.includes('/js-cookie/2.')) {
@@ -615,6 +631,8 @@ helpers.setLastVersion = function (type, version) {
         version = '4.5.0';
     } else if (type.includes('/twitter-bootstrap/3.')) {
         version = '3.4.1';
+    } else if (type.includes('/twitter-bootstrap/2.')) {
+        version = '2.3.2';
     } else if (type.includes('/toastr.js/2.')) {
         version = '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {

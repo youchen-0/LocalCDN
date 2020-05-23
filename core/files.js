@@ -131,6 +131,9 @@ var files = {
         // AngularJS ui-select
         'resources/angular-ui-select/0.20.0/select.min.jsm': true,
 
+        // Angular Sanitize
+        'resources/angular-sanitize/1.7.9/angular-sanitize.min.jsm': true,
+
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,
@@ -144,7 +147,8 @@ var files = {
         'resources/bootstrap.css/4.4.1/bootstrap.min.css': true,
 
         // Bootstrap-select
-        'resources/bootstrap-select/1.13.14/bootstrap-select.min.css': true,
+        'resources/bootstrap-select/1.13.17/bootstrap-select.min.css': true,
+        'resources/bootstrap-select/1.13.17/bootstrap-select.min.jsm': true,
 
         // bootstrap-slider
         'resources/bootstrap-slider/10.6.2/bootstrap-slider.min.css': true,
@@ -152,6 +156,10 @@ var files = {
 
         // Bootstrap Daterangepicker
         'resources/bootstrap-daterangepicker/2.1.27/daterangepicker.min.jsm': true,
+
+        // Bootstrap Datepicker
+        'resources/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.jsm': true,
+        'resources/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css': true,
 
         // clipboard.js
         'resources/clipboard.js/2.0.6/clipboard.min.jsm': true,
@@ -237,6 +245,9 @@ var files = {
 
         // jQuery URLive
         'resources/urlive/1.1.1/jquery.urlive.min.jsm': true,
+
+        // jQuery Mobile
+        'resources/jquery-mobile/1.4.5/jquery.mobile.min.jsm': true,
 
         // JavaScript Cookie
         'resources/js-cookie/2.2.1/js.cookie.min.jsm': true,
@@ -325,6 +336,8 @@ var files = {
         'resources/toastr.js/2.1.4/toastr.min.jsm': true,
 
         // Twitter Bootstrap
+        'resources/twitter-bootstrap/2.3.2/js/bootstrap.min.jsm': true,
+        'resources/twitter-bootstrap/2.3.2/css/bootstrap.min.css': true,
         'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': true,
         'resources/twitter-bootstrap/3.4.1/css/bootstrap.min.css': true,
         'resources/twitter-bootstrap/4.5.0/js/bootstrap.min.jsm': true,

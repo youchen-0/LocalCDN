@@ -131,6 +131,11 @@ var resources = {
         'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
         'type': 'application/javascript'
     },
+    // Angular Sanitize
+    'angularSanitize': {
+        'path': 'resources/angular-sanitize/{version}/angular-sanitize.min.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',
@@ -151,15 +156,28 @@ var resources = {
         'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
-    // Bootstrap Datepicker
+    // Bootstrap Daterangepicker
     'bootstrapDaterangepicker': {
         'path': 'resources/bootstrap-daterangepicker/{version}/daterangepicker.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Bootstrap Datepicker
+    'bootstrapDatepickerCSS': {
+        'path': 'resources/bootstrap-datepicker/{version}/css/bootstrap-datepicker.standalone.min.css',
+        'type': 'text/css'
+    },
+    'bootstrapDatepickerJS': {
+        'path': 'resources/bootstrap-datepicker/{version}/js/bootstrap-datepicker.min.jsm',
         'type': 'application/javascript'
     },
     // Bootstrap-select
     'bootstrapSelectCSS': {
         'path': 'resources/bootstrap-select/{version}/css/bootstrap-select.min.css',
         'type': 'text/css'
+    },
+    'bootstrapSelectJS': {
+        'path': 'resources/bootstrap-select/{version}/js/bootstrap-select.min.jsm',
+        'type': 'application/javascript'
     },
     // bootstrap-slider (Slider for Bootstrap 3)
     'bootstrapSliderCSS': {
@@ -287,6 +305,11 @@ var resources = {
     // jQuery Validation Plugin
     'jqueryValidationPlugin': {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
+        'type': 'application/javascript'
+    },
+    // jQuery Mobile
+    'jQueryMobile': {
+        'path': 'resources/jquery-mobile/{version}/jquery.mobile.min.jsm',
         'type': 'application/javascript'
     },
     // js-cookie
