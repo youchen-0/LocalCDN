@@ -135,6 +135,29 @@ stateManager.removeDomainFromWhitelist = function (domain) {
     });
 };
 
+stateManager.addDomainToManipulateDOMlist = function (domain) {
+
+    return new Promise((resolve) => {
+
+        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOMlist;
+        domainsManipulateDOM[domain] = true;
+
+        chrome.storage.local.set({domainsManipulateDOM}, resolve);
+    });
+};
+
+stateManager.removeDomainFromManipulateDOMlist = function (domain) {
+
+    return new Promise((resolve) => {
+
+        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOMlist;
+        delete domainsManipulateDOM[domain];
+
+        chrome.storage.local.set({domainsManipulateDOM}, resolve);
+    });
+};
+
+
 /**
  * Private Methods
  */
