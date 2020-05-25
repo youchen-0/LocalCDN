@@ -28,15 +28,21 @@ var manipulateDOM = {};
 
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
+
+    let initiatorDomain, listedToManipulateDOM;
+    listedToManipulateDOM = stateManager._domainIsWhitelisted(initiatorDomain, "manipulate-dom");
+    initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
+
+
+
     // by Jaap (https://gitlab.com/Jaaap)
     let header = details.responseHeaders.find(h => h.name.toLowerCase() === 'content-type');
 
-    if (header && BrowserType.FIREFOX) {
+    if (header && BrowserType.FIREFOX && listedToManipulateDOM) {
 
-        let mimeType, initiatorDomain, isWhitelisted;
+        let mimeType, isWhitelisted;
 
         mimeType = header.value.replace(/;.*/, '').toLowerCase();
-        initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
         isWhitelisted = stateManager._domainIsWhitelisted(initiatorDomain);
 
         if (!isWhitelisted && mimeType === 'text/html') {
