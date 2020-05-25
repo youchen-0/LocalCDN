@@ -208,7 +208,7 @@ footer {
     background-image: url("../../icons/donate.svg");
 }
 
-#protection-toggle {
+#protection-toggle, #manipulateDOM-toggle {
   -moz-user-select: none;
   cursor: pointer;
   float: right;
@@ -229,7 +229,7 @@ footer {
   height: 0;
 }
 
-.slider {
+.slider, .slider-disabled {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -242,7 +242,7 @@ footer {
   border-radius: 34px;
 }
 
-.slider:before {
+.slider:before, .slider-disabled:before {
   position: absolute;
   content: "";
   height: 12px;
@@ -263,6 +263,11 @@ input:checked + .slider:before {
   -webkit-transform: translateX(10px);
   -ms-transform: translateX(10px);
   transform: translateX(10px);
+}
+
+.slider-disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
 }
 
 /**

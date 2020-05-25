@@ -33,6 +33,7 @@ popup._renderContents = function () {
 
     popup._determineTargetTab()
         .then(popup._determineDomainWhitelistStatus)
+        .then(popup._determineStatusManipulateDOM)
         .then(popup._determineResourceInjections)
         .then(popup._renderContextualContents);
 };
@@ -68,7 +69,7 @@ popup._renderContextualContents = function () {
 
 popup._renderDomainWhitelistPanel = function () {
 
-    let websiteContextElement, protectionToggleElement, domainIndicatorElement;
+    let websiteContextElement, protectionToggleElement, domainIndicatorElement, manipulateDOMToggleElement, manipulateDOMToggleStyle;
 
     websiteContextElement = document.getElementById('website-context');
     protectionToggleElement = document.getElementById('protection-toggle-switch');
@@ -76,22 +77,41 @@ popup._renderDomainWhitelistPanel = function () {
 
     protectionToggleElement.setAttribute('dir', popup._scriptDirection);
     domainIndicatorElement.innerText = popup._domain;
+    manipulateDOMToggleElement = document.getElementById('manipulateDOM-toggle-switch');
+    manipulateDOMToggleStyle = document.getElementById('toggle-switch-manipulateDOM');
+
 
     if (popup._domainIsWhitelisted === true) {
 
-        let enableProtectionTitle = chrome.i18n.getMessage('enableProtectionTitle');
+        manipulateDOMToggleElement.disabled = true;
+        manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
 
+        let enableProtectionTitle = chrome.i18n.getMessage('enableProtectionTitle');
         protectionToggleElement.checked = false;
         protectionToggleElement.addEventListener('click', popup._enableProtection);
         protectionToggleElement.setAttribute('title', enableProtectionTitle);
 
     } else {
 
-        let disableProtectionTitle = chrome.i18n.getMessage('disableProtectionTitle');
+        manipulateDOMToggleElement.disabled = false;
+        manipulateDOMToggleStyle.setAttribute('class', 'slider');
 
+        let disableProtectionTitle = chrome.i18n.getMessage('disableProtectionTitle');
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
         protectionToggleElement.setAttribute('title', disableProtectionTitle);
+
+        if (popup._domainManipulateDOM === true) {
+
+            manipulateDOMToggleElement.checked = true;
+            manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
+
+        } else {
+
+            manipulateDOMToggleElement.checked = false;
+            manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
+
+        }
     }
 
     websiteContextElement.setAttribute('class', 'panel');
@@ -131,6 +151,30 @@ popup._disableProtection = function () {
     });
 };
 
+popup._enableManipulateDOM = function () {
+
+    let message = {
+        'topic': 'manipulateDOM:add-domain',
+        'value': popup._domain
+    };
+
+    chrome.runtime.sendMessage(message, function () {
+        popup._manipulateDOMToggled();
+    });
+};
+
+popup._disableManipulateDOM = function () {
+
+    let message = {
+        'topic': 'manipulateDOM:remove-domain',
+        'value': popup._domain
+    };
+
+    chrome.runtime.sendMessage(message, function () {
+        popup._manipulateDOMToggled();
+    });
+};
+
 popup._determineDomainWhitelistStatus = function () {
 
     return new Promise((resolve) => {
@@ -143,6 +187,23 @@ popup._determineDomainWhitelistStatus = function () {
         chrome.runtime.sendMessage(message, function (response) {
 
             popup._domainIsWhitelisted = response.value;
+            resolve();
+        });
+    });
+};
+
+popup._determineStatusManipulateDOM = function () {
+
+    return new Promise((resolve) => {
+
+        let message = {
+            'topic': 'domain:fetch-is-manipulateDOM',
+            'value': popup._domain
+        };
+
+        chrome.runtime.sendMessage(message, function (response) {
+
+            popup._domainManipulateDOM = response.value;
             resolve();
         });
     });
@@ -373,6 +434,14 @@ popup._onDonationButtonClicked = function () {
 };
 
 popup._onProtectionToggled = function () {
+
+    let bypassCache = (typeof browser === 'undefined');
+
+    chrome.tabs.reload(popup._targetTab.id, {bypassCache});
+    popup._close();
+};
+
+popup._manipulateDOMToggled = function () {
 
     let bypassCache = (typeof browser === 'undefined');
 
