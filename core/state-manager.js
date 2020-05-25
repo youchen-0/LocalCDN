@@ -281,14 +281,19 @@ stateManager._removeIconBadgeFromTab = function (tab) {
     stateManager._clearBadgeText(tab.id);
 };
 
-stateManager._domainIsWhitelisted = function (domain) {
+stateManager._domainIsWhitelisted = function (domain, listname = "") {
 
     if (domain !== null) {
 
         let whitelistRecord, isWhitelisted;
 
-        whitelistRecord = requestAnalyzer.whitelistedDomains[domain];
-        isWhitelisted = Boolean(whitelistRecord);
+        if (listname === "manipulate-dom") {
+            whitelistRecord = requestAnalyzer.manipulateDOMDomains[domain];
+            isWhitelisted = Boolean(whitelistRecord);
+        } else {
+            whitelistRecord = requestAnalyzer.whitelistedDomains[domain];
+            isWhitelisted = Boolean(whitelistRecord);
+        }
 
         return isWhitelisted;
     }
