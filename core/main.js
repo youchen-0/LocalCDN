@@ -34,7 +34,8 @@ main._initializeSettings = function () {
         [Setting.HIDE_RELEASE_NOTES]: false,
         [Setting.STRIP_METADATA]: true,
         [Setting.WHITELISTED_DOMAINS]: {},
-        [Setting.LOGGING]: false
+        [Setting.LOGGING]: false,
+        [Setting.DOMAINS_MANIPULATE_DOM]: {}
     };
 
     chrome.storage.local.get(settingDefaults, function (items) {
