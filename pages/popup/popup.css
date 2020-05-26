@@ -130,6 +130,15 @@ footer {
     border-bottom: none;
 }
 
+#get-stats-btn {
+    cursor: pointer;
+}
+
+#get-stats-btn:hover {
+    color: #a3a3a3;
+    text-decoration: underline;
+}
+
 /**
  * Icons
  */

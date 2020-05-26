@@ -316,7 +316,7 @@ popup._createInjectionGroupHeaderElement = function (source, cdn) {
 
 popup._createInjectionGroupElement = function (source, cdn) {
 
-    let injectionGroupElement;
+    let injectionGroupElement, count, oversized;
 
     // Filter duplicates
     let bundle = [];
@@ -328,8 +328,8 @@ popup._createInjectionGroupElement = function (source, cdn) {
     injectionGroupElement = document.createElement('ul');
     injectionGroupElement.setAttribute('class', 'sublist');
 
-    let count = 0;
-    let oversized = false;
+    count = 0;
+    oversized = false;
     for (let injection of filtered) {
 
         if(count < 3){
@@ -356,14 +356,17 @@ popup._createInjectionElement = function (injection, counter = 0, oversized = fa
     injectionElement.setAttribute('class', 'sublist-item');
 
     if(oversized) {
-        nameTextNode = document.createTextNode(`... and ${counter} more`);
-        injectionElement.setAttribute('id', 'get-stats-btn');
+        let moreInjections = document.createElement('span');
 
-        injectionElement.addEventListener('mouseup', function() {
+        nameTextNode = document.createTextNode(`... and ${counter} more`);
+        moreInjections.setAttribute('id', 'get-stats-btn');
+
+        moreInjections.addEventListener('mouseup', function() {
             popup._onMoreInjectionsButton();
         }, false);
 
-        injectionElement.appendChild(nameTextNode);
+        moreInjections.appendChild(nameTextNode);
+        injectionElement.appendChild(moreInjections);
 
         return injectionElement;
     }
@@ -488,7 +491,8 @@ popup._close = function () {
 
 popup._onMoreInjectionsButton = function () {
 
-    //statisticData
+    // Store current injections in extension storage.
+    // Maybe a local statistic/diagram will be implemented later.
     chrome.storage.local.set({
         [Setting.STATISTIC_DATA]: statisticData
     });
@@ -498,8 +502,7 @@ popup._onMoreInjectionsButton = function () {
         'active': true
     });
 
-    popup._close;
-
+    popup._close();
 };
 
 
