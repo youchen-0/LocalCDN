@@ -423,7 +423,7 @@ popup._onDonationButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
 
         chrome.tabs.create({
-            'url': 'https://localcdn.de/donate/',
+            'url': chrome.extension.getURL('pages/donate/donate.html'),
             'active': (event.button === 0)
         });
     }
