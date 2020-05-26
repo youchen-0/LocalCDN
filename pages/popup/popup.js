@@ -83,13 +83,14 @@ popup._renderDomainWhitelistPanel = function () {
 
     if (popup._domainIsWhitelisted === true) {
 
-        manipulateDOMToggleElement.disabled = true;
-        manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
-
         let enableProtectionTitle = chrome.i18n.getMessage('enableProtectionTitle');
+
+        manipulateDOMToggleElement.disabled = true;
         protectionToggleElement.checked = false;
-        protectionToggleElement.addEventListener('click', popup._enableProtection);
+
+        manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
         protectionToggleElement.setAttribute('title', enableProtectionTitle);
+        protectionToggleElement.addEventListener('click', popup._enableProtection);
 
     } else {
 
@@ -274,6 +275,8 @@ popup._createInjectionOverviewElement = function (groupedInjections) {
     let injectionOverviewElement = document.createElement('ul');
     injectionOverviewElement.setAttribute('class', 'list');
 
+    statisticData = groupedInjections;
+
     for (let source in groupedInjections) {
 
         let injectionGroupHeaderElement, injectionGroupElement, cdn;
@@ -325,20 +328,45 @@ popup._createInjectionGroupElement = function (source, cdn) {
     injectionGroupElement = document.createElement('ul');
     injectionGroupElement.setAttribute('class', 'sublist');
 
+    let count = 0;
+    let oversized = false;
     for (let injection of filtered) {
-        let injectionElement = popup._createInjectionElement(injection);
+
+        if(count < 3){
+            let injectionElement = popup._createInjectionElement(injection);
+            injectionGroupElement.appendChild(injectionElement);
+        } else {
+            oversized = true;
+        }
+        count++;
+    }
+    if (oversized) {
+        let injectionElement = popup._createInjectionElement(filtered, count-3, true);
         injectionGroupElement.appendChild(injectionElement);
     }
-
+    count = 0;
     return injectionGroupElement;
 };
 
-popup._createInjectionElement = function (injection) {
+popup._createInjectionElement = function (injection, counter = 0, oversized = false) {
 
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
 
     injectionElement = document.createElement('li');
     injectionElement.setAttribute('class', 'sublist-item');
+
+    if(oversized) {
+        nameTextNode = document.createTextNode(`... and ${counter} more`);
+        injectionElement.setAttribute('id', 'get-stats-btn');
+
+        injectionElement.addEventListener('mouseup', function() {
+            popup._onMoreInjectionsButton();
+        }, false);
+
+        injectionElement.appendChild(nameTextNode);
+
+        return injectionElement;
+    }
 
     filename = helpers.extractFilenameFromPath(injection.path);
 
@@ -364,21 +392,22 @@ popup._createInjectionElement = function (injection) {
     return injectionElement;
 };
 
-popup._close = function () {
+popup._filterDuplicates = function(array, key) {
+    /**
+     * Function to remove duplicates from an array, depending on 'key'.
+     * Ignore empty values of the 'key'
+     *
+     */
 
-    chrome.runtime.getPlatformInfo(function (information) {
+    let filtered = array
+        .map(e => e[key])
+        .map((value, index, newArray) => (value != '') ? (newArray.indexOf(value) === index && index) : index )
+        .filter(e => array[e])
+        .map(e => array[e]);
 
-        if (information.os === chrome.runtime.PlatformOs.ANDROID) {
-
-            chrome.tabs.getCurrent(function (tab) {
-                chrome.tabs.remove(tab.id);
-            });
-
-        } else {
-            window.close();
-        }
-    });
+    return filtered;
 };
+
 
 /**
  * Event Handlers
@@ -441,24 +470,41 @@ popup._onToggled = function () {
     popup._close();
 };
 
-popup._filterDuplicates = function(array, key) {
-    /**
-     * Function to remove duplicates from an array, depending on 'key'.
-     * Ignore empty values of the 'key'
-     *
-     */
+popup._close = function () {
 
-    let filtered = array
-        .map(e => e[key])
-        .map((value, index, newArray) => (value != '') ? (newArray.indexOf(value) === index && index) : index )
-        .filter(e => array[e])
-        .map(e => array[e]);
+    chrome.runtime.getPlatformInfo(function (information) {
 
-    return filtered;
+        if (information.os === chrome.runtime.PlatformOs.ANDROID) {
+
+            chrome.tabs.getCurrent(function (tab) {
+                chrome.tabs.remove(tab.id);
+            });
+
+        } else {
+            window.close();
+        }
+    });
 };
+
+popup._onMoreInjectionsButton = function () {
+
+    //statisticData
+    chrome.storage.local.set({
+        [Setting.STATISTIC_DATA]: statisticData
+    });
+
+    chrome.tabs.create({
+        'url': chrome.extension.getURL('pages/statistics/statistics.html'),
+        'active': true
+    });
+
+    popup._close;
+
+};
+
 
 /**
  * Initializations
  */
-
+let statisticData;
 document.addEventListener('DOMContentLoaded', popup._onDocumentLoaded);
