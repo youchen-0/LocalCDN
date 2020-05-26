@@ -135,7 +135,7 @@ popup._enableProtection = function () {
     };
 
     chrome.runtime.sendMessage(message, function () {
-        popup._onProtectionToggled();
+        popup._onToggled();
     });
 };
 
@@ -147,7 +147,7 @@ popup._disableProtection = function () {
     };
 
     chrome.runtime.sendMessage(message, function () {
-        popup._onProtectionToggled();
+        popup._onToggled();
     });
 };
 
@@ -159,7 +159,7 @@ popup._enableManipulateDOM = function () {
     };
 
     chrome.runtime.sendMessage(message, function () {
-        popup._manipulateDOMToggled();
+        popup._onToggled();
     });
 };
 
@@ -171,7 +171,7 @@ popup._disableManipulateDOM = function () {
     };
 
     chrome.runtime.sendMessage(message, function () {
-        popup._manipulateDOMToggled();
+        popup._onToggled();
     });
 };
 
@@ -433,15 +433,7 @@ popup._onDonationButtonClicked = function () {
     }
 };
 
-popup._onProtectionToggled = function () {
-
-    let bypassCache = (typeof browser === 'undefined');
-
-    chrome.tabs.reload(popup._targetTab.id, {bypassCache});
-    popup._close();
-};
-
-popup._manipulateDOMToggled = function () {
+popup._onToggled = function () {
 
     let bypassCache = (typeof browser === 'undefined');
 
