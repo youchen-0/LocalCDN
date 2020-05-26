@@ -194,7 +194,7 @@ stateManager._updateTab = function (details) {
     let tabDomain, domainIsWhitelisted, frameIdentifier, tabIdentifier;
 
     tabDomain = helpers.extractDomainFromUrl(details.url, true);
-    domainIsWhitelisted = stateManager._domainIsWhitelisted(tabDomain);
+    domainIsWhitelisted = stateManager._domainIsListed(tabDomain);
 
     frameIdentifier = details.frameId;
     tabIdentifier = details.tabId;
@@ -281,7 +281,7 @@ stateManager._removeIconBadgeFromTab = function (tab) {
     stateManager._clearBadgeText(tab.id);
 };
 
-stateManager._domainIsWhitelisted = function (domain, listname = "") {
+stateManager._domainIsListed = function (domain, listname = "") {
 
     if (domain !== null) {
 

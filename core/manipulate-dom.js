@@ -30,10 +30,8 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
 
     let initiatorDomain, listedToManipulateDOM;
-    listedToManipulateDOM = stateManager._domainIsWhitelisted(initiatorDomain, "manipulate-dom");
+    listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, "manipulate-dom");
     initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
-
-
 
     // by Jaap (https://gitlab.com/Jaaap)
     let header = details.responseHeaders.find(h => h.name.toLowerCase() === 'content-type');
@@ -43,7 +41,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
         let mimeType, isWhitelisted;
 
         mimeType = header.value.replace(/;.*/, '').toLowerCase();
-        isWhitelisted = stateManager._domainIsWhitelisted(initiatorDomain);
+        isWhitelisted = stateManager._domainIsListed(initiatorDomain);
 
         if (!isWhitelisted && mimeType === 'text/html') {
 
