@@ -48,7 +48,6 @@ popup._renderNonContextualContents = function () {
     optionsButtonElement = document.getElementById('options-button');
     donationButtonElement = document.getElementById('donate-button');
     infoButtonLabel = document.getElementById('manipulateDOM-indicator');
-    infoButtonSVG = document.getElementById('info-button-svg');
 
     versionLabelElement.innerText = popup._version;
     counterElement.innerText = helpers.formatNumber(popup._amountInjected);
@@ -57,7 +56,6 @@ popup._renderNonContextualContents = function () {
     optionsButtonElement.addEventListener('mouseup', popup._onOptionsButtonClicked);
     donationButtonElement.addEventListener('mouseup', popup._onDonationButtonClicked);
     infoButtonLabel.addEventListener('mouseup', popup._onInfoButtonClicked);
-    infoButtonSVG.addEventListener('mouseup', popup._onInfoButtonClicked);
 };
 
 popup._renderContextualContents = function () {
