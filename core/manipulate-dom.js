@@ -30,8 +30,8 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
 
     let initiatorDomain, listedToManipulateDOM;
-    listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, "manipulate-dom");
     initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
+    listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, "manipulate-dom");
 
     // by Jaap (https://gitlab.com/Jaaap)
     let header = details.responseHeaders.find(h => h.name.toLowerCase() === 'content-type');

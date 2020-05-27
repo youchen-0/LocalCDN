@@ -281,7 +281,7 @@ stateManager._removeIconBadgeFromTab = function (tab) {
     stateManager._clearBadgeText(tab.id);
 };
 
-stateManager._domainIsListed = function (domain, listname = "") {
+stateManager._domainIsListed = function (domain, listname) {
 
     if (domain !== null) {
 
