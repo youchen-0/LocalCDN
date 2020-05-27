@@ -279,6 +279,24 @@ input:checked + .slider:before {
     cursor: not-allowed;
 }
 
+#manipulateDOM-indicator {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#manipulateDOM-indicator:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+#info-button-svg {
+    background-image: url("../../icons/info-dark.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 15px;
+    margin-left: 5px;
+}
+
 /**
  * Links
  */
@@ -443,6 +461,10 @@ input:checked + .slider:before {
 
     .slider:before {
 		background-color: #323232;
+    }
+
+    #info-button-svg {
+        background-image: url("../../icons/info-light.svg");
     }
 
     /**

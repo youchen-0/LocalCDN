@@ -40,13 +40,15 @@ popup._renderContents = function () {
 
 popup._renderNonContextualContents = function () {
 
-    let versionLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement;
+    let versionLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel, infoButtonSVG;
 
     versionLabelElement = document.getElementById('version-label');
     counterElement = document.getElementById('injection-counter');
     testingUtilityLinkElement = document.getElementById('testing-utility-link');
     optionsButtonElement = document.getElementById('options-button');
     donationButtonElement = document.getElementById('donate-button');
+    infoButtonLabel = document.getElementById('manipulateDOM-indicator');
+    infoButtonSVG = document.getElementById('info-button-svg');
 
     versionLabelElement.innerText = popup._version;
     counterElement.innerText = helpers.formatNumber(popup._amountInjected);
@@ -54,6 +56,8 @@ popup._renderNonContextualContents = function () {
     testingUtilityLinkElement.addEventListener('mouseup', popup._onTestingUtilityLinkClicked);
     optionsButtonElement.addEventListener('mouseup', popup._onOptionsButtonClicked);
     donationButtonElement.addEventListener('mouseup', popup._onDonationButtonClicked);
+    infoButtonLabel.addEventListener('mouseup', popup._onInfoButtonClicked);
+    infoButtonSVG.addEventListener('mouseup', popup._onInfoButtonClicked);
 };
 
 popup._renderContextualContents = function () {
@@ -503,6 +507,20 @@ popup._onMoreInjectionsButton = function () {
     });
 
     popup._close();
+};
+
+popup._onInfoButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+
+        chrome.tabs.create({
+            'url': chrome.extension.getURL('pages/help/help.html'),
+            'active': (event.button === 0)
+        });
+    }
+
+    if (event.button === 0) {
+        window.close();
+    }
 };
 
 
