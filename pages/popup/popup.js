@@ -472,7 +472,9 @@ popup._onToggled = function () {
     let bypassCache = (typeof browser === 'undefined');
 
     chrome.tabs.reload(popup._targetTab.id, {bypassCache});
-    popup._close();
+    setTimeout(function () {
+        popup._close();
+    }, 300);
 };
 
 popup._close = function () {
