@@ -29,17 +29,28 @@ header {
 }
 
 .panel:not(:last-child) {
-    border-bottom: 1px solid #d8d8d8;
+    padding: 10px 8px 0px 8px;
 }
 
 .subpanel {
     overflow: hidden;
+    padding-bottom: 10px;
 }
 
 footer {
     overflow: hidden;
     padding: 8px;
 }
+
+#more-injections-section {
+    padding: 10px 8px;
+    font-weight: bold;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* #more-injections-section > p {
+    padding: 0px;
+} */
 
 /**
  * Fonts
@@ -117,6 +128,7 @@ footer {
 
 .sublist:last-child {
     border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0px;
 }
 
 .sublist-item {
@@ -130,11 +142,13 @@ footer {
     border-bottom: none;
 }
 
-#get-stats-btn {
+#get-more-injections-btn {
     cursor: pointer;
+    background-color: #f0f0f0;
+    color: #737373;
 }
 
-#get-stats-btn:hover {
+#get-more-injections-btn:hover {
     color: #a3a3a3;
     text-decoration: underline;
 }

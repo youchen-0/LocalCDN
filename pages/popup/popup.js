@@ -18,6 +18,7 @@
  * Popup
  */
 
+let counterFrameworks = 0;
 var popup = {};
 
 /**
@@ -284,12 +285,13 @@ popup._createInjectionOverviewElement = function (groupedInjections) {
         let injectionGroupHeaderElement, injectionGroupElement, cdn;
 
         cdn = groupedInjections[source];
+        if (counterFrameworks < 3) {
+            injectionGroupHeaderElement = popup._createInjectionGroupHeaderElement(source, cdn);
+            injectionGroupElement = popup._createInjectionGroupElement(source, cdn);
 
-        injectionGroupHeaderElement = popup._createInjectionGroupHeaderElement(source, cdn);
-        injectionGroupElement = popup._createInjectionGroupElement(source, cdn);
-
-        injectionOverviewElement.appendChild(injectionGroupHeaderElement);
-        injectionOverviewElement.appendChild(injectionGroupElement);
+            injectionOverviewElement.appendChild(injectionGroupHeaderElement);
+            injectionOverviewElement.appendChild(injectionGroupElement);
+        }
     }
 
     return injectionOverviewElement;
@@ -330,48 +332,50 @@ popup._createInjectionGroupElement = function (source, cdn) {
     injectionGroupElement = document.createElement('ul');
     injectionGroupElement.setAttribute('class', 'sublist');
 
-    count = 0;
     oversized = false;
     for (let injection of filtered) {
 
-        if(count < 3){
+        if(counterFrameworks < 3){
             let injectionElement = popup._createInjectionElement(injection);
             injectionGroupElement.appendChild(injectionElement);
         } else {
             oversized = true;
         }
-        count++;
+        counterFrameworks++;
     }
     if (oversized) {
-        let injectionElement = popup._createInjectionElement(filtered, count-3, true);
-        injectionGroupElement.appendChild(injectionElement);
+        let injectionElement = popup._createInjectionElement(filtered, true);
+        let moreInjectionsSection = document.getElementById('more-injections-section');
+        moreInjectionsSection.appendChild(injectionElement);
     }
-    count = 0;
     return injectionGroupElement;
 };
 
-popup._createInjectionElement = function (injection, counter = 0, oversized = false) {
+popup._createInjectionElement = function (injection, oversized = false) {
 
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
 
-    injectionElement = document.createElement('li');
-    injectionElement.setAttribute('class', 'sublist-item');
 
     if(oversized) {
+
+        let lastElement = document.createElement('p');
         let moreInjections = document.createElement('span');
 
-        nameTextNode = document.createTextNode(`... and ${counter} more`);
-        moreInjections.setAttribute('id', 'get-stats-btn');
+        nameTextNode = document.createTextNode(`... and more`);
+        moreInjections.setAttribute('id', 'get-more-injections-btn');
 
         moreInjections.addEventListener('mouseup', function() {
             popup._onMoreInjectionsButton();
         }, false);
 
         moreInjections.appendChild(nameTextNode);
-        injectionElement.appendChild(moreInjections);
+        lastElement.appendChild(moreInjections);
 
-        return injectionElement;
+        return lastElement;
     }
+
+    injectionElement = document.createElement('li');
+    injectionElement.setAttribute('class', 'sublist-item');
 
     filename = helpers.extractFilenameFromPath(injection.path);
 
@@ -454,6 +458,7 @@ popup._onOptionsButtonClicked = function () {
 };
 
 popup._onDonationButtonClicked = function () {
+
     if (event.button === 0 || event.button === 1) {
 
         chrome.tabs.create({
