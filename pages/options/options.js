@@ -32,7 +32,7 @@ options._renderContents = function () {
 
     options._determineOptionValues()
         .then(options._renderOptionsPanel);
-// console.log(!translationComplete);
+
     if (!translationComplete) {
         options._renderLocaleNotice();
     }
