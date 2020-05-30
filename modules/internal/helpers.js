@@ -105,7 +105,7 @@ helpers.normalizeDomain = function (domain) {
 
 helpers.extractDomainFromUrl = function (url = '', normalize) {
 
-    if (!url.startsWith('http')) {
+    if (/^(?!(http[s]?|file):\/\/).*/.test(url)) {
         return null;
     }
 
