@@ -69,7 +69,9 @@ const Setting = {
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
     'WHITELISTED_DOMAINS': 'whitelistedDomains',
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
-    'LOGGING': 'enableLogging'
+    'LOGGING': 'enableLogging',
+    'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
+    'STATISTIC_DATA': 'statisticData'
 };
 
 const WebRequest = {

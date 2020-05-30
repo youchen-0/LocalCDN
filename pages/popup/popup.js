@@ -18,6 +18,9 @@
  * Popup
  */
 
+let counterFrameworks = 0;
+let counterCDNs = 0;
+let oversized = false;
 var popup = {};
 
 /**
@@ -33,19 +36,21 @@ popup._renderContents = function () {
 
     popup._determineTargetTab()
         .then(popup._determineDomainWhitelistStatus)
+        .then(popup._determineStatusManipulateDOM)
         .then(popup._determineResourceInjections)
         .then(popup._renderContextualContents);
 };
 
 popup._renderNonContextualContents = function () {
 
-    let versionLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement;
+    let versionLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel, infoButtonSVG;
 
     versionLabelElement = document.getElementById('version-label');
     counterElement = document.getElementById('injection-counter');
     testingUtilityLinkElement = document.getElementById('testing-utility-link');
     optionsButtonElement = document.getElementById('options-button');
     donationButtonElement = document.getElementById('donate-button');
+    infoButtonLabel = document.getElementById('manipulateDOM-indicator');
 
     versionLabelElement.innerText = popup._version;
     counterElement.innerText = helpers.formatNumber(popup._amountInjected);
@@ -53,6 +58,7 @@ popup._renderNonContextualContents = function () {
     testingUtilityLinkElement.addEventListener('mouseup', popup._onTestingUtilityLinkClicked);
     optionsButtonElement.addEventListener('mouseup', popup._onOptionsButtonClicked);
     donationButtonElement.addEventListener('mouseup', popup._onDonationButtonClicked);
+    infoButtonLabel.addEventListener('mouseup', popup._onInfoButtonClicked);
 };
 
 popup._renderContextualContents = function () {
@@ -61,14 +67,15 @@ popup._renderContextualContents = function () {
         popup._renderDomainWhitelistPanel();
     }
 
-    if (Object.keys(popup._resourceInjections).length > 0) {
+    counterCDNs = Object.keys(popup._resourceInjections).length;
+    if (counterCDNs > 0) {
         popup._renderInjectionPanel(popup._resourceInjections);
     }
 };
 
 popup._renderDomainWhitelistPanel = function () {
 
-    let websiteContextElement, protectionToggleElement, domainIndicatorElement;
+    let websiteContextElement, protectionToggleElement, domainIndicatorElement, manipulateDOMToggleElement, manipulateDOMToggleStyle;
 
     websiteContextElement = document.getElementById('website-context');
     protectionToggleElement = document.getElementById('protection-toggle-switch');
@@ -76,22 +83,42 @@ popup._renderDomainWhitelistPanel = function () {
 
     protectionToggleElement.setAttribute('dir', popup._scriptDirection);
     domainIndicatorElement.innerText = popup._domain;
+    manipulateDOMToggleElement = document.getElementById('manipulateDOM-toggle-switch');
+    manipulateDOMToggleStyle = document.getElementById('toggle-switch-manipulateDOM');
+
 
     if (popup._domainIsWhitelisted === true) {
 
         let enableProtectionTitle = chrome.i18n.getMessage('enableProtectionTitle');
 
+        manipulateDOMToggleElement.disabled = true;
         protectionToggleElement.checked = false;
-        protectionToggleElement.addEventListener('click', popup._enableProtection);
+
+        manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
         protectionToggleElement.setAttribute('title', enableProtectionTitle);
+        protectionToggleElement.addEventListener('click', popup._enableProtection);
 
     } else {
 
-        let disableProtectionTitle = chrome.i18n.getMessage('disableProtectionTitle');
+        manipulateDOMToggleElement.disabled = false;
+        manipulateDOMToggleStyle.setAttribute('class', 'slider');
 
+        let disableProtectionTitle = chrome.i18n.getMessage('disableProtectionTitle');
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
         protectionToggleElement.setAttribute('title', disableProtectionTitle);
+
+        if (popup._domainManipulateDOM === true) {
+
+            manipulateDOMToggleElement.checked = true;
+            manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
+
+        } else {
+
+            manipulateDOMToggleElement.checked = false;
+            manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
+
+        }
     }
 
     websiteContextElement.setAttribute('class', 'panel');
@@ -115,7 +142,7 @@ popup._enableProtection = function () {
     };
 
     chrome.runtime.sendMessage(message, function () {
-        popup._onProtectionToggled();
+        popup._onToggled();
     });
 };
 
@@ -127,7 +154,31 @@ popup._disableProtection = function () {
     };
 
     chrome.runtime.sendMessage(message, function () {
-        popup._onProtectionToggled();
+        popup._onToggled();
+    });
+};
+
+popup._enableManipulateDOM = function () {
+
+    let message = {
+        'topic': 'manipulateDOM:add-domain',
+        'value': popup._domain
+    };
+
+    chrome.runtime.sendMessage(message, function () {
+        popup._onToggled();
+    });
+};
+
+popup._disableManipulateDOM = function () {
+
+    let message = {
+        'topic': 'manipulateDOM:remove-domain',
+        'value': popup._domain
+    };
+
+    chrome.runtime.sendMessage(message, function () {
+        popup._onToggled();
     });
 };
 
@@ -143,6 +194,23 @@ popup._determineDomainWhitelistStatus = function () {
         chrome.runtime.sendMessage(message, function (response) {
 
             popup._domainIsWhitelisted = response.value;
+            resolve();
+        });
+    });
+};
+
+popup._determineStatusManipulateDOM = function () {
+
+    return new Promise((resolve) => {
+
+        let message = {
+            'topic': 'domain:fetch-is-manipulateDOM',
+            'value': popup._domain
+        };
+
+        chrome.runtime.sendMessage(message, function (response) {
+
+            popup._domainManipulateDOM = response.value;
             resolve();
         });
     });
@@ -213,19 +281,27 @@ popup._createInjectionOverviewElement = function (groupedInjections) {
     let injectionOverviewElement = document.createElement('ul');
     injectionOverviewElement.setAttribute('class', 'list');
 
+    statisticData = groupedInjections;
+
     for (let source in groupedInjections) {
 
         let injectionGroupHeaderElement, injectionGroupElement, cdn;
 
         cdn = groupedInjections[source];
+        if (counterFrameworks < 3) {
+            injectionGroupHeaderElement = popup._createInjectionGroupHeaderElement(source, cdn);
+            injectionGroupElement = popup._createInjectionGroupElement(source, cdn);
 
-        injectionGroupHeaderElement = popup._createInjectionGroupHeaderElement(source, cdn);
-        injectionGroupElement = popup._createInjectionGroupElement(source, cdn);
-
-        injectionOverviewElement.appendChild(injectionGroupHeaderElement);
-        injectionOverviewElement.appendChild(injectionGroupElement);
+            injectionOverviewElement.appendChild(injectionGroupHeaderElement);
+            injectionOverviewElement.appendChild(injectionGroupElement);
+        } else {
+            oversized = true;
+        }
     }
 
+    if (oversized) {
+        injectionOverviewElement.append(popup._appendMoreButton());
+    }
     return injectionOverviewElement;
 };
 
@@ -265,16 +341,26 @@ popup._createInjectionGroupElement = function (source, cdn) {
     injectionGroupElement.setAttribute('class', 'sublist');
 
     for (let injection of filtered) {
-        let injectionElement = popup._createInjectionElement(injection);
-        injectionGroupElement.appendChild(injectionElement);
+
+        if(counterFrameworks < 3){
+            let injectionElement = popup._createInjectionElement(injection);
+            injectionGroupElement.appendChild(injectionElement);
+        } else {
+            oversized = true;
+        }
+        counterFrameworks++;
     }
 
     return injectionGroupElement;
 };
 
-popup._createInjectionElement = function (injection) {
+popup._createInjectionElement = function (injection, oversized = false) {
 
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
+
+    if(oversized) {
+        return popup._appendMoreButton();
+    }
 
     injectionElement = document.createElement('li');
     injectionElement.setAttribute('class', 'sublist-item');
@@ -303,21 +389,39 @@ popup._createInjectionElement = function (injection) {
     return injectionElement;
 };
 
-popup._close = function () {
+popup._appendMoreButton = function() {
 
-    chrome.runtime.getPlatformInfo(function (information) {
+    let lastElement = document.createElement('p');
+    let moreInjections = document.createElement('span');
+    let nameTextNode = document.createTextNode(`... and more`);
 
-        if (information.os === chrome.runtime.PlatformOs.ANDROID) {
+    moreInjections.setAttribute('id', 'get-more-injections-btn');
 
-            chrome.tabs.getCurrent(function (tab) {
-                chrome.tabs.remove(tab.id);
-            });
+    moreInjections.addEventListener('mouseup', function() {
+        popup._onMoreInjectionsButton();
+    }, false);
 
-        } else {
-            window.close();
-        }
-    });
+    moreInjections.appendChild(nameTextNode);
+    lastElement.appendChild(moreInjections);
+    return lastElement;
+}
+
+popup._filterDuplicates = function(array, key) {
+    /**
+     * Function to remove duplicates from an array, depending on 'key'.
+     * Ignore empty values of the 'key'
+     *
+     */
+
+    let filtered = array
+        .map(e => e[key])
+        .map((value, index, newArray) => (value != '') ? (newArray.indexOf(value) === index && index) : index )
+        .filter(e => array[e])
+        .map(e => array[e]);
+
+    return filtered;
 };
+
 
 /**
  * Event Handlers
@@ -359,10 +463,11 @@ popup._onOptionsButtonClicked = function () {
 };
 
 popup._onDonationButtonClicked = function () {
+
     if (event.button === 0 || event.button === 1) {
 
         chrome.tabs.create({
-            'url': 'https://localcdn.de/donate/',
+            'url': chrome.extension.getURL('pages/donate/donate.html'),
             'active': (event.button === 0)
         });
     }
@@ -372,32 +477,65 @@ popup._onDonationButtonClicked = function () {
     }
 };
 
-popup._onProtectionToggled = function () {
+popup._onToggled = function () {
 
     let bypassCache = (typeof browser === 'undefined');
 
     chrome.tabs.reload(popup._targetTab.id, {bypassCache});
+    setTimeout(function () {
+        popup._close();
+    }, 200);
+};
+
+popup._close = function () {
+
+    chrome.runtime.getPlatformInfo(function (information) {
+
+        if (information.os === chrome.runtime.PlatformOs.ANDROID) {
+
+            chrome.tabs.getCurrent(function (tab) {
+                chrome.tabs.remove(tab.id);
+            });
+
+        } else {
+            window.close();
+        }
+    });
+};
+
+popup._onMoreInjectionsButton = function () {
+
+    // Store current injections in extension storage.
+    // Maybe a local statistic/diagram will be implemented later.
+    chrome.storage.local.set({
+        [Setting.STATISTIC_DATA]: statisticData
+    });
+
+    chrome.tabs.create({
+        'url': chrome.extension.getURL('pages/statistics/statistics.html'),
+        'active': true
+    });
+
     popup._close();
 };
 
-popup._filterDuplicates = function(array, key) {
-    /**
-     * Function to remove duplicates from an array, depending on 'key'.
-     * Ignore empty values of the 'key'
-     *
-     */
+popup._onInfoButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
 
-    let filtered = array
-        .map(e => e[key])
-        .map((value, index, newArray) => (value != '') ? (newArray.indexOf(value) === index && index) : index )
-        .filter(e => array[e])
-        .map(e => array[e]);
+        chrome.tabs.create({
+            'url': chrome.extension.getURL('pages/help/help.html'),
+            'active': (event.button === 0)
+        });
+    }
 
-    return filtered;
+    if (event.button === 0) {
+        window.close();
+    }
 };
+
 
 /**
  * Initializations
  */
-
+let statisticData;
 document.addEventListener('DOMContentLoaded', popup._onDocumentLoaded);

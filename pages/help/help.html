@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LocalCDN | Help</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../welcome/welcome.css">
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <img src="../images/logo.svg" alt="Decentraleyes" class="logo"/>
+        <div class="container">
+            <h1>Help</h1>
+            <div class="notice">
+                <div class="subtle-hint"><div class="topic-label">Introduction</div>
+                    <p>LocalCDN is a web browser extension for your Firefox that emulates CDNs (Content Delivery Networks). It intercepts the network traffic between a website and remote CDNs, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required.</p>
+                    <p>For more information, please read this <a href="https://git.synz.io/Synzvato/decentraleyes/wikis/Simple-Introduction" rel="nofollow noopener noreferrer">basic introduction from Decentraleyes</a> or our <a href="https://codeberg.org/nobody/LocalCDN/wiki" rel="nofollow noopener noreferrer">Wiki pages</a>.</p>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="subtle-hint"><div class="topic-label color-purple">FAQ: What is "Tweak HTML source code"?</div>
+                    <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these options.</p>
+                    <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="subtle-hint"><div class="topic-label">FAQ: Some websites look strange or are not easy to use</div>
+                    <p>This is caused by a policy of the same origin and is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN.</p>
+                    <p>If the layout of a website is incorrect or cannot be operated, then it is usually due to this policy, even though the add-on works flawlessly. Unfortunately there is no solution for this at the moment.</p>
+                    <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again. to display the umlauts correctly.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

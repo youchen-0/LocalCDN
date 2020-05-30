@@ -106,5 +106,9 @@
   "featureBreaksWebsitesButton": {
     "message": "Disabilita",
     "description": "Disable"
+  },
+  "labelManipulateDOM": {
+    "message": "",
+    "description": "Tweak HTML source code"
   }
 }

@@ -105,6 +105,10 @@ helpers.normalizeDomain = function (domain) {
 
 helpers.extractDomainFromUrl = function (url = '', normalize) {
 
+    if (!url.startsWith('http')) {
+        return null;
+    }
+
     let extractedDomain;
 
     try {

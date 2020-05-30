@@ -172,6 +172,12 @@ requestAnalyzer._applyWhitelistedDomains = function () {
         requestAnalyzer.whitelistedDomains = items.whitelistedDomains || {};
     });
 };
+requestAnalyzer._applyManipulateDOMDomains = function () {
+
+    chrome.storage.local.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
+        requestAnalyzer.manipulateDOMDomains = items.manipulateDOMDomains || {};
+    });
+};
 
 /**
  * Initializations
@@ -180,8 +186,11 @@ requestAnalyzer._applyWhitelistedDomains = function () {
 requestAnalyzer.whitelistedDomains = {};
 requestAnalyzer._applyWhitelistedDomains();
 
+requestAnalyzer.domainsManipulateDOMlist = {};
+requestAnalyzer._applyManipulateDOMDomains();
 /**
  * Event Handlers
  */
 
 chrome.storage.onChanged.addListener(requestAnalyzer._applyWhitelistedDomains);
+chrome.storage.onChanged.addListener(requestAnalyzer._applyManipulateDOMDomains);

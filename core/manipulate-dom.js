@@ -28,16 +28,20 @@ var manipulateDOM = {};
 
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
+
+    let initiatorDomain, listedToManipulateDOM;
+    initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
+    listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, "manipulate-dom");
+
     // by Jaap (https://gitlab.com/Jaaap)
     let header = details.responseHeaders.find(h => h.name.toLowerCase() === 'content-type');
 
-    if (header && BrowserType.FIREFOX) {
+    if (header && BrowserType.FIREFOX && listedToManipulateDOM) {
 
-        let mimeType, initiatorDomain, isWhitelisted;
+        let mimeType, isWhitelisted;
 
         mimeType = header.value.replace(/;.*/, '').toLowerCase();
-        initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
-        isWhitelisted = stateManager._domainIsWhitelisted(initiatorDomain);
+        isWhitelisted = stateManager._domainIsListed(initiatorDomain);
 
         if (!isWhitelisted && mimeType === 'text/html') {
 
@@ -64,10 +68,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                     if (!charset) {
                         //content-type has no charset declared
                         let htmlHead = asciiDecoder.decode(evt.data, {stream: false});
-                        let charsetMatch = htmlHead.match(/<meta\s+charset=["']?([^>"'\/]+)["'>\/]/i);
-                        if (!charsetMatch) {
-                            charsetMatch = htmlHead.match(/<meta\s+http-equiv=["']?content-type["']?\s+content=["']?text\/html;\s*charset=([^>"'\/]+)["'>\/]/i);
-                        }
+                        let charsetMatch = htmlHead.match(/<meta.*charset=["']?([^>"'\/]+)["'].*[>\/]/i);
                         charset = charsetMatch ? charsetMatch[1] : "UTF-8";
                     }
                     decoder = new TextDecoder(charset);

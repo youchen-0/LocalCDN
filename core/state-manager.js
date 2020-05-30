@@ -135,6 +135,29 @@ stateManager.removeDomainFromWhitelist = function (domain) {
     });
 };
 
+stateManager.addDomainToManipulateDOMlist = function (domain) {
+
+    return new Promise((resolve) => {
+
+        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOMlist;
+        domainsManipulateDOM[domain] = true;
+
+        chrome.storage.local.set({domainsManipulateDOM}, resolve);
+    });
+};
+
+stateManager.removeDomainFromManipulateDOMlist = function (domain) {
+
+    return new Promise((resolve) => {
+
+        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOMlist;
+        delete domainsManipulateDOM[domain];
+
+        chrome.storage.local.set({domainsManipulateDOM}, resolve);
+    });
+};
+
+
 /**
  * Private Methods
  */
@@ -171,7 +194,7 @@ stateManager._updateTab = function (details) {
     let tabDomain, domainIsWhitelisted, frameIdentifier, tabIdentifier;
 
     tabDomain = helpers.extractDomainFromUrl(details.url, true);
-    domainIsWhitelisted = stateManager._domainIsWhitelisted(tabDomain);
+    domainIsWhitelisted = stateManager._domainIsListed(tabDomain);
 
     frameIdentifier = details.frameId;
     tabIdentifier = details.tabId;
@@ -258,14 +281,19 @@ stateManager._removeIconBadgeFromTab = function (tab) {
     stateManager._clearBadgeText(tab.id);
 };
 
-stateManager._domainIsWhitelisted = function (domain) {
+stateManager._domainIsListed = function (domain, listname) {
 
     if (domain !== null) {
 
         let whitelistRecord, isWhitelisted;
 
-        whitelistRecord = requestAnalyzer.whitelistedDomains[domain];
-        isWhitelisted = Boolean(whitelistRecord);
+        if (listname === "manipulate-dom") {
+            whitelistRecord = requestAnalyzer.manipulateDOMDomains[domain];
+            isWhitelisted = Boolean(whitelistRecord);
+        } else {
+            whitelistRecord = requestAnalyzer.whitelistedDomains[domain];
+            isWhitelisted = Boolean(whitelistRecord);
+        }
 
         return isWhitelisted;
     }

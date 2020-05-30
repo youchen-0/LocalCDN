@@ -24,7 +24,7 @@
 
         <header>
 
-            <img class="icon-logo" src="icon.svg" alt="Extension Icon">
+            <img class="icon-logo" src="../../icons/icon.svg" alt="Extension Icon">
             <div class="heading">LocalCDN <sup id="version-label" class="label-version"></sup></div>
 
             <div id="donate-button">
@@ -42,18 +42,32 @@
                     <div id="protection-toggle">
                         <label class="switch">
                             <input type="checkbox" id="protection-toggle-switch">
-                            <span class="slider"></span>
+                            <span id="toggle-switch-domain" class="slider"></span>
                         </label>
                     </div>
 
                     <div class="label-domain">
-                        <i class="icon fai fa-globe fa-lg" data-fa-transform="down-1"></i>
                         <span id="domain-indicator"></span>
+                    </div>
+                </div>
+
+                <div class="subpanel">
+                    <div id="manipulateDOM-toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="manipulateDOM-toggle-switch">
+                            <span id="toggle-switch-manipulateDOM" class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div id="label-manipulateDOM" class="label-domain">
+                        <span id="manipulateDOM-indicator" data-i18n-content="labelManipulateDOM"></span>
                     </div>
 
                 </div>
 
             </div>
+
+            <div id="more-injections-section"></div>
 
             <div id="extension-context" class="panel">
 

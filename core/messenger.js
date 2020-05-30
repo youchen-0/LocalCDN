@@ -61,6 +61,32 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
 
         return MessageResponse.ASYNCHRONOUS;
     }
+
+    if (topic === 'domain:fetch-is-manipulateDOM') {
+
+        let manipulateDOMRecord = requestAnalyzer.domainsManipulateDOMlist[value];
+        sendResponse({'value': Boolean(manipulateDOMRecord)});
+
+        return MessageResponse.SYNCHRONOUS;
+    }
+
+    if (topic === 'manipulateDOM:add-domain') {
+
+        stateManager.addDomainToManipulateDOMlist(value).then(function () {
+            sendResponse({'value': true});
+        });
+
+        return MessageResponse.ASYNCHRONOUS;
+    }
+
+    if (topic === 'manipulateDOM:remove-domain') {
+
+        stateManager.removeDomainFromManipulateDOMlist(value).then(function () {
+            sendResponse({'value': true});
+        });
+
+        return MessageResponse.ASYNCHRONOUS;
+    }
 };
 
 /**

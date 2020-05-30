@@ -106,5 +106,9 @@
   "featureBreaksWebsitesButton": {
     "message": "Deaktivieren",
     "description": "Disable"
+  },
+  "labelManipulateDOM": {
+    "message": "HTML-Code abändern",
+    "description": "Tweak HTML source code"
   }
 }
