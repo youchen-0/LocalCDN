@@ -29,6 +29,7 @@ header {
 }
 
 .subpanel {
+    padding: 5px 0px;
     overflow: hidden;
 }
 
@@ -145,6 +146,7 @@ footer {
     cursor: pointer;
     background-color: #f0f0f0;
     color: #737373;
+    font-weight: 600;
 }
 
 #get-more-injections-btn:hover {
