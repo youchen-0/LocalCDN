@@ -19,6 +19,8 @@
  */
 
 let counterFrameworks = 0;
+let counterCDNs = 0;
+let oversized = false;
 var popup = {};
 
 /**
@@ -65,7 +67,8 @@ popup._renderContextualContents = function () {
         popup._renderDomainWhitelistPanel();
     }
 
-    if (Object.keys(popup._resourceInjections).length > 0) {
+    counterCDNs = Object.keys(popup._resourceInjections).length;
+    if (counterCDNs > 0) {
         popup._renderInjectionPanel(popup._resourceInjections);
     }
 };
@@ -291,9 +294,14 @@ popup._createInjectionOverviewElement = function (groupedInjections) {
 
             injectionOverviewElement.appendChild(injectionGroupHeaderElement);
             injectionOverviewElement.appendChild(injectionGroupElement);
+        } else {
+            oversized = true;
         }
     }
 
+    if (oversized) {
+        injectionOverviewElement.append(popup._appendMoreButton());
+    }
     return injectionOverviewElement;
 };
 
@@ -320,7 +328,7 @@ popup._createInjectionGroupHeaderElement = function (source, cdn) {
 
 popup._createInjectionGroupElement = function (source, cdn) {
 
-    let injectionGroupElement, count, oversized;
+    let injectionGroupElement;
 
     // Filter duplicates
     let bundle = [];
@@ -332,7 +340,6 @@ popup._createInjectionGroupElement = function (source, cdn) {
     injectionGroupElement = document.createElement('ul');
     injectionGroupElement.setAttribute('class', 'sublist');
 
-    oversized = false;
     for (let injection of filtered) {
 
         if(counterFrameworks < 3){
@@ -343,11 +350,7 @@ popup._createInjectionGroupElement = function (source, cdn) {
         }
         counterFrameworks++;
     }
-    if (oversized) {
-        let injectionElement = popup._createInjectionElement(filtered, true);
-        let moreInjectionsSection = document.getElementById('more-injections-section');
-        moreInjectionsSection.appendChild(injectionElement);
-    }
+
     return injectionGroupElement;
 };
 
@@ -355,23 +358,8 @@ popup._createInjectionElement = function (injection, oversized = false) {
 
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
 
-
     if(oversized) {
-
-        let lastElement = document.createElement('p');
-        let moreInjections = document.createElement('span');
-
-        nameTextNode = document.createTextNode(`... and more`);
-        moreInjections.setAttribute('id', 'get-more-injections-btn');
-
-        moreInjections.addEventListener('mouseup', function() {
-            popup._onMoreInjectionsButton();
-        }, false);
-
-        moreInjections.appendChild(nameTextNode);
-        lastElement.appendChild(moreInjections);
-
-        return lastElement;
+        return popup._appendMoreButton();
     }
 
     injectionElement = document.createElement('li');
@@ -400,6 +388,23 @@ popup._createInjectionElement = function (injection, oversized = false) {
 
     return injectionElement;
 };
+
+popup._appendMoreButton = function() {
+
+    let lastElement = document.createElement('p');
+    let moreInjections = document.createElement('span');
+    let nameTextNode = document.createTextNode(`... and more`);
+
+    moreInjections.setAttribute('id', 'get-more-injections-btn');
+
+    moreInjections.addEventListener('mouseup', function() {
+        popup._onMoreInjectionsButton();
+    }, false);
+
+    moreInjections.appendChild(nameTextNode);
+    lastElement.appendChild(moreInjections);
+    return lastElement;
+}
 
 popup._filterDuplicates = function(array, key) {
     /**
