@@ -175,7 +175,7 @@ requestAnalyzer._applyWhitelistedDomains = function () {
 requestAnalyzer._applyManipulateDOMDomains = function () {
 
     chrome.storage.local.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
-        requestAnalyzer.manipulateDOMDomains = items.manipulateDOMDomains || {};
+        requestAnalyzer.manipulateDOMDomains = items.domainsManipulateDOM || {};
     });
 };
 
