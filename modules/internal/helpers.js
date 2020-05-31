@@ -41,7 +41,10 @@ helpers.insertI18nContentIntoDocument = function (document) {
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
         if (i18nElement.id === 'button-copy-rule-set' && chrome.i18n.getMessage(i18nMessageName) !== '') {
             i18nElement.value = chrome.i18n.getMessage('copyRuleSet');
+        } else if (i18nElement.id === 'manipulateDOM-indicator' && chrome.i18n.getMessage(i18nMessageName) === '') {
+            i18nElement.innerText = "Tweak HTML source code";
         }
+
         if(chrome.i18n.getMessage(i18nMessageName) !== '') {
             i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
             i18nElement.setAttribute('dir', scriptDirection);
