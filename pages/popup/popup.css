@@ -479,6 +479,15 @@ input:checked + .slider:before {
 		background-color: #323232;
     }
 
+    .slider-disabled {
+        background-color: #777;
+        cursor: not-allowed;
+    }
+
+    .slider-disabled:before {
+        background-color: #323232;
+    }
+
     #info-button-svg {
         background-image: url("../../icons/info-light.svg");
     }
