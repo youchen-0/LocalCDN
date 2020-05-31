@@ -20,16 +20,15 @@ header {
     border-bottom: solid #d3d3d3 1px;
     display: flex;
     position: relative;
-    padding: 8px;
+    padding: 8px 0px 0px 4px;
 }
 
 .panel {
     overflow: hidden;
-    padding: 10px 8px;
 }
 
 .subpanel {
-    padding: 5px 0px;
+    padding-top: 8px;
     overflow: hidden;
 }
 
@@ -40,11 +39,7 @@ header {
 
 footer {
     overflow: hidden;
-    padding: 8px;
-}
-
-.content {
-    padding: 8px;
+    padding: 8px 0px;
 }
 
 #more-injections-section {
@@ -405,7 +400,7 @@ input:checked + .slider:before {
 
     body {
         background-color: #404040;
-        color: #f9f9fa;
+        color: #bbb;
     }
 
     header {
@@ -435,6 +430,10 @@ input:checked + .slider:before {
     .sublist-item {
         border-bottom-color: #2c2c2c;
         color: #f0f0f0;
+    }
+
+    .subpanel:last-child {
+        border-bottom: solid #292929 1px;
     }
 
     /**
