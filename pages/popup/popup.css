@@ -34,7 +34,7 @@ header {
 
 .subpanel:last-child {
     border-bottom: solid #d3d3d3 1px;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 }
 
 footer {
