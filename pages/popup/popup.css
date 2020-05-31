@@ -483,6 +483,18 @@ input:checked + .slider:before {
         background-image: url("../../icons/info-light.svg");
     }
 
+    #get-more-injections-btn {
+        cursor: pointer;
+        background-color: #404040;
+        color: #bbb;
+        font-weight: 600;
+    }
+
+    #get-more-injections-btn:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
     /**
      * Links
      */
