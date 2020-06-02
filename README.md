@@ -19,7 +19,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 ## What is the different of LocalCDN in comparison to other CDN emulators?
 
-<img src="https://localcdn.de/img/replacement.png" alt="The Replacement of Libraries">
+![The Replacement of Libraries](screenshots/replacement.png?raw=true "The Replacement of Libraries")
 
 **Advantages of LocalCDN:**
 
@@ -34,7 +34,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 ## We need you!
 
-![We Need You!](https://localcdn.de/img/we-need-you.png "We Need You!")
+![We Need You!](pages/images/we-need-you.png?raw=true "We Need You!")
 
 The whole Internet is full of different frameworks and CDNs that negatively affect your privacy. If you find a website that embeds another unsupported version of a framework, please report that website.
 
@@ -49,14 +49,16 @@ On behalf of everyone: Thank you!
 ## Screenshots
 
 ### Light
-[![Counter for locally injected resources (enabled)](https://localcdn.de/img/screenshots/screenshot01_light_preview.png)](https://localcdn.de/img/screenshots/screenshot01_light.png) [![Counter for locally injected resources (disabled)](https://localcdn.de/img/screenshots/screenshot02_light_preview.png)](https://localcdn.de/img/screenshots/screenshot02_light.png) [![Successfully intercepted requests](https://localcdn.de/img/screenshots/screenshot03_light_preview.png)](https://localcdn.de/img/screenshots/screenshot03_light.png) [![Successfully intercepted requests](https://localcdn.de/img/screenshots/screenshot04_light_preview.png)](https://localcdn.de/img/screenshots/screenshot04_light.png)
+![Light Theme](screenshots/screenshot_light.png?raw=true "Light Theme")
 
 ### Dark
-[![Counter for locally injected resources (enabled)](https://localcdn.de/img/screenshots/screenshot01_dark_preview.png)](https://localcdn.de/img/screenshots/screenshot01_dark.png) [![Counter for locally injected resources (disabled)](https://localcdn.de/img/screenshots/screenshot02_dark_preview.png)](https://localcdn.de/img/screenshots/screenshot02_dark.png) [![Successfully intercepted requests](https://localcdn.de/img/screenshots/screenshot03_dark_preview.png)](https://localcdn.de/img/screenshots/screenshot03_dark.png) [![Successfully intercepted requests](https://localcdn.de/img/screenshots/screenshot04_dark_preview.png)](https://localcdn.de/img/screenshots/screenshot04_dark.png)
+![Dark Theme](screenshots/screenshot_dark.png?raw=true "Dark Theme")
 
-### Rule generator for uBlock/uMatrix
-[![Release notes and uBlock/uMatrix rule generator](https://localcdn.de/img/screenshots/screenshot06_preview.png)](https://localcdn.de/img/screenshots/screenshot06.png) [![Release notes and uBlock/uMatrix rule generator](https://localcdn.de/img/screenshots/screenshot07_preview.png)](https://localcdn.de/img/screenshots/screenshot07.png) [![Preferences page and uBlock/uMatrix rule generator](https://localcdn.de/img/screenshots/screenshot08_preview.png)](https://localcdn.de/img/screenshots/screenshot08.png) [![Preferences page and uBlock/uMatrix rule generator](https://localcdn.de/img/screenshots/screenshot09_preview.png)](https://localcdn.de/img/screenshots/screenshot09.png)
+### Rule generator for uBlock/uMatrix (after an update)
+![Rule generator after an update](screenshots/screenshot_after_update.png?raw=true "Rule generator after an update")
 
+### Rule generator for uBlock/uMatrix (settings page)
+![Rule generator on settings page](screenshots/screenshot_settings.png?raw=true "Rule generator on settings page")
 
 ## Contributing Code
 

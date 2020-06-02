@@ -41,7 +41,10 @@ helpers.insertI18nContentIntoDocument = function (document) {
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
         if (i18nElement.id === 'button-copy-rule-set' && chrome.i18n.getMessage(i18nMessageName) !== '') {
             i18nElement.value = chrome.i18n.getMessage('copyRuleSet');
+        } else if (i18nElement.id === 'manipulateDOM-indicator' && chrome.i18n.getMessage(i18nMessageName) === '') {
+            i18nElement.innerText = "Tweak HTML source code";
         }
+
         if(chrome.i18n.getMessage(i18nMessageName) !== '') {
             i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
             i18nElement.setAttribute('dir', scriptDirection);
@@ -105,7 +108,7 @@ helpers.normalizeDomain = function (domain) {
 
 helpers.extractDomainFromUrl = function (url = '', normalize) {
 
-    if (!url.startsWith('http')) {
+    if (/^(?!(http[s]?|file):\/\/).*/.test(url)) {
         return null;
     }
 
@@ -246,6 +249,8 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Touch';
     case 'angular.min.jsm':
         return 'AngularJS';
+    case 'autocomplete.min.jsm':
+        return 'autocomplete.js';
     case 'toaster.min.css':
         return 'AngularJS Toaster (CSS)';
     case 'toaster.min.jsm':
@@ -500,6 +505,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {
         version = '3.7.2';
+    } else if (type.includes('/autocomplete.js/')) {
+        version = '0.37.1';
     } else if (type.includes('/backbone.js/0.')) {
         version = '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {

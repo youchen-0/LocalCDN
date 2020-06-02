@@ -141,6 +141,11 @@ var resources = {
         'path': 'resources/animate.css/{version}/animate.min.css',
         'type': 'text/css'
     },
+    // autocomplete.js
+    'autocompleteJS': {
+        'path': 'resources/autocomplete.js/{version}/autocomplete.min.jsm',
+        'type': 'application/javascript'
+    },
     // Backbone.js
     'backbone': {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',

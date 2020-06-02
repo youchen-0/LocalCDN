@@ -257,9 +257,10 @@ var mappings = {
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfont
         },
-        // Deprecated (?)
         '/': {
+            'algoliasearch/3/algoliasearch.': resources.algoliaSearch,
             'angularjs/{version}/angular.': resources.angular,
+            'autocomplete.js/0/autocomplete.': resources.autocompleteJS,
             'backbonejs/{version}/backbone.': resources.backbone,
             'backbonejs/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
