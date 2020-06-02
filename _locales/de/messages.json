@@ -108,7 +108,7 @@
     "description": "Disable"
   },
   "labelManipulateDOM": {
-    "message": "HTML-Code abändern",
+    "message": "HTML-Quelltext filtern",
     "description": "Tweak HTML source code"
   }
 }
