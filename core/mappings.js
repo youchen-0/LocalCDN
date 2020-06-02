@@ -258,6 +258,7 @@ var mappings = {
             'webfontloader@{version}/webfontloader.': resources.webfont
         },
         '/': {
+            'algoliasearch/3/algoliasearch.': resources.algoliaSearch,
             'angularjs/{version}/angular.': resources.angular,
             'autocomplete.js/0/autocomplete.': resources.autocompleteJS,
             'backbonejs/{version}/backbone.': resources.backbone,
