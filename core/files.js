@@ -134,6 +134,9 @@ var files = {
         // Angular Sanitize
         'resources/angular-sanitize/1.7.9/angular-sanitize.min.jsm': true,
 
+        // autocomplete.js
+        'resources/autocomplete.js/0.37.1/autocomplete.min.jsm': true,
+
         // Backbone.js
         'resources/backbone.js/0.9.10/backbone-min.jsm': true,
         'resources/backbone.js/1.4.0/backbone-min.jsm': true,

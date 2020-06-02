@@ -249,6 +249,8 @@ helpers.determineResourceName = function (filename) {
         return 'AngularJS Touch';
     case 'angular.min.jsm':
         return 'AngularJS';
+    case 'autocomplete.min.jsm':
+        return 'autocomplete.js';
     case 'toaster.min.css':
         return 'AngularJS Toaster (CSS)';
     case 'toaster.min.jsm':
@@ -503,6 +505,8 @@ helpers.setLastVersion = function (type, version) {
         version = '3.0.0';
     } else if (type.includes('/animate.css/3.')) {
         version = '3.7.2';
+    } else if (type.includes('/autocomplete.js/')) {
+        version = '0.37.1';
     } else if (type.includes('/backbone.js/0.')) {
         version = '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
