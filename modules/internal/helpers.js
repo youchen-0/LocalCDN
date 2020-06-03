@@ -39,14 +39,13 @@ helpers.insertI18nContentIntoDocument = function (document) {
     i18nElements.forEach(function (i18nElement) {
 
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
-        if (i18nElement.id === 'button-copy-rule-set' && chrome.i18n.getMessage(i18nMessageName) !== '') {
-            i18nElement.value = chrome.i18n.getMessage('copyRuleSet');
-        } else if (i18nElement.id === 'manipulateDOM-indicator' && chrome.i18n.getMessage(i18nMessageName) === '') {
-            i18nElement.innerText = "Tweak HTML source code";
-        }
 
         if(chrome.i18n.getMessage(i18nMessageName) !== '') {
-            i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+            if (i18nElement.type === "button") {
+                i18nElement.value = chrome.i18n.getMessage(i18nMessageName);
+            } else {
+                i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+            }
             i18nElement.setAttribute('dir', scriptDirection);
         } else {
             translationComplete = false;

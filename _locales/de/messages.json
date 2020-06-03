@@ -109,6 +109,6 @@
   },
   "labelManipulateDOM": {
     "message": "HTML-Quelltext filtern",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
   }
 }

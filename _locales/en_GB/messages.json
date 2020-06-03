@@ -108,7 +108,7 @@
     "description": "Disable"
   },
   "labelManipulateDOM": {
-    "message": "",
-    "description": "Tweak HTML source code"
+    "message": "Filters HTML source code",
+    "description": "Filters HTML source code"
   }
 }
