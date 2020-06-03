@@ -49,16 +49,16 @@ On behalf of everyone: Thank you!
 ## Screenshots
 
 ### Light
-![Light Theme](screenshots/screenshot_light.png?raw=true "Light Theme")
+[<img src="screenshots/screenshot_light.png" alt="Light Theme" width="500"/>](screenshots/screenshot_light.png)
 
 ### Dark
-![Dark Theme](screenshots/screenshot_dark.png?raw=true "Dark Theme")
+[<img src="screenshots/screenshot_dark.png" alt="Dark Theme" width="500"/>](screenshots/screenshot_dark.png)
 
 ### Rule generator for uBlock/uMatrix (after an update)
-![Rule generator after an update](screenshots/screenshot_after_update.png?raw=true "Rule generator after an update")
+[<img src="screenshots/screenshot_after_update.png" alt="Rule generator after an update" width="500"/>](screenshots/screenshot_after_update.png)
 
 ### Rule generator for uBlock/uMatrix (settings page)
-![Rule generator on settings page](screenshots/screenshot_settings.png?raw=true "Rule generator on settings page")
+[<img src="screenshots/screenshot_settings.png" alt="Rule generator on settings page" width="500"/>](screenshots/screenshot_settings.png)
 
 ## Contributing Code
 
