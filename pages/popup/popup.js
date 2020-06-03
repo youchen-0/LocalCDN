@@ -32,6 +32,10 @@ popup._renderContents = function () {
     helpers.insertI18nContentIntoDocument(document);
     helpers.insertI18nTitlesIntoDocument(document);
 
+    if (!helpers.insertI18nContentIntoDocument(document)) {
+        popup._renderLocaleNotice();
+    }
+
     popup._renderNonContextualContents();
 
     popup._determineTargetTab()
@@ -422,6 +426,19 @@ popup._filterDuplicates = function(array, key) {
     return filtered;
 };
 
+popup._renderLocaleNotice = function () {
+
+    let localeNoticeElement, nameTextNode;
+
+    localeNoticeElement = document.getElementById('popup-incomplete-translation');
+    localeNoticeElement.setAttribute('class', 'notice notice-default');
+    localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
+
+    nameTextNode = document.createTextNode('Translation is incomplete. You want to help?');
+
+    localeNoticeElement.appendChild(nameTextNode);
+    localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
+};
 
 /**
  * Event Handlers
@@ -533,6 +550,19 @@ popup._onInfoButtonClicked = function () {
     }
 };
 
+popup._onIncompleteTranslation = function () {
+    if (event.button === 0 || event.button === 1) {
+
+        chrome.tabs.create({
+            'url': 'https://localcdn.de/translation/',
+            'active': (event.button === 0)
+        });
+    }
+
+    if (event.button === 0) {
+        window.close();
+    }
+};
 
 /**
  * Initializations
