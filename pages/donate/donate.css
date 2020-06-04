@@ -2,10 +2,10 @@
  * Donations
  */
 
- #table-bank-transfer {
-     font-family: 'monospace', 'Consolas', Arial, sans-serif;
-     padding: 16px;
- }
- #table-bank-transfer > tbody > tr > td:nth-of-type(1) {
-     font-weight: bold;
- }
+#table-bank-transfer, .mono-block {
+    font-family: 'monospace', 'Consolas', Arial, sans-serif;
+}
+
+#table-bank-transfer > tbody > tr > td:nth-of-type(1) {
+    font-weight: bold;
+}
