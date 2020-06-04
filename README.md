@@ -6,7 +6,7 @@ A web browser extension (and a fork of Decentraleyes) that emulates Content Deli
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
-* **NEW: Removed integrity checks of embedded script and style elements** :tada: :tada: :tada:
+* **NEW: Removed integrity checks of embedded script and style elements (Firefox only)** :tada: :tada: :tada:
 * Font Awesome
 * jQuery up to 3.4.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
@@ -27,7 +27,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 :thumbsup: smaller size than other extensions
 
-:thumbsup: remove crossorigin and integrity attributes of script and stylesheet tags to increase replacements
+:thumbsup: remove crossorigin and integrity attributes of script and stylesheet tags to increase replacements (Firefox only)
 
 :thumbsup: doesn't matter which version a website requested
 
