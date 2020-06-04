@@ -43,6 +43,11 @@ popup._renderContents = function () {
         .then(popup._determineStatusManipulateDOM)
         .then(popup._determineResourceInjections)
         .then(popup._renderContextualContents);
+
+    if(BrowserType.CHROMIUM) {
+        document.getElementById('div-manipulateDOM').hidden = true;
+    }
+
 };
 
 popup._renderNonContextualContents = function () {
