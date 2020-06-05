@@ -82,7 +82,7 @@ Just open an issue with your question or write an [email](https://localcdn.de/co
 
 ## Donations
 
-LocalCDN is free and open-source. If you like LocalCDN you can support continued development by making a donation. Any help would be greatly appreciated! Every way to donate can be found on the [website](https://localcdn.de/donate/). At the moment donations are possible with SEPA bank transfer.
+LocalCDN is free and open-source. If you like LocalCDN you can support continued development by making a donation. Any help would be greatly appreciated! Every way to donate can be found inside the extension (Just click on the heart). At the moment donations are possible with SEPA bank transfer, Bitcoin and Ether.
 
 ## License
 
