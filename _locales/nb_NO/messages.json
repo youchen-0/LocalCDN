@@ -3,14 +3,6 @@
     "message": "Beskytter mot sporing gjort av \"gratis\" sentralisert innholdslevering.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Skru av beskyttelse på dette nettstedet",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Skru på beskyttelse",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Teller for lokalt innsmettede ressurser",
     "description": "Amount injected title."

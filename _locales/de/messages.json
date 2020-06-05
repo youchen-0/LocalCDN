@@ -3,14 +3,6 @@
     "message": "Schützt vor Tracking durch \"gratis\", zentralisiertes Abliefern von Content.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Schutz für diese Seite deaktivieren",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Schutz aktivieren",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Zähler für lokal injizierte Ressourcen",
     "description": "Amount injected title."

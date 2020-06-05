@@ -3,14 +3,6 @@
     "message": "Beschermt tegen tracking via het \"gratis\", gecentraliseerd, verzorgen van content.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Bescherming voor deze website uitschakelen",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Bescherming inschakelen",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Teller voor lokaal geïnjecteerde bestanden",
     "description": "Amount injected title."

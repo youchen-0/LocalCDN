@@ -3,14 +3,6 @@
     "message": "Protegge dal tracciamento tramite CDN centralizzati \"liberi\".",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Disattiva protezione per questo sito",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Attiva protezione",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Contatore per risorse iniettate localmente",
     "description": "Amount injected title."

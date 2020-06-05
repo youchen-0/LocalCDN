@@ -3,14 +3,6 @@
     "message": "Melindungi Anda dari pelacakan distribusi konten \"gratis\" dan terpusat.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Nonaktifkan perlindungan untuk situs web ini",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Aktifkan perlindungan",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Jumlah sumber daya lokal yang disematkan",
     "description": "Amount injected title."

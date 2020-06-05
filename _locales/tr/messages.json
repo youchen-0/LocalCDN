@@ -3,14 +3,6 @@
     "message": "Sizi içerik dağıtımıyla yapılan merkezi ve \"ücretsiz\" takipten korur.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Bu sitede korumayı devre dışı bırak",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Korumayı etkinleştir",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Yerel olarak eklenen kaynaklar için sayaç",
     "description": "Amount injected title."

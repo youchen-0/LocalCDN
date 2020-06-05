@@ -3,14 +3,6 @@
     "message": "Lhe protege de rastreamento feito usando centrais de disponibilização de conteúdo \"gratuitas\".",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Desabilitar a proteção neste site",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Habilitar proteção",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Contador de recursos injetados localmente",
     "description": "Amount injected title."

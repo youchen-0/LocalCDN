@@ -3,14 +3,6 @@
     "message": "Protects you against tracking through \"free\", centralized, content delivery.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Disable protection for this site",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Enable protection",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Counter for locally injected resources",
     "description": "Amount injected title."

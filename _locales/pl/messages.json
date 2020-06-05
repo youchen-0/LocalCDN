@@ -3,14 +3,6 @@
     "message": "Chroni przed śledzeniem przez ośrodki CDN.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Wyłącz ochronę dla tej witryny",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Włącz ochronę",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Licznik zasobów podanych lokalnie",
     "description": "Amount injected title."

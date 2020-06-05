@@ -3,14 +3,6 @@
     "message": "Véd attól, hogy az „ingyenes”, centralizált tartalomszolgáltatók kövessenek.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Védelem kikapcsolása ezen az oldalon",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Védelem bekapcsolása",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Helyből beszúrt erőforrások számlálója",
     "description": "Amount injected title."

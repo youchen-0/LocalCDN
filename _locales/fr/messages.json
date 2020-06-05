@@ -3,14 +3,6 @@
     "message": "Protège du pistage lié aux diffuseurs de contenus « gratuits », centralisés.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Désactiver la protection pour ce site",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Activer la protection",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Compteur de ressources injectées localement",
     "description": "Amount injected title."

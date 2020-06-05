@@ -3,14 +3,6 @@
     "message": "Para protektahan ka laban sa pagsubaybay sa pamamagitan ng \"libre\", sentralisadong, paghahatid ng nilalaman.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Huwag paganahin ang proteksyon para sa sayt na ito",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Paganahin ang proteksyon",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Laban para sa mga lokal na iniksiyong mga mapagkukunan",
     "description": "Amount injected title."

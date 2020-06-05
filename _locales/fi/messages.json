@@ -3,14 +3,6 @@
     "message": "Suojaa sinua \"ilmaisten\" keskitettyjen sisällön jakeluverkkojen jäljitykseltä.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Poista suojaus tältä sivustolta",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Ota suojaus käyttöön",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Korvatut pyynnöt",
     "description": "Amount injected title."

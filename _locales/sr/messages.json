@@ -3,14 +3,6 @@
     "message": "Штити вас од праћења преко „бесплатних“, централизованих достава садржаја.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Онемогући заштиту на овом сајту",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Омогући заштиту",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Бројач локално убризганих ресурса",
     "description": "Amount injected title."

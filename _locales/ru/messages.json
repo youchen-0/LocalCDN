@@ -3,14 +3,6 @@
     "message": "Защищает Вас от отслеживания через «бесплатные», централизованные CDN.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Отключить защиту для этого сайта",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Включить защиту",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Счётчик файлов «доставленных» локально",
     "description": "Amount injected title."

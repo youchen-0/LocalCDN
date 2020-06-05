@@ -3,14 +3,6 @@
     "message": "מגן עליך מפני מעקב המבוצע דרך רשתות אספקת תוכן ריכוזיות ו\"חינמיות\".",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "נטרול ההגנה עבור אתר זה",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "הפעלת הגנה",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "מונה משאבים מקומיים שהוזרקו",
     "description": "Amount injected title."

@@ -3,14 +3,6 @@
     "message": "Protege contra el rastreo con la entrega centralizada y «gratuita» de contenido.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Desactivar protección en este sitio",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Activar protección",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Contador de recursos inyectados localmente",
     "description": "Amount injected title."

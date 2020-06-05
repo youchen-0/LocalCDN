@@ -98,13 +98,10 @@ popup._renderDomainWhitelistPanel = function () {
 
     if (popup._domainIsWhitelisted === true) {
 
-        let enableProtectionTitle = chrome.i18n.getMessage('enableProtectionTitle');
-
         manipulateDOMToggleElement.disabled = true;
         protectionToggleElement.checked = false;
 
         manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
-        protectionToggleElement.setAttribute('title', enableProtectionTitle);
         protectionToggleElement.addEventListener('click', popup._enableProtection);
 
     } else {
@@ -112,10 +109,8 @@ popup._renderDomainWhitelistPanel = function () {
         manipulateDOMToggleElement.disabled = false;
         manipulateDOMToggleStyle.setAttribute('class', 'slider');
 
-        let disableProtectionTitle = chrome.i18n.getMessage('disableProtectionTitle');
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
-        protectionToggleElement.setAttribute('title', disableProtectionTitle);
 
         if (popup._domainManipulateDOM === true) {
 
