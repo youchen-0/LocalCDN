@@ -106,5 +106,9 @@
   "labelShowMoreInjections": {
     "message": "",
     "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }
