@@ -139,7 +139,7 @@ stateManager.addDomainToManipulateDOMlist = function (domain) {
 
     return new Promise((resolve) => {
 
-        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOMlist;
+        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOM;
         domainsManipulateDOM[domain] = true;
 
         chrome.storage.local.set({domainsManipulateDOM}, resolve);
@@ -150,7 +150,7 @@ stateManager.removeDomainFromManipulateDOMlist = function (domain) {
 
     return new Promise((resolve) => {
 
-        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOMlist;
+        let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOM;
         delete domainsManipulateDOM[domain];
 
         chrome.storage.local.set({domainsManipulateDOM}, resolve);
@@ -288,7 +288,7 @@ stateManager._domainIsListed = function (domain, listname) {
         let whitelistRecord, isWhitelisted;
 
         if (listname === "manipulate-dom") {
-            whitelistRecord = requestAnalyzer.manipulateDOMDomains[domain];
+            whitelistRecord = requestAnalyzer.domainsManipulateDOM[domain];
             isWhitelisted = Boolean(whitelistRecord);
         } else {
             whitelistRecord = requestAnalyzer.whitelistedDomains[domain];

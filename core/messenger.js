@@ -64,7 +64,7 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
 
     if (topic === 'domain:fetch-is-manipulateDOM') {
 
-        let manipulateDOMRecord = requestAnalyzer.domainsManipulateDOMlist[value];
+        let manipulateDOMRecord = requestAnalyzer.domainsManipulateDOM[value];
         sendResponse({'value': Boolean(manipulateDOMRecord)});
 
         return MessageResponse.SYNCHRONOUS;
