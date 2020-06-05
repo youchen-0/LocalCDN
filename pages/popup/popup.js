@@ -397,7 +397,7 @@ popup._appendMoreButton = function() {
 
     let lastElement = document.createElement('p');
     let moreInjections = document.createElement('span');
-    let nameTextNode = document.createTextNode(`... and more`);
+    let nameTextNode = document.createTextNode(chrome.i18n.getMessage('labelShowMoreInjections'));
 
     moreInjections.setAttribute('id', 'get-more-injections-btn');
 

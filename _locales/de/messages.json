@@ -102,5 +102,9 @@
   "labelManipulateDOM": {
     "message": "HTML-Quelltext filtern",
     "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "Weitere Injektionen anzeigen",
+    "description": "Show more Injections"
   }
 }
