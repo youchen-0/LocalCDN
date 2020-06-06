@@ -45,6 +45,8 @@ var mappings = {
             'angularjs/{version}/angular-sanitize.': resources.angularSanitize,
             'angularjs/{version}/angular-touch.': resources.angularTouch,
             'angularjs/{version}/angular.': resources.angular,
+            'angular_material/{version}/angular-material.min.js': resources.angularMaterialDesignJS,
+            'angular_material/{version}/angular-material.min.css': resources.angularMaterialDesignCSS,
             'dojo/{version}/dojo/dojo.': resources.dojo,
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,

@@ -263,7 +263,11 @@ helpers.determineResourceName = function (filename) {
     case 'angular-sanitize.min.js':
         return 'Angular Sanitize';
     case 'animate.min.css':
-        return 'Animate CSS'
+        return 'Animate CSS';
+    case 'angular-material.min.jsm':
+        return 'AngularJS Material Design';
+    case 'angular-material.min.css':
+        return 'AngularJS Material Design';
     case 'backbone-min.jsm':
         return 'Backbone.js';
     case 'bootstrap.min.css':
@@ -511,6 +515,8 @@ helpers.setLastVersion = function (type, version) {
         return  '3.7.2';
     } else if (type.includes('/autocomplete.js/')) {
         return  '0.37.1';
+    } else if (type.includes('/angular-material/1.')) {
+        return  '1.1.21';
     } else if (type.includes('/backbone.js/0.')) {
         return  '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
