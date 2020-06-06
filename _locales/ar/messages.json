@@ -3,14 +3,6 @@
     "message": "يحميك من التتبع المرتبط بالوصول للمحتوى \"مجاني\"، مركزية.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "أوقف الحماية لهذا الموقع",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "فعّل الحماية",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "عداد محلي للموارد المحقونة",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

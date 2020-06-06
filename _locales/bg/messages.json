@@ -3,14 +3,6 @@
     "message": "Защитава ви от следене чрез свободна, централизирана доставка на съдържание.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Изключване на защитата за страницата",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Включване на защита",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Брояч за местно вмъкнати ресурси",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

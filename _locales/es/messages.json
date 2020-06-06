@@ -3,14 +3,6 @@
     "message": "Protege contra el rastreo con la entrega centralizada y «gratuita» de contenido.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Desactivar protección en este sitio",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Activar protección",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Contador de recursos inyectados localmente",
     "description": "Amount injected title."
@@ -24,7 +16,7 @@
     "description": "Options title."
   },
   "showIconBadgeTitle": {
-    "message": "Mostrar el conteo de inyecciones en el icono",
+    "message": "Mostrar el conteo de inyeccciones en el icono",
     "description": "Show icon badge title."
   },
   "showIconBadgeDescription": {
@@ -72,43 +64,51 @@
     "description": "Generate rule set title."
   },
   "generateRuleSetDescription": {
-    "message": "",
+    "message": "En caso de estar usando uBlock o uMatrix aquí puedes generar las reglas. Tienes que añadir estas reglas manualmente en uBlock o uMatrix",
     "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
   },
   "lastUpdate": {
-      "message": "",
-      "description": "Last update."
+    "message": "Última actualización",
+    "description": "Last update."
   },
   "copyRuleSet": {
-    "message": "",
+    "message": "Texto del botón para copiar el conjunto de reglas",
     "description": "Text of button to copy ruleset."
   },
   "loggingTitle": {
-    "message": "",
+    "message": "Habilitar inicio de sesión en la consola del navegador",
     "description": "Enable logging in browser console."
   },
   "loggingDescription": {
-    "message": "",
+    "message": "Abrir \"consola del navegador\" ( CTRL + SHIFT + J ) te mostrará los recursos que faltan",
     "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
   },
   "hideReleaseNotesTitle": {
-    "message": "",
+    "message": "Desactivar notas de la versión",
     "description": "Disable release notes"
   },
   "hideReleaseNotesDescription": {
-    "message": "",
+    "message": "Si está habilitado, no recibirá ninguna información sobre nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas de uBlock/uMatrix",
     "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
   },
   "featureBreaksWebsitesDescription": {
-    "message": "",
+    "message": "Esta característica rompe sitios web. No lo deje habilitado, a menos que esté preparado para incluir manualmente en la lista blanca cualquier dominio afectado",
     "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
   },
   "featureBreaksWebsitesButton": {
-    "message": "",
+    "message": "Desactivar",
     "description": "Disable"
   },
   "labelManipulateDOM": {
-    "message": "",
-    "description": "Tweak HTML source code"
+    "message": "Optimizar código fuente HTML",
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "Mostrar más inyecciones",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "Donar",
+    "description": "Donate"
   }
 }

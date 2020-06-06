@@ -3,14 +3,6 @@
     "message": "Protejează împotriva urmăririi prin livrare de conținut gratuit, centralizat.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Dezactivează protecția pentru acest site",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Activează protecția",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Contor pentru resursele injectate local",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

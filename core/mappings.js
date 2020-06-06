@@ -26,7 +26,7 @@
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-var lastMappingUpdate = "2020-03-25";
+var lastMappingUpdate = "2020-06-06";
 
 var mappings = {
 
@@ -45,6 +45,8 @@ var mappings = {
             'angularjs/{version}/angular-sanitize.': resources.angularSanitize,
             'angularjs/{version}/angular-touch.': resources.angularTouch,
             'angularjs/{version}/angular.': resources.angular,
+            'angular_material/{version}/angular-material.min.js': resources.angularMaterialDesignJS,
+            'angular_material/{version}/angular-material.min.css': resources.angularMaterialDesignCSS,
             'dojo/{version}/dojo/dojo.': resources.dojo,
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,
@@ -218,6 +220,8 @@ var mappings = {
             'backbone@{version}/backbone.': resources.backbone,
             'backbone@{version}/backbone-min.': resources.backbone,
             'backbone@{version}/backbone.min.': resources.backbone,
+            'bootstrap@{version}/dist/js/bootstrap.': resources.bootstrapJS,
+            'bootstrap@{version}/dist/css/bootstrap.': resources.bootstrapCSS,
             'dojo@{version}/dojo.': resources.dojo,
             'ember-source@{version}/dist/ember.': resources.ember,
             'ember-source@{version}/dist/ember.min.': resources.ember,
@@ -677,8 +681,12 @@ mappings['sdn.geekzu.org'] = {
 // USTC Linux User Group [Mirror]
 mappings['ajax.proxy.ustclug.org'] = mappings['ajax.googleapis.com'];
 
-
 //UNPKG (Cloudflare)
 mappings['unpkg.com'] = {
     '/': mappings['cdn.jsdelivr.net']['/npm/']
+};
+
+// PageCDN
+mappings['pagecdn.io'] = {
+    '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
 };

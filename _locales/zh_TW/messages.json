@@ -3,14 +3,6 @@
     "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "為此網站停用保護",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "啟用保護",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "由本機提供的資源計數器",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

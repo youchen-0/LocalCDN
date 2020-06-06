@@ -3,14 +3,6 @@
     "message": "Skyddar dig mot att spåras av \"gratis\" centraliserad innehållsleverans.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Inaktivera skydd för den här sidan",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Aktivera skydd",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Räknare för lokalt insatta resurser",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

@@ -3,14 +3,6 @@
     "message": "Protects you against tracking through \"free\", centralized, content delivery.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Disable protection for this site",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Enable protection",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Counter for locally injected resources",
     "description": "Amount injected title."
@@ -108,7 +100,15 @@
     "description": "Disable"
   },
   "labelManipulateDOM": {
-    "message": "Tweak HTML source code",
-    "description": "Tweak HTML source code"
+    "message": "Filters HTML source code",
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "Show more injections",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "Donate",
+    "description": "Donate"
   }
 }

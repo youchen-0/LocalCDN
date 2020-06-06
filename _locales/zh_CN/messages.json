@@ -3,14 +3,6 @@
     "message": "保护你免受中心化的内容分发网络（CDN）的跟踪。",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "在此网站上禁用保护",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "启用保护",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "本地注入资源的计数器",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

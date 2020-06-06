@@ -3,14 +3,6 @@
     "message": "Verndar þig gegn eftirliti frá \"ókeypis\" miðlægum efnisveitum.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Slökkva á vörn fyrir þetta vefsvæði",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Virkja vernd",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Fjöldi staðvært inspýttra tilfanga",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

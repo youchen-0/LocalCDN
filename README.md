@@ -6,7 +6,7 @@ A web browser extension (and a fork of Decentraleyes) that emulates Content Deli
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
-* **NEW: Removed integrity checks of embedded script and style elements** :tada: :tada: :tada:
+* **NEW: Removed integrity checks of embedded script and style elements (Firefox only)** :tada: :tada: :tada:
 * Font Awesome
 * jQuery up to 3.4.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
@@ -27,7 +27,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 :thumbsup: smaller size than other extensions
 
-:thumbsup: remove crossorigin and integrity attributes of script and stylesheet tags to increase replacements
+:thumbsup: remove crossorigin and integrity attributes of script and stylesheet tags to increase replacements (Firefox only)
 
 :thumbsup: doesn't matter which version a website requested
 
@@ -49,16 +49,16 @@ On behalf of everyone: Thank you!
 ## Screenshots
 
 ### Light
-![Light Theme](screenshots/screenshot_light.png?raw=true "Light Theme")
+[<img src="screenshots/screenshot_light.png" alt="Light Theme" width="500"/>](screenshots/screenshot_light.png)
 
 ### Dark
-![Dark Theme](screenshots/screenshot_dark.png?raw=true "Dark Theme")
+[<img src="screenshots/screenshot_dark.png" alt="Dark Theme" width="500"/>](screenshots/screenshot_dark.png)
 
 ### Rule generator for uBlock/uMatrix (after an update)
-![Rule generator after an update](screenshots/screenshot_after_update.png?raw=true "Rule generator after an update")
+[<img src="screenshots/screenshot_after_update.png" alt="Rule generator after an update" width="500"/>](screenshots/screenshot_after_update.png)
 
 ### Rule generator for uBlock/uMatrix (settings page)
-![Rule generator on settings page](screenshots/screenshot_settings.png?raw=true "Rule generator on settings page")
+[<img src="screenshots/screenshot_settings.png" alt="Rule generator on settings page" width="500"/>](screenshots/screenshot_settings.png)
 
 ## Contributing Code
 
@@ -82,7 +82,7 @@ Just open an issue with your question or write an [email](https://localcdn.de/co
 
 ## Donations
 
-LocalCDN is free and open-source. If you like LocalCDN you can support continued development by making a donation. Any help would be greatly appreciated! Every way to donate can be found on the [website](https://localcdn.de/donate/). At the moment donations are possible with SEPA bank transfer.
+LocalCDN is free and open-source. If you like LocalCDN you can support continued development by making a donation. Any help would be greatly appreciated! Every way to donate can be found inside the extension (Just click on the heart). At the moment donations are possible with SEPA bank transfer, Bitcoin and Ether.
 
 ## License
 

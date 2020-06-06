@@ -3,14 +3,6 @@
     "message": "Protege contra monitorização através de entrega de conteúdo centralizado.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Desativar proteção para este site",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Ativar proteção",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Contador para recursos injetados localmente",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

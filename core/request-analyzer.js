@@ -175,7 +175,7 @@ requestAnalyzer._applyWhitelistedDomains = function () {
 requestAnalyzer._applyManipulateDOMDomains = function () {
 
     chrome.storage.local.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
-        requestAnalyzer.manipulateDOMDomains = items.domainsManipulateDOM || {};
+        requestAnalyzer.domainsManipulateDOM = items.domainsManipulateDOM || {};
     });
 };
 
@@ -186,7 +186,7 @@ requestAnalyzer._applyManipulateDOMDomains = function () {
 requestAnalyzer.whitelistedDomains = {};
 requestAnalyzer._applyWhitelistedDomains();
 
-requestAnalyzer.domainsManipulateDOMlist = {};
+requestAnalyzer.domainsManipulateDOM = {};
 requestAnalyzer._applyManipulateDOMDomains();
 /**
  * Event Handlers

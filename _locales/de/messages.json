@@ -3,14 +3,6 @@
     "message": "Schützt vor Tracking durch \"gratis\", zentralisiertes Abliefern von Content.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Schutz für diese Seite deaktivieren",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Schutz aktivieren",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Zähler für lokal injizierte Ressourcen",
     "description": "Amount injected title."
@@ -24,39 +16,39 @@
     "description": "Options title."
   },
   "showIconBadgeTitle": {
-    "message": "Zeige Anzahl der Injektionen am Icon",
+    "message": "Anzahl der Injektionen auf dem Symbol anzeigen",
     "description": "Show icon badge title."
   },
   "showIconBadgeDescription": {
-    "message": "Zeige die Anzahl der injizierten Ressourcen im Erweiterungs-Icon.",
+    "message": "Zeigt die Anzahl der injizierten Ressourcen auf dem Erweiterungssymbol.",
     "description": "Show icon badge description."
   },
   "blockMissingTitle": {
-    "message": "Blockiere Anfordern fehlender Inhalte",
+    "message": "Anfordern fehlender Inhalte blockieren",
     "description": "Block requests for missing resources title."
   },
   "blockMissingDescription": {
-    "message": "Unterbinde abgefangene Anforderung, falls angeforderte Datei nicht lokal verfügbar ist.",
+    "message": "Unterbindet eine abgefangene Anforderung, falls die angeforderte Datei lokal nicht verfügbar ist.",
     "description": "Block requests for missing resources description."
   },
   "disablePrefetchTitle": {
-    "message": "Deaktiviere \"Link prefetching\"",
+    "message": "\"Link Prefetching\" deaktivieren",
     "description": "Disable prefetch title."
   },
   "disablePrefetchDescription": {
-    "message": "Verhindere, dass unerlaubte Anfragen an die CDNs beim Vorausladen verlinkter Seiten durchsickern.",
+    "message": "Verhindert, dass unerlaubte Anfragen an die CDNs beim Vorausladen verlinkter Seiten durchsickern.",
     "description": "Disable prefetch description."
   },
   "stripMetadataTitle": {
-    "message": "Entferne Metadaten von erlaubten Anfragen",
+    "message": "Metadaten von erlaubten Anfragen entfernen",
     "description": "Strip metadata title."
   },
   "stripMetadataDescription": {
-    "message": "Lösche sensible Daten aus erlaubten CDN-Anfragen zur Verbesserung des Datenschutzes.",
+    "message": "Entfernt sensible Daten aus erlaubten CDN-Anfragen zur Verbesserung des Datenschutzes.",
     "description": "Strip metadata description."
   },
   "whitelistedDomainsTitle": {
-    "message": "Domains von Prüfung ausschließen",
+    "message": "Domains von Prüfung ausschließen:",
     "description": "Whitelisted domains title."
   },
   "whitelistedDomainsDescription": {
@@ -84,7 +76,7 @@
     "description": "Text of button to copy ruleset."
   },
   "loggingTitle": {
-    "message": "Aktiviere das Loggen in die Browser-Konsole",
+    "message": "Protokollierung in der Browser-Konsole aktivieren",
     "description": "Enable logging in browser console."
   },
   "loggingDescription": {
@@ -96,7 +88,7 @@
     "description": "Disable release notes"
   },
   "hideReleaseNotesDescription": {
-    "message": "Falls aktivert, erhältst du keine Hinweise über Neuerungen in LocalCDN. Dazu gehören auch Informationen über neue uBlock-/uMatrix-Regeln.",
+    "message": "Falls aktiviert, erhältst du keine Hinweise über Neuerungen in LocalCDN. Dazu gehören auch Informationen über neue uBlock-/uMatrix-Regeln.",
     "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
   },
   "featureBreaksWebsitesDescription": {
@@ -108,7 +100,15 @@
     "description": "Disable"
   },
   "labelManipulateDOM": {
-    "message": "HTML-Code abändern",
-    "description": "Tweak HTML source code"
+    "message": "HTML-Quelltext filtern",
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "Weitere Injektionen anzeigen",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "Spenden",
+    "description": "Donate"
   }
 }

@@ -11,7 +11,6 @@ body {
     margin: 0 auto;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 0px 15px 0px 15px;
     max-width: 348px;
 }
 
@@ -20,7 +19,7 @@ header {
     border-bottom: solid #d3d3d3 1px;
     display: flex;
     position: relative;
-    padding: 8px 0px 0px 4px;
+    padding: 8px 15px 15px 4px;
 }
 
 .panel {
@@ -39,13 +38,18 @@ header {
 
 footer {
     overflow: hidden;
-    padding: 8px 0px;
+    padding: 8px 15px;
 }
 
 #more-injections-section {
     font-weight: bold;
     padding: 0px 8px;
 }
+
+.content {
+    padding: 0px 15px;
+}
+
 
 /**
  * Fonts
@@ -137,11 +141,16 @@ footer {
     border-bottom: none;
 }
 
-#get-more-injections-btn {
+#label-donate {
+    margin: 0px 5px 0px 0px;
+}
+
+#get-more-injections-btn, #label-donate {
     cursor: pointer;
     background-color: #f0f0f0;
     color: #737373;
     font-weight: 600;
+    margin: 0px 5px;
 }
 
 #get-more-injections-btn:hover {
@@ -205,11 +214,15 @@ footer {
     cursor: pointer;
     float: right;
     font-size: 12px;
-    padding: 5px;
+    display: flex;
 }
 
-#donate-button:hover {
+#donate-button:hover #donate-button-svg {
     transform: scale(1.3);
+}
+
+#donate-button:hover #label-donate {
+    text-decoration: underline;
 }
 
 #options-button-svg, #donate-button-svg {
@@ -381,6 +394,16 @@ input:checked + .slider:before {
     font-weight: 400;
 }
 
+#popup-incomplete-translation {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffa500;
+    padding: 0px;
+    cursor: pointer;
+}
+
 /**
  * Compatibility
  */
@@ -492,7 +515,7 @@ input:checked + .slider:before {
         background-image: url("../../icons/info-light.svg");
     }
 
-    #get-more-injections-btn {
+    #get-more-injections-btn, #label-donate {
         cursor: pointer;
         background-color: #404040;
         color: #bbb;

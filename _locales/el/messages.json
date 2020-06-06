@@ -3,14 +3,6 @@
     "message": "Προστατεύει από παρακολούθηση μέσω \"δωρεάν\" διανομής περιεχόμενου.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Απενεργοποίηση προστασίας για αυτή τη σελίδα",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Ενεργοποίηση προστασίας",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Μετρητής εμβόλιμων τοπικών πόρων",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

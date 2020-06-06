@@ -3,14 +3,6 @@
     "message": "Beskytter dig imod sporing af \"gratis\", centraliserede indholdsleverandører.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Deaktiver beskyttelse for dette websted",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Aktiver beskyttelse",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Optælling af lokalt leverede ressourcer",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

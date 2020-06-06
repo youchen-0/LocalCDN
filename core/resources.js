@@ -88,6 +88,14 @@ var resources = {
     	'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
     	'type': 'application/javascript'
     },
+    'angularMaterialDesignJS': {
+    	'path': 'resources/angular-material/{version}/angular-material.min.jsm',
+    	'type': 'application/javascript'
+    },
+    'angularMaterialDesignCSS': {
+    	'path': 'resources/angular-material/{version}/angular-material.min.css',
+        'type': 'text/css'
+    },
     // AngularJS slider
     'angularJSslider': {
         'path': 'resources/angularjs-slider/{version}/rzslider.min.jsm',

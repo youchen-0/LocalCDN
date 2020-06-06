@@ -277,7 +277,7 @@ body[dir="rtl"] .input-text {
         color: #b1b1b3;
     }
 
-    .badge-warning {
+    #last-mapping-update, .badge-warning, .notice-message, .button-warning {
         color: #4b3000;
     }
 }

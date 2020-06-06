@@ -32,6 +32,10 @@ popup._renderContents = function () {
     helpers.insertI18nContentIntoDocument(document);
     helpers.insertI18nTitlesIntoDocument(document);
 
+    if (!helpers.insertI18nContentIntoDocument(document)) {
+        popup._renderLocaleNotice();
+    }
+
     popup._renderNonContextualContents();
 
     popup._determineTargetTab()
@@ -39,6 +43,11 @@ popup._renderContents = function () {
         .then(popup._determineStatusManipulateDOM)
         .then(popup._determineResourceInjections)
         .then(popup._renderContextualContents);
+
+    if(BrowserType.CHROMIUM) {
+        document.getElementById('div-manipulateDOM').hidden = true;
+    }
+
 };
 
 popup._renderNonContextualContents = function () {
@@ -89,13 +98,10 @@ popup._renderDomainWhitelistPanel = function () {
 
     if (popup._domainIsWhitelisted === true) {
 
-        let enableProtectionTitle = chrome.i18n.getMessage('enableProtectionTitle');
-
         manipulateDOMToggleElement.disabled = true;
         protectionToggleElement.checked = false;
 
         manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
-        protectionToggleElement.setAttribute('title', enableProtectionTitle);
         protectionToggleElement.addEventListener('click', popup._enableProtection);
 
     } else {
@@ -103,10 +109,8 @@ popup._renderDomainWhitelistPanel = function () {
         manipulateDOMToggleElement.disabled = false;
         manipulateDOMToggleStyle.setAttribute('class', 'slider');
 
-        let disableProtectionTitle = chrome.i18n.getMessage('disableProtectionTitle');
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
-        protectionToggleElement.setAttribute('title', disableProtectionTitle);
 
         if (popup._domainManipulateDOM === true) {
 
@@ -393,7 +397,7 @@ popup._appendMoreButton = function() {
 
     let lastElement = document.createElement('p');
     let moreInjections = document.createElement('span');
-    let nameTextNode = document.createTextNode(`... and more`);
+    let nameTextNode = document.createTextNode(chrome.i18n.getMessage('labelShowMoreInjections'));
 
     moreInjections.setAttribute('id', 'get-more-injections-btn');
 
@@ -422,6 +426,19 @@ popup._filterDuplicates = function(array, key) {
     return filtered;
 };
 
+popup._renderLocaleNotice = function () {
+
+    let localeNoticeElement, nameTextNode;
+
+    localeNoticeElement = document.getElementById('popup-incomplete-translation');
+    localeNoticeElement.setAttribute('class', 'notice notice-default');
+    localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
+
+    nameTextNode = document.createTextNode('Translation is incomplete. You want to help?');
+
+    localeNoticeElement.appendChild(nameTextNode);
+    localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
+};
 
 /**
  * Event Handlers
@@ -533,6 +550,19 @@ popup._onInfoButtonClicked = function () {
     }
 };
 
+popup._onIncompleteTranslation = function () {
+    if (event.button === 0 || event.button === 1) {
+
+        chrome.tabs.create({
+            'url': 'https://localcdn.de/translation/',
+            'active': (event.button === 0)
+        });
+    }
+
+    if (event.button === 0) {
+        window.close();
+    }
+};
 
 /**
  * Initializations

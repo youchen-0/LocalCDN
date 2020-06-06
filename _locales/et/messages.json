@@ -3,14 +3,6 @@
     "message": "Kaitseb sind \"tasuta\", tsentraliseeritud sisu edastamisest tuleneva jälitamise vastu.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Keela kaitse sellel saidil",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Luba kaitse",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Kohalikult sisestatud ressursside loendur",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }

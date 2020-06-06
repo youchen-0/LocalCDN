@@ -3,14 +3,6 @@
     "message": "Chrání před sledováním skrze centrálně doručovaný obsah.",
     "description": "Extension description."
   },
-  "disableProtectionTitle": {
-    "message": "Zakázat ochranu na této stránce",
-    "description": "Disable protection title."
-  },
-  "enableProtectionTitle": {
-    "message": "Zapnout ochranu",
-    "description": "Enable protection title."
-  },
   "amountInjectedTitle": {
     "message": "Počítadlo vložených lokálních zdrojů",
     "description": "Amount injected title."
@@ -109,6 +101,14 @@
   },
   "labelManipulateDOM": {
     "message": "",
-    "description": "Tweak HTML source code"
+    "description": "Filters HTML source code"
+  },
+  "labelShowMoreInjections": {
+    "message": "",
+    "description": "Show more Injections"
+  },
+  "labelDonate": {
+    "message": "",
+    "description": "Donate"
   }
 }
