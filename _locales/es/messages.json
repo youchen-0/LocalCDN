@@ -104,11 +104,11 @@
     "description": "Filters HTML source code"
   },
   "labelShowMoreInjections": {
-    "message": "",
+    "message": "Mostrar más inyecciones",
     "description": "Show more Injections"
   },
   "labelDonate": {
-    "message": "",
+    "message": "Donar",
     "description": "Donate"
   }
 }
