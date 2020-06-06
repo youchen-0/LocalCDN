@@ -209,6 +209,8 @@ helpers.determineCdnName = function (domainName) {
         return 'Akamai WebCDN';
     case 'netdna.bootstrapcdn.com':
         return 'NetDNA';
+    case 'pagecdn.io':
+        return 'PageCDN';
     default:
         return 'Unknown';
     }

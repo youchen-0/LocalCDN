@@ -26,7 +26,7 @@
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-var lastMappingUpdate = "2020-03-25";
+var lastMappingUpdate = "2020-06-06";
 
 var mappings = {
 
@@ -681,8 +681,12 @@ mappings['sdn.geekzu.org'] = {
 // USTC Linux User Group [Mirror]
 mappings['ajax.proxy.ustclug.org'] = mappings['ajax.googleapis.com'];
 
-
 //UNPKG (Cloudflare)
 mappings['unpkg.com'] = {
     '/': mappings['cdn.jsdelivr.net']['/npm/']
+};
+
+// PageCDN
+mappings['pagecdn.io'] = {
+    '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
 };
