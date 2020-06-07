@@ -354,6 +354,11 @@ var resources = {
         'path': 'resources/mdbootstrap/{version}/css/mdb.min.css',
         'type': 'text/css'
     },
+    // Cloudflare Mirage 2
+    'mirage2': {
+        'path': 'resources/mirage2/latest/mirage2.min.jsm',
+        'type': 'application/javascript'
+    },
     // Modernizr
     'modernizr': {
         'path': 'resources/modernizr/{version}/modernizr.min.jsm',

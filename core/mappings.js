@@ -665,7 +665,8 @@ var mappings = {
     // Cloudflare Rocket-Loader
     'ajax.cloudflare.com': {
         '/': {
-            'cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.': resources.cfRocketLoader
+            'cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.': resources.cfRocketLoader,
+            'cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.': resources.mirage2
         }
     },
     // Akamai WebCDN

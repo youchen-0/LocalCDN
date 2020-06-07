@@ -272,6 +272,9 @@ var files = {
         'resources/mdbootstrap/4.18.0/js/mdb.min.jsm': true,
         'resources/mdbootstrap/4.18.0/css/mdb.min.css': true,
 
+        // Cloudflare Mirage 2
+        'resources/mirage2/latest/mirage2.min.jsm': true,
+
         // Modernizr
         'resources/modernizr/2.8.3/modernizr.min.jsm': true,
 
