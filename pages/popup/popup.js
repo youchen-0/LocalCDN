@@ -52,9 +52,10 @@ popup._renderContents = function () {
 
 popup._renderNonContextualContents = function () {
 
-    let versionLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel, infoButtonSVG;
+    let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel, infoButtonSVG;
 
     versionLabelElement = document.getElementById('version-label');
+    nameLabelElement = document.getElementById('name-label');
     counterElement = document.getElementById('injection-counter');
     testingUtilityLinkElement = document.getElementById('testing-utility-link');
     optionsButtonElement = document.getElementById('options-button');
@@ -62,6 +63,7 @@ popup._renderNonContextualContents = function () {
     infoButtonLabel = document.getElementById('manipulateDOM-indicator');
 
     versionLabelElement.innerText = popup._version;
+    nameLabelElement.innerText = popup._name;
     counterElement.innerText = helpers.formatNumber(popup._amountInjected);
 
     testingUtilityLinkElement.addEventListener('mouseup', popup._onTestingUtilityLinkClicked);
@@ -451,6 +453,7 @@ popup._onDocumentLoaded = function () {
     manifest = chrome.runtime.getManifest();
     language = navigator.language;
 
+    popup._name = manifest.name;
     popup._version = helpers.formatVersion(manifest.version);
     popup._scriptDirection = helpers.determineScriptDirection(language);
 
