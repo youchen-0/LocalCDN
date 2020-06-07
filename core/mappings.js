@@ -178,7 +178,7 @@ var mappings = {
             'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,
             'twitter-bootstrap/{version}-alpha.3/js/bootstrap.min.js': resources.twitterBootstrapJS,
             'twitter-bootstrap/{version}-alpha.3/css/bootstrap.min.css': resources.twitterBootstrapCSS,
-            'twitter-bootstrap/{version}/css/bootstrap.': resources.twitterBootstrapCSS,
+            'twitter-bootstrap/{version}/css/bootstrap': resources.twitterBootstrapCSS,
             'twitter-bootstrap/{version}/bootstrap.min.js': resources.twitterBootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.js': resources.twitterBootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.min.css': resources.twitterBootstrapCSS,
@@ -643,6 +643,7 @@ var mappings = {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
+            'twitter-bootstrap/{version}/css/bootstrap': resources.twitterBootstrapCSS,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
     },

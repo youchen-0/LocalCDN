@@ -353,7 +353,7 @@ var files = {
 
         // Twitter Bootstrap
         'resources/twitter-bootstrap/2.3.2/js/bootstrap.min.jsm': true,
-        'resources/twitter-bootstrap/2.3.2/css/bootstrap.min.css': true,
+        'resources/twitter-bootstrap/2.3.2/css/bootstrap.min.css': true, // this file contains bootstrap-combined.min.css (bootstrap-combined.min.css = bootstrap.min.css + bootstrap-responsive.min.css; only v2.x)
         'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': true,
         'resources/twitter-bootstrap/3.4.1/css/bootstrap.min.css': true,
         'resources/twitter-bootstrap/4.5.0/js/bootstrap.min.jsm': true,
