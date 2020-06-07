@@ -257,19 +257,17 @@ options._openRuleSet = function({target}) {
     let btnCopy = document.getElementById("button-copy-rule-set");
 
     let content = "";
-    let ruleSyntax = "";
-
-    if (optionKey === "uMatrix") {
-        ruleSyntax = " script allow";
-    } else if (optionKey === "uBlock") {
-        ruleSyntax = " * noop";
-    }
 
     textArea.style.display = "block";
     btnCopy.style.display = "block";
 
     for (var domain in urls) {
-        content += "* " + domain + ruleSyntax + '\n';
+        if (optionKey === "uMatrix") {
+            content += "* " + domain + " script allow" + '\n';
+            content += "* " + domain + " css allow" + '\n';
+        } else if (optionKey === "uBlock") {
+            content += "* " + domain + " * noop" + '\n';
+        }
     }
     textArea.value = content.replace(/\n+$/, "");
 }
