@@ -398,6 +398,10 @@ helpers.determineResourceName = function (filename) {
         return 'Store.js';
     case 'swfobject.jsm':
         return 'SWFObject';
+    case 'swiper.min.css':
+        return 'Swiper CSS';
+    case 'swiper.min.js':
+        return 'Swiper JS';
     case 'tether.min.jsm':
         return 'Tether JS';
     case 'toastr.min.css':
@@ -648,6 +652,10 @@ helpers.setLastVersion = function (type, version) {
         return  '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
         return  '2.2';
+    } else if (type.includes('/swiper/4.')) {
+        return  '4.5.1';
+    } else if (type.includes('/swiper/5.')) {
+        return  '5.4.2';
     } else if (type.includes('/tether/1.')) {
         return  '1.4.7';
     } else if (type.includes('/twitter-bootstrap/4.')) {

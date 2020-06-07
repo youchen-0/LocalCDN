@@ -466,6 +466,15 @@ var resources = {
         'path': 'resources/swfobject/{version}/swfobject.jsm',
         'type': 'application/javascript'
     },
+    // Swiper
+    'swiperJS': {
+        'path': 'resources/swiper/{version}/js/swiper.min.jsm',
+        'type': 'application/javascript'
+    },
+    'swiperCSS': {
+        'path': 'resources/swiper/{version}/css/swiper.min.css',
+        'type': 'text/css'
+    },
     // Tether JS
     'tetherJS': {
         'path': 'resources/tether/{version}/js/tether.min.jsm',

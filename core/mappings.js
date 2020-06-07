@@ -170,6 +170,8 @@ var mappings = {
             'spin.js/{version}/spin.min.js': resources.spinJS,
             'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,
+            'Swiper/{version}/css/swiper.': resources.swiperCSS,
+            'Swiper/{version}/js/swiper.': resources.swiperJS,
             'tether/{version}/js/tether.': resources.tetherJS,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,

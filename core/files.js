@@ -335,6 +335,12 @@ var files = {
         // SWFObject
         'resources/swfobject/2.2/swfobject.jsm': true,
 
+        // Swiper
+        'resources/swiper/4.5.1/css/swiper.min.css': true,
+        'resources/swiper/4.5.1/js/swiper.min.jsm': true,
+        'resources/swiper/5.4.2/css/swiper.min.css': true,
+        'resources/swiper/5.4.2/js/swiper.min.jsm': true,
+
         // Tether JS
         'resources/tether/1.4.7/js/tether.min.jsm': true,
 
