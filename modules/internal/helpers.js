@@ -296,6 +296,8 @@ helpers.determineResourceName = function (filename) {
         return 'clipboard.js';
     case 'd3.min.jsm':
         return 'D3.js';
+    case 'd3-legend.min.jsm':
+        return 'D3.js Legend';
     case 'dojo.jsm':
         return 'Dojo';
     case 'ember.min.jsm':
@@ -547,6 +549,8 @@ helpers.setLastVersion = function (type, version) {
         return  '2.0.6';
     } else if (type.includes('/d3/3.')) {
         return  '3.5.17';
+    } else if (type.includes('/d3-legend/2.')) {
+        return  '2.25.6';
     } else if (type.includes('/dojo/1.')) {
         return  '1.14.1';
     } else if (type.includes('/ember.js/1.')) {

@@ -174,6 +174,9 @@ var files = {
         // D3.js
         'resources/d3/3.5.17/d3.min.jsm': true,
 
+        // D3.js Legend
+        'resources/d3-legend/2.25.6/d3-legend.min.jsm': true,
+
         // Dojo
         'resources/dojo/1.14.1/dojo/dojo.jsm': true,
 

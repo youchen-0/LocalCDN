@@ -211,6 +211,11 @@ var resources = {
         'path': 'resources/d3/{version}/d3.min.jsm',
         'type': 'application/javascript'
     },
+    // D3 Legend
+    'd3legend': {
+        'path': 'resources/d3-legend/{version}/d3-legend.min.jsm',
+        'type': 'application/javascript'
+    },
     // Dojo
     'dojo': {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',

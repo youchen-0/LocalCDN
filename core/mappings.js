@@ -123,6 +123,7 @@ var mappings = {
             'bootstrap-slider/{version}/bootstrap-slider.min.js': resources.bootstrapSliderJS,
             'clipboard.js/{version}/clipboard.min.js': resources.clipboardJS,
             'd3/{version}/d3.min.js': resources.d3JS,
+            'd3-legend/{version}/d3-legend.': resources.d3legend,
             'dojo/{version}/dojo.': resources.dojo,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
