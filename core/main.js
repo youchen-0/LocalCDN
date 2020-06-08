@@ -38,7 +38,7 @@ main._initializeSettings = function () {
         [Setting.DOMAINS_MANIPULATE_DOM]: {}
     };
 
-    chrome.storage.local.get(settingDefaults, function (items) {
+    chrome.storage.sync.get(settingDefaults, function (items) {
 
         if (items === null) {
             items = settingDefaults; // Restore setting defaults.
@@ -57,7 +57,7 @@ main._initializeSettings = function () {
             });
         }
 
-        chrome.storage.local.set(items);
+        chrome.storage.sync.set(items);
     });
 };
 
@@ -70,7 +70,7 @@ main._showReleaseNotes = function (details) {
 
     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
 
-        chrome.storage.local.set({
+        chrome.storage.sync.set({
             [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
         }, function() {
 
@@ -82,7 +82,7 @@ main._showReleaseNotes = function (details) {
 
             if (details.temporary !== true) {
 
-                chrome.storage.local.get([Setting.HIDE_RELEASE_NOTES], function (items) {
+                chrome.storage.sync.get([Setting.HIDE_RELEASE_NOTES], function (items) {
 
                     if (items.hideReleaseNotes !== true) {
 
@@ -100,13 +100,13 @@ main._showReleaseNotes = function (details) {
         let oldValue = "";
 
         // If add-on update true, check last update of mappings.js
-        chrome.storage.local.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
+        chrome.storage.sync.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
 
             oldValue = items.lastMappingUpdate;
 
             if (oldValue !== newValue) {
                 // Updated mappings.js
-                chrome.storage.local.set({
+                chrome.storage.sync.set({
                     [Setting.LAST_MAPPING_UPDATE]: newValue
                 }, function() {
                     if (!items.hideReleaseNotes) {

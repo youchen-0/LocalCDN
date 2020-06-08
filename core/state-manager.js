@@ -55,18 +55,18 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
 
     if (isNaN(interceptor.amountInjected)) {
 
-        chrome.storage.local.get(Setting.AMOUNT_INJECTED, function (items) {
+        chrome.storage.sync.get(Setting.AMOUNT_INJECTED, function (items) {
 
             interceptor.amountInjected = items.amountInjected;
 
-            chrome.storage.local.set({
+            chrome.storage.sync.set({
                 [Setting.AMOUNT_INJECTED]: ++interceptor.amountInjected
             });
         });
 
     } else {
 
-        chrome.storage.local.set({
+        chrome.storage.sync.set({
             [Setting.AMOUNT_INJECTED]: ++interceptor.amountInjected
         });
     }
@@ -94,7 +94,7 @@ stateManager.updateEnvironment = function (preferredEnvironment) {
 
             let requiredItems = [Setting.BLOCK_MISSING, Setting.ENFORCE_STAGING];
 
-            chrome.storage.local.get(requiredItems, function (items) {
+            chrome.storage.sync.get(requiredItems, function (items) {
 
                 if (items.blockMissing === true || items.enforceStaging === true) {
                     stateManager.setEnvironment(Environment.STAGING);
@@ -120,7 +120,7 @@ stateManager.addDomainToWhitelist = function (domain) {
         let whitelistedDomains = requestAnalyzer.whitelistedDomains;
         whitelistedDomains[domain] = true;
 
-        chrome.storage.local.set({whitelistedDomains}, resolve);
+        chrome.storage.sync.set({whitelistedDomains}, resolve);
     });
 };
 
@@ -131,7 +131,7 @@ stateManager.removeDomainFromWhitelist = function (domain) {
         let whitelistedDomains = requestAnalyzer.whitelistedDomains;
         delete whitelistedDomains[domain];
 
-        chrome.storage.local.set({whitelistedDomains}, resolve);
+        chrome.storage.sync.set({whitelistedDomains}, resolve);
     });
 };
 
@@ -142,7 +142,7 @@ stateManager.addDomainToManipulateDOMlist = function (domain) {
         let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOM;
         domainsManipulateDOM[domain] = true;
 
-        chrome.storage.local.set({domainsManipulateDOM}, resolve);
+        chrome.storage.sync.set({domainsManipulateDOM}, resolve);
     });
 };
 
@@ -153,7 +153,7 @@ stateManager.removeDomainFromManipulateDOMlist = function (domain) {
         let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOM;
         delete domainsManipulateDOM[domain];
 
-        chrome.storage.local.set({domainsManipulateDOM}, resolve);
+        chrome.storage.sync.set({domainsManipulateDOM}, resolve);
     });
 };
 
@@ -339,7 +339,7 @@ chrome.tabs.query({}, function (tabs) {
     tabs.forEach(stateManager._createTab);
 });
 
-chrome.storage.local.get(Setting.SHOW_ICON_BADGE, function (items) {
+chrome.storage.sync.get(Setting.SHOW_ICON_BADGE, function (items) {
 
     if (items.showIconBadge === undefined) {
         items.showIconBadge = true;

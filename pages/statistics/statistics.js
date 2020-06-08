@@ -162,7 +162,7 @@ statistics._createInjectionElement = function (injection) {
 
 statistics._onDocumentLoaded = function () {
 
-    chrome.storage.local.get([Setting.STATISTIC_DATA], function (items) {
+    chrome.storage.sync.get([Setting.STATISTIC_DATA], function (items) {
         statisticData = items.statisticData;
         statistics._renderContents();
     });

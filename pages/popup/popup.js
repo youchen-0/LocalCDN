@@ -259,7 +259,7 @@ popup._determineAmountInjected = function () {
 
     return new Promise((resolve) => {
 
-        chrome.storage.local.get(Setting.AMOUNT_INJECTED, function (items) {
+        chrome.storage.sync.get(Setting.AMOUNT_INJECTED, function (items) {
 
             popup._amountInjected = items.amountInjected || 0;
             resolve();
@@ -527,7 +527,7 @@ popup._onMoreInjectionsButton = function () {
 
     // Store current injections in extension storage.
     // Maybe a local statistic/diagram will be implemented later.
-    chrome.storage.local.set({
+    chrome.storage.sync.set({
         [Setting.STATISTIC_DATA]: statisticData
     });
 

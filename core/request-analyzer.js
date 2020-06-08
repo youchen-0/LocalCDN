@@ -102,7 +102,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
     let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
 
-    chrome.storage.local.get(Setting.LOGGING, function (items) {
+    chrome.storage.sync.get(Setting.LOGGING, function (items) {
         requestAnalyzer.logging = items.enableLogging;
     });
 
@@ -168,13 +168,13 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
 requestAnalyzer._applyWhitelistedDomains = function () {
 
-    chrome.storage.local.get(Setting.WHITELISTED_DOMAINS, function (items) {
+    chrome.storage.sync.get(Setting.WHITELISTED_DOMAINS, function (items) {
         requestAnalyzer.whitelistedDomains = items.whitelistedDomains || {};
     });
 };
 requestAnalyzer._applyManipulateDOMDomains = function () {
 
-    chrome.storage.local.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
+    chrome.storage.sync.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
         requestAnalyzer.domainsManipulateDOM = items.domainsManipulateDOM || {};
     });
 };

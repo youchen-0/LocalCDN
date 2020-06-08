@@ -123,7 +123,7 @@ options._determineOptionValues = function () {
 
         let optionKeys = Object.keys(options._optionElements);
 
-        chrome.storage.local.get(optionKeys, function (items) {
+        chrome.storage.sync.get(optionKeys, function (items) {
 
             options._optionValues = items;
             resolve();
@@ -242,7 +242,7 @@ options._onOptionChanged = function ({target}) {
         optionValue = options._parseDomainWhitelist(optionValue);
     }
 
-    chrome.storage.local.set({
+    chrome.storage.sync.set({
         [optionKey]: optionValue
     });
 };

@@ -137,7 +137,7 @@ interceptor.relatedSettings.push(Setting.AMOUNT_INJECTED);
 interceptor.relatedSettings.push(Setting.XHR_TEST_DOMAIN);
 interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
 
-chrome.storage.local.get(interceptor.relatedSettings, function (items) {
+chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
 
     interceptor.amountInjected = items.amountInjected || 0;
     interceptor.xhrTestDomain = items.xhrTestDomain || Address.DECENTRALEYES;
