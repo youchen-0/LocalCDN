@@ -198,19 +198,8 @@ var mappings = {
     'code.jquery.com': {
         '/': {
             'jquery-{version}.': resources.jQuery,
-            'ui/{version}/jquery-ui.js': resources.jQueryUI,
-            'ui/{version}/jquery-ui.min.js': resources.jQueryUI,
-            'mobile/{version}/jquery.mobile': resources.jQueryMobile,
-
-            // Basic Shorthand Notations [Deprecated]
-            'jquery-latest.': {
-                'path': 'resources/jquery/1.11.1/jquery.min.jsm',
-                'type': 'application/javascript'
-            },
-            'jquery.': {
-                'path': 'resources/jquery/1.11.1/jquery.min.jsm',
-                'type': 'application/javascript'
-            }
+            'ui/{version}/jquery-ui.': resources.jQueryUI,
+            'mobile/{version}/jquery.mobile': resources.jQueryMobile
         }
     },
     // jsDelivr (Cloudflare)

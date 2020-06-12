@@ -241,7 +241,7 @@ var files = {
         'resources/jquery-migrate/3.1.0/jquery-migrate.min.jsm': true,
 
         // jQuery UI
-        'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
+        'resources/jqueryui/1.12.1/jquery-ui.min.jsm': true,
         'resources/jqueryui/1.8.18/jquery-ui.min.jsm': true,
 
         // jQuery UI Themes

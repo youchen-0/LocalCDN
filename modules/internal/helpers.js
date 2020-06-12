@@ -589,7 +589,7 @@ helpers.setLastVersion = function (type, version) {
         return  '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
         if (helpers.compareVersion('1.8.18', requestVersion)) return '1.8.18'; // <= v1.8.18
-        else return '1.11.4'; // >= 1.8.19
+        else return '1.12.1'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
         return  '2.70';
     } else if (type.includes('/jquery-csv/1.')) {
