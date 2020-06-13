@@ -3,21 +3,26 @@
 */
 
 html {
-    background-color: #f8fcee;
+    background-color: #4e4e4e;
     box-sizing: border-box;
     height: 100%;
 }
 
 body {
-    background-color: #eff4e2;
+    background-color: #fafafa;
     box-sizing: border-box;
-    color: #777;
+    color: #555;
     font-size: 14px;
     margin: 0 auto;
     max-width: 982px;
     min-height: 100%;
     min-width: 256px;
     padding: 33px 18px;
+    height: unset !important;
+    -moz-box-shadow: 10px 10px 60px #111;
+    -webkit-box-shadow: 10px 10px 60px #111;
+    -khtml-box-shadow: 10px 10px 60px #111;
+    box-shadow: 10px 10px 60px #111;
 }
 
 h1 {
@@ -112,6 +117,8 @@ hr {
     border-radius: 4px;
     border-style: solid;
     border-width: 1px;
+    -webkit-box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.5), 0px 5px 5px -5px #000000;
+    box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.5), 0px 5px 5px -5px #000000;
 }
 
 .btn-text {
@@ -148,36 +155,6 @@ hr {
     background-color: #f58700;
 }
 
-.btn-donate {
-    background-color: #007bbd;
-    border-color: #00679e !important;
-}
-
-.btn-donate:hover {
-    background-color: #00679e;
- }
-
-.btn-grid {
-    background: #fff;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: repeat(2,1fr);
-    max-width: 752px;
-    padding: 16px;
-}
-
-.btn-decentraleyes {
-    background-color: #777;
-    border-color: #444 !important;
-}
-
-.btn-decentraleyes:hover {
-    background-color: #444;
-
-}
-
 /**
  * Miscellaneous
  */
@@ -198,9 +175,6 @@ hr {
 }
 
 .subtle-hint {
-    background-color: #fcfcfc;
-    border-radius: 4px;
-    border: 1px solid #e6e6e6;
     color: #777;
     font-size: 14px;
     margin-bottom: 20px;
@@ -260,13 +234,26 @@ hr {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
+
+    .btn-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .btn-panel {
+        flex-wrap: wrap;
+
+    }
 
     .btn {
-        padding: 13px 18px 12px
+        padding: 13px 18px 12px;
+        width: 100%;
+        margin-bottom: 10px;
+        max-width: 733px;
     }
 
     .btn-text {
-        display: none
+        width: 100%;
+        min-height: unset;
     }
 }
