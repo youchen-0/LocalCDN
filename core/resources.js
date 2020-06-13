@@ -379,6 +379,10 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
+    'mootoolsYui': {
+        'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
+        'type': 'application/javascript'
+    },
     // ocLazyLoad
     'ocLazyLoad': {
         'path': 'resources/oclazyload/{version}/ocLazyLoad.min.jsm',

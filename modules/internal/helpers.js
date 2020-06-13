@@ -623,7 +623,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/moment.js/2.')) {
         return  '2.24.0';
     } else if (type.includes('/mootools/1.')) {
-        return  '1.6.0';
+        if (helpers.compareVersion('1.4.5', requestVersion)) return '1.4.5'; // <= v1.4.5
+        else return '1.6.0'; // > 1.4.5
     } else if (type.includes('/oclazyload/1.')) {
         return  '1.1.0';
     } else if (type.includes('p2p-media-loader-core')) {

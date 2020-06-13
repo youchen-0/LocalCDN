@@ -286,6 +286,7 @@ var files = {
 
         // MooTools
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
+        'resources/mootools/1.4.5/mootools-yui-compressed.jsm': true,
 
         // ocLazyLoad
         'resources/oclazyload/1.1.0/ocLazyLoad.min.jsm': true,
