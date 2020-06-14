@@ -82,6 +82,8 @@ Please read this [developer guide](https://developer.mozilla.org/en-US/Add-ons/W
 
 Just open an issue with your question or write an [email](https://localcdn.de/contact/) (PGP possible!).
 
+## Submitting Translations
+The language you want is not completely translated or you are a language talent? Please help us by translating this add-on on [Weblate](https://hosted.weblate.org/projects/localcdn/).
 
 ## Donations
 
