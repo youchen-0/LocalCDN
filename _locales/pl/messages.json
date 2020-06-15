@@ -68,7 +68,7 @@
     "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
   },
   "lastUpdate": {
-      "message": "Ostatnia aktualizacja: ",
+    "message": "Ostatnia aktualizacja:",
     "description": "Last update:"
   },
   "copyRuleSet": {
