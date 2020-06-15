@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Neinspektendaj domajnoj",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Entajpu demajnojn, kiujn Decentraleyes ne devas inspekti. Disigu domajnojn per punktokomoj (;).",

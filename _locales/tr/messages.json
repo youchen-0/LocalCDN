@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Alanları denetimlerden hariç tut",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Beyaz listeye eklemek için alan adlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",

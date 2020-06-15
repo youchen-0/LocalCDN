@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Cegah pemeriksaan domain",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Masukkan domain ke daftar putih. Pisahkan entri dengan titik koma (;).",

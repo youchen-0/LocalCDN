@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "排除要检查的域名",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "输入要添加到白名单的域名。用分号 (;) 分隔多项。",

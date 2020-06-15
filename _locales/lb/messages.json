@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Downloads fir dës Siten ëmmer erlaaben (Whitelist)",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Gitt hei d'Domains un, deenen hir Downloads ëmmer sollen erlaabt ginn. Trennt déi eenzel Domains duerch e Semikolon (;).",

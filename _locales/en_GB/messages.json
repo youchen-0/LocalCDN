@@ -16,7 +16,7 @@
     "description": "Options title"
   },
   "showIconBadgeTitle": {
-    "message": "Display injection counts on icon.",
+    "message": "Display injection counts on icon",
     "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
@@ -48,8 +48,8 @@
     "description": "Strip metadata description."
   },
   "whitelistedDomainsTitle": {
-    "message": "Exclude domains from inspections",
-    "description": "Whitelisted domains title:"
+    "message": "Exclude domains from inspections:",
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Enter domains to whitelist them. Separate multiple entries with semi-colons (;).",
@@ -68,7 +68,7 @@
     "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
   },
   "lastUpdate": {
-      "message": "Last update: ",
+    "message": "Last update:",
     "description": "Last update:"
   },
   "copyRuleSet": {
@@ -80,7 +80,7 @@
     "description": "Enable logging in browser console"
   },
   "loggingDescription": {
-    "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources",
+    "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources.",
     "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
   },
   "hideReleaseNotesTitle": {

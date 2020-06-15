@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Exclure les domaines des inspections",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Entrez des domaines pour la liste blanche. Séparez les entrées multiples par des points-virgules (;).",

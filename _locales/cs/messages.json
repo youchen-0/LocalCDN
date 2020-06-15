@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Nekontrolovat pro domény",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Zadejte domény pro jejich vynechání z kontroly. Jednotlivé domény oddělujte pomocí středníků (;).",

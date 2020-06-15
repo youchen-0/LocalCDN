@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Udeluk disse domæner fra inspektion",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Tilføj domæner der ikke skal inspiceres. Separer flere med semikolon (;).",

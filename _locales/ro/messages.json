@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Exclude domeniile următoare de la inspecții",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Introduceți domeniile dorite în lista albă. Separați intrările multiple între ele prin punct și virgulă (;).",

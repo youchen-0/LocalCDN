@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Domains von Prüfung ausschließen:",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Gib zu ignorierende Domains an. Trenne mehrere Einträge durch Semikolons (;).",

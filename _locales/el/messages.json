@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Εξαίρεση διευθύνσεων από επιθεωρήσεις",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Εισαγωγή διευθύνσεων στις επιτρεπόμενες. Διαχωρίστε πολλαπλές καταχωρήσεις με ερωτηματικά (;).",

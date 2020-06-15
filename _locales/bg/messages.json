@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Изключване на домейни от проверки",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Въведете домейни, които да се добавят в белия списък. Отделете стойностите с точка и запетая.",

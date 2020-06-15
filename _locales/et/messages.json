@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Välista uuritavaid domeene",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Sisesta domeenid, et lisada need valgesse nimekirja. Eralda mitu üksust semikoolonitega (;).",

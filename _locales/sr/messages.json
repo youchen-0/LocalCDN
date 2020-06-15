@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Прескочи домене приликом провере",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Унесите домене да их ставите на бели списак. Одвојите више ставки са тачка-запетама (;).",

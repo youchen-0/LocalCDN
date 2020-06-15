@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Wyklucz domeny z analizy",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Podaj domeny aby dodać je do białej listy. Oddziel wpisy średnikami (;).",

@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Ekskluder domener fra inspeksjoner",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Skriv inn domener for å hviteliste dem. Skill flere oppføringer med semikolon (;).",

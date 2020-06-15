@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "保護から除外するドメイン",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "ホワイトリストに登録したいドメインを入力してください。エントリが複数ある場合、セミコロン (;) で区切ってください。",

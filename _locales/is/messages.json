@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Undanskilja lén frá athugun",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Settu inn lén til að skrá þau á lista yfir leyfð lén. Aðgreindu færslur með semíkommum (;).",

@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "אל תכלול דומיינים כחלק מהבדיקה",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "הזן דומיינים שברצונך להוסיף לרשימת התרים. הפרד ערכים מרובים באמצעות נקודה-פסיק (;).",

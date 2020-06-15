@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Exkludera domäner från inspektioner",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Ange domäner för vitlistning. Separera flera domänposter med semikolon (;).",

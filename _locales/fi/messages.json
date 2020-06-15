@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Poissulje verkkotunnukset",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Lisää verkkotunnus jottei sitä korvata. Erota rivit puolipisteellä (;).",

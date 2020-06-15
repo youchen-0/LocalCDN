@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Ibukod ang mga domain mula sa mga iinspeksyon",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Ipasok ang mga domain upang i-whitelist sila. Paghiwalayin ang maramihang mga entry na may tuldok kuwit (;).",

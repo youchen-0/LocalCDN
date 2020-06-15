@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "لا تتفحص النطاقات",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "حدد النطاقات التي سوف يتم تجاهلها. إفصل المداخل المتعددة بـفاصلة منقوطة (;).",

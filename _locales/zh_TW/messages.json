@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "要排除檢查的網域",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "輸入網域即可將其加入白名單。使用分號（;）分隔多個網域。",

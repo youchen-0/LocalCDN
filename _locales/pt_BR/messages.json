@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Remover domínios das inspeções",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Digite os domínios que não devem ser analisados. Separe múltiplos domínios com ponto e vírgula (;).",

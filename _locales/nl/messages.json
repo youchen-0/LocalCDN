@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Sluit domeinen uit van inspecties",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Voer de te negeren domeinen in. Scheid de waarden met puntkomma's (;).",

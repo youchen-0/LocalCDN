@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Domainek vizsgálatának elhagyása",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Írj be domaineket, amik ne legyenek megvizsgálva. Az elemeket pontosvesszővel (;) kell elválasztani.",

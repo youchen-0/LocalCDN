@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Decentraleyes를 사용하지 않을 도메인",
-    "description": "Whitelisted domains title:"
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "화이트 리스트에 등록할 도메인을 입력하세요. 여러 개를 입력할 경우 세미콜론 (;) 을 이용해 구분합니다.",
