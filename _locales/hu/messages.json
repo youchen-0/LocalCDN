@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Helyből beszúrt erőforrások számlálója",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Telepítés óta beszúrt helyi Content Delivery Network erőforrások száma.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Beállítások",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Beszúrások számlálójának megjelenítése az ikonon",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "A beszúrt erőforrások számának megjelenítése a bővítmény ikonján.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Hiányzó erőforrások blokkolása",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Megszakított kérések blokkolása, amennyiben a kért erőforrás nem érhető el helyben.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Link prefetching letiltása",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Letiltott kérések kiszivárgásának megakadályozása.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Metaadatok törlése az engedélyezett kérésekből",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Érzékeny adatok törlése az engedélyezett CDN kérésekből.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Domainek vizsgálatának elhagyása",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Írj be domaineket, amik ne legyenek megvizsgálva. Az elemeket pontosvesszővel (;) kell elválasztani.",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Haladó",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Szabálykészleteket generálhat az uBlock vagy az uMatrix számára",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "",

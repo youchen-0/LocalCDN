@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Брояч за местно вмъкнати ресурси",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Количество на местни вмъквания на ресурси от началото на инсталацията.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Настройки",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Показване на броя на вмъкванията в иконката",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Показване на броя на вмъкнатите ресурси в иконката на разширението.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Блокиране на заявки за липсващи ресурси",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Отмяна на прехванатата заявка, ако изисквания ресурс не е наличен на местно ниво.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Изключване на предварителното извличане на препратки",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Предотвратява изтичането на забранени заявки към мрежи за доставка.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Премахване на метаданните от разрешени заявки",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Изтриване на чувствителни данни от допустимите заявки от МДС за подобряване на неприкосновеността.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Изключване на домейни от проверки",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Въведете домейни, които да се добавят в белия списък. Отделете стойностите с точка и запетая.",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "За напреднали",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Генерирайте набори от правила за uBlock или uMatrix",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "",

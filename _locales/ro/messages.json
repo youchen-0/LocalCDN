@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Contor pentru resursele injectate local",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Cantitatea de resurse locale injectate de Rețelele care Livrează Conținut din momentul instalării.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Opțiuni",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Afișează numărul de dependențe înlocuite pe iconiță",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Afișează numărul de resurse înlocuite pe iconița extensiei.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Blochează cererile pentru resursele care lipsesc",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Anulează cererile interceptate dacă resursa solicitată nu este disponibilă local.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Dezactivează pre-încărcarea de linkuri",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Previne scurgerea request-uri nepermise către rețele de livrare.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Scoate metadatele din requesturi permise",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Șterge date sensibile din requesturi permise pentru îmbunătățirea confidențialității.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Exclude domeniile următoare de la inspecții",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Introduceți domeniile dorite în lista albă. Separați intrările multiple între ele prin punct și virgulă (;).",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Avansat",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Generați seturi de reguli pentru uBlock sau uMatrix",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "",

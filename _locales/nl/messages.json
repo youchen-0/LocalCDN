@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Teller voor lokaal geïnjecteerde bestanden",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Aantal lokale Content Delivery Network-bestandsinjecties sinds installatie.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Opties",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Getelde injecties op icoon weergeven",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Toon het aantal geïnjecteerde bestanden op het extensie-icoon.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Verzoeken voor ontbrekende items blokkeren",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Annuleer een onderschept verzoek wanneer het bestand niet lokaal beschikbaar is.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Link prefetching uitschakelen",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Voorkom dat geweigerde verzoeken naar afleveringsnetwerken uitlekken.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Metadata uit toegestane verzoeken verwijderen",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Wis gevoelige gegevens uit toegestane CDN-verzoeken voor verbeterde privacy.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Sluit domeinen uit van inspecties",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Voer de te negeren domeinen in. Scheid de waarden met puntkomma's (;).",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Geavanceerd",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Genereer regelsets voor uBlock of uMatrix",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "",

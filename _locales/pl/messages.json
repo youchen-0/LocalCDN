@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Licznik zasobów podanych lokalnie",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Ilość wstrzyknięć z lokalnego Content Delivery Network od czasu instalacji.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Ustawienia",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Wyświetl licznik wstrzyknięć na ikonie",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Pokaż ilość wstrzykniętych zasobów na ikonie rozszerzenia.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Blokuj żądania brakujących zasobów",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Anuluj przechwycone żądania jeśli wymagany zasób nie jest dostępny lokalnie.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Wyłącz wczesne pobieranie linków",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Zapobiegaj wyciekaniu zabronionych zapytań do systemów dostarczania.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Usuwaj metadane z dozwolonych zapytań",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Usuwaj wrażliwe dane z dozwolonych zapytań do CDN aby zwiększyć prywatność.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Wyklucz domeny z analizy",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Podaj domeny aby dodać je do białej listy. Oddziel wpisy średnikami (;).",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Zaawansowane",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Generuj zestawy reguł dla uBlock lub uMatrix",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "Jeśli używasz uBlock lub uMatrix, to możesz wygenerować tutaj odpowiednie reguły. Musisz je potem dodać ręcznie w uBlock albo uMatrix.",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "Ostatnia aktualizacja: ",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "Kopiuj",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "Włącz logowanie w konsoli przeglądarki.",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "Otwórz \"Konsolę Przeglądarki\" ( CTRL + SHIFT + J) żeby wyświetlić brakujące zasoby.",

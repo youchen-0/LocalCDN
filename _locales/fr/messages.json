@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Compteur de ressources injectées localement",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Quantité de ressources CDN injectées localement depuis l'installation.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Options",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Afficher le nombre d’injections sur l’icône",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Affiche le nombre de ressources injectées sur l'icône d'extension.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Bloquer les requêtes de ressources manquantes",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Annule la requête interceptée si la ressource requise n'est pas disponible localement.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Désactiver le préchargement de lien",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Empêche que des requêtes non autorisées fuient vers les réseaux de distribution.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Découper les métadonnées des requêtes autorisées",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Efface les données sensibles des demandes de CDN autorisées pour améliorer la confidentialité.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Exclure les domaines des inspections",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Entrez des domaines pour la liste blanche. Séparez les entrées multiples par des points-virgules (;).",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Avancé",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Générer des ensembles de règles pour uBlock ou uMatrix",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "Dans le cas où vous utiliseriez uBlock ou uMatrix, vous pouvez générer ici la liste de règles à ajouter manuellement dans uBlock ou uMatrix.",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "Dernière mise à jour : ",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "Copier",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "Activer la journalisation dans la console du navigateur",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "Ouvrez la \"Console du Navigateur\" ( CTRL + ALT + J ) pour affichier les ressources manquantes",

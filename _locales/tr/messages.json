@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Yerel olarak eklenen kaynaklar için sayaç",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Kurulumdan bu yana yerel İçerik Dağıtım Ağı kaynak eklemelerinin miktarı.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Seçenekler",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Simgede enjeksiyon sayaçlarını göster",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Enjekte edilen kaynakların sayısını uzantı simgesinde gösterin.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Eksik kaynaklar için gelen istekleri engelle",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "İstenilen kaynak yerel olarak mevcut değilse, yakalanan isteği iptal et.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Bağlantı önalımını devre dışı bırak",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "İzin verilmeyen isteklerin dağıtım ağlarına sızmasını engelleyin.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Meta verilerini izin verilen isteklerden ayır",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "İleri düzey gizlilik için, izin verilen CDN isteklerinden hassas verileri sil.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Alanları denetimlerden hariç tut",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Beyaz listeye eklemek için alan adlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Gelişmiş",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "UBlock veya uMatrix için kural kümeleri oluşturma",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "",

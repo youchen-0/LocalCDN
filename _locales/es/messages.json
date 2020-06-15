@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Contador de recursos inyectados localmente",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Cifra de inyecciones de fuentes de Redes de Entrega de Contenido desde instalación.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Opciones",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Mostrar el conteo de inyeccciones en el icono",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Mostrar el número de recursos inyectados en el icono de extensión.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Bloquear peticiones de fuentes faltantes",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Cancelar las peticiones interceptadas cuando el recurso requerido no se encuentra localmente.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Deshabilitar la captura previa de enlaces",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Impedir que las peticiones no permitidas se escapen hacia redes de distribución.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Remover metadatos de las solicitudes permitidas",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Borrar datos sensibles de solicitudes CDN autorizadas para mejorar la privacidad.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Excluir dominios de inspecciones",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Ingresa los dominios que serán ignorados. Separa múltiples entradas con punto y coma (;).",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Avanzado",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Generar conjuntos de reglas para uBlock o uMatrix",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "En caso de estar usando uBlock o uMatrix aquí puedes generar las reglas. Tienes que añadir estas reglas manualmente en uBlock o uMatrix",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
     "message": "Última actualización",
-    "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "Texto del botón para copiar el conjunto de reglas",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "Habilitar inicio de sesión en la consola del navegador",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "Abrir \"consola del navegador\" ( CTRL + SHIFT + J ) te mostrará los recursos que faltan",

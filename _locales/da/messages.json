@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Optælling af lokalt leverede ressourcer",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Antal injektioner af lokale ressourcer siden installation.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Indstillinger",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Vis antal af injektioner på ikon",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Viser antallet af injicerede ressourcer på udvidelsens ikon.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Bloker forespørgsler efter manglende ressourcer",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Annullerer en forespørgsel hvis den forespurgte ressource ikke findes lokalt.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Deaktiver forhåndshentning af link",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Forhindrer ikke-tilladte forespørgsler i at blive lækket til leverandør-netværk.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Fjern metadata fra tilladte forespørgsler",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Sletter følsomme data fra tilladte CDN-forespørgsler for at mindste eksponeringen.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Udeluk disse domæner fra inspektion",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains title:"
   },
   "whitelistedDomainsDescription": {
     "message": "Tilføj domæner der ikke skal inspiceres. Separer flere med semikolon (;).",
@@ -57,11 +57,11 @@
   },
   "advancedLabel": {
     "message": "Avanceret",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Generer regelsæt for uBlock eller uMatrix",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "",
@@ -69,15 +69,15 @@
   },
   "lastUpdate": {
       "message": "",
-      "description": "Last update."
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "",
