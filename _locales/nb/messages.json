@@ -24,7 +24,7 @@
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Blokker forespørsler etter manglende ressurser",
+        "message": "Blokker forespørsler for manglende ressurser",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -32,7 +32,7 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Deaktiver forhåndshenting av lenker",
+        "message": "Skru av forhåndshenting av lenker",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Slett sensitive data fra tillatte CDN-forespørsler for bedre personvern.",
+        "message": "Slett sensitive data fra tillatte CDN-forespørsler for bedret personvern.",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
@@ -76,27 +76,27 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Aktiver logging i nettleserkonsoll",
+        "message": "Skru på logging i nettleserkonsoll",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
+        "message": "Åpne \"Nettleserkonsollen\" og bruk (Ctrl+Shift+J) for å vise manglende ressurser.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "Deaktiver versjonsnotat",
+        "message": "Skru av versjonsnotat",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Hvis aktivert, vil du ikke motta informasjon om nye funksjoner i LocalCDN. Dette inkluderer informasjon om nye regler for uBlock/uMatrix.",
+        "message": "Skru på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for uBlock/uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Denne funksjonen forårsaker mange feil på nettsteder. Ikke la den være aktivert, med mindre du er forberedt på å manuelt hviteliste berørte domener.",
+        "message": "Denne funksjonen forårsaker mange feil på nettsteder. Ikke la den stå på, med mindre du er forberedt på å manuelt hviteliste berørte domener.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "Deaktiver",
+        "message": "Skru av",
         "description": "Disable"
     },
     "labelManipulateDOM": {
@@ -108,7 +108,7 @@
         "description": "Show more Injections"
     },
     "labelDonate": {
-        "message": "Donere",
+        "message": "Doner",
         "description": "Donate"
     }
 }
