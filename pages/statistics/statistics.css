@@ -19,7 +19,7 @@ header {
     border-bottom: solid #d3d3d3 1px;
     display: flex;
     position: relative;
-    padding: 8px 15px 15px 4px;
+    padding: 8px 15px 8px 4px;
 }
 
 .panel {
@@ -315,6 +315,11 @@ footer {
 
     .label-domain {
         color: #717171;
+    }
+
+    #label-donate {
+        background-color: #404040;
+        color: #bbb;
     }
 
     .panel:not(:last-child) {

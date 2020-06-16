@@ -257,3 +257,17 @@ hr {
         min-height: unset;
     }
 }
+@media (prefers-color-scheme: dark) {
+
+    /**
+     * Sections
+     */
+
+    body {
+        background-color: #404040;
+    }
+
+    body, p, h3, .subtle-hint {
+        color: #aeaeae !important;
+    }
+}
