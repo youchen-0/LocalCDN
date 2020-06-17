@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Eksik kaynakları göstermek için \"Tarayıcı Konsolu\"nu (CTRL + SHIFT + J) açın.",
+        "message": "\"Tarayıcı Konsolunu\" açın ve eksik kaynakları göstermek için (Ctrl+Shift+J) tuşlarını kullanın.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -88,7 +88,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Etkinleştirilirse, LocalCDN'deki yeni özellikler hakkında bilgi almayacaksınız. Buna yeni uBlock/uMatrix kuralları hakkında bilgiler de dahildir.",
+        "message": "Yeni LocalCDN özellikleri hakkında bilgi almamak için bunu açın. Buna yeni uBlock/uMatrix kuralları hakkında bilgiler de dahildir.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
