@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "\"Tarayıcı Konsolunu\" açın ve eksik kaynakları göstermek için (Ctrl+Shift+J) tuşlarını kullanın.",
+        "message": "Eksik kaynakları göstermek için \"Tarayıcı Konsolunu\" (CTRL + SHIFT + J) açın.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
