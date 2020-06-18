@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Open the \"Browser Console\" and use (Ctrl+Shift+J) to show missing resources.",
+        "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
