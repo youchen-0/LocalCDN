@@ -212,7 +212,8 @@ var files = {
         'resources/fontawesome/3.2.1/css/font-awesome-ie7.css': true,
         'resources/fontawesome/3.2.1/css/font-awesome-ie7.min.css': true,
         'resources/fontawesome/4.7.0/css/font-awesome.min.css': true,
-        'resources/fontawesome/5.7.2/css/all.css': true,
+        'resources/fontawesome/5.13.1/css/all.min.css': true,
+        'resources/fontawesome/5.13.1/js/all.min.jsm': true,
 
         // hls.js
         'resources/hls.js/0.13.2/hls.min.jsm': true,

@@ -134,7 +134,8 @@ var mappings = {
             'fancybox/{version}/jquery.fancybox.min.css': resources.fancyBoxCSS,
             'fancybox/{version}/jquery.fancybox.css': resources.fancyBoxCSS,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
-            'font-awesome/{version}/css/all.min.css': resources.fontawesome5,
+            'font-awesome/{version}/css/': resources.fontawesome5CSS,
+            'font-awesome/{version}/js/': resources.fontawesome5JS,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
             'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jquery/{version}/jquery.': resources.jQuery,
@@ -651,7 +652,8 @@ var mappings = {
     // Font Awesome CDN
     'use.fontawesome.com': {
         '/releases/v': {
-            '{version}/css/all.css': resources.fontawesome5
+            '{version}/css/': resources.fontawesome5CSS,
+            '{version}/js/': resources.fontawesome5JS
         }
     },
     // Cloudflare Rocket-Loader

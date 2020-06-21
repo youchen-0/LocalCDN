@@ -314,7 +314,9 @@ helpers.determineResourceName = function (filename) {
         return 'flv.js';
     case 'font-awesome.min.css':
         return 'Font Awesome';
-    case 'all.css':
+    case 'all.min.css':
+        return 'Font Awesome';
+    case 'all.min.js':
         return 'Font Awesome';
     case 'hls.min.jsm':
         return 'hls.js';
@@ -572,7 +574,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/fontawesome/4.')) {
         return  '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
-        return  '5.7.2';
+        return  '5.13.1';
     } else if (type.includes('/hls.js/')) {
         return  '0.13.2';
     } else if (type.includes('/jquery/1.')) {

@@ -261,9 +261,13 @@ var resources = {
         'type': 'text/css'
     },
     // Font Awesome
-    'fontawesome5': {
-        'path': 'resources/fontawesome/{version}/css/all.css',
+    'fontawesome5CSS': {
+        'path': 'resources/fontawesome/{version}/css/all.min.css',
         'type': 'text/css'
+    },
+    'fontawesome5JS': {
+        'path': 'resources/fontawesome/{version}/js/all.min.jsm',
+        'type': 'application/javascript'
     },
     // hls.js
     'hlsJS': {
