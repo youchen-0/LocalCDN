@@ -223,7 +223,7 @@ var files = {
         'resources/jquery/1.8.3/jquery.min.jsm': true,
         'resources/jquery/1.12.4/jquery.min.jsm': true,
         'resources/jquery/2.2.4/jquery.min.jsm': true,
-        'resources/jquery/3.4.1/jquery.min.jsm': true,
+        'resources/jquery/3.5.1/jquery.min.jsm': true,
 
         // jQuery BlockUI
         'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,

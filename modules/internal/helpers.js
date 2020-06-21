@@ -586,7 +586,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery/2.')) {
         return  '2.2.4';
     } else if (type.includes('/jquery/3.')) {
-        return  '3.4.1';
+        return  '3.5.1';
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
         return  '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
