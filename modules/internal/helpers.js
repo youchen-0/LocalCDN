@@ -29,7 +29,7 @@ var helpers = {};
 
 helpers.insertI18nContentIntoDocument = function (document) {
 
-    let scriptDirection, defaultScriptDirection, i18nElements, translationComplete;
+    let scriptDirection, i18nElements, translationComplete;
 
     translationComplete = true;
     scriptDirection = helpers.determineScriptDirection(navigator.language);

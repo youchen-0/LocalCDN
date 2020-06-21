@@ -52,7 +52,7 @@ popup._renderContents = function () {
 
 popup._renderNonContextualContents = function () {
 
-    let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel, infoButtonSVG;
+    let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel;
 
     versionLabelElement = document.getElementById('version-label');
     nameLabelElement = document.getElementById('name-label');

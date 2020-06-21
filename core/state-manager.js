@@ -179,7 +179,7 @@ stateManager._createTab = function (tab) {
 
     chrome.webRequest.onBeforeRequest.addListener(function (requestDetails) {
 
-        let tab = stateManager.tabs[tabIdentifier].details || {};
+        tab = stateManager.tabs[tabIdentifier].details || {};
         return interceptor.handleRequest(requestDetails, tabIdentifier, tab);
 
     }, requestFilters, [WebRequest.BLOCKING]);

@@ -217,11 +217,9 @@ options._onOptionChanged = function ({target}) {
     optionKey = target.getAttribute('data-option');
     optionType = target.getAttribute('type');
 
-    switch (optionType) {
-    case 'checkbox':
+    if (optionType === 'checkbox') {
         optionValue = target.checked;
-        break;
-    default:
+    } else {
         optionValue = target.value;
     }
 
