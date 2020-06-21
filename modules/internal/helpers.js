@@ -608,8 +608,6 @@ helpers.setLastVersion = function (type, version) {
         return  '1.8.0';
     } else if (type.includes('/mobile/1.')) {
         return  '1.4.5';
-    } else if (type.includes('/urlive/1.')) {
-        return  '1.1.1';
     } else if (type.includes('/js-cookie/2.')) {
         return  '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
