@@ -33,7 +33,6 @@ helpers.insertI18nContentIntoDocument = function (document) {
 
     translationComplete = true;
     scriptDirection = helpers.determineScriptDirection(navigator.language);
-    defaultScriptDirection = helpers.determineScriptDirection('en_US');
     i18nElements = document.querySelectorAll('[data-i18n-content]');
 
     i18nElements.forEach(function (i18nElement) {
@@ -105,7 +104,7 @@ helpers.normalizeDomain = function (domain) {
     return domain;
 };
 
-helpers.extractDomainFromUrl = function (url = '', normalize) {
+helpers.extractDomainFromUrl = function (url, normalize) {
 
     if (/^(?!(http[s]?|file):\/\/).*/.test(url)) {
         return null;

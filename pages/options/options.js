@@ -251,11 +251,8 @@ options._openRuleSet = function({target}) {
 
     let urls = mappings;
     let optionKey = target.getAttribute('data-option');
-    let optionType = target.getAttribute('value');
-
     let textArea = document.getElementById("generated-rules");
     let btnCopy = document.getElementById("button-copy-rule-set");
-
     let content = "";
 
     textArea.style.display = "block";

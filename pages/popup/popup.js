@@ -360,7 +360,7 @@ popup._createInjectionGroupElement = function (source, cdn) {
     return injectionGroupElement;
 };
 
-popup._createInjectionElement = function (injection, oversized = false) {
+popup._createInjectionElement = function (injection) {
 
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
 
