@@ -12,7 +12,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 * Supports cloud storage by browsers sync feature (Firefox Sync or own Sync-Server) if enabled
 * Removed integrity checks of embedded script and style elements (Firefox only)
 * Font Awesome
-* jQuery up to 3.4.1
+* jQuery up to 3.5.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
 * AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch
