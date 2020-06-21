@@ -139,11 +139,6 @@ var resources = {
         'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
         'type': 'application/javascript'
     },
-    // Angular Sanitize
-    'angularSanitize': {
-        'path': 'resources/angular-sanitize/{version}/angular-sanitize.min.jsm',
-        'type': 'application/javascript'
-    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',
@@ -261,9 +256,13 @@ var resources = {
         'type': 'text/css'
     },
     // Font Awesome
-    'fontawesome5': {
-        'path': 'resources/fontawesome/{version}/css/all.css',
+    'fontawesome5CSS': {
+        'path': 'resources/fontawesome/{version}/css/all.min.css',
         'type': 'text/css'
+    },
+    'fontawesome5JS': {
+        'path': 'resources/fontawesome/{version}/js/all.min.jsm',
+        'type': 'application/javascript'
     },
     // hls.js
     'hlsJS': {
@@ -377,6 +376,10 @@ var resources = {
     // MooTools
     'mootools': {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
+        'type': 'application/javascript'
+    },
+    'mootoolsYui': {
+        'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
         'type': 'application/javascript'
     },
     // ocLazyLoad

@@ -45,7 +45,7 @@ statistics._renderNonContextualContents = function () {
     versionLabelElement.innerText = helpers.formatVersion(version);
 };
 
-statistics._renderInjectionPanel = function (statisticData) {
+statistics._renderInjectionPanel = function () {
 
     let websiteContextElement, injectionOverviewElement;
 
@@ -62,7 +62,7 @@ statistics._renderContextualContents = function () {
     }
 };
 
-statistics._createInjectionOverviewElement = function (statisticData) {
+statistics._createInjectionOverviewElement = function () {
 
     let divOutline = document.createElement('div');
     divOutline.setAttribute('class', 'cdn-list');

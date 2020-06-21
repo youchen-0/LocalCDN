@@ -52,7 +52,7 @@ popup._renderContents = function () {
 
 popup._renderNonContextualContents = function () {
 
-    let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel, infoButtonSVG;
+    let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel;
 
     versionLabelElement = document.getElementById('version-label');
     nameLabelElement = document.getElementById('name-label');
@@ -360,7 +360,7 @@ popup._createInjectionGroupElement = function (source, cdn) {
     return injectionGroupElement;
 };
 
-popup._createInjectionElement = function (injection, oversized = false) {
+popup._createInjectionElement = function (injection) {
 
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
 
@@ -436,7 +436,7 @@ popup._renderLocaleNotice = function () {
     localeNoticeElement.setAttribute('class', 'notice notice-default');
     localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
 
-    nameTextNode = document.createTextNode('Translation is incomplete. You want to help?');
+    nameTextNode = document.createTextNode('Translation is incomplete. You want to help on Weblate?');
 
     localeNoticeElement.appendChild(nameTextNode);
     localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
@@ -557,7 +557,7 @@ popup._onIncompleteTranslation = function () {
     if (event.button === 0 || event.button === 1) {
 
         chrome.tabs.create({
-            'url': 'https://localcdn.de/translation/',
+            'url': 'https://hosted.weblate.org/projects/localcdn/',
             'active': (event.button === 0)
         });
     }

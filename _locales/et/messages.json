@@ -5,7 +5,7 @@
   },
   "amountInjectedTitle": {
     "message": "Kohalikult sisestatud ressursside loendur",
-    "description": "Amount injected title."
+    "description": "Amount injected title"
   },
   "amountInjectedDescription": {
     "message": "Kohalike sisuedastusvõrkude ressursisisestuste arv alates installimisest.",
@@ -13,11 +13,11 @@
   },
   "optionsTitle": {
     "message": "Valikud",
-    "description": "Options title."
+    "description": "Options title"
   },
   "showIconBadgeTitle": {
     "message": "Kuva sisestuste arvu ikoonil",
-    "description": "Show icon badge title."
+    "description": "Show icon badge title"
   },
   "showIconBadgeDescription": {
     "message": "Kuva sisestatud ressursside arvu laienduse ikoonil.",
@@ -25,7 +25,7 @@
   },
   "blockMissingTitle": {
     "message": "Blokeeri puuduvate ressursside taotlused",
-    "description": "Block requests for missing resources title."
+    "description": "Block requests for missing resources title"
   },
   "blockMissingDescription": {
     "message": "Tühista kinnipüütud taotlus, kui vajaminev ressurss ei ole kohalikult saadaval.",
@@ -33,7 +33,7 @@
   },
   "disablePrefetchTitle": {
     "message": "Keela lingi eellaadimine",
-    "description": "Disable prefetch title."
+    "description": "Disable prefetch title"
   },
   "disablePrefetchDescription": {
     "message": "Väldi keelatud taotluste väljalekkimist edastusvõrkudele.",
@@ -41,7 +41,7 @@
   },
   "stripMetadataTitle": {
     "message": "Eemalda lubatud taotlustelt metaandmed",
-    "description": "Strip metadata title."
+    "description": "Strip metadata title"
   },
   "stripMetadataDescription": {
     "message": "Kustuta tundlikud andmed lubatud sisuedastusvõrkude taotlustest parema privaatsuse saamiseks.",
@@ -49,7 +49,7 @@
   },
   "whitelistedDomainsTitle": {
     "message": "Välista uuritavaid domeene",
-    "description": "Whitelisted domains title."
+    "description": "Whitelisted domains:"
   },
   "whitelistedDomainsDescription": {
     "message": "Sisesta domeenid, et lisada need valgesse nimekirja. Eralda mitu üksust semikoolonitega (;).",
@@ -57,27 +57,27 @@
   },
   "advancedLabel": {
     "message": "Edasijõudnuile",
-    "description": "Advanced label."
+    "description": "Advanced label"
   },
   "generateRuleSetTitle": {
     "message": "Genereerige reeglite komplektid uBlockile või uMatrixile",
-    "description": "Generate rule set title."
+    "description": "Generate rule set title"
   },
   "generateRuleSetDescription": {
     "message": "",
     "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
   },
   "lastUpdate": {
-      "message": "",
-      "description": "Last update."
+    "message": "",
+    "description": "Last update:"
   },
   "copyRuleSet": {
     "message": "",
-    "description": "Text of button to copy ruleset."
+    "description": "Text of button to copy ruleset"
   },
   "loggingTitle": {
     "message": "",
-    "description": "Enable logging in browser console."
+    "description": "Enable logging in browser console"
   },
   "loggingDescription": {
     "message": "",

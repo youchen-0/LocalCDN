@@ -29,11 +29,10 @@ var helpers = {};
 
 helpers.insertI18nContentIntoDocument = function (document) {
 
-    let scriptDirection, defaultScriptDirection, i18nElements, translationComplete;
+    let scriptDirection, i18nElements, translationComplete;
 
     translationComplete = true;
     scriptDirection = helpers.determineScriptDirection(navigator.language);
-    defaultScriptDirection = helpers.determineScriptDirection('en_US');
     i18nElements = document.querySelectorAll('[data-i18n-content]');
 
     i18nElements.forEach(function (i18nElement) {
@@ -105,7 +104,7 @@ helpers.normalizeDomain = function (domain) {
     return domain;
 };
 
-helpers.extractDomainFromUrl = function (url = '', normalize) {
+helpers.extractDomainFromUrl = function (url, normalize) {
 
     if (/^(?!(http[s]?|file):\/\/).*/.test(url)) {
         return null;
@@ -262,8 +261,6 @@ helpers.determineResourceName = function (filename) {
         return 'Angular Payments';
     case 'angular-stripe-checkout.jsm':
         return 'Angular Stripe Checkout';
-    case 'angular-sanitize.min.js':
-        return 'Angular Sanitize';
     case 'animate.min.css':
         return 'Animate CSS';
     case 'angular-material.min.jsm':
@@ -314,7 +311,9 @@ helpers.determineResourceName = function (filename) {
         return 'flv.js';
     case 'font-awesome.min.css':
         return 'Font Awesome';
-    case 'all.css':
+    case 'all.min.css':
+        return 'Font Awesome';
+    case 'all.min.js':
         return 'Font Awesome';
     case 'hls.min.jsm':
         return 'hls.js';
@@ -572,7 +571,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/fontawesome/4.')) {
         return  '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
-        return  '5.7.2';
+        return  '5.13.1';
     } else if (type.includes('/hls.js/')) {
         return  '0.13.2';
     } else if (type.includes('/jquery/1.')) {
@@ -584,12 +583,12 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery/2.')) {
         return  '2.2.4';
     } else if (type.includes('/jquery/3.')) {
-        return  '3.4.1';
+        return  '3.5.1';
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
         return  '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
         if (helpers.compareVersion('1.8.18', requestVersion)) return '1.8.18'; // <= v1.8.18
-        else return '1.11.4'; // >= 1.8.19
+        else return '1.12.1'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
         return  '2.70';
     } else if (type.includes('/jquery-csv/1.')) {
@@ -606,8 +605,6 @@ helpers.setLastVersion = function (type, version) {
         return  '1.8.0';
     } else if (type.includes('/mobile/1.')) {
         return  '1.4.5';
-    } else if (type.includes('/urlive/1.')) {
-        return  '1.1.1';
     } else if (type.includes('/js-cookie/2.')) {
         return  '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
@@ -623,7 +620,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/moment.js/2.')) {
         return  '2.24.0';
     } else if (type.includes('/mootools/1.')) {
-        return  '1.6.0';
+        if (helpers.compareVersion('1.4.5', requestVersion)) return '1.4.5'; // <= v1.4.5
+        else return '1.6.0'; // > 1.4.5
     } else if (type.includes('/oclazyload/1.')) {
         return  '1.1.0';
     } else if (type.includes('p2p-media-loader-core')) {

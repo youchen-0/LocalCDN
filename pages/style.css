@@ -1,0 +1,273 @@
+/**
+* Sections
+*/
+
+html {
+    background-color: #4e4e4e;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+    box-sizing: border-box;
+    color: #555;
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 982px;
+    min-height: 100%;
+    min-width: 256px;
+    padding: 33px 18px;
+    height: unset !important;
+    -moz-box-shadow: 10px 10px 60px #111;
+    -webkit-box-shadow: 10px 10px 60px #111;
+    -khtml-box-shadow: 10px 10px 60px #111;
+    box-shadow: 10px 10px 60px #111;
+}
+
+h1 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+a {
+    color: #777;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.btn-panel {
+    cursor: default;
+    font-family: 'Noto Sans', Arial, sans-serif;
+    margin: auto;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+}
+
+.topic-badge {
+    background-color: #fcfcfc;
+    border-radius: 100px;
+    border: 4px solid #e6e6e6;
+    color: #5a8f79;
+    display: inline-block;
+    font-size: 48px;
+    line-height: 0;
+    margin: 0 20px 20px;
+    padding: 16px;
+}
+
+.topic-badge:first-child {
+    margin-left: 0;
+}
+
+.topic-badge:last-child {
+    margin-right: 0;
+}
+
+/**
+ * Fonts
+ */
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../modules/noto-sans/noto-sans.woff2')
+       format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../modules/noto-sans/noto-sans-bold.woff2')
+       format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../modules/noto-sans/noto-sans-italic.woff2')
+       format('woff2');
+}
+
+/**
+ * Buttons
+ */
+
+.btn {
+    color: #fff !important;
+    font-weight: 600;
+    margin: 15px;
+    padding: 11px 17px;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.5), 0px 5px 5px -5px #000000;
+    box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.5), 0px 5px 5px -5px #000000;
+}
+
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    justify-content: center;
+}
+
+.btn-gitlab {
+    background-color: #007bbd;
+    border-color: #00679e !important;
+}
+
+.btn-gitlab:hover {
+    background-color: #00679e;
+}
+
+.btn-testing-utility {
+    background-color: #058300;
+    border-color: #034800 !important;
+}
+
+.btn-testing-utility:hover {
+    background-color: #034800;
+}
+
+.btn-contact {
+    background-color: #f49b2f;
+    border-color: #f58700 !important;
+}
+
+.btn-contact:hover {
+    background-color: #f58700;
+}
+
+/**
+ * Miscellaneous
+ */
+
+.notice {
+    align-items: center;
+    font-family: 'Noto Sans', Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 750px;
+    text-align: left;
+}
+
+.logo {
+    display: block;
+    height: 145px;
+    margin: 15px auto 50px;
+}
+
+.subtle-hint {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 8px 11px;
+}
+
+.inherit {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.topic-label {
+    color: #5a8f79;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.color-purple {
+    color: #9e608e;
+}
+
+.uncle-sam,
+.we-need-you-title {
+	margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+	display: block;
+}
+
+.uncle-sam {
+    display: block;
+}
+
+.we-need-you-declaration {
+    color: #777;
+    font-weight: normal;
+    text-align: center;
+}
+
+#p-donate {
+    text-decoration: underline;
+}
+
+#p-donate:hover {
+    cursor: pointer;
+}
+
+/**
+ * Media Queries
+ */
+
+@media screen and (max-width: 982px) {
+
+    body {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .btn-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .btn-panel {
+        flex-wrap: wrap;
+
+    }
+
+    .btn {
+        padding: 13px 18px 12px;
+        width: 100%;
+        margin-bottom: 10px;
+        max-width: 733px;
+    }
+
+    .btn-text {
+        width: 100%;
+        min-height: unset;
+    }
+}
+@media (prefers-color-scheme: dark) {
+
+    /**
+     * Sections
+     */
+
+    body {
+        background-color: #404040;
+    }
+
+    body, p, h3, .subtle-hint {
+        color: #aeaeae !important;
+    }
+}

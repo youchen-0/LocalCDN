@@ -135,9 +135,6 @@ var files = {
         'resources/angular-material/1.1.21/angular-material.min.css': true,
         'resources/angular-material/1.1.21/angular-material.min.jsm': true,
 
-        // Angular Sanitize
-        'resources/angular-sanitize/1.7.9/angular-sanitize.min.jsm': true,
-
         // autocomplete.js
         'resources/autocomplete.js/0.37.1/autocomplete.min.jsm': true,
 
@@ -212,7 +209,8 @@ var files = {
         'resources/fontawesome/3.2.1/css/font-awesome-ie7.css': true,
         'resources/fontawesome/3.2.1/css/font-awesome-ie7.min.css': true,
         'resources/fontawesome/4.7.0/css/font-awesome.min.css': true,
-        'resources/fontawesome/5.7.2/css/all.css': true,
+        'resources/fontawesome/5.13.1/css/all.min.css': true,
+        'resources/fontawesome/5.13.1/js/all.min.jsm': true,
 
         // hls.js
         'resources/hls.js/0.13.2/hls.min.jsm': true,
@@ -222,7 +220,7 @@ var files = {
         'resources/jquery/1.8.3/jquery.min.jsm': true,
         'resources/jquery/1.12.4/jquery.min.jsm': true,
         'resources/jquery/2.2.4/jquery.min.jsm': true,
-        'resources/jquery/3.4.1/jquery.min.jsm': true,
+        'resources/jquery/3.5.1/jquery.min.jsm': true,
 
         // jQuery BlockUI
         'resources/jquery.blockUI/2.70/jquery.blockUI.min.jsm': true,
@@ -241,7 +239,7 @@ var files = {
         'resources/jquery-migrate/3.1.0/jquery-migrate.min.jsm': true,
 
         // jQuery UI
-        'resources/jqueryui/1.11.4/jquery-ui.min.jsm': true,
+        'resources/jqueryui/1.12.1/jquery-ui.min.jsm': true,
         'resources/jqueryui/1.8.18/jquery-ui.min.jsm': true,
 
         // jQuery UI Themes
@@ -286,6 +284,7 @@ var files = {
 
         // MooTools
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
+        'resources/mootools/1.4.5/mootools-yui-compressed.jsm': true,
 
         // ocLazyLoad
         'resources/oclazyload/1.1.0/ocLazyLoad.min.jsm': true,

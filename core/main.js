@@ -112,7 +112,7 @@ main._showReleaseNotes = function (details) {
                     if (!items.hideReleaseNotes) {
                         chrome.tabs.create({
                             'url': updateAdBlockerRules,
-                            'active': true
+                            'active': false
                         });
                     }
                 });

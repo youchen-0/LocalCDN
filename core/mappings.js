@@ -54,7 +54,8 @@ var mappings = {
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'jqueryui/{version}/themes/base/minified/jquery-ui.min.css': resources.jQueryUiThemes,
-            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
+            'mootools/{version}/mootools-core': resources.mootools,
+            'mootools/{version}/mootools-yui-compressed.': resources.mootoolsYui,
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
@@ -133,7 +134,8 @@ var mappings = {
             'fancybox/{version}/jquery.fancybox.min.css': resources.fancyBoxCSS,
             'fancybox/{version}/jquery.fancybox.css': resources.fancyBoxCSS,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
-            'font-awesome/{version}/css/all.min.css': resources.fontawesome5,
+            'font-awesome/{version}/css/': resources.fontawesome5CSS,
+            'font-awesome/{version}/js/': resources.fontawesome5JS,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
             'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jquery/{version}/jquery.': resources.jQuery,
@@ -198,19 +200,8 @@ var mappings = {
     'code.jquery.com': {
         '/': {
             'jquery-{version}.': resources.jQuery,
-            'ui/{version}/jquery-ui.js': resources.jQueryUI,
-            'ui/{version}/jquery-ui.min.js': resources.jQueryUI,
-            'mobile/{version}/jquery.mobile': resources.jQueryMobile,
-
-            // Basic Shorthand Notations [Deprecated]
-            'jquery-latest.': {
-                'path': 'resources/jquery/1.11.1/jquery.min.jsm',
-                'type': 'application/javascript'
-            },
-            'jquery.': {
-                'path': 'resources/jquery/1.11.1/jquery.min.jsm',
-                'type': 'application/javascript'
-            }
+            'ui/{version}/jquery-ui.': resources.jQueryUI,
+            'mobile/{version}/jquery.mobile': resources.jQueryMobile
         }
     },
     // jsDelivr (Cloudflare)
@@ -507,7 +498,11 @@ var mappings = {
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont_debug.': resources.webfont,
+            'ember.js/{version}/ember.': resources.ember,
+            'moment.js/{version}/moment.': resources.moment,
+            'moment.js/{version}/moment.min.': resources.moment,
+            'webfont/{version}/webfontloader.': resources.webfont
         }
     },
     // Tencent Public Libraries
@@ -596,41 +591,6 @@ var mappings = {
             'mootoolscore/mootools.core-{version}.': resources.mootools
         }
     },
-    // BootCDN
-    'cdn.bootcss.com': {
-        '/': {
-            'angular.js/{version}/angular-animate.': resources.angularAnimate,
-            'angular.js/{version}/angular-aria.': resources.angularAria,
-            'angular.js/{version}/angular-cookies.': resources.angularCookies,
-            'angular.js/{version}/angular-loader.': resources.angularLoader,
-            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
-            'angular.js/{version}/angular-messages.': resources.angularMessages,
-            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
-            'angular.js/{version}/angular-resource.': resources.angularResource,
-            'angular.js/{version}/angular-route.': resources.angularRoute,
-            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
-            'angular.js/{version}/angular-touch.': resources.angularTouch,
-            'angular.js/{version}/angular.': resources.angular,
-            'backbone.js/{version}/backbone.': resources.backbone,
-            'backbone.js/{version}/backbone-min.': resources.backbone,
-            'dojo/{version}/dojo.': resources.dojo,
-            'ember.js/{version}/ember.': resources.ember,
-            'ext-core/{version}/ext-core.': resources.extCore,
-            'jquery/{version}/jquery.': resources.jQuery,
-            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
-            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
-            'modernizr/{version}/modernizr.': resources.modernizr,
-            'moment.js/{version}/moment.': resources.moment,
-            'moment.js/{version}/moment.min.': resources.moment,
-            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
-            'prototype/{version}/prototype.': resources.prototypeJS,
-            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
-            'swfobject/{version}/swfobject.': resources.swfobject,
-            'underscore.js/{version}/underscore.': resources.underscore,
-            'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfontloader.': resources.webfont
-        }
-    },
     // StackPath BootstrapCDN
     'stackpath.bootstrapcdn.com': {
         '/': {
@@ -661,7 +621,8 @@ var mappings = {
     // Font Awesome CDN
     'use.fontawesome.com': {
         '/releases/v': {
-            '{version}/css/all.css': resources.fontawesome5
+            '{version}/css/': resources.fontawesome5CSS,
+            '{version}/js/': resources.fontawesome5JS
         }
     },
     // Cloudflare Rocket-Loader

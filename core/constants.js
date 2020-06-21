@@ -290,7 +290,6 @@ const EncodingTypes = {
     'csiso2022jp': true,
     'iso-2022-jp': true,
     'iso-2022-jp-2': true,
-    'iso-2022-jp': true,
     'csshiftjis': true,
     'ms_kanji': true,
     'shift-jis': true,

@@ -26,7 +26,6 @@ updates._openRuleSet = function({target}) {
 
      let urls = mappings;
      let updateKey = target.getAttribute('data-option');
-     let updateType = target.getAttribute('value');
 
      let textArea = document.getElementById("generated-rules");
      let btnCopy = document.getElementById("button-copy-rule-set");

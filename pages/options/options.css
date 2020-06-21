@@ -94,6 +94,10 @@ body {
 
 .input-text {
     max-width: 320px;
+    border-radius: 3px;
+    border: 1px solid darkgrey;
+    padding: 5px !important;
+    color: #555;
 }
 
 /**
@@ -266,18 +270,17 @@ body[dir="rtl"] .input-text {
 
     body {
         background-color: #202023;
-        color: #f9f9fa;
     }
 
-    .title-option {
-        color: #f9f9fa;
+    body, .title-option {
+        color: #aeaeae;
     }
 
     .description-option {
         color: #b1b1b3;
     }
 
-    #last-mapping-update, .badge-warning, .notice-message, .button-warning {
+    .notice-head > span, #last-mapping-update, .badge-warning, .notice-message, .button-warning {
         color: #4b3000;
     }
 }

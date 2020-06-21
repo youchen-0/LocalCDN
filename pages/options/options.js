@@ -67,7 +67,7 @@ options._renderOptionsPanel = function () {
         options._renderLocaleNotice();
     }
 
-    document.getElementById('last-mapping-update').textContent += lastMappingUpdate;
+    document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
 };
 
 options._renderBlockMissingNotice = function () {
@@ -217,11 +217,9 @@ options._onOptionChanged = function ({target}) {
     optionKey = target.getAttribute('data-option');
     optionType = target.getAttribute('type');
 
-    switch (optionType) {
-    case 'checkbox':
+    if (optionType === 'checkbox') {
         optionValue = target.checked;
-        break;
-    default:
+    } else {
         optionValue = target.value;
     }
 
@@ -251,11 +249,8 @@ options._openRuleSet = function({target}) {
 
     let urls = mappings;
     let optionKey = target.getAttribute('data-option');
-    let optionType = target.getAttribute('value');
-
     let textArea = document.getElementById("generated-rules");
     let btnCopy = document.getElementById("button-copy-rule-set");
-
     let content = "";
 
     textArea.style.display = "block";

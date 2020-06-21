@@ -9,3 +9,8 @@
 #table-bank-transfer > tbody > tr > td:nth-of-type(1) {
     font-weight: bold;
 }
+
+.div-donations {
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+}

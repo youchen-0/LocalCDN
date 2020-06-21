@@ -1,14 +1,18 @@
 # LocalCDN
-A web browser extension (and a fork of Decentraleyes) that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://localcdn.de/test/) to find out if you are properly protected. For more information, please read this [basic introduction from Decentraleyes](https://git.synz.io/Synzvato/decentraleyes/wikis/Simple-Introduction) or our [Wiki pages](https://codeberg.org/nobody/LocalCDN/wiki). You can also [download](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/) the extension directly from Mozilla and just try it.
+
+[![Translate](https://hosted.weblate.org/widgets/localcdn/-/localcdn/svg-badge.svg)](https://hosted.weblate.org/projects/localcdn/localcdn/)
+
+A web browser extension (and a fork of Decentraleyes) that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://localcdn.de/test/) to find out if you are properly protected. For more information, please read the [tutorial](https://localcdn.de/tutorial) or our [Wiki pages](https://codeberg.org/nobody/LocalCDN/wiki). You can also [download](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/) the extension directly from Mozilla and just try it.
 
 
 ## Differences between LocalCDN and Decentraleyes
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
-* **NEW: Removed integrity checks of embedded script and style elements (Firefox only)** :tada: :tada: :tada:
+* Supports cloud storage by browsers sync feature (Firefox Sync or own Sync-Server) if enabled
+* Removed integrity checks of embedded script and style elements (Firefox only)
 * Font Awesome
-* jQuery up to 3.4.1
+* jQuery up to 3.5.1
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
 * AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch
@@ -30,6 +34,8 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 :thumbsup: remove crossorigin and integrity attributes of script and stylesheet tags to increase replacements (Firefox only)
 
 :thumbsup: doesn't matter which version a website requested
+
+:thumbsup: supports cloud storage if enabled
 
 
 ## We need you!
@@ -79,6 +85,8 @@ Please read this [developer guide](https://developer.mozilla.org/en-US/Add-ons/W
 
 Just open an issue with your question or write an [email](https://localcdn.de/contact/) (PGP possible!).
 
+## Submitting Translations
+The language you want is not completely translated or you are a language talent? Please help us by translating this add-on on [Weblate](https://hosted.weblate.org/projects/localcdn/).
 
 ## Donations
 
