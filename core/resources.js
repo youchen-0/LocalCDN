@@ -139,11 +139,6 @@ var resources = {
         'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
         'type': 'application/javascript'
     },
-    // Angular Sanitize
-    'angularSanitize': {
-        'path': 'resources/angular-sanitize/{version}/angular-sanitize.min.jsm',
-        'type': 'application/javascript'
-    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',

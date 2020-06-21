@@ -135,9 +135,6 @@ var files = {
         'resources/angular-material/1.1.21/angular-material.min.css': true,
         'resources/angular-material/1.1.21/angular-material.min.jsm': true,
 
-        // Angular Sanitize
-        'resources/angular-sanitize/1.7.9/angular-sanitize.min.jsm': true,
-
         // autocomplete.js
         'resources/autocomplete.js/0.37.1/autocomplete.min.jsm': true,
 

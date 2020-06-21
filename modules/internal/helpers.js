@@ -261,8 +261,6 @@ helpers.determineResourceName = function (filename) {
         return 'Angular Payments';
     case 'angular-stripe-checkout.jsm':
         return 'Angular Stripe Checkout';
-    case 'angular-sanitize.min.js':
-        return 'Angular Sanitize';
     case 'animate.min.css':
         return 'Animate CSS';
     case 'angular-material.min.jsm':
