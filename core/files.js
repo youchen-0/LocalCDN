@@ -109,6 +109,15 @@ var files = {
         'resources/angularjs/1.3.13/angular-touch.min.jsm': true,
         'resources/angularjs/1.3.13/angular.min.jsm': true,
 
+        'resources/angularjs/1.2.32/angular.min.jsm': true,
+        'resources/angularjs/1.2.32/angular-animate.min.jsm': true,
+        'resources/angularjs/1.2.32/angular-cookies.min.jsm': true,
+        'resources/angularjs/1.2.32/angular-loader.min.jsm': true,
+        'resources/angularjs/1.2.32/angular-resource.min.jsm': true,
+        'resources/angularjs/1.2.32/angular-route.min.jsm': true,
+        'resources/angularjs/1.2.32/angular-sanitize.min.jsm': true,
+        'resources/angularjs/1.2.32/angular-touch.min.jsm': true,
+
         // AngularJS Slider
         'resources/angularjs-slider/6.7.0/rzslider.min.jsm': true,
 
