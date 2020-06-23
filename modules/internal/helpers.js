@@ -397,6 +397,10 @@ helpers.determineResourceName = function (filename) {
         return 'Select2 CSS';
     case 'select2.full.min.jsm':
         return 'Select2 JS';
+    case 'simplemde.min.jsm':
+        return 'simplemde JS';
+    case 'simplemde.min.css':
+        return 'simplemde CSS';
     case 'socket.io.jsm':
         return 'Socket.IO';
     case 'spin.min.jsm':
@@ -657,6 +661,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.9.0';
     } else if (type.includes('/select2/4.')) {
         return  '4.0.12';
+    } else if (type.includes('/simplemde/')) {
+        return  '1.11.2';
     } else if (type.includes('/socket.io/2.')) {
         return  '2.3.0';
     } else if (type.includes('/spin.js/2.')) {

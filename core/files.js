@@ -340,6 +340,9 @@ var files = {
         // Scriptaculous
         'resources/scriptaculous/1.9.0/scriptaculous.jsm': true,
 
+        // simplemde
+        'resources/simplemde/1.11.2/simplemde.min.jsm': true,
+
         // Socket.IO
         'resources/socket.io/2.3.0/socket.io.jsm': true,
 

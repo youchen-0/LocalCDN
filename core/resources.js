@@ -473,6 +473,15 @@ var resources = {
         'path': 'resources/select2/{version}/select2.full.min.jsm',
         'type': 'application/javascript'
     },
+    // simplemde
+    'simplemdeJS': {
+        'path': 'resources/simplemde/{version}/simplemde.min.jsm',
+        'type': 'application/javascript'
+    },
+    'simplemdeCSS': {
+        'path': 'resources/simplemde/{version}/simplemde.min.css',
+        'type': 'text/css'
+    },
     // socket.io
     'socketIO': {
         'path': 'resources/socket.io/{version}/socket.io.jsm',
