@@ -247,6 +247,9 @@ var files = {
         'resources/jquery-migrate/1.4.1/jquery-migrate.min.jsm': true,
         'resources/jquery-migrate/3.1.0/jquery-migrate.min.jsm': true,
 
+        // jQuery Tablesorter
+        'resources/jquery-tablesorter/2.31.3/jquery.tablesorter.min.jsm': true,
+
         // jQuery UI
         'resources/jqueryui/1.12.1/jquery-ui.min.jsm': true,
         'resources/jqueryui/1.8.18/jquery-ui.min.jsm': true,

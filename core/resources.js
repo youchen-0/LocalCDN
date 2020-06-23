@@ -304,6 +304,11 @@ var resources = {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Tablesorter
+    'jQueryTablesorter': {
+        'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
