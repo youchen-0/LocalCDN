@@ -175,6 +175,7 @@ var files = {
         'resources/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css': true,
 
         // clipboard.js
+        'resources/clipboard.js/1.7.1/clipboard.min.jsm': true,
         'resources/clipboard.js/2.0.6/clipboard.min.jsm': true,
 
         // D3.js

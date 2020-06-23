@@ -559,6 +559,8 @@ helpers.setLastVersion = function (type, version) {
         return  '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
         return  '1.13.17';
+    } else if (type.includes('/clipboard.js/1.')) {
+        return  '1.7.1';
     } else if (type.includes('/clipboard.js/2.')) {
         return  '2.0.6';
     } else if (type.includes('/d3/3.')) {
