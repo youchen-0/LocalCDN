@@ -365,6 +365,10 @@ helpers.determineResourceName = function (filename) {
         return 'Modernizr';
     case 'mootools-yui-compressed.jsm':
         return 'MooTools';
+    case 'nv.d3.min.jsm':
+        return 'NVD3 JS';
+    case 'nv.d3.min.css':
+        return 'NVD3 CSS';
     case 'ocLazyLoad.min.jsm':
         return 'ocLazyLoad';
     case 'p2p-media-loader-core.min.jsm':
@@ -620,6 +624,8 @@ helpers.setLastVersion = function (type, version) {
         return '0.9.2';
     } else if (type.includes('/mobile/1.')) {
         return  '1.4.5';
+    } else if (type.includes('/nvd3/1.')) {
+        return  '1.8.6';
     } else if (type.includes('/js-cookie/2.')) {
         return  '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {

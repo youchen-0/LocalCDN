@@ -302,6 +302,10 @@ var files = {
         'resources/mootools/1.6.0/mootools-core.min.jsm': true,
         'resources/mootools/1.4.5/mootools-yui-compressed.jsm': true,
 
+        // NVD3
+        'resources/nvd3/1.8.6/nv.d3.min.css': true,
+        'resources/nvd3/1.8.6/nv.d3.min.jsm': true,
+
         // ocLazyLoad
         'resources/oclazyload/1.1.0/ocLazyLoad.min.jsm': true,
 

@@ -396,6 +396,15 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
         'type': 'application/javascript'
     },
+    // NVD3
+    'nvd3JS': {
+        'path': 'resources/nvd3/{version}/nv.d3.min.jsm',
+        'type': 'application/javascript'
+    },
+    'nvd3CSS': {
+        'path': 'resources/nvd3/{version}/nv.d3.min.css',
+        'type': 'text/css'
+    },
     // ocLazyLoad
     'ocLazyLoad': {
         'path': 'resources/oclazyload/{version}/ocLazyLoad.min.jsm',
