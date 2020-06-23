@@ -343,6 +343,10 @@ helpers.determineResourceName = function (filename) {
         return 'jQuery Mobile';
     case 'jquery.tablesorter.min.jsm':
         return 'jQuery Tablesorter';
+    case 'jquery.modal.min.jsm':
+        return 'jQuery Modal';
+    case 'jquery.modal.min.css':
+        return 'jQuery Modal';
     case 'js.cookie.min.jsm':
         return 'JavaScript Cookie';
     case 'lazysizes.min.jsm':
@@ -608,6 +612,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.8.0';
     } else if (type.includes('tablesorter/2.')) {
         return '2.31.3';
+    } else if (type.includes('/jquery-modal/0.')) {
+        return '0.9.2';
     } else if (type.includes('/mobile/1.')) {
         return  '1.4.5';
     } else if (type.includes('/js-cookie/2.')) {

@@ -304,6 +304,15 @@ var resources = {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Modal
+    'jQueryModalJS': {
+        'path': 'resources/jquery-modal/{version}/jquery.modal.min.jsm',
+        'type': 'application/javascript'
+    },
+    'jQueryModalCSS': {
+        'path': 'resources/jquery-modal/{version}/jquery.modal.min.css',
+        'type': 'text/css'
+    },
     // jQuery Tablesorter
     'jQueryTablesorter': {
         'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',

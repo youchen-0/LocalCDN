@@ -247,6 +247,10 @@ var files = {
         'resources/jquery-migrate/1.4.1/jquery-migrate.min.jsm': true,
         'resources/jquery-migrate/3.1.0/jquery-migrate.min.jsm': true,
 
+        // jQuery Modal
+        'resources/jquery-modal/0.9.2/jquery.modal.min.jsm': true,
+        'resources/jquery-modal/0.9.2/jquery.modal.min.css': true,
+
         // jQuery Tablesorter
         'resources/jquery-tablesorter/2.31.3/jquery.tablesorter.min.jsm': true,
 
