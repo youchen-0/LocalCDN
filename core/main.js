@@ -45,12 +45,6 @@ main._initializeSettings = function () {
             items = settingDefaults; // Restore setting defaults.
         }
 
-        if (items.blockMissing === true || items.enforceStaging === true) {
-            stateManager.updateEnvironment(Environment.STAGING);
-        } else {
-            stateManager.updateEnvironment(Environment.STABLE);
-        }
-
         if (items.disablePrefetch !== false) {
 
             chrome.privacy.network.networkPredictionEnabled.set({
