@@ -168,6 +168,11 @@ var resources = {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
         'type': 'application/javascript'
     },
+    // BootboxJS
+    'bootbox': {
+        'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',
+        'type': 'application/javascript'
+    },
     // Bootstrap.js
     'bootstrapJS': {
         'path': 'resources/bootstrap.js/{version}/bootstrap.min.jsm',

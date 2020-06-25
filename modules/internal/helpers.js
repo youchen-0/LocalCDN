@@ -324,6 +324,8 @@ helpers.setLastVersion = function (type, version) {
         return  '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
         return  '1.4.0';
+    } else if (type.includes('/bootbox.js/4.')) {
+        return  '4.4.0';
     } else if (type.includes('/bootstrap.js/3.')) {
         return  '3.3.7';
     } else if (type.includes('/bootstrap.js/4.')) {
@@ -519,6 +521,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'bootbox.min.jsm': 'BootboxJS',
     'showdown.min.jsm': 'Showdown',
     'angular-ui-utils.min.jsm': 'Angular UI Utils',
     'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',

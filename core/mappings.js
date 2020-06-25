@@ -116,6 +116,7 @@ var mappings = {
             'animate.css/{version}/animate.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
+            'bootbox.js/{version}/bootbox.': resources.bootbox,
             'bootstrap-daterangepicker/{version}/daterangepicker.': resources.bootstrapDaterangepicker,
             'bootstrap-datepicker/{version}/js/bootstrap-datepicker.': resources.bootstrapDatepickerBundle,
             'bootstrap-datepicker/{version}/css/bootstrap-datepicker.': resources.bootstrapDatepickerBundle,
