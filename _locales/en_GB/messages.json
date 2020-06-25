@@ -48,8 +48,8 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Exclude domains from inspections:",
-        "description": "Whitelisted domains:"
+        "message": "Deactivate LocalCDN for these domains:",
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
         "message": "Enter domains to whitelist them. Separate multiple entries with semi-colons (;).",
@@ -110,5 +110,25 @@
     "labelDonate": {
         "message": "Donate",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "Invert HTML-Filter",
+        "description": "Invert HTML-Filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "Enable HTML-Filter by default.",
+        "description": "Enable HTML-Filter by default."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "This function can break websites. Please note the information on the Wiki page.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitle": {
+        "message": "Domains for HTML-Filter:",
+        "description": "Domains for HTML-Filter:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "Enter domains for the HTML-Filter. For these domains the filter is activated, except you invert the HTML-Filter with the next option. Separate multiple entries with semi-colons (;).",
+        "description": "Enter domains for the HTML-Filter. For these domains the filter is activated, except you invert the HTML-Filter with the next option. Separate multiple entries with semi-colons (;)."
     }
 }

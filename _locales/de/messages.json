@@ -110,5 +110,25 @@
     "labelDonate": {
         "message": "Spenden",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "HTML-Filter umkehren",
+        "description": "Invert HTML-Filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "Aktiviere standardmäßig den HTML-Filter.",
+        "description": "Enable HTML-Filter by default."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "Diese Funktion verursacht bei manchen Websites Fehler. Beachte dazu die Hinweise auf der Wiki-Seite.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitle": {
+        "message": "Domains for HTML-Filter:",
+        "description": "Domains for HTML-Filter:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "Enter domains for the HTML-Filter. For these domains the filter is activated, except you invert the HTML-Filter with the next option. Separate multiple entries with semi-colons (;).",
+        "description": "Enter domains for the HTML-Filter. For these domains the filter is activated, except you invert the HTML-Filter with the next option. Separate multiple entries with semi-colons (;)."
     }
 }
