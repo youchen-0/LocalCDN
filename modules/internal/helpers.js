@@ -227,6 +227,8 @@ helpers.determineResourceName = function (filename) {
 helpers.determineBundle = function (path = '') {
     if (path.includes('findify')) {
         return 'Findify';
+    } else if (path.includes('bootstrap-datepicker')) {
+        return 'Bootstrap Datepicker';
     } else {
         return '';
     }

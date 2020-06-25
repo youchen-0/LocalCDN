@@ -183,13 +183,9 @@ var resources = {
         'path': 'resources/bootstrap-daterangepicker/{version}/daterangepicker.min.jsm',
         'type': 'application/javascript'
     },
-    // Bootstrap Datepicker
-    'bootstrapDatepickerCSS': {
-        'path': 'resources/bootstrap-datepicker/{version}/css/bootstrap-datepicker.standalone.min.css',
-        'type': 'text/css'
-    },
-    'bootstrapDatepickerJS': {
-        'path': 'resources/bootstrap-datepicker/{version}/js/bootstrap-datepicker.min.jsm',
+    // Bootstrap Datepicker (bundle)
+    'bootstrapDatepickerBundle': {
+        'path': 'resources/bootstrap-datepicker/{version}/',
         'type': 'application/javascript'
     },
     // Bootstrap-select
