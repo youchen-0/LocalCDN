@@ -211,6 +211,11 @@ var resources = {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.jsm',
         'type': 'application/javascript'
     },
+    // Bootstrap 3 Typeahead
+    'bootstrap3Typeahead': {
+        'path': 'resources/bootstrap-3-typeahead/{version}/bootstrap3-typeahead.min.jsm',
+        'type': 'application/javascript'
+    },
     // clipboard.js
     'clipboardJS': {
         'path': 'resources/clipboard.js/{version}/clipboard.min.jsm',

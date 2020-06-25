@@ -342,6 +342,8 @@ helpers.setLastVersion = function (type, version) {
         return  '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
         return  '1.13.17';
+    } else if (type.includes('/bootstrap-3-typeahead/4.')) {
+        return  '4.0.2';
     } else if (type.includes('/clipboard.js/1.')) {
         return  '1.7.1';
     } else if (type.includes('/clipboard.js/2.')) {
@@ -522,6 +524,7 @@ helpers.compareVersion = function (v1, v2) {
 
 const ListOfFiles = {
     'bootbox.min.jsm': 'BootboxJS',
+    'bootstrap3-typeahead.min.jsm': 'Bootstrap 3 Typeahead',
     'showdown.min.jsm': 'Showdown',
     'angular-ui-utils.min.jsm': 'Angular UI Utils',
     'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',

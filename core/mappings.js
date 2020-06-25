@@ -210,6 +210,7 @@ var mappings = {
             'bootstrap-slider/{version}/css/bootstrap-slider.min.css': resources.bootstrapSliderCSS,
             'bootstrap-slider/{version}/css/bootstrap-slider.css': resources.bootstrapSliderCSS,
             'bootstrap-slider/{version}/bootstrap-slider.min.js': resources.bootstrapSliderJS,
+            'bootstrap-3-typeahead/{version}/bootstrap3-typeahead.': resources.bootstrap3Typeahead,
             'clipboard.js/{version}/clipboard.min.js': resources.clipboardJS,
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
