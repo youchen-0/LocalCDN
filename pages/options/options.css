@@ -14,7 +14,18 @@ body {
 .option {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.html-filter-section {
+    background-color: lightgrey;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+
+.html-filter-section > .option {
+    margin-top: 0px;
 }
 
 .notice {
@@ -125,7 +136,7 @@ body {
     padding: 5px 22px;
     text-decoration: none;
     user-select: none;
-    white-space: nowrap;
+    text-align: center;
 }
 
 .button:hover {
@@ -192,6 +203,24 @@ body {
 
 .badge-warning {
     background-color: #ffa500;
+}
+
+.warning-red {
+    color: red;
+    background-color: transparent;
+    margin-left: 0px;
+    display: block;
+    font-size: 10px;
+}
+
+.warning-red > a {
+    color: red;
+    font-weight: bold;
+}
+
+#negate-html-filter-list-warning {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .hidden {

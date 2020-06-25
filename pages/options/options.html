@@ -162,6 +162,25 @@
             <div class="description-option without-checkbox" data-i18n-content="whitelistedDomainsDescription"></div>
         </section>
 
+        <div class="html-filter-section">
+            <section class="option">
+                <div class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitle">Domains for HTML filter:</div>
+                <input class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text">
+                <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter domains for HTML filter. Separate multiple entries with semi-colons (;).</div>
+            </section>
+            <span id="negate-html-filter-list-warning" class="badge badge-warning warning-red" data-i18n-content="negateHtmlFilterListWarning">This function can break websites. Please note the information on the Wiki page.</span>
+            <section class="option">
+                <div class="title-option">
+                    <label class="label-checkbox">
+                        <input class="input-checkbox" data-option="negateHtmlFilterList" type="checkbox">
+                        <span data-i18n-content="negateHtmlFilterListTitle">Invert HTML-Filter</span>
+                    </label>
+                    <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
+                </div>
+                <div class="description-option" data-i18n-content="negateHtmlFilterListDescription">If activated, the HTML filter for the domains in the list above is disabled instead of enabled.</div>
+            </section>
+        </div>
+
         <section class="option">
             <div class="title-option without-checkbox" data-i18n-content="generateRuleSetTitle"></div>
             <div class="description-option without-checkbox">

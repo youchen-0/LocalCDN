@@ -41,10 +41,13 @@ options._renderContents = function () {
 
 options._renderOptionsPanel = function () {
 
-    let whitelistedDomains, domainWhitelist, elements;
+    let whitelistedDomains, domainWhitelist, elements, htmlFilterDomains, domainHtmlFilter;
 
     whitelistedDomains = options._optionValues.whitelistedDomains;
     domainWhitelist = options._serializeWhitelistedDomains(whitelistedDomains);
+
+    htmlFilterDomains = options._optionValues.domainsManipulateDOM;
+    domainHtmlFilter = options._serializeWhitelistedDomains(htmlFilterDomains);
 
     elements = options._optionElements;
 
@@ -55,6 +58,8 @@ options._renderOptionsPanel = function () {
     elements.hideReleaseNotes.checked = options._optionValues.hideReleaseNotes;
     elements.enableLogging.checked = options._optionValues.enableLogging;
     elements.whitelistedDomains.value = domainWhitelist;
+    elements.domainsManipulateDOM.value = domainHtmlFilter;
+    elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -68,6 +73,7 @@ options._renderOptionsPanel = function () {
     }
 
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
+    document.getElementById('negate-html-filter-list-warning').addEventListener('click', options._onClickHTMLFilterWarning);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -97,6 +103,8 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.enableLogging.addEventListener('change', options._onOptionChanged);
     elements.hideReleaseNotes.addEventListener('change', options._onOptionChanged);
     elements.whitelistedDomains.addEventListener('keyup', options._onOptionChanged);
+    elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
+    elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
     let type = elements.ruleSets;
     for(let i = 0; i < type.length; i++) {
         type[i].addEventListener('change', options._openRuleSet);
@@ -146,7 +154,9 @@ options._getOptionElements = function () {
         [Setting.HIDE_RELEASE_NOTES]: options._getOptionElement(Setting.HIDE_RELEASE_NOTES),
         [Setting.LOGGING]: options._getOptionElement(Setting.LOGGING),
         ['ruleSets']: document.getElementsByName("rule-sets"),
-        ['copyRuleSet']: document.getElementById("button-copy-rule-set")
+        ['copyRuleSet']: document.getElementById("button-copy-rule-set"),
+        [Setting.NEGATE_HTML_FILTER_LIST]: options._getOptionElement(Setting.NEGATE_HTML_FILTER_LIST),
+        [Setting.DOMAINS_MANIPULATE_DOM]: options._getOptionElement(Setting.DOMAINS_MANIPULATE_DOM)
     };
 
     return optionElements;
@@ -168,6 +178,8 @@ options._configureLinkPrefetching = function (value) {
 };
 
 options._serializeWhitelistedDomains = function (whitelistedDomains) {
+
+    if (whitelistedDomains === undefined) return;
 
     let domainWhitelist, whitelistedDomainKeys;
 
@@ -236,7 +248,7 @@ options._onOptionChanged = function ({target}) {
         options._configureLinkPrefetching(optionValue);
     }
 
-    if (optionKey === Setting.WHITELISTED_DOMAINS) {
+    if (optionKey === Setting.WHITELISTED_DOMAINS || optionKey === Setting.DOMAINS_MANIPULATE_DOM) {
         optionValue = options._parseDomainWhitelist(optionValue);
     }
 
@@ -273,6 +285,13 @@ options._copyRuleSet = function() {
         textArea.select();
     }, function() {
         alert("Rule set cannot be copied!");
+    });
+}
+
+options._onClickHTMLFilterWarning = function() {
+    chrome.tabs.create({
+        'url': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
+        'active': true
     });
 }
 

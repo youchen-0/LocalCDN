@@ -71,7 +71,8 @@ const Setting = {
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
-    'STATISTIC_DATA': 'statisticData'
+    'STATISTIC_DATA': 'statisticData',
+    'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList'
 };
 
 const WebRequest = {

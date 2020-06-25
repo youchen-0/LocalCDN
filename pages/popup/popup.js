@@ -21,6 +21,7 @@
 let counterFrameworks = 0;
 let counterCDNs = 0;
 let oversized = false;
+let negateHtmlFilterList;
 var popup = {};
 
 /**
@@ -42,6 +43,7 @@ popup._renderContents = function () {
         .then(popup._determineDomainWhitelistStatus)
         .then(popup._determineStatusManipulateDOM)
         .then(popup._determineResourceInjections)
+        .then(popup._determineNegateHtmlFilterOption)
         .then(popup._renderContextualContents);
 
     if(BrowserType.CHROMIUM) {
@@ -114,7 +116,7 @@ popup._renderDomainWhitelistPanel = function () {
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
 
-        if (popup._domainManipulateDOM === true) {
+        if (( negateHtmlFilterList || popup._domainManipulateDOM ) && !( negateHtmlFilterList && popup._domainManipulateDOM )) {
 
             manipulateDOMToggleElement.checked = true;
             manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
@@ -262,6 +264,18 @@ popup._determineAmountInjected = function () {
         chrome.storage.sync.get(Setting.AMOUNT_INJECTED, function (items) {
 
             popup._amountInjected = items.amountInjected || 0;
+            resolve();
+        });
+    });
+};
+
+popup._determineNegateHtmlFilterOption = function () {
+
+    return new Promise((resolve) => {
+
+        chrome.storage.sync.get(Setting.NEGATE_HTML_FILTER_LIST, function (items) {
+
+            negateHtmlFilterList = items.negateHtmlFilterList;
             resolve();
         });
     });

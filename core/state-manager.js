@@ -267,6 +267,9 @@ stateManager._handleStorageChanged = function (changes) {
             requestSanitizer.enable();
         }
     }
+    if (Setting.NEGATE_HTML_FILTER_LIST in changes) {
+        stateManager.getInvertOption = changes.negateHtmlFilterList.newValue;
+    }
 };
 
 stateManager._clearBadgeText = function (tabIdentifier) {
@@ -317,6 +320,7 @@ stateManager._setIconDisabled = function (tabIdentifier) {
 stateManager.requests = {};
 stateManager.tabs = {};
 
+stateManager.getInvertOption;
 stateManager.disabledIconPath = {
     '16': chrome.runtime.getURL('icons/action/icon16-disabled.png'),
     '18': chrome.runtime.getURL('icons/action/icon18-disabled.png'),

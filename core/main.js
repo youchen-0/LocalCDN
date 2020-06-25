@@ -35,7 +35,8 @@ main._initializeSettings = function () {
         [Setting.STRIP_METADATA]: true,
         [Setting.WHITELISTED_DOMAINS]: {},
         [Setting.LOGGING]: false,
-        [Setting.DOMAINS_MANIPULATE_DOM]: {}
+        [Setting.DOMAINS_MANIPULATE_DOM]: {},
+        [Setting.NEGATE_HTML_FILTER_LIST]: false
     };
 
     chrome.storage.sync.get(settingDefaults, function (items) {
