@@ -378,6 +378,11 @@ var resources = {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
         'type': 'application/javascript'
     },
+    // libphonenumber-js
+    'libphonenumber': {
+        'path': 'resources/libphonenumber-js/{version}/libphonenumber-js.min.jsm',
+        'type': 'application/javascript'
+    },
     // Lodash
     'lodashJS': {
         'path': 'resources/lodash.js/{version}/lodash.min.jsm',

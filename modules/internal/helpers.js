@@ -419,6 +419,8 @@ helpers.setLastVersion = function (type, version) {
         return  '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
         return  '4.1.8';
+    } else if (type.includes('/libphonenumber-js/1.')) {
+        return  '1.7.53';
     } else if (type.includes('/lodash.js/4.')) {
         return  '4.17.10';
     } else if (type.includes('lozad')) {
@@ -525,6 +527,7 @@ helpers.compareVersion = function (v1, v2) {
 const ListOfFiles = {
     'bootbox.min.jsm': 'BootboxJS',
     'bootstrap3-typeahead.min.jsm': 'Bootstrap 3 Typeahead',
+    'libphonenumber-js.min.jsm': 'libphonenumber-js',
     'showdown.min.jsm': 'Showdown',
     'angular-ui-utils.min.jsm': 'Angular UI Utils',
     'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',

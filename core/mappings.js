@@ -244,6 +244,7 @@ var mappings = {
             'jquery-modal/{version}/jquery.modal.min.css': resources.jQueryModalCSS,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
+            'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
             'lodash.js/{version}/lodash.': resources.lodashJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
             'mdbootstrap/{version}/css/mdb.': resources.mdbootstrapCSS,
