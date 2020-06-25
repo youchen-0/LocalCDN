@@ -87,6 +87,8 @@ var mappings = {
             'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
             'algoliasearch/{version}/algoliasearch.': resources.algoliaSearch,
             'angucomplete-alt/{version}/angucomplete-alt.': resources.anguComplete,
+            'angular-bootstrap-colorpicker/{version}/css/colorpicker.': resources.angularBootstrapColorpickerCSS,
+            'angular-bootstrap-colorpicker/{version}/js/bootstrap-colorpicker-module.': resources.angularBootstrapColorpickerJS,
             'angular-ui-bootstrap/{version}/ui-bootstrap-tpls.': resources.angularUiBootstrapTPLS,
             'angular-ui-bootstrap/{version}/ui-bootstrap.min.js': resources.angularUiBootstrap,
             'angular-ui-router/{version}/angular-ui-router.': resources.angularUiRouter,

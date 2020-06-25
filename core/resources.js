@@ -96,6 +96,15 @@ var resources = {
     	'path': 'resources/angular-material/{version}/angular-material.min.css',
         'type': 'text/css'
     },
+    // angular-bootstrap-colorpicker
+    'angularBootstrapColorpickerJS': {
+        'path': 'resources/angular-bootstrap-colorpicker/{version}/js/bootstrap-colorpicker-module.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularBootstrapColorpickerCSS': {
+        'path': 'resources/angular-bootstrap-colorpicker/{version}/css/colorpicker.min.css',
+        'type': 'text/css'
+    },
     // AngularJS slider
     'angularJSslider': {
         'path': 'resources/angularjs-slider/{version}/rzslider.min.jsm',

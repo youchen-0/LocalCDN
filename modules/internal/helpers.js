@@ -290,6 +290,8 @@ helpers.setLastVersion = function (type, version) {
         return  '2.2.0';
     } else if (type.includes('/angularjs-toaster/0.')) {
         return  '0.4.18';
+    } else if (type.includes('/angular-bootstrap-colorpicker/3.')) {
+        return  '3.0.32';
     } else if (type.includes('/angular-payments@1.')) {
         return  '1.0.7';
     } else if (type.includes('/angular-stripe-checkout@5.')) {
@@ -506,6 +508,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',
+    'colorpicker.min.css': 'Angular Bootstrap Colorpicker (CSS)',
     'adapter.min.jsm': 'WebRTC adapter',
     'algoliasearch.min.jsm': 'AlgoliaSearch',
     'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm': 'jsDelivr combined',
