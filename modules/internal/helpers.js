@@ -278,7 +278,8 @@ helpers.setLastVersion = function (type, version) {
     if (type.includes('/algoliasearch/3.')) {
         return  '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.2.32', requestVersion)) return '1.2.32'; // <= v1.2.32
+        if (helpers.compareVersion('1.2.19', requestVersion)) return '1.2.19'; // <= v1.2.19
+        else if (helpers.compareVersion('1.2.32', requestVersion)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
         else if (helpers.compareVersion('1.3.13', requestVersion)) return '1.3.13'; // > 1.2.32 to <= 1.3.13
         else if (helpers.compareVersion('1.4.14', requestVersion)) return '1.4.14'; // > 1.3.13 to <= 1.4.14
         else if (helpers.compareVersion('1.5.11', requestVersion)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
