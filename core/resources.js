@@ -496,6 +496,11 @@ var resources = {
         'path': 'resources/select2/{version}/select2.full.min.jsm',
         'type': 'application/javascript'
     },
+    // showdown
+    'showdown': {
+        'path': 'resources/showdown/{version}/showdown.min.jsm',
+        'type': 'application/javascript'
+    },
     // simplemde
     'simplemdeJS': {
         'path': 'resources/simplemde/{version}/simplemde.min.jsm',

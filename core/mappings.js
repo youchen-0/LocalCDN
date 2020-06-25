@@ -182,6 +182,8 @@ var mappings = {
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'select2/{version}/js/select2.min.js': resources.select2js,
             'select2/{version}/css/select2.min.css': resources.select2css,
+            'showdown/{version}/showdown.': resources.showdown,
+            'showdown/{version}/Showdown.': resources.showdown,
             'spin.js/{version}/spin.min.js': resources.spinJS,
             'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,

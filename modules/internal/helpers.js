@@ -448,6 +448,10 @@ helpers.setLastVersion = function (type, version) {
         return  '1.9.0';
     } else if (type.includes('/select2/4.')) {
         return  '4.0.12';
+    } else if (type.includes('/showdown/1.')) {
+        return  '1.9.1';
+    } else if (type.includes('/showdown/0.')) {
+        return  '0.5.1';
     } else if (type.includes('/simplemde/')) {
         return  '1.11.2';
     } else if (type.includes('/socket.io/2.')) {
@@ -511,6 +515,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'showdown.min.jsm': 'Showdown',
     'angular-ui-utils.min.jsm': 'Angular UI Utils',
     'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',
     'colorpicker.min.css': 'Angular Bootstrap Colorpicker (CSS)',
