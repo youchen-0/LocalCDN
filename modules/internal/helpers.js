@@ -354,6 +354,8 @@ helpers.setLastVersion = function (type, version) {
         return  '2.18.2';
     } else if (type.includes('/ember.js/3.')) {
         return  '3.12.3';
+    } else if (type.includes('/ethjs')) {
+        return  '0.3.4';
     } else if (type.includes('/ext-core/3.')) {
         return  '3.1.0';
     } else if (type.includes('findify')) {
@@ -519,6 +521,7 @@ const ListOfFiles = {
     'angular-ui-utils.min.jsm': 'Angular UI Utils',
     'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',
     'colorpicker.min.css': 'Angular Bootstrap Colorpicker (CSS)',
+    'ethjs.min.jsm': 'ethjs',
     'adapter.min.jsm': 'WebRTC adapter',
     'algoliasearch.min.jsm': 'AlgoliaSearch',
     'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm': 'jsDelivr combined',

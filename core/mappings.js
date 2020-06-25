@@ -236,6 +236,7 @@ var mappings = {
             'ember-source@{version}/dist/ember.min.': resources.ember,
             'ember-source@{version}/dist/legacy/ember.': resources.ember,
             'ember-source@{version}/dist/legacy/ember.min.': resources.ember,
+            'ethjs@{version}/dist/ethjs.': resources.ethJs,
             '@findify/bundle@{version}/dist/bundle.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/components.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/config.js': resources.findifyBundle,

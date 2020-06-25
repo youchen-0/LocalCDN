@@ -235,6 +235,11 @@ var resources = {
         'path': 'resources/ember.js/{version}/ember.min.jsm',
         'type': 'application/javascript'
     },
+    // ethJs
+    'ethJs': {
+        'path': 'resources/ethjs/{version}/ethjs.min.jsm',
+        'type': 'application/javascript'
+    },
     // Ext Core
     'extCore': {
         'path': 'resources/ext-core/{version}/ext-core.jsm',
