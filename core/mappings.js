@@ -93,6 +93,7 @@ var mappings = {
             'angular-ui-bootstrap/{version}/ui-bootstrap.min.js': resources.angularUiBootstrap,
             'angular-ui-router/{version}/angular-ui-router.': resources.angularUiRouter,
             'angular-ui-select/{version}/select.': resources.angularJsUiSelect,
+            'angular-ui-utils/{version}/angular-ui-utils.': resources.angularUiUtils,
             'angularjs-slider/{version}/rzslider.': resources.angularJSslider,
             'angular-animate/{version}/angular-animate.min.': resources.angularAnimate,
             'angular.js/{version}/angular-animate.': resources.angularAnimate,

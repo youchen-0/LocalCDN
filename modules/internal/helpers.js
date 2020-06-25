@@ -303,6 +303,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', requestVersion)) return '0.4.3'; // <= 0.4.3
         else return '1.0.25'; // > 0.4.3
+    } else if (type.includes('/angular-ui-utils/0.')) {
+        return  '0.1.1';
     } else if (type.includes('/angular-ui-select/0.')) {
         return  '0.20.0';
     } else if (type.includes('/angular-sanitize/1.')) {
@@ -508,6 +510,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'angular-ui-utils.min.jsm': 'Angular UI Utils',
     'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',
     'colorpicker.min.css': 'Angular Bootstrap Colorpicker (CSS)',
     'adapter.min.jsm': 'WebRTC adapter',

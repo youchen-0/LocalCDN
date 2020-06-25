@@ -115,6 +115,11 @@ var resources = {
         'path': 'resources/angular-ui-select/{version}/select.min.jsm',
         'type': 'application/javascript'
     },
+    // angular-ui-utils
+    'angularUiUtils': {
+        'path': 'resources/angular-ui-utils/{version}/angular-ui-utils.min.jsm',
+        'type': 'application/javascript'
+    },
     // AngularUI Bootstrap
     'angularUiBootstrapTPLS': {
         'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',
