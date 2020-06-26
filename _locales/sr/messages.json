@@ -49,11 +49,11 @@
     },
     "whitelistedDomainsTitle": {
         "message": "Прескочи домене приликом провере",
-        "description": "Whitelisted domains:"
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
         "message": "Унесите домене да их ставите на бели списак. Одвојите више ставки са тачка-запетама (;).",
-        "description": "Whitelisted domains description."
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "Напредно",
@@ -110,5 +110,29 @@
     "labelDonate": {
         "message": "",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "",
+        "description": "Invert HTML-Filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "",
+        "description": "Do not apply HTML-Filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "",
+        "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "",
+        "description": "Apply HTML-Filter for these domains:"
     }
 }
