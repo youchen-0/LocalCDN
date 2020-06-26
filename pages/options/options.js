@@ -72,6 +72,14 @@ options._renderOptionsPanel = function () {
         options._renderLocaleNotice();
     }
 
+    if(elements.negateHtmlFilterList.checked === true) {
+        document.getElementById('html-filter-domains-title-include').style.display = "none";
+        document.getElementById('html-filter-domains-title-exclude').style.display = "block";
+    } else {
+        document.getElementById('html-filter-domains-title-include').style.display = "block";
+        document.getElementById('html-filter-domains-title-exclude').style.display = "none";
+    }
+
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', options._onClickHTMLFilterWarning);
 };
@@ -250,6 +258,16 @@ options._onOptionChanged = function ({target}) {
 
     if (optionKey === Setting.WHITELISTED_DOMAINS || optionKey === Setting.DOMAINS_MANIPULATE_DOM) {
         optionValue = options._parseDomainWhitelist(optionValue);
+    }
+
+    if (optionKey === Setting.NEGATE_HTML_FILTER_LIST) {
+        if(optionValue === true) {
+            document.getElementById('html-filter-domains-title-include').style.display = "none";
+            document.getElementById('html-filter-domains-title-exclude').style.display = "block";
+        } else {
+            document.getElementById('html-filter-domains-title-include').style.display = "block";
+            document.getElementById('html-filter-domains-title-exclude').style.display = "none";
+        }
     }
 
     chrome.storage.sync.set({
