@@ -216,6 +216,15 @@ var resources = {
         'path': 'resources/bootstrap-3-typeahead/{version}/bootstrap3-typeahead.min.jsm',
         'type': 'application/javascript'
     },
+    // Chart.js
+    'chartJs': {
+        'path': 'resources/chart.js/{version}/Chart.bundle.min.jsm',
+        'type': 'application/javascript'
+    },
+    'chartJsCSS': {
+        'path': 'resources/chart.js/{version}/Chart.min.css',
+        'type': 'text/css'
+    },
     // clipboard.js
     'clipboardJS': {
         'path': 'resources/clipboard.js/{version}/clipboard.min.jsm',

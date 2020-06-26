@@ -344,6 +344,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.13.17';
     } else if (type.includes('/bootstrap-3-typeahead/4.')) {
         return  '4.0.2';
+    } else if (type.includes('/Chart.js/2.')) {
+        return  '2.9.3';
     } else if (type.includes('/clipboard.js/1.')) {
         return  '1.7.1';
     } else if (type.includes('/clipboard.js/2.')) {
@@ -525,6 +527,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'Chart.bundle.min.jsm': 'Chart.js (JS)',
+    'Chart.min.css': 'Chart.js (CSS)',
     'bootbox.min.jsm': 'BootboxJS',
     'bootstrap3-typeahead.min.jsm': 'Bootstrap 3 Typeahead',
     'libphonenumber-js.min.jsm': 'libphonenumber-js',
