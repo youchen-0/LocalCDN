@@ -1,114 +1,114 @@
 {
-  "extensionDescription": {
-    "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
-    "description": "Extension description."
-  },
-  "amountInjectedTitle": {
-    "message": "由本機提供的資源計數器",
-    "description": "Amount injected title"
-  },
-  "amountInjectedDescription": {
-    "message": "安裝以來，由本機檔案所取代的 CDN 資源數量。",
-    "description": "Amount injected description."
-  },
-  "optionsTitle": {
-    "message": "選項",
-    "description": "Options title"
-  },
-  "showIconBadgeTitle": {
-    "message": "在圖示上顯示被取代的資源數量",
-    "description": "Show icon badge title"
-  },
-  "showIconBadgeDescription": {
-    "message": "在擴充套件圖示上，顯示被取代的資源數量。",
-    "description": "Show icon badge description."
-  },
-  "blockMissingTitle": {
-    "message": "封鎖缺少資源時的連線請求",
-    "description": "Block requests for missing resources title"
-  },
-  "blockMissingDescription": {
-    "message": "若本機沒有所請求的資源，就取消該請求。",
-    "description": "Block requests for missing resources description."
-  },
-  "disablePrefetchTitle": {
-    "message": "停用連結預讀功能",
-    "description": "Disable prefetch title"
-  },
-  "disablePrefetchDescription": {
-    "message": "防止發出不被允許的請求到 CDN 網路。",
-    "description": "Disable prefetch description."
-  },
-  "stripMetadataTitle": {
-    "message": "移除放行請求當中的後設資料",
-    "description": "Strip metadata title"
-  },
-  "stripMetadataDescription": {
-    "message": "清除放行的 CDN 請求當中的敏感資料，以保護隱私權。",
-    "description": "Strip metadata description."
-  },
-  "whitelistedDomainsTitle": {
-    "message": "要排除檢查的網域",
-    "description": "Whitelisted domains:"
-  },
-  "whitelistedDomainsDescription": {
-    "message": "輸入網域即可將其加入白名單。使用分號（;）分隔多個網域。",
-    "description": "Whitelisted domains description."
-  },
-  "advancedLabel": {
-    "message": "進階",
-    "description": "Advanced label"
-  },
-  "generateRuleSetTitle": {
-    "message": "为uBlock或uMatrix生成规则集",
-    "description": "Generate rule set title"
-  },
-  "generateRuleSetDescription": {
-    "message": "",
-    "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
-  },
-  "lastUpdate": {
-    "message": "",
-    "description": "Last update:"
-  },
-  "copyRuleSet": {
-    "message": "",
-    "description": "Text of button to copy ruleset"
-  },
-  "loggingTitle": {
-    "message": "",
-    "description": "Enable logging in browser console"
-  },
-  "loggingDescription": {
-    "message": "",
-    "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-  },
-  "hideReleaseNotesTitle": {
-    "message": "",
-    "description": "Disable release notes"
-  },
-  "hideReleaseNotesDescription": {
-    "message": "",
-    "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
-  },
-  "featureBreaksWebsitesDescription": {
-    "message": "",
-    "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
-  },
-  "featureBreaksWebsitesButton": {
-    "message": "",
-    "description": "Disable"
-  },
-  "labelManipulateDOM": {
-    "message": "",
-    "description": "Filters HTML source code"
-  },
-  "labelShowMoreInjections": {
-    "message": "",
-    "description": "Show more Injections"
-  },
-  "labelDonate": {
-    "message": "",
-    "description": "Donate"
-  }
+    "extensionDescription": {
+        "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
+        "description": "Extension description."
+    },
+    "amountInjectedTitle": {
+        "message": "由本機提供的資源計數器",
+        "description": "Amount injected title"
+    },
+    "amountInjectedDescription": {
+        "message": "安裝以來，由本機檔案所取代的 CDN 資源數量。",
+        "description": "Amount injected description."
+    },
+    "optionsTitle": {
+        "message": "選項",
+        "description": "Options title"
+    },
+    "showIconBadgeTitle": {
+        "message": "在圖示上顯示被取代的資源數量",
+        "description": "Show icon badge title"
+    },
+    "showIconBadgeDescription": {
+        "message": "在擴充套件圖示上，顯示被取代的資源數量。",
+        "description": "Show icon badge description."
+    },
+    "blockMissingTitle": {
+        "message": "封鎖缺少資源時的連線請求",
+        "description": "Block requests for missing resources title"
+    },
+    "blockMissingDescription": {
+        "message": "若本機沒有所請求的資源，就取消該請求。",
+        "description": "Block requests for missing resources description."
+    },
+    "disablePrefetchTitle": {
+        "message": "停用連結預讀功能",
+        "description": "Disable prefetch title"
+    },
+    "disablePrefetchDescription": {
+        "message": "防止發出不被允許的請求到 CDN 網路。",
+        "description": "Disable prefetch description."
+    },
+    "stripMetadataTitle": {
+        "message": "移除放行請求當中的後設資料",
+        "description": "Strip metadata title"
+    },
+    "stripMetadataDescription": {
+        "message": "清除放行的 CDN 請求當中的敏感資料，以保護隱私權。",
+        "description": "Strip metadata description."
+    },
+    "whitelistedDomainsTitle": {
+        "message": "要排除檢查的網域",
+        "description": "Whitelisted domains:"
+    },
+    "whitelistedDomainsDescription": {
+        "message": "輸入網域即可將其加入白名單。使用分號（;）分隔多個網域。",
+        "description": "Whitelisted domains description."
+    },
+    "advancedLabel": {
+        "message": "進階",
+        "description": "Advanced label"
+    },
+    "generateRuleSetTitle": {
+        "message": "为uBlock或uMatrix生成规则集",
+        "description": "Generate rule set title"
+    },
+    "generateRuleSetDescription": {
+        "message": "",
+        "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
+    },
+    "lastUpdate": {
+        "message": "",
+        "description": "Last update:"
+    },
+    "copyRuleSet": {
+        "message": "",
+        "description": "Text of button to copy ruleset"
+    },
+    "loggingTitle": {
+        "message": "",
+        "description": "Enable logging in browser console"
+    },
+    "loggingDescription": {
+        "message": "",
+        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+    },
+    "hideReleaseNotesTitle": {
+        "message": "",
+        "description": "Disable release notes"
+    },
+    "hideReleaseNotesDescription": {
+        "message": "",
+        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+    },
+    "featureBreaksWebsitesDescription": {
+        "message": "",
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+    },
+    "featureBreaksWebsitesButton": {
+        "message": "",
+        "description": "Disable"
+    },
+    "labelManipulateDOM": {
+        "message": "",
+        "description": "Filters HTML source code"
+    },
+    "labelShowMoreInjections": {
+        "message": "",
+        "description": "Show more Injections"
+    },
+    "labelDonate": {
+        "message": "",
+        "description": "Donate"
+    }
 }
