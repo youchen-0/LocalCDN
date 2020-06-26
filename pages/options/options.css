@@ -221,6 +221,7 @@ body {
 #negate-html-filter-list-warning {
     text-decoration: underline;
     cursor: pointer;
+    text-transform: none;
 }
 
 .hidden {

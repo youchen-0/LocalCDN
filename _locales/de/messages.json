@@ -128,7 +128,7 @@
         "description": "Domains for HTML-Filter:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Enter domains for the HTML-Filter. For these domains the filter is activated, except you invert the HTML-Filter with the next option. Separate multiple entries with semi-colons (;).",
+        "message": "Gib die Domains für den HTML-Filter an. Für diese Domains ist der Filter aktiviert, außer du kehrst den HTML-Filter mit der nächsten Option um. Trenne mehrere Einträge durch Semikolon (;).",
         "description": "Enter domains for the HTML-Filter. For these domains the filter is activated, except you invert the HTML-Filter with the next option. Separate multiple entries with semi-colons (;)."
     }
 }
