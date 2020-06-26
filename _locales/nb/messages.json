@@ -52,7 +52,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Skriv inn domener for å hviteliste dem. Skill flere oppføringer med semikolon (;).",
+        "message": "Skriv inn domener for å slå av LocalCDN der. Skill flere oppføringer med semikolon (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -112,19 +112,19 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inverter HTML-filter",
         "description": "Invert HTML-Filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Slå på dette alternativet for å alltid bruke HTML-filteret. Domenene i listen blir da ignorert. Hvis dette alternativet er slått av, blir HTML-filteret bare brukt på domener i listen.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Vær oppmerksom på informasjonen på Wiki-siden.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Ikke bruk HTML-filter på disse domenene:",
         "description": "Do not apply HTML-Filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
@@ -132,7 +132,7 @@
         "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Bruk HTML-filter på disse domenene:",
         "description": "Apply HTML-Filter for these domains:"
     }
 }
