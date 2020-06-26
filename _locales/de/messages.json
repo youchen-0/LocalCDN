@@ -124,7 +124,7 @@
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitle": {
-        "message": "Domains for HTML-Filter:",
+        "message": "Domains für HTML-Filter:",
         "description": "Domains for HTML-Filter:"
     },
     "htmlFilterDomainsDescription": {
