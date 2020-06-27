@@ -76,7 +76,7 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Włącz logowanie w konsoli przeglądarki.",
+        "message": "Włącz logowanie w konsoli przeglądarki",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
