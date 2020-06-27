@@ -392,6 +392,12 @@ var mappings = {
             'algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2': resources.algoliasearchSearchlightHelper
         }
     },
+    // Google Material Icons
+    'fonts.googleapis.com': {
+        '/': {
+            'icon?family=Material+Icons': resources.googleMaterialIcons
+        }
+    },
     // Yandex CDN
     'yastatic.net': {
         '/': {

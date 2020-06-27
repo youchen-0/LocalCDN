@@ -210,6 +210,8 @@ helpers.determineCdnName = function (domainName) {
         return 'NetDNA';
     case 'pagecdn.io':
         return 'PageCDN';
+    case 'fonts.googleapis.com':
+        return 'Google Fonts';
     default:
         return 'Unknown';
     }
@@ -527,6 +529,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'google-material-design-icons.css': 'Google Material Icons',
     'Chart.bundle.min.jsm': 'Chart.js (JS)',
     'Chart.min.css': 'Chart.js (CSS)',
     'bootbox.min.jsm': 'BootboxJS',

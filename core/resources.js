@@ -298,6 +298,11 @@ var resources = {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
     },
+    // Google Material Icons
+    'googleMaterialIcons': {
+        'path': 'resources/google-material-design-icons/google-material-design-icons.css',
+        'type': 'text/css'
+    },
     // hls.js
     'hlsJS': {
         'path': 'resources/hls.js/{version}/hls.min.jsm',
