@@ -11,8 +11,6 @@
 
         <link rel="stylesheet" type="text/css" href="options.css">
 
-        <script defer src="../../modules/internal/icons.js"></script>
-
     </head>
 
     <body>
@@ -167,7 +165,7 @@
                 <div id="html-filter-domains-title-exclude" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleExclude">Do not apply HTML-Filter to these domains:</div>
                 <div id="html-filter-domains-title-include" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleInclude">Apply HTML-Filter for these domains:</div>
                 <input class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text">
-                <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter domains for HTML filter. Separate multiple entries with semi-colons (;).</div>
+                <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains.</div>
             </section>
             <span id="negate-html-filter-list-warning" class="badge badge-warning warning-red" data-i18n-content="negateHtmlFilterListWarning">This function can break websites. Please note the information on the Wiki page.</span>
             <section class="option">
@@ -178,7 +176,7 @@
                     </label>
                     <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
                 </div>
-                <div class="description-option" data-i18n-content="negateHtmlFilterListDescription">If activated, the HTML filter for the domains in the list above is disabled instead of enabled.</div>
+                <div class="description-option" data-i18n-content="negateHtmlFilterListDescription">Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list.</div>
             </section>
         </div>
 

@@ -27,7 +27,7 @@ const Address = {
     'ANY_PROTOCOL': '*://',
     'CHROME': 'chrome:',
     'CHROME_EXTENSION': 'chrome-extension:',
-    'DECENTRALEYES': 'decentraleyes.org',
+    'DECENTRALEYES': 'localcdn.de',
     'EXAMPLE': 'example.org',
     'HTTP': 'http:',
     'HTTPS': 'https:',
