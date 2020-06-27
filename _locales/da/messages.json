@@ -112,15 +112,15 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inverter HTML-Filter",
         "description": "Invert HTML-Filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Aktiver HTML-Filter som standard.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Denne funktion kan ødelægge hjemmesider. Vær sød at notere informationen på Wiki siden.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -128,7 +128,7 @@
         "description": "Do not apply HTML-Filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Indtast domæner for HTML-Filteret. For disse domæner er filteret aktiveret, undtagen når du inverterer HTML-Filtereret med den næste mulighed. Separer flere domæner med semi-kolon (;).",
         "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
