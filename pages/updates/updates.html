@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="../base.css">
         <link rel="stylesheet" type="text/css" href="../updates/updates.css">
         <script src="../../core/constants.js"></script>
         <script defer src="../../core/resources.js"></script>
@@ -43,20 +44,27 @@
                             <li>Added: Chart.js (JS-Bundle & CSS) v2.9.3 (reported by email)</li>
                             <li>Improved: Option to enable HTML-Filter by default (<a href="https://codeberg.org/nobody/LocalCDN/issues/33">#33</a>)</li>
                             <li>Added: Google Material Icons v3.0.1 (<a href="https://codeberg.org/nobody/LocalCDN/issues/41">#41</a>)</li>
+                            <li>Improved: Dark-Mode (reported by email)</li>
                         </ul>
                     <div class="topic-label">
                         Generate rule sets for uBlock or uMatrix
                     </div>
                     <div class="ruleset-generator">
-                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
-                        <label for="generate-ublock-rules">uBlock</label>
+                        <label class="b-contain" for="generate-ublock-rules">uBlock
+                            <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                            <div class="b-input"></div>
+                        </label>
                     </div>
                     <div class="ruleset-generator">
-                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
-                        <label for="generate-umatrix-rules">uMatrix</label>
+                        <label class="b-contain" for="generate-umatrix-rules">uMatrix
+                            <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                            <div class="b-input"></div>
+                        </label>
                     </div>
-                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                    <input id="button-copy-rule-set" type="button" value="Copy">
+                    <div>
+                        <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+                        <input id="button-copy-rule-set" type="button" value="Copy">
+                    </div>
                     <hr/>
                     <h2>History</h2>
                     <p class='release-date'>2020-06-21 (v2.2.9)</p>

@@ -6,7 +6,7 @@ body {
     color: #555;
     cursor: default;
     font-family: 'Noto Sans', Arial, sans-serif !important;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: -15px;
     padding: 10px !important;
 }
@@ -14,8 +14,7 @@ body {
 .option {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
-    padding: 5px;
+    padding-bottom: 20px;
 }
 
 .html-filter-section {
@@ -92,6 +91,7 @@ body {
     align-items: center;
     display: flex;
     font-weight: 600;
+    font-size: 1rem;
 }
 
 /**
@@ -104,10 +104,10 @@ body {
 }
 
 .input-text {
-    max-width: 320px;
     border-radius: 3px;
     border: 1px solid darkgrey;
     padding: 5px !important;
+    margin-top: 10px !important;
     color: #555;
 }
 
@@ -168,12 +168,6 @@ body {
     padding: 5px 9px;
 }
 
-#button-copy-rule-set {
-    display: none;
-    padding: 5px;
-    font-size: 1.3em;
-}
-
 #html-filter-domains-title-exclude {
     display: none;
 }
@@ -193,7 +187,7 @@ body {
 .description-option {
     color: #777;
     font-style: italic;
-    padding-left: 20px;
+    padding-left: 1.8rem;
 }
 
 .badge {
@@ -223,9 +217,7 @@ body {
 }
 
 #negate-html-filter-list-warning {
-    text-decoration: underline;
-    cursor: pointer;
-    text-transform: none;
+    margin: 10px 0px 30px 0px;
 }
 
 .hidden {
@@ -296,12 +288,14 @@ body[dir="rtl"] .input-text {
     margin-right: 29px;
 }
 
-/**
- * Compatibility
- */
+.option-group {
+    background-color: #e1e1e1;
+    margin-top: 2rem;
+    padding: .7rem;
+    border-radius: 3px;
+}
 
 @media (prefers-color-scheme: dark) {
-
     body {
         background-color: #202023;
     }
@@ -315,6 +309,15 @@ body[dir="rtl"] .input-text {
     }
 
     .notice-head > span, #last-mapping-update, .badge-warning, .notice-message, .button-warning {
-        color: #4b3000;
+        color: #4b3000 !important;
+    }
+
+    .option-group {
+        background-color: #1d1d1d;
+    }
+
+    .input-text {
+        background-color: #434343;
+        color: #aeaeae !important;
     }
 }

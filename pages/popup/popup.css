@@ -323,24 +323,6 @@ input:checked + .slider:before {
     margin-left: 5px;
 }
 
-/**
- * Links
- */
-
-.link-text {
-    color: #bdbdbd;
-    cursor: pointer;
-    float: left;
-    font-size: 13px;
-    padding-left: 4px;
-    padding-top: 5px;
-    text-decoration: none;
-}
-
-.link-text:hover {
-    color: #777;
-    text-decoration: underline;
-}
 
 /**
  * Miscellaneous
@@ -525,18 +507,6 @@ input:checked + .slider:before {
     #get-more-injections-btn:hover {
         color: #fff;
         text-decoration: underline;
-    }
-
-    /**
-     * Links
-     */
-
-    .link-text {
-        color: #7d7d7d;
-    }
-
-    .link-text:hover {
-        color: #dadada;
     }
 
     /**
