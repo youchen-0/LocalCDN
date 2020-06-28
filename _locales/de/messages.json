@@ -101,7 +101,7 @@
     },
     "labelManipulateDOM": {
         "message": "HTML-Quelltext filtern",
-        "description": "Filters HTML source code"
+        "description": "Filter HTML source code"
     },
     "labelShowMoreInjections": {
         "message": "Weitere Injektionen anzeigen",
@@ -113,7 +113,7 @@
     },
     "negateHtmlFilterListTitle": {
         "message": "HTML-Filter umkehren",
-        "description": "Invert HTML-Filter"
+        "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
         "message": "Aktiviere diese Option, um den HTML-Filter immer anzuwenden. Die Domains in der Liste werden anschließend ignoriert. Wenn diese Option deaktiviert ist, wird der HTML-Filter nur für Domains in der Liste angewendet.",
@@ -125,14 +125,14 @@
     },
     "htmlFilterDomainsTitleExclude": {
         "message": "HTML-Filter nicht für diese Domains anwenden:",
-        "description": "Do not apply HTML-Filter to these domains:"
+        "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
         "message": "Gib die Domains an, die vom HTML-Filter behandelt oder ignorieren möchten. Trenne mehrere Einträge durch Semikolon (;). Voreinstellung: HTML-Filter nur für diese Domains anwenden.",
-        "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "HTML-Filter für diese Domains anwenden:",
-        "description": "Apply HTML-Filter for these domains:"
+        "description": "Apply HTML filter for these domains:"
     }
 }

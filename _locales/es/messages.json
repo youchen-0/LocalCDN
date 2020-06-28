@@ -101,7 +101,7 @@
     },
     "labelManipulateDOM": {
         "message": "Optimizar código fuente HTML",
-        "description": "Filters HTML source code"
+        "description": "Filter HTML source code"
     },
     "labelShowMoreInjections": {
         "message": "Mostrar más inyecciones",
@@ -113,7 +113,7 @@
     },
     "negateHtmlFilterListTitle": {
         "message": "",
-        "description": "Invert HTML-Filter"
+        "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
         "message": "",
@@ -125,14 +125,14 @@
     },
     "htmlFilterDomainsTitleExclude": {
         "message": "",
-        "description": "Do not apply HTML-Filter to these domains:"
+        "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
         "message": "",
-        "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "",
-        "description": "Apply HTML-Filter for these domains:"
+        "description": "Apply HTML filter for these domains:"
     }
 }

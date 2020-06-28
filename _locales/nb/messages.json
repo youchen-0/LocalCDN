@@ -101,7 +101,7 @@
     },
     "labelManipulateDOM": {
         "message": "Filtrerer HTML-kildekode",
-        "description": "Filters HTML source code"
+        "description": "Filter HTML source code"
     },
     "labelShowMoreInjections": {
         "message": "Vis flere injeksjoner",
@@ -113,7 +113,7 @@
     },
     "negateHtmlFilterListTitle": {
         "message": "Inverter HTML-filter",
-        "description": "Invert HTML-Filter"
+        "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
         "message": "Slå på dette alternativet for å alltid bruke HTML-filteret. Domenene i listen blir da ignorert. Hvis dette alternativet er slått av, blir HTML-filteret bare brukt på domener i listen.",
@@ -125,14 +125,14 @@
     },
     "htmlFilterDomainsTitleExclude": {
         "message": "Ikke bruk HTML-filter på disse domenene:",
-        "description": "Do not apply HTML-Filter to these domains:"
+        "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
         "message": "Slå på dette alternativet for å alltid bruke HTML-filteret. Ekskluder domener med listen over. Skill flere oppføringer med semikolon (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Bruk HTML-filter på disse domenene:",
-        "description": "Apply HTML-Filter for these domains:"
+        "description": "Apply HTML filter for these domains:"
     }
 }
