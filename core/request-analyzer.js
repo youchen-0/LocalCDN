@@ -29,8 +29,7 @@ var requestAnalyzer = {};
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 
-    let initiatorDomain, isWhitelisted;
-    let fontawesome = new RegExp('\(font-awesome|fontawesome)');
+    let initiatorDomain, isWhitelisted, fontawesome;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 
@@ -45,6 +44,7 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     }
 
     // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
+    fontawesome = new RegExp('\(font-awesome|fontawesome)');
     if(BrowserType.CHROMIUM && fontawesome.test(requestDetails.url)) {
         console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
         return false;
@@ -57,11 +57,15 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 requestAnalyzer.getLocalTarget = function (requestDetails) {
 
     let destinationUrl, destinationHost, destinationPath, hostMappings, basePath, resourceMappings;
+    let destinationSearchString = '';
 
     destinationUrl = new URL(requestDetails.url);
 
     destinationHost = destinationUrl.host;
     destinationPath = destinationUrl.pathname;
+    if (destinationUrl.search) {
+        destinationSearchString = destinationUrl.search;
+    }
 
     // Use the proper mappings for the targeted host.
     hostMappings = mappings[destinationHost];
@@ -79,7 +83,7 @@ requestAnalyzer.getLocalTarget = function (requestDetails) {
     }
 
     // Return either the local target's path or false.
-    return requestAnalyzer._findLocalTarget(resourceMappings, basePath, destinationHost, destinationPath);
+    return requestAnalyzer._findLocalTarget(resourceMappings, basePath, destinationHost, destinationPath, destinationSearchString);
 };
 
 /**
@@ -98,7 +102,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
     return false;
 };
 
-requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath) {
+requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString) {
 
     let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
 
@@ -110,8 +114,11 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
     resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
 
-    shorthandResource = shorthands.specialFiles(channelHost, channelPath);
+    shorthandResource = shorthands.specialFiles(channelHost, channelPath, destinationSearchString);
     if (shorthandResource) {
+        if (requestAnalyzer.logging) {
+            console.log('[ LocalCDN ] Replaced resource: ' + shorthandResource.path);
+        }
         return shorthandResource;
     }
 

@@ -1,114 +1,138 @@
 {
-  "extensionDescription": {
-    "message": "Προστατεύει από παρακολούθηση μέσω \"δωρεάν\" διανομής περιεχόμενου.",
-    "description": "Extension description."
-  },
-  "amountInjectedTitle": {
-    "message": "Μετρητής εμβόλιμων τοπικών πόρων",
-    "description": "Amount injected title"
-  },
-  "amountInjectedDescription": {
-    "message": "Ποσοστό εμβόλιμων τοπικών πόρων Δικτύων Παροχής Περιεχομένου από την στιγμή της εγκατάστασης.",
-    "description": "Amount injected description."
-  },
-  "optionsTitle": {
-    "message": "Επιλογές",
-    "description": "Options title"
-  },
-  "showIconBadgeTitle": {
-    "message": "Προβολή αριθμού εμβόλιμων πόρων στο εικονίδιο",
-    "description": "Show icon badge title"
-  },
-  "showIconBadgeDescription": {
-    "message": "Προβολή του αριθμού των εμβόλιμων πόρων στο εικονίδιο του πρόσθετου.",
-    "description": "Show icon badge description."
-  },
-  "blockMissingTitle": {
-    "message": "Μπλοκ αιτήσεων για ανύπαρκτους πόρους",
-    "description": "Block requests for missing resources title"
-  },
-  "blockMissingDescription": {
-    "message": "Ακύρωση απομακρυσμένης αίτησης, αν ο απαιτούμενος πόρος δεν είναι τοπικά διαθέσιμος.",
-    "description": "Block requests for missing resources description."
-  },
-  "disablePrefetchTitle": {
-    "message": "Απενεργοποίηση πρόωρης φόρτωσης συνδέσμου",
-    "description": "Disable prefetch title"
-  },
-  "disablePrefetchDescription": {
-    "message": "Αποτροπή διαρροής αποκλεισμένων κλήσεων προς δίκτυα διανομής.",
-    "description": "Disable prefetch description."
-  },
-  "stripMetadataTitle": {
-    "message": "Διαγραφή μεταδεδομένων από επιτρεπόμενες κλήσεις",
-    "description": "Strip metadata title"
-  },
-  "stripMetadataDescription": {
-    "message": "Διαγραφή ευαίσθητων δεδομένων από CDN αιτήσεις για ενίσχυση ασφάλειας.",
-    "description": "Strip metadata description."
-  },
-  "whitelistedDomainsTitle": {
-    "message": "Εξαίρεση διευθύνσεων από επιθεωρήσεις",
-    "description": "Whitelisted domains:"
-  },
-  "whitelistedDomainsDescription": {
-    "message": "Εισαγωγή διευθύνσεων στις επιτρεπόμενες. Διαχωρίστε πολλαπλές καταχωρήσεις με ερωτηματικά (;).",
-    "description": "Whitelisted domains description."
-  },
-  "advancedLabel": {
-    "message": "Για προχωρημένους",
-    "description": "Advanced label"
-  },
-  "generateRuleSetTitle": {
-    "message": "Δημιουργία συνόλων κανόνων για uBlock ή uMatrix",
-    "description": "Generate rule set title"
-  },
-  "generateRuleSetDescription": {
-    "message": "",
-    "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
-  },
-  "lastUpdate": {
-    "message": "",
-    "description": "Last update:"
-  },
-  "copyRuleSet": {
-    "message": "",
-    "description": "Text of button to copy ruleset"
-  },
-  "loggingTitle": {
-    "message": "",
-    "description": "Enable logging in browser console"
-  },
-  "loggingDescription": {
-    "message": "",
-    "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-  },
-  "hideReleaseNotesTitle": {
-    "message": "",
-    "description": "Disable release notes"
-  },
-  "hideReleaseNotesDescription": {
-    "message": "",
-    "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
-  },
-  "featureBreaksWebsitesDescription": {
-    "message": "",
-    "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
-  },
-  "featureBreaksWebsitesButton": {
-    "message": "",
-    "description": "Disable"
-  },
-  "labelManipulateDOM": {
-    "message": "",
-    "description": "Filters HTML source code"
-  },
-  "labelShowMoreInjections": {
-    "message": "",
-    "description": "Show more Injections"
-  },
-  "labelDonate": {
-    "message": "",
-    "description": "Donate"
-  }
+    "extensionDescription": {
+        "message": "Προστατεύει από παρακολούθηση μέσω \"δωρεάν\" διανομής περιεχόμενου.",
+        "description": "Extension description."
+    },
+    "amountInjectedTitle": {
+        "message": "Μετρητής εμβόλιμων τοπικών πόρων",
+        "description": "Amount injected title"
+    },
+    "amountInjectedDescription": {
+        "message": "Ποσοστό εμβόλιμων τοπικών πόρων Δικτύων Παροχής Περιεχομένου από την στιγμή της εγκατάστασης.",
+        "description": "Amount injected description."
+    },
+    "optionsTitle": {
+        "message": "Επιλογές",
+        "description": "Options title"
+    },
+    "showIconBadgeTitle": {
+        "message": "Προβολή αριθμού εμβόλιμων πόρων στο εικονίδιο",
+        "description": "Show icon badge title"
+    },
+    "showIconBadgeDescription": {
+        "message": "Προβολή του αριθμού των εμβόλιμων πόρων στο εικονίδιο του πρόσθετου.",
+        "description": "Show icon badge description."
+    },
+    "blockMissingTitle": {
+        "message": "Μπλοκ αιτήσεων για ανύπαρκτους πόρους",
+        "description": "Block requests for missing resources title"
+    },
+    "blockMissingDescription": {
+        "message": "Ακύρωση απομακρυσμένης αίτησης, αν ο απαιτούμενος πόρος δεν είναι τοπικά διαθέσιμος.",
+        "description": "Block requests for missing resources description."
+    },
+    "disablePrefetchTitle": {
+        "message": "Απενεργοποίηση πρόωρης φόρτωσης συνδέσμου",
+        "description": "Disable prefetch title"
+    },
+    "disablePrefetchDescription": {
+        "message": "Αποτροπή διαρροής αποκλεισμένων κλήσεων προς δίκτυα διανομής.",
+        "description": "Disable prefetch description."
+    },
+    "stripMetadataTitle": {
+        "message": "Διαγραφή μεταδεδομένων από επιτρεπόμενες κλήσεις",
+        "description": "Strip metadata title"
+    },
+    "stripMetadataDescription": {
+        "message": "Διαγραφή ευαίσθητων δεδομένων από CDN αιτήσεις για ενίσχυση ασφάλειας.",
+        "description": "Strip metadata description."
+    },
+    "whitelistedDomainsTitle": {
+        "message": "Εξαίρεση διευθύνσεων από επιθεωρήσεις",
+        "description": "Deactivate LocalCDN for these domains:"
+    },
+    "whitelistedDomainsDescription": {
+        "message": "Εισαγωγή διευθύνσεων στις επιτρεπόμενες. Διαχωρίστε πολλαπλές καταχωρήσεις με ερωτηματικά (;).",
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+    },
+    "advancedLabel": {
+        "message": "Για προχωρημένους",
+        "description": "Advanced label"
+    },
+    "generateRuleSetTitle": {
+        "message": "Δημιουργία συνόλων κανόνων για uBlock ή uMatrix",
+        "description": "Generate rule set title"
+    },
+    "generateRuleSetDescription": {
+        "message": "",
+        "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
+    },
+    "lastUpdate": {
+        "message": "",
+        "description": "Last update:"
+    },
+    "copyRuleSet": {
+        "message": "",
+        "description": "Text of button to copy ruleset"
+    },
+    "loggingTitle": {
+        "message": "",
+        "description": "Enable logging in browser console"
+    },
+    "loggingDescription": {
+        "message": "",
+        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+    },
+    "hideReleaseNotesTitle": {
+        "message": "",
+        "description": "Disable release notes"
+    },
+    "hideReleaseNotesDescription": {
+        "message": "",
+        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+    },
+    "featureBreaksWebsitesDescription": {
+        "message": "",
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+    },
+    "featureBreaksWebsitesButton": {
+        "message": "",
+        "description": "Disable"
+    },
+    "labelManipulateDOM": {
+        "message": "",
+        "description": "Filters HTML source code"
+    },
+    "labelShowMoreInjections": {
+        "message": "",
+        "description": "Show more Injections"
+    },
+    "labelDonate": {
+        "message": "",
+        "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "",
+        "description": "Invert HTML-Filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "",
+        "description": "Do not apply HTML-Filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "",
+        "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "",
+        "description": "Apply HTML-Filter for these domains:"
+    }
 }

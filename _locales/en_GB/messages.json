@@ -48,12 +48,12 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Exclude domains from inspections:",
-        "description": "Whitelisted domains:"
+        "message": "Deactivate LocalCDN for these domains:",
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Enter domains to whitelist them. Separate multiple entries with semi-colons (;).",
-        "description": "Whitelisted domains description."
+        "message": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;).",
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "Advanced",
@@ -110,5 +110,29 @@
     "labelDonate": {
         "message": "Donate",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "Invert HTML-Filter",
+        "description": "Invert HTML-Filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list.",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "This function can break websites. Please note the information on the Wiki page.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "Do not apply filters to these domains:",
+        "description": "Do not apply HTML-Filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "Enable this option to always apply the HTML filter. You can exclude domains with the list above. Separate multiple entries with semi-colons (;).",
+        "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "Apply HTML-Filter for these domains:",
+        "description": "Apply HTML-Filter for these domains:"
     }
 }

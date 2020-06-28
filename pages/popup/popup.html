@@ -1,57 +1,37 @@
 <!DOCTYPE html>
-
 <html>
-
     <head>
-
         <title>LocalCDN Popup</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
-
         <link rel="stylesheet" type="text/css" href="popup.css">
-
-        <script defer src="../../modules/internal/icons.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="../base.css">
     </head>
-
     <body>
-
         <script src="../../core/constants.js"></script>
         <script src="../../modules/internal/helpers.js"></script>
-
         <script src="popup.js"></script>
-
         <header>
-
             <img class="icon-logo" src="../../icons/icon.svg" alt="Extension Icon">
             <div class="heading"><span id="name-label"></span> <sup id="version-label" class="label-version"></sup></div>
-
             <div id="donate-button">
                 <p id="label-donate" data-i18n-content="labelDonate">Donate</p>
                 <div id="donate-button-svg"></div>
             </div>
-
         </header>
-
         <section class="content">
-
             <div id="website-context" class="panel hidden">
-
                 <div class="subpanel">
-
                     <div id="protection-toggle">
                         <label class="switch">
                             <input type="checkbox" id="protection-toggle-switch">
                             <span id="toggle-switch-domain" class="slider"></span>
                         </label>
                     </div>
-
                     <div class="label-domain">
                         <span id="domain-indicator"></span>
                     </div>
                 </div>
-
                 <div class="subpanel" id="div-manipulateDOM">
                     <div id="manipulateDOM-toggle">
                         <label class="switch">
@@ -59,40 +39,24 @@
                             <span id="toggle-switch-manipulateDOM" class="slider"></span>
                         </label>
                     </div>
-
                     <div id="label-manipulateDOM" class="label-domain">
-                        <span id="manipulateDOM-indicator" data-i18n-content="labelManipulateDOM">Filter HTML source code</span>
+                        <a id="manipulateDOM-indicator" data-i18n-content="labelManipulateDOM">Filter HTML source code</a>
                     </div>
-
                 </div>
-
             </div>
-
             <div id="more-injections-section"></div>
-
             <div id="extension-context" class="panel">
-
                 <div id="injection-counter" class="counter">0</div>
-
                 <div class="subheading" data-i18n-content="amountInjectedTitle"></div>
                 <div class="description" data-i18n-content="amountInjectedDescription"></div>
-
             </div>
-
         </section>
-
         <footer>
-
-            <span id="testing-utility-link" class="link-text">localcdn.de/test</span>
-
+            <a id="testing-utility-link" class="link-text">localcdn.de/test</a>
             <div id="options-button" class="button" data-i18n-title="optionsTitle">
                 <div id="options-button-svg"></div>
             </div>
-
         </footer>
-
         <div id="popup-incomplete-translation"></div>
-
     </body>
-
 </html>

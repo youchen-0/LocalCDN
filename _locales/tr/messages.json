@@ -48,12 +48,12 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Alanları denetimlerden hariç tut:",
-        "description": "Whitelisted domains:"
+        "message": "Bu etki alanları için LocalCDN'yi devre dışı bırak:",
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Beyaz listeye eklemek için alan adlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
-        "description": "Whitelisted domains description."
+        "message": "LocalCDN'nin devre dışı bırakılacağı etki alanlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "Gelişmiş",
@@ -110,5 +110,29 @@
     "labelDonate": {
         "message": "Bağış yap",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "HTML filtresini tersine çevir",
+        "description": "Invert HTML-Filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "HTML filtresini her zaman uygulamak için bu seçeneği etkinleştirin. Listedeki etki alanları göz ardı edilecektir. Bu seçenek devre dışı bırakılırsa, HTML filtresi sadece listedeki etki alanlarına uygulanır.",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "Bu işlev web sitelerini bozabilir. Lütfen Wiki sayfasındaki bilgilere göz atın.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "Bu etki alanlarına filtre uygulama:",
+        "description": "Do not apply HTML-Filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "HTML filtresini her zaman uygulamak için bu seçeneği etkinleştirin. Yukarıdaki listeyle etki alanlarını hariç tutabilirsiniz. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
+        "description": "Enter the domains to be handled or ignored by the HTML-Filter. Separate multiple entries with semi-colons (;). Default: Apply HTML-Filters only for these domains."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "Bu etki alanları için HTML filtresini uygula:",
+        "description": "Apply HTML-Filter for these domains:"
     }
 }

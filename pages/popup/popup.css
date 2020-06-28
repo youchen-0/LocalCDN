@@ -300,21 +300,6 @@ input:checked + .slider:before {
     cursor: not-allowed;
 }
 
-#manipulateDOM-indicator {
-    display: inline-block;
-    cursor: pointer;
-    background-image: url("../../icons/info-dark.svg");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    padding-right: 20px;
-}
-
-#manipulateDOM-indicator:hover {
-    color: #777;
-    text-decoration: underline;
-}
-
 #info-button-svg {
     background-image: url("../../icons/info-dark.svg");
     background-repeat: no-repeat;
@@ -323,24 +308,6 @@ input:checked + .slider:before {
     margin-left: 5px;
 }
 
-/**
- * Links
- */
-
-.link-text {
-    color: #bdbdbd;
-    cursor: pointer;
-    float: left;
-    font-size: 13px;
-    padding-left: 4px;
-    padding-top: 5px;
-    text-decoration: none;
-}
-
-.link-text:hover {
-    color: #777;
-    text-decoration: underline;
-}
 
 /**
  * Miscellaneous
@@ -381,7 +348,7 @@ input:checked + .slider:before {
 }
 
 .label-domain {
-    color: #bbb;
+    color: #555;
     display: flex;
     font-style: italic;
     overflow: hidden;
@@ -528,18 +495,6 @@ input:checked + .slider:before {
     }
 
     /**
-     * Links
-     */
-
-    .link-text {
-        color: #7d7d7d;
-    }
-
-    .link-text:hover {
-        color: #dadada;
-    }
-
-    /**
      * Miscellaneous
      */
 
@@ -552,7 +507,7 @@ input:checked + .slider:before {
     }
 
     .label-domain {
-        color: #717171;
+        color: #aeaeae;
     }
 
     .panel:not(:last-child) {

@@ -27,7 +27,7 @@ const Address = {
     'ANY_PROTOCOL': '*://',
     'CHROME': 'chrome:',
     'CHROME_EXTENSION': 'chrome-extension:',
-    'DECENTRALEYES': 'decentraleyes.org',
+    'DECENTRALEYES': 'localcdn.de',
     'EXAMPLE': 'example.org',
     'HTTP': 'http:',
     'HTTPS': 'https:',
@@ -71,7 +71,8 @@ const Setting = {
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
-    'STATISTIC_DATA': 'statisticData'
+    'STATISTIC_DATA': 'statisticData',
+    'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList'
 };
 
 const WebRequest = {

@@ -1,0 +1,248 @@
+a {
+    color: #555;
+    font-weight: bold;
+    background: url('../../icons/link-dark.svg') no-repeat right center;
+    background-size: 10px 10px;
+    padding-right: 13px;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #777;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#button-copy-rule-set, #generated-rules {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #aeaeae;
+}
+
+#button-copy-rule-set {
+    display: none;
+    padding: 5px;
+    font-size: 1.3em;
+    line-height: 2;
+    background-color: #fff;
+    text-align: center;
+}
+
+#button-copy-rule-set:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+#button-copy-rule-set-icon {
+    background: url('../../icons/copy-dark.svg') no-repeat right center;
+    background-size: 20px 20px;
+    padding-right: 23px;
+}
+
+#generated-rules {
+    display: none;
+    margin-top: 20px;
+}
+
+/**
+ * Checkboxes, Radiobuttons
+ */
+
+.b-contain *, .b-contain *::before, .b-contain *::after {
+    box-sizing: content-box !important;
+}
+
+.b-contain input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.b-contain span {
+    line-height: 1.54;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.b-contain {
+    display: table;
+    position: relative;
+    padding-left: 1.8rem;
+    cursor: pointer;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: rgba(241, 245, 248, 1);
+    transition: background 250ms;
+    border: 1px solid rgba(184, 194, 204, 1);
+    border-radius: 0.125rem;
+}
+
+.b-contain input[type="radio"] ~ .b-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: rgba(241, 245, 248, 1);
+    transition: background 250ms;
+    border: 1px solid rgba(184, 194, 204, 1);
+    border-radius: 2.0rem;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: .45rem;
+    top: .18rem;
+    width: .25rem;
+    height: .6rem;
+    border: solid rgba(255, 255, 255, 1);
+    border-width: 0 2px 2px 0;
+    transition: background 250ms;
+    transform: rotate(45deg);
+}
+
+.b-contain input[type="radio"] ~ .b-input::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: .25rem;
+    top: .25rem;
+    width: .75rem;
+    height: .75rem;
+    border-radius: 2.0rem;
+    background: rgba(255, 255, 255, 1);
+    transition: background 250ms;
+}
+
+.b-contain input:disabled ~ .b-input::after {
+    border-color: rgba(135, 149, 161, 1);
+}
+
+.b-contain input:checked ~ .b-input::after {
+    display: block;
+}
+
+.b-contain:hover input ~ .b-input,
+.b-contain input:focus ~ .b-input {
+    background: rgb(231, 238, 243);
+}
+
+.b-contain input:focus ~ .b-input {
+    box-shadow: 0 0 0 2px rgba(52,144,220,0.5);
+}
+
+.b-contain input:checked ~ .b-input {
+    background: rgba(0, 130, 243, 1);
+    border-color: rgba(0, 130, 243, 1);
+}
+
+.b-contain input[type="checkbox"]:disabled ~ .b-input {
+    background: rgba(241, 245, 248, 1);
+    border-color: rgba(184, 194, 204, 1);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.b-contain input[type="radio"]:disabled ~ .b-input {
+    background: rgba(241, 245, 248, 1);
+    border-color: rgba(184, 194, 204, 1);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.b-contain input[type="radio"]:disabled ~ .b-input::after {
+    background: rgba(135, 149, 161, 1);
+}
+
+.b-contain input:checked:focus ~ .b-input, .b-contain:hover input:not([disabled]):checked ~ .b-input {
+    background: rgba(13, 143, 255, 1);
+    border-color: rgba(13, 143, 255, 1);
+}
+
+.b-contain .b-input::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+    margin-left: -0.85rem;
+    margin-top: -0.85rem;
+    background: rgba(0, 130, 243, 1);
+    border-radius: 2rem;
+    opacity: .6;
+    z-index: 99999;
+    transform: scale(0);
+}
+
+.b-contain input + .b-input::before {
+    animation: b-ripple 250ms ease-out;
+}
+
+.b-contain input:checked + .b-input::before {
+    animation-name: b-ripple-duplicate;
+}
+
+.b-contain .b-input::before {
+    visibility: hidden;
+}
+
+.b-contain input:focus + .b-input::before {
+    visibility: visible;
+}
+
+.b-contain:first-child .b-input::before {
+    visibility: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: #f2f2f2;
+        font-weight: bold;
+        background: url('../../icons/link-light.svg') no-repeat right center;
+        background-size: 10px 10px;
+        padding-right:13px;
+    }
+    a:hover{
+        background: url('../../icons/link-dark.svg') no-repeat right center;
+        background-size: 10px 10px;
+    }
+
+    .subtle-hint, body, h3, p {
+        color: #aeaeae !important;
+    }
+
+    #button-copy-rule-set, #generated-rules {
+        border: 1px solid #222;
+    }
+
+    #generated-rules{
+        background-color: #434343;
+        color: #aeaeae !important;
+    }
+
+    #button-copy-rule-set {
+        background-color: #333;
+        color: #aeaeae;
+    }
+
+    #button-copy-rule-set:hover {
+        background-color: #2d2d2d;
+    }
+
+    #button-copy-rule-set-icon {
+        background: url('../../icons/copy-light.svg') no-repeat right center;
+        background-size: 20px 20px;
+    }
+}

@@ -85,7 +85,7 @@ shorthands['sdn.geekzu.org'] = shorthands['ajax.googleapis.com'];
 // USTC Linux User Group [Mirror]
 shorthands['ajax.proxy.ustclug.org'] = shorthands['ajax.googleapis.com'];
 
-shorthands.specialFiles = function (channelHost, channelPath) {
+shorthands.specialFiles = function (channelHost, channelPath, searchString) {
     /*
         NOTE:
         jsDelivr allows to load several files in one request
@@ -108,6 +108,13 @@ shorthands.specialFiles = function (channelHost, channelPath) {
             'source': channelHost,
             'version': 'beta',
             'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+            'bundle': ''
+        };
+    } else if (channelHost + channelPath + searchString === 'fonts.googleapis.com/icon?family=Material+Icons') {
+        return {
+            'source': channelHost,
+            'version': '3.0.1',
+            'path': 'resources/google-material-design-icons/google-material-design-icons.css',
             'bundle': ''
         };
     } else {

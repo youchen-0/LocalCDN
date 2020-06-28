@@ -35,19 +35,14 @@ main._initializeSettings = function () {
         [Setting.STRIP_METADATA]: true,
         [Setting.WHITELISTED_DOMAINS]: {},
         [Setting.LOGGING]: false,
-        [Setting.DOMAINS_MANIPULATE_DOM]: {}
+        [Setting.DOMAINS_MANIPULATE_DOM]: {},
+        [Setting.NEGATE_HTML_FILTER_LIST]: false
     };
 
     chrome.storage.sync.get(settingDefaults, function (items) {
 
         if (items === null) {
             items = settingDefaults; // Restore setting defaults.
-        }
-
-        if (items.blockMissing === true || items.enforceStaging === true) {
-            stateManager.updateEnvironment(Environment.STAGING);
-        } else {
-            stateManager.updateEnvironment(Environment.STABLE);
         }
 
         if (items.disablePrefetch !== false) {
