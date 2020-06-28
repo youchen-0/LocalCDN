@@ -116,16 +116,18 @@ popup._renderDomainWhitelistPanel = function () {
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
 
-        if (( negateHtmlFilterList || popup._domainManipulateDOM ) && !( negateHtmlFilterList && popup._domainManipulateDOM )) {
-
+        if ( negateHtmlFilterList && !popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = true;
-            manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
-
-        } else {
-
+            manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
+        } else if (!negateHtmlFilterList && !popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = false;
             manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
-
+        } else if ( negateHtmlFilterList &&  popup._domainManipulateDOM) {
+            manipulateDOMToggleElement.checked = false;
+            manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
+        } else if (!negateHtmlFilterList &&  popup._domainManipulateDOM) {
+            manipulateDOMToggleElement.checked = true;
+            manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
         }
     }
 
