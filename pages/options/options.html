@@ -141,7 +141,7 @@
                     </label>
                 </div>
                 <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                <input id="button-copy-rule-set" type="button" data-i18n-content="copyRuleSet" value="Copy">
+                <button id="button-copy-rule-set" value="Copy"><span data-i18n-content="copyRuleSet">Copy</span><span id="button-copy-rule-set-icon"></span></button>
             </section>
         </div>
         <section class="notice notice-default hidden" id="notice-locale">
@@ -149,10 +149,21 @@
                 <div class="notice-message">
                     Your preferred language is not yet fully supported. Please help out by translating this add-on on Weblate.
                 </div>
-                <a class="button button-notice button-warning" href="https://hosted.weblate.org/projects/localcdn/" target="_blank">
+                <a class="button button-notice button-warning" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank">
                     Translate
                 </a>
             </div>
         </section>
+        <div class="option-links-div">
+            <ul class="option-links">
+                <li><a id="link-welcome-page">Welcome page (InApp)</a></li>
+                <li><a id="link-changelog">Changelog (InApp)</a></li>
+                <li><a id="link-donate">Donate (InApp)</a></li>
+                <li><a id="link-codeberg" href="https://codeberg.org/nobody/LocalCDN" target="_blank" rel="nofollow noopener noreferrer">Source-Code (www.codeberg.org)</a></li>
+                <li><a id="link-website" href="https://localcdn.de" target="_blank" rel="nofollow noopener noreferrer">Website (www.localcdn.de)</a></li>
+                <li><a id="link-website-test" href="https://localcdn.de/test" target="_blank" rel="nofollow noopener noreferrer">Test-Sites (www.localcdn.de/test)</a></li>
+                <li><a id="link-translate" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank" rel="nofollow noopener noreferrer">Translate (www.weblate.org)</a></li>
+            </ul>
+        </div>
     </body>
 </html>

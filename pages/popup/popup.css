@@ -348,7 +348,7 @@ input:checked + .slider:before {
 }
 
 .label-domain {
-    color: #bbb;
+    color: #555;
     display: flex;
     font-style: italic;
     overflow: hidden;
@@ -507,7 +507,7 @@ input:checked + .slider:before {
     }
 
     .label-domain {
-        color: #717171;
+        color: #aeaeae;
     }
 
     .panel:not(:last-child) {

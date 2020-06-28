@@ -3,7 +3,7 @@ a {
     font-weight: bold;
     background: url('../../icons/link-dark.svg') no-repeat right center;
     background-size: 10px 10px;
-    padding-right:13px;
+    padding-right: 13px;
     text-decoration: underline;
 }
 
@@ -27,6 +27,7 @@ a:hover {
     font-size: 1.3em;
     line-height: 2;
     background-color: #fff;
+    text-align: center;
 }
 
 #button-copy-rule-set:hover {
@@ -34,8 +35,15 @@ a:hover {
     background-color: #ddd;
 }
 
+#button-copy-rule-set-icon {
+    background: url('../../icons/copy-dark.svg') no-repeat right center;
+    background-size: 20px 20px;
+    padding-right: 23px;
+}
+
 #generated-rules {
     display: none;
+    margin-top: 20px;
 }
 
 /**
@@ -231,5 +239,10 @@ a:hover {
 
     #button-copy-rule-set:hover {
         background-color: #2d2d2d;
+    }
+
+    #button-copy-rule-set-icon {
+        background: url('../../icons/copy-light.svg') no-repeat right center;
+        background-size: 20px 20px;
     }
 }

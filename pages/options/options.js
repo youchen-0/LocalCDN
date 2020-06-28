@@ -82,6 +82,9 @@ options._renderOptionsPanel = function () {
 
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', options._onClickHTMLFilterWarning);
+    document.getElementById('link-welcome-page').addEventListener('click', options._onClickWelcomePage);
+    document.getElementById('link-changelog').addEventListener('click', options._onClickChangelog);
+    document.getElementById('link-donate').addEventListener('click', options._onClickDonate);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -309,6 +312,27 @@ options._copyRuleSet = function() {
 options._onClickHTMLFilterWarning = function() {
     chrome.tabs.create({
         'url': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
+        'active': true
+    });
+}
+
+options._onClickWelcomePage = function() {
+    chrome.tabs.create({
+        'url': chrome.extension.getURL('pages/welcome/welcome.html'),
+        'active': true
+    });
+}
+
+options._onClickDonate = function() {
+    chrome.tabs.create({
+        'url': chrome.extension.getURL('pages/donate/donate.html'),
+        'active': true
+    });
+}
+
+options._onClickChangelog = function() {
+    chrome.tabs.create({
+        'url': chrome.extension.getURL('pages/updates/updates.html'),
         'active': true
     });
 }

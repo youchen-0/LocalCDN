@@ -295,6 +295,18 @@ body[dir="rtl"] .input-text {
     border-radius: 3px;
 }
 
+.option-links {
+    list-style-type: disclosure-closed;
+}
+
+.option-links-div > ul {
+    padding-top: 2rem;
+}
+
+.option-links-div > ul > li {
+    padding-bottom: .5rem;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #202023;
