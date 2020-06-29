@@ -48,11 +48,11 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Wyklucz domeny z analizy",
+        "message": "Wyłącz LocalCDN dla tych domen:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Podaj domeny aby dodać je do białej listy. Oddziel wpisy średnikami (;).",
+        "message": "Podaj domeny, aby dodać je do białej listy. Oddziel wpisy średnikami (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -88,7 +88,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Po włączeniu nie będziesz otrzymywać żadnych informacji o nowych funkcjach w LocalCDN. W tym informacji o nowych regułach uBlock/uMatrix.",
+        "message": "Po włączeniu nie będziesz otrzymywać żadnych informacji o nowych funkcjach LocalCDN, w tym informacji o nowych regułach uBlock/uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
@@ -100,39 +100,39 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filtruj kod źródłowy HTML",
         "description": "Filter HTML source code"
     },
     "labelShowMoreInjections": {
-        "message": "",
+        "message": "Pokaż więcej wstrzyknięć",
         "description": "Show more Injections"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Dotacja",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Odwróć filtrowanie HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Włącz tę opcję, aby zawsze stosować filtr HTML. Domeny znajdujące się na liście będą wtedy ignorowane. Jeśli ta opcja jest wyłączona, filtr HTML będzie stosowany tylko do domen z listy.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Funkcja ta może spowodować uszkodzenie stron internetowych. Proszę zwrócić uwagę na informacje zawarte na stronie Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Nie używaj filtra HTML dla tych domen:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "message": "Włącz tę opcję, aby zawsze stosować filtr HTML. Możesz wykluczyć domeny z pomocą powyższej listy. Oddzielaj wielu wpisów za pomocą średników (;).",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Zastosuj filtr HTML dla tych domen:",
         "description": "Apply HTML filter for these domains:"
     }
 }

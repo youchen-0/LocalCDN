@@ -100,7 +100,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "HTML kaynak kodunu filtreler",
+        "message": "HTML kaynak kodunu filtrele",
         "description": "Filter HTML source code"
     },
     "labelShowMoreInjections": {
@@ -124,7 +124,7 @@
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "Bu etki alanlarına filtre uygulama:",
+        "message": "Bu etki alanlarına HTML filtresi uygulama:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
