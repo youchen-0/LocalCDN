@@ -129,7 +129,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Indtast domæner for HTML-Filteret. For disse domæner er filteret aktiveret, undtagen når du inverterer HTML-Filtereret med den næste mulighed. Separer flere domæner med semi-kolon (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "",

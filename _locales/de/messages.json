@@ -129,7 +129,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Gib die Domains an, die vom HTML-Filter behandelt oder ignorieren möchten. Trenne mehrere Einträge durch Semikolon (;). Voreinstellung: HTML-Filter nur für diese Domains anwenden.",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "HTML-Filter für diese Domains anwenden:",

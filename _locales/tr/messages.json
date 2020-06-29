@@ -129,7 +129,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "HTML filtresini her zaman uygulamak için bu seçeneği etkinleştirin. Yukarıdaki listeyle etki alanlarını hariç tutabilirsiniz. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Bu etki alanları için HTML filtresini uygula:",

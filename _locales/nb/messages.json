@@ -129,7 +129,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Slå på dette alternativet for å alltid bruke HTML-filteret. Ekskluder domener med listen over. Skill flere oppføringer med semikolon (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Bruk HTML-filter på disse domenene:",
