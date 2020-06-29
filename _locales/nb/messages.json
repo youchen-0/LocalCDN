@@ -100,7 +100,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtrerer HTML-kildekode",
+        "message": "Filtrer HTML-kildekode",
         "description": "Filter HTML source code"
     },
     "labelShowMoreInjections": {
