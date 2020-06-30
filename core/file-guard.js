@@ -1,6 +1,7 @@
 /**
  * File Guard
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @see https://git.synz.io/Synzvato/decentraleyes/merge_requests/258
  *

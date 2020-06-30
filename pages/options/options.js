@@ -1,9 +1,14 @@
 /**
  * Main Options Page
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2016-08-09
+ *
+ * @author      nobody
+ * @since       2020-05-04
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public

@@ -2,7 +2,7 @@
  * Remove integrity checks from embedded CSS and JavaScript files
  * Belongs to LocalCDN.
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-27
  *
  * @license     MPL 2.0

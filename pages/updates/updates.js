@@ -1,9 +1,11 @@
 /**
  * Main Updates Page
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-03-08
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
