@@ -343,7 +343,29 @@ options._onClickChangelog = function() {
 };
 
 /**
+ *  Updates the domain lists if the options page has no focus.
+ *  document.hasFocus() prevents problems with keyboard input.
+ */
+options._updatesDomainLists = function(changes) {
+
+    let changedItems = Object.keys(changes);
+
+    if(!document.hasFocus()){
+        if (changedItems[0] === 'whitelistedDomains') {
+            document.getElementById('tf-domains-whitelist').value = options._serializeWhitelistedDomains(changes['whitelistedDomains'].newValue);
+        } else if (changedItems[0] === 'domainsManipulateDOM') {
+            document.getElementById('tf-domains-manipulate-dom').value = options._serializeWhitelistedDomains(changes['domainsManipulateDOM'].newValue);
+        }
+    } else {
+        // document has the focus
+    }
+};
+
+
+/**
  * Initializations
  */
 
 document.addEventListener('DOMContentLoaded', options._onDocumentLoaded);
+
+chrome.storage.onChanged.addListener(options._updatesDomainLists);
