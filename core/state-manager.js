@@ -262,7 +262,7 @@ stateManager._setIconDisabled = function (tabIdentifier) {
 stateManager.requests = {};
 stateManager.tabs = {};
 
-stateManager.getInvertOption;
+stateManager.getInvertOption = false;
 stateManager.disabledIconPath = {
     '16': chrome.runtime.getURL('icons/action/icon16-disabled.png'),
     '18': chrome.runtime.getURL('icons/action/icon18-disabled.png'),

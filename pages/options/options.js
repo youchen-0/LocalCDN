@@ -303,7 +303,7 @@ options._openRuleSet = function({target}) {
         }
     }
     textArea.value = content.replace(/\n+$/, "");
-}
+};
 
 options._copyRuleSet = function() {
     let textArea = document.getElementById("generated-rules");
@@ -312,35 +312,35 @@ options._copyRuleSet = function() {
     }, function() {
         alert("Rule set cannot be copied!");
     });
-}
+};
 
 options._onClickHTMLFilterWarning = function() {
     chrome.tabs.create({
         'url': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
         'active': true
     });
-}
+};
 
 options._onClickWelcomePage = function() {
     chrome.tabs.create({
         'url': chrome.extension.getURL('pages/welcome/welcome.html'),
         'active': true
     });
-}
+};
 
 options._onClickDonate = function() {
     chrome.tabs.create({
         'url': chrome.extension.getURL('pages/donate/donate.html'),
         'active': true
     });
-}
+};
 
 options._onClickChangelog = function() {
     chrome.tabs.create({
         'url': chrome.extension.getURL('pages/updates/updates.html'),
         'active': true
     });
-}
+};
 
 /**
  * Initializations
