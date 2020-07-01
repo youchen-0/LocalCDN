@@ -20,6 +20,7 @@ header {
     display: flex;
     position: relative;
     padding: 8px 15px 8px 4px;
+    justify-content: space-between;
 }
 
 .panel {
@@ -87,7 +88,8 @@ footer {
     font-size: 14px;
     font-weight: 600;
     padding-left: 0;
-    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .subheading {
@@ -148,7 +150,7 @@ footer {
 #get-more-injections-btn, #label-donate {
     cursor: pointer;
     background-color: #f0f0f0;
-    color: #737373;
+    color: #555;
     font-weight: 600;
     margin: 0px 5px;
 }
@@ -235,6 +237,10 @@ footer {
     background-image: url("../../icons/settings-dark.svg");
 }
 
+#options-button:hover {
+    filter: contrast(.5);
+}
+
 #donate-button-svg {
     background-image: url("../../icons/donate.svg");
 }
@@ -300,6 +306,14 @@ input:checked + .slider:before {
     cursor: not-allowed;
 }
 
+.slider:hover {
+    background-color: #7e0000;
+}
+
+input:checked + .slider:hover {
+    background-color: #4b806a;
+}
+
 #info-button-svg {
     background-image: url("../../icons/info-dark.svg");
     background-repeat: no-repeat;
@@ -345,6 +359,7 @@ input:checked + .slider:before {
 .label-version {
     color: #6aac91;
     font-size: 9px;
+    margin: 0px 0px 5px 2px;
 }
 
 .label-domain {
