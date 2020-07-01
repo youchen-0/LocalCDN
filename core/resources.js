@@ -541,6 +541,15 @@ var resources = {
         'path': 'resources/simplemde/{version}/simplemde.min.css',
         'type': 'text/css'
     },
+    // slick-carousel/slick.js
+    'slickCarouselJS': {
+        'path': 'resources/slick-carousel/{version}/slick.min.jsm',
+        'type': 'application/javascript'
+    },
+    'slickCarouselCSS': {
+        'path': 'resources/slick-carousel/{version}/slick.min.css',
+        'type': 'text/css'
+    },
     // socket.io
     'socketIO': {
         'path': 'resources/socket.io/{version}/socket.io.jsm',

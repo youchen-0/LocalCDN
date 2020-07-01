@@ -469,6 +469,8 @@ helpers.setLastVersion = function (type, version) {
         return  '0.5.1';
     } else if (type.includes('/simplemde/')) {
         return  '1.11.2';
+    } else if (type.includes('/slick-carousel/1.')) {
+        return  '1.9.0';
     } else if (type.includes('/socket.io/2.')) {
         return  '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
@@ -530,6 +532,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'slick.min.jsm': 'slick (JS)',
+    'slick.min.css': 'slick (CSS)',
     'google-material-design-icons.css': 'Google Material Icons',
     'Chart.bundle.min.jsm': 'Chart.js (JS)',
     'Chart.min.css': 'Chart.js (CSS)',
