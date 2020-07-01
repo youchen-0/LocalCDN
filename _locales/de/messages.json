@@ -128,7 +128,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Aktiviere diese Option, um den HTML-Filter immer anzuwenden. Mit der obigen Liste kannst du Domains ausschließen. Trenne mehrere Einträge durch Semikolons (;).",
+        "message": "Gib die Domains an, die vom HTML-Filter behandelt oder ignoriert werden sollen. Trenne mehrere Einträge durch Semikolons (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
