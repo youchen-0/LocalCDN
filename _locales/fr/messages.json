@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Ouvrez la \"Console du Navigateur\" ( CTRL + ALT + J ) pour affichier les ressources manquantes.",
+        "message": "Ouvrez la « Console du navigateur » ( CTRL + ALT + J ) pour afficher les ressources manquantes.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
