@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Schützt vor Tracking durch \"gratis\", zentralisiertes Abliefern von Content.",
+        "message": "Schützt vor Tracking durch „gratis“, zentralisiertes Abliefern von Content.",
         "description": "Extension description."
     },
     "amountInjectedTitle": {
@@ -32,7 +32,7 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "\"Link Prefetching\" deaktivieren",
+        "message": "Link-Vorabruf deaktivieren",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
@@ -68,7 +68,7 @@
         "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
     },
     "lastUpdate": {
-        "message": "Letztes Update:",
+        "message": "Letzte Aktualisierung:",
         "description": "Last update:"
     },
     "copyRuleSet": {
@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Öffne die \"Browser-Konsole\" ( STRG + UMSCHALT + J ), um fehlende Ressourcen anzuzeigen.",
+        "message": "Öffne die „Browser-Konsole“ ( STRG + UMSCHALT + J ), um fehlende Ressourcen anzuzeigen.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -128,7 +128,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Aktiviere diese Option, um den HTML-Filter immer anzuwenden. Mit der obigen Liste kannst du Domains ausschließen. Trenne mehrere Einträge durch Semikolons (;).",
+        "message": "Gib die Domains an, die vom HTML-Filter behandelt oder ignoriert werden sollen. Trenne mehrere Einträge durch Semikolons (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
