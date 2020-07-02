@@ -252,6 +252,8 @@ var mappings = {
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
             'lodash.js/{version}/lodash.': resources.lodashJS,
+            'materialize/{version}/css/materialize.': resources.materializeCSS,
+            'materialize/{version}/js/materialize.': resources.materializeJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
             'mdbootstrap/{version}/css/mdb.': resources.mdbootstrapCSS,
             'modernizr/{version}/modernizr.': resources.modernizr,

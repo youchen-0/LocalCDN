@@ -432,6 +432,10 @@ helpers.setLastVersion = function (type, version) {
         return  '1.14.0';
     } else if (type.includes('/mdbootstrap/4.')) {
         return  '4.18.0';
+    } else if (type.includes('/materialize/1.')) {
+        return  '1.0.0';
+    } else if (type.includes('/materialize/0.')) {
+        return  '0.100.2';
     } else if (type.includes('/modernizr/2.')) {
         return  '2.8.3';
     } else if (type.includes('/moment.js/2.')) {
@@ -532,6 +536,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'materialize.min.jsm': 'Materialize (JS)',
+    'materialize.min.css': 'Materialize (CSS)',
     'slick.min.jsm': 'slick (JS)',
     'slick.min.css': 'slick (CSS)',
     'google-material-design-icons.css': 'Google Material Icons',

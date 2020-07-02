@@ -408,6 +408,15 @@ var resources = {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',
         'type': 'application/javascript'
     },
+    // Materialize
+    'materializeCSS': {
+        'path': 'resources/materialize/{version}/css/materialize.min.css',
+        'type': 'text/css'
+    },
+    'materializeJS': {
+        'path': 'resources/materialize/{version}/js/materialize.min.jsm',
+        'type': 'application/javascript'
+    },
     // Material Design for Bootstrap
     'mdbootstrapJS': {
         'path': 'resources/mdbootstrap/{version}/js/mdb.min.jsm',
