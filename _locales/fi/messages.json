@@ -103,10 +103,6 @@
         "message": "Suodattaa HTML lähdekoodia",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "Lahjoita",
         "description": "Donate"

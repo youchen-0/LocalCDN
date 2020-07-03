@@ -137,6 +137,7 @@ body {
     text-decoration: none;
     user-select: none;
     text-align: center;
+    background: none;
 }
 
 .button:hover {
@@ -156,6 +157,7 @@ body {
 .button-warning:hover {
     background-color: #d88c00;
     border-color: #c98200;
+    color: #fff !important;
 }
 
 .button-warning:active {
@@ -263,6 +265,10 @@ body {
     padding: 3px 5px !important;
     text-transform: uppercase;
     font-style: normal;
+}
+
+#block-google-fonts {
+    padding-left: 1.8rem;
 }
 
 /**

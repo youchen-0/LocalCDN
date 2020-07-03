@@ -103,10 +103,6 @@
         "message": "Filter HTML source code",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "Show more injections",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "Donate",
         "description": "Donate"

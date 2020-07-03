@@ -103,10 +103,6 @@
         "message": "过滤 HTML 源码",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "展示更多注入",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "捐赠",
         "description": "Donate"

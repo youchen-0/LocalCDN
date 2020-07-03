@@ -103,10 +103,6 @@
         "message": "HTML kaynak kodunu filtrele",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "Daha fazla enjeksiyon göster",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "Bağış yap",
         "description": "Donate"

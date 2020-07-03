@@ -103,10 +103,6 @@
         "message": "Filtrer HTML-kildekode",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "Vis flere injeksjoner",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "Doner",
         "description": "Donate"

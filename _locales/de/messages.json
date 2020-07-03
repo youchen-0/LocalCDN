@@ -103,10 +103,6 @@
         "message": "HTML-Quelltext filtern",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "Weitere Injektionen anzeigen",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "Spenden",
         "description": "Donate"

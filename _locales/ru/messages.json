@@ -103,10 +103,6 @@
         "message": "Фильтры исходного кода HTML",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "Показать больше инъекций",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "Донат",
         "description": "Donate"

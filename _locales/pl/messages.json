@@ -103,10 +103,6 @@
         "message": "Filtruj kod źródłowy HTML",
         "description": "Filter HTML source code"
     },
-    "labelShowMoreInjections": {
-        "message": "Pokaż więcej wstrzyknięć",
-        "description": "Show more Injections"
-    },
     "labelDonate": {
         "message": "Dotacja",
         "description": "Donate"

@@ -21,11 +21,6 @@
 /**
  * Popup
  */
-
-let counterFrameworks = 0;
-let counterCDNs = 0;
-let oversized = false;
-let negateHtmlFilterList;
 var popup = {};
 
 /**
@@ -84,8 +79,7 @@ popup._renderContextualContents = function () {
         popup._renderDomainWhitelistPanel();
     }
 
-    counterCDNs = Object.keys(popup._resourceInjections).length;
-    if (counterCDNs > 0) {
+    if (Object.keys(popup._resourceInjections).length > 0) {
         popup._renderInjectionPanel(popup._resourceInjections);
     }
 };
@@ -120,16 +114,16 @@ popup._renderDomainWhitelistPanel = function () {
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
 
-        if ( negateHtmlFilterList && !popup._domainManipulateDOM) {
+        if ( popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = true;
             manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
-        } else if (!negateHtmlFilterList && !popup._domainManipulateDOM) {
+        } else if (!popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = false;
             manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
-        } else if ( negateHtmlFilterList &&  popup._domainManipulateDOM) {
+        } else if ( popup.negateHtmlFilterList &&  popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = false;
             manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
-        } else if (!negateHtmlFilterList &&  popup._domainManipulateDOM) {
+        } else if (!popup.negateHtmlFilterList &&  popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = true;
             manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
         }
@@ -144,7 +138,7 @@ popup._renderInjectionPanel = function (groupedInjections) {
 
     websiteContextElement = document.getElementById('website-context');
     injectionOverviewElement = popup._createInjectionOverviewElement(groupedInjections);
-
+    injectionOverviewElement.setAttribute('class', 'panel-overflow');
     websiteContextElement.append(injectionOverviewElement);
 };
 
@@ -281,7 +275,7 @@ popup._determineNegateHtmlFilterOption = function () {
 
         chrome.storage.sync.get(Setting.NEGATE_HTML_FILTER_LIST, function (items) {
 
-            negateHtmlFilterList = items.negateHtmlFilterList;
+            popup.negateHtmlFilterList = items.negateHtmlFilterList;
             resolve();
         });
     });
@@ -307,27 +301,19 @@ popup._createInjectionOverviewElement = function (groupedInjections) {
     let injectionOverviewElement = document.createElement('ul');
     injectionOverviewElement.setAttribute('class', 'list');
 
-    statisticData = groupedInjections;
-
     for (let source in groupedInjections) {
 
         let injectionGroupHeaderElement, injectionGroupElement, cdn;
 
         cdn = groupedInjections[source];
-        if (counterFrameworks < 3) {
-            injectionGroupHeaderElement = popup._createInjectionGroupHeaderElement(source, cdn);
-            injectionGroupElement = popup._createInjectionGroupElement(source, cdn);
 
-            injectionOverviewElement.appendChild(injectionGroupHeaderElement);
-            injectionOverviewElement.appendChild(injectionGroupElement);
-        } else {
-            oversized = true;
-        }
+        injectionGroupHeaderElement = popup._createInjectionGroupHeaderElement(source, cdn);
+        injectionGroupElement = popup._createInjectionGroupElement(source, cdn);
+
+        injectionOverviewElement.appendChild(injectionGroupHeaderElement);
+        injectionOverviewElement.appendChild(injectionGroupElement);
     }
 
-    if (oversized) {
-        injectionOverviewElement.append(popup._appendMoreButton());
-    }
     return injectionOverviewElement;
 };
 
@@ -368,13 +354,9 @@ popup._createInjectionGroupElement = function (source, cdn) {
 
     for (let injection of filtered) {
 
-        if(counterFrameworks < 3){
-            let injectionElement = popup._createInjectionElement(injection);
-            injectionGroupElement.appendChild(injectionElement);
-        } else {
-            oversized = true;
-        }
-        counterFrameworks++;
+        let injectionElement = popup._createInjectionElement(injection);
+        injectionGroupElement.appendChild(injectionElement);
+
     }
 
     return injectionGroupElement;
@@ -383,10 +365,6 @@ popup._createInjectionGroupElement = function (source, cdn) {
 popup._createInjectionElement = function (injection) {
 
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
-
-    if(oversized) {
-        return popup._appendMoreButton();
-    }
 
     injectionElement = document.createElement('li');
     injectionElement.setAttribute('class', 'sublist-item');
@@ -414,23 +392,6 @@ popup._createInjectionElement = function (injection) {
 
     return injectionElement;
 };
-
-popup._appendMoreButton = function() {
-
-    let lastElement = document.createElement('p');
-    let moreInjections = document.createElement('span');
-    let nameTextNode = document.createTextNode(chrome.i18n.getMessage('labelShowMoreInjections'));
-
-    moreInjections.setAttribute('id', 'get-more-injections-btn');
-
-    moreInjections.addEventListener('mouseup', function() {
-        popup._onMoreInjectionsButton();
-    }, false);
-
-    moreInjections.appendChild(nameTextNode);
-    lastElement.appendChild(moreInjections);
-    return lastElement;
-}
 
 popup._filterDuplicates = function(array, key) {
     /**
@@ -543,22 +504,6 @@ popup._close = function () {
     });
 };
 
-popup._onMoreInjectionsButton = function () {
-
-    // Store current injections in extension storage.
-    // Maybe a local statistic/diagram will be implemented later.
-    chrome.storage.sync.set({
-        [Setting.STATISTIC_DATA]: statisticData
-    });
-
-    chrome.tabs.create({
-        'url': chrome.extension.getURL('pages/statistics/statistics.html'),
-        'active': true
-    });
-
-    popup._close();
-};
-
 popup._onInfoButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
 
@@ -590,5 +535,6 @@ popup._onIncompleteTranslation = function () {
 /**
  * Initializations
  */
-let statisticData;
+popup.negateHtmlFilterList = false;
+
 document.addEventListener('DOMContentLoaded', popup._onDocumentLoaded);

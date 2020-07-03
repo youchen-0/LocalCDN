@@ -29,7 +29,15 @@ header {
 
 .subpanel {
     padding-top: 8px;
-    overflow: hidden;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.panel-overflow {
+    max-height: 300px;
+    overflow: auto;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .subpanel:last-child {
