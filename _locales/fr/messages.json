@@ -48,11 +48,11 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Exclure les domaines des inspections:",
+        "message": "Désactiver LocalCDN pour ces domaines :",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Entrez des domaines pour la liste blanche. Séparez les entrées multiples par des points-virgules (;).",
+        "message": "Saisir les domaines pour lesquels désactiver LocalCDN. Séparez les entrées multiples par des points-virgules (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Ouvrez la \"Console du Navigateur\" ( CTRL + ALT + J ) pour affichier les ressources manquantes.",
+        "message": "Ouvrez la « Console du navigateur » ( CTRL + ALT + J ) pour afficher les ressources manquantes.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -88,7 +88,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Si activé, vous ne recevrez plus d'informations à propos des dernières fonctionnalités de LocalCDN. Cela inclu les informations au sujet des règles uBlock/uMatrix.",
+        "message": "Ne pas recevoir plus d'infos sur de nouvelles fonctionnalités de LocalCDN, y compris des infos sur de nouvelles règles uBlock ou uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
@@ -100,7 +100,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtrage de code source HTML",
+        "message": "Filtrage de source HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -108,27 +108,27 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Négation du filtre HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Cette option permet de toujours appliquer le filtre HTML. Les domaines listés seront alors ignorés. Si l'option est désactivée, le filtre HTML est appliqué seulement sur les domaines listés.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Cette fonction peut casser des sites web. Veuillez vous renseigner sur la page Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Ne pas appliquer de filtre HTML à ces domaines :",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Saisir les domaines à gérer ou à ignorer par le filtre HTML. Séparer plusieurs entrées par des points-virgules (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Appliquer le filtre HTML pour ces domaines :",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {

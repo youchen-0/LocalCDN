@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Protegge dal tracciamento tramite CDN centralizzati \"liberi\".",
+        "message": "Protegge dal tracciamento tramite CDN centralizzati e «gratuiti».",
         "description": "Extension description."
     },
     "amountInjectedTitle": {
@@ -48,11 +48,11 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Escludi i domini dalle ispezioni",
+        "message": "Disattiva LocalCDN per questi domini:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Inserisci i domini nella whitelist per escluderli. Separa le voci multiple con punti e virgola (;).",
+        "message": "Inserisci i domini per disabilitarci LocalCDN. Separare più voci con punti e virgola (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Apri la Console del Browser ( CTRL + SHIFT + J ) per mostrare le risorse mancanti",
+        "message": "Apri la Console del browser ( CTRL + SHIFT + J ) per mostrare le risorse mancanti.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -88,7 +88,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Se abilitato, non riceverai alcuna informazione sulle nuove funzionalità di LocalCDN. Questo include informazioni sulle nuove regole per uBlock/uMatrix.",
+        "message": "Attiva questa opzione per non ricevere informazioni sulle nuove funzionalità di LocalCDN. Questo include informazioni sulle nuove regole di uBlock / uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
@@ -100,15 +100,15 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filtra il codice sorgente HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Dona",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inverti il filtro HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -116,11 +116,11 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Questa funzione può interrompere i siti Web. Si prega di notare le informazioni sulla pagina Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Non applicare il filtro HTML a questi domini:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
@@ -128,7 +128,7 @@
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Applica il filtro HTML per questi domini:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
