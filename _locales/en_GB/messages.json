@@ -136,7 +136,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Block all requests to \"fonts.googleapis.com\".",
+        "message": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }
