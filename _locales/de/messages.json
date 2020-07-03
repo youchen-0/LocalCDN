@@ -134,5 +134,13 @@
     "htmlFilterDomainsTitleInclude": {
         "message": "HTML-Filter für diese Domains anwenden:",
         "description": "Apply HTML filter for these domains:"
+    },
+    "blockGoogleFontsTitle": {
+        "message": "Blockiere Google Fonts",
+        "description": "Block Google Fonts"
+    },
+    "blockGoogleFontsDescription": {
+        "message": "Blockiere alle Anfragen an \"fonts.googleapis.com\".",
+        "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }

@@ -73,7 +73,8 @@ const Setting = {
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
     'STATISTIC_DATA': 'statisticData',
-    'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList'
+    'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList',
+    'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts'
 };
 
 const WebRequest = {

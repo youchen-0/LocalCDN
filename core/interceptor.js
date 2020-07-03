@@ -34,6 +34,18 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
 
+    if (requestDetails.url.startsWith('https://fonts.googleapis.com/css?family')) {
+        if(interceptor.blockGoogleFonts) {
+            return {
+                'cancel': true
+            };
+        } else {
+            return {
+                'cancel': false
+            };
+        }
+    }
+
     if (!validCandidate) {
 
         return {
@@ -119,6 +131,10 @@ interceptor._handleStorageChanged = function (changes) {
     if (Setting.BLOCK_MISSING in changes) {
         interceptor.blockMissing = changes.blockMissing.newValue;
     }
+
+    if (Setting.BLOCK_GOOGLE_FONTS in changes) {
+        interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
+    }
 };
 
 /**
@@ -131,6 +147,7 @@ interceptor.taintedDomains = {};
 interceptor.amountInjected = 0;
 interceptor.xhrTestDomain = Address.DECENTRALEYES;
 interceptor.blockMissing = false;
+interceptor.blockGoogleFonts = true;
 
 interceptor.relatedSettings = [];
 
@@ -143,6 +160,7 @@ chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
     interceptor.amountInjected = items.amountInjected || 0;
     interceptor.xhrTestDomain = items.xhrTestDomain || Address.DECENTRALEYES;
     interceptor.blockMissing = items.blockMissing || false;
+    interceptor.blockGoogleFonts = items.blockGoogleFonts || true;
 });
 
 /**

@@ -65,6 +65,7 @@ options._renderOptionsPanel = function () {
     elements.whitelistedDomains.value = domainWhitelist;
     elements.domainsManipulateDOM.value = domainHtmlFilter;
     elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
+    elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -76,6 +77,8 @@ options._renderOptionsPanel = function () {
     if (options._languageSupported === false) {
         options._renderLocaleNotice();
     }
+
+    options._displayBlockGoogleFonts(options._optionValues.blockMissing);
 
     if(elements.negateHtmlFilterList.checked === true) {
         document.getElementById('html-filter-domains-title-include').style.display = "none";
@@ -121,6 +124,7 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.whitelistedDomains.addEventListener('keyup', options._onOptionChanged);
     elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
+    elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
     let type = elements.ruleSets;
     for(let i = 0; i < type.length; i++) {
         type[i].addEventListener('change', options._openRuleSet);
@@ -172,7 +176,8 @@ options._getOptionElements = function () {
         ['ruleSets']: document.getElementsByName("rule-sets"),
         ['copyRuleSet']: document.getElementById("button-copy-rule-set"),
         [Setting.NEGATE_HTML_FILTER_LIST]: options._getOptionElement(Setting.NEGATE_HTML_FILTER_LIST),
-        [Setting.DOMAINS_MANIPULATE_DOM]: options._getOptionElement(Setting.DOMAINS_MANIPULATE_DOM)
+        [Setting.DOMAINS_MANIPULATE_DOM]: options._getOptionElement(Setting.DOMAINS_MANIPULATE_DOM),
+        [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS)
     };
 
     return optionElements;
@@ -255,8 +260,10 @@ options._onOptionChanged = function ({target}) {
 
         if (optionValue === true) {
             options._renderBlockMissingNotice();
+            options._displayBlockGoogleFonts(true);
         } else {
             options._hideBlockMissingNotice();
+            options._displayBlockGoogleFonts(false);
         }
     }
 
@@ -361,6 +368,13 @@ options._updatesDomainLists = function(changes) {
     }
 };
 
+options._displayBlockGoogleFonts = function(value) {
+    if (value === true) {
+        document.getElementById('block-google-fonts').style.display = "none";
+    } else {
+        document.getElementById('block-google-fonts').style.display = "block";
+    }
+};
 
 /**
  * Initializations

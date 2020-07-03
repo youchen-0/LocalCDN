@@ -41,7 +41,8 @@ main._initializeSettings = function () {
         [Setting.WHITELISTED_DOMAINS]: {},
         [Setting.LOGGING]: false,
         [Setting.DOMAINS_MANIPULATE_DOM]: {},
-        [Setting.NEGATE_HTML_FILTER_LIST]: false
+        [Setting.NEGATE_HTML_FILTER_LIST]: false,
+        [Setting.BLOCK_GOOGLE_FONTS]: true
     };
 
     chrome.storage.sync.get(settingDefaults, function (items) {
