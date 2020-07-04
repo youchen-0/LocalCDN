@@ -20,7 +20,7 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Mostrar el número de recursos inyectados en el icono de extensión.",
+        "message": "Mostrar el número de recursos inyectados en el icono de la extensión.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
