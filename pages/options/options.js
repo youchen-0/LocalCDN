@@ -370,9 +370,13 @@ options._updatesDomainLists = function(changes) {
 
 options._displayBlockGoogleFonts = function(value) {
     if (value === true) {
-        document.getElementById('block-google-fonts').style.display = "none";
+        document.getElementById('block-google-fonts').classList.add('bgf-slideup');
+        document.getElementById('block-missing').classList.remove('no-padding-bottom');
+        document.getElementById('block-google-fonts').classList.remove('bgf-slidedown');
     } else {
-        document.getElementById('block-google-fonts').style.display = "block";
+        document.getElementById('block-google-fonts').classList.add('bgf-slidedown');
+        document.getElementById('block-missing').classList.add('no-padding-bottom');
+        document.getElementById('block-google-fonts').classList.remove('bgf-slideup');
     }
 };
 
