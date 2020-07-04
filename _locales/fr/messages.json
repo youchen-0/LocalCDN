@@ -68,7 +68,7 @@
         "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
     },
     "lastUpdate": {
-        "message": "Dernière mise à jour:",
+        "message": "Dernière mise à jour :",
         "description": "Last update:"
     },
     "copyRuleSet": {
@@ -132,11 +132,11 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Bloquer les polices d’écritures de Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Si les requêtes de ressources manquantes sont autorisées, alors les connexions à \"fonts.googleapis.com\" ne sont pas bloquées. Activez cette option pour bloquer ces requêtes.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }
