@@ -269,24 +269,20 @@ body {
 
 #block-google-fonts {
     padding-left: 1.8rem;
-    padding-bottom: 0px;
 }
 
 .bgf-slideup, .bgf-slidedown {
-    height: 0px;
+    max-height: 0px;
     overflow-y: hidden;
-    -webkit-transition: height 0.8s ease-in-out;
-    -moz-transition: height 0.8s ease-in-out;
-    -o-transition: height 0.8s ease-in-out;
-    transition: height 0.8s ease-in-out;
+    padding-bottom: 0px;
+    -webkit-transition: max-height 0.8s ease-in-out;
+    -moz-transition: max-height 0.8s ease-in-out;
+    -o-transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-in-out;
 }
 .bgf-slidedown {
     padding-top: .5rem;
-    height: 60px;
-}
-
-.no-padding-bottom {
-    padding-bottom: 0px;
+    max-height: 100px;
 }
 
 /**
