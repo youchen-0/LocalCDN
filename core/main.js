@@ -31,7 +31,7 @@ var main = {};
 main._initializeSettings = function () {
 
     let settingDefaults = {
-        [Setting.XHR_TEST_DOMAIN]: Address.DECENTRALEYES,
+        [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
         [Setting.SHOW_ICON_BADGE]: true,
         [Setting.BLOCK_MISSING]: false,
         [Setting.DISABLE_PREFETCH]: true,

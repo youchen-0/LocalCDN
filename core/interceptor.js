@@ -130,7 +130,7 @@ interceptor._handleStorageChanged = function (changes) {
  */
 
 interceptor.amountInjected = 0;
-interceptor.xhrTestDomain = Address.DECENTRALEYES;
+interceptor.xhrTestDomain = Address.LOCALCDN;
 interceptor.blockMissing = false;
 interceptor.blockGoogleFonts = true;
 
@@ -143,7 +143,7 @@ interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
 chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
 
     interceptor.amountInjected = items.amountInjected || 0;
-    interceptor.xhrTestDomain = items.xhrTestDomain || Address.DECENTRALEYES;
+    interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
     interceptor.blockMissing = items.blockMissing || false;
     interceptor.blockGoogleFonts = items.blockGoogleFonts || true;
 });
