@@ -30,7 +30,7 @@ var interceptor = {};
 
 interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
 
-    let validCandidate, tabDomain, targetDetails, targetPath;
+    let validCandidate, targetDetails, targetPath;
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
 
@@ -51,18 +51,6 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         return {
             'cancel': false
         };
-    }
-
-    tabDomain = helpers.extractDomainFromUrl(tab.url, true);
-
-    if (tabDomain === null) {
-        tabDomain = Address.EXAMPLE;
-    }
-
-    if (interceptor.taintedDomains[tabDomain] || (/yandex\./).test(tabDomain) ||
-        (/wickedlocal\.com/).test(tabDomain)) {
-
-        return interceptor._handleMissingCandidate(requestDetails.url, true);
     }
 
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
@@ -140,9 +128,6 @@ interceptor._handleStorageChanged = function (changes) {
 /**
  * Initializations
  */
-
-// Temporary list of tainted domains.
-interceptor.taintedDomains = {};
 
 interceptor.amountInjected = 0;
 interceptor.xhrTestDomain = Address.DECENTRALEYES;
