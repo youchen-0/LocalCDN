@@ -48,7 +48,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Deaktiviere LocalCDN für diese Domains:",
+        "message": "LocalCDN für diese Domains deaktivieren:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -60,7 +60,7 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generiere Regelsätze für uBlock oder uMatrix",
+        "message": "Regelsätze für uBlock oder uMatrix generieren",
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
@@ -132,11 +132,11 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "Blockiere Google Fonts",
+        "message": "Google Fonts blockieren",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Blockiere alle Anfragen an \"fonts.googleapis.com\".",
+        "message": "Wenn das Anfordern fehlender Inhalte erlaubt ist, werden Verbindungen zu \"fonts.googleapis.com\" nicht blockiert. Aktiviere diese Option, um diese Anfragen zu blockieren.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }

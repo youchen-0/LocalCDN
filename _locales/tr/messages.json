@@ -132,11 +132,11 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Google Yazı Tiplerini Engelle",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Eksik kaynaklar için isteklere izin verilirse, \"fonts.googleapis.com\" adresiyle yapılan bağlantılar engellenmez. Bu istekleri engellemek için bu seçeneği etkinleştirin.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }
