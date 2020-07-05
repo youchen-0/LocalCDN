@@ -1,11 +1,12 @@
 /**
  * Shorthands
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2018-02-24
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-26
  *
  * @license     MPL 2.0
@@ -85,7 +86,7 @@ shorthands['sdn.geekzu.org'] = shorthands['ajax.googleapis.com'];
 // USTC Linux User Group [Mirror]
 shorthands['ajax.proxy.ustclug.org'] = shorthands['ajax.googleapis.com'];
 
-shorthands.specialFiles = function (channelHost, channelPath) {
+shorthands.specialFiles = function (channelHost, channelPath, searchString) {
     /*
         NOTE:
         jsDelivr allows to load several files in one request
@@ -108,6 +109,13 @@ shorthands.specialFiles = function (channelHost, channelPath) {
             'source': channelHost,
             'version': 'beta',
             'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+            'bundle': ''
+        };
+    } else if (channelHost + channelPath + searchString === 'fonts.googleapis.com/icon?family=Material+Icons') {
+        return {
+            'source': channelHost,
+            'version': '3.0.1',
+            'path': 'resources/google-material-design-icons/google-material-design-icons.css',
             'bundle': ''
         };
     } else {

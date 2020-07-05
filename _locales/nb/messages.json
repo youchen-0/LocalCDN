@@ -24,7 +24,7 @@
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Blokker forespørsler for manglende ressurser",
+        "message": "Blokker forespørsler etter manglende ressurser",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -32,7 +32,7 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Skru av forhåndshenting av lenker",
+        "message": "Slå av forhåndshenting av lenker",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
@@ -48,12 +48,12 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Ekskluder domener fra inspeksjoner:",
-        "description": "Whitelisted domains:"
+        "message": "Slå av LocalCDN for disse domenene:",
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Skriv inn domener for å hviteliste dem. Skill flere oppføringer med semikolon (;).",
-        "description": "Whitelisted domains description."
+        "message": "Skriv inn domener for å slå av LocalCDN der. Skill flere oppføringer med semikolon (;).",
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "Avansert",
@@ -76,39 +76,67 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Skru på logging i nettleserkonsoll",
+        "message": "Slå på logging i nettleserkonsoll",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Åpne \"Nettleserkonsollen\" og bruk (Ctrl+Shift+J) for å vise manglende ressurser.",
+        "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "Skru av versjonsnotat",
+        "message": "Slå av versjonsnotat",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Skru på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for uBlock/uMatrix.",
+        "message": "Slå på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for uBlock/uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Denne funksjonen forårsaker mange feil på nettsteder. Ikke la den stå på, med mindre du er forberedt på å manuelt hviteliste berørte domener.",
+        "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt hviteliste berørte domener.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "Skru av",
+        "message": "Slå av",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtrerer HTML-kildekode",
-        "description": "Filters HTML source code"
-    },
-    "labelShowMoreInjections": {
-        "message": "Vis flere injeksjoner",
-        "description": "Show more Injections"
+        "message": "Filtrer HTML-kildekode",
+        "description": "Filter HTML source code"
     },
     "labelDonate": {
         "message": "Doner",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "Inverter HTML-filter",
+        "description": "Invert HTML filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "Slå på dette alternativet for å alltid bruke HTML-filteret. Domenene i listen blir da ignorert. Hvis dette alternativet er slått av, blir HTML-filteret bare brukt på domener i listen.",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Vær oppmerksom på informasjonen på Wiki-siden.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "Ikke bruk HTML-filter på disse domenene:",
+        "description": "Do not apply HTML filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "Skriv inn domener som vil bli behandlet eller ignorert av HTML-filteret. Skill flere oppføringer med semikolon (;).",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "Bruk HTML-filter på disse domenene:",
+        "description": "Apply HTML filter for these domains:"
+    },
+    "blockGoogleFontsTitle": {
+        "message": "Blokker Google Fonts",
+        "description": "Block Google Fonts"
+    },
+    "blockGoogleFontsDescription": {
+        "message": "Hvis forespørsler etter manglende ressurser er tillatt, blir tilkoblinger til \"fonts.googleapis.com\" ikke blokkert. Slå på dette alternativet for å blokkere disse forespørslene.",
+        "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }

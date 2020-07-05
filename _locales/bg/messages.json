@@ -49,11 +49,11 @@
     },
     "whitelistedDomainsTitle": {
         "message": "Изключване на домейни от проверки:",
-        "description": "Whitelisted domains:"
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
         "message": "Въведете домейни, които да се добавят в белия списък. Отделете стойностите с точка и запетая.",
-        "description": "Whitelisted domains description."
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "За напреднали",
@@ -101,14 +101,42 @@
     },
     "labelManipulateDOM": {
         "message": "",
-        "description": "Filters HTML source code"
-    },
-    "labelShowMoreInjections": {
-        "message": "",
-        "description": "Show more Injections"
+        "description": "Filter HTML source code"
     },
     "labelDonate": {
         "message": "",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "",
+        "description": "Invert HTML filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "",
+        "description": "Do not apply HTML filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "",
+        "description": "Apply HTML filter for these domains:"
+    },
+    "blockGoogleFontsTitle": {
+        "message": "",
+        "description": "Block Google Fonts"
+    },
+    "blockGoogleFontsDescription": {
+        "message": "",
+        "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }

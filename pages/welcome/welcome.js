@@ -1,9 +1,11 @@
 /**
  * Welcome Page
- * Belongs to LocalCDN.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-27
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -42,7 +44,7 @@ welcome._onDonationElementClicked = function () {
 
 welcome._onDocumentLoaded = function () {
 
-    let donationElement = document.getElementById('p-donate');
+    let donationElement = document.getElementById('donate');
     donationElement.addEventListener('mouseup', welcome._onDonationElementClicked);
 
 };

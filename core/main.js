@@ -1,9 +1,14 @@
 /**
  * Entry Point
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2016-04-04
+ *
+ * @author      nobody
+ * @since       2020-02-26
+ *
  * @license     MPL-2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -26,7 +31,7 @@ var main = {};
 main._initializeSettings = function () {
 
     let settingDefaults = {
-        [Setting.XHR_TEST_DOMAIN]: Address.DECENTRALEYES,
+        [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
         [Setting.SHOW_ICON_BADGE]: true,
         [Setting.BLOCK_MISSING]: false,
         [Setting.DISABLE_PREFETCH]: true,
@@ -35,19 +40,15 @@ main._initializeSettings = function () {
         [Setting.STRIP_METADATA]: true,
         [Setting.WHITELISTED_DOMAINS]: {},
         [Setting.LOGGING]: false,
-        [Setting.DOMAINS_MANIPULATE_DOM]: {}
+        [Setting.DOMAINS_MANIPULATE_DOM]: {},
+        [Setting.NEGATE_HTML_FILTER_LIST]: false,
+        [Setting.BLOCK_GOOGLE_FONTS]: true
     };
 
     chrome.storage.sync.get(settingDefaults, function (items) {
 
         if (items === null) {
             items = settingDefaults; // Restore setting defaults.
-        }
-
-        if (items.blockMissing === true || items.enforceStaging === true) {
-            stateManager.updateEnvironment(Environment.STAGING);
-        } else {
-            stateManager.updateEnvironment(Environment.STABLE);
         }
 
         if (items.disablePrefetch !== false) {

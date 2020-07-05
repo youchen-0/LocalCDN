@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Schützt vor Tracking durch \"gratis\", zentralisiertes Abliefern von Content.",
+        "message": "Schützt vor Tracking durch „gratis“, zentralisiertes Abliefern von Content.",
         "description": "Extension description."
     },
     "amountInjectedTitle": {
@@ -32,7 +32,7 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "\"Link Prefetching\" deaktivieren",
+        "message": "Link-Vorabruf deaktivieren",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
@@ -48,19 +48,19 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Domains von Prüfung ausschließen:",
-        "description": "Whitelisted domains:"
+        "message": "LocalCDN für diese Domains deaktivieren:",
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
         "message": "Gib zu ignorierende Domains an. Trenne mehrere Einträge durch Semikolons (;).",
-        "description": "Whitelisted domains description."
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "Erweitert",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generiere Regelsätze für uBlock oder uMatrix",
+        "message": "Regelsätze für uBlock oder uMatrix generieren",
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
@@ -68,7 +68,7 @@
         "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
     },
     "lastUpdate": {
-        "message": "Letztes Update:",
+        "message": "Letzte Aktualisierung:",
         "description": "Last update:"
     },
     "copyRuleSet": {
@@ -80,7 +80,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Öffne die \"Browser-Konsole\" ( STRG + UMSCHALT + J ), um fehlende Ressourcen anzuzeigen.",
+        "message": "Öffne die „Browser-Konsole“ ( STRG + UMSCHALT + J ), um fehlende Ressourcen anzuzeigen.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -101,14 +101,42 @@
     },
     "labelManipulateDOM": {
         "message": "HTML-Quelltext filtern",
-        "description": "Filters HTML source code"
-    },
-    "labelShowMoreInjections": {
-        "message": "Weitere Injektionen anzeigen",
-        "description": "Show more Injections"
+        "description": "Filter HTML source code"
     },
     "labelDonate": {
         "message": "Spenden",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "HTML-Filter umkehren",
+        "description": "Invert HTML filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "Aktiviere diese Option, um den HTML-Filter immer anzuwenden. Die Domains in der Liste werden anschließend ignoriert. Wenn diese Option deaktiviert ist, wird der HTML-Filter nur für Domains in der Liste angewendet.",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "Diese Funktion verursacht bei manchen Websites Fehler. Beachte dazu die Hinweise auf der Wiki-Seite.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "HTML-Filter nicht für diese Domains anwenden:",
+        "description": "Do not apply HTML filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "Gib die Domains an, die vom HTML-Filter behandelt oder ignoriert werden sollen. Trenne mehrere Einträge durch Semikolons (;).",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "HTML-Filter für diese Domains anwenden:",
+        "description": "Apply HTML filter for these domains:"
+    },
+    "blockGoogleFontsTitle": {
+        "message": "Google Fonts blockieren",
+        "description": "Block Google Fonts"
+    },
+    "blockGoogleFontsDescription": {
+        "message": "Wenn das Anfordern fehlender Inhalte erlaubt ist, werden Verbindungen zu \"fonts.googleapis.com\" nicht blockiert. Aktiviere diese Option, um diese Anfragen zu blockieren.",
+        "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }

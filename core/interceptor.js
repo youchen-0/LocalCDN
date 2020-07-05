@@ -1,11 +1,12 @@
 /**
  * Interceptor
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2016-04-06
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-26
  *
  * @license     MPL 2.0
@@ -29,27 +30,27 @@ var interceptor = {};
 
 interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
 
-    let validCandidate, tabDomain, targetDetails, targetPath;
+    let validCandidate, targetDetails, targetPath;
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
+
+    if (requestDetails.url.startsWith('https://fonts.googleapis.com/css?family')) {
+        if(interceptor.blockGoogleFonts) {
+            return {
+                'cancel': true
+            };
+        } else {
+            return {
+                'cancel': false
+            };
+        }
+    }
 
     if (!validCandidate) {
 
         return {
             'cancel': false
         };
-    }
-
-    tabDomain = helpers.extractDomainFromUrl(tab.url, true);
-
-    if (tabDomain === null) {
-        tabDomain = Address.EXAMPLE;
-    }
-
-    if (interceptor.taintedDomains[tabDomain] || (/yandex\./).test(tabDomain) ||
-        (/wickedlocal\.com/).test(tabDomain)) {
-
-        return interceptor._handleMissingCandidate(requestDetails.url, true);
     }
 
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
@@ -118,18 +119,20 @@ interceptor._handleStorageChanged = function (changes) {
     if (Setting.BLOCK_MISSING in changes) {
         interceptor.blockMissing = changes.blockMissing.newValue;
     }
+
+    if (Setting.BLOCK_GOOGLE_FONTS in changes) {
+        interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
+    }
 };
 
 /**
  * Initializations
  */
 
-// Temporary list of tainted domains.
-interceptor.taintedDomains = {};
-
 interceptor.amountInjected = 0;
-interceptor.xhrTestDomain = Address.DECENTRALEYES;
+interceptor.xhrTestDomain = Address.LOCALCDN;
 interceptor.blockMissing = false;
+interceptor.blockGoogleFonts = true;
 
 interceptor.relatedSettings = [];
 
@@ -140,8 +143,9 @@ interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
 chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
 
     interceptor.amountInjected = items.amountInjected || 0;
-    interceptor.xhrTestDomain = items.xhrTestDomain || Address.DECENTRALEYES;
+    interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
     interceptor.blockMissing = items.blockMissing || false;
+    interceptor.blockGoogleFonts = items.blockGoogleFonts || true;
 });
 
 /**

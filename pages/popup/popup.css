@@ -20,6 +20,7 @@ header {
     display: flex;
     position: relative;
     padding: 8px 15px 8px 4px;
+    justify-content: space-between;
 }
 
 .panel {
@@ -28,7 +29,15 @@ header {
 
 .subpanel {
     padding-top: 8px;
-    overflow: hidden;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.panel-overflow {
+    max-height: 300px;
+    overflow: auto;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .subpanel:last-child {
@@ -87,7 +96,8 @@ footer {
     font-size: 14px;
     font-weight: 600;
     padding-left: 0;
-    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .subheading {
@@ -148,7 +158,7 @@ footer {
 #get-more-injections-btn, #label-donate {
     cursor: pointer;
     background-color: #f0f0f0;
-    color: #737373;
+    color: #555;
     font-weight: 600;
     margin: 0px 5px;
 }
@@ -235,6 +245,10 @@ footer {
     background-image: url("../../icons/settings-dark.svg");
 }
 
+#options-button:hover {
+    filter: contrast(.5);
+}
+
 #donate-button-svg {
     background-image: url("../../icons/donate.svg");
 }
@@ -300,19 +314,12 @@ input:checked + .slider:before {
     cursor: not-allowed;
 }
 
-#manipulateDOM-indicator {
-    display: inline-block;
-    cursor: pointer;
-    background-image: url("../../icons/info-dark.svg");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    padding-right: 20px;
+.slider:hover {
+    background-color: #7e0000;
 }
 
-#manipulateDOM-indicator:hover {
-    color: #777;
-    text-decoration: underline;
+input:checked + .slider:hover {
+    background-color: #4b806a;
 }
 
 #info-button-svg {
@@ -323,24 +330,6 @@ input:checked + .slider:before {
     margin-left: 5px;
 }
 
-/**
- * Links
- */
-
-.link-text {
-    color: #bdbdbd;
-    cursor: pointer;
-    float: left;
-    font-size: 13px;
-    padding-left: 4px;
-    padding-top: 5px;
-    text-decoration: none;
-}
-
-.link-text:hover {
-    color: #777;
-    text-decoration: underline;
-}
 
 /**
  * Miscellaneous
@@ -378,10 +367,11 @@ input:checked + .slider:before {
 .label-version {
     color: #6aac91;
     font-size: 9px;
+    margin: 0px 0px 5px 2px;
 }
 
 .label-domain {
-    color: #bbb;
+    color: #555;
     display: flex;
     font-style: italic;
     overflow: hidden;
@@ -528,18 +518,6 @@ input:checked + .slider:before {
     }
 
     /**
-     * Links
-     */
-
-    .link-text {
-        color: #7d7d7d;
-    }
-
-    .link-text:hover {
-        color: #dadada;
-    }
-
-    /**
      * Miscellaneous
      */
 
@@ -552,7 +530,7 @@ input:checked + .slider:before {
     }
 
     .label-domain {
-        color: #717171;
+        color: #aeaeae;
     }
 
     .panel:not(:last-child) {

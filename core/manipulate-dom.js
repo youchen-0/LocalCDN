@@ -2,7 +2,7 @@
  * Remove integrity checks from embedded CSS and JavaScript files
  * Belongs to LocalCDN.
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-27
  *
  * @license     MPL 2.0
@@ -28,15 +28,29 @@ var manipulateDOM = {};
 
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
+    if(BrowserType.CHROMIUM) {
+        // Chromium browsers do not support webRequest.filterResponseData
+        // https://bugs.chromium.org/p/chromium/issues/detail?id=487422
+        console.warn('[ LocalCDN ] browser.webRequest.filterResponseData not supported by your browser.');
+        return;
+    }
 
-    let initiatorDomain, listedToManipulateDOM;
+    let initiatorDomain, listedToManipulateDOM, negateHtmlFilter, filtering;
+
     initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
     listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, "manipulate-dom");
+    negateHtmlFilter = stateManager.getInvertOption;
+
+    if( ( negateHtmlFilter || listedToManipulateDOM ) && !( negateHtmlFilter && listedToManipulateDOM ) ) {
+        filtering = true;
+    } else {
+        filtering = false;
+    }
 
     // by Jaap (https://gitlab.com/Jaaap)
     let header = details.responseHeaders.find(h => h.name.toLowerCase() === 'content-type');
 
-    if (header && BrowserType.FIREFOX && listedToManipulateDOM) {
+    if (header && filtering) {
 
         let mimeType, isWhitelisted;
 
@@ -91,12 +105,6 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
             }
         }
         return {responseHeaders: details.responseHeaders};
-
-    } else if(BrowserType.CHROMIUM) {
-
-        // Chromium browsers do not support webRequest.filterResponseData
-        // https://bugs.chromium.org/p/chromium/issues/detail?id=487422
-        console.warn('[ LocalCDN ] browser.webRequest.filterResponseData not supported by your browser.');
 
     }
 };

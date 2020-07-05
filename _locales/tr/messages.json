@@ -48,12 +48,12 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Alanları denetimlerden hariç tut:",
-        "description": "Whitelisted domains:"
+        "message": "Bu etki alanları için LocalCDN'yi devre dışı bırak:",
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Beyaz listeye eklemek için alan adlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
-        "description": "Whitelisted domains description."
+        "message": "LocalCDN'nin devre dışı bırakılacağı etki alanlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "Gelişmiş",
@@ -100,15 +100,43 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "HTML kaynak kodunu filtreler",
-        "description": "Filters HTML source code"
-    },
-    "labelShowMoreInjections": {
-        "message": "Daha fazla enjeksiyon göster",
-        "description": "Show more Injections"
+        "message": "HTML kaynak kodunu filtrele",
+        "description": "Filter HTML source code"
     },
     "labelDonate": {
         "message": "Bağış yap",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "HTML filtresini tersine çevir",
+        "description": "Invert HTML filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "HTML filtresini her zaman uygulamak için bu seçeneği etkinleştirin. Listedeki etki alanları göz ardı edilecektir. Bu seçenek devre dışı bırakılırsa, HTML filtresi sadece listedeki etki alanlarına uygulanır.",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "Bu işlev web sitelerini bozabilir. Lütfen Wiki sayfasındaki bilgilere göz atın.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "Bu etki alanlarına HTML filtresi uygulama:",
+        "description": "Do not apply HTML filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "HTML filtresi tarafından işlenecek veya yok sayılacak etki alanlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "Bu etki alanları için HTML filtresini uygula:",
+        "description": "Apply HTML filter for these domains:"
+    },
+    "blockGoogleFontsTitle": {
+        "message": "Google Yazı Tiplerini Engelle",
+        "description": "Block Google Fonts"
+    },
+    "blockGoogleFontsDescription": {
+        "message": "Eksik kaynaklar için isteklere izin verilirse, \"fonts.googleapis.com\" adresiyle yapılan bağlantılar engellenmez. Bu istekleri engellemek için bu seçeneği etkinleştirin.",
+        "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }

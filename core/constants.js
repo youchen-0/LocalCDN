@@ -1,11 +1,12 @@
 /**
  * Global Constants
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2017-10-27
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-26
  *
  * @license     MPL 2.0
@@ -27,7 +28,7 @@ const Address = {
     'ANY_PROTOCOL': '*://',
     'CHROME': 'chrome:',
     'CHROME_EXTENSION': 'chrome-extension:',
-    'DECENTRALEYES': 'decentraleyes.org',
+    'LOCALCDN': 'localcdn.de',
     'EXAMPLE': 'example.org',
     'HTTP': 'http:',
     'HTTPS': 'https:',
@@ -71,7 +72,9 @@ const Setting = {
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
-    'STATISTIC_DATA': 'statisticData'
+    'STATISTIC_DATA': 'statisticData',
+    'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList',
+    'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts'
 };
 
 const WebRequest = {

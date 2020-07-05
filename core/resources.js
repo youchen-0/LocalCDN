@@ -1,11 +1,12 @@
 /**
  * Resources
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2014-05-30
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-26
  *
  * @license     MPL 2.0
@@ -96,6 +97,15 @@ var resources = {
     	'path': 'resources/angular-material/{version}/angular-material.min.css',
         'type': 'text/css'
     },
+    // angular-bootstrap-colorpicker
+    'angularBootstrapColorpickerJS': {
+        'path': 'resources/angular-bootstrap-colorpicker/{version}/js/bootstrap-colorpicker-module.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularBootstrapColorpickerCSS': {
+        'path': 'resources/angular-bootstrap-colorpicker/{version}/css/colorpicker.min.css',
+        'type': 'text/css'
+    },
     // AngularJS slider
     'angularJSslider': {
         'path': 'resources/angularjs-slider/{version}/rzslider.min.jsm',
@@ -104,6 +114,11 @@ var resources = {
     // AngularJS ui-select
     'angularJsUiSelect': {
         'path': 'resources/angular-ui-select/{version}/select.min.jsm',
+        'type': 'application/javascript'
+    },
+    // angular-ui-utils
+    'angularUiUtils': {
+        'path': 'resources/angular-ui-utils/{version}/angular-ui-utils.min.jsm',
         'type': 'application/javascript'
     },
     // AngularUI Bootstrap
@@ -154,6 +169,11 @@ var resources = {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
         'type': 'application/javascript'
     },
+    // BootboxJS
+    'bootbox': {
+        'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',
+        'type': 'application/javascript'
+    },
     // Bootstrap.js
     'bootstrapJS': {
         'path': 'resources/bootstrap.js/{version}/bootstrap.min.jsm',
@@ -169,13 +189,9 @@ var resources = {
         'path': 'resources/bootstrap-daterangepicker/{version}/daterangepicker.min.jsm',
         'type': 'application/javascript'
     },
-    // Bootstrap Datepicker
-    'bootstrapDatepickerCSS': {
-        'path': 'resources/bootstrap-datepicker/{version}/css/bootstrap-datepicker.standalone.min.css',
-        'type': 'text/css'
-    },
-    'bootstrapDatepickerJS': {
-        'path': 'resources/bootstrap-datepicker/{version}/js/bootstrap-datepicker.min.jsm',
+    // Bootstrap Datepicker (bundle)
+    'bootstrapDatepickerBundle': {
+        'path': 'resources/bootstrap-datepicker/{version}/',
         'type': 'application/javascript'
     },
     // Bootstrap-select
@@ -195,6 +211,20 @@ var resources = {
     'bootstrapSliderJS': {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.jsm',
         'type': 'application/javascript'
+    },
+    // Bootstrap 3 Typeahead
+    'bootstrap3Typeahead': {
+        'path': 'resources/bootstrap-3-typeahead/{version}/bootstrap3-typeahead.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Chart.js
+    'chartJs': {
+        'path': 'resources/chart.js/{version}/Chart.bundle.min.jsm',
+        'type': 'application/javascript'
+    },
+    'chartJsCSS': {
+        'path': 'resources/chart.js/{version}/Chart.min.css',
+        'type': 'text/css'
     },
     // clipboard.js
     'clipboardJS': {
@@ -219,6 +249,11 @@ var resources = {
     // Ember.js
     'ember': {
         'path': 'resources/ember.js/{version}/ember.min.jsm',
+        'type': 'application/javascript'
+    },
+    // ethJs
+    'ethJs': {
+        'path': 'resources/ethjs/{version}/ethjs.min.jsm',
         'type': 'application/javascript'
     },
     // Ext Core
@@ -264,6 +299,11 @@ var resources = {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
     },
+    // Google Material Icons
+    'googleMaterialIcons': {
+        'path': 'resources/google-material-design-icons/google-material-design-icons.css',
+        'type': 'text/css'
+    },
     // hls.js
     'hlsJS': {
         'path': 'resources/hls.js/{version}/hls.min.jsm',
@@ -304,6 +344,20 @@ var resources = {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Modal
+    'jQueryModalJS': {
+        'path': 'resources/jquery-modal/{version}/jquery.modal.min.jsm',
+        'type': 'application/javascript'
+    },
+    'jQueryModalCSS': {
+        'path': 'resources/jquery-modal/{version}/jquery.modal.min.css',
+        'type': 'text/css'
+    },
+    // jQuery Tablesorter
+    'jQueryTablesorter': {
+        'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
@@ -339,6 +393,11 @@ var resources = {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
         'type': 'application/javascript'
     },
+    // libphonenumber-js
+    'libphonenumber': {
+        'path': 'resources/libphonenumber-js/{version}/libphonenumber-js.min.jsm',
+        'type': 'application/javascript'
+    },
     // Lodash
     'lodashJS': {
         'path': 'resources/lodash.js/{version}/lodash.min.jsm',
@@ -347,6 +406,15 @@ var resources = {
     // lozad.js
     'lozad': {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Materialize
+    'materializeCSS': {
+        'path': 'resources/materialize/{version}/css/materialize.min.css',
+        'type': 'text/css'
+    },
+    'materializeJS': {
+        'path': 'resources/materialize/{version}/js/materialize.min.jsm',
         'type': 'application/javascript'
     },
     // Material Design for Bootstrap
@@ -381,6 +449,15 @@ var resources = {
     'mootoolsYui': {
         'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
         'type': 'application/javascript'
+    },
+    // NVD3
+    'nvd3JS': {
+        'path': 'resources/nvd3/{version}/nv.d3.min.jsm',
+        'type': 'application/javascript'
+    },
+    'nvd3CSS': {
+        'path': 'resources/nvd3/{version}/nv.d3.min.css',
+        'type': 'text/css'
     },
     // ocLazyLoad
     'ocLazyLoad': {
@@ -458,6 +535,29 @@ var resources = {
     'select2js': {
         'path': 'resources/select2/{version}/select2.full.min.jsm',
         'type': 'application/javascript'
+    },
+    // showdown
+    'showdown': {
+        'path': 'resources/showdown/{version}/showdown.min.jsm',
+        'type': 'application/javascript'
+    },
+    // simplemde
+    'simplemdeJS': {
+        'path': 'resources/simplemde/{version}/simplemde.min.jsm',
+        'type': 'application/javascript'
+    },
+    'simplemdeCSS': {
+        'path': 'resources/simplemde/{version}/simplemde.min.css',
+        'type': 'text/css'
+    },
+    // slick-carousel/slick.js
+    'slickCarouselJS': {
+        'path': 'resources/slick-carousel/{version}/slick.min.jsm',
+        'type': 'application/javascript'
+    },
+    'slickCarouselCSS': {
+        'path': 'resources/slick-carousel/{version}/slick.min.css',
+        'type': 'text/css'
     },
     // socket.io
     'socketIO': {

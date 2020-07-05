@@ -1,9 +1,14 @@
 /**
  * Messenger
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2018-05-28
+ *
+ * @author      nobody
+ * @since       2020-02-26
+ *
  * @license     MPL 2.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public

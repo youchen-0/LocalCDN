@@ -77,7 +77,7 @@ Suggestions in the form of **Issues**, and contributions in the form of **Merge 
 
 #### Running the Code as temporary extension
 
-Please read this [developer guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_first_WebExtension#Trying_it_out) for information on how to run the extension from source.
+Please read this [guide](https://codeberg.org/nobody/LocalCDN/wiki/Running-the-code-as-temporary-extension) to run the extension from source.
 
 > **Important:** All tagged commits are signed with GPG. It's likely best to ignore unsigned commits, unless you really know what you're doing. Please send an email if you have any questions or security concerns.
 

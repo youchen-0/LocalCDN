@@ -48,12 +48,12 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Exclude domains from inspections:",
-        "description": "Whitelisted domains:"
+        "message": "Deactivate LocalCDN for these domains:",
+        "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Enter domains to whitelist them. Separate multiple entries with semi-colons (;).",
-        "description": "Whitelisted domains description."
+        "message": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;).",
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
         "message": "Advanced",
@@ -100,15 +100,43 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filters HTML source code",
-        "description": "Filters HTML source code"
-    },
-    "labelShowMoreInjections": {
-        "message": "Show more injections",
-        "description": "Show more Injections"
+        "message": "Filter HTML source code",
+        "description": "Filter HTML source code"
     },
     "labelDonate": {
         "message": "Donate",
         "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "Invert HTML filter",
+        "description": "Invert HTML filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list.",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "This function can break websites. Please note the information on the Wiki page.",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "Do not apply HTML filter to these domains:",
+        "description": "Do not apply HTML filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;).",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "Apply HTML filter for these domains:",
+        "description": "Apply HTML filter for these domains:"
+    },
+    "blockGoogleFontsTitle": {
+        "message": "Block Google Fonts",
+        "description": "Block Google Fonts"
+    },
+    "blockGoogleFontsDescription": {
+        "message": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests.",
+        "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     }
 }

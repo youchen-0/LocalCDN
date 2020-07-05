@@ -1,11 +1,12 @@
 /**
  * Internal Helper Module
- * Belongs to Decentraleyes/LocalCDN.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2017-10-26
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-26
  *
  * @license     MPL 2.0
@@ -210,6 +211,8 @@ helpers.determineCdnName = function (domainName) {
         return 'NetDNA';
     case 'pagecdn.io':
         return 'PageCDN';
+    case 'fonts.googleapis.com':
+        return 'Google Fonts';
     default:
         return 'Unknown';
     }
@@ -217,228 +220,18 @@ helpers.determineCdnName = function (domainName) {
 
 helpers.determineResourceName = function (filename) {
 
-    switch (filename) {
-
-    case 'algoliasearch.min.jsm':
-        return 'AlgoliaSearch';
-    case 'angucomplete-alt.min.jsm':
-        return 'AngulComplete';
-    case 'rzslider.min.jsm':
-        return 'AngularJS slider';
-    case 'angular-animate.min.jsm':
-        return 'AngularJS Animate';
-    case 'angular-aria.min.jsm':
-        return 'AngularJS Aria';
-    case 'angular-cookies.min.jsm':
-        return 'AngularJS Cookies';
-    case 'angular-loader.min.jsm':
-        return 'AngularJS Loader';
-    case 'angular-message-format.min.jsm':
-        return 'AngularJS Message Format';
-    case 'angular-messages.min.jsm':
-        return 'AngularJS Messages';
-    case 'angular-parse-ext.min.jsm':
-        return 'AngularJS ParseExt';
-    case 'angular-resource.min.jsm':
-        return 'AngularJS Resource';
-    case 'angular-route.min.jsm':
-        return 'AngularJS Route';
-    case 'angular-sanitize.min.jsm':
-        return 'AngularJS Sanitize';
-    case 'angular-touch.min.jsm':
-        return 'AngularJS Touch';
-    case 'angular.min.jsm':
-        return 'AngularJS';
-    case 'autocomplete.min.jsm':
-        return 'autocomplete.js';
-    case 'toaster.min.css':
-        return 'AngularJS Toaster (CSS)';
-    case 'toaster.min.jsm':
-        return 'AngularJS Toaster (JS)';
-    case 'angular-ui-router.min.jsm':
-        return 'Angular UI Router';
-    case 'angular-payments.jsm':
-        return 'Angular Payments';
-    case 'angular-stripe-checkout.jsm':
-        return 'Angular Stripe Checkout';
-    case 'animate.min.css':
-        return 'Animate CSS';
-    case 'angular-material.min.jsm':
-        return 'AngularJS Material Design';
-    case 'angular-material.min.css':
-        return 'AngularJS Material Design';
-    case 'backbone-min.jsm':
-        return 'Backbone.js';
-    case 'bootstrap.min.css':
-        return 'Bootstrap CSS';
-    case 'bootstrap.min.css':
-        return 'Bootstrap CSS';
-    case 'bootstrap.min.jsm':
-        return 'Bootstrap JS';
-    case 'daterangepicker.min.jsm':
-        return 'Bootstrap Daterangepicker';
-    case 'bootstrap-datepicker.min.jsm':
-        return 'Bootstrap Datepicker JS';
-    case 'bootstrap-datepicker.standalone.min.css':
-        return 'Bootstrap Datepicker CSS';
-    case 'bootstrap-select.min.css':
-        return 'Bootstrap-select CSS';
-    case 'bootstrap-select.min.jsm':
-        return 'Bootstrap-select JS';
-    case 'bootstrap-slider.min.jsm':
-        return 'bootstrap-slider JS';
-    case 'bootstrap-slider.min.css':
-        return 'bootstrap-slider CSS';
-    case 'clipboard.min.jsm':
-        return 'clipboard.js';
-    case 'd3.min.jsm':
-        return 'D3.js';
-    case 'd3-legend.min.jsm':
-        return 'D3.js Legend';
-    case 'dojo.jsm':
-        return 'Dojo';
-    case 'ember.min.jsm':
-        return 'Ember.js';
-    case 'ext-core.jsm':
-        return 'Ext Core';
-    case 'jquery.fancybox.min.css':
-        return 'fancyBox (CSS)';
-    case 'jquery.fancybox-media.jsm':
-        return 'fancyBox Media (JS)';
-    case 'jquery.fancybox.min.jsm':
-        return 'fancyBox (JS)';
-    case 'flv.min.jsm':
-        return 'flv.js';
-    case 'font-awesome.min.css':
-        return 'Font Awesome';
-    case 'all.min.css':
-        return 'Font Awesome';
-    case 'all.min.js':
-        return 'Font Awesome';
-    case 'hls.min.jsm':
-        return 'hls.js';
-    case 'jquery.min.jsm':
-        return 'jQuery';
-    case 'jquery.autocomplete.min.jsm':
-        return 'jQuery Ajax AutoComplete';
-    case 'jquery-ui.min.jsm':
-        return 'jQuery UI';
-    case 'jquery-ui.min.css':
-        return 'jQuery UI Themes';
-    case 'jquery.blockUI.min.jsm':
-        return 'jQuery Block UI';
-    case 'jquery.csv.min.jsm':
-        return 'jQuery-csv';
-    case 'jquery.lazyload.min.jsm':
-        return 'jQuery Lazy Load';
-    case 'jquery-migrate.min.jsm':
-        return 'jQuery Migrate';
-    case 'jquery.validate.min.jsm':
-        return 'jQuery jeditable';
-    case 'jquery.jeditable.min.jsm':
-        return 'jQuery Validation Plugin';
-    case 'jquery.urlive.min.jsm':
-        return 'jQuery URLive';
-    case 'jquery.mobile.min.jsm':
-        return 'jQuery Mobile';
-    case 'js.cookie.min.jsm':
-        return 'JavaScript Cookie';
-    case 'lazysizes.min.jsm':
-        return 'lazysizes';
-    case 'lodash.min.jsm':
-        return 'Lodash';
-    case 'lozad.min.jsm':
-        return 'lozad.js';
-    case 'mdb.min.css':
-        return 'MDBootstrap (CSS)';
-    case 'mdb.min.jsm':
-        return 'MDBootstrap (JS)';
-    case 'modernizr.min.jsm':
-        return 'Modernizr';
-    case 'moment.min.jsm':
-        return 'Modernizr';
-    case 'mootools-yui-compressed.jsm':
-        return 'MooTools';
-    case 'ocLazyLoad.min.jsm':
-        return 'ocLazyLoad';
-    case 'p2p-media-loader-core.min.jsm':
-        return 'P2P Media Loader Core';
-    case 'page.min.jsm':
-        return 'page.js';
-    case 'plyr.min.css':
-        return 'plyr CSS';
-    case 'popper.min.jsm':
-        return 'Popper';
-    case 'prototype.jsm':
-        return 'Prototype';
-    case 'raven.min.jsm':
-        return 'Raven.js';
-    case 'react.production.min.jsm':
-        return 'React';
-    case 'react-dom.production.min.jsm':
-        return 'ReactDOM';
-    case 'rocket-loader.min.jsm':
-        return 'Rocket Loader';
-    case 'rickshaw.min.jsm':
-        return 'rickshaw JS';
-    case 'rickshaw.min.css':
-        return 'rickshaw CSS';
-    case 'scriptaculous.jsm':
-        return 'Scriptaculous';
-    case 'select.min.jsm':
-        return 'AngularJS ui-select';
-    case 'select2.min.css':
-        return 'Select2 CSS';
-    case 'select2.full.min.jsm':
-        return 'Select2 JS';
-    case 'socket.io.jsm':
-        return 'Socket.IO';
-    case 'spin.min.jsm':
-        return 'spin.js';
-    case 'store.legacy.min.jsm':
-        return 'Store.js';
-    case 'swfobject.jsm':
-        return 'SWFObject';
-    case 'swiper.min.css':
-        return 'Swiper CSS';
-    case 'swiper.min.js':
-        return 'Swiper JS';
-    case 'tether.min.jsm':
-        return 'Tether JS';
-    case 'toastr.min.css':
-        return 'toastr.js';
-    case 'toastr.min.jsm':
-        return 'toastr.js';
-    case 'ui-bootstrap-tpls.min.jsm':
-        return 'Angular UI Bootstrap';
-    case 'ui-bootstrap.min.jsm':
-        return 'Angular UI Bootstrap';
-    case 'underscore-min.jsm':
-        return 'Underscore.js';
-    case 'webfont.jsm':
-        return 'Web Font Loader';
-    case 'adapter.min.jsm':
-        return 'WebRTC adapter';
-    case 'vue.jsm':
-        return 'Vue.js';
-    case 'urlize.jsm':
-        return 'urlize';
-    case 'wow.min.jsm':
-        return 'WOW';
-    case 'jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm':
-        return 'jsDelivr combined';
-    case 'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm':
-        return 'jsDelivr combined';
-    case 'webcomponents-loader.jsm':
-        return 'WebComponents Loader JS';
-    default:
-        return 'Unknown';
+    if(filename in ListOfFiles) {
+        return ListOfFiles[filename];
     }
+    return 'Unknown';
+
 };
 
 helpers.determineBundle = function (path = '') {
     if (path.includes('findify')) {
         return 'Findify';
+    } else if (path.includes('bootstrap-datepicker')) {
+        return 'Bootstrap Datepicker';
     } else {
         return '';
     }
@@ -490,7 +283,9 @@ helpers.setLastVersion = function (type, version) {
     if (type.includes('/algoliasearch/3.')) {
         return  '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.3.13', requestVersion)) return '1.3.13'; // <= v1.3.13
+        if (helpers.compareVersion('1.2.19', requestVersion)) return '1.2.19'; // <= v1.2.19
+        else if (helpers.compareVersion('1.2.32', requestVersion)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
+        else if (helpers.compareVersion('1.3.13', requestVersion)) return '1.3.13'; // > 1.2.32 to <= 1.3.13
         else if (helpers.compareVersion('1.4.14', requestVersion)) return '1.4.14'; // > 1.3.13 to <= 1.4.14
         else if (helpers.compareVersion('1.5.11', requestVersion)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
         else if (helpers.compareVersion('1.6.10', requestVersion)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
@@ -501,17 +296,21 @@ helpers.setLastVersion = function (type, version) {
         return  '2.2.0';
     } else if (type.includes('/angularjs-toaster/0.')) {
         return  '0.4.18';
+    } else if (type.includes('/angular-bootstrap-colorpicker/3.')) {
+        return  '3.0.32';
     } else if (type.includes('/angular-payments@1.')) {
         return  '1.0.7';
     } else if (type.includes('/angular-stripe-checkout@5.')) {
         return  '5.1.0';
-    } else if (type.includes('/angular-ui-bootstrap/0.')) {
-        return  '0.14.3';
-    } else if (type.includes('/angular-ui-bootstrap/1.')) {
-        return  '1.3.3';
+    } else if (type.includes('/angular-ui-bootstrap/')) {
+        if (helpers.compareVersion('0.10.0', requestVersion)) return '0.10.0'; // <= v0.10.0
+        else if (helpers.compareVersion('0.14.0', requestVersion)) return '0.14.0'; // > 0.10.0 <= v0.14.0
+        return  '1.3.3'; // > v0.14.0
     } else if (type.includes('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', requestVersion)) return '0.4.3'; // <= 0.4.3
         else return '1.0.25'; // > 0.4.3
+    } else if (type.includes('/angular-ui-utils/0.')) {
+        return  '0.1.1';
     } else if (type.includes('/angular-ui-select/0.')) {
         return  '0.20.0';
     } else if (type.includes('/angular-sanitize/1.')) {
@@ -528,6 +327,8 @@ helpers.setLastVersion = function (type, version) {
         return  '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
         return  '1.4.0';
+    } else if (type.includes('/bootbox.js/4.')) {
+        return  '4.4.0';
     } else if (type.includes('/bootstrap.js/3.')) {
         return  '3.3.7';
     } else if (type.includes('/bootstrap.js/4.')) {
@@ -544,6 +345,12 @@ helpers.setLastVersion = function (type, version) {
         return  '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
         return  '1.13.17';
+    } else if (type.includes('/bootstrap-3-typeahead/4.')) {
+        return  '4.0.2';
+    } else if (type.includes('/Chart.js/2.')) {
+        return  '2.9.3';
+    } else if (type.includes('/clipboard.js/1.')) {
+        return  '1.7.1';
     } else if (type.includes('/clipboard.js/2.')) {
         return  '2.0.6';
     } else if (type.includes('/d3/3.')) {
@@ -558,6 +365,8 @@ helpers.setLastVersion = function (type, version) {
         return  '2.18.2';
     } else if (type.includes('/ember.js/3.')) {
         return  '3.12.3';
+    } else if (type.includes('/ethjs')) {
+        return  '0.3.4';
     } else if (type.includes('/ext-core/3.')) {
         return  '3.1.0';
     } else if (type.includes('findify')) {
@@ -603,18 +412,30 @@ helpers.setLastVersion = function (type, version) {
         return  '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
         return  '1.8.0';
+    } else if (type.includes('tablesorter/2.')) {
+        return '2.31.3';
+    } else if (type.includes('/jquery-modal/0.')) {
+        return '0.9.2';
     } else if (type.includes('/mobile/1.')) {
         return  '1.4.5';
+    } else if (type.includes('/nvd3/1.')) {
+        return  '1.8.6';
     } else if (type.includes('/js-cookie/2.')) {
         return  '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
         return  '4.1.8';
+    } else if (type.includes('/libphonenumber-js/1.')) {
+        return  '1.7.53';
     } else if (type.includes('/lodash.js/4.')) {
         return  '4.17.10';
     } else if (type.includes('lozad')) {
         return  '1.14.0';
     } else if (type.includes('/mdbootstrap/4.')) {
         return  '4.18.0';
+    } else if (type.includes('/materialize/1.')) {
+        return  '1.0.0';
+    } else if (type.includes('/materialize/0.')) {
+        return  '0.100.2';
     } else if (type.includes('/modernizr/2.')) {
         return  '2.8.3';
     } else if (type.includes('/moment.js/2.')) {
@@ -646,6 +467,14 @@ helpers.setLastVersion = function (type, version) {
         return  '1.9.0';
     } else if (type.includes('/select2/4.')) {
         return  '4.0.12';
+    } else if (type.includes('/showdown/1.')) {
+        return  '1.9.1';
+    } else if (type.includes('/showdown/0.')) {
+        return  '0.5.1';
+    } else if (type.includes('/simplemde/')) {
+        return  '1.11.2';
+    } else if (type.includes('/slick-carousel/1.')) {
+        return  '1.9.0';
     } else if (type.includes('/socket.io/2.')) {
         return  '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
@@ -704,4 +533,134 @@ helpers.compareVersion = function (v1, v2) {
         if (v1[i] < v2[i]) return false;
     }
     return v1.length == v2.length ? true: (v1.length < v2.length ? false : true);
-}
+};
+
+const ListOfFiles = {
+    'materialize.min.jsm': 'Materialize (JS)',
+    'materialize.min.css': 'Materialize (CSS)',
+    'slick.min.jsm': 'slick (JS)',
+    'slick.min.css': 'slick (CSS)',
+    'google-material-design-icons.css': 'Google Material Icons',
+    'Chart.bundle.min.jsm': 'Chart.js (JS)',
+    'Chart.min.css': 'Chart.js (CSS)',
+    'bootbox.min.jsm': 'BootboxJS',
+    'bootstrap3-typeahead.min.jsm': 'Bootstrap 3 Typeahead',
+    'libphonenumber-js.min.jsm': 'libphonenumber-js',
+    'showdown.min.jsm': 'Showdown',
+    'angular-ui-utils.min.jsm': 'Angular UI Utils',
+    'bootstrap-colorpicker-module.min.jsm': 'Angular Bootstrap Colorpicker (JS)',
+    'colorpicker.min.css': 'Angular Bootstrap Colorpicker (CSS)',
+    'ethjs.min.jsm': 'ethjs',
+    'adapter.min.jsm': 'WebRTC adapter',
+    'algoliasearch.min.jsm': 'AlgoliaSearch',
+    'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm': 'jsDelivr combined',
+    'all.min.css': 'Font Awesome (CSS)',
+    'all.min.js': 'Font Awesome (JS)',
+    'angucomplete-alt.min.jsm': 'AngulComplete',
+    'angular-animate.min.jsm': 'AngularJS Animate',
+    'angular-aria.min.jsm': 'AngularJS Aria',
+    'angular-cookies.min.jsm': 'AngularJS Cookies',
+    'angular-loader.min.jsm': 'AngularJS Loader',
+    'angular-material.min.css': 'AngularJS Material Design',
+    'angular-material.min.jsm': 'AngularJS Material Design',
+    'angular-message-format.min.jsm': 'AngularJS Message Format',
+    'angular-messages.min.jsm': 'AngularJS Messages',
+    'angular-parse-ext.min.jsm': 'AngularJS ParseExt',
+    'angular-payments.jsm': 'Angular Payments',
+    'angular-resource.min.jsm': 'AngularJS Resource',
+    'angular-route.min.jsm': 'AngularJS Route',
+    'angular-sanitize.min.jsm': 'AngularJS Sanitize',
+    'angular-stripe-checkout.jsm': 'Angular Stripe Checkout',
+    'angular-touch.min.jsm': 'AngularJS Touch',
+    'angular-ui-router.min.jsm': 'Angular UI Router',
+    'angular.min.jsm': 'Angular(JS)',
+    'animate.min.css': 'Animate (CSS)',
+    'autocomplete.min.jsm': 'autocomplete.js',
+    'backbone-min.jsm': 'Backbone.js',
+    'bootstrap-datepicker.min.jsm': 'Bootstrap Datepicker (JS)',
+    'bootstrap-datepicker.standalone.min.css': 'Bootstrap Datepicker (CSS)',
+    'bootstrap-select.min.css': 'Bootstrap-select (CSS)',
+    'bootstrap-select.min.jsm': 'Bootstrap-select (JS)',
+    'bootstrap-slider.min.css': 'bootstrap-slider (CSS)',
+    'bootstrap-slider.min.jsm': 'bootstrap-slider (JS)',
+    'bootstrap.min.css': 'Bootstrap (CSS)',
+    'bootstrap.min.jsm': 'Bootstrap (JS)',
+    'clipboard.min.jsm': 'clipboard.js',
+    'd3-legend.min.jsm': 'D3.js Legend',
+    'd3.min.jsm': 'D3.js',
+    'daterangepicker.min.jsm': 'Bootstrap Daterangepicker',
+    'dojo.jsm': 'Dojo',
+    'ember.min.jsm': 'Ember.js',
+    'ext-core.jsm': 'Ext Core',
+    'flv.min.jsm': 'flv.js',
+    'font-awesome.min.css': 'Font Awesome',
+    'hls.min.jsm': 'hls.js',
+    'jquery-migrate.min.jsm': 'jQuery Migrate',
+    'jquery-ui.min.css': 'jQuery UI Themes',
+    'jquery-ui.min.jsm': 'jQuery UI',
+    'jquery.autocomplete.min.jsm': 'jQuery Ajax AutoComplete',
+    'jquery.blockUI.min.jsm': 'jQuery Block UI',
+    'jquery.csv.min.jsm': 'jQuery-csv',
+    'jquery.fancybox-media.jsm': 'fancyBox Media (JS)',
+    'jquery.fancybox.min.css': 'fancyBox (CSS)',
+    'jquery.fancybox.min.jsm': 'fancyBox (JS)',
+    'jquery.jeditable.min.jsm': 'jQuery Validation Plugin',
+    'jquery.lazyload.min.jsm': 'jQuery Lazy Load',
+    'jquery.min.jsm': 'jQuery',
+    'jquery.mobile.min.jsm': 'jQuery Mobile',
+    'jquery.modal.min.css': 'jQuery Modal',
+    'jquery.modal.min.jsm': 'jQuery Modal',
+    'jquery.tablesorter.min.jsm': 'jQuery Tablesorter',
+    'jquery.urlive.min.jsm': 'jQuery URLive',
+    'jquery.validate.min.jsm': 'jQuery jeditable',
+    'js.cookie.min.jsm': 'JavaScript Cookie',
+    'jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm': 'jsDelivr combined',
+    'lazysizes.min.jsm': 'lazysizes',
+    'lodash.min.jsm': 'Lodash',
+    'lozad.min.jsm': 'lozad.js',
+    'mdb.min.css': 'MDBootstrap (CSS)',
+    'mdb.min.jsm': 'MDBootstrap (JS)',
+    'modernizr.min.jsm': 'Modernizr',
+    'moment.min.jsm': 'Modernizr',
+    'mootools-yui-compressed.jsm': 'MooTools',
+    'nv.d3.min.css': 'NVD3 (CSS)',
+    'nv.d3.min.jsm': 'NVD3 (JS)',
+    'ocLazyLoad.min.jsm': 'ocLazyLoad',
+    'p2p-media-loader-core.min.jsm': 'P2P Media Loader Core',
+    'page.min.jsm': 'page.js',
+    'plyr.min.css': 'plyr (CSS)',
+    'popper.min.jsm': 'Popper',
+    'prototype.jsm': 'Prototype',
+    'raven.min.jsm': 'Raven.js',
+    'react-dom.production.min.jsm': 'ReactDOM',
+    'react.production.min.jsm': 'React',
+    'rickshaw.min.css': 'rickshaw (CSS)',
+    'rickshaw.min.jsm': 'rickshaw (JS)',
+    'rocket-loader.min.jsm': 'Rocket Loader',
+    'rzslider.min.jsm': 'AngularJS slider',
+    'scriptaculous.jsm': 'Scriptaculous',
+    'select.min.jsm': 'AngularJS ui-select',
+    'select2.full.min.jsm': 'Select2 (JS)',
+    'select2.min.css': 'Select2 (CSS)',
+    'simplemde.min.css': 'simplemde (CSS)',
+    'simplemde.min.jsm': 'simplemde (JS)',
+    'socket.io.jsm': 'Socket.IO',
+    'spin.min.jsm': 'spin.js',
+    'store.legacy.min.jsm': 'Store.js',
+    'swfobject.jsm': 'SWFObject',
+    'swiper.min.css': 'Swiper (CSS)',
+    'swiper.min.js': 'Swiper (JS)',
+    'tether.min.jsm': 'Tether (JS)',
+    'toaster.min.css': 'AngularJS Toaster (CSS)',
+    'toaster.min.jsm': 'AngularJS Toaster (JS)',
+    'toastr.min.css': 'toastr.js',
+    'toastr.min.jsm': 'toastr.js',
+    'ui-bootstrap-tpls.min.jsm': 'Angular UI Bootstrap',
+    'ui-bootstrap.min.jsm': 'Angular UI Bootstrap',
+    'underscore-min.jsm': 'Underscore.js',
+    'urlize.jsm': 'urlize',
+    'vue.jsm': 'Vue.js',
+    'webcomponents-loader.jsm': 'WebComponents Loader (JS)',
+    'webfont.jsm': 'Web Font Loader',
+    'wow.min.jsm': 'WOW'
+};

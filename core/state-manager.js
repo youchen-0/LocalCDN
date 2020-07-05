@@ -1,11 +1,12 @@
 /**
  * State Manager
- * Belongs to Decentraleyes.
+ * Belongs to LocalCDN (since 2020-02-26)
+ * (Origin: Decentraleyes)
  *
  * @author      Thomas Rientjes
  * @since       2017-03-10
  *
- * @author      nobody42
+ * @author      nobody
  * @since       2020-02-26
  *
  * @license     MPL 2.0
@@ -70,47 +71,6 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
             [Setting.AMOUNT_INJECTED]: ++interceptor.amountInjected
         });
     }
-};
-
-stateManager.setEnvironment = function (environment) {
-
-    if (environment === Environment.STABLE) {
-
-        // Strike a balance between coverage and website stability.
-        files.active = files.stable;
-
-    } else if (environment === Environment.STAGING) {
-
-        // Improve coverage at the expense of website stability.
-        files.active = Object.assign({}, files.stable, files.staging);
-    }
-};
-
-stateManager.updateEnvironment = function (preferredEnvironment) {
-
-    return new Promise((resolve) => {
-
-        if (preferredEnvironment === Environment.STABLE) {
-
-            let requiredItems = [Setting.BLOCK_MISSING, Setting.ENFORCE_STAGING];
-
-            chrome.storage.sync.get(requiredItems, function (items) {
-
-                if (items.blockMissing === true || items.enforceStaging === true) {
-                    stateManager.setEnvironment(Environment.STAGING);
-                } else {
-                    stateManager.setEnvironment(Environment.STABLE);
-                }
-
-                resolve();
-            });
-
-        } else if (preferredEnvironment === Environment.STAGING) {
-
-            stateManager.setEnvironment(Environment.STAGING);
-            resolve();
-        }
-    });
 };
 
 stateManager.addDomainToWhitelist = function (domain) {
@@ -229,24 +189,6 @@ stateManager._updateTab = function (details) {
 
 stateManager._handleStorageChanged = function (changes) {
 
-    if (Setting.BLOCK_MISSING in changes) {
-
-        if (changes.blockMissing.newValue === true) {
-            stateManager.updateEnvironment(Environment.STAGING);
-        } else {
-            stateManager.updateEnvironment(Environment.STABLE);
-        }
-    }
-
-    if (Setting.ENFORCE_STAGING in changes) {
-
-        if (changes.enforceStaging.newValue === true) {
-            stateManager.updateEnvironment(Environment.STAGING);
-        } else {
-            stateManager.updateEnvironment(Environment.STABLE);
-        }
-    }
-
     if (Setting.SHOW_ICON_BADGE in changes) {
 
         stateManager.showIconBadge = changes.showIconBadge.newValue;
@@ -266,6 +208,9 @@ stateManager._handleStorageChanged = function (changes) {
         if (changes.stripMetadata.newValue !== false) {
             requestSanitizer.enable();
         }
+    }
+    if (Setting.NEGATE_HTML_FILTER_LIST in changes) {
+        stateManager.getInvertOption = changes.negateHtmlFilterList.newValue;
     }
 };
 
@@ -317,6 +262,7 @@ stateManager._setIconDisabled = function (tabIdentifier) {
 stateManager.requests = {};
 stateManager.tabs = {};
 
+stateManager.getInvertOption = false;
 stateManager.disabledIconPath = {
     '16': chrome.runtime.getURL('icons/action/icon16-disabled.png'),
     '18': chrome.runtime.getURL('icons/action/icon18-disabled.png'),
