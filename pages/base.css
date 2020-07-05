@@ -1,6 +1,5 @@
 a {
     color: #555;
-    font-weight: bold;
     background: url('../../icons/link-dark.svg') no-repeat right center;
     background-size: 10px 10px;
     padding-right: 13px;
@@ -26,13 +25,13 @@ a:hover {
     padding: 5px;
     font-size: 1.3em;
     line-height: 2;
-    background-color: #fff;
+    background-color: #f0f0f0;
     text-align: center;
 }
 
 #button-copy-rule-set:hover {
     cursor: pointer;
-    background-color: #ddd;
+    background-color: #c1c1c1;
 }
 
 #button-copy-rule-set-icon {
@@ -62,14 +61,14 @@ a:hover {
 
 .b-contain span {
     line-height: 1.54;
-    font-size: 0.9rem;
+    font-size: 12px;
     font-family: inherit;
 }
 
 .b-contain {
     display: table;
     position: relative;
-    padding-left: 1.8rem;
+    padding-left: 25px;
     cursor: pointer;
 }
 
@@ -77,34 +76,34 @@ a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 16px;
+    width: 16px;
     background: rgba(241, 245, 248, 1);
     transition: background 250ms;
     border: 1px solid rgba(184, 194, 204, 1);
-    border-radius: 0.125rem;
+    border-radius: 2px;
 }
 
 .b-contain input[type="radio"] ~ .b-input {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 16px;
+    width: 16px;
     background: rgba(241, 245, 248, 1);
     transition: background 250ms;
     border: 1px solid rgba(184, 194, 204, 1);
-    border-radius: 2.0rem;
+    border-radius: 10px;
 }
 
 .b-contain input[type="checkbox"] ~ .b-input::after {
     content: '';
     position: absolute;
     display: none;
-    left: .45rem;
-    top: .18rem;
-    width: .25rem;
-    height: .6rem;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 10px;
     border: solid rgba(255, 255, 255, 1);
     border-width: 0 2px 2px 0;
     transition: background 250ms;
@@ -115,11 +114,11 @@ a:hover {
     content: '';
     position: absolute;
     display: none;
-    left: .25rem;
-    top: .25rem;
-    width: .75rem;
-    height: .75rem;
-    border-radius: 2.0rem;
+    left: 4px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
     background: rgba(255, 255, 255, 1);
     transition: background 250ms;
 }
