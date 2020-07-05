@@ -447,7 +447,7 @@ popup._onTestingUtilityLinkClicked = function (event) {
     if (event.button === 0 || event.button === 1) {
 
         chrome.tabs.create({
-            'url': 'https://localcdn.de/test',
+            'url': 'https://www.localcdn.org/test',
             'active': (event.button === 0)
         });
     }

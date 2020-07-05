@@ -2,7 +2,7 @@
 
 [![Translate](https://hosted.weblate.org/widgets/localcdn/-/localcdn/svg-badge.svg)](https://hosted.weblate.org/projects/localcdn/localcdn/)
 
-A web browser extension (and a fork of Decentraleyes) that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://localcdn.de/test/) to find out if you are properly protected. For more information, please read the [tutorial](https://localcdn.de/tutorial) or our [Wiki pages](https://codeberg.org/nobody/LocalCDN/wiki). You can also [download](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/) the extension directly from Mozilla and just try it.
+A web browser extension (and a fork of Decentraleyes) that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://www.localcdn.org/test/) to find out if you are properly protected. For more information, please read the [tutorial](https://www.localcdn.org/tutorial) or our [Wiki pages](https://codeberg.org/nobody/LocalCDN/wiki). You can also [download](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/) the extension directly from Mozilla and just try it.
 
 
 ## Differences between LocalCDN and Decentraleyes
@@ -83,7 +83,7 @@ Please read this [guide](https://codeberg.org/nobody/LocalCDN/wiki/Running-the-c
 
 ## Contact
 
-Just open an issue with your question or write an [email](https://localcdn.de/contact/) (PGP possible!).
+Just open an issue with your question or write an [email](https://www.localcdn.org/contact/) (PGP possible!).
 
 ## Submitting Translations
 The language you want is not completely translated or you are a language talent? Please help us by translating this add-on on [Weblate](https://hosted.weblate.org/projects/localcdn/).
