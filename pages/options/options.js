@@ -370,11 +370,11 @@ options._updatesDomainLists = function(changes) {
 
 options._displayBlockGoogleFonts = function(value) {
     if (value === true) {
-        document.getElementById('block-google-fonts').classList.add('bgf-slideup');
-        document.getElementById('block-google-fonts').classList.remove('bgf-slidedown');
+        document.getElementById('block-google-fonts').classList.add('option-disabled');
+        document.getElementById('block-google-fonts-chk').disabled = true;
     } else {
-        document.getElementById('block-google-fonts').classList.add('bgf-slidedown');
-        document.getElementById('block-google-fonts').classList.remove('bgf-slideup');
+        document.getElementById('block-google-fonts').classList.remove('option-disabled');
+        document.getElementById('block-google-fonts-chk').disabled = false;
     }
 };
 

@@ -6,7 +6,7 @@ body {
     color: #555;
     cursor: default;
     font-family: 'Noto Sans', Arial, sans-serif !important;
-    font-size: 14px;
+    font-size: 0.9rem;
     margin-top: -15px;
     padding: 10px !important;
 }
@@ -91,7 +91,6 @@ body {
     align-items: center;
     display: flex;
     font-weight: 600;
-    font-size: 1rem;
 }
 
 /**
@@ -190,6 +189,7 @@ body {
     color: #777;
     font-style: italic;
     padding-left: 1.8rem;
+    font-size: 0.8rem;
 }
 
 .badge {
@@ -269,20 +269,31 @@ body {
 
 #block-google-fonts {
     padding-left: 1.8rem;
+    padding-bottom: 0px;
+    padding-top: 0.5rem;
 }
 
-.bgf-slideup, .bgf-slidedown {
-    max-height: 0px;
-    overflow-y: hidden;
-    padding-bottom: 0px;
-    -webkit-transition: max-height 0.8s ease-in-out;
-    -moz-transition: max-height 0.8s ease-in-out;
-    -o-transition: max-height 0.8s ease-in-out;
-    transition: max-height 0.8s ease-in-out;
+#block-google-fonts-desc {
+    padding-left: 0px;
 }
-.bgf-slidedown {
-    padding-top: .5rem;
-    max-height: 100px;
+
+.option-disabled > .title-option > .b-contain,
+.b-contain input[type="checkbox"]:disabled ~ .b-input {
+    cursor: default !important;
+}
+
+.option-disabled {
+    color: gray !important;
+}
+
+.option-disabled > .title-option > .b-contain > .b-input {
+    background: gray !important;
+    cursor: default;
+}
+
+.option-disabled > .title-option > .b-contain input:checked ~ .b-input {
+    background: gray !important;
+    border-color: gray !important;
 }
 
 /**
