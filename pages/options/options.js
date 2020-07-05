@@ -42,6 +42,10 @@ options._renderContents = function () {
         options._renderLocaleNotice();
     }
 
+    if(BrowserType.CHROMIUM) {
+        document.getElementById('html-filter-div').hidden = true;
+    }
+
 };
 
 options._renderOptionsPanel = function () {
