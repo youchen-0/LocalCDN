@@ -48,7 +48,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Poissulje verkkotunnukset tarkastuksilta:",
+        "message": "Poista LocalDNS käytöstä näillä verkkosivuilla:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -116,7 +116,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Tämä toiminto voi rikkoa verkkosivuja. Lisätietoja Wikisivulta.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -132,7 +132,7 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Estä Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
