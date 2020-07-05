@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="notice">
-                <div class="subtle-hint"><div class="topic-label color-purple">FAQ: What is <span data-i18n-content="labelManipulateDOM">Filter HTML source code</span>?</div>
+                <div class="subtle-hint"><div class="topic-label color-purple">FAQ: What is <span data-i18n-content="labelManipulateDOM">Filter HTML source code</span>? (Firefox only)</div>
                     <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these options.</p>
                     <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
                 </div>
@@ -28,6 +28,11 @@
                 <div class="subtle-hint"><div class="topic-label">FAQ: Some websites look strange or are not easy to use</div>
                     <p>This is caused by a policy of the same origin and is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN.</p>
                     <p>If the layout of a website is incorrect or cannot be operated, then it is usually due to this policy, even though the add-on works flawlessly. Unfortunately there is no solution for this at the moment.</p>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="subtle-hint"><div class="topic-label color-purple">FAQ: Why is there a "Block Google Fonts" option?</div>
+                    <p>LocalCDN can replace "Google Material Icons". To catch the connection, uBlock/uMatrix must allow the request. LocalCDN listens on these requests and if the query contains "Google Material Icons", the resource will be replaced. If you uncheck the "Block requests for missing content" option, non-existent resources will be allowed to pass and "Google Fonts" will be loaded, because "Google Material Icons" and "Google Fonts" use the same domain. If you don't want this, you can block "Google Fonts" on LocalCDN.</p>
                 </div>
             </div>
         </div>
