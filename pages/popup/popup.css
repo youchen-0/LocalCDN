@@ -540,4 +540,8 @@ input:checked + .slider:hover {
     .side-note {
         color: #888;
     }
+
+    .panel-overflow {
+        scrollbar-color: #747475 #484848;
+    }
 }
