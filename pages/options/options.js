@@ -93,6 +93,7 @@ options._renderOptionsPanel = function () {
     document.getElementById('link-welcome-page').addEventListener('click', options._onClickWelcomePage);
     document.getElementById('link-changelog').addEventListener('click', options._onClickChangelog);
     document.getElementById('link-donate').addEventListener('click', options._onClickDonate);
+    document.getElementById('link-faq').addEventListener('click', options._onClickFaq);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -345,6 +346,13 @@ options._onClickDonate = function() {
 options._onClickChangelog = function() {
     chrome.tabs.create({
         'url': chrome.extension.getURL('pages/updates/updates.html'),
+        'active': true
+    });
+};
+
+options._onClickFaq = function() {
+    chrome.tabs.create({
+        'url': chrome.extension.getURL('pages/help/help.html'),
         'active': true
     });
 };
