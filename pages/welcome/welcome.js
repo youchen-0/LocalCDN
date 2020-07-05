@@ -44,7 +44,7 @@ welcome._onDonationElementClicked = function () {
 
 welcome._onDocumentLoaded = function () {
 
-    let donationElement = document.getElementById('p-donate');
+    let donationElement = document.getElementById('donate');
     donationElement.addEventListener('mouseup', welcome._onDonationElementClicked);
 
 };
