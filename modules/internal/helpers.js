@@ -304,7 +304,7 @@ helpers.setLastVersion = function (type, version) {
         return  '5.1.0';
     } else if (type.includes('/angular-ui-bootstrap/')) {
         if (helpers.compareVersion('0.10.0', requestVersion)) return '0.10.0'; // <= v0.10.0
-        else if (helpers.compareVersion('0.14.0', requestVersion)) return '0.14.0'; // > 0.10.0 <= v0.14.0
+        else if (helpers.compareVersion('0.14.3', requestVersion)) return '0.14.3'; // > 0.10.0 <= v0.14.3
         return  '1.3.3'; // > v0.14.0
     } else if (type.includes('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', requestVersion)) return '0.4.3'; // <= 0.4.3
