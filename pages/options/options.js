@@ -70,6 +70,7 @@ options._renderOptionsPanel = function () {
     elements.domainsManipulateDOM.value = domainHtmlFilter;
     elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
     elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
+    elements.useMonochromeIcons.checked = options._optionValues.useMonochromeIcons;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -130,6 +131,7 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
     elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
+    elements.useMonochromeIcons.addEventListener('change', options._onOptionChanged);
     let type = elements.ruleSets;
     for(let i = 0; i < type.length; i++) {
         type[i].addEventListener('change', options._openRuleSet);
@@ -182,7 +184,8 @@ options._getOptionElements = function () {
         ['copyRuleSet']: document.getElementById("button-copy-rule-set"),
         [Setting.NEGATE_HTML_FILTER_LIST]: options._getOptionElement(Setting.NEGATE_HTML_FILTER_LIST),
         [Setting.DOMAINS_MANIPULATE_DOM]: options._getOptionElement(Setting.DOMAINS_MANIPULATE_DOM),
-        [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS)
+        [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS),
+        [Setting.USE_MONOCHROME_ICONS]: options._getOptionElement(Setting.USE_MONOCHROME_ICONS)
     };
 
     return optionElements;
@@ -288,6 +291,12 @@ options._onOptionChanged = function ({target}) {
             document.getElementById('html-filter-domains-title-include').style.display = "block";
             document.getElementById('html-filter-domains-title-exclude').style.display = "none";
         }
+    }
+
+    if (optionKey === Setting.USE_MONOCHROME_ICONS) {
+        wrappers.setIcon({
+            'path': optionValue ? IconType.Enabled.White : IconType.Enabled.Green
+        });
     }
 
     chrome.storage.sync.set({

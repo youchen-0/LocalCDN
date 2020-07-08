@@ -74,7 +74,8 @@ const Setting = {
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
     'STATISTIC_DATA': 'statisticData',
     'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList',
-    'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts'
+    'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts',
+    'USE_MONOCHROME_ICONS': 'useMonochromeIcons'
 };
 
 const WebRequest = {
@@ -98,6 +99,50 @@ const BrowserType = {
     'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension"),
     'FIREFOX': chrome.runtime.getURL("/").startsWith("moz-extension")
 };
+
+const IconType = {
+    'Enabled': {
+        'Green': {
+            '16': chrome.runtime.getURL('icons/enabled.svg'),
+            '18': chrome.runtime.getURL('icons/enabled.svg'),
+            '19': chrome.runtime.getURL('icons/enabled.svg'),
+            '32': chrome.runtime.getURL('icons/enabled.svg'),
+            '36': chrome.runtime.getURL('icons/enabled.svg'),
+            '38': chrome.runtime.getURL('icons/enabled.svg'),
+            '64': chrome.runtime.getURL('icons/enabled.svg')
+        },
+        'White': {
+            '16': chrome.runtime.getURL('icons/enabled-white.svg'),
+            '18': chrome.runtime.getURL('icons/enabled-white.svg'),
+            '19': chrome.runtime.getURL('icons/enabled-white.svg'),
+            '32': chrome.runtime.getURL('icons/enabled-white.svg'),
+            '36': chrome.runtime.getURL('icons/enabled-white.svg'),
+            '38': chrome.runtime.getURL('icons/enabled-white.svg'),
+            '64': chrome.runtime.getURL('icons/enabled-white.svg')
+        }
+    },
+    'Disabled': {
+        'Red': {
+            '16': chrome.runtime.getURL('icons/disabled.svg'),
+            '18': chrome.runtime.getURL('icons/disabled.svg'),
+            '19': chrome.runtime.getURL('icons/disabled.svg'),
+            '32': chrome.runtime.getURL('icons/disabled.svg'),
+            '36': chrome.runtime.getURL('icons/disabled.svg'),
+            '38': chrome.runtime.getURL('icons/disabled.svg'),
+            '64': chrome.runtime.getURL('icons/disabled.svg')
+        },
+        'White': {
+            '16': chrome.runtime.getURL('icons/disabled-white.svg'),
+            '18': chrome.runtime.getURL('icons/disabled-white.svg'),
+            '19': chrome.runtime.getURL('icons/disabled-white.svg'),
+            '32': chrome.runtime.getURL('icons/disabled-white.svg'),
+            '36': chrome.runtime.getURL('icons/disabled-white.svg'),
+            '38': chrome.runtime.getURL('icons/disabled-white.svg'),
+            '64': chrome.runtime.getURL('icons/disabled-white.svg')
+        }
+    }
+};
+
 
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder

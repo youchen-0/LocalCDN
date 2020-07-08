@@ -42,7 +42,8 @@ main._initializeSettings = function () {
         [Setting.LOGGING]: false,
         [Setting.DOMAINS_MANIPULATE_DOM]: {},
         [Setting.NEGATE_HTML_FILTER_LIST]: false,
-        [Setting.BLOCK_GOOGLE_FONTS]: true
+        [Setting.BLOCK_GOOGLE_FONTS]: true,
+        [Setting.USE_MONOCHROME_ICONS]: false
     };
 
     chrome.storage.sync.get(settingDefaults, function (items) {
@@ -57,6 +58,10 @@ main._initializeSettings = function () {
                 'value': false
             });
         }
+        stateManager.useMonochromeIcons = items.useMonochromeIcons;
+        wrappers.setIcon({
+            'path': stateManager.useMonochromeIcons ? IconType.Enabled.White : IconType.Enabled.Green,
+        });
 
         chrome.storage.sync.set(items);
     });
@@ -128,7 +133,6 @@ main._showReleaseNotes = function (details) {
 /**
  * Initializations
  */
-
 chrome.runtime.onInstalled.addListener(main._showReleaseNotes);
 main._initializeSettings();
 
