@@ -103,42 +103,42 @@ const BrowserType = {
 const IconType = {
     'Enabled': {
         'Green': {
-            '16': chrome.runtime.getURL('icons/enabled.svg'),
-            '18': chrome.runtime.getURL('icons/enabled.svg'),
-            '19': chrome.runtime.getURL('icons/enabled.svg'),
-            '32': chrome.runtime.getURL('icons/enabled.svg'),
-            '36': chrome.runtime.getURL('icons/enabled.svg'),
-            '38': chrome.runtime.getURL('icons/enabled.svg'),
-            '64': chrome.runtime.getURL('icons/enabled.svg')
+            '16': chrome.runtime.getURL('icons/action/icon16-default.png'),
+            '18': chrome.runtime.getURL('icons/action/icon18-default.png'),
+            '19': chrome.runtime.getURL('icons/action/icon19-default.png'),
+            '32': chrome.runtime.getURL('icons/action/icon32-default.png'),
+            '36': chrome.runtime.getURL('icons/action/icon36-default.png'),
+            '38': chrome.runtime.getURL('icons/action/icon38-default.png'),
+            '64': chrome.runtime.getURL('icons/action/icon64-default.png')
         },
         'White': {
-            '16': chrome.runtime.getURL('icons/enabled-white.svg'),
-            '18': chrome.runtime.getURL('icons/enabled-white.svg'),
-            '19': chrome.runtime.getURL('icons/enabled-white.svg'),
-            '32': chrome.runtime.getURL('icons/enabled-white.svg'),
-            '36': chrome.runtime.getURL('icons/enabled-white.svg'),
-            '38': chrome.runtime.getURL('icons/enabled-white.svg'),
-            '64': chrome.runtime.getURL('icons/enabled-white.svg')
+            '16': chrome.runtime.getURL('icons/action/mono/icon16-default.png'),
+            '18': chrome.runtime.getURL('icons/action/mono/icon18-default.png'),
+            '19': chrome.runtime.getURL('icons/action/mono/icon19-default.png'),
+            '32': chrome.runtime.getURL('icons/action/mono/icon32-default.png'),
+            '36': chrome.runtime.getURL('icons/action/mono/icon36-default.png'),
+            '38': chrome.runtime.getURL('icons/action/mono/icon38-default.png'),
+            '64': chrome.runtime.getURL('icons/action/mono/icon64-default.png')
         }
     },
     'Disabled': {
         'Red': {
-            '16': chrome.runtime.getURL('icons/disabled.svg'),
-            '18': chrome.runtime.getURL('icons/disabled.svg'),
-            '19': chrome.runtime.getURL('icons/disabled.svg'),
-            '32': chrome.runtime.getURL('icons/disabled.svg'),
-            '36': chrome.runtime.getURL('icons/disabled.svg'),
-            '38': chrome.runtime.getURL('icons/disabled.svg'),
-            '64': chrome.runtime.getURL('icons/disabled.svg')
+            '16': chrome.runtime.getURL('icons/action/icon16-disabled.png'),
+            '18': chrome.runtime.getURL('icons/action/icon18-disabled.png'),
+            '19': chrome.runtime.getURL('icons/action/icon19-disabled.png'),
+            '32': chrome.runtime.getURL('icons/action/icon32-disabled.png'),
+            '36': chrome.runtime.getURL('icons/action/icon36-disabled.png'),
+            '38': chrome.runtime.getURL('icons/action/icon38-disabled.png'),
+            '64': chrome.runtime.getURL('icons/action/icon64-disabled.png')
         },
         'White': {
-            '16': chrome.runtime.getURL('icons/disabled-white.svg'),
-            '18': chrome.runtime.getURL('icons/disabled-white.svg'),
-            '19': chrome.runtime.getURL('icons/disabled-white.svg'),
-            '32': chrome.runtime.getURL('icons/disabled-white.svg'),
-            '36': chrome.runtime.getURL('icons/disabled-white.svg'),
-            '38': chrome.runtime.getURL('icons/disabled-white.svg'),
-            '64': chrome.runtime.getURL('icons/disabled-white.svg')
+            '16': chrome.runtime.getURL('icons/action/mono/icon16-disabled.png'),
+            '18': chrome.runtime.getURL('icons/action/mono/icon18-disabled.png'),
+            '19': chrome.runtime.getURL('icons/action/mono/icon19-disabled.png'),
+            '32': chrome.runtime.getURL('icons/action/mono/icon32-disabled.png'),
+            '36': chrome.runtime.getURL('icons/action/mono/icon36-disabled.png'),
+            '38': chrome.runtime.getURL('icons/action/mono/icon38-disabled.png'),
+            '64': chrome.runtime.getURL('icons/action/mono/icon64-disabled.png')
         }
     }
 };
