@@ -43,7 +43,7 @@ main._initializeSettings = function () {
         [Setting.DOMAINS_MANIPULATE_DOM]: {},
         [Setting.NEGATE_HTML_FILTER_LIST]: false,
         [Setting.BLOCK_GOOGLE_FONTS]: true,
-        [Setting.USE_MONOCHROME_ICONS]: false
+        [Setting.SELECTED_ICON]: 'Default'
     };
 
     chrome.storage.sync.get(settingDefaults, function (items) {
@@ -58,10 +58,10 @@ main._initializeSettings = function () {
                 'value': false
             });
         }
-        stateManager.useMonochromeIcons = items.useMonochromeIcons;
+        stateManager.selectedIcon = items.selectedIcon;
         wrappers.setIcon({
-            'path': stateManager.useMonochromeIcons ? IconType.Enabled.White : IconType.Enabled.Green,
-        });
+            'path': stateManager.selectedIcon
+        }, 'Enabled');
 
         chrome.storage.sync.set(items);
     });

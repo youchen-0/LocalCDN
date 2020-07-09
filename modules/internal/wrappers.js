@@ -44,9 +44,10 @@ wrappers.setBadgeTextColor = function (details) {
     }
 };
 
-wrappers.setIcon = function (details) {
+wrappers.setIcon = function (details, type) {
 
     if (chrome.browserAction.setIcon !== undefined) {
+        details.path = IconType[details.path][type];
         chrome.browserAction.setIcon(details);
     }
 };

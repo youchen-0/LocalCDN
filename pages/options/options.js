@@ -70,7 +70,7 @@ options._renderOptionsPanel = function () {
     elements.domainsManipulateDOM.value = domainHtmlFilter;
     elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
     elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
-    elements.useMonochromeIcons.checked = options._optionValues.useMonochromeIcons;
+    elements.selectedIcon.value = options._optionValues.selectedIcon;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -131,7 +131,7 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
     elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
-    elements.useMonochromeIcons.addEventListener('change', options._onOptionChanged);
+    elements.selectedIcon.addEventListener('change', options._onOptionChanged);
     let type = elements.ruleSets;
     for(let i = 0; i < type.length; i++) {
         type[i].addEventListener('change', options._openRuleSet);
@@ -185,7 +185,7 @@ options._getOptionElements = function () {
         [Setting.NEGATE_HTML_FILTER_LIST]: options._getOptionElement(Setting.NEGATE_HTML_FILTER_LIST),
         [Setting.DOMAINS_MANIPULATE_DOM]: options._getOptionElement(Setting.DOMAINS_MANIPULATE_DOM),
         [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS),
-        [Setting.USE_MONOCHROME_ICONS]: options._getOptionElement(Setting.USE_MONOCHROME_ICONS)
+        [Setting.SELECTED_ICON]: options._getOptionElement(Setting.SELECTED_ICON)
     };
 
     return optionElements;
@@ -293,10 +293,10 @@ options._onOptionChanged = function ({target}) {
         }
     }
 
-    if (optionKey === Setting.USE_MONOCHROME_ICONS) {
+    if (optionKey === Setting.SELECTED_ICON) {
         wrappers.setIcon({
-            'path': optionValue ? IconType.Enabled.White : IconType.Enabled.Green
-        });
+            'path': optionValue
+        }, 'Enabled');
     }
 
     chrome.storage.sync.set({

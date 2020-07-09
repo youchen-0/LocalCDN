@@ -102,15 +102,18 @@
                 </div>
                 <div class="description-option" data-i18n-content="hideReleaseNotesDescription">If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.</div>
             </section>
+        </div>
+        <div class="option-group">
             <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="useMonochromeIcons" type="checkbox">
-                        <span>Use monochrome icons</span>
-                        <div class="b-input"></div>
-                    </label>
-                </div>
-                <!-- <div class="description-option" data-i18n-content="useMonochromeIconsDescription">If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.</div> -->
+                <!-- TODO: Add i18n title -->
+                <div class="title-option without-checkbox">Select extension icon style:</div>
+                <select name="selectedIcon" id="selectedIcon" data-option="selectedIcon">
+                    <option value="Default">Default</option>
+                    <option value="Light">Light</option>
+                    <option value="Monochrome">Monochrome</option>
+                </select>
+                <!-- TODO: Add i18n description -->
+                <!-- <div class="description-option" data-i18n-content="selectedIconDescription">(description)</div> -->
             </section>
         </div>
         <div class="option-group">
@@ -170,7 +173,7 @@
                 <div class="notice-message">
                     Your preferred language is not yet fully supported. Please help out by translating this add-on on Weblate.
                 </div>
-                <a class="button button-notice button-warning" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank">
+                <a class="button button-notice button-warning" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank" rel="noopener noreferrer">
                     Translate
                 </a>
             </div>

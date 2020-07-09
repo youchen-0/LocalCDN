@@ -212,8 +212,8 @@ stateManager._handleStorageChanged = function (changes) {
     if (Setting.NEGATE_HTML_FILTER_LIST in changes) {
         stateManager.getInvertOption = changes.negateHtmlFilterList.newValue;
     }
-    if (Setting.USE_MONOCHROME_ICONS in changes) {
-        stateManager.useMonochromeIcons = changes.useMonochromeIcons.newValue;
+    if (Setting.SELECTED_ICON in changes) {
+        stateManager.selectedIcon = changes.selectedIcon.newValue;
     }
 };
 
@@ -252,9 +252,9 @@ stateManager._domainIsListed = function (domain, listname) {
 stateManager._setIconDisabled = function (tabIdentifier) {
 
     wrappers.setIcon({
-        'path': stateManager.useMonochromeIcons ? IconType.Disabled.White : IconType.Disabled.Red,
+        'path': stateManager.selectedIcon,
         'tabId': tabIdentifier
-    });
+    }, 'Disabled');
 };
 
 
@@ -266,7 +266,7 @@ stateManager.requests = {};
 stateManager.tabs = {};
 stateManager.getInvertOption = false;
 stateManager.validHosts = [];
-stateManager.useMonochromeIcons = false;
+stateManager.selectedIcon = 'Default';
 
 for (let mapping in mappings) {
 
@@ -278,13 +278,16 @@ chrome.tabs.query({}, function (tabs) {
     tabs.forEach(stateManager._createTab);
 });
 
-chrome.storage.sync.get([Setting.SHOW_ICON_BADGE], function (items) {
+chrome.storage.sync.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], function (items) {
 
     if (items.showIconBadge === undefined) {
         items.showIconBadge = true;
     }
-
+    if (items.selectedIcon === undefined) {
+        stateManager.selectedIcon = 'Default';
+    }
     stateManager.showIconBadge = items.showIconBadge;
+    stateManager.selectedIcon = items.selectedIcon;
 });
 
 /**
