@@ -26,51 +26,70 @@ var updates = {};
  */
 updates._openRuleSet = function({target}) {
 
-     let urls = mappings;
-     let updateKey = target.getAttribute('data-option');
+    let urls = mappings;
+    let updateKey = target.getAttribute('data-option');
 
-     let textArea = document.getElementById("generated-rules");
-     let btnCopy = document.getElementById("button-copy-rule-set");
+    let textArea = document.getElementById("generated-rules");
+    let btnCopy = document.getElementById("button-copy-rule-set");
 
-     let content = "";
+    let content = "";
 
-     textArea.style.display = "block";
-     btnCopy.style.display = "block";
+    textArea.style.display = "block";
+    btnCopy.style.display = "block";
 
-     for (var domain in urls) {
-         if (updateKey === "uMatrix") {
-             content += "* " + domain + " script allow" + '\n';
-             content += "* " + domain + " css allow" + '\n';
-         } else if (updateKey === "uBlock") {
-             content += "* " + domain + " * noop" + '\n';
-         }
-     }
-     textArea.value = content.replace(/\n+$/, "");
- }
+    for (var domain in urls) {
+        if (updateKey === "uMatrix") {
+            content += "* " + domain + " script allow" + '\n';
+            content += "* " + domain + " css allow" + '\n';
+        } else if (updateKey === "uBlock") {
+            content += "* " + domain + " * noop" + '\n';
+        }
+    }
+    textArea.value = content.replace(/\n+$/, "");
+};
 
- updates._copyRuleSet = function() {
-     let textArea = document.getElementById("generated-rules");
-     navigator.clipboard.writeText(textArea.value).then(function() {
-         textArea.select();
-     }, function() {
-         alert("Rule set cannot be copied!");
-     });
- }
+updates._copyRuleSet = function() {
 
- updates._onDocumentLoaded = function () {
+    let textArea = document.getElementById("generated-rules");
+    navigator.clipboard.writeText(textArea.value).then(function() {
+        textArea.select();
+    }, function() {
+        alert("Rule set cannot be copied!");
+    });
+};
 
-     document.getElementById('generate-ublock-rules').checked = false;
-     document.getElementById('generate-umatrix-rules').checked = false;
+updates._openHistoryReleaseNotes = function() {
 
-     let updateElements = {
-         ['ruleSets']: document.getElementsByName("rule-sets"),
-         ['copyRuleSet']: document.getElementById("button-copy-rule-set")
-     };
+    let container = document.getElementById('history-release-notes');
+    let toggle = document.getElementById('history-indicator');
 
-     for(let i = 0; i < updateElements.ruleSets.length; i++) {
-         updateElements.ruleSets[i].addEventListener('change', updates._openRuleSet);
-     }
-     updateElements.copyRuleSet.addEventListener('click', updates._copyRuleSet);
- };
+    if (container.style.display === 'none') {
+        container.style.display = 'block';
+        toggle.textContent = '–';
+    } else {
+        container.style.display = 'none';
+        toggle.textContent = '+';
+    }
+};
+
+updates._onDocumentLoaded = function () {
+
+    document.getElementById('generate-ublock-rules').checked = false;
+    document.getElementById('generate-umatrix-rules').checked = false;
+
+    let updateElements = {
+        ['ruleSets']: document.getElementsByName("rule-sets"),
+        ['copyRuleSet']: document.getElementById("button-copy-rule-set")
+    };
+
+    for(let i = 0; i < updateElements.ruleSets.length; i++) {
+        updateElements.ruleSets[i].addEventListener('change', updates._openRuleSet);
+    }
+
+    updateElements.copyRuleSet.addEventListener('click', updates._copyRuleSet);
+
+    document.getElementById('history').addEventListener('click', updates._openHistoryReleaseNotes);
+};
+
 
 document.addEventListener('DOMContentLoaded', updates._onDocumentLoaded);

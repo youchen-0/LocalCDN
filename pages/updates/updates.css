@@ -37,3 +37,13 @@ input[type=radio], label {
     display: inline-flex;
     width: 100%;
 }
+
+#history {
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#history-release-notes {
+
+}
