@@ -503,6 +503,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.9.1';
     } else if (type.includes('/urlive/1.')) {
         return  '1.1.1';
+    } else if (type.includes('/vanilla-lazyload')) {
+        return  '17.1.0';
     } else if (type.includes('/vue/1.')) {
         return  '1.0.28';
     } else if (type.includes('/vue/2.')) {
@@ -539,6 +541,7 @@ helpers.compareVersion = function (v1, v2) {
 
 const ListOfFiles = {
     'jets.min.jsm': 'Jets.js',
+    'lazyload.min.jsm': 'Vanilla Lazyload',
     'materialize.min.jsm': 'Materialize (JS)',
     'materialize.min.css': 'Materialize (CSS)',
     'slick.min.jsm': 'slick (JS)',

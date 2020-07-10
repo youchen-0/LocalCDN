@@ -368,6 +368,7 @@ var mappings = {
             'underscore@{version}/underscore.': resources.underscore,
             'underscore@{version}/underscore-min.': resources.underscore,
             'urlize.js/urlize.js': resources.urlize,
+            'vanilla-lazyload@{version}/dist/lazyload.': resources.vanillaLazyload,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfont
         },
