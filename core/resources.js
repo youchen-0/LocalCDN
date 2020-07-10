@@ -314,6 +314,11 @@ var resources = {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
         'type': 'application/javascript'
     },
+    // Jets.js
+    'jetsJS': {
+        'path': 'resources/jets/{version}/jets.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Ajax AutoComplete
     'jQueryAjaxAutoComplete': {
         'path': 'resources/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.jsm',

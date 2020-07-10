@@ -383,6 +383,8 @@ helpers.setLastVersion = function (type, version) {
         return  '5.13.1';
     } else if (type.includes('/hls.js/')) {
         return  '0.13.2';
+    } else if (type.includes('/jets/0.')) {
+        return  '0.14.1';
     } else if (type.includes('/jquery/1.')) {
         if (helpers.compareVersion('1.7.1', requestVersion)) return '1.7.1'; // <= v1.7.1
         else if (helpers.compareVersion('1.8.3', requestVersion)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
@@ -536,6 +538,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jets.min.jsm': 'Jets.js',
     'materialize.min.jsm': 'Materialize (JS)',
     'materialize.min.css': 'Materialize (CSS)',
     'slick.min.jsm': 'slick (JS)',
