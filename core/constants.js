@@ -160,6 +160,26 @@ const IconType = {
             '38': chrome.runtime.getURL('icons/action/mono/icon38-disabled.png'),
             '64': chrome.runtime.getURL('icons/action/mono/icon64-disabled.png')
         }
+    },
+    'Shield': {
+        'Enabled': {
+            '16': chrome.runtime.getURL('icons/action/shield/icon16-default.png'),
+            '18': chrome.runtime.getURL('icons/action/shield/icon18-default.png'),
+            '19': chrome.runtime.getURL('icons/action/shield/icon19-default.png'),
+            '32': chrome.runtime.getURL('icons/action/shield/icon32-default.png'),
+            '36': chrome.runtime.getURL('icons/action/shield/icon36-default.png'),
+            '38': chrome.runtime.getURL('icons/action/shield/icon38-default.png'),
+            '64': chrome.runtime.getURL('icons/action/shield/icon64-default.png')
+        },
+        'Disabled': {
+            '16': chrome.runtime.getURL('icons/action/shield/icon16-disabled.png'),
+            '18': chrome.runtime.getURL('icons/action/shield/icon18-disabled.png'),
+            '19': chrome.runtime.getURL('icons/action/shield/icon19-disabled.png'),
+            '32': chrome.runtime.getURL('icons/action/shield/icon32-disabled.png'),
+            '36': chrome.runtime.getURL('icons/action/shield/icon36-disabled.png'),
+            '38': chrome.runtime.getURL('icons/action/shield/icon38-disabled.png'),
+            '64': chrome.runtime.getURL('icons/action/shield/icon64-disabled.png')
+        }
     }
 };
 
