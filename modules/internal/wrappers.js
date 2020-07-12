@@ -46,8 +46,10 @@ wrappers.setBadgeTextColor = function (details) {
 
 wrappers.setIcon = function (details, type) {
 
-    if (chrome.browserAction.setIcon !== undefined) {
+    if (chrome.browserAction.setIcon) {
         details.path = IconType[details.path][type];
-        chrome.browserAction.setIcon(details);
+    } else {
+        details.path = IconType['Default'][type];
     }
+    chrome.browserAction.setIcon(details);
 };
