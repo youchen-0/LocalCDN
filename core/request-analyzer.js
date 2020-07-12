@@ -30,7 +30,7 @@ var requestAnalyzer = {};
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 
-    let initiatorDomain, isWhitelisted, fontawesome;
+    let initiatorDomain, isWhitelisted;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 
@@ -45,10 +45,15 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     }
 
     // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
-    fontawesome = new RegExp('\(font-awesome|fontawesome)');
-    if(BrowserType.CHROMIUM && fontawesome.test(requestDetails.url)) {
-        console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
-        return false;
+    if (BrowserType.CHROMIUM){
+        if (/(font-awesome|fontawesome)/.test(requestDetails.url)) {
+            console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
+            return false;
+        } else if (requestDetails.url === 'https://fonts.googleapis.com/icon?family=Material+Icons') {
+            // also valid for Google Material icons
+            console.warn('[ LocalCDN ] Google Material Icons are not fully supported by your browser.');
+            return false;
+        }
     }
 
     // Only requests of type GET can be valid candidates.
