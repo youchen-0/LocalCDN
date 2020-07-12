@@ -3,10 +3,6 @@
         "message": "Lhe protege de rastreamento feito usando centrais de disponibilização de conteúdo \"gratuitas\".",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Contador de recursos injetados localmente",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Total de injeções locais de recursos de Redes de Distribuição de Conteúdo desde a instalação.",
         "description": "Amount injected description."

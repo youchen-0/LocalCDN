@@ -3,10 +3,6 @@
         "message": "Protects you against tracking through \"free\", centralised, content delivery.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Counter for locally injected resources",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Amount of local Content Delivery Network resource injections since installation.",
         "description": "Amount injected description."

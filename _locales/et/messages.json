@@ -3,10 +3,6 @@
         "message": "Kaitseb sind \"tasuta\", tsentraliseeritud sisu edastamisest tuleneva jälitamise vastu.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Kohalikult sisestatud ressursside loendur",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Kohalike sisuedastusvõrkude ressursisisestuste arv alates installimisest.",
         "description": "Amount injected description."

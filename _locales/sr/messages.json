@@ -3,10 +3,6 @@
         "message": "Штити вас од праћења преко „бесплатних“, централизованих достава садржаја.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Бројач локално убризганих ресурса",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Број локално убризганих ресурса са мрежа за доставу садржаја од инсталације.",
         "description": "Amount injected description."

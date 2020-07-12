@@ -3,10 +3,6 @@
         "message": "Beschermt tegen tracking via het \"gratis\", gecentraliseerd, verzorgen van content.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Teller voor lokaal geïnjecteerde bestanden",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Aantal lokale Content Delivery Network-bestandsinjecties sinds installatie.",
         "description": "Amount injected description."

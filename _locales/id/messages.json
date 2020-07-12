@@ -3,10 +3,6 @@
         "message": "Melindungi Anda dari pelacakan distribusi konten \"gratis\" dan terpusat.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Jumlah sumber daya lokal yang disematkan",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Jumlah penyematan sumber daya Jaringan Distribusi Konten lokal sejak pemasangan.",
         "description": "Amount injected description."

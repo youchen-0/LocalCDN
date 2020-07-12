@@ -3,10 +3,6 @@
         "message": "Protège du pistage lié aux diffuseurs de contenus « gratuits », centralisés.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Compteur de ressources injectées localement",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Quantité de ressources CDN injectées localement depuis l'installation.",
         "description": "Amount injected description."

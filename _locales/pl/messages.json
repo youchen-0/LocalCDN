@@ -3,10 +3,6 @@
         "message": "Chroni przed śledzeniem przez ośrodki CDN.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Licznik zasobów podanych lokalnie",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Liczba wstrzyknięć z lokalnego Content Delivery Network od czasu instalacji.",
         "description": "Amount injected description."

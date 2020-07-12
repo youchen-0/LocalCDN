@@ -3,10 +3,6 @@
         "message": "Véd attól, hogy az „ingyenes”, centralizált tartalomszolgáltatók kövessenek.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Helyből beszúrt erőforrások számlálója",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Telepítés óta beszúrt helyi Content Delivery Network erőforrások száma.",
         "description": "Amount injected description."

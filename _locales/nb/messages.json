@@ -3,10 +3,6 @@
         "message": "Beskytter mot sporing gjennom \"gratis\", sentralisert innholdslevering (CDN).",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Teller for lokalt injiserte ressurser",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Antall lokale injeksjoner av CDN-ressurser siden installering.",
         "description": "Amount injected description."

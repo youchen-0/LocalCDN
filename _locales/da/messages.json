@@ -3,10 +3,6 @@
         "message": "Beskytter dig imod sporing af \"gratis\", centraliserede indholdsleverandører.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Optælling af lokalt leverede ressourcer",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Antal injektioner af lokale ressourcer siden installation.",
         "description": "Amount injected description."

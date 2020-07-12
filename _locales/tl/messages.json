@@ -3,10 +3,6 @@
         "message": "Para protektahan ka laban sa pagsubaybay sa pamamagitan ng \"libre\", sentralisadong, paghahatid ng nilalaman.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Laban para sa mga lokal na iniksiyong mga mapagkukunan",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Ang halaga ng mga lokal na Nilalaman sa Network ng Paghahatid ng pinagmulan sa pag-install mula noong pag-install.",
         "description": "Amount injected description."

@@ -3,10 +3,6 @@
         "message": "Protege contra el rastreo con la entrega centralizada y «gratuita» de contenido.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Contador de recursos inyectados localmente",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Cantidad de recursos inyectados de Redes de Entrega de Contenido desde instalación.",
         "description": "Amount injected description."

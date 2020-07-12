@@ -3,10 +3,6 @@
         "message": "Chrání před sledováním skrze centrálně doručovaný obsah.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Počítadlo vložených lokálních zdrojů",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Počet lokální uložených zdrojů vložených od instalace.",
         "description": "Amount injected description."

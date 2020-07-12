@@ -3,10 +3,6 @@
         "message": "Skyddar dig mot att spåras av \"gratis\" centraliserad innehållsleverans.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Räknare för lokalt insatta resurser",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Antal insatta innehållsleveransnätverksresurser sedan installation.",
         "description": "Amount injected description."

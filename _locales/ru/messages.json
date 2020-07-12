@@ -3,10 +3,6 @@
         "message": "Защищает Вас от отслеживания через «бесплатные», централизованные CDN.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Счётчик файлов «доставленных» локально",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Количество локально «доставленных» файлов с момента установки.",
         "description": "Amount injected description."

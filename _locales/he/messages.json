@@ -3,10 +3,6 @@
         "message": "מגן עליך מפני מעקב המבוצע דרך רשתות אספקת תוכן ריכוזיות ו\"חינמיות\".",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "מונה משאבים מקומיים שהוזרקו",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "כמות תוכן מקומי שהוזרק במקום רשתות אספקת תוכן מאז התקנת התוכנה.",
         "description": "Amount injected description."

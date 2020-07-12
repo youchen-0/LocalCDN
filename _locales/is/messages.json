@@ -3,10 +3,6 @@
         "message": "Verndar þig gegn eftirliti frá \"ókeypis\" miðlægum efnisveitum.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Fjöldi staðvært inspýttra tilfanga",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Fjöldi tilfanga frá miðlægum efnisveitum sem skipt hefur verið út síðan viðbótin var sett upp.",
         "description": "Amount injected description."

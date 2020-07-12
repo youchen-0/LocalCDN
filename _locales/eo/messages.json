@@ -3,10 +3,6 @@
         "message": "Decentraleyes protektas vin kontraŭ sekvado per senkostaj, centraj enhav-proviz-retoj.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Nombro de loke enmetitaj rimedoj",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Kvanto de lokaj CDN-risurcoj enmetitaj ekde instaliĝo.",
         "description": "Amount injected description."

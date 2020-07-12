@@ -3,10 +3,6 @@
         "message": "Suojaa sinua \"ilmaisten\" keskitettyjen sisällön jakeluverkkojen jäljitykseltä.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Korvatut pyynnöt",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Korvatut sisältöpyynnöt lisäosan asennuksen jälkeen.",
         "description": "Amount injected description."

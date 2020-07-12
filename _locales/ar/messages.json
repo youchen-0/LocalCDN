@@ -3,10 +3,6 @@
         "message": "يحميك من التتبع المرتبط بالوصول للمحتوى \"مجاني\"، مركزية.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "عداد محلي للموارد المحقونة",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "إجمالي موارد الـ CDN اللتي تم حقنها محليا منذ التثبيت.",
         "description": "Amount injected description."

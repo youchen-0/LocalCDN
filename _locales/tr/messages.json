@@ -3,10 +3,6 @@
         "message": "Sizi içerik dağıtımıyla yapılan merkezi ve \"ücretsiz\" takipten korur.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Yerel olarak eklenen kaynaklar için sayaç",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Kurulumdan bu yana yerel İçerik Dağıtım Ağı kaynak eklemelerinin miktarı.",
         "description": "Amount injected description."

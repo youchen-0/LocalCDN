@@ -3,10 +3,6 @@
         "message": "Schützt vor Tracking durch „gratis“, zentralisiertes Abliefern von Content.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Zähler für lokal injizierte Ressourcen",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Anzahl der lokalen Injektionen von CDN-Ressourcen seit der Installation.",
         "description": "Amount injected description."
