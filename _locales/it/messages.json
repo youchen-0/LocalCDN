@@ -3,10 +3,6 @@
         "message": "Protegge dal tracciamento tramite CDN centralizzati e «gratuiti».",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Contatore per risorse iniettate localmente",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Quantità di iniezioni di risorse dalla CDN locale sin dall'installazione.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

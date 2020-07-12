@@ -3,10 +3,6 @@
         "message": "Melindungi Anda dari pelacakan distribusi konten \"gratis\" dan terpusat.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Jumlah sumber daya lokal yang disematkan",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Jumlah penyematan sumber daya Jaringan Distribusi Konten lokal sejak pemasangan.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

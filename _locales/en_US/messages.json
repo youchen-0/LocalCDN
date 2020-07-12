@@ -3,10 +3,6 @@
         "message": "Protects you against tracking through \"free\", centralized, content delivery.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Counter for locally injected resources",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Amount of local Content Delivery Network resource injections since installation.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "Choose an icon for this extension",
+        "description": "Choose an icon for this extension"
     }
 }

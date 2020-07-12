@@ -3,10 +3,6 @@
         "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "由本機提供的資源計數器",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "安裝以來，由本機檔案所取代的 CDN 資源數量。",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

@@ -3,10 +3,6 @@
         "message": "Sizi içerik dağıtımıyla yapılan merkezi ve \"ücretsiz\" takipten korur.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Yerel olarak eklenen kaynaklar için sayaç",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Kurulumdan bu yana yerel İçerik Dağıtım Ağı kaynak eklemelerinin miktarı.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "Eksik kaynaklar için isteklere izin verilirse, \"fonts.googleapis.com\" adresiyle yapılan bağlantılar engellenmez. Bu istekleri engellemek için bu seçeneği etkinleştirin.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

@@ -3,10 +3,6 @@
         "message": "Véd attól, hogy az „ingyenes”, centralizált tartalomszolgáltatók kövessenek.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Helyből beszúrt erőforrások számlálója",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Telepítés óta beszúrt helyi Content Delivery Network erőforrások száma.",
         "description": "Amount injected description."
@@ -64,59 +60,59 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "Ha esetleg uBlockot vagy uMatrixot használsz, itt generálhatsz szabályokat. Kézzel kell hozzáadnod őket a uBlockban vagy uMatrixban.",
         "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Utolsó frissítés:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Másolás",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Naplózás engedélyezése a böngészőkonzolban",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Nyisd meg a „Böngészőkonzol”-t ( CTRL + SHIFT + J ) a hiányzó erőforrások mutatásáért.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "",
+        "message": "Kiadási megjegyzések letiltása",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "",
+        "message": "Kapcsold be, ha nem akarsz új LocalCDN funkciókról információt kapni. Ez tartalmazza az új uBlock/uMatrix szabályokat.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Ez a funkció megakadályozza a weboldalak helyes működését. Ne hagyd engedélyezve, hacsak nem állsz készen manuálisan a fehérlistára helyezni bármilyen érintett domaint.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Letiltás",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "HTML forráskód szűrése",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Adomány",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "HTML szűrő megfordítása",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Engedélyezd ezt az opciót a HTML szűrő alkalmazásához. A listában szereplő domainek figyelmen kívül lesznek hagyva. Ha ez az opció ki van kapcsolva, a HTML szűrő csak a listában szereplő domainekre vonatkozik.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Ez a funkció megakadályozhatja a weboldalak helyes működését. Kérlek, vedd figyelembe a Wiki oldalon szereplő információt.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

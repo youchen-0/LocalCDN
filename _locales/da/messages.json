@@ -3,10 +3,6 @@
         "message": "Beskytter dig imod sporing af \"gratis\", centraliserede indholdsleverandører.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Optælling af lokalt leverede ressourcer",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Antal injektioner af lokale ressourcer siden installation.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

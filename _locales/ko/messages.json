@@ -3,10 +3,6 @@
         "message": "\"무료\"라는 미끼로 당신을 추적하는 대규모 CDN을 사용하지 않음으로써 프라이버시를 지킵니다.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "로컬 리소스로 대체한 요청 횟수",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Decentraleyes를 설치한 뒤, CDN에서 다운로드 하는 대신 로컬 자원을 사용한 횟수입니다.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

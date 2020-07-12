@@ -304,7 +304,7 @@ helpers.setLastVersion = function (type, version) {
         return  '5.1.0';
     } else if (type.includes('/angular-ui-bootstrap/')) {
         if (helpers.compareVersion('0.10.0', requestVersion)) return '0.10.0'; // <= v0.10.0
-        else if (helpers.compareVersion('0.14.0', requestVersion)) return '0.14.0'; // > 0.10.0 <= v0.14.0
+        else if (helpers.compareVersion('0.14.3', requestVersion)) return '0.14.3'; // > 0.10.0 <= v0.14.3
         return  '1.3.3'; // > v0.14.0
     } else if (type.includes('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', requestVersion)) return '0.4.3'; // <= 0.4.3
@@ -383,6 +383,8 @@ helpers.setLastVersion = function (type, version) {
         return  '5.13.1';
     } else if (type.includes('/hls.js/')) {
         return  '0.13.2';
+    } else if (type.includes('/jets/0.')) {
+        return  '0.14.1';
     } else if (type.includes('/jquery/1.')) {
         if (helpers.compareVersion('1.7.1', requestVersion)) return '1.7.1'; // <= v1.7.1
         else if (helpers.compareVersion('1.8.3', requestVersion)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
@@ -501,6 +503,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.9.1';
     } else if (type.includes('/urlive/1.')) {
         return  '1.1.1';
+    } else if (type.includes('/vanilla-lazyload')) {
+        return  '17.1.0';
     } else if (type.includes('/vue/1.')) {
         return  '1.0.28';
     } else if (type.includes('/vue/2.')) {
@@ -536,6 +540,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jets.min.jsm': 'Jets.js',
+    'lazyload.min.jsm': 'Vanilla Lazyload',
     'materialize.min.jsm': 'Materialize (JS)',
     'materialize.min.css': 'Materialize (CSS)',
     'slick.min.jsm': 'slick (JS)',

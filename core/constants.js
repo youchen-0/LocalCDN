@@ -28,7 +28,7 @@ const Address = {
     'ANY_PROTOCOL': '*://',
     'CHROME': 'chrome:',
     'CHROME_EXTENSION': 'chrome-extension:',
-    'LOCALCDN': 'localcdn.de',
+    'LOCALCDN': 'localcdn.org',
     'EXAMPLE': 'example.org',
     'HTTP': 'http:',
     'HTTPS': 'https:',
@@ -74,7 +74,8 @@ const Setting = {
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
     'STATISTIC_DATA': 'statisticData',
     'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList',
-    'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts'
+    'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts',
+    'SELECTED_ICON': 'selectedIcon'
 };
 
 const WebRequest = {
@@ -98,6 +99,70 @@ const BrowserType = {
     'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension"),
     'FIREFOX': chrome.runtime.getURL("/").startsWith("moz-extension")
 };
+
+const IconType = {
+    'Default': {
+        'Enabled': {
+            '16': chrome.runtime.getURL('icons/action/default/icon16-default.png'),
+            '18': chrome.runtime.getURL('icons/action/default/icon18-default.png'),
+            '19': chrome.runtime.getURL('icons/action/default/icon19-default.png'),
+            '32': chrome.runtime.getURL('icons/action/default/icon32-default.png'),
+            '36': chrome.runtime.getURL('icons/action/default/icon36-default.png'),
+            '38': chrome.runtime.getURL('icons/action/default/icon38-default.png'),
+            '64': chrome.runtime.getURL('icons/action/default/icon64-default.png')
+        },
+        'Disabled': {
+            '16': chrome.runtime.getURL('icons/action/default/icon16-disabled.png'),
+            '18': chrome.runtime.getURL('icons/action/default/icon18-disabled.png'),
+            '19': chrome.runtime.getURL('icons/action/default/icon19-disabled.png'),
+            '32': chrome.runtime.getURL('icons/action/default/icon32-disabled.png'),
+            '36': chrome.runtime.getURL('icons/action/default/icon36-disabled.png'),
+            '38': chrome.runtime.getURL('icons/action/default/icon38-disabled.png'),
+            '64': chrome.runtime.getURL('icons/action/default/icon64-disabled.png')
+        }
+    },
+    'Light': {
+        'Enabled': {
+            '16': chrome.runtime.getURL('icons/action/light/icon16-default.png'),
+            '18': chrome.runtime.getURL('icons/action/light/icon18-default.png'),
+            '19': chrome.runtime.getURL('icons/action/light/icon19-default.png'),
+            '32': chrome.runtime.getURL('icons/action/light/icon32-default.png'),
+            '36': chrome.runtime.getURL('icons/action/light/icon36-default.png'),
+            '38': chrome.runtime.getURL('icons/action/light/icon38-default.png'),
+            '64': chrome.runtime.getURL('icons/action/light/icon64-default.png')
+        },
+        'Disabled': {
+            '16': chrome.runtime.getURL('icons/action/light/icon16-disabled.png'),
+            '18': chrome.runtime.getURL('icons/action/light/icon18-disabled.png'),
+            '19': chrome.runtime.getURL('icons/action/light/icon19-disabled.png'),
+            '32': chrome.runtime.getURL('icons/action/light/icon32-disabled.png'),
+            '36': chrome.runtime.getURL('icons/action/light/icon36-disabled.png'),
+            '38': chrome.runtime.getURL('icons/action/light/icon38-disabled.png'),
+            '64': chrome.runtime.getURL('icons/action/light/icon64-disabled.png')
+        }
+    },
+    'Grey': {
+        'Enabled': {
+            '16': chrome.runtime.getURL('icons/action/grey/icon16-default.png'),
+            '18': chrome.runtime.getURL('icons/action/grey/icon18-default.png'),
+            '19': chrome.runtime.getURL('icons/action/grey/icon19-default.png'),
+            '32': chrome.runtime.getURL('icons/action/grey/icon32-default.png'),
+            '36': chrome.runtime.getURL('icons/action/grey/icon36-default.png'),
+            '38': chrome.runtime.getURL('icons/action/grey/icon38-default.png'),
+            '64': chrome.runtime.getURL('icons/action/grey/icon64-default.png')
+        },
+        'Disabled': {
+            '16': chrome.runtime.getURL('icons/action/grey/icon16-disabled.png'),
+            '18': chrome.runtime.getURL('icons/action/grey/icon18-disabled.png'),
+            '19': chrome.runtime.getURL('icons/action/grey/icon19-disabled.png'),
+            '32': chrome.runtime.getURL('icons/action/grey/icon32-disabled.png'),
+            '36': chrome.runtime.getURL('icons/action/grey/icon36-disabled.png'),
+            '38': chrome.runtime.getURL('icons/action/grey/icon38-disabled.png'),
+            '64': chrome.runtime.getURL('icons/action/grey/icon64-disabled.png')
+        }
+    }
+};
+
 
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder

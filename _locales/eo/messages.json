@@ -3,10 +3,6 @@
         "message": "Decentraleyes protektas vin kontraŭ sekvado per senkostaj, centraj enhav-proviz-retoj.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Nombro de loke enmetitaj rimedoj",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Kvanto de lokaj CDN-risurcoj enmetitaj ekde instaliĝo.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

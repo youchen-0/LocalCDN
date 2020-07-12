@@ -3,10 +3,6 @@
         "message": "保护你免受中心化的内容分发网络（CDN）的跟踪。",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "本地注入资源的计数器",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "自安装以来，从本地“内容分发网络”资源注入数量。",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

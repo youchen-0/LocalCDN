@@ -3,10 +3,6 @@
         "message": "Beskytter mot sporing gjennom \"gratis\", sentralisert innholdslevering (CDN).",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Teller for lokalt injiserte ressurser",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
         "message": "Antall lokale injeksjoner av CDN-ressurser siden installering.",
         "description": "Amount injected description."
@@ -138,5 +134,9 @@
     "blockGoogleFontsDescription": {
         "message": "Hvis forespørsler etter manglende ressurser er tillatt, blir tilkoblinger til \"fonts.googleapis.com\" ikke blokkert. Slå på dette alternativet for å blokkere disse forespørslene.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

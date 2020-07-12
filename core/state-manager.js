@@ -212,6 +212,9 @@ stateManager._handleStorageChanged = function (changes) {
     if (Setting.NEGATE_HTML_FILTER_LIST in changes) {
         stateManager.getInvertOption = changes.negateHtmlFilterList.newValue;
     }
+    if (Setting.SELECTED_ICON in changes) {
+        stateManager.selectedIcon = changes.selectedIcon.newValue;
+    }
 };
 
 stateManager._clearBadgeText = function (tabIdentifier) {
@@ -249,9 +252,9 @@ stateManager._domainIsListed = function (domain, listname) {
 stateManager._setIconDisabled = function (tabIdentifier) {
 
     wrappers.setIcon({
-        'path': stateManager.disabledIconPath,
+        'path': stateManager.selectedIcon,
         'tabId': tabIdentifier
-    });
+    }, 'Disabled');
 };
 
 
@@ -261,19 +264,9 @@ stateManager._setIconDisabled = function (tabIdentifier) {
 
 stateManager.requests = {};
 stateManager.tabs = {};
-
 stateManager.getInvertOption = false;
-stateManager.disabledIconPath = {
-    '16': chrome.runtime.getURL('icons/action/icon16-disabled.png'),
-    '18': chrome.runtime.getURL('icons/action/icon18-disabled.png'),
-    '19': chrome.runtime.getURL('icons/action/icon19-disabled.png'),
-    '32': chrome.runtime.getURL('icons/action/icon32-disabled.png'),
-    '36': chrome.runtime.getURL('icons/action/icon36-disabled.png'),
-    '38': chrome.runtime.getURL('icons/action/icon38-disabled.png'),
-    '64': chrome.runtime.getURL('icons/action/icon64-disabled.png')
-};
-
 stateManager.validHosts = [];
+stateManager.selectedIcon = 'Default';
 
 for (let mapping in mappings) {
 
@@ -285,13 +278,16 @@ chrome.tabs.query({}, function (tabs) {
     tabs.forEach(stateManager._createTab);
 });
 
-chrome.storage.sync.get(Setting.SHOW_ICON_BADGE, function (items) {
+chrome.storage.sync.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], function (items) {
 
     if (items.showIconBadge === undefined) {
         items.showIconBadge = true;
     }
-
+    if (items.selectedIcon === undefined) {
+        stateManager.selectedIcon = 'Default';
+    }
     stateManager.showIconBadge = items.showIconBadge;
+    stateManager.selectedIcon = items.selectedIcon;
 });
 
 /**

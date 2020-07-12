@@ -3,12 +3,8 @@
         "message": "Chroni przed śledzeniem przez ośrodki CDN.",
         "description": "Extension description."
     },
-    "amountInjectedTitle": {
-        "message": "Licznik zasobów podanych lokalnie",
-        "description": "Amount injected title"
-    },
     "amountInjectedDescription": {
-        "message": "Ilość wstrzyknięć z lokalnego Content Delivery Network od czasu instalacji.",
+        "message": "Liczba wstrzyknięć z lokalnego Content Delivery Network od czasu instalacji.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -20,15 +16,15 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Pokaż ilość wstrzykniętych zasobów na ikonie rozszerzenia.",
+        "message": "Pokaż liczbę wstrzykniętych zasobów na ikonie rozszerzenia.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Blokuj żądania brakujących zasobów",
+        "message": "Blokuj prośby o brakujące zasoby",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Anuluj przechwycone żądania jeśli wymagany zasób nie jest dostępny lokalnie.",
+        "message": "Anuluj przechwycone żądania, jeśli wymagany zasób nie jest dostępny lokalnie.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
@@ -36,15 +32,15 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Zapobiegaj wyciekaniu zabronionych zapytań do systemów dostarczania.",
+        "message": "Zapobiegaj wyciekaniu zabronionych próśb do systemów dostarczania.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Usuwaj metadane z dozwolonych zapytań",
+        "message": "Usuwaj metadane z dozwolonych próśb",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Usuwaj wrażliwe dane z dozwolonych zapytań do CDN aby zwiększyć prywatność.",
+        "message": "Usuwaj wrażliwe dane z dozwolonych zapytań do CDN, aby zwiększyć prywatność.",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
@@ -76,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Włącz logowanie w konsoli przeglądarki",
+        "message": "Włącz zapis zdarzeń w konsoli przeglądarki",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Otwórz \"Konsolę Przeglądarki\" ( CTRL + SHIFT + J) żeby wyświetlić brakujące zasoby.",
+        "message": "Otwórz \"Konsolę przeglądarki\" ( CTRL + SHIFT + J), żeby wyświetlić brakujące zasoby.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -108,15 +104,15 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Odwróć filtrowanie HTML",
+        "message": "Odwróć działanie filtrowania HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Włącz tę opcję, aby zawsze stosować filtr HTML. Domeny znajdujące się na liście będą wtedy ignorowane. Jeśli ta opcja jest wyłączona, filtr HTML będzie stosowany tylko do domen z listy.",
+        "message": "Włącz tę opcję, aby zawsze stosować filtr HTML. Domeny znajdujące się na liście będą wtedy ignorowane. Jeśli ta opcja jest wyłączona, filtr HTML będzie stosowany tylko dla domen z listy.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Funkcja ta może spowodować uszkodzenie stron internetowych. Proszę zwrócić uwagę na informacje zawarte na stronie Wiki.",
+        "message": "Funkcja ta może spowodować uszkodzenie wyświetlania/działania stron internetowych. Proszę zwrócić uwagę na informacje zawarte na stronie Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -124,7 +120,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Włącz tę opcję, aby zawsze stosować filtr HTML. Możesz wykluczyć domeny z pomocą powyższej listy. Oddzielaj wielu wpisów za pomocą średników (;).",
+        "message": "Włącz tę opcję, aby zawsze stosować filtr HTML. Możesz wykluczyć domeny z pomocą powyższej listy. Oddzielaj wiele wpisów za pomocą średników (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -132,11 +128,15 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Blokuj czcionki Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Jeśli żądania o brakujące zasoby nie są blokowane, wtedy połączenia z \"fonts.googleapis.com\" nie są blokowane. Należy włączyć tę opcję, aby zablokować te żądania.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }
