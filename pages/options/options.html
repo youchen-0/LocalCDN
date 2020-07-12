@@ -102,19 +102,15 @@
                 </div>
                 <div class="description-option" data-i18n-content="hideReleaseNotesDescription">If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.</div>
             </section>
-        </div>
-        <div class="option-group">
             <section class="option">
-                <!-- TODO: Add i18n title -->
-                <div class="title-option without-checkbox">Select extension icon style:</div>
-                <select name="selectedIcon" id="selectedIcon" data-option="selectedIcon">
-                    <option value="Default">Default</option>
-                    <option value="Light">Light</option>
-                    <option value="Monochrome">Monochrome</option>
-                    <option value="Shield">Shield</option>
-                </select>
-                <!-- TODO: Add i18n description -->
-                <!-- <div class="description-option" data-i18n-content="selectedIconDescription">(description)</div> -->
+                <div class="title-option-select" data-i18n-content="chooseIconStyle">Choose an icon for this extension</div>
+                <div class="description-option">
+                    <select id="selected-icon" data-option="selectedIcon">
+                        <option value="Default">Default</option>
+                        <option value="Light">Light</option>
+                        <option value="Grey">Grey</option>
+                    </select>
+                </div>
             </section>
         </div>
         <div class="option-group">

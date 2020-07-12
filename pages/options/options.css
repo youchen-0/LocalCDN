@@ -93,6 +93,14 @@ body {
     font-weight: 600;
 }
 
+.title-option-select {
+    line-height: 1.54;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 600;
+    padding-left: 25px;
+}
+
 /**
  * Controls
  */
@@ -108,6 +116,10 @@ body {
     padding: 5px !important;
     margin-top: 10px !important;
     color: #555;
+}
+
+#selected-icon {
+    width: max-content;
 }
 
 /**
