@@ -138,5 +138,9 @@
     "blockGoogleFontsDescription": {
         "message": "Si les requêtes de ressources manquantes sont autorisées, alors les connexions à \"fonts.googleapis.com\" ne sont pas bloquées. Activez cette option pour bloquer ces requêtes.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

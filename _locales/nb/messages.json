@@ -138,5 +138,9 @@
     "blockGoogleFontsDescription": {
         "message": "Hvis forespørsler etter manglende ressurser er tillatt, blir tilkoblinger til \"fonts.googleapis.com\" ikke blokkert. Slå på dette alternativet for å blokkere disse forespørslene.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
     }
 }

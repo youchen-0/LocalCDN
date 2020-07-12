@@ -138,5 +138,9 @@
     "blockGoogleFontsDescription": {
         "message": "Wenn das Anfordern fehlender Inhalte erlaubt ist, werden Verbindungen zu \"fonts.googleapis.com\" nicht blockiert. Aktiviere diese Option, um diese Anfragen zu blockieren.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "Wähle ein Icon für diese Erweiterung",
+        "description": "Choose an icon for this extension"
     }
 }
