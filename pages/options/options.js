@@ -43,7 +43,8 @@ options._renderContents = function () {
     }
 
     if(BrowserType.CHROMIUM) {
-        document.getElementById('html-filter-div').hidden = true;
+        document.getElementById('html-filter-div').style.display = 'none';
+        document.getElementById('block-google-fonts').style.display = 'none';
     }
 
 };
