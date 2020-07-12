@@ -136,7 +136,7 @@
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Bu uzantı için bir simge seç",
         "description": "Choose an icon for this extension"
     }
 }
