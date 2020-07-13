@@ -110,7 +110,7 @@ main._showReleaseNotes = function (details) {
 
             oldValue = items.lastMappingUpdate;
 
-            if (oldValue !== newValue) {
+            if (oldValue !== newValue || !items.hideReleaseNotes) {
                 // Updated mappings.js
                 chrome.storage.sync.set({
                     [Setting.LAST_MAPPING_UPDATE]: newValue
