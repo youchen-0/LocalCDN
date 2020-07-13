@@ -118,6 +118,20 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/google-material-design-icons/google-material-design-icons.css',
             'bundle': ''
         };
+    } else if (/\/bootstrap-datepicker3.*\.css/.test(channelPath)) {
+        return {
+            'source': channelHost,
+            'version': '1.9.0',
+            'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker3.standalone.min.css',
+            'bundle': ''
+        };
+    } else if (/\/bootstrap-datepicker.*\.css/.test(channelPath)) {
+        return {
+            'source': channelHost,
+            'version': '1.9.0',
+            'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker.standalone.min.css',
+            'bundle': ''
+        };
     } else {
         return false;
     }
