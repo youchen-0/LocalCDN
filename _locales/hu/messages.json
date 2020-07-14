@@ -61,7 +61,7 @@
     },
     "generateRuleSetDescription": {
         "message": "Ha esetleg uBlockot vagy uMatrixot használsz, itt generálhatsz szabályokat. Kézzel kell hozzáadnod őket a uBlockban vagy uMatrixban.",
-        "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
+        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
         "message": "Utolsó frissítés:",
