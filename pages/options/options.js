@@ -100,6 +100,7 @@ options._renderOptionsPanel = function () {
     document.getElementById('link-changelog').addEventListener('click', options._onClickChangelog);
     document.getElementById('link-donate').addEventListener('click', options._onClickDonate);
     document.getElementById('link-faq').addEventListener('click', options._onClickFaq);
+    document.getElementById('ruleset-help-icon').addEventListener('click', options._onClickRulesetHelp);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -367,6 +368,13 @@ options._onClickChangelog = function() {
 options._onClickFaq = function() {
     chrome.tabs.create({
         'url': chrome.extension.getURL('pages/help/help.html'),
+        'active': true
+    });
+};
+
+options._onClickRulesetHelp = function() {
+    chrome.tabs.create({
+        'url': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-uBlock-Origin-or-uMatrix',
         'active': true
     });
 };
