@@ -88,55 +88,55 @@
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Disable",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filter HTML source code",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Donate",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Invert HTML filter",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "This function can break websites. Please note the information on the Wiki page.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Do not apply HTML filter to these domains:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Apply HTML filter for these domains:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Block Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Choose an icon for this extension",
         "description": "Choose an icon for this extension"
     }
 }
