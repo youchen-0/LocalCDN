@@ -378,6 +378,8 @@ var mappings = {
             'autocomplete.js/0/autocomplete.': resources.autocompleteJS,
             'backbonejs/{version}/backbone.': resources.backbone,
             'backbonejs/{version}/backbone-min.': resources.backbone,
+            'bootstrap/{version}/css/bootstrap.': resources.bootstrapCSS,
+            'bootstrap/{version}/js/bootstrap.': resources.bootstrapJS,
             'dojo/{version}/dojo.': resources.dojo,
             'emberjs/{version}/ember.': resources.ember,
             'jquery/{version}/jquery.': resources.jQuery,
