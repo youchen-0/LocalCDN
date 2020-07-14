@@ -69,11 +69,6 @@ main._initializeSettings = function () {
 
 main._showReleaseNotes = function (details) {
 
-    let location, updateAdBlockerRules, previousVersion;
-
-    location = chrome.extension.getURL('pages/welcome/welcome.html');
-    updateAdBlockerRules = chrome.extension.getURL('pages/updates/updates.html');
-
     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
 
         chrome.storage.sync.set({
@@ -82,10 +77,6 @@ main._showReleaseNotes = function (details) {
 
             previousVersion = details.previousVersion;
 
-            if (previousVersion && previousVersion.charAt(0) === '2') {
-                return; // Do not show release notes after minor updates.
-            }
-
             if (details.temporary !== true) {
 
                 chrome.storage.sync.get([Setting.HIDE_RELEASE_NOTES], function (items) {
@@ -93,7 +84,7 @@ main._showReleaseNotes = function (details) {
                     if (items.hideReleaseNotes !== true) {
 
                         chrome.tabs.create({
-                            'url': location,
+                            'url': chrome.extension.getURL('pages/welcome/welcome.html'),
                             'active': false
                         });
                     }
@@ -117,7 +108,7 @@ main._showReleaseNotes = function (details) {
                 }, function() {
                     if (!items.hideReleaseNotes) {
                         chrome.tabs.create({
-                            'url': updateAdBlockerRules,
+                            'url': chrome.extension.getURL('pages/updates/updates.html'),
                             'active': false
                         });
                     }
