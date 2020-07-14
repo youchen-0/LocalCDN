@@ -28,31 +28,31 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "",
+        "message": "Disable link prefetching",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "",
+        "message": "Prevent disallowed requests from leaking out to delivery networks.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "",
+        "message": "Strip metadata from allowed requests",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "",
+        "message": "Erase sensitive data from allowed CDN-requests for improved privacy.",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "",
+        "message": "Deactivate LocalCDN for these domains:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "",
+        "message": "Enter domains to disable LocalCDN here. Separate multiple entries with semi-colons (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "",
+        "message": "Advanced",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
