@@ -61,7 +61,7 @@
     },
     "generateRuleSetDescription": {
         "message": "Jos käytät uBlockia tai uMatrixia, voit luoda säännöt täällä. Sinun täytyy lisätä nämä säännöt manuaalisesti uBlockiin tai uMatrixiin.",
-        "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
+        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
         "message": "Edellinen päivitys:",

@@ -61,7 +61,7 @@
     },
     "generateRuleSetDescription": {
         "message": "I tilfelle du bruker uBlock eller uMatrix kan reglene genereres her. Reglene må legges til manuelt i uBlock eller uMatrix.",
-        "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
+        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
         "message": "Siste oppdatering:",
@@ -136,7 +136,7 @@
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Velg et ikon for denne utvidelsen",
         "description": "Choose an icon for this extension"
     }
 }

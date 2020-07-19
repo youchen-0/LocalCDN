@@ -540,6 +540,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'bootstrap-datepicker3.standalone.min.css': 'Bootstrap Datepicker 3 (CSS)',
     'jets.min.jsm': 'Jets.js',
     'lazyload.min.jsm': 'Vanilla Lazyload',
     'materialize.min.jsm': 'Materialize (JS)',

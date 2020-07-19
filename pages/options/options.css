@@ -130,6 +130,18 @@ body {
     margin-right: 3px;
 }
 
+#ruleset-help-icon {
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("../../icons/info-dark.svg");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+}
+
 /**
  * Buttons
  */

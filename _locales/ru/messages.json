@@ -61,7 +61,7 @@
     },
     "generateRuleSetDescription": {
         "message": "Если вы используете uBlock или uMatrix, вы можете сгенерировать правила здесь и потом добавить их вручную в uBlock или uMatrix.",
-        "description": "In case you're using uBlock or uMatrix you can generate the rules here. You have to add these rules manually in uBlock or uMatrix."
+        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
         "message": "Последнее обновление:",
