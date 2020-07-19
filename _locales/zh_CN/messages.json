@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "保护你免受中心化的内容分发网络（CDN）的跟踪。",
+        "message": "保护你免受“免费”，中心化内容分发的跟踪。",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "自安装以来，从本地“内容分发网络”资源注入数量。",
+        "message": "自安装以来本地内容分发网络资源注入数量。",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "输入要添加到白名单的域名。用分号 (;) 分隔多项。",
+        "message": "输入要禁用 LocalCDN 的域名。用分号 (;) 分隔多项。",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -56,19 +56,19 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "为uBlock或uMatrix生成规则集",
+        "message": "为 uBlock 或 uMatrix 生成规则集",
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "如果你在使用uBlock或者uMatrix, 你可以在这里生成规则. 你需要手动在uBlock或者uMatrix中添加这些规则.",
+        "message": "如果你在使用 uBlock Origin 或者 uMatrix, 你可以在这里生成规则。你需要将这些规则手动添加到 uBlock Origin 或 uMatrix。",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
-        "message": "最新更新:",
+        "message": "最后更新：",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "拷贝",
+        "message": "复制",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
@@ -76,7 +76,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "打开\"浏览器控制台\"( CTRL + SHIFT + J )来展示缺失的资源.",
+        "message": "打开“浏览器控制台” ( CTRL + SHIFT + J ) 以展示缺失的资源.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "打开这个按钮来停止接受LocalCDN的所有新特性相关信息. 这包括任何新的 uBlock/uMatrix 规则.",
+        "message": "打开这个按钮以停止接受 LocalCDN 的所有新特性相关信息。这包括任何新的 uBlock/uMatrix 规则。",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
@@ -104,39 +104,39 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "反转 HTML 过滤器",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "启用此选项以始终应用 HTML 过滤器。列表中的域将被忽略。如果禁用此选项，则 HTML 过滤器仅应用于列表中的域。",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "此功能可能会破坏网站。请注意 Wiki 页面上的信息。",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "不要将 HTML 过滤器应用于这些域：",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "输入 HTML 过滤器要处理或忽略的域。使用分号 (;) 分隔多项。",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "对这些域应用 HTML 过滤器：",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "屏蔽 Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "如果允许请求缺少资源，则不会阻止到 \"fonts.googleapis.com\" 的连接。启用此选项可阻止这些请求。",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "选择此扩展程序的图标",
         "description": "Choose an icon for this extension"
     }
 }
