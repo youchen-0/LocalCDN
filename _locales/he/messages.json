@@ -12,7 +12,7 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "הצג מונה הזרקות תוכן על סמל התכנה",
+        "message": "הצגת מונה הזרקות תוכן על סמל התכנית",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "אל תכלול דומיינים כחלק מהבדיקה",
+        "message": "השבתת LocalCDN עבור שמות תחום אלו:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
