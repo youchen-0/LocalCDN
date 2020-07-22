@@ -4,7 +4,7 @@
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "Cantidad de recursos inyectados de Redes de Entrega de Contenido desde instalación.",
+        "message": "Cantidad de recursos inyectados de Redes de Entrega de Contenido desde la instalación.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -20,7 +20,7 @@
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Bloquear peticiones de recursos ausentes",
+        "message": "Bloquear las peticiones de recursos que faltan",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -36,11 +36,11 @@
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Quitar metadatos de las solicitudes permitidas",
+        "message": "Quitar los metadatos de las solicitudes permitidas",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Borra datos sensibles de solicitudes CDN permitidas para mejorar la privacidad.",
+        "message": "Borra los datos sensibles de solicitudes-CDN permitidas para mejorar la privacidad.",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Ingrese los dominios donde deshabilitar LocalCDN. Separe las entradas múltiples con punto y coma (;).",
+        "message": "Escriba los dominios donde deshabilitar LocalCDN. Separe las entradas múltiples con punto y coma (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generar conjuntos de reglas para uBlock o uMatrix",
+        "message": "Generar el conjunto de reglas para uBlock o uMatrix",
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "Si usas uBlock o uMatrix aquí puedes generar las reglas. Tienes que añadirlas manualmente en uBlock o uMatrix.",
+        "message": "Si usas uBlock Origin o uMatrix aquí puedes generar las reglas. Tienes que añadir las reglas manualmente en uBlock Origin o uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
@@ -72,19 +72,19 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Habilitar inicio de sesión en la consola del navegador",
+        "message": "Habilitar el inicio de sesión en la consola del navegador",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Abre la \"Consola del Navegador\" ( CTRL + SHIFT + J ) mostrará los recursos que faltan.",
+        "message": "Abre la \"Consola del Navegador\" ( CTRL + SHIFT + J ) mostrando los recursos que faltan.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "Desactivar notas de la versión",
+        "message": "Desactivar las notas de la versión",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas de uBlock/uMatrix.",
+        "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas de uBlock Origin/uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
@@ -104,7 +104,7 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Invertir filtro HTML",
+        "message": "Invertir el filtro HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -120,7 +120,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Ingrese los dominios usados o ignorados por el filtro HTML. Separe las entradas múltiples con punto y coma (;).",
+        "message": "Escriba los dominios que han sido usados o ignorados por el filtro HTML. Separe las entradas múltiples con punto y coma (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -128,15 +128,15 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "Bloquear fuentes de Google",
+        "message": "Bloquear las fuentes de Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Si se permiten peticiones de recursos ausentes, las conexiones a \"fonts.googleapis.com\" no se bloquean. Habilite esta opción para bloquear estas solicitudes.",
+        "message": "Si se permiten peticiones de recursos que faltan, las conexiones a \"fonts.googleapis.com\" no se bloquean. Habilite esta opción para bloquear estas solicitudes.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Eligir un ícono para esta extensión",
         "description": "Choose an icon for this extension"
     }
 }

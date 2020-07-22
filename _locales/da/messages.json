@@ -60,7 +60,7 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "I det tilfælde at du bruger uBlock eller uMatrix kan du generere regler her. Du skal tilføje disse regler manuelt i uBlock eller uMatrix.",
+        "message": "I det tilfælde at du bruger uBlock Origin eller uMatrix kan du generere regler her. Du skal tilføje disse regler manuelt i uBlock Origin eller uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
@@ -96,7 +96,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtrere HTML kildekode",
+        "message": "Filtrer HTML kildekode",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -104,7 +104,7 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Inverter HTML-Filter",
+        "message": "Inverter HTML-filter",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -112,31 +112,31 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Denne funktion kan ødelægge hjemmesider. Vær sød at notere informationen på Wiki siden.",
+        "message": "Denne funktion kan ødelægge hjemmesider. Vær venlig at notere informationen på Wiki siden.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Brug ikke HTML-filter på følgende domæner:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Indtast domæner for HTML-Filteret. For disse domæner er filteret aktiveret, undtagen når du inverterer HTML-Filtereret med den næste mulighed. Separer flere domæner med semi-kolon (;).",
+        "message": "Indtast de domæner som skal håndteres eller ignoreres af HTML-filteret. Separer flere domæner med semikolon (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Benyt HTML-filter for følgende domæner:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Bloker Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Hvis opslag for manglende ressourcer er tilladt, vil forbindelser til \"fonts.googleapis.com\" ikke blive blokeret. Aktiver denne valgmulighed for at blokere de opslag.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Vælg et ikon for denne extension",
         "description": "Choose an icon for this extension"
     }
 }
