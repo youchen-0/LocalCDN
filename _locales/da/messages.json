@@ -108,7 +108,7 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Aktiver HTML-Filter som standard.",
+        "message": "Aktiver denne valgmulighed, for at altid at benytte HTML-filteret. Domænerne i listen vil blive ignoreret. Hvis denne valgmulighed er deaktiveret vil HTML-filteret kun blive benyttet på domænerne i listen.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
