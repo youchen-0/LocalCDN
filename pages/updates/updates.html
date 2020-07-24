@@ -25,27 +25,30 @@
                     </div>
                         <ul>
                             <li>Implemented: Hide icon setting if not supported</li>
+                            <li>Implemented: Show the rule set generator only when there are new CDNs (reported by <a href="https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/reviews/1572952/">review</a>)</li>
                         </ul>
-                    <div class="topic-label">
-                        Generate rule sets for uBlock or uMatrix
+                    <div id="generator-section">
+                        <div class="topic-label">
+                            Generate rule sets for uBlock or uMatrix
+                        </div>
+                        <div class="ruleset-generator">
+                            <label class="b-contain" for="generate-ublock-rules">uBlock
+                                <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                                <div class="b-input"></div>
+                            </label>
+                        </div>
+                        <div class="ruleset-generator">
+                            <label class="b-contain" for="generate-umatrix-rules">uMatrix
+                                <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                                <div class="b-input"></div>
+                            </label>
+                        </div>
+                        <div>
+                            <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+                            <input id="button-copy-rule-set" type="button" value="Copy">
+                        </div>
+                        <hr/>
                     </div>
-                    <div class="ruleset-generator">
-                        <label class="b-contain" for="generate-ublock-rules">uBlock
-                            <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
-                            <div class="b-input"></div>
-                        </label>
-                    </div>
-                    <div class="ruleset-generator">
-                        <label class="b-contain" for="generate-umatrix-rules">uMatrix
-                            <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
-                            <div class="b-input"></div>
-                        </label>
-                    </div>
-                    <div>
-                        <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                        <input id="button-copy-rule-set" type="button" value="Copy">
-                    </div>
-                    <hr/>
                     <div id="history"><span id="history-indicator">+</span> Previous Versions</div>
                     <div id="history-release-notes" style="display: none;">
                         <p class='release-date'>2020-07-19 (v2.2.14)</p>

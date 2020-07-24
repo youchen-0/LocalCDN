@@ -89,6 +89,12 @@ updates._onDocumentLoaded = function () {
     updateElements.copyRuleSet.addEventListener('click', updates._copyRuleSet);
 
     document.getElementById('history').addEventListener('click', updates._openHistoryReleaseNotes);
+
+    // GET parameter to display the rule set generator
+    let urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('mappingupdate') === 'true') {
+        document.getElementById('generator-section').style.display = 'block';
+    }
 };
 
 
