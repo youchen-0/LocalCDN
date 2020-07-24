@@ -75,8 +75,6 @@ main._showReleaseNotes = function (details) {
             [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
         }, function() {
 
-            previousVersion = details.previousVersion;
-
             if (details.temporary !== true) {
 
                 chrome.storage.sync.get([Setting.HIDE_RELEASE_NOTES], function (items) {
