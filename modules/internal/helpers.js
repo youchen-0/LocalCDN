@@ -275,10 +275,9 @@ helpers.setLastVersion = function (type, version) {
      * Switch-Case (with Regex): 0-8ms (Average ~4ms)
      * If-Else-If:               0-5ms (Average <1ms)
      */
-    let requestVersion;
 
     if(version !== null && version !== undefined) {
-        requestVersion = version.toString();
+        let requestVersion = version.toString();
     }
     if (type.includes('/algoliasearch/3.')) {
         return  '3.35.1';
@@ -393,7 +392,7 @@ helpers.setLastVersion = function (type, version) {
         return  '1.8.3';
     } else if (type.includes('/jquery/2.')) {
         return  '2.2.4';
-    } else if (type.includes('/jquery/3.')) {
+    } else if (type.includes('/jquery/3.') || type.includes('/jquery/null')) {
         return  '3.5.1';
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
         return  '1.4.10';
