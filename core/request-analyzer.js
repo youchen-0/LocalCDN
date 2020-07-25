@@ -56,6 +56,11 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
         }
     }
 
+    // Disable LocalCDN if website is 'yandex.com' and CDN is 'yastatic.net', because website and CDN are the same.
+    if (tabDetails.url.includes('yandex.com') && requestDetails.url.includes('yastatic.net')) {
+        return false;
+    }
+
     // Only requests of type GET can be valid candidates.
     return requestDetails.method === WebRequest.GET;
 };
