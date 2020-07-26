@@ -44,11 +44,11 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Remover domínios das inspeções",
+        "message": "Desativar o LocalCDN para esse domínios:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Digite os domínios que não devem ser analisados. Separe múltiplos domínios com ponto e vírgula (;).",
+        "message": "Digite os domínios para desabilitar o LocalCDN neles. Separe múltiplos domínios com ponto e vírgula (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -60,83 +60,83 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "No caso de você estar usando uBlock ou uMatrix você pode gerar as regras aqui. Você tem que adicionar essas regras manualmente no uBlock Origin ou uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Última atualização:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Copiar",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Habilitar logging no console do browser",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Abra \"Browser Console\" ( CTRL + SHIFT + J ) para mostrar recursos faltantes.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "",
+        "message": "Desabilitar notas de lançamento",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "",
+        "message": "Habilite isso para não receber informações sobre novos recursos do LocalCDN. Isso inclui informação sobre novas regras do uBlock/uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Esse recurso quebra sites. Não deixe habilitado, a não ser que você esteja preparado para manualmente colocar os sites afetados na Lista Branca.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Desabilitar",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filtrar código HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Doar",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inverter filtro HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Habilite essa opção para sempre aplicar o filtro HTML. Os domínios na lista serão ignorados. Se essa opção está desabilitada, o filtro HTML é apenas aplicados a domínios na lista.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Essa função quebra sites. Por favor, olhe a informação na página da Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Não aplique o filtro HTML para esses domínios:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Entre os domínios que irão ser usados ou ignorados pelo filtro HTML. Separe múltiplas entradas com ponto e vírgula (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Aplique o filtro HTML para esses domínios:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Bloquear Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Se pedidos para recursos faltantes são permitidos, conexões para \"fonts.googleapis.com\" não são bloqueadas. Habilite essa opção para bloquear esses pedidos.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Escolha um ícone para essa extensão",
         "description": "Choose an icon for this extension"
     }
 }
