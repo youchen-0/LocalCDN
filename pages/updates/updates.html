@@ -24,35 +24,44 @@
                         New in LocalCDN:
                     </div>
                         <ul>
-                            <li>Fixed: Open changelog after an update (reported by email)</li>
-                            <li>Fixed: Selection of Bootstrap-Datepicker (<a href="https://codeberg.org/nobody/LocalCDN/issues/54">#54</a>)</li>
-                            <li>Fixed: Bootstrap (JS & CSS) added to JSDelivr (<a href="https://codeberg.org/nobody/LocalCDN/issues/60">#60</a>)</li>
-                            <li>Improved: Blue/Grey icon theme (<a href="https://codeberg.org/nobody/LocalCDN/issues/52">#52</a>)</li>
-                            <li>Updated: i18n</li>
-                            <li>Implemented: Link to Wiki page for rule generator</li>
+                            <li>Implemented: Hide icon setting if not supported</li>
+                            <li>Implemented: Show the rule set generator only when there are new CDNs (reported by <a href="https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/reviews/1572952/">review</a>)</li>
+                            <li>Fixed: Selection of 'jQuery latest' (<a href="https://codeberg.org/nobody/LocalCDN/issues/64">#64</a>)</li>
+                            <li>Fixed: Disable LocalCDN if website is 'yandex.com' and CDN is 'yastatic.net', because website and CDN are the same. (reported by email)</li>
                         </ul>
-                    <div class="topic-label">
-                        Generate rule sets for uBlock or uMatrix
+                    <div id="generator-section">
+                        <div class="topic-label">
+                            Generate rule sets for uBlock or uMatrix
+                        </div>
+                        <div class="ruleset-generator">
+                            <label class="b-contain" for="generate-ublock-rules">uBlock
+                                <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                                <div class="b-input"></div>
+                            </label>
+                        </div>
+                        <div class="ruleset-generator">
+                            <label class="b-contain" for="generate-umatrix-rules">uMatrix
+                                <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                                <div class="b-input"></div>
+                            </label>
+                        </div>
+                        <div>
+                            <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+                            <input id="button-copy-rule-set" type="button" value="Copy">
+                        </div>
+                        <hr/>
                     </div>
-                    <div class="ruleset-generator">
-                        <label class="b-contain" for="generate-ublock-rules">uBlock
-                            <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
-                            <div class="b-input"></div>
-                        </label>
-                    </div>
-                    <div class="ruleset-generator">
-                        <label class="b-contain" for="generate-umatrix-rules">uMatrix
-                            <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
-                            <div class="b-input"></div>
-                        </label>
-                    </div>
-                    <div>
-                        <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                        <input id="button-copy-rule-set" type="button" value="Copy">
-                    </div>
-                    <hr/>
                     <div id="history"><span id="history-indicator">+</span> Previous Versions</div>
                     <div id="history-release-notes" style="display: none;">
+                        <p class='release-date'>2020-07-19 (v2.2.14)</p>
+                            <ul>
+                                <li>Fixed: Open changelog after an update (reported by email)</li>
+                                <li>Fixed: Selection of Bootstrap-Datepicker (<a href="https://codeberg.org/nobody/LocalCDN/issues/54">#54</a>)</li>
+                                <li>Fixed: Bootstrap (JS & CSS) added to JSDelivr (<a href="https://codeberg.org/nobody/LocalCDN/issues/60">#60</a>)</li>
+                                <li>Improved: Blue/Grey icon theme (<a href="https://codeberg.org/nobody/LocalCDN/issues/52">#52</a>)</li>
+                                <li>Updated: i18n</li>
+                                <li>Implemented: Link to Wiki page for rule generator</li>
+                            </ul>
                         <p class='release-date'>2020-07-12 (v2.2.13)</p>
                             <ul>
                                 <li>URLs updated (localcdn.de -> localcdn.org)</li>

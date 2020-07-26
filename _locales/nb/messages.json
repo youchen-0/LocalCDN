@@ -60,7 +60,7 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "I tilfelle du bruker uBlock eller uMatrix kan reglene genereres her. Reglene må legges til manuelt i uBlock eller uMatrix.",
+        "message": "I tilfelle du bruker uBlock Origin eller uMatrix kan reglene genereres her. Reglene må legges til manuelt i uBlock Origin eller uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {

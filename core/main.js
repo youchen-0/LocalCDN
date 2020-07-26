@@ -75,8 +75,6 @@ main._showReleaseNotes = function (details) {
             [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
         }, function() {
 
-            previousVersion = details.previousVersion;
-
             if (details.temporary !== true) {
 
                 chrome.storage.sync.get([Setting.HIDE_RELEASE_NOTES], function (items) {
@@ -93,22 +91,19 @@ main._showReleaseNotes = function (details) {
         });
     } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
 
-        let newValue = lastMappingUpdate;
-        let oldValue = "";
-
         // If add-on update true, check last update of mappings.js
         chrome.storage.sync.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
 
-            oldValue = items.lastMappingUpdate;
+            let mappingUpdate = items.lastMappingUpdate !== lastMappingUpdate;
 
-            if (oldValue !== newValue || !items.hideReleaseNotes) {
+            if (mappingUpdate || !items.hideReleaseNotes) {
                 // Updated mappings.js
                 chrome.storage.sync.set({
-                    [Setting.LAST_MAPPING_UPDATE]: newValue
+                    [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
                 }, function() {
                     if (!items.hideReleaseNotes) {
                         chrome.tabs.create({
-                            'url': chrome.extension.getURL('pages/updates/updates.html'),
+                            'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
                             'active': false
                         });
                     }

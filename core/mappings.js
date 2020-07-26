@@ -314,6 +314,7 @@ var mappings = {
     'code.jquery.com': {
         '/': {
             'jquery-{version}.': resources.jQuery,
+            'jquery-latest.': resources.jQuery,
             'ui/{version}/jquery-ui.': resources.jQueryUI,
             'mobile/{version}/jquery.mobile': resources.jQueryMobile
         }

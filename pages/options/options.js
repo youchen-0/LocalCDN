@@ -47,6 +47,9 @@ options._renderContents = function () {
         document.getElementById('block-google-fonts').style.display = 'none';
     }
 
+    if(!chrome.browserAction.setIcon) {
+        document.getElementById('section-icon-style').style.display = 'none';
+    }
 };
 
 options._renderOptionsPanel = function () {
