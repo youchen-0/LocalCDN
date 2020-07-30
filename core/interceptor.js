@@ -34,7 +34,9 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
 
-    if (requestDetails.url.startsWith('https://fonts.googleapis.com/css?family')) {
+    // Possible URLs of Google Fonts: https://fonts.googleapis.com/css
+    //                                https://fonts.googleapis.com/css2
+    if (requestDetails.url.startsWith('https://fonts.googleapis.com/css')) {
         if(interceptor.blockGoogleFonts  !== false && interceptor.blockMissing !== false) {
             return {
                 'cancel': false
