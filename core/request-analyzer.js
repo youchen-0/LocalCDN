@@ -146,7 +146,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             versionDelivered = helpers.setLastVersion(targetPath, versionNumber).toString();
             targetPath = targetPath.replace(versionNumber, versionDelivered);
 
-            versionRequested = versionNumber === null ? false : versionNumber[0];
+            versionRequested = versionNumber === null ? 'latest' : versionNumber[0];
 
             hostShorthands = shorthands[channelHost];
 

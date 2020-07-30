@@ -391,8 +391,10 @@ popup._createInjectionElement = function (injection) {
             versionNode = ` v${injection.versionRequested}`;
         } else if (injection.versionRequested === 'beta') {
             versionNode = ` ${injection.versionRequested}`;
-        } else if (injection.versionRequested !== false){
+        } else if (injection.versionRequested !== 'latest'){
             versionNode = ` (v${injection.versionRequested} 🡢 v${injection.versionDelivered})`;
+        } else if (injection.versionRequested === 'latest') {
+            versionNode = ` v${injection.versionDelivered}`;
         }
         noteTextNode = document.createTextNode(versionNode);
         noteElement.appendChild(noteTextNode);
