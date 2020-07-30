@@ -331,11 +331,11 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/bootstrap.js/3.')) {
         return  '3.3.7';
     } else if (type.includes('/bootstrap.js/4.')) {
-        return  '4.4.1';
+        return  '4.5.0';
     } else if (type.includes('/bootstrap.css/3.')) {
         return  '3.3.7';
     } else if (type.includes('/bootstrap.css/4.')) {
-        return  '4.4.1';
+        return  '4.5.0';
     } else if (type.includes('/bootstrap-daterangepicker/2.')) {
         return  '2.1.27';
     } else if (type.includes('/bootstrap-datepicker/1.')) {
