@@ -386,7 +386,7 @@ popup._createInjectionElement = function (injection) {
         noteElement.setAttribute('class', 'side-note');
 
         let versionNode = '';
-        console.log(injection);
+
         if (injection.versionRequested === injection.versionDelivered) {
             versionNode = ` v${injection.versionRequested}`;
         } else if (injection.versionRequested === 'beta') {
