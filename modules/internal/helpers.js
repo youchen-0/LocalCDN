@@ -379,7 +379,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/fontawesome/4.')) {
         return  '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
-        return  '5.13.1';
+        return  '5.14.0';
     } else if (type.includes('/hls.js/')) {
         return  '0.13.2';
     } else if (type.includes('/jets/0.')) {
