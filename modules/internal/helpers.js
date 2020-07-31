@@ -446,6 +446,8 @@ helpers.setLastVersion = function (type, version) {
         else return '1.6.0'; // > 1.4.5
     } else if (type.includes('/oclazyload/1.')) {
         return  '1.1.0';
+    } else if (type.includes('/owl-carousel/1.')) {
+        return  '1.3.3';
     } else if (type.includes('p2p-media-loader-core')) {
         return  '0.6.2';
     } else if (type.includes('/page.js/1.')) {
@@ -541,6 +543,10 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'owl.transitions.min.css': 'OwlCarousel (CSS Transitions)',
+    'owl.theme.min.css': 'OwlCarousel (CSS Theme)',
+    'owl.carousel.min.css': 'OwlCarousel (CSS)',
+    'owl.carousel.min.jsm': 'OwlCarousel (JS)',
     'jquery.waypoints.min.jsm': 'Waypoints (jQuery)',
     'bootstrap-datepicker3.standalone.min.css': 'Bootstrap Datepicker 3 (CSS)',
     'jets.min.jsm': 'Jets.js',
