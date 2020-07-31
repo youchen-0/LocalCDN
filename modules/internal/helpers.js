@@ -508,6 +508,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.0.28';
     } else if (type.includes('/vue/2.')) {
         return  '2.6.11';
+    } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
+        return  '4.0.0';
     } else if (type.includes('webfont')) {
         return  '1.6.28';
     } else if (type.includes('/webrtc-adapter/6.')) {
@@ -539,6 +541,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jquery.waypoints.min.jsm': 'Waypoints (jQuery)',
     'bootstrap-datepicker3.standalone.min.css': 'Bootstrap Datepicker 3 (CSS)',
     'jets.min.jsm': 'Jets.js',
     'lazyload.min.jsm': 'Vanilla Lazyload',

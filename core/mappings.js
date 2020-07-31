@@ -304,6 +304,7 @@ var mappings = {
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
+            'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
             'webfont/{version}/webfont.js': resources.webfont,
             'webfont/{version}/webfontloader.js': resources.webfont,
             'webrtc-adapter/{version}/adapter.min.js': resources.webRTCadapter,
