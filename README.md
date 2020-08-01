@@ -1,6 +1,12 @@
 # LocalCDN
 
-[![Translate](https://hosted.weblate.org/widgets/localcdn/-/localcdn/svg-badge.svg)](https://hosted.weblate.org/projects/localcdn/localcdn/) [![Frameworks (main branch)](https://www.localcdn.org/badges/frameworks-main.svg)](https://www.localcdn.org/badges/frameworks-main.svg) [![Frameworks (develop branch)](https://www.localcdn.org/badges/frameworks-develop.svg)](https://www.localcdn.org/badges/frameworks-develop.svg)
+[![Translate](https://www.localcdn.org/badges/translation.svg)](https://hosted.weblate.org/projects/localcdn/localcdn/)
+
+[![CDNs (main branch)](https://www.localcdn.org/badges/cdn-main.svg)](https://www.localcdn.org/badges/cdn-main.svg)
+[![Frameworks (main branch)](https://www.localcdn.org/badges/frameworks-main.svg)](https://www.localcdn.org/badges/frameworks-main.svg)
+
+[![CDNs (develop branch)](https://www.localcdn.org/badges/cdn-develop.svg)](https://www.localcdn.org/badges/cdn-develop.svg)
+[![Frameworks (develop branch)](https://www.localcdn.org/badges/frameworks-develop.svg)](https://www.localcdn.org/badges/frameworks-develop.svg)
 
 A web browser extension (and a fork of Decentraleyes) that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://www.localcdn.org/test/) to find out if you are properly protected. For more information, please read the [tutorial](https://www.localcdn.org/tutorial) or our [Wiki pages](https://codeberg.org/nobody/LocalCDN/wiki). You can also [download](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/) the extension directly from Mozilla and just try it.
 
