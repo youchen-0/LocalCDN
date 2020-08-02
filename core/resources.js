@@ -469,6 +469,23 @@ var resources = {
         'path': 'resources/oclazyload/{version}/ocLazyLoad.min.jsm',
         'type': 'application/javascript'
     },
+    // OwlCarousel (TODO: Deprecated?)
+    'owlCarouselJS': {
+        'path': 'resources/owl-carousel/{version}/owl.carousel.min.jsm',
+        'type': 'application/javascript'
+    },
+    'owlCarouselCSStheme': {
+        'path': 'resources/owl-carousel/{version}/owl.theme.min.css',
+        'type': 'text/css'
+    },
+    'owlCarouselCSStransitions': {
+        'path': 'resources/owl-carousel/{version}/owl.transitions.min.css',
+        'type': 'text/css'
+    },
+    'owlCarouselCSScarousel': {
+        'path': 'resources/owl-carousel/{version}/owl.carousel.min.css',
+        'type': 'text/css'
+    },
     // P2P Media Loader Core
     'p2pMediaLoaderCore': {
         'path': 'resources/p2p-media-loader-core/{version}/p2p-media-loader-core.min.jsm',
@@ -636,6 +653,11 @@ var resources = {
     // Vue.js
     'vueJs': {
         'path': 'resources/vue/{version}/vue.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Waypoints (jQuery)
+    'jQueryWaypoints': {
+        'path': 'resources/waypoints/{version}/jquery.waypoints.min.jsm',
         'type': 'application/javascript'
     },
     // WebComponents.js

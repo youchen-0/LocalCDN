@@ -1,9 +1,15 @@
 # LocalCDN
 
-[![Translate](https://hosted.weblate.org/widgets/localcdn/-/localcdn/svg-badge.svg)](https://hosted.weblate.org/projects/localcdn/localcdn/)
+[![Translate](https://www.localcdn.org/badges/translation.svg)](https://hosted.weblate.org/projects/localcdn/localcdn/) [![CDNs](https://www.localcdn.org/badges/cdn.svg)](https://codeberg.org/nobody/LocalCDN/src/branch/main/core/mappings.js) [![Frameworks](https://www.localcdn.org/badges/frameworks.svg)](https://codeberg.org/nobody/LocalCDN/src/branch/main/resources/)
 
 A web browser extension (and a fork of Decentraleyes) that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following [testing utility](https://www.localcdn.org/test/) to find out if you are properly protected. For more information, please read the [tutorial](https://www.localcdn.org/tutorial) or our [Wiki pages](https://codeberg.org/nobody/LocalCDN/wiki). You can also [download](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/) the extension directly from Mozilla and just try it.
 
+## How does it work?
+LocalCDN uses redirection for certain requests. There is a [mapping file](https://codeberg.org/nobody/LocalCDN/src/branch/main/core/mappings.js#L71) that lists the source (all CDNs and the path to the frameworks) and a [resource file](https://codeberg.org/nobody/LocalCDN/src/branch/main/core/resources.js#L328) that defines the destination.
+
+Currently only JavaScript and CSS files are redirected. However, some CSS files internally refer to other files, e.g. Font Awesome. All requests are redirected to a local file, e.g. [jQuery](https://codeberg.org/nobody/LocalCDN/src/branch/main/resources/jquery). This is the reason why the extension is currently 10 MB in size. Only if LocalCDN cannot find a local resource (and the option is enabled), a request will be blocked.
+
+An adblocker (uBlock Origin or uMatrix) decides which requests are allowed. Only if your adblocker allows a request, it will be intercepted by LocalCDN. LocalCDN catches the request after an adblocker and not before.
 
 ## Differences between LocalCDN and Decentraleyes
 
@@ -27,7 +33,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 **Advantages of LocalCDN:**
 
-:thumbsup: more frameworks/libraries
+:thumbsup: more frameworks/libraries (> 100 :tada: :tada: :tada:)
 
 :thumbsup: smaller size than other extensions
 

@@ -137,14 +137,16 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
         if (resourcePattern.startsWith(resourceMold)) {
 
-            let targetPath, hostShorthands, version;
+            let targetPath, hostShorthands, versionDelivered, versionRequested;
 
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
 
             // Replace the requested version with the latest depending on major version
-            version = helpers.setLastVersion(targetPath, versionNumber).toString();
-            targetPath = targetPath.replace(versionNumber, version);
+            versionDelivered = helpers.setLastVersion(targetPath, versionNumber).toString();
+            targetPath = targetPath.replace(versionNumber, versionDelivered);
+
+            versionRequested = versionNumber === null ? 'latest' : versionNumber[0];
 
             hostShorthands = shorthands[channelHost];
 
@@ -153,10 +155,10 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
                 let shorthand = hostShorthands[targetPath];
 
                 targetPath = shorthand.path;
-                version = shorthand.version;
+                versionDelivered = shorthand.version;
 
-            } else {
-                version = versionNumber && versionNumber[0] || targetPath.match(Resource.VERSION_EXPRESSION);
+            } else if (versionNumber === null) {
+                versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
             }
 
             // Get bundle name
@@ -172,7 +174,8 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             // Prepare and return a local target.
             return {
                 'source': channelHost,
-                'version': version,
+                'versionRequested': versionRequested,
+                'versionDelivered': versionDelivered,
                 'path': targetPath,
                 'bundle': bundle
             };

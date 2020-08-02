@@ -381,10 +381,21 @@ popup._createInjectionElement = function (injection) {
     nameTextNode = document.createTextNode(`- ${name}`);
     injectionElement.appendChild(nameTextNode);
 
-    if (injection.version !== null) {
+    if (injection.versionRequested !== null) {
         noteElement = document.createElement('span');
         noteElement.setAttribute('class', 'side-note');
-        let versionNode = (injection.version === 'beta') ? ` ${injection.version}` : ` v${injection.version}`;
+
+        let versionNode = '';
+
+        if (injection.versionRequested === injection.versionDelivered) {
+            versionNode = ` v${injection.versionRequested}`;
+        } else if (injection.versionRequested === 'beta') {
+            versionNode = ` ${injection.versionRequested}`;
+        } else if (injection.versionRequested !== 'latest'){
+            versionNode = ` (v${injection.versionRequested} 🡢 v${injection.versionDelivered})`;
+        } else if (injection.versionRequested === 'latest') {
+            versionNode = ` v${injection.versionDelivered}`;
+        }
         noteTextNode = document.createTextNode(versionNode);
         noteElement.appendChild(noteTextNode);
         injectionElement.appendChild(noteElement);

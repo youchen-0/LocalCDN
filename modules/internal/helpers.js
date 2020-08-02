@@ -277,17 +277,17 @@ helpers.setLastVersion = function (type, version) {
      */
 
     if(version !== null && version !== undefined) {
-        let requestVersion = version.toString();
+        version = version.toString();
     }
     if (type.includes('/algoliasearch/3.')) {
         return  '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
-        if (helpers.compareVersion('1.2.19', requestVersion)) return '1.2.19'; // <= v1.2.19
-        else if (helpers.compareVersion('1.2.32', requestVersion)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
-        else if (helpers.compareVersion('1.3.13', requestVersion)) return '1.3.13'; // > 1.2.32 to <= 1.3.13
-        else if (helpers.compareVersion('1.4.14', requestVersion)) return '1.4.14'; // > 1.3.13 to <= 1.4.14
-        else if (helpers.compareVersion('1.5.11', requestVersion)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
-        else if (helpers.compareVersion('1.6.10', requestVersion)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
+        if (helpers.compareVersion('1.2.19', version)) return '1.2.19'; // <= v1.2.19
+        else if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
+        else if (helpers.compareVersion('1.3.13', version)) return '1.3.13'; // > 1.2.32 to <= 1.3.13
+        else if (helpers.compareVersion('1.4.14', version)) return '1.4.14'; // > 1.3.13 to <= 1.4.14
+        else if (helpers.compareVersion('1.5.11', version)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
+        else if (helpers.compareVersion('1.6.10', version)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
         else return '1.7.9'; // >= 1.6.11
     } else if (type.includes('/angularjs-slider/6.')) {
         return  '6.7.0';
@@ -302,11 +302,11 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/angular-stripe-checkout@5.')) {
         return  '5.1.0';
     } else if (type.includes('/angular-ui-bootstrap/')) {
-        if (helpers.compareVersion('0.10.0', requestVersion)) return '0.10.0'; // <= v0.10.0
-        else if (helpers.compareVersion('0.14.3', requestVersion)) return '0.14.3'; // > 0.10.0 <= v0.14.3
+        if (helpers.compareVersion('0.10.0', version)) return '0.10.0'; // <= v0.10.0
+        else if (helpers.compareVersion('0.14.3', version)) return '0.14.3'; // > 0.10.0 <= v0.14.3
         return  '1.3.3'; // > v0.14.0
     } else if (type.includes('/angular-ui-router/')) {
-        if (helpers.compareVersion('0.4.3', requestVersion)) return '0.4.3'; // <= 0.4.3
+        if (helpers.compareVersion('0.4.3', version)) return '0.4.3'; // <= 0.4.3
         else return '1.0.25'; // > 0.4.3
     } else if (type.includes('/angular-ui-utils/0.')) {
         return  '0.1.1';
@@ -331,11 +331,11 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/bootstrap.js/3.')) {
         return  '3.3.7';
     } else if (type.includes('/bootstrap.js/4.')) {
-        return  '4.4.1';
+        return  '4.5.0';
     } else if (type.includes('/bootstrap.css/3.')) {
         return  '3.3.7';
     } else if (type.includes('/bootstrap.css/4.')) {
-        return  '4.4.1';
+        return  '4.5.0';
     } else if (type.includes('/bootstrap-daterangepicker/2.')) {
         return  '2.1.27';
     } else if (type.includes('/bootstrap-datepicker/1.')) {
@@ -379,14 +379,14 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/fontawesome/4.')) {
         return  '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
-        return  '5.13.1';
+        return  '5.14.0';
     } else if (type.includes('/hls.js/')) {
         return  '0.13.2';
     } else if (type.includes('/jets/0.')) {
         return  '0.14.1';
     } else if (type.includes('/jquery/1.')) {
-        if (helpers.compareVersion('1.7.1', requestVersion)) return '1.7.1'; // <= v1.7.1
-        else if (helpers.compareVersion('1.8.3', requestVersion)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
+        if (helpers.compareVersion('1.7.1', version)) return '1.7.1'; // <= v1.7.1
+        else if (helpers.compareVersion('1.8.3', version)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
         else return '1.12.4'; // >= 1.8.4
     } else if (type.includes('/jquery/1.8.')) {
         return  '1.8.3';
@@ -397,7 +397,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
         return  '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
-        if (helpers.compareVersion('1.8.18', requestVersion)) return '1.8.18'; // <= v1.8.18
+        if (helpers.compareVersion('1.8.18', version)) return '1.8.18'; // <= v1.8.18
         else return '1.12.1'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
         return  '2.70';
@@ -442,10 +442,12 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/moment.js/2.')) {
         return  '2.24.0';
     } else if (type.includes('/mootools/1.')) {
-        if (helpers.compareVersion('1.4.5', requestVersion)) return '1.4.5'; // <= v1.4.5
+        if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
         else return '1.6.0'; // > 1.4.5
     } else if (type.includes('/oclazyload/1.')) {
         return  '1.1.0';
+    } else if (type.includes('/owl-carousel/1.')) {
+        return  '1.3.3';
     } else if (type.includes('p2p-media-loader-core')) {
         return  '0.6.2';
     } else if (type.includes('/page.js/1.')) {
@@ -508,6 +510,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.0.28';
     } else if (type.includes('/vue/2.')) {
         return  '2.6.11';
+    } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
+        return  '4.0.0';
     } else if (type.includes('webfont')) {
         return  '1.6.28';
     } else if (type.includes('/webrtc-adapter/6.')) {
@@ -539,6 +543,11 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'owl.transitions.min.css': 'OwlCarousel (CSS Transitions)',
+    'owl.theme.min.css': 'OwlCarousel (CSS Theme)',
+    'owl.carousel.min.css': 'OwlCarousel (CSS)',
+    'owl.carousel.min.jsm': 'OwlCarousel (JS)',
+    'jquery.waypoints.min.jsm': 'Waypoints (jQuery)',
     'bootstrap-datepicker3.standalone.min.css': 'Bootstrap Datepicker 3 (CSS)',
     'jets.min.jsm': 'Jets.js',
     'lazyload.min.jsm': 'Vanilla Lazyload',
