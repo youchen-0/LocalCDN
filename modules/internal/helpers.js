@@ -588,7 +588,7 @@ const ListOfFiles = {
     'angular-stripe-checkout.jsm': 'Angular Stripe Checkout',
     'angular-touch.min.jsm': 'AngularJS Touch',
     'angular-ui-router.min.jsm': 'Angular UI Router',
-    'angular.min.jsm': 'Angular(JS)',
+    'angular.min.jsm': 'Angular (JS)',
     'animate.min.css': 'Animate (CSS)',
     'autocomplete.min.jsm': 'autocomplete.js',
     'backbone-min.jsm': 'Backbone.js',
