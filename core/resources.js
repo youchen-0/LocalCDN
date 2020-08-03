@@ -596,6 +596,11 @@ var resources = {
         'path': 'resources/spin.js/{version}/spin.min.jsm',
         'type': 'application/javascript'
     },
+    // stickyfill
+    'stickyfill': {
+        'path': 'resources/stickyfill/{version}/stickyfill.min.jsm',
+        'type': 'application/javascript'
+    },
     // Store.js
     'storeJS': {
         'path': 'resources/store.js/{version}/store.legacy.min.jsm',

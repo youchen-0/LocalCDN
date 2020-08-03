@@ -292,6 +292,7 @@ var mappings = {
             'slick-carousel/{version}/slick.min.js': resources.slickCarouselJS,
             'slick-carousel/{version}/slick.js': resources.slickCarouselJS,
             'spin.js/{version}/spin.min.js': resources.spinJS,
+            'stickyfill/{version}/stickyfill.': resources.stickyfill,
             'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'Swiper/{version}/css/swiper.': resources.swiperCSS,

@@ -484,6 +484,10 @@ helpers.setLastVersion = function (type, version) {
         return  '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
         return  '2.3.2';
+    } else if (type.includes('/stickyfill/1.')) {
+        return  '1.1.4';
+    } else if (type.includes('/stickyfill/2.')) {
+        return  '2.1.0';
     } else if (type.includes('/store.js/2.')) {
         return  '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
@@ -545,6 +549,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'stickyfill.min.jsm': 'Stickyfill',
     'jquery.mousewheel.min.jsm': 'jQuery Mousewheel',
     'a1f20be65b.css': 'Font Awesome (CSS)',
     'a1f20be65b.jsm': 'Font Awesome (JS)',
