@@ -368,6 +368,11 @@ var resources = {
         'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Tooltipster
+    'jQueryTooltipster': {
+        'path': 'resources/tooltipster/{version}/js/jquery.tooltipster.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',

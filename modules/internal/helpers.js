@@ -500,6 +500,8 @@ helpers.setLastVersion = function (type, version) {
         return  '5.4.2';
     } else if (type.includes('/tether/1.')) {
         return  '1.4.7';
+    } else if (type.includes('/tooltipster/3.')) {
+        return  '3.3.0';
     } else if (type.includes('/twitter-bootstrap/4.')) {
         return  '4.5.0';
     } else if (type.includes('/twitter-bootstrap/3.')) {
@@ -551,6 +553,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jquery.tooltipster.min.jsm': 'Tooltipster',
     'jquery.jscrollpane.min.jsm': 'jScrollPane',
     'stickyfill.min.jsm': 'Stickyfill',
     'jquery.mousewheel.min.jsm': 'jQuery Mousewheel',
