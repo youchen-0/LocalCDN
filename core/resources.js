@@ -670,6 +670,14 @@ var resources = {
         'path': 'resources/webfont/{version}/webfontloader.jsm',
         'type': 'application/javascript'
     },
+    'webfontloaderFontawesomeJS': {
+        'path': 'resources/webfont/a1f20be65b.jsm',
+        'type': 'application/javascript'
+    },
+    'webfontloaderFontawesomeCSS': {
+        'path': 'resources/webfont/a1f20be65b.css',
+        'type': 'text/css'
+    },
     // WebRTC adapter
     'webRTCadapter': {
         'path': 'resources/webrtc-adapter/{version}/adapter.min.jsm',

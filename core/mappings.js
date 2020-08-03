@@ -759,9 +759,12 @@ var mappings = {
     },
     // Font Awesome CDN
     'use.fontawesome.com': {
-        '/releases/v': {
-            '{version}/css/': resources.fontawesome5CSS,
-            '{version}/js/': resources.fontawesome5JS
+        '/': {
+            'releases/v{version}/css/': resources.fontawesome5CSS,
+            'releases/v{version}/js/': resources.fontawesome5JS,
+            'a1f20be65b.js': resources.webfontloaderFontawesomeJS,
+            'a1f20be65b.css': resources.webfontloaderFontawesomeCSS,
+            'webfontloader/{version}/webfontload': resources.webfontloader
         }
     },
     // Cloudflare Rocket-Loader

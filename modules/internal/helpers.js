@@ -543,6 +543,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'a1f20be65b.css': 'Font Awesome (CSS)',
+    'a1f20be65b.jsm': 'Font Awesome (JS)',
     'owl.transitions.min.css': 'OwlCarousel (CSS Transitions)',
     'owl.theme.min.css': 'OwlCarousel (CSS Theme)',
     'owl.carousel.min.css': 'OwlCarousel (CSS)',
