@@ -409,6 +409,8 @@ helpers.setLastVersion = function (type, version) {
         return  '1.4.1';
     } else if (type.includes('/jquery-migrate/3.')) {
         return  '3.1.0';
+    } else if (type.includes('/jquery-mousewheel/3.')) {
+        return  '3.1.13';
     } else if (type.includes('/jquery-validate/1.')) {
         return  '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
@@ -543,6 +545,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jquery.mousewheel.min.jsm': 'jQuery Mousewheel',
     'a1f20be65b.css': 'Font Awesome (CSS)',
     'a1f20be65b.jsm': 'Font Awesome (JS)',
     'owl.transitions.min.css': 'OwlCarousel (CSS Transitions)',

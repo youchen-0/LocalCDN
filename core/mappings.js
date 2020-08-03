@@ -249,6 +249,7 @@ var mappings = {
             'jquery-modal/{version}/jquery.modal.min.js': resources.jQueryModalJS,
             'jquery-modal/{version}/jquery.modal.css': resources.jQueryModalCSS,
             'jquery-modal/{version}/jquery.modal.min.css': resources.jQueryModalCSS,
+            'jquery-mousewheel/{version}/jquery.mousewheel.min.js': resources.jqueryMousewheelJS,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,

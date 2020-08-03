@@ -358,6 +358,11 @@ var resources = {
         'path': 'resources/jquery-modal/{version}/jquery.modal.min.css',
         'type': 'text/css'
     },
+    // jqueryMousewheelJS
+    'jqueryMousewheelJS': {
+        'path': 'resources/jquery-mousewheel/{version}/jquery.mousewheel.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Tablesorter
     'jQueryTablesorter': {
         'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
