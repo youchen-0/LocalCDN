@@ -392,7 +392,7 @@ popup._createInjectionElement = function (injection) {
         } else if (injection.versionRequested === 'beta') {
             versionNode = ` ${injection.versionRequested}`;
         } else if (injection.versionRequested !== 'latest'){
-            versionNode = ` (v${injection.versionRequested} 🡢 v${injection.versionDelivered})`;
+            versionNode = ` (v${injection.versionRequested} » v${injection.versionDelivered})`;
         } else if (injection.versionRequested === 'latest') {
             versionNode = ` v${injection.versionDelivered}`;
         }
