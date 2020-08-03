@@ -373,6 +373,11 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    // jScrollPane
+    'jScrollPane': {
+        'path': 'resources/jScrollPane/{version}/jquery.jscrollpane.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI Themes
     'jQueryUiThemes': {
         'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
