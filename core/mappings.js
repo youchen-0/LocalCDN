@@ -60,9 +60,9 @@ var mappings = {
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
-            'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfont.': resources.webfontloader,
             'webfont/{version}/webfontloader.js': resources.webfontloader,
-            'webfont/1/webfont.js': resources.webfont
+            'webfont/1/webfont.js': resources.webfontloader
         }
     },
     // Microsoft Ajax CDN
@@ -311,8 +311,8 @@ var mappings = {
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
-            'webfont/{version}/webfont.js': resources.webfont,
-            'webfont/{version}/webfontloader.js': resources.webfont,
+            'webfont/{version}/webfont.js': resources.webfontloader,
+            'webfont/{version}/webfontloader.js': resources.webfontloader,
             'webrtc-adapter/{version}/adapter.min.js': resources.webRTCadapter,
             'wow/{version}/wow.min.': resources.wow
         }
@@ -378,7 +378,7 @@ var mappings = {
             'urlize.js/urlize.js': resources.urlize,
             'vanilla-lazyload@{version}/dist/lazyload.': resources.vanillaLazyload,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
-            'webfontloader@{version}/webfontloader.': resources.webfont
+            'webfontloader@{version}/webfontloader.': resources.webfontloader
         },
         '/': {
             'algoliasearch/3/algoliasearch.': resources.algoliaSearch,
@@ -407,7 +407,7 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,
-            'webfontloader/{version}/webfont': resources.webfont
+            'webfontloader/{version}/webfont': resources.webfontloader
         },
         // TEMPORARY SOLUTION
         '/g/': {
@@ -505,8 +505,8 @@ var mappings = {
             'swfobject/{version}/swfobject_src.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // Baidu CDN
@@ -540,8 +540,8 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         },
         '/libs/': {
             'angular.js/{version}/angular-animate.': resources.angularAnimate,
@@ -570,8 +570,8 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // Staticfile CDN
@@ -602,8 +602,8 @@ var mappings = {
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // BootCDN
@@ -636,12 +636,12 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont,
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader,
             'ember.js/{version}/ember.': resources.ember,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
-            'webfont/{version}/webfontloader.': resources.webfont
+            'webfont/{version}/webfontloader.': resources.webfontloader
         }
     },
     // Tencent Public Libraries
@@ -692,8 +692,8 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // Sina Public Resources
@@ -714,8 +714,8 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore/{version}/underscore.': resources.underscore,
             'underscore/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // UpYun Library

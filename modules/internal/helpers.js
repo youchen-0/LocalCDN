@@ -676,6 +676,6 @@ const ListOfFiles = {
     'urlize.jsm': 'urlize',
     'vue.jsm': 'Vue.js',
     'webcomponents-loader.jsm': 'WebComponents Loader (JS)',
-    'webfont.jsm': 'Web Font Loader',
+    'webfontloader.jsm': 'Web Font Loader',
     'wow.min.jsm': 'WOW'
 };
