@@ -440,6 +440,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/materialize/1.')) {
         return  '1.0.0';
     } else if (type.includes('/materialize/0.')) {
+        if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return  '0.100.2';
     } else if (type.includes('/modernizr/2.')) {
         return  '2.8.3';
