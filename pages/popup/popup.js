@@ -387,7 +387,6 @@ popup._createInjectionElement = function (injection) {
 
         let versionNode = '';
 
-        if (injection.versionRequested === injection.versionDelivered) {
         if (injection.versionRequested === undefined || injection.versionDelivered === undefined) {
             versionNode = '';
         } else if (injection.versionRequested === injection.versionDelivered) {
