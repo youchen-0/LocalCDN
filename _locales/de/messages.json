@@ -138,5 +138,13 @@
     "chooseIconStyle": {
         "message": "Wähle ein Icon für diese Erweiterung",
         "description": "Choose an icon for this extension"
+    },
+    "internalStatisticsTitle": {
+        "message": "Interne Statistik",
+        "description": "Internal statistics"
+    },
+    "internalStatisticsDescription": {
+        "message": "Diese Funktion befindet sich derzeit in einem experimentellen Stadium. Keine Datenübertragung. Es ist alles lokal auf Ihrem Gerät.",
+        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     }
 }

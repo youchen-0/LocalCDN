@@ -138,5 +138,13 @@
     "chooseIconStyle": {
         "message": "Velg et ikon for denne utvidelsen",
         "description": "Choose an icon for this extension"
+    },
+    "internalStatisticsTitle": {
+        "message": "",
+        "description": "Internal statistics"
+    },
+    "internalStatisticsDescription": {
+        "message": "",
+        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     }
 }

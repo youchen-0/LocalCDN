@@ -138,5 +138,13 @@
     "chooseIconStyle": {
         "message": "选择此扩展程序的图标",
         "description": "Choose an icon for this extension"
+    },
+    "internalStatisticsTitle": {
+        "message": "",
+        "description": "Internal statistics"
+    },
+    "internalStatisticsDescription": {
+        "message": "",
+        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     }
 }
