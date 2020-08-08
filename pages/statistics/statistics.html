@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LocalCDN Statistics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="statistics.css">
+        <link rel="stylesheet" type="text/css" href="../base.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+    <body>
+        <script src="../../modules/internal/helpers.js"></script>
+        <script src="../../core/constants.js"></script>
+        <script src="statistics.js"></script>
+        <h1>Statistic</h1>
+        <div id="btn-statistics" class="content">
+            <button id="btn-day" type="button" data-option="day">1 Day</button>
+            <button id="btn-week" type="button" data-option="week">1 Week</button>
+            <button id="btn-month" type="button" data-option="month">1 Month</button>
+            <button id="btn-year" type="button" data-option="year">1 Year</button>
+            <button id="btn-delete" type="button" data-option="delete">Delete</button>
+            <p id="p-injections"><span id="spn-"></span><span></span></p>
+        </div>
+        <div id="tbl-statistics-overview" class="content">
+            <table aria-describedby="Overview of average and total injections and contacted CDNs">
+                <thead>
+                    <tr><th scope="col">Description</th><th scope="col">Quantity</th></tr>
+                </thead>
+                <tbody id="tbody-overview">
+                </tbody>
+            </table>
+        </div>
+        <div id="tbl-statistics-cdns" class="content">
+            <table aria-describedby="Detailed table of contacted CDNs">
+                <thead>
+                    <tr><th scope="col">CDN</th><th scope="col">Quantity</th></tr>
+                </thead>
+                <tbody id="tbody-cdns">
+                    <tr><td>no data</td><td>-</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tbl-statistics-frameworks" class="content">
+            <table aria-describedby="Detailed table of injected frameworks">
+                <thead>
+                    <tr><th scope="col">Framework</th><th scope="col">Quantity</th></tr>
+                </thead>
+                <tbody id="tbody-frameworks">
+                    <tr><td>no data</td><td>-</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

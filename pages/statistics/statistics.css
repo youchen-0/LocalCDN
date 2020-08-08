@@ -1,0 +1,29 @@
+body {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 0;
+    padding-bottom: 30px;
+}
+
+td:first-child {
+    text-align: left;
+    min-width: 300px;
+}
+
+td {
+    border-top: 1px solid #888;
+    min-width: 50px;
+}
+
+th:first-child {
+    text-align: left;
+}
+
+#all-injections, #tbl-statistics-cdns, #tbl-statistics-frameworks {
+    display: none;
+}
