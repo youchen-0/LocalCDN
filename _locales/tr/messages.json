@@ -140,11 +140,11 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Dahili istatistikler",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Bu işlev şu anda deneysel bir aşamadadır. Veri aktarımı yok. Hepsi aygıtınızda yereldir.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     }
 }
