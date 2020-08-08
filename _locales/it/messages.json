@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "Protegge dal tracciamento tramite CDN centralizzati e «gratuiti».",
+        "message": "Ti protegge dal tracciamento tramite CDN centralizzati e «gratuiti».",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "Quantità di iniezioni di risorse dalla CDN locale sin dall'installazione.",
+        "message": "Numero delle sostituzioni delle risorse tramite la CDN locale dal momento dell'installazione.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -12,15 +12,15 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Mostra il numero di iniezioni sull'icona",
+        "message": "Mostra il numero di sostituzioni sull'icona",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Mostra il numero di risorse iniettate sull'icona dell'estensione.",
+        "message": "Mostra il numero di risorse sostituite sull'icona dell'estensione.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Blocca le richieste di risorse mancanti",
+        "message": "Blocca le richieste per le risorse mancanti",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -36,7 +36,7 @@
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Togli i metadati dalle richieste consentite",
+        "message": "Rimuovi i metadati dalle richieste consentite",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Inserisci i domini per disabilitarci LocalCDN. Separare più voci con punti e virgola (;).",
+        "message": "Inserisci i domini per cui disabilitare LocalCDN. Separa le differenti voci fra loro con un punto e virgola (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -60,7 +60,7 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "Nel caso stessi utilizzando uBlock o uMatrix è possibile generare le regole qui. È necessario aggiungere queste regole manualmente in uBlock o uMatrix.",
+        "message": "Nel caso stessi utilizzando uBlock Origin o uMatrix è possibile generare le regole qui. È necessario aggiungere queste regole manualmente in uBlock Origin o uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Abilita l'accesso alla console del browser",
+        "message": "Mostra i log nella console del browser",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Apri la Console del browser ( CTRL + SHIFT + J ) per mostrare le risorse mancanti.",
+        "message": "Apri la \"Console del browser\" ( CTRL + SHIFT + J ) per mostrare le risorse mancanti.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -108,11 +108,11 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Abilita questa opzione per applicare sempre il filtro HTML. I domini nella lista verranno ignorati. Se questa opzione è disabilitata, il filtro HTML verrà applicato solamente ai domini nella lista.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Questa funzione può interrompere i siti Web. Si prega di notare le informazioni sulla pagina Wiki.",
+        "message": "Questa funzione può rompere alcuni siti Web. Si prega di notare le informazioni sulla pagina della Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -120,7 +120,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Inserisci i domini che verranno considerati o ignorati dal filtro HTML. Separa le differenti voci fra loro con un punto e virgola (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -128,15 +128,15 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Blocca i font di Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Se le richieste per le risorse mancanti sono abilitate allora le connessioni verso \"fonts.googleapis.com\" non verranno bloccate. Abilita questa opzione per bloccare quelle richieste.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Scegli un'icona per questa estensione",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {

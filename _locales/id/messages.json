@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "Melindungi Anda dari pelacakan distribusi konten \"gratis\" dan terpusat.",
+        "message": "Melindungi anda dari pelacakan distribusi konten \"gratis\" dan terpusat.",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "Jumlah penyematan sumber daya Jaringan Distribusi Konten lokal sejak pemasangan.",
+        "message": "Jumlah injeksi sumber daya Jaringan Distribusi Konten lokal sejak pemasangan.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -12,11 +12,11 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Tampilkan jumlah penyematan pada ikon",
+        "message": "Tampilkan jumlah injeksi pada ikon",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Tampilkan jumlah sumber yang disematkan pada ekstensi ikon.",
+        "message": "Tampilkan jumlah injeksi sumber daya pada ekstensi ikon.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -28,15 +28,15 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Nonaktifkan tautan pra pengambilan",
+        "message": "Nonaktifkan pra-ambil tautan",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Mencegah permintaan yang tidak diizinkan bocor ke jaringan pengiriman.",
+        "message": "Mencegah permintaan yang dicekal bocor ke jaringan pengiriman.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Kupas metadata dari permintaan yang diizinkan",
+        "message": "Buang data meta dari permintaan yang diizinkan",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Cegah pemeriksaan domain",
+        "message": "Nonaktifkan LocalCDN untuk domain ini:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -52,91 +52,91 @@
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "Canggih",
+        "message": "Lanjutan",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Buat set aturan untuk uBlock atau uMatrix",
+        "message": "Buat aturan untuk uBlock atau uMatrix",
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "Jika anda menggunakan uBlock Origin atau uMatrix, anda bisa membuat aturannya di sini. Anda harus manambahkan aturan ini secara manual ke uBlock Origin atau uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Terakhir diperbarui:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Salin",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Aktifkan pencatatan log di dalam konsol peramban",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Buka \"Konsol Peramban\" ( CTRL + SHIFT + J ) untuk menampilkan sumber daya yang hilang.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "",
+        "message": "Nonaktifkan catatan rilis",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "",
+        "message": "Aktifkan opsi ini untuk berhenti menerima informasi tentang fitur baru LocalCDN. Termasuk info tentang aturan baru uBlock/uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Fitur ini akan membuat situs web tidak bekerja dengan benar. Jangan membiarkannya aktif, kecuali jika anda siap menambahkan secara manual semua domain yang terdampak ke dalam daftar putih.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Nonaktifkan",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filter kode sumber HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Donasi",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inversi filter HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Aktifkan opsi untuk selalu menerapkan filter HTML. Domain dalam daftar akan diabaikan. Jika opsi ini dinonaktifkan, filter HTML hanya akan diterapkan ke domain di dalam daftar.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Fungsi ini bisa membuat situs web tidak bekerja dengan benar. Silakan baca informasinya pada halaman Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Jangan terapkan filter HTML untuk domain ini:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Masukkan domain yang terdampak atau diabaikan oleh filter HTML. Pisahkan beberapa entri dengan titik koma (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Terapkan filter HTML untuk domain ini:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Blokir Fon Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Jika permintaan untuk sumber daya yang hilang diizinkan, koneksi ke \"fonts.googleapis.com\" tidak akan diblokir. Aktifkan opsi ini untuk memblokir permintaan.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Pilih ikon untuk ekstensi ini",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
