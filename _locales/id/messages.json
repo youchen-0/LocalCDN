@@ -140,11 +140,11 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Statistik internal",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Fungsi ini masih dalam tahap eksperimental. Tidak ada data yang dikirim. Semuanya lokal pada perangkat anda.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     }
 }
