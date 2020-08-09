@@ -666,40 +666,6 @@ var mappings = {
             'jquery/{version}/jquery.': resources.jQuery,
         }
     },
-    // Qihoo 360 CDN
-    'lib.baomitu.com': {
-        '/': {
-            'angular.js/{version}/angular-animate.': resources.angularAnimate,
-            'angular.js/{version}/angular-aria.': resources.angularAria,
-            'angular.js/{version}/angular-cookies.': resources.angularCookies,
-            'angular.js/{version}/angular-loader.': resources.angularLoader,
-            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
-            'angular.js/{version}/angular-messages.': resources.angularMessages,
-            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
-            'angular.js/{version}/angular-resource.': resources.angularResource,
-            'angular.js/{version}/angular-route.': resources.angularRoute,
-            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
-            'angular.js/{version}/angular-touch.': resources.angularTouch,
-            'angular.js/{version}/angular.': resources.angular,
-            'backbone.js/{version}/backbone.': resources.backbone,
-            'backbone.js/{version}/backbone-min.': resources.backbone,
-            'dojo/{version}/dojo.': resources.dojo,
-            'ember.js/{version}/ember.min.js': resources.ember.js,
-            'ext-core/{version}/ext-core.': resources.extCore,
-            'jquery/{version}/jquery.': resources.jQuery,
-            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
-            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
-            'modernizr/{version}/modernizr.': resources.modernizr,
-            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
-            'prototype/{version}/prototype.': resources.prototypeJS,
-            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
-            'swfobject/{version}/swfobject.': resources.swfobject,
-            'underscore.js/{version}/underscore.': resources.underscore,
-            'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfontloader,
-            'webfont/{version}/webfont_debug.': resources.webfontloader
-        }
-    },
     // Sina Public Resources
     'lib.sinaapp.com': {
         '/js/': {
@@ -803,3 +769,22 @@ mappings['unpkg.com'] = {
 mappings['pagecdn.io'] = {
     '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
 };
+
+// loli.net [Mirror]
+mappings['cdn.css.net'] = {
+    '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
+};
+
+mappings['cdnjs.loli.net'] = mappings['cdnjs.cloudflare.com'];
+
+mappings['ajax.loli.net'] = mappings['ajax.googleapis.com'];
+
+mappings['fonts.loli.net'] = mappings['fonts.googleapis.com'];
+
+// Qihoo 360 CDN [Mirror]
+mappings['lib.baomitu.com'] = {
+    '/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
+}
+
+// Boot CDN New [Mirror]
+mappings['cdn.bootcdn.net'] = mappings['cdnjs.cloudflare.com'];
