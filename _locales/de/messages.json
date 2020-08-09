@@ -140,11 +140,11 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "Interne Statistik",
+        "message": "Interne Statistiken",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Diese Funktion befindet sich derzeit in einem experimentellen Stadium. Keine Datenübertragung. Es ist alles lokal auf Ihrem Gerät.",
+        "message": "Diese Funktion befindet sich derzeit in einem experimentellen Stadium. Keine Datenübertragung. Alles wird lokal auf deinem Gerät gespeichert.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
