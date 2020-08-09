@@ -9,21 +9,18 @@ table {
     width: 100%;
 }
 
+td {
+    border-top: 1px solid #888;
+    min-width: 50px;
+    text-align: right;
+}
+
 td:first-child {
     text-align: left;
 }
 
-td {
-    border-top: 1px solid #888;
-    min-width: 50px;
-}
-
 th:first-child {
     text-align: left;
-}
-
-#statistics-overview, #tbl-statistics-cdns, #tbl-statistics-frameworks {
-    display: none;
 }
 
 #statistics-overview {

@@ -28,22 +28,16 @@ statistics._onDocumentLoaded = function () {
 
     // Default view is 'today'
     statistics._dateRange = [new Date().toISOString().slice(0, 10)];
-    document.getElementById('date-range').value = 'day';
+    document.getElementById('date-range').value = statistics._dateUnit;
 
     statistics._registerListener();
     statistics._getStatistics().then(statistics._renderContents);
 };
 
 statistics._renderContents = function () {
-    if (statistics._data === undefined || statistics._dateRange.length === 0) {
-        statistics._showData(false);
-        return false;
-    }
-
     statistics._filterAndSortData();
     statistics._determineInjections();
 
-    statistics._showData(true);
     statistics._clearTables();
     statistics._determineInjections();
     statistics._generateTable(statistics._dataSortedCDNs, 'cdns');
@@ -185,7 +179,6 @@ statistics._handlerDateRange = function ({ target }) {
         statistics._getStatistics().then(statistics._setDateRange);
     } else if (type === 'delete') {
         statistics._deleteStatistic();
-        statistics._showData(false);
     }
 };
 
@@ -195,15 +188,6 @@ statistics._deleteStatistic = function () {
             [Setting.INTERNAL_STATISTICS_DATA]: {},
         });
     }
-};
-
-statistics._showData = function (type) {
-    let attr = type === true ? 'block' : 'none';
-
-    document.getElementById('statistics-overview').style.display = attr;
-    document.getElementById('tbl-statistics-cdns').style.display = attr;
-    document.getElementById('tbl-statistics-frameworks').style.display = attr;
-    document.getElementById('btn-delete').disabled = !type;
 };
 
 statistics._registerListener = function () {
