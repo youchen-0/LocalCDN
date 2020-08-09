@@ -385,7 +385,7 @@ popup._createInjectionElement = function (injection) {
         noteElement = document.createElement('span');
         noteElement.setAttribute('class', 'side-note');
 
-        let versionNode = '';
+        let versionNode;
 
         if (injection.versionRequested === undefined || injection.versionDelivered === undefined) {
             versionNode = '';
@@ -397,6 +397,8 @@ popup._createInjectionElement = function (injection) {
             versionNode = ` (v${injection.versionRequested} » v${injection.versionDelivered})`;
         } else if (injection.versionRequested === 'latest') {
             versionNode = ` v${injection.versionDelivered}`;
+        } else {
+            versionNode = ''
         }
         noteTextNode = document.createTextNode(versionNode);
         noteElement.appendChild(noteTextNode);
