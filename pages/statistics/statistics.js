@@ -183,7 +183,8 @@ statistics._handlerDateRange = function ({ target }) {
 };
 
 statistics._deleteStatistic = function () {
-    if (confirm('Are you sure you want to delete the statistics?')) {
+    let text = chrome.i18n.getMessage("dialogConfirmDeleteStatistics");
+    if (confirm(text)) {
         chrome.storage.local.set({
             [Setting.INTERNAL_STATISTICS_DATA]: {},
         });

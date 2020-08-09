@@ -178,5 +178,9 @@
     "labelInjectedFrameworks": {
         "message": "Replaced frameworks",
         "description": "Followed by a number of injections within a specific period."
+    },
+    "dialogConfirmDeleteStatistics": {
+        "message": "Are you sure you want to delete the statistics?",
+        "description": "Are you sure you want to delete the statistics?"
     }
 }

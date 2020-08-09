@@ -178,5 +178,9 @@
     "labelInjectedFrameworks": {
         "message": "",
         "description": "Followed by a number of injections within a specific period."
+    },
+    "dialogConfirmDeleteStatistics": {
+        "message": "",
+        "description": "Are you sure you want to delete the statistics?"
     }
 }
