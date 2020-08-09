@@ -23,6 +23,13 @@ var statistics = {};
  * Private Methods
  */
 statistics._onDocumentLoaded = function () {
+    helpers.insertI18nContentIntoDocument(document);
+    helpers.insertI18nTitlesIntoDocument(document);
+
+    // Default view is 'today'
+    statistics._dateRange = [new Date().toISOString().slice(0, 10)];
+    document.getElementById('date-range').value = 'day';
+
     statistics._registerListener();
     statistics._getStatistics().then(statistics._renderContents);
 };
@@ -38,7 +45,7 @@ statistics._renderContents = function () {
 
     statistics._showData(true);
     statistics._clearTables();
-    statistics._generateTable(statistics._dataOverview, 'overview');
+    statistics._determineInjections();
     statistics._generateTable(statistics._dataSortedCDNs, 'cdns');
     statistics._generateTable(statistics._dataSortedFrameworks, 'frameworks');
 };
@@ -127,11 +134,10 @@ statistics._determineInjections = function () {
         }
     });
     avg = sum / days > 0 ? sum / days : 0;
+    avg = Math.round((avg + Number.EPSILON) * 100) / 100;
 
-    // Preparation for generateTable()
-    let avgInjections = ['Average (injections/days)', avg];
-    let injectedFrameworks = ['Injected frameworks', sum];
-    statistics._dataOverview.push(avgInjections, injectedFrameworks);
+    document.getElementById('avg-quantity').textContent = isNaN(avg) ? '-' : avg;
+    document.getElementById('quantity-injected-frameworks').textContent = isNaN(sum) ? '-' : sum;
 };
 
 statistics._getStatistics = function () {
@@ -172,12 +178,12 @@ statistics._displayNameOfFramework = function (str, type) {
     return str;
 };
 
-statistics._handlerButton = function ({ target }) {
-    let btnType = target.getAttribute('data-option');
-    if (btnType === 'day' || btnType === 'week' || btnType === 'month' || btnType === 'year') {
-        statistics._dateUnit = btnType;
+statistics._handlerDateRange = function ({ target }) {
+    let type = target.value;
+    if (type === 'day' || type === 'week' || type === 'month' || type === 'year') {
+        statistics._dateUnit = type;
         statistics._getStatistics().then(statistics._setDateRange);
-    } else if (btnType === 'delete') {
+    } else if (type === 'delete') {
         statistics._deleteStatistic();
         statistics._showData(false);
     }
@@ -194,18 +200,17 @@ statistics._deleteStatistic = function () {
 statistics._showData = function (type) {
     let attr = type === true ? 'block' : 'none';
 
-    document.getElementById('tbl-statistics-overview').style.display = attr;
+    document.getElementById('statistics-overview').style.display = attr;
     document.getElementById('tbl-statistics-cdns').style.display = attr;
     document.getElementById('tbl-statistics-frameworks').style.display = attr;
     document.getElementById('btn-delete').disabled = !type;
 };
 
 statistics._registerListener = function () {
-    document.getElementById('btn-day').addEventListener('click', statistics._handlerButton);
-    document.getElementById('btn-week').addEventListener('click', statistics._handlerButton);
-    document.getElementById('btn-month').addEventListener('click', statistics._handlerButton);
-    document.getElementById('btn-year').addEventListener('click', statistics._handlerButton);
-    document.getElementById('btn-delete').addEventListener('click', statistics._handlerButton);
+    document.getElementById('date-range').addEventListener('change', statistics._handlerDateRange);
+    document.getElementById('btn-delete').addEventListener('click', function () {
+        statistics._handlerDateRange({ target: { value: 'delete' } });
+    });
 };
 
 /**
