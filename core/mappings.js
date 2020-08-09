@@ -27,7 +27,7 @@
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-var lastMappingUpdate = "2020-06-06";
+var lastMappingUpdate = "2020-08-09";
 
 var mappings = {
 
