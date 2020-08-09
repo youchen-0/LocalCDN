@@ -146,5 +146,37 @@
     "internalStatisticsDescription": {
         "message": "Diese Funktion befindet sich derzeit in einem experimentellen Stadium. Keine Datenübertragung. Es ist alles lokal auf Ihrem Gerät.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+    },
+    "headerStatistics": {
+        "message": "Statistik",
+        "description": "Statistics. The header of a statistics page."
+    },
+    "labelToday": {
+        "message": "Heute",
+        "description": "Statistics view for today."
+    },
+    "labelPastWeek": {
+        "message": "Letzte Woche",
+        "description": "Statistics view for past week."
+    },
+    "labelPastMonth": {
+        "message": "Letzter Monat",
+        "description": "Statistics view for past month."
+    },
+    "labelPastYear": {
+        "message": "Letztes Jahr",
+        "description": "Statistics view for past year."
+    },
+    "labelDelete": {
+        "message": "Löschen",
+        "description": "Button to delete all statistics data."
+    },
+    "labelAvg": {
+        "message": "Durchschnitt (Injektionen pro Tag)",
+        "description": "Followed by a number of average injections per day within a specific period."
+    },
+    "labelInjectedFrameworks": {
+        "message": "Ersetzte Frameworks",
+        "description": "Followed by a number of injections within a specific period."
     }
 }

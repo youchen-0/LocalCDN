@@ -146,5 +146,37 @@
     "internalStatisticsDescription": {
         "message": "",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+    },
+    "headerStatistics": {
+        "message": "",
+        "description": "Statistics. The header of a statistics page."
+    },
+    "labelToday": {
+        "message": "",
+        "description": "Statistics view for today."
+    },
+    "labelPastWeek": {
+        "message": "",
+        "description": "Statistics view for past week."
+    },
+    "labelPastMonth": {
+        "message": "",
+        "description": "Statistics view for past month."
+    },
+    "labelPastYear": {
+        "message": "",
+        "description": "Statistics view for past year."
+    },
+    "labelDelete": {
+        "message": "",
+        "description": "Button to delete all statistics data."
+    },
+    "labelAvg": {
+        "message": "",
+        "description": "Followed by a number of average injections per day within a specific period."
+    },
+    "labelInjectedFrameworks": {
+        "message": "",
+        "description": "Followed by a number of injections within a specific period."
     }
 }
