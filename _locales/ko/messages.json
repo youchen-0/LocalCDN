@@ -20,7 +20,7 @@
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "존재하지 않는 리소스에 대한 요청을 차단",
+        "message": "존재하지 않는 리소스에 대한 요청을 차단합니다",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Decentraleyes를 사용하지 않을 도메인",
+        "message": "다음 도메인에 대해 LocalCDN 비활성화:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -60,11 +60,11 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "uBlock Origin 또는 uMatrix를 사용하는 경우 여기서 규칙을 생성하십시오. 이러한 규칙은 uBlock Origin 또는 uMatrix에서 수동으로 추가해야 한다.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "최근 업데이트:",
         "description": "Last update:"
     },
     "copyRuleSet": {
@@ -72,71 +72,71 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "브라우저 콘솔에서 로깅 사용",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "누락된 리소스를 표시하려면 \"브라우저 콘솔\" (Ctrl + Shift + J )을 여십시오.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "",
+        "message": "릴리스 정보 사용 안 함",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "",
+        "message": "새 LocalCDN 기능에 대한 정보를 수신하지 않으려면 이 옵션을 설정하십시오. 여기에는 새로운 uBlock/uMatrix 규칙에 대한 정보가 포함된다.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "이 기능은 웹사이트를 파괴합니다. 영향을 받는 도메인을 수동으로 화이트리스트할 준비가 되지 않은 경우 이 도메인을 활성화한 상태로 두지 마십시오.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "사용 안 함",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "HTML 소스 코드 필터링",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "기부",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "HTML 필터 반전",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "HTML 필터를 항상 적용하려면 이 옵션을 실행하십시오. 그러면 목록의 도메인들은 무시될 것 입니다. 이 옵션이 실행 중지된 경우 HTML 필터는 목록의 도메인에만 적용됩니다.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "이 기능은 웹사이트를 파괴할 수 있습니다. Wiki 페이지에 있는 정보를 참고해 두십시오.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "다음 도메인에 HTML 필터를 적용하지 마십시오:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "HTML 필터에서 처리하거나 무시할 도메인을 입력하십시오. 여러 개의 항목을 세미콜론(;)으로 구분하십시오.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "다음 도메인에 HTML 필터 적용:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Google 글꼴 차단",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "누락된 자원에 대한 요청이 허용되면 \"fonts.googleapis.com\"에 대한 연결이 차단되지 않습니다. 이러한 요청을 차단하려면 이 옵션을 실행하십시오.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "이 확장기능의 아이콘을 선택하세요",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
