@@ -51,14 +51,15 @@ statistics._generateTable = function (data, type) {
     }
 
     for (const value of arr) {
-        let row = document.createElement('tr');
+        let row, keyColumn, valueColumn;
 
-        let keyColumn = document.createElement('td');
-        let ppName = statistics._displayNameOfFramework(value[0], type);
-        keyColumn.appendChild(document.createTextNode(ppName));
+        row = document.createElement('tr');
+
+        keyColumn = document.createElement('td');
+        keyColumn.appendChild(statistics._displayNameOfFramework(value[0], type));
         row.appendChild(keyColumn);
 
-        let valueColumn = document.createElement('td');
+        valueColumn = document.createElement('td');
         valueColumn.appendChild(document.createTextNode(value[1]));
         row.appendChild(valueColumn);
 
@@ -156,20 +157,32 @@ statistics._clearTables = function () {
 statistics._displayNameOfFramework = function (str, type) {
     // Is used in generateTable(), but should only be used for frameworks
     if (type === 'frameworks' && str !== 'no data') {
-        let filename = helpers.extractFilenameFromPath(str);
+        let filename, line, lbName, lbVersion, version;
+
+        // Create elements
+        line = document.createElement('p');
+        lbName = document.createElement('span');
+        lbVersion = document.createElement('span');
+
+        filename = helpers.extractFilenameFromPath(str);
         filename = helpers.determineResourceName(filename);
 
-        let version = str.match(Resource.VERSION_EXPRESSION);
-
+        version = str.match(Resource.VERSION_EXPRESSION);
         if (version !== null && version.length > 0) {
-            version = version === 'latest' ? '(' + version + ')' : '(v' + version + ')';
+            version = version === 'latest' ? version : 'v' + version;
         } else {
             version = '';
         }
-        return filename + ' ' + version;
+
+        lbName.appendChild(document.createTextNode(filename));
+        lbVersion.appendChild(document.createTextNode(version));
+        lbVersion.classList.add('version');
+        line.appendChild(lbName);
+        line.appendChild(lbVersion);
+        return line;
     }
     // If type is CDN
-    return str;
+    return document.createTextNode(str);
 };
 
 statistics._handlerDateRange = function ({ target }) {
