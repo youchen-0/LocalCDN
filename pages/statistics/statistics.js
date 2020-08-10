@@ -68,25 +68,42 @@ statistics._generateTable = function (data, type) {
 };
 
 statistics._filterAndSortData = function () {
+    let tmpCDNs, tmpFrameworks;
+
+    tmpCDNs = {};
+    tmpFrameworks = {};
+
     // Purge
     statistics._dataSortedCDNs = {};
     statistics._dataSortedFrameworks = {};
 
     statistics._dateRange.forEach(function (entry) {
         if (entry in statistics._data) {
-            statistics._dataSortedCDNs = Object.assign(statistics._dataSortedCDNs, statistics._data[entry]['cdns']);
-            statistics._dataSortedFrameworks = Object.assign(statistics._dataSortedFrameworks, statistics._data[entry]['frameworks']);
+            statistics._mergeObjects(statistics._data[entry]['cdns'], tmpCDNs);
+            statistics._mergeObjects(statistics._data[entry]['frameworks'], tmpFrameworks);
         }
     });
-    statistics._dataSortedCDNs = Object.entries(statistics._dataSortedCDNs).sort((a, b) => b[1] - a[1]);
-    statistics._dataSortedFrameworks = Object.entries(statistics._dataSortedFrameworks).sort((a, b) => b[1] - a[1]);
+    statistics._dataSortedCDNs = Object.entries(tmpCDNs).sort((a, b) => b[1] - a[1]);
+    statistics._dataSortedFrameworks = Object.entries(tmpFrameworks).sort((a, b) => b[1] - a[1]);
+};
+
+statistics._mergeObjects = function (obj, arr) {
+    for (let [key, value] of Object.entries(obj)) {
+        // If CDN/Framework exists, add it, otherwise create new one
+        if (arr[key]) {
+            arr[key] += value;
+        } else {
+            arr[key] = value;
+        }
+    }
 };
 
 statistics._setDateRange = function () {
-    let today = new Date();
-    let from = new Date();
-    let days;
-    let type = statistics._dateUnit;
+    let today, from, days, type;
+
+    today = new Date();
+    from = new Date();
+    type = statistics._dateUnit;
 
     // Purge
     statistics._dateRange = [];
@@ -115,9 +132,11 @@ statistics._setDateRange = function () {
 statistics._determineInjections = function () {
     // NOTE: Differences between CDNs and frameworks possible.
     //       CDN can be contacted without loading a framework.
-    let sum = 0;
-    let days = 0;
-    let avg = 0;
+    let sum, days, avg;
+
+    sum = 0;
+    days = 0;
+    avg = 0;
     statistics._dataOverview = [];
 
     statistics._dateRange.forEach(function (entry) {
