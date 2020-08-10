@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "«Белый список» доменов. Контент, расположенный на них не будет фильтроваться. Записи (при количестве более одной) разделяются точкой с запятой (;).",
+        "message": "Введите домены, на которых отключен LocalCDN. Разделяйте несколько записей точкой с запятой (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -60,7 +60,7 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "Если вы используете uBlock или uMatrix, вы можете сгенерировать правила здесь и потом добавить их вручную в uBlock или uMatrix.",
+        "message": "Если вы используете uBlock Origin или uMatrix, вы можете сгенерировать правила здесь и потом добавить их вручную в uBlock Origin или uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
@@ -96,7 +96,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Фильтры исходного кода HTML",
+        "message": "Фильтр исходного кода HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -104,83 +104,83 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Инвертировать фильтр HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Включите этот параметр, чтобы всегда применять фильтр HTML. В этом случае домены в списке будут проигнорированы. Если этот параметр отключен, фильтр HTML применяется только к доменам в списке.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Эта функция может сломать веб-сайты. Обратите внимание на информацию на странице Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Не применять HTML-фильтр к этим доменам:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Введите домены, которые будут обрабатываться или игнорироваться фильтром HTML. Разделяйте несколько записей точкой с запятой (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Применять фильтр HTML к этим доменам:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Блокировать Шрифты Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Если запросы на отсутствующие ресурсы разрешены, подключения к fonts.googleapis.com не блокируются. Включите эту опцию, чтобы заблокировать эти запросы.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Выберите значок для этого расширения",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Внутренняя статистика",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Эта функция в настоящее время находится на экспериментальной стадии. Данные не передаются. Все это локально на вашем устройстве.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Статистика",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Сегодня",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "За неделю",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "За месяц",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "За год",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Удалить",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "В среднем (замен в день)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Замененные фреймворки",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Вы уверены, что хотите удалить статистику?",
         "description": "Are you sure you want to delete the statistics?"
     }
 }
