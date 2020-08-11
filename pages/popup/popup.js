@@ -26,9 +26,7 @@ var popup = {};
 /**
  * Private Methods
  */
-
 popup._renderContents = function () {
-
     helpers.insertI18nContentIntoDocument(document);
     helpers.insertI18nTitlesIntoDocument(document);
 
@@ -45,14 +43,12 @@ popup._renderContents = function () {
         .then(popup._determineNegateHtmlFilterOption)
         .then(popup._renderContextualContents);
 
-    if(BrowserType.CHROMIUM) {
+    if (BrowserType.CHROMIUM) {
         document.getElementById('div-manipulateDOM').hidden = true;
     }
-
 };
 
 popup._renderNonContextualContents = function () {
-
     let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel;
 
     versionLabelElement = document.getElementById('version-label');
@@ -71,10 +67,14 @@ popup._renderNonContextualContents = function () {
     optionsButtonElement.addEventListener('mouseup', popup._onOptionsButtonClicked);
     donationButtonElement.addEventListener('mouseup', popup._onDonationButtonClicked);
     infoButtonLabel.addEventListener('mouseup', popup._onInfoButtonClicked);
+
+    if (popup._statisticsStatus) {
+        document.getElementById('statistics-button').style.display = 'block';
+        document.getElementById('statistics-button').addEventListener('mouseup', popup._onStatisticsButtonClicked);
+    }
 };
 
 popup._renderContextualContents = function () {
-
     if (popup._domain !== null) {
         popup._renderDomainWhitelistPanel();
     }
@@ -85,7 +85,6 @@ popup._renderContextualContents = function () {
 };
 
 popup._renderDomainWhitelistPanel = function () {
-
     let websiteContextElement, protectionToggleElement, domainIndicatorElement, manipulateDOMToggleElement, manipulateDOMToggleStyle;
 
     websiteContextElement = document.getElementById('website-context');
@@ -97,33 +96,29 @@ popup._renderDomainWhitelistPanel = function () {
     manipulateDOMToggleElement = document.getElementById('manipulateDOM-toggle-switch');
     manipulateDOMToggleStyle = document.getElementById('toggle-switch-manipulateDOM');
 
-
     if (popup._domainIsWhitelisted === true) {
-
         manipulateDOMToggleElement.disabled = true;
         protectionToggleElement.checked = false;
 
         manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
         protectionToggleElement.addEventListener('click', popup._enableProtection);
-
     } else {
-
         manipulateDOMToggleElement.disabled = false;
         manipulateDOMToggleStyle.setAttribute('class', 'slider');
 
         protectionToggleElement.checked = true;
         protectionToggleElement.addEventListener('click', popup._disableProtection);
 
-        if ( popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
+        if (popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = true;
             manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
         } else if (!popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = false;
             manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
-        } else if ( popup.negateHtmlFilterList &&  popup._domainManipulateDOM) {
+        } else if (popup.negateHtmlFilterList && popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = false;
             manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
-        } else if (!popup.negateHtmlFilterList &&  popup._domainManipulateDOM) {
+        } else if (!popup.negateHtmlFilterList && popup._domainManipulateDOM) {
             manipulateDOMToggleElement.checked = true;
             manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
         }
@@ -133,7 +128,6 @@ popup._renderDomainWhitelistPanel = function () {
 };
 
 popup._renderInjectionPanel = function (groupedInjections) {
-
     let websiteContextElement, injectionOverviewElement;
 
     websiteContextElement = document.getElementById('website-context');
@@ -143,10 +137,9 @@ popup._renderInjectionPanel = function (groupedInjections) {
 };
 
 popup._enableProtection = function () {
-
     let message = {
-        'topic': 'whitelist:remove-domain',
-        'value': popup._domain
+        topic: 'whitelist:remove-domain',
+        value: popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -155,10 +148,9 @@ popup._enableProtection = function () {
 };
 
 popup._disableProtection = function () {
-
     let message = {
-        'topic': 'whitelist:add-domain',
-        'value': popup._domain
+        topic: 'whitelist:add-domain',
+        value: popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -167,10 +159,9 @@ popup._disableProtection = function () {
 };
 
 popup._enableManipulateDOM = function () {
-
     let message = {
-        'topic': 'manipulateDOM:add-domain',
-        'value': popup._domain
+        topic: 'manipulateDOM:add-domain',
+        value: popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -179,10 +170,9 @@ popup._enableManipulateDOM = function () {
 };
 
 popup._disableManipulateDOM = function () {
-
     let message = {
-        'topic': 'manipulateDOM:remove-domain',
-        'value': popup._domain
+        topic: 'manipulateDOM:remove-domain',
+        value: popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -191,16 +181,13 @@ popup._disableManipulateDOM = function () {
 };
 
 popup._determineDomainWhitelistStatus = function () {
-
     return new Promise((resolve) => {
-
         let message = {
-            'topic': 'domain:fetch-is-whitelisted',
-            'value': popup._domain
+            topic: 'domain:fetch-is-whitelisted',
+            value: popup._domain,
         };
 
         chrome.runtime.sendMessage(message, function (response) {
-
             popup._domainIsWhitelisted = response.value;
             resolve();
         });
@@ -208,16 +195,13 @@ popup._determineDomainWhitelistStatus = function () {
 };
 
 popup._determineStatusManipulateDOM = function () {
-
     return new Promise((resolve) => {
-
         let message = {
-            'topic': 'domain:fetch-is-manipulateDOM',
-            'value': popup._domain
+            topic: 'domain:fetch-is-manipulateDOM',
+            value: popup._domain,
         };
 
         chrome.runtime.sendMessage(message, function (response) {
-
             popup._domainManipulateDOM = response.value;
             resolve();
         });
@@ -225,16 +209,13 @@ popup._determineStatusManipulateDOM = function () {
 };
 
 popup._determineResourceInjections = function () {
-
     return new Promise((resolve) => {
-
         let message = {
-            'topic': 'tab:fetch-injections',
-            'value': popup._targetTab.id
+            topic: 'tab:fetch-injections',
+            value: popup._targetTab.id,
         };
 
         chrome.runtime.sendMessage(message, function (response) {
-
             let groupedInjections = popup._groupResourceInjections(response.value);
             popup._resourceInjections = groupedInjections;
 
@@ -244,11 +225,8 @@ popup._determineResourceInjections = function () {
 };
 
 popup._determineTargetTab = function () {
-
     return new Promise((resolve) => {
-
-        chrome.tabs.query({'active': true, 'currentWindow': true}, function (tabs) {
-
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             popup._targetTab = tabs[0];
             popup._domain = helpers.extractDomainFromUrl(tabs[0].url, true);
 
@@ -258,11 +236,8 @@ popup._determineTargetTab = function () {
 };
 
 popup._determineAmountInjected = function () {
-
     return new Promise((resolve) => {
-
         chrome.storage.sync.get(Setting.AMOUNT_INJECTED, function (items) {
-
             popup._amountInjected = items.amountInjected || 0;
             resolve();
         });
@@ -270,24 +245,28 @@ popup._determineAmountInjected = function () {
 };
 
 popup._determineNegateHtmlFilterOption = function () {
-
     return new Promise((resolve) => {
-
         chrome.storage.sync.get(Setting.NEGATE_HTML_FILTER_LIST, function (items) {
-
             popup.negateHtmlFilterList = items.negateHtmlFilterList;
             resolve();
         });
     });
 };
 
-popup._groupResourceInjections = function (injections) {
+popup._getStatisticsStatus = function () {
+    return new Promise((resolve) => {
+        chrome.storage.local.get(Setting.INTERNAL_STATISTICS, function (items) {
+            popup._statisticsStatus = items.internalStatistics || false;
+            resolve();
+        });
+    });
+};
 
+popup._groupResourceInjections = function (injections) {
     let groupedInjections = {};
 
     for (let index in injections) {
-
-        let {source} = injections[index];
+        let { source } = injections[index];
 
         groupedInjections[source] = groupedInjections[source] || [];
         groupedInjections[source].push(injections[index]);
@@ -297,12 +276,10 @@ popup._groupResourceInjections = function (injections) {
 };
 
 popup._createInjectionOverviewElement = function (groupedInjections) {
-
     let injectionOverviewElement = document.createElement('ul');
     injectionOverviewElement.setAttribute('class', 'list');
 
     for (let source in groupedInjections) {
-
         let injectionGroupHeaderElement, injectionGroupElement, cdn;
 
         cdn = groupedInjections[source];
@@ -318,7 +295,6 @@ popup._createInjectionOverviewElement = function (groupedInjections) {
 };
 
 popup._createInjectionGroupHeaderElement = function (source, cdn) {
-
     let injectionGroupHeaderElement, badgeElement, badgeTextNode, cdnNameTextNode;
 
     injectionGroupHeaderElement = document.createElement('li');
@@ -339,7 +315,6 @@ popup._createInjectionGroupHeaderElement = function (source, cdn) {
 };
 
 popup._createInjectionGroupElement = function (source, cdn) {
-
     let injectionGroupElement;
 
     // Filter duplicates
@@ -353,17 +328,14 @@ popup._createInjectionGroupElement = function (source, cdn) {
     injectionGroupElement.setAttribute('class', 'sublist');
 
     for (let injection of filtered) {
-
         let injectionElement = popup._createInjectionElement(injection);
         injectionGroupElement.appendChild(injectionElement);
-
     }
 
     return injectionGroupElement;
 };
 
 popup._createInjectionElement = function (injection) {
-
     let injectionElement, filename, name, nameTextNode, noteElement, noteTextNode;
 
     injectionElement = document.createElement('li');
@@ -372,10 +344,10 @@ popup._createInjectionElement = function (injection) {
     filename = helpers.extractFilenameFromPath(injection.path);
 
     // If bundle empty, use filename
-    if (injection.bundle === ''){
+    if (injection.bundle === '') {
         name = helpers.determineResourceName(filename);
     } else {
-        name = injection.bundle + ' (Bundle)'
+        name = injection.bundle + ' (Bundle)';
     }
 
     nameTextNode = document.createTextNode(`- ${name}`);
@@ -393,12 +365,12 @@ popup._createInjectionElement = function (injection) {
             versionNode = ` v${injection.versionRequested}`;
         } else if (injection.versionRequested === 'beta') {
             versionNode = ` ${injection.versionRequested}`;
-        } else if (injection.versionRequested !== 'latest'){
+        } else if (injection.versionRequested !== 'latest') {
             versionNode = ` (v${injection.versionRequested} » v${injection.versionDelivered})`;
         } else if (injection.versionRequested === 'latest') {
             versionNode = ` v${injection.versionDelivered}`;
         } else {
-            versionNode = ''
+            versionNode = '';
         }
         noteTextNode = document.createTextNode(versionNode);
         noteElement.appendChild(noteTextNode);
@@ -408,24 +380,22 @@ popup._createInjectionElement = function (injection) {
     return injectionElement;
 };
 
-popup._filterDuplicates = function(array, key) {
+popup._filterDuplicates = function (array, key) {
     /**
      * Function to remove duplicates from an array, depending on 'key'.
      * Ignore empty values of the 'key'
      *
      */
-
     let filtered = array
-        .map(e => e[key])
-        .map((value, index, newArray) => (value != '') ? (newArray.indexOf(value) === index && index) : index )
-        .filter(e => array[e])
-        .map(e => array[e]);
+        .map((e) => e[key])
+        .map((value, index, newArray) => (value != '' ? newArray.indexOf(value) === index && index : index))
+        .filter((e) => array[e])
+        .map((e) => array[e]);
 
     return filtered;
 };
 
 popup._renderLocaleNotice = function () {
-
     let localeNoticeElement, nameTextNode;
 
     localeNoticeElement = document.getElementById('popup-incomplete-translation');
@@ -438,12 +408,12 @@ popup._renderLocaleNotice = function () {
     localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
 };
 
+
+
 /**
  * Event Handlers
  */
-
 popup._onDocumentLoaded = function () {
-
     let manifest, language;
 
     manifest = chrome.runtime.getManifest();
@@ -454,16 +424,15 @@ popup._onDocumentLoaded = function () {
     popup._scriptDirection = helpers.determineScriptDirection(language);
 
     popup._determineAmountInjected()
+        .then(popup._getStatisticsStatus)
         .then(popup._renderContents);
 };
 
 popup._onTestingUtilityLinkClicked = function (event) {
-
     if (event.button === 0 || event.button === 1) {
-
         chrome.tabs.create({
-            'url': 'https://www.localcdn.org/test',
-            'active': (event.button === 0)
+            url: 'https://www.localcdn.org/test',
+            active: event.button === 0,
         });
     }
 
@@ -473,18 +442,15 @@ popup._onTestingUtilityLinkClicked = function (event) {
 };
 
 popup._onOptionsButtonClicked = function () {
-
     chrome.runtime.openOptionsPage();
     return window.close();
 };
 
 popup._onDonationButtonClicked = function () {
-
     if (event.button === 0 || event.button === 1) {
-
         chrome.tabs.create({
-            'url': chrome.extension.getURL('pages/donate/donate.html'),
-            'active': (event.button === 0)
+            url: chrome.extension.getURL('pages/donate/donate.html'),
+            active: event.button === 0,
         });
     }
 
@@ -494,25 +460,20 @@ popup._onDonationButtonClicked = function () {
 };
 
 popup._onToggled = function () {
+    let bypassCache = typeof browser === 'undefined';
 
-    let bypassCache = (typeof browser === 'undefined');
-
-    chrome.tabs.reload(popup._targetTab.id, {bypassCache});
+    chrome.tabs.reload(popup._targetTab.id, { bypassCache });
     setTimeout(function () {
         popup._close();
     }, 200);
 };
 
 popup._close = function () {
-
     chrome.runtime.getPlatformInfo(function (information) {
-
         if (information.os === chrome.runtime.PlatformOs.ANDROID) {
-
             chrome.tabs.getCurrent(function (tab) {
                 chrome.tabs.remove(tab.id);
             });
-
         } else {
             window.close();
         }
@@ -521,10 +482,9 @@ popup._close = function () {
 
 popup._onInfoButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
-
         chrome.tabs.create({
-            'url': chrome.extension.getURL('pages/help/help.html'),
-            'active': (event.button === 0)
+            url: chrome.extension.getURL('pages/help/help.html'),
+            active: event.button === 0,
         });
     }
 
@@ -535,13 +495,24 @@ popup._onInfoButtonClicked = function () {
 
 popup._onIncompleteTranslation = function () {
     if (event.button === 0 || event.button === 1) {
-
         chrome.tabs.create({
-            'url': 'https://hosted.weblate.org/projects/localcdn/',
-            'active': (event.button === 0)
+            url: 'https://hosted.weblate.org/projects/localcdn/',
+            active: event.button === 0,
         });
     }
 
+    if (event.button === 0) {
+        window.close();
+    }
+};
+
+popup._onStatisticsButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+        chrome.tabs.create({
+            url: chrome.extension.getURL('pages/statistics/statistics.html'),
+            active: event.button === 0,
+        });
+    }
     if (event.button === 0) {
         window.close();
     }
@@ -551,5 +522,6 @@ popup._onIncompleteTranslation = function () {
  * Initializations
  */
 popup.negateHtmlFilterList = false;
+popup._statisticsStatus = false;
 
 document.addEventListener('DOMContentLoaded', popup._onDocumentLoaded);
