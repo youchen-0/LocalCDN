@@ -17,16 +17,6 @@ body {
     padding-bottom: 20px;
 }
 
-.html-filter-section {
-    background-color: lightgrey;
-    margin-top: 15px;
-    border-radius: 3px;
-}
-
-.html-filter-section > .option {
-    margin-top: 0px;
-}
-
 .notice {
     border-radius: 3px;
     box-sizing: border-box;
@@ -105,11 +95,6 @@ body {
  * Controls
  */
 
-.input-checkbox {
-    margin: 0 4px 0 0;
-    outline: 0;
-}
-
 .input-text {
     border-radius: 3px;
     border: 1px solid darkgrey;
@@ -125,10 +110,6 @@ body {
 /**
  * Icons
  */
-
-.icon {
-    margin-right: 3px;
-}
 
 #ruleset-help-icon {
     display: inline-block;
@@ -201,10 +182,6 @@ body {
 * Links
 */
 
-.link-text {
-    color: #999;
-}
-
 /**
  * Miscellaneous
  */
@@ -229,30 +206,12 @@ body {
     background-color: #ffa500;
 }
 
-.warning-red {
-    color: red;
-    background-color: transparent;
-    margin-left: 0px;
-    display: block;
-    font-size: 10px;
-}
-
-.warning-red > a {
-    color: red;
-    font-weight: bold;
-}
-
 #negate-html-filter-list-warning {
     margin: 10px 0px 30px 0px;
 }
 
 .hidden {
     display: none !important;
-}
-
-.label-checkbox {
-    align-items: center;
-    display: flex;
 }
 
 .notice-head {

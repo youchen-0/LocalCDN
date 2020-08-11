@@ -49,15 +49,7 @@ footer {
     padding: 8px 15px;
 }
 
-#more-injections-section {
-    font-weight: bold;
-    padding: 0px 8px;
 }
-
-.content {
-    padding: 0px 15px;
-}
-
 
 /**
  * Fonts
@@ -95,12 +87,6 @@ footer {
     padding-left: 0;
     display: flex;
     align-items: center;
-}
-
-.subheading {
-    font-weight: 600;
-    margin-bottom: 2px;
-    text-align: center;
 }
 
 /**
@@ -167,9 +153,6 @@ footer {
 /**
  * Icons
  */
-.icon {
-    margin-right: 6px;
-}
 
 .icon-logo {
     height: 26px;
@@ -200,16 +183,6 @@ footer {
 
 .button:active {
     background-color: #dedede;
-}
-
-.button-toggle {
-    border-color: #d8d8d8;
-    color: #bbb;
-}
-
-.button-toggle.active {
-    border-color: #cfcfcf;
-    color: #339a6f;
 }
 
 .button-svg {
@@ -340,17 +313,6 @@ input:checked + .slider:before {
 
 input:checked + .slider:hover {
     background-color: #4b806a;
-}
-
-/**
- * Info
- */
-#info-button-svg {
-    background-image: url("../../icons/info-dark.svg");
-    background-repeat: no-repeat;
-    cursor: pointer;
-    width: 15px;
-    margin-left: 5px;
 }
 
 
@@ -490,15 +452,6 @@ input:checked + .slider:hover {
         background-color: #393939;
     }
 
-    .button-toggle {
-        border-color: #363636;
-        color: #636363;
-    }
-
-    .button-toggle.active {
-        border-color: #323232;
-    }
-
     #options-button-svg {
         background-image: url("../../icons/settings-light.svg");
     }
@@ -529,20 +482,11 @@ input:checked + .slider:hover {
         background-color: #323232;
     }
 
-    #info-button-svg {
-        background-image: url("../../icons/info-light.svg");
-    }
-
-    #get-more-injections-btn, #label-donate {
+    #label-donate {
         cursor: pointer;
         background-color: #404040;
         color: #bbb;
         font-weight: 600;
-    }
-
-    #get-more-injections-btn:hover {
-        color: #fff;
-        text-decoration: underline;
     }
 
     /**
