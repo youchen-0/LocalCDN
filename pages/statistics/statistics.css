@@ -41,7 +41,7 @@ select {
 }
 
 select:hover, .button:hover {
-    background-color: #e6e6e6;
+    filter: contrast(.5);
 }
 
 select, .button {
