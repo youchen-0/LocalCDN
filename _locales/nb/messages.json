@@ -176,11 +176,11 @@
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "Erstattete rammeverk",
+        "message": "Erstattede rammeverk",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Er du sikker på at du vil slette statistikken?",
         "description": "Are you sure you want to delete the statistics?"
     }
 }
