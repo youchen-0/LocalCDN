@@ -44,7 +44,7 @@ select:hover, .button:hover {
     filter: contrast(.5);
 }
 
-select, .button {
+select, #btn-delete {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
