@@ -148,7 +148,7 @@
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "Statistik",
+        "message": "Statistiken",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
