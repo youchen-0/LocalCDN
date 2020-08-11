@@ -44,11 +44,20 @@ header {
     padding-bottom: 4px;
 }
 
+.content {
+    padding: 0px 15px;
+}
+
 footer {
     overflow: hidden;
     padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+#testing-utility {
+    flex-grow: 1;
 }
 
 /**
@@ -462,11 +471,11 @@ input:checked + .slider:hover {
     }
 
     input:checked + .slider {
-		background-color: #6bb798;
+        background-color: #6bb798;
     }
 
     .slider {
-		background-color: #b54b4b;
+        background-color: #b54b4b;
     }
 
     .slider:before {
