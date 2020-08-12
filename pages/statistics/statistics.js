@@ -208,10 +208,10 @@ statistics._handlerDateRange = function ({ target }) {
     let type = target.value;
     if (type === 'day' || type === 'week' || type === 'month' || type === 'year') {
         statistics._dateUnit = type;
-        statistics._getStatistics().then(statistics._setDateRange);
     } else if (type === 'delete') {
         statistics._deleteStatistic();
     }
+    statistics._getStatistics().then(statistics._setDateRange);
 };
 
 statistics._deleteStatistic = function () {
