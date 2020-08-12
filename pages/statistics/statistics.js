@@ -150,7 +150,7 @@ statistics._determineInjections = function () {
     avg = sum / days > 0 ? sum / days : 0;
     avg = Math.round((avg + Number.EPSILON) * 100) / 100;
 
-    document.getElementById('avg-quantity').textContent = isNaN(avg) ? '-' : avg;
+    document.getElementById('avg-quantity').textContent = isNaN(avg) ? '-' : helpers.formatNumber(avg);
     document.getElementById('quantity-injected-frameworks').textContent = isNaN(sum) ? '-' : sum;
 };
 
