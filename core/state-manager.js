@@ -221,6 +221,9 @@ stateManager._handleStorageChanged = function (changes) {
     if (Setting.INTERNAL_STATISTICS in changes) {
         stateManager.internalStatistics = changes.internalStatistics.newValue;
     }
+    if (Setting.INTERNAL_STATISTICS_DATA in changes) {
+        stats.data = changes.internalStatisticsData.newValue;
+    }
 };
 
 stateManager._clearBadgeText = function (tabIdentifier) {
