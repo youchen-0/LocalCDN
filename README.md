@@ -72,6 +72,9 @@ On behalf of everyone: Thank you!
 ### Rule generator for uBlock/uMatrix (settings page)
 [<img src="screenshots/screenshot_settings.png" alt="Rule generator on settings page" width="500"/>](screenshots/screenshot_settings.png)
 
+### Internal statistics
+[<img src="screenshots/screenshot_statistics_light.png" alt="Internal statistics" width="200"/>](screenshots/screenshot_statistics_light.png) [<img src="screenshots/screenshot_statistics_dark.png" alt="Internal statistics" width="200"/>](screenshots/screenshot_statistics_dark.png)
+
 ## Contributing Code
 
 Suggestions in the form of **Issues**, and contributions in the form of **Merge Requests**, are highly welcome.

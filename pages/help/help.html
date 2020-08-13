@@ -8,31 +8,62 @@
         <link rel="stylesheet" type="text/css" href="../base.css">
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+        <script src="../../modules/internal/helpers.js"></script>
+        <script src="help.js"></script>
     </head>
     <body>
         <img src="../images/logo.svg" alt="Decentraleyes" class="logo"/>
         <div class="container">
             <h1>Help</h1>
             <div class="notice">
-                <div class="subtle-hint"><div class="topic-label">Introduction</div>
-                    <p>LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use the following <a href="https://www.localcdn.org/test" rel="nofollow noopener noreferrer">testing utility</a> to find out if you are properly protected. For more information, please look at the graphic below or read the <a href="https://www.localcdn.org/tutorial" rel="nofollow noopener noreferrer">tutorial</a> or our <a href="https://codeberg.org/nobody/LocalCDN/wiki" target="_blank" rel="nofollow noopener noreferrer">Wiki pages</a>.</p>
+                <div class="index">
+                    <ul>
+                        <li><a class="no-icon" href="#introduction">Introduction</a></li>
+                        <li><a class="no-icon" href="#html-filter">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"?</a></li>
+                        <li><a class="no-icon" href="#websites-issues">Some websites look strange or are not easy to use</a></li>
+                        <li><a class="no-icon" href="#google-fonts">Why is there a "Block Google Fonts" option?</a></li>
+                        <li><a class="no-icon" href="#statistics">What about the statistics? Is anything transferred to any servers?</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="notice">
-                <div class="subtle-hint"><div class="topic-label color-purple">FAQ: What is <span data-i18n-content="labelManipulateDOM">Filter HTML source code</span>? (Firefox only)</div>
+            <div id="introduction" class="notice">
+                <div class="subtle-hint"><div class="topic-label">Introduction</div>
+                    <p>LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following <a href="https://www.localcdn.org/test" rel="nofollow noopener noreferrer">testing utility</a> to find out if you are properly protected. For more information read the <a href="https://www.localcdn.org/tutorial" rel="nofollow noopener noreferrer">tutorial</a> or our <a href="https://codeberg.org/nobody/LocalCDN/wiki" target="_blank" rel="nofollow noopener noreferrer">Wiki pages</a>.</p>
+                </div>
+            </div>
+            <div id="html-filter" class="notice">
+                <div class="subtle-hint"><div class="topic-label color-purple">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</div>
                     <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these options.</p>
                     <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
                 </div>
             </div>
-            <div class="notice">
-                <div class="subtle-hint"><div class="topic-label">FAQ: Some websites look strange or are not easy to use</div>
-                    <p>This is caused by a policy of the same origin and is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN.</p>
-                    <p>If the layout of a website is incorrect or cannot be operated, then it is usually due to this policy, even though the add-on works flawlessly. Unfortunately there is no solution for this at the moment.</p>
+            <div id="websites-issues" class="notice">
+                <div class="subtle-hint"><div class="topic-label">Some websites look strange or are not easy to use</div>
+                    <p>There are two possible reasons: Either a framework/library is required that LocalCDN doesn't (yet) deliver or an SOP.</p><p>A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN.</p>
+                    <p>If the layout of a website is incorrect or cannot be used, then it is usually due to this policy, even though the add-on works flawlessly. Unfortunately there is no solution for this at the moment.</p>
                 </div>
             </div>
-            <div class="notice">
-                <div class="subtle-hint"><div class="topic-label color-purple">FAQ: Why is there a "Block Google Fonts" option?</div>
+            <div id="google-fonts" class="notice">
+                <div class="subtle-hint"><div class="topic-label color-purple">Why is there a "Block Google Fonts" option?</div>
                     <p>LocalCDN can replace "Google Material Icons". To catch the connection, uBlock/uMatrix must allow the request. LocalCDN listens on these requests and if the query contains "Google Material Icons", the resource will be replaced. If you uncheck the "Block requests for missing content" option, non-existent resources will be allowed to pass and "Google Fonts" will be loaded, because "Google Material Icons" and "Google Fonts" use the same domain. If you don't want this, you can block "Google Fonts" on LocalCDN.</p>
+                </div>
+            </div>
+            <div id="statistics" class="notice">
+                <div class="subtle-hint"><div class="topic-label">What about the statistics? Is anything transferred to any servers?</div>
+                    <p>Don't panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That's all. I've an example here:</p>
+<pre>
+"2020-08-10": {
+    "frameworks": {
+        "resources/jquery/1.12.4/jquery.min.jsm": 5
+    },
+    "cdns": {
+        "ajax.googleapis.com": 5
+    }
+}
+</pre>
+                    <p>The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested.</p>
+                    <p><em>How do I know that's true?</em></p>
+                    <p>The extension storage can be viewed directly with the Firefox browser. Open the URL "about:debugging", switch to "Storage" and select "Extension Storage". Under the key "internalStatisticsData" you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in <a href="https://www.localcdn.org/view-extension-storage.mp4">this video</a>.</p>
                 </div>
             </div>
         </div>

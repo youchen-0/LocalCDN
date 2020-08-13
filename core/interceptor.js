@@ -37,9 +37,9 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     // Possible URLs of Google Fonts: https://fonts.googleapis.com/css
     //                                https://fonts.googleapis.com/css2
     if (requestDetails.url.startsWith('https://fonts.googleapis.com/css')) {
-        if(interceptor.blockGoogleFonts  !== false && interceptor.blockMissing !== false) {
+        if(interceptor.blockGoogleFonts  === true || interceptor.blockMissing === true) {
             return {
-                'cancel': false
+                'cancel': true
             };
         }
     }

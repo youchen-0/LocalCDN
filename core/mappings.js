@@ -27,7 +27,7 @@
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-var lastMappingUpdate = "2020-06-06";
+var lastMappingUpdate = "2020-08-09";
 
 var mappings = {
 
@@ -60,9 +60,9 @@ var mappings = {
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
-            'webfont/{version}/webfont.': resources.webfont,
+            'webfont/{version}/webfont.': resources.webfontloader,
             'webfont/{version}/webfontloader.js': resources.webfontloader,
-            'webfont/1/webfont.js': resources.webfont
+            'webfont/1/webfont.js': resources.webfontloader
         }
     },
     // Microsoft Ajax CDN
@@ -249,6 +249,8 @@ var mappings = {
             'jquery-modal/{version}/jquery.modal.min.js': resources.jQueryModalJS,
             'jquery-modal/{version}/jquery.modal.css': resources.jQueryModalCSS,
             'jquery-modal/{version}/jquery.modal.min.css': resources.jQueryModalCSS,
+            'jquery-mousewheel/{version}/jquery.mousewheel.min.js': resources.jqueryMousewheelJS,
+            'jScrollPane/{version}/script/jquery.jscrollpane.': resources.jScrollPane,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
@@ -291,11 +293,13 @@ var mappings = {
             'slick-carousel/{version}/slick.min.js': resources.slickCarouselJS,
             'slick-carousel/{version}/slick.js': resources.slickCarouselJS,
             'spin.js/{version}/spin.min.js': resources.spinJS,
+            'stickyfill/{version}/stickyfill.': resources.stickyfill,
             'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'Swiper/{version}/css/swiper.': resources.swiperCSS,
             'Swiper/{version}/js/swiper.': resources.swiperJS,
             'tether/{version}/js/tether.': resources.tetherJS,
+            'tooltipster/{version}/js/jquery.tooltipster.': resources.jQueryTooltipster,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,
             'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,
@@ -311,8 +315,8 @@ var mappings = {
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
-            'webfont/{version}/webfont.js': resources.webfont,
-            'webfont/{version}/webfontloader.js': resources.webfont,
+            'webfont/{version}/webfont.js': resources.webfontloader,
+            'webfont/{version}/webfontloader.js': resources.webfontloader,
             'webrtc-adapter/{version}/adapter.min.js': resources.webRTCadapter,
             'wow/{version}/wow.min.': resources.wow
         }
@@ -378,7 +382,7 @@ var mappings = {
             'urlize.js/urlize.js': resources.urlize,
             'vanilla-lazyload@{version}/dist/lazyload.': resources.vanillaLazyload,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
-            'webfontloader@{version}/webfontloader.': resources.webfont
+            'webfontloader@{version}/webfontloader.': resources.webfontloader
         },
         '/': {
             'algoliasearch/3/algoliasearch.': resources.algoliaSearch,
@@ -407,7 +411,7 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,
-            'webfontloader/{version}/webfont': resources.webfont
+            'webfontloader/{version}/webfont': resources.webfontloader
         },
         // TEMPORARY SOLUTION
         '/g/': {
@@ -505,8 +509,8 @@ var mappings = {
             'swfobject/{version}/swfobject_src.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // Baidu CDN
@@ -540,8 +544,8 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         },
         '/libs/': {
             'angular.js/{version}/angular-animate.': resources.angularAnimate,
@@ -570,8 +574,8 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // Staticfile CDN
@@ -602,8 +606,8 @@ var mappings = {
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // BootCDN
@@ -636,12 +640,12 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont,
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader,
             'ember.js/{version}/ember.': resources.ember,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
-            'webfont/{version}/webfontloader.': resources.webfont
+            'webfont/{version}/webfontloader.': resources.webfontloader
         }
     },
     // Tencent Public Libraries
@@ -662,40 +666,6 @@ var mappings = {
             'jquery/{version}/jquery.': resources.jQuery,
         }
     },
-    // Qihoo 360 CDN
-    'lib.baomitu.com': {
-        '/': {
-            'angular.js/{version}/angular-animate.': resources.angularAnimate,
-            'angular.js/{version}/angular-aria.': resources.angularAria,
-            'angular.js/{version}/angular-cookies.': resources.angularCookies,
-            'angular.js/{version}/angular-loader.': resources.angularLoader,
-            'angular.js/{version}/angular-message-format.': resources.angularMessageFormat,
-            'angular.js/{version}/angular-messages.': resources.angularMessages,
-            'angular.js/{version}/angular-parse-ext.': resources.angularParseExt,
-            'angular.js/{version}/angular-resource.': resources.angularResource,
-            'angular.js/{version}/angular-route.': resources.angularRoute,
-            'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
-            'angular.js/{version}/angular-touch.': resources.angularTouch,
-            'angular.js/{version}/angular.': resources.angular,
-            'backbone.js/{version}/backbone.': resources.backbone,
-            'backbone.js/{version}/backbone-min.': resources.backbone,
-            'dojo/{version}/dojo.': resources.dojo,
-            'ember.js/{version}/ember.min.js': resources.ember.js,
-            'ext-core/{version}/ext-core.': resources.extCore,
-            'jquery/{version}/jquery.': resources.jQuery,
-            'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
-            'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
-            'modernizr/{version}/modernizr.': resources.modernizr,
-            'mootools/{version}/mootools-yui-compressed.': resources.mootools,
-            'prototype/{version}/prototype.': resources.prototypeJS,
-            'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
-            'swfobject/{version}/swfobject.': resources.swfobject,
-            'underscore.js/{version}/underscore.': resources.underscore,
-            'underscore.js/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
-        }
-    },
     // Sina Public Resources
     'lib.sinaapp.com': {
         '/js/': {
@@ -714,8 +684,8 @@ var mappings = {
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscore/{version}/underscore.': resources.underscore,
             'underscore/{version}/underscore-min.': resources.underscore,
-            'webfont/{version}/webfont.': resources.webfont,
-            'webfont/{version}/webfont_debug.': resources.webfont
+            'webfont/{version}/webfont.': resources.webfontloader,
+            'webfont/{version}/webfont_debug.': resources.webfontloader
         }
     },
     // UpYun Library
@@ -759,9 +729,12 @@ var mappings = {
     },
     // Font Awesome CDN
     'use.fontawesome.com': {
-        '/releases/v': {
-            '{version}/css/': resources.fontawesome5CSS,
-            '{version}/js/': resources.fontawesome5JS
+        '/': {
+            'releases/v{version}/css/': resources.fontawesome5CSS,
+            'releases/v{version}/js/': resources.fontawesome5JS,
+            'a1f20be65b.js': resources.webfontloaderFontawesomeJS,
+            'a1f20be65b.css': resources.webfontloaderFontawesomeCSS,
+            'webfontloader/{version}/webfontload': resources.webfontloader
         }
     },
     // Cloudflare Rocket-Loader
@@ -796,3 +769,22 @@ mappings['unpkg.com'] = {
 mappings['pagecdn.io'] = {
     '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
 };
+
+// loli.net [Mirror]
+mappings['cdn.css.net'] = {
+    '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
+};
+
+mappings['cdnjs.loli.net'] = mappings['cdnjs.cloudflare.com'];
+
+mappings['ajax.loli.net'] = mappings['ajax.googleapis.com'];
+
+mappings['fonts.loli.net'] = mappings['fonts.googleapis.com'];
+
+// Qihoo 360 CDN [Mirror]
+mappings['lib.baomitu.com'] = {
+    '/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
+}
+
+// Boot CDN New [Mirror]
+mappings['cdn.bootcdn.net'] = mappings['cdnjs.cloudflare.com'];

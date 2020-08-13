@@ -72,10 +72,11 @@ const Setting = {
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
-    'STATISTIC_DATA': 'statisticData',
     'NEGATE_HTML_FILTER_LIST': 'negateHtmlFilterList',
     'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts',
-    'SELECTED_ICON': 'selectedIcon'
+    'SELECTED_ICON': 'selectedIcon',
+    'INTERNAL_STATISTICS': 'internalStatistics',
+    'INTERNAL_STATISTICS_DATA': 'internalStatisticsData'
 };
 
 const WebRequest = {

@@ -358,14 +358,29 @@ var resources = {
         'path': 'resources/jquery-modal/{version}/jquery.modal.min.css',
         'type': 'text/css'
     },
+    // jqueryMousewheelJS
+    'jqueryMousewheelJS': {
+        'path': 'resources/jquery-mousewheel/{version}/jquery.mousewheel.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Tablesorter
     'jQueryTablesorter': {
         'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Tooltipster
+    'jQueryTooltipster': {
+        'path': 'resources/tooltipster/{version}/js/jquery.tooltipster.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
+        'type': 'application/javascript'
+    },
+    // jScrollPane
+    'jScrollPane': {
+        'path': 'resources/jScrollPane/{version}/jquery.jscrollpane.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery UI Themes
@@ -591,6 +606,11 @@ var resources = {
         'path': 'resources/spin.js/{version}/spin.min.jsm',
         'type': 'application/javascript'
     },
+    // stickyfill
+    'stickyfill': {
+        'path': 'resources/stickyfill/{version}/stickyfill.min.jsm',
+        'type': 'application/javascript'
+    },
     // Store.js
     'storeJS': {
         'path': 'resources/store.js/{version}/store.legacy.min.jsm',
@@ -666,13 +686,17 @@ var resources = {
         'type': 'application/javascript'
     },
     // Web Font Loader
-    'webfont': {
-        'path': 'resources/webfont/{version}/webfont.jsm',
-        'type': 'application/javascript'
-    },
     'webfontloader': {
         'path': 'resources/webfont/{version}/webfontloader.jsm',
         'type': 'application/javascript'
+    },
+    'webfontloaderFontawesomeJS': {
+        'path': 'resources/webfont/a1f20be65b.jsm',
+        'type': 'application/javascript'
+    },
+    'webfontloaderFontawesomeCSS': {
+        'path': 'resources/webfont/a1f20be65b.css',
+        'type': 'text/css'
     },
     // WebRTC adapter
     'webRTCadapter': {

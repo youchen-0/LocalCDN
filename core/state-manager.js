@@ -71,6 +71,9 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
             [Setting.AMOUNT_INJECTED]: ++interceptor.amountInjected
         });
     }
+    if (stateManager.internalStatistics) {
+        stats.setStats(injection);
+    }
 };
 
 stateManager.addDomainToWhitelist = function (domain) {
@@ -215,6 +218,12 @@ stateManager._handleStorageChanged = function (changes) {
     if (Setting.SELECTED_ICON in changes) {
         stateManager.selectedIcon = changes.selectedIcon.newValue;
     }
+    if (Setting.INTERNAL_STATISTICS in changes) {
+        stateManager.internalStatistics = changes.internalStatistics.newValue;
+    }
+    if (Setting.INTERNAL_STATISTICS_DATA in changes) {
+        stats.data = changes.internalStatisticsData.newValue;
+    }
 };
 
 stateManager._clearBadgeText = function (tabIdentifier) {
@@ -267,6 +276,7 @@ stateManager.tabs = {};
 stateManager.getInvertOption = false;
 stateManager.validHosts = [];
 stateManager.selectedIcon = 'Default';
+stateManager.internalStatistics = false;
 
 for (let mapping in mappings) {
 
@@ -289,6 +299,11 @@ chrome.storage.sync.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], functi
     stateManager.showIconBadge = items.showIconBadge;
     stateManager.selectedIcon = items.selectedIcon;
 });
+
+chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {
+    stateManager.internalStatistics = items.internalStatistics;
+});
+
 
 /**
  * Event Handlers

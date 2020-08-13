@@ -36,6 +36,7 @@ options._renderContents = function () {
     translationComplete = helpers.insertI18nContentIntoDocument(document);
 
     options._determineOptionValues()
+        .then(options._determineLocalOptionValues)
         .then(options._renderOptionsPanel);
 
     if (!translationComplete) {
@@ -56,6 +57,8 @@ options._renderOptionsPanel = function () {
 
     let whitelistedDomains, domainWhitelist, elements, htmlFilterDomains, domainHtmlFilter;
 
+    Object.assign(options._optionValues, {[Setting.INTERNAL_STATISTICS]: options._internalStatistics});
+
     whitelistedDomains = options._optionValues.whitelistedDomains;
     domainWhitelist = options._serializeWhitelistedDomains(whitelistedDomains);
 
@@ -63,6 +66,7 @@ options._renderOptionsPanel = function () {
     domainHtmlFilter = options._serializeWhitelistedDomains(htmlFilterDomains);
 
     elements = options._optionElements;
+    Object.assign(elements, {[Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics')});
 
     elements.showIconBadge.checked = options._optionValues.showIconBadge;
     elements.blockMissing.checked = options._optionValues.blockMissing;
@@ -75,6 +79,7 @@ options._renderOptionsPanel = function () {
     elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
     elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
     elements.selectedIcon.value = options._optionValues.selectedIcon;
+    elements.internalStatistics.checked = options._optionValues.internalStatistics;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -104,6 +109,7 @@ options._renderOptionsPanel = function () {
     document.getElementById('link-donate').addEventListener('click', options._onClickDonate);
     document.getElementById('link-faq').addEventListener('click', options._onClickFaq);
     document.getElementById('ruleset-help-icon').addEventListener('click', options._onClickRulesetHelp);
+    document.getElementById('link-statistic').addEventListener('click', options._onClickStatistics);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -142,6 +148,7 @@ options._registerOptionChangedEventListeners = function (elements) {
         type[i].addEventListener('change', options._openRuleSet);
     }
     elements.copyRuleSet.addEventListener('click', options._copyRuleSet);
+    elements.internalStatistics.addEventListener('change', options._onOptionChanged);
 };
 
 options._registerMiscellaneousEventListeners = function () {
@@ -164,8 +171,17 @@ options._determineOptionValues = function () {
         let optionKeys = Object.keys(options._optionElements);
 
         chrome.storage.sync.get(optionKeys, function (items) {
-
             options._optionValues = items;
+            resolve();
+        });
+    });
+};
+
+options._determineLocalOptionValues = function () {
+
+    return new Promise((resolve) => {
+        chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {
+            options._internalStatistics = items.internalStatistics;
             resolve();
         });
     });
@@ -258,7 +274,7 @@ options._onDocumentLoaded = function () {
 
 options._onOptionChanged = function ({target}) {
 
-    let optionKey, optionType, optionValue;
+    let optionKey, optionType, optionValue, storageType;
 
     optionKey = target.getAttribute('data-option');
     optionType = target.getAttribute('type');
@@ -304,7 +320,13 @@ options._onOptionChanged = function ({target}) {
         }, 'Enabled');
     }
 
-    chrome.storage.sync.set({
+    if (optionKey === Setting.INTERNAL_STATISTICS) {
+        storageType = chrome.storage.local;
+    } else {
+        storageType = chrome.storage.sync;
+    }
+
+    storageType.set({
         [optionKey]: optionValue
     });
 };
@@ -382,6 +404,13 @@ options._onClickRulesetHelp = function() {
     });
 };
 
+options._onClickStatistics = function() {
+    chrome.tabs.create({
+        'url': chrome.extension.getURL('pages/statistics/statistics.html'),
+        'active': true
+    });
+};
+
 /**
  *  Updates the domain lists if the options page has no focus.
  *  document.hasFocus() prevents problems with keyboard input.
@@ -414,6 +443,7 @@ options._displayBlockGoogleFonts = function(value) {
 /**
  * Initializations
  */
+options._internalStatistics = false;
 
 document.addEventListener('DOMContentLoaded', options._onDocumentLoaded);
 

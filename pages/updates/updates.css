@@ -15,11 +15,6 @@ ul {
  * Controls
  */
 
-.input-text {
-    margin-left: 29px;
-    max-width: 320px;
-}
-
 input[type=radio] {
     margin: 0px;
 }

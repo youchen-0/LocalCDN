@@ -138,5 +138,49 @@
     "chooseIconStyle": {
         "message": "Choose an icon for this extension",
         "description": "Choose an icon for this extension"
+    },
+    "internalStatisticsTitle": {
+        "message": "Internal statistics",
+        "description": "Internal statistics"
+    },
+    "internalStatisticsDescription": {
+        "message": "This function is currently in an experimental stage. No data transmission. It’s all local on your device.",
+        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+    },
+    "headerStatistics": {
+        "message": "Statistics",
+        "description": "Statistics. The header of a statistics page."
+    },
+    "labelToday": {
+        "message": "Today",
+        "description": "Statistics view for today."
+    },
+    "labelPastWeek": {
+        "message": "Last week",
+        "description": "Statistics view for past week."
+    },
+    "labelPastMonth": {
+        "message": "Last month",
+        "description": "Statistics view for past month."
+    },
+    "labelPastYear": {
+        "message": "Last year",
+        "description": "Statistics view for past year."
+    },
+    "labelDelete": {
+        "message": "Delete",
+        "description": "Button to delete all statistics data."
+    },
+    "labelAvg": {
+        "message": "Average (Replacements per day)",
+        "description": "Followed by a number of average injections per day within a specific period."
+    },
+    "labelInjectedFrameworks": {
+        "message": "Replaced frameworks",
+        "description": "Followed by a number of injections within a specific period."
+    },
+    "dialogConfirmDeleteStatistics": {
+        "message": "Are you sure you want to delete the statistics?",
+        "description": "Are you sure you want to delete the statistics?"
     }
 }

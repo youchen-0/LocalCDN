@@ -28,8 +28,8 @@ var manipulateDOM = {};
 
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
-    if(BrowserType.CHROMIUM) {
-        // Chromium browsers do not support webRequest.filterResponseData
+    if(!BrowserType.FIREFOX) {
+        // Chromium (and other) browsers do not support webRequest.filterResponseData
         // https://bugs.chromium.org/p/chromium/issues/detail?id=487422
         console.warn('[ LocalCDN ] browser.webRequest.filterResponseData not supported by your browser.');
         return;

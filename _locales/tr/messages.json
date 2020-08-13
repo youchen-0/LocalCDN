@@ -4,7 +4,7 @@
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "Kurulumdan bu yana yerel İçerik Dağıtım Ağı kaynak eklemelerinin miktarı.",
+        "message": "Kurulumdan bu yana yerel İçerik Dağıtım Ağı kaynak enjeksiyonlarının miktarı.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -138,5 +138,49 @@
     "chooseIconStyle": {
         "message": "Bu uzantı için bir simge seç",
         "description": "Choose an icon for this extension"
+    },
+    "internalStatisticsTitle": {
+        "message": "Dahili istatistikler",
+        "description": "Internal statistics"
+    },
+    "internalStatisticsDescription": {
+        "message": "Bu işlev şu anda deneysel bir aşamadadır. Veri aktarımı yok. Hepsi aygıtınızda yereldir.",
+        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+    },
+    "headerStatistics": {
+        "message": "İstatistikler",
+        "description": "Statistics. The header of a statistics page."
+    },
+    "labelToday": {
+        "message": "Bugün",
+        "description": "Statistics view for today."
+    },
+    "labelPastWeek": {
+        "message": "Geçen hafta",
+        "description": "Statistics view for past week."
+    },
+    "labelPastMonth": {
+        "message": "Geçen ay",
+        "description": "Statistics view for past month."
+    },
+    "labelPastYear": {
+        "message": "Geçen yıl",
+        "description": "Statistics view for past year."
+    },
+    "labelDelete": {
+        "message": "Sil",
+        "description": "Button to delete all statistics data."
+    },
+    "labelAvg": {
+        "message": "Ortalama (Günlük değiştirme sayısı)",
+        "description": "Followed by a number of average injections per day within a specific period."
+    },
+    "labelInjectedFrameworks": {
+        "message": "Değiştirilen çerçeveler",
+        "description": "Followed by a number of injections within a specific period."
+    },
+    "dialogConfirmDeleteStatistics": {
+        "message": "İstatistikleri silmek istediğinize emin misiniz?",
+        "description": "Are you sure you want to delete the statistics?"
     }
 }

@@ -13,4 +13,9 @@
 .div-donations {
     border-radius: 4px;
     border: 1px solid lightgrey;
+    line-break: anywhere;
+}
+
+.div-donations > img {
+    padding-bottom: 30px;
 }
