@@ -21,7 +21,6 @@
 var help = {};
 
 help._onDocumentLoaded = function () {
-
     let language = navigator.language;
 
     help._languageSupported = helpers.languageIsFullySupported(language);

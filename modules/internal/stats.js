@@ -13,7 +13,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-"use strict";
+'use strict';
 
 /**
  * Stats
@@ -29,17 +29,15 @@ stats.setStats = function (injection) {
     framework = injection.path;
 
     if (today in data) {
-        if (cdn in data[today]["cdns"]) {
-            data[today]["cdns"][cdn] = ++data[today]["cdns"][cdn];
+        if (cdn in data[today]['cdns']) {
+            data[today]['cdns'][cdn] = ++data[today]['cdns'][cdn];
         } else {
-            Object.assign(data[today]["cdns"], { [cdn]: 1 });
+            Object.assign(data[today]['cdns'], { [cdn]: 1 });
         }
-        if (framework in data[today]["frameworks"]) {
-            data[today]["frameworks"][framework] = ++data[today]["frameworks"][
-                framework
-            ];
+        if (framework in data[today]['frameworks']) {
+            data[today]['frameworks'][framework] = ++data[today]['frameworks'][framework];
         } else {
-            Object.assign(data[today]["frameworks"], { [framework]: 1 });
+            Object.assign(data[today]['frameworks'], { [framework]: 1 });
         }
     } else {
         newEntry = { frameworks: { [framework]: 1 }, cdns: { [cdn]: 1 } };

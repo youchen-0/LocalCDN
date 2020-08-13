@@ -29,7 +29,6 @@ var helpers = {};
  */
 
 helpers.insertI18nContentIntoDocument = function (document) {
-
     let scriptDirection, i18nElements, translationComplete;
 
     translationComplete = true;
@@ -37,11 +36,10 @@ helpers.insertI18nContentIntoDocument = function (document) {
     i18nElements = document.querySelectorAll('[data-i18n-content]');
 
     i18nElements.forEach(function (i18nElement) {
-
         let i18nMessageName = i18nElement.getAttribute('data-i18n-content');
 
-        if(chrome.i18n.getMessage(i18nMessageName) !== '') {
-            if (i18nElement.type === "button") {
+        if (chrome.i18n.getMessage(i18nMessageName) !== '') {
+            if (i18nElement.type === 'button') {
                 i18nElement.value = chrome.i18n.getMessage(i18nMessageName);
             } else {
                 i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
@@ -53,18 +51,15 @@ helpers.insertI18nContentIntoDocument = function (document) {
     });
 
     return translationComplete;
-
 };
 
 helpers.insertI18nTitlesIntoDocument = function (document) {
-
     let scriptDirection, i18nElements;
 
     scriptDirection = helpers.determineScriptDirection(navigator.language);
     i18nElements = document.querySelectorAll('[data-i18n-title]');
 
     i18nElements.forEach(function (i18nElement) {
-
         let i18nMessageName = i18nElement.getAttribute('data-i18n-title');
 
         i18nElement.setAttribute('title', chrome.i18n.getMessage(i18nMessageName));
@@ -73,19 +68,42 @@ helpers.insertI18nTitlesIntoDocument = function (document) {
 };
 
 helpers.languageIsFullySupported = function (language) {
-
     let languageSupported, supportedLanguages;
 
     languageSupported = false;
 
     supportedLanguages = [
-        'ar', 'bg', 'zh', 'cs', 'da', 'nl', 'en', 'eo', 'et', 'fi',
-        'fr', 'de', 'el', 'he', 'hu', 'is', 'id', 'it', 'ja', 'ko',
-        'nb', 'pl', 'pt', 'ro', 'ru', 'es', 'sv', 'tr'
+        'ar',
+        'bg',
+        'zh',
+        'cs',
+        'da',
+        'nl',
+        'en',
+        'eo',
+        'et',
+        'fi',
+        'fr',
+        'de',
+        'el',
+        'he',
+        'hu',
+        'is',
+        'id',
+        'it',
+        'ja',
+        'ko',
+        'nb',
+        'pl',
+        'pt',
+        'ro',
+        'ru',
+        'es',
+        'sv',
+        'tr',
     ];
 
     for (let supportedLanguage of supportedLanguages) {
-
         if (language.search(supportedLanguage) !== -1) {
             languageSupported = true;
         }
@@ -95,7 +113,6 @@ helpers.languageIsFullySupported = function (language) {
 };
 
 helpers.normalizeDomain = function (domain) {
-
     domain = domain.toLowerCase().trim();
 
     if (domain.startsWith(Address.WWW_PREFIX)) {
@@ -106,7 +123,6 @@ helpers.normalizeDomain = function (domain) {
 };
 
 helpers.extractDomainFromUrl = function (url, normalize) {
-
     if (/^(?!(http[s]?|file):\/\/).*/.test(url)) {
         return null;
     }
@@ -135,7 +151,6 @@ helpers.extractDomainFromUrl = function (url, normalize) {
 };
 
 helpers.extractFilenameFromPath = function (path) {
-
     let pathSegments, filename;
 
     pathSegments = path.split('/');
@@ -145,16 +160,14 @@ helpers.extractFilenameFromPath = function (path) {
 };
 
 helpers.generateRandomHexString = function (length) {
-
     let randomValues, randomHexString;
 
     randomValues = crypto.getRandomValues(new Uint8Array(length));
     randomHexString = '';
 
     for (let value of randomValues) {
-
         // eslint-disable-next-line no-bitwise
-        let hexValue = (0 ^ value & 15 >> 0 / 4).toString(16);
+        let hexValue = (0 ^ (value & (15 >> (0 / 4)))).toString(16);
         randomHexString += hexValue;
     }
 
@@ -162,69 +175,65 @@ helpers.generateRandomHexString = function (length) {
 };
 
 helpers.determineCdnName = function (domainName) {
-
     switch (domainName) {
-
-    case 'ajax.googleapis.com':
-        return 'Google Hosted Libraries';
-    case 'ajax.aspnetcdn.com':
-        return 'Microsoft Ajax CDN';
-    case 'ajax.microsoft.com':
-        return 'Microsoft Ajax CDN [Deprecated]';
-    case 'cdnjs.cloudflare.com':
-        return 'CDNJS (Cloudflare)';
-    case 'code.jquery.com':
-        return 'jQuery CDN (MaxCDN)';
-    case 'cdn.jsdelivr.net':
-        return 'jsDelivr (Cloudflare)';
-    case 'yastatic.net':
-        return 'Yandex CDN';
-    case 'yandex.st':
-        return 'Yandex CDN [Deprecated]';
-    case 'apps.bdimg.com':
-        return 'Baidu CDN';
-    case 'libs.baidu.com':
-        return 'Baidu CDN [Deprecated]';
-    case 'lib.sinaapp.com':
-        return 'Sina Public Resources';
-    case 'upcdn.b0.upaiyun.com':
-        return 'UpYun Library';
-    case 'cdn.bootcss.com':
-        return 'BootCDN';
-    case 'sdn.geekzu.org':
-        return 'Geekzu Public Service [Mirror]';
-    case 'ajax.proxy.ustclug.org':
-        return 'USTC Linux User Group [Mirror]';
-    case 'unpkg.com':
-        return 'UNPKG (Cloudflare)';
-    case 'stackpath.bootstrapcdn.com':
-        return 'StackPath BootstrapCDN';
-    case 'maxcdn.bootstrapcdn.com':
-        return 'MaxCDN Bootstrap CDN';
-    case 'use.fontawesome.com':
-        return 'Font Awesome CDN';
-    case 'ajax.cloudflare.com':
-        return 'Cloudflare CDN';
-    case 'akamai-webcdn.kgstatic.net':
-        return 'Akamai WebCDN';
-    case 'netdna.bootstrapcdn.com':
-        return 'NetDNA';
-    case 'pagecdn.io':
-        return 'PageCDN';
-    case 'fonts.googleapis.com':
-        return 'Google Fonts';
-    default:
-        return 'Unknown';
+        case 'ajax.googleapis.com':
+            return 'Google Hosted Libraries';
+        case 'ajax.aspnetcdn.com':
+            return 'Microsoft Ajax CDN';
+        case 'ajax.microsoft.com':
+            return 'Microsoft Ajax CDN [Deprecated]';
+        case 'cdnjs.cloudflare.com':
+            return 'CDNJS (Cloudflare)';
+        case 'code.jquery.com':
+            return 'jQuery CDN (MaxCDN)';
+        case 'cdn.jsdelivr.net':
+            return 'jsDelivr (Cloudflare)';
+        case 'yastatic.net':
+            return 'Yandex CDN';
+        case 'yandex.st':
+            return 'Yandex CDN [Deprecated]';
+        case 'apps.bdimg.com':
+            return 'Baidu CDN';
+        case 'libs.baidu.com':
+            return 'Baidu CDN [Deprecated]';
+        case 'lib.sinaapp.com':
+            return 'Sina Public Resources';
+        case 'upcdn.b0.upaiyun.com':
+            return 'UpYun Library';
+        case 'cdn.bootcss.com':
+            return 'BootCDN';
+        case 'sdn.geekzu.org':
+            return 'Geekzu Public Service [Mirror]';
+        case 'ajax.proxy.ustclug.org':
+            return 'USTC Linux User Group [Mirror]';
+        case 'unpkg.com':
+            return 'UNPKG (Cloudflare)';
+        case 'stackpath.bootstrapcdn.com':
+            return 'StackPath BootstrapCDN';
+        case 'maxcdn.bootstrapcdn.com':
+            return 'MaxCDN Bootstrap CDN';
+        case 'use.fontawesome.com':
+            return 'Font Awesome CDN';
+        case 'ajax.cloudflare.com':
+            return 'Cloudflare CDN';
+        case 'akamai-webcdn.kgstatic.net':
+            return 'Akamai WebCDN';
+        case 'netdna.bootstrapcdn.com':
+            return 'NetDNA';
+        case 'pagecdn.io':
+            return 'PageCDN';
+        case 'fonts.googleapis.com':
+            return 'Google Fonts';
+        default:
+            return 'Unknown';
     }
 };
 
 helpers.determineResourceName = function (filename) {
-
-    if(filename in ListOfFiles) {
+    if (filename in ListOfFiles) {
         return ListOfFiles[filename];
     }
     return 'Unknown';
-
 };
 
 helpers.determineBundle = function (path = '') {
@@ -238,7 +247,6 @@ helpers.determineBundle = function (path = '') {
 };
 
 helpers.determineScriptDirection = function (language) {
-
     let rightToLeftLanguages, scriptDirection;
 
     rightToLeftLanguages = ['ar', 'he'];
@@ -253,14 +261,12 @@ helpers.determineScriptDirection = function (language) {
 };
 
 helpers.formatNumber = function (number) {
-
     if (typeof number === 'number') {
         return number.toLocaleString();
     }
 };
 
 helpers.formatVersion = function (version) {
-
     if (version.indexOf('beta') === -1) {
         return version;
     } else {
@@ -276,11 +282,11 @@ helpers.setLastVersion = function (type, version) {
      * If-Else-If:               0-5ms (Average <1ms)
      */
 
-    if(version !== null && version !== undefined) {
+    if (version !== null && version !== undefined) {
         version = version.toString();
     }
     if (type.includes('/algoliasearch/3.')) {
-        return  '3.35.1';
+        return '3.35.1';
     } else if (type.includes('/angularjs/1.')) {
         if (helpers.compareVersion('1.2.19', version)) return '1.2.19'; // <= v1.2.19
         else if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
@@ -290,250 +296,249 @@ helpers.setLastVersion = function (type, version) {
         else if (helpers.compareVersion('1.6.10', version)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
         else return '1.7.9'; // >= 1.6.11
     } else if (type.includes('/angularjs-slider/6.')) {
-        return  '6.7.0';
+        return '6.7.0';
     } else if (type.includes('/angularjs-toaster/2.')) {
-        return  '2.2.0';
+        return '2.2.0';
     } else if (type.includes('/angularjs-toaster/0.')) {
-        return  '0.4.18';
+        return '0.4.18';
     } else if (type.includes('/angular-bootstrap-colorpicker/3.')) {
-        return  '3.0.32';
+        return '3.0.32';
     } else if (type.includes('/angular-payments@1.')) {
-        return  '1.0.7';
+        return '1.0.7';
     } else if (type.includes('/angular-stripe-checkout@5.')) {
-        return  '5.1.0';
+        return '5.1.0';
     } else if (type.includes('/angular-ui-bootstrap/')) {
         if (helpers.compareVersion('0.10.0', version)) return '0.10.0'; // <= v0.10.0
         else if (helpers.compareVersion('0.14.3', version)) return '0.14.3'; // > 0.10.0 <= v0.14.3
-        return  '1.3.3'; // > v0.14.0
+        return '1.3.3'; // > v0.14.0
     } else if (type.includes('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', version)) return '0.4.3'; // <= 0.4.3
         else return '1.0.25'; // > 0.4.3
     } else if (type.includes('/angular-ui-utils/0.')) {
-        return  '0.1.1';
+        return '0.1.1';
     } else if (type.includes('/angular-ui-select/0.')) {
-        return  '0.20.0';
+        return '0.20.0';
     } else if (type.includes('/angular-sanitize/1.')) {
-        return  '1.7.9';
+        return '1.7.9';
     } else if (type.includes('/angucomplete-alt/3.')) {
-        return  '3.0.0';
+        return '3.0.0';
     } else if (type.includes('/animate.css/3.')) {
-        return  '3.7.2';
+        return '3.7.2';
     } else if (type.includes('/autocomplete.js/')) {
-        return  '0.37.1';
+        return '0.37.1';
     } else if (type.includes('/angular-material/1.')) {
-        return  '1.1.21';
+        return '1.1.21';
     } else if (type.includes('/backbone.js/0.')) {
-        return  '0.9.10';
+        return '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
-        return  '1.4.0';
+        return '1.4.0';
     } else if (type.includes('/bootbox.js/4.')) {
-        return  '4.4.0';
+        return '4.4.0';
     } else if (type.includes('/bootstrap.js/3.')) {
-        return  '3.3.7';
+        return '3.3.7';
     } else if (type.includes('/bootstrap.js/4.')) {
-        return  '4.5.0';
+        return '4.5.0';
     } else if (type.includes('/bootstrap.css/3.')) {
-        return  '3.3.7';
+        return '3.3.7';
     } else if (type.includes('/bootstrap.css/4.')) {
-        return  '4.5.0';
+        return '4.5.0';
     } else if (type.includes('/bootstrap-daterangepicker/2.')) {
-        return  '2.1.27';
+        return '2.1.27';
     } else if (type.includes('/bootstrap-datepicker/1.')) {
-        return  '1.9.0';
+        return '1.9.0';
     } else if (type.includes('/bootstrap-slider/10.')) {
-        return  '10.6.2';
+        return '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
-        return  '1.13.17';
+        return '1.13.17';
     } else if (type.includes('/bootstrap-3-typeahead/4.')) {
-        return  '4.0.2';
+        return '4.0.2';
     } else if (type.includes('/Chart.js/2.')) {
-        return  '2.9.3';
+        return '2.9.3';
     } else if (type.includes('/clipboard.js/1.')) {
-        return  '1.7.1';
+        return '1.7.1';
     } else if (type.includes('/clipboard.js/2.')) {
-        return  '2.0.6';
+        return '2.0.6';
     } else if (type.includes('/d3/3.')) {
-        return  '3.5.17';
+        return '3.5.17';
     } else if (type.includes('/d3-legend/2.')) {
-        return  '2.25.6';
+        return '2.25.6';
     } else if (type.includes('/dojo/1.')) {
-        return  '1.14.1';
+        return '1.14.1';
     } else if (type.includes('/ember.js/1.')) {
-        return  '1.13.13';
+        return '1.13.13';
     } else if (type.includes('/ember.js/2.')) {
-        return  '2.18.2';
+        return '2.18.2';
     } else if (type.includes('/ember.js/3.')) {
-        return  '3.12.3';
+        return '3.12.3';
     } else if (type.includes('/ethjs')) {
-        return  '0.3.4';
+        return '0.3.4';
     } else if (type.includes('/ext-core/3.')) {
-        return  '3.1.0';
+        return '3.1.0';
     } else if (type.includes('findify')) {
-        return  '6.9.15';
+        return '6.9.15';
     } else if (type.includes('/fancybox/2.')) {
-        return  '2.1.5';
+        return '2.1.5';
     } else if (type.includes('/flv.js/')) {
-        return  '1.5.0';
+        return '1.5.0';
     } else if (type.includes('/fontawesome/3.')) {
-        return  '3.2.1';
+        return '3.2.1';
     } else if (type.includes('/fontawesome/4.')) {
-        return  '4.7.0';
+        return '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
-        return  '5.14.0';
+        return '5.14.0';
     } else if (type.includes('/hls.js/')) {
-        return  '0.13.2';
+        return '0.13.2';
     } else if (type.includes('/jets/0.')) {
-        return  '0.14.1';
+        return '0.14.1';
     } else if (type.includes('/jquery/1.')) {
         if (helpers.compareVersion('1.7.1', version)) return '1.7.1'; // <= v1.7.1
         else if (helpers.compareVersion('1.8.3', version)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
         else return '1.12.4'; // >= 1.8.4
     } else if (type.includes('/jquery/1.8.')) {
-        return  '1.8.3';
+        return '1.8.3';
     } else if (type.includes('/jquery/2.')) {
-        return  '2.2.4';
+        return '2.2.4';
     } else if (type.includes('/jquery/3.') || type.includes('/jquery/null')) {
-        return  '3.5.1';
+        return '3.5.1';
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
-        return  '1.4.10';
+        return '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
         if (helpers.compareVersion('1.8.18', version)) return '1.8.18'; // <= v1.8.18
         else return '1.12.1'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
-        return  '2.70';
+        return '2.70';
     } else if (type.includes('/jquery-csv/1.')) {
-        return  '1.0.9';
+        return '1.0.9';
     } else if (type.includes('/jquery.lazyload/1.')) {
-        return  '1.9.1';
+        return '1.9.1';
     } else if (type.includes('/jquery-migrate/1.')) {
-        return  '1.4.1';
+        return '1.4.1';
     } else if (type.includes('/jquery-migrate/3.')) {
-        return  '3.1.0';
+        return '3.1.0';
     } else if (type.includes('/jquery-mousewheel/3.')) {
-        return  '3.1.13';
+        return '3.1.13';
     } else if (type.includes('/jScrollPane/2.')) {
-        return  '2.2.2';
+        return '2.2.2';
     } else if (type.includes('/jquery-validate/1.')) {
-        return  '1.19.1';
+        return '1.19.1';
     } else if (type.includes('/jquery-jeditable/1.')) {
-        return  '1.8.0';
+        return '1.8.0';
     } else if (type.includes('tablesorter/2.')) {
         return '2.31.3';
     } else if (type.includes('/jquery-modal/0.')) {
         return '0.9.2';
     } else if (type.includes('/mobile/1.')) {
-        return  '1.4.5';
+        return '1.4.5';
     } else if (type.includes('/nvd3/1.')) {
-        return  '1.8.6';
+        return '1.8.6';
     } else if (type.includes('/js-cookie/2.')) {
-        return  '2.2.1';
+        return '2.2.1';
     } else if (type.includes('/lazysizes/4.')) {
-        return  '4.1.8';
+        return '4.1.8';
     } else if (type.includes('/libphonenumber-js/1.')) {
-        return  '1.7.53';
+        return '1.7.53';
     } else if (type.includes('/lodash.js/4.')) {
-        return  '4.17.10';
+        return '4.17.10';
     } else if (type.includes('lozad')) {
-        return  '1.14.0';
+        return '1.14.0';
     } else if (type.includes('/mdbootstrap/4.')) {
-        return  '4.18.0';
+        return '4.18.0';
     } else if (type.includes('/materialize/1.')) {
-        return  '1.0.0';
+        return '1.0.0';
     } else if (type.includes('/materialize/0.')) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
-        return  '0.100.2';
+        return '0.100.2';
     } else if (type.includes('/modernizr/2.')) {
-        return  '2.8.3';
+        return '2.8.3';
     } else if (type.includes('/moment.js/2.')) {
-        return  '2.24.0';
+        return '2.24.0';
     } else if (type.includes('/mootools/1.')) {
         if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
         else return '1.6.0'; // > 1.4.5
     } else if (type.includes('/oclazyload/1.')) {
-        return  '1.1.0';
+        return '1.1.0';
     } else if (type.includes('/owl-carousel/1.')) {
-        return  '1.3.3';
+        return '1.3.3';
     } else if (type.includes('p2p-media-loader-core')) {
-        return  '0.6.2';
+        return '0.6.2';
     } else if (type.includes('/page.js/1.')) {
-        return  '1.7.1';
+        return '1.7.1';
     } else if (type.includes('/plyr/3.')) {
-        return  '3.5.10';
+        return '3.5.10';
     } else if (type.includes('/popper.js/1.')) {
-        return  '1.16.1';
+        return '1.16.1';
     } else if (type.includes('/prototype/1.')) {
-        return  '1.7.3.0';
+        return '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {
-        return  '3.26.2';
+        return '3.26.2';
     } else if (type.includes('/react/16.')) {
-        return  '16.13.1';
+        return '16.13.1';
     } else if (type.includes('/react-dom/16.')) {
-        return  '16.13.1';
+        return '16.13.1';
     } else if (type.includes('/rickshaw/1.')) {
-        return  '1.6.6';
+        return '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
-        return  '1.9.0';
+        return '1.9.0';
     } else if (type.includes('/select2/4.')) {
-        return  '4.0.12';
+        return '4.0.12';
     } else if (type.includes('/showdown/1.')) {
-        return  '1.9.1';
+        return '1.9.1';
     } else if (type.includes('/showdown/0.')) {
-        return  '0.5.1';
+        return '0.5.1';
     } else if (type.includes('/simplemde/')) {
-        return  '1.11.2';
+        return '1.11.2';
     } else if (type.includes('/slick-carousel/1.')) {
-        return  '1.9.0';
+        return '1.9.0';
     } else if (type.includes('/socket.io/2.')) {
-        return  '2.3.0';
+        return '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
-        return  '2.3.2';
+        return '2.3.2';
     } else if (type.includes('/stickyfill/1.')) {
-        return  '1.1.4';
+        return '1.1.4';
     } else if (type.includes('/stickyfill/2.')) {
-        return  '2.1.0';
+        return '2.1.0';
     } else if (type.includes('/store.js/2.')) {
-        return  '2.0.4';
+        return '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
-        return  '2.2';
+        return '2.2';
     } else if (type.includes('/swiper/4.')) {
-        return  '4.5.1';
+        return '4.5.1';
     } else if (type.includes('/swiper/5.')) {
-        return  '5.4.2';
+        return '5.4.2';
     } else if (type.includes('/tether/1.')) {
-        return  '1.4.7';
+        return '1.4.7';
     } else if (type.includes('/tooltipster/3.')) {
-        return  '3.3.0';
+        return '3.3.0';
     } else if (type.includes('/twitter-bootstrap/4.')) {
-        return  '4.5.0';
+        return '4.5.0';
     } else if (type.includes('/twitter-bootstrap/3.')) {
-        return  '3.4.1';
+        return '3.4.1';
     } else if (type.includes('/twitter-bootstrap/2.')) {
-        return  '2.3.2';
+        return '2.3.2';
     } else if (type.includes('/toastr.js/2.')) {
-        return  '2.1.4';
+        return '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
-        return  '1.9.1';
+        return '1.9.1';
     } else if (type.includes('/urlive/1.')) {
-        return  '1.1.1';
+        return '1.1.1';
     } else if (type.includes('/vanilla-lazyload')) {
-        return  '17.1.0';
+        return '17.1.0';
     } else if (type.includes('/vue/1.')) {
-        return  '1.0.28';
+        return '1.0.28';
     } else if (type.includes('/vue/2.')) {
-        return  '2.6.11';
+        return '2.6.11';
     } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
-        return  '4.0.0';
+        return '4.0.0';
     } else if (type.includes('webfont')) {
-        return  '1.6.28';
+        return '1.6.28';
     } else if (type.includes('/webrtc-adapter/6.')) {
-        return  '6.4.8';
+        return '6.4.8';
     } else if (type.includes('/wow/1.')) {
-        return  '1.1.2';
+        return '1.1.2';
     } else if (version === null) {
-        return  'latest';
+        return 'latest';
     }
 };
-
 
 helpers.compareVersion = function (v1, v2) {
     /**
@@ -544,13 +549,13 @@ helpers.compareVersion = function (v1, v2) {
     v1 = v1.split('.');
     v2 = v2.split('.');
     const k = Math.min(v1.length, v2.length);
-    for (let i = 0; i < k; ++ i) {
+    for (let i = 0; i < k; ++i) {
         v1[i] = parseInt(v1[i], 10);
         v2[i] = parseInt(v2[i], 10);
         if (v1[i] > v2[i]) return true;
         if (v1[i] < v2[i]) return false;
     }
-    return v1.length == v2.length ? true: (v1.length < v2.length ? false : true);
+    return v1.length == v2.length ? true : v1.length < v2.length ? false : true;
 };
 
 const ListOfFiles = {

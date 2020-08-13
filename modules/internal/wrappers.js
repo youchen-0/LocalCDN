@@ -24,28 +24,24 @@ var wrappers = {};
  */
 
 wrappers.setBadgeBackgroundColor = function (details) {
-
     if (chrome.browserAction.setBadgeBackgroundColor !== undefined) {
         chrome.browserAction.setBadgeBackgroundColor(details);
     }
 };
 
 wrappers.setBadgeText = function (details) {
-
     if (chrome.browserAction.setBadgeText !== undefined) {
         chrome.browserAction.setBadgeText(details);
     }
 };
 
 wrappers.setBadgeTextColor = function (details) {
-
     if (chrome.browserAction.setBadgeTextColor !== undefined) {
         chrome.browserAction.setBadgeTextColor(details);
     }
 };
 
 wrappers.setIcon = function (details, type) {
-
     if (chrome.browserAction.setIcon) {
         details.path = IconType[details.path][type];
     } else {
