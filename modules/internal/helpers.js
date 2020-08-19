@@ -403,7 +403,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
         return '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
-        if (helpers.compareVersion('1.8.18', version)) return '1.8.18'; // <= v1.8.18
+        if (helpers.compareVersion('1.8.24', version)) return '1.8.24'; // <= v1.8.24
         else return '1.12.1'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
         return '2.70';
