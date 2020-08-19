@@ -732,8 +732,8 @@ var mappings = {
         '/': {
             'releases/v{version}/css/': resources.fontawesome5CSS,
             'releases/v{version}/js/': resources.fontawesome5JS,
-            'a1f20be65b.js': resources.webfontloaderFontawesomeJS,
-            'a1f20be65b.css': resources.webfontloaderFontawesomeCSS,
+            'fa-code.js': resources.webfontloaderFontawesomeJS,
+            'fa-code.css': resources.webfontloaderFontawesomeCSS,
             'webfontloader/{version}/webfontload': resources.webfontloader
         }
     },

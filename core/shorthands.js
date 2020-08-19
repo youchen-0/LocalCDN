@@ -132,20 +132,20 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker.standalone.min.css',
             'bundle': ''
         };
-    } else if (channelHost + channelPath === 'use.fontawesome.com/a1f20be65b.js') {
+    } else if (channelHost + channelPath === 'use.fontawesome.com/fa-code.css') {
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
             'versionDelivered': '4.7.0',
-            'path': 'resources/webfont/a1f20be65b.jsm',
+            'path': 'resources/webfont/fa-loader.css',
             'bundle': ''
         };
-    } else if (channelHost + channelPath === 'use.fontawesome.com/a1f20be65b.css') {
+    } else if (/use\.fontawesome\.com\/[a-z0-9]{10}\.js/.test(channelHost + channelPath)) {
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
             'versionDelivered': '4.7.0',
-            'path': 'resources/webfont/a1f20be65b.css',
+            'path': 'resources/webfont/fa-loader.jsm',
             'bundle': ''
         };
     } else {

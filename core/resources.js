@@ -691,11 +691,11 @@ var resources = {
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeJS': {
-        'path': 'resources/webfont/a1f20be65b.jsm',
+        'path': 'resources/webfont/fa-code.jsm',
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeCSS': {
-        'path': 'resources/webfont/a1f20be65b.css',
+        'path': 'resources/webfont/fa-code.css',
         'type': 'text/css'
     },
     // WebRTC adapter
