@@ -60,7 +60,7 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "uBlock や uMatrix を使用している場合は「ルールを手動で追加する必要があります」が、ここでルールを生成できます。",
+        "message": "uBlock Origin や uMatrix を使用している場合は「ルールを手動で追加する必要があります」が、ここでルールを生成できます。",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
@@ -136,7 +136,7 @@
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "拡張機能のアイコンを選択",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
@@ -144,7 +144,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "この機能は現在、実験段階です。データを転送することはありません。全てがデバイス上にあり、ローカルで処理されます。",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
