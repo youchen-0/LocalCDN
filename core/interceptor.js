@@ -29,28 +29,25 @@ var interceptor = {};
  */
 
 interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
-
     let validCandidate, targetDetails, targetPath;
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
 
+    if (!validCandidate) {
+        return {
+            cancel: false,
+        };
+    }
+
     // Possible URLs of Google Fonts: https://fonts.googleapis.com/css
     //                                https://fonts.googleapis.com/css2
     if (requestDetails.url.startsWith('https://fonts.googleapis.com/css')) {
-        if(interceptor.blockGoogleFonts  === true || interceptor.blockMissing === true) {
+        if (interceptor.blockGoogleFonts === true || interceptor.blockMissing === true) {
             return {
                 'cancel': true
             };
         }
     }
-
-    if (!validCandidate) {
-
-        return {
-            'cancel': false
-        };
-    }
-
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
     targetPath = targetDetails.path;
 
@@ -72,18 +69,15 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
  */
 
 interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
-
     let requestUrlSegments;
 
     if (interceptor.blockMissing === true) {
-
         return {
             'cancel': true
         };
     }
 
     if (preserveUrl === true) {
-
         return {
             'cancel': false
         };
@@ -92,16 +86,13 @@ interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
     requestUrlSegments = new URL(requestUrl);
 
     if (requestUrlSegments.protocol === Address.HTTP) {
-
         requestUrlSegments.protocol = Address.HTTPS;
         requestUrl = requestUrlSegments.toString();
 
         return {
             'redirectUrl': requestUrl
         };
-
     } else {
-
         return {
             'cancel': false
         };
@@ -109,7 +100,6 @@ interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
 };
 
 interceptor._handleStorageChanged = function (changes) {
-
     if (Setting.XHR_TEST_DOMAIN in changes) {
         interceptor.xhrTestDomain = changes.xhrTestDomain.newValue;
     }
@@ -139,7 +129,6 @@ interceptor.relatedSettings.push(Setting.XHR_TEST_DOMAIN);
 interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
 
 chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
-
     interceptor.amountInjected = items.amountInjected || 0;
     interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
     interceptor.blockMissing = items.blockMissing || false;

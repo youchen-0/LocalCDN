@@ -29,7 +29,6 @@ var requestAnalyzer = {};
  */
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
-
     let initiatorDomain, isWhitelisted;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
@@ -45,11 +44,11 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     }
 
     // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
-    if (BrowserType.CHROMIUM){
+    if (BrowserType.CHROMIUM) {
         if (/(font-awesome|fontawesome)/.test(requestDetails.url)) {
             console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
             return false;
-        } else if (requestDetails.url === 'https://fonts.googleapis.com/icon?family=Material+Icons') {
+        } else if (requestDetails.url.startsWith('https://fonts.googleapis.com')) {
             // also valid for Google Material icons
             console.warn('[ LocalCDN ] Google Material Icons are not fully supported by your browser.');
             return false;
@@ -66,7 +65,6 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 };
 
 requestAnalyzer.getLocalTarget = function (requestDetails) {
-
     let destinationUrl, destinationHost, destinationPath, hostMappings, basePath, resourceMappings;
     let destinationSearchString = '';
 
@@ -102,9 +100,7 @@ requestAnalyzer.getLocalTarget = function (requestDetails) {
  */
 
 requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
-
     for (let basePath of Object.keys(hostMappings)) {
-
         if (channelPath.startsWith(basePath)) {
             return basePath;
         }
@@ -114,7 +110,6 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
 };
 
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString) {
-
     let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
 
     chrome.storage.sync.get(Setting.LOGGING, function (items) {
@@ -134,14 +129,11 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     }
 
     for (let resourceMold of Object.keys(resourceMappings)) {
-
         if (resourcePattern.startsWith(resourceMold)) {
-
             let targetPath, hostShorthands, versionDelivered, versionRequested;
 
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
-
             // Replace the requested version with the latest depending on major version
             versionDelivered = helpers.setLastVersion(targetPath, versionNumber).toString();
             targetPath = targetPath.replace(versionNumber, versionDelivered);
@@ -151,19 +143,17 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             hostShorthands = shorthands[channelHost];
 
             if (hostShorthands && hostShorthands[targetPath]) {
-
                 let shorthand = hostShorthands[targetPath];
 
                 targetPath = shorthand.path;
                 versionDelivered = shorthand.version;
-
             } else if (versionNumber === null) {
                 versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
             }
 
             // Get bundle name
             let bundle = helpers.determineBundle(channelPath);
-            if(bundle !== '') {
+            if (bundle !== '') {
                 filename = channelPath.split('/').pop();
                 targetPath = ( RegExp('.*\.css$').test(filename) ) ? targetPath + filename : targetPath + filename + 'm';
             }
@@ -188,13 +178,11 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 };
 
 requestAnalyzer._applyWhitelistedDomains = function () {
-
     chrome.storage.sync.get(Setting.WHITELISTED_DOMAINS, function (items) {
         requestAnalyzer.whitelistedDomains = items.whitelistedDomains || {};
     });
 };
 requestAnalyzer._applyManipulateDOMDomains = function () {
-
     chrome.storage.sync.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
         requestAnalyzer.domainsManipulateDOM = items.domainsManipulateDOM || {};
     });
