@@ -559,6 +559,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'fa-loader.jsm': 'Font Awesome CSS (WFL)',
+    'fa-loader.css': 'Font Awesome JS (WFL)',
     'jquery.tooltipster.min.jsm': 'Tooltipster',
     'jquery.jscrollpane.min.jsm': 'jScrollPane',
     'stickyfill.min.jsm': 'Stickyfill',
