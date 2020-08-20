@@ -140,47 +140,47 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Estatísticas internas",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Esta função está atualmente em uma fase experimental. Não há transmissão de dados. É tudo local em seu dispositivo.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Estatísticas",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Hoje",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Semana passada",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Último mês",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Ano passado",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Excluir",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Média (Substituições por dia)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Estruturas substituídas",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Você tem certeza de que quer apagar as estatísticas?",
         "description": "Are you sure you want to delete the statistics?"
     }
 }
