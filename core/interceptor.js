@@ -35,22 +35,22 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
 
     if (!validCandidate) {
         return {
-            cancel: false,
+            'cancel': false
         };
     }
 
-    // Possible URLs of Google Fonts: https://fonts.googleapis.com/css
-    //                                https://fonts.googleapis.com/css2
-    if (requestDetails.url.startsWith('https://fonts.googleapis.com/css')) {
-        if (interceptor.blockGoogleFonts === true || interceptor.blockMissing === true) {
+    targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
+    targetPath = targetDetails.path;
+
+    if (requestDetails.url.includes('fonts.googleapis.com') && !requestDetails.url.includes('Material+Icons')) {
+        let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
+        // Check if the website is allowed to load Google Fonts
+        if (interceptor.blockGoogleFonts === true && !requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
             return {
                 'cancel': true
             };
         }
     }
-    targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
-    targetPath = targetDetails.path;
-
     if (!targetDetails) {
         return interceptor._handleMissingCandidate(requestDetails.url);
     }
@@ -111,6 +111,10 @@ interceptor._handleStorageChanged = function (changes) {
     if (Setting.BLOCK_GOOGLE_FONTS in changes) {
         interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
     }
+
+    if (Setting.BLOCK_GOOGLE_FONTS in changes) {
+        interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
+    }
 };
 
 /**
@@ -121,18 +125,21 @@ interceptor.amountInjected = 0;
 interceptor.xhrTestDomain = Address.LOCALCDN;
 interceptor.blockMissing = false;
 interceptor.blockGoogleFonts = true;
+interceptor.allowedDomainsGoogleFonts = {};
 
 interceptor.relatedSettings = [];
 
 interceptor.relatedSettings.push(Setting.AMOUNT_INJECTED);
 interceptor.relatedSettings.push(Setting.XHR_TEST_DOMAIN);
 interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
+interceptor.relatedSettings.push(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS);
 
 chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
     interceptor.amountInjected = items.amountInjected || 0;
     interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
     interceptor.blockMissing = items.blockMissing || false;
     interceptor.blockGoogleFonts = items.blockGoogleFonts || true;
+    interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
 });
 
 /**

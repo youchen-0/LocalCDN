@@ -187,6 +187,11 @@ requestAnalyzer._applyManipulateDOMDomains = function () {
         requestAnalyzer.domainsManipulateDOM = items.domainsManipulateDOM || {};
     });
 };
+requestAnalyzer._applyAllowedDomainsGoogleFonts = function () {
+    chrome.storage.sync.get(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS, function (items) {
+        requestAnalyzer.domainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
+    });
+};
 
 /**
  * Initializations
@@ -197,9 +202,13 @@ requestAnalyzer._applyWhitelistedDomains();
 
 requestAnalyzer.domainsManipulateDOM = {};
 requestAnalyzer._applyManipulateDOMDomains();
+
+requestAnalyzer.domainsGoogleFonts = {};
+requestAnalyzer._applyAllowedDomainsGoogleFonts();
 /**
  * Event Handlers
  */
 
 chrome.storage.onChanged.addListener(requestAnalyzer._applyWhitelistedDomains);
 chrome.storage.onChanged.addListener(requestAnalyzer._applyManipulateDOMDomains);
+chrome.storage.onChanged.addListener(requestAnalyzer._applyAllowedDomainsGoogleFonts);

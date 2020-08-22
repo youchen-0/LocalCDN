@@ -43,7 +43,8 @@ main._initializeSettings = function () {
         [Setting.DOMAINS_MANIPULATE_DOM]: {},
         [Setting.NEGATE_HTML_FILTER_LIST]: false,
         [Setting.BLOCK_GOOGLE_FONTS]: true,
-        [Setting.SELECTED_ICON]: 'Default'
+        [Setting.SELECTED_ICON]: 'Default',
+        [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: {}
     };
 
     chrome.storage.sync.get(settingDefaults, function (items) {

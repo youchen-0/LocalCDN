@@ -29,35 +29,31 @@ var options = {};
  */
 
 options._renderContents = function () {
-
     let translationComplete = true;
 
     document.body.setAttribute('dir', options._scriptDirection);
     translationComplete = helpers.insertI18nContentIntoDocument(document);
 
-    options._determineOptionValues()
-        .then(options._determineLocalOptionValues)
-        .then(options._renderOptionsPanel);
+    options._determineOptionValues().then(options._determineLocalOptionValues).then(options._renderOptionsPanel);
 
     if (!translationComplete) {
         options._renderLocaleNotice();
     }
 
-    if(BrowserType.CHROMIUM) {
+    if (BrowserType.CHROMIUM) {
         document.getElementById('html-filter-div').style.display = 'none';
         document.getElementById('block-google-fonts').style.display = 'none';
     }
 
-    if(!chrome.browserAction.setIcon) {
+    if (!chrome.browserAction.setIcon) {
         document.getElementById('section-icon-style').style.display = 'none';
     }
 };
 
 options._renderOptionsPanel = function () {
+    let whitelistedDomains, domainWhitelist, elements, htmlFilterDomains, domainHtmlFilter, googleFontsDomains, domainAllowedGoogleFonts;
 
-    let whitelistedDomains, domainWhitelist, elements, htmlFilterDomains, domainHtmlFilter;
-
-    Object.assign(options._optionValues, {[Setting.INTERNAL_STATISTICS]: options._internalStatistics});
+    Object.assign(options._optionValues, { [Setting.INTERNAL_STATISTICS]: options._internalStatistics });
 
     whitelistedDomains = options._optionValues.whitelistedDomains;
     domainWhitelist = options._serializeWhitelistedDomains(whitelistedDomains);
@@ -65,8 +61,11 @@ options._renderOptionsPanel = function () {
     htmlFilterDomains = options._optionValues.domainsManipulateDOM;
     domainHtmlFilter = options._serializeWhitelistedDomains(htmlFilterDomains);
 
+    googleFontsDomains = options._optionValues.allowedDomainsGoogleFonts;
+    domainAllowedGoogleFonts = options._serializeWhitelistedDomains(googleFontsDomains);
+
     elements = options._optionElements;
-    Object.assign(elements, {[Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics')});
+    Object.assign(elements, { [Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics') });
 
     elements.showIconBadge.checked = options._optionValues.showIconBadge;
     elements.blockMissing.checked = options._optionValues.blockMissing;
@@ -80,6 +79,7 @@ options._renderOptionsPanel = function () {
     elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
     elements.selectedIcon.value = options._optionValues.selectedIcon;
     elements.internalStatistics.checked = options._optionValues.internalStatistics;
+    elements.allowedDomainsGoogleFonts.value = domainAllowedGoogleFonts;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -92,14 +92,10 @@ options._renderOptionsPanel = function () {
         options._renderLocaleNotice();
     }
 
-    options._displayBlockGoogleFonts(options._optionValues.blockMissing);
-
-    if(elements.negateHtmlFilterList.checked === true) {
-        document.getElementById('html-filter-domains-title-include').style.display = "none";
-        document.getElementById('html-filter-domains-title-exclude').style.display = "block";
+    if (elements.blockGoogleFonts.checked) {
+        document.getElementById('div-domains-whitelist-google-fonts').style.display = 'block';
     } else {
-        document.getElementById('html-filter-domains-title-include').style.display = "block";
-        document.getElementById('html-filter-domains-title-exclude').style.display = "none";
+        document.getElementById('div-domains-whitelist-google-fonts').style.display = 'none';
     }
 
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
@@ -113,25 +109,21 @@ options._renderOptionsPanel = function () {
 };
 
 options._renderBlockMissingNotice = function () {
-
     let blockMissingNoticeElement = document.getElementById('notice-block-missing');
     blockMissingNoticeElement.setAttribute('class', 'notice notice-warning');
 };
 
 options._hideBlockMissingNotice = function () {
-
     let blockMissingNoticeElement = document.getElementById('notice-block-missing');
     blockMissingNoticeElement.setAttribute('class', 'notice notice-warning hidden');
 };
 
 options._renderLocaleNotice = function () {
-
     let localeNoticeElement = document.getElementById('notice-locale');
     localeNoticeElement.setAttribute('class', 'notice notice-default');
 };
 
 options._registerOptionChangedEventListeners = function (elements) {
-
     elements.showIconBadge.addEventListener('change', options._onOptionChanged);
     elements.blockMissing.addEventListener('change', options._onOptionChanged);
     elements.disablePrefetch.addEventListener('change', options._onOptionChanged);
@@ -144,19 +136,18 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
     elements.selectedIcon.addEventListener('change', options._onOptionChanged);
     let type = elements.ruleSets;
-    for(let i = 0; i < type.length; i++) {
+    for (let i = 0; i < type.length; i++) {
         type[i].addEventListener('change', options._openRuleSet);
     }
     elements.copyRuleSet.addEventListener('click', options._copyRuleSet);
     elements.internalStatistics.addEventListener('change', options._onOptionChanged);
+    elements.allowedDomainsGoogleFonts.addEventListener('keyup', options._onOptionChanged);
 };
 
 options._registerMiscellaneousEventListeners = function () {
-
     let blockMissingButtonElement = document.getElementById('button-block-missing');
 
     blockMissingButtonElement.addEventListener('click', function () {
-
         let changeEvent = new Event('change');
 
         options._optionElements.blockMissing.checked = false;
@@ -165,9 +156,7 @@ options._registerMiscellaneousEventListeners = function () {
 };
 
 options._determineOptionValues = function () {
-
     return new Promise((resolve) => {
-
         let optionKeys = Object.keys(options._optionElements);
 
         chrome.storage.sync.get(optionKeys, function (items) {
@@ -178,7 +167,6 @@ options._determineOptionValues = function () {
 };
 
 options._determineLocalOptionValues = function () {
-
     return new Promise((resolve) => {
         chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {
             options._internalStatistics = items.internalStatistics;
@@ -192,7 +180,6 @@ options._getOptionElement = function (optionKey) {
 };
 
 options._getOptionElements = function () {
-
     let optionElements = {
         [Setting.SHOW_ICON_BADGE]: options._getOptionElement(Setting.SHOW_ICON_BADGE),
         [Setting.BLOCK_MISSING]: options._getOptionElement(Setting.BLOCK_MISSING),
@@ -201,34 +188,30 @@ options._getOptionElements = function () {
         [Setting.WHITELISTED_DOMAINS]: options._getOptionElement(Setting.WHITELISTED_DOMAINS),
         [Setting.HIDE_RELEASE_NOTES]: options._getOptionElement(Setting.HIDE_RELEASE_NOTES),
         [Setting.LOGGING]: options._getOptionElement(Setting.LOGGING),
-        ['ruleSets']: document.getElementsByName("rule-sets"),
-        ['copyRuleSet']: document.getElementById("button-copy-rule-set"),
+        ['ruleSets']: document.getElementsByName('rule-sets'),
+        ['copyRuleSet']: document.getElementById('button-copy-rule-set'),
         [Setting.NEGATE_HTML_FILTER_LIST]: options._getOptionElement(Setting.NEGATE_HTML_FILTER_LIST),
         [Setting.DOMAINS_MANIPULATE_DOM]: options._getOptionElement(Setting.DOMAINS_MANIPULATE_DOM),
         [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS),
-        [Setting.SELECTED_ICON]: options._getOptionElement(Setting.SELECTED_ICON)
+        [Setting.SELECTED_ICON]: options._getOptionElement(Setting.SELECTED_ICON),
+        [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: options._getOptionElement(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS),
     };
 
     return optionElements;
 };
 
 options._configureLinkPrefetching = function (value) {
-
     if (value === false) {
-
         // Restore default values of related preference values.
         chrome.privacy.network.networkPredictionEnabled.clear({});
-
     } else {
-
         chrome.privacy.network.networkPredictionEnabled.set({
-            'value': false
+            value: false,
         });
     }
 };
 
 options._serializeWhitelistedDomains = function (whitelistedDomains) {
-
     if (whitelistedDomains === undefined) return;
 
     let domainWhitelist, whitelistedDomainKeys;
@@ -247,7 +230,6 @@ options._serializeWhitelistedDomains = function (whitelistedDomains) {
 };
 
 options._parseDomainWhitelist = function (domainWhitelist) {
-
     let whitelistedDomains = {};
 
     domainWhitelist.split(Whitelist.VALUE_SEPARATOR).forEach(function (domain) {
@@ -262,7 +244,6 @@ options._parseDomainWhitelist = function (domainWhitelist) {
  */
 
 options._onDocumentLoaded = function () {
-
     let language = navigator.language;
 
     options._optionElements = options._getOptionElements();
@@ -272,8 +253,7 @@ options._onDocumentLoaded = function () {
     options._renderContents();
 };
 
-options._onOptionChanged = function ({target}) {
-
+options._onOptionChanged = function ({ target }) {
     let optionKey, optionType, optionValue, storageType;
 
     optionKey = target.getAttribute('data-option');
@@ -286,13 +266,10 @@ options._onOptionChanged = function ({target}) {
     }
 
     if (optionKey === Setting.BLOCK_MISSING) {
-
         if (optionValue === true) {
             options._renderBlockMissingNotice();
-            options._displayBlockGoogleFonts(true);
         } else {
             options._hideBlockMissingNotice();
-            options._displayBlockGoogleFonts(false);
         }
     }
 
@@ -300,24 +277,35 @@ options._onOptionChanged = function ({target}) {
         options._configureLinkPrefetching(optionValue);
     }
 
-    if (optionKey === Setting.WHITELISTED_DOMAINS || optionKey === Setting.DOMAINS_MANIPULATE_DOM) {
+    if (optionKey === Setting.WHITELISTED_DOMAINS || optionKey === Setting.DOMAINS_MANIPULATE_DOM || optionKey === Setting.ALLOWED_DOMAINS_GOOGLE_FONTS) {
         optionValue = options._parseDomainWhitelist(optionValue);
     }
 
-    if (optionKey === Setting.NEGATE_HTML_FILTER_LIST) {
-        if(optionValue === true) {
-            document.getElementById('html-filter-domains-title-include').style.display = "none";
-            document.getElementById('html-filter-domains-title-exclude').style.display = "block";
+    if (optionKey === Setting.BLOCK_GOOGLE_FONTS) {
+        if (optionValue === true) {
+            document.getElementById('div-domains-whitelist-google-fonts').style.display = 'block';
         } else {
-            document.getElementById('html-filter-domains-title-include').style.display = "block";
-            document.getElementById('html-filter-domains-title-exclude').style.display = "none";
+            document.getElementById('div-domains-whitelist-google-fonts').style.display = 'none';
+        }
+    }
+
+    if (optionKey === Setting.NEGATE_HTML_FILTER_LIST) {
+        if (optionValue === true) {
+            document.getElementById('html-filter-domains-title-include').style.display = 'none';
+            document.getElementById('html-filter-domains-title-exclude').style.display = 'block';
+        } else {
+            document.getElementById('html-filter-domains-title-include').style.display = 'block';
+            document.getElementById('html-filter-domains-title-exclude').style.display = 'none';
         }
     }
 
     if (optionKey === Setting.SELECTED_ICON) {
-        wrappers.setIcon({
-            'path': optionValue
-        }, 'Enabled');
+        wrappers.setIcon(
+            {
+                path: optionValue,
+            },
+            'Enabled'
+        );
     }
 
     if (optionKey === Setting.INTERNAL_STATISTICS) {
@@ -327,87 +315,89 @@ options._onOptionChanged = function ({target}) {
     }
 
     storageType.set({
-        [optionKey]: optionValue
+        [optionKey]: optionValue,
     });
 };
 
-options._openRuleSet = function({target}) {
-
+options._openRuleSet = function ({ target }) {
     let urls = mappings;
     let optionKey = target.getAttribute('data-option');
-    let textArea = document.getElementById("generated-rules");
-    let btnCopy = document.getElementById("button-copy-rule-set");
-    let content = "";
+    let textArea = document.getElementById('generated-rules');
+    let btnCopy = document.getElementById('button-copy-rule-set');
+    let content = '';
 
-    textArea.style.display = "block";
-    btnCopy.style.display = "block";
+    textArea.style.display = 'block';
+    btnCopy.style.display = 'block';
 
     for (var domain in urls) {
-        if (optionKey === "uMatrix") {
-            content += "* " + domain + " script allow" + '\n';
-            content += "* " + domain + " css allow" + '\n';
-        } else if (optionKey === "uBlock") {
-            content += "* " + domain + " * noop" + '\n';
+        if (optionKey === 'uMatrix') {
+            content += '* ' + domain + ' script allow' + '\n';
+            content += '* ' + domain + ' css allow' + '\n';
+        } else if (optionKey === 'uBlock') {
+            content += '* ' + domain + ' * noop' + '\n';
         }
     }
-    textArea.value = content.replace(/\n+$/, "");
+    textArea.value = content.replace(/\n+$/, '');
 };
 
-options._copyRuleSet = function() {
-    let textArea = document.getElementById("generated-rules");
-    navigator.clipboard.writeText(textArea.value).then(function() {
-        textArea.select();
-    }, function() {
-        alert("Rule set cannot be copied!");
+options._copyRuleSet = function () {
+    let textArea = document.getElementById('generated-rules');
+    navigator.clipboard.writeText(textArea.value).then(
+        function () {
+            textArea.select();
+        },
+        function () {
+            alert('Rule set cannot be copied!');
+        }
+    );
+};
+
+options._onClickHTMLFilterWarning = function () {
+    chrome.tabs.create({
+        url: 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
+        active: true,
     });
 };
 
-options._onClickHTMLFilterWarning = function() {
+options._onClickWelcomePage = function () {
     chrome.tabs.create({
-        'url': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
-        'active': true
+        url: chrome.extension.getURL('pages/welcome/welcome.html'),
+        active: true,
     });
 };
 
-options._onClickWelcomePage = function() {
+options._onClickDonate = function () {
     chrome.tabs.create({
-        'url': chrome.extension.getURL('pages/welcome/welcome.html'),
-        'active': true
+        url: chrome.extension.getURL('pages/donate/donate.html'),
+        active: true,
     });
 };
 
-options._onClickDonate = function() {
+options._onClickChangelog = function () {
     chrome.tabs.create({
-        'url': chrome.extension.getURL('pages/donate/donate.html'),
-        'active': true
+        url: chrome.extension.getURL('pages/updates/updates.html'),
+        active: true,
     });
 };
 
-options._onClickChangelog = function() {
+options._onClickFaq = function () {
     chrome.tabs.create({
-        'url': chrome.extension.getURL('pages/updates/updates.html'),
-        'active': true
+        url: chrome.extension.getURL('pages/help/help.html'),
+        active: true,
     });
 };
 
-options._onClickFaq = function() {
+options._onClickRulesetHelp = function () {
     chrome.tabs.create({
-        'url': chrome.extension.getURL('pages/help/help.html'),
-        'active': true
+        url: 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-uBlock-Origin-or-uMatrix',
+        active: true,
     });
 };
 
-options._onClickRulesetHelp = function() {
+options._onClickStatistics = function () {
     chrome.tabs.create({
-        'url': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-uBlock-Origin-or-uMatrix',
-        'active': true
-    });
-};
-
-options._onClickStatistics = function() {
-    chrome.tabs.create({
-        'url': chrome.extension.getURL('pages/statistics/statistics.html'),
-        'active': true
+        url: chrome.extension.getURL('pages/statistics/statistics.html'),
+        active: true,
     });
 };
 
@@ -415,11 +405,10 @@ options._onClickStatistics = function() {
  *  Updates the domain lists if the options page has no focus.
  *  document.hasFocus() prevents problems with keyboard input.
  */
-options._updatesDomainLists = function(changes) {
-
+options._updatesDomainLists = function (changes) {
     let changedItems = Object.keys(changes);
 
-    if(!document.hasFocus()){
+    if (!document.hasFocus()) {
         if (changedItems[0] === 'whitelistedDomains') {
             document.getElementById('tf-domains-whitelist').value = options._serializeWhitelistedDomains(changes['whitelistedDomains'].newValue);
         } else if (changedItems[0] === 'domainsManipulateDOM') {
@@ -427,16 +416,6 @@ options._updatesDomainLists = function(changes) {
         }
     } else {
         // document has the focus
-    }
-};
-
-options._displayBlockGoogleFonts = function(value) {
-    if (value === true) {
-        document.getElementById('block-google-fonts').classList.add('option-disabled');
-        document.getElementById('block-google-fonts-chk').disabled = true;
-    } else {
-        document.getElementById('block-google-fonts').classList.remove('option-disabled');
-        document.getElementById('block-google-fonts-chk').disabled = false;
     }
 };
 

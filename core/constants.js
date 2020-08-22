@@ -76,7 +76,8 @@ const Setting = {
     'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts',
     'SELECTED_ICON': 'selectedIcon',
     'INTERNAL_STATISTICS': 'internalStatistics',
-    'INTERNAL_STATISTICS_DATA': 'internalStatisticsData'
+    'INTERNAL_STATISTICS_DATA': 'internalStatisticsData',
+    'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts'
 };
 
 const WebRequest = {

@@ -48,15 +48,19 @@
                     <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
                 </div>
                 <div class="description-option" data-i18n-content="blockMissingDescription"></div>
-                <div id="block-google-fonts" class="option option-disabled">
-                    <div class="title-option">
-                        <label class="b-contain">
-                            <input id="block-google-fonts-chk" data-option="blockGoogleFonts" type="checkbox">
-                            <span data-i18n-content="blockGoogleFontsTitle">Block Google Fonts</span>
-                            <div class="b-input"></div>
-                        </label>
-                    </div>
-                    <div id="block-google-fonts-desc" class="description-option" data-i18n-content="blockGoogleFontsDescription">If you use the rules of the rule generator, requests to "fonts.googleapis.com" are allowed to substitute "Google Material Icons" automatically. If you want to block the other requests, enable this option.</div>
+            </section>
+            <section class="option">
+                <div class="title-option">
+                    <label class="b-contain">
+                        <input data-option="blockGoogleFonts" type="checkbox">
+                        <span data-i18n-content="blockGoogleFontsTitle">Block Google Fonts</span>
+                        <div class="b-input"></div>
+                    </label>
+                </div>
+                <div class="description-option" data-i18n-content="blockGoogleFontsDescription">If you use the rules of the rule generator, requests to "fonts.googleapis.com" are allowed to substitute "Google Material Icons" automatically. If you want to block the other requests, enable this option.</div>
+                <div id="div-domains-whitelist-google-fonts">
+                    <div class="description-option" data-i18n-content="labelDomainsWhitelistGoogleFonts">These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;).</div>
+                    <div class="description-option"><input id="tf-domains-whitelist-google-fonts" class="input-text without-checkbox" data-option="allowedDomainsGoogleFonts" type="text"></div>
                 </div>
             </section>
             <section class="option">
