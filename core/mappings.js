@@ -425,7 +425,8 @@ var mappings = {
     // Google Material Icons
     'fonts.googleapis.com': {
         '/': {
-            'icon?family=Material+Icons': resources.googleMaterialIcons
+            'icon?family=Material+Icons': resources.googleMaterialIcons,
+            'css?family=Material+Icons': resources.googleMaterialIcons
         }
     },
     // Yandex CDN
