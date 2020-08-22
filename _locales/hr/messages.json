@@ -1,22 +1,22 @@
 {
     "extensionDescription": {
-        "message": "Štiti vas protiv praćenje kroz „slobodan”, centraliziran, sadržaj isporuke.",
+        "message": "Štiti te od praćenja, putem „besplatne”, centralizirane dostave podataka.",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "Količina lokalnih injekcija resursa za dostavu sadržaja od instalacije.",
+        "message": "Broj umetnutih resursa putem lokalne CDN-mreže od trenutka instalacije.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "Postavke",
+        "message": "Opcije",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Prikaži broj ubrizgnutih na ikoni",
+        "message": "Prikaži broj umetnutih resursa na ikoni",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Na ikoni proširenja pokažite broj ubrizganih resursa.",
+        "message": "Prikaži broj umetnutih resursa na ikoni dodatka.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -24,23 +24,23 @@
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Prekini presretnute zahtjeve ako potrebni resurs nije lokalno dostupan.",
+        "message": "Prekini presretnute zahtjeve, ako potrebni resursi nisu lokalno dostupni.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Onemogući unaprijed dohvaćanje veze",
+        "message": "Deaktiviraj dohvaćanje veze unaprijed",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Spriječite da se onemogućenim zahtjevima iscuri na mreže isporuke.",
+        "message": "Spriječi curenje nedozvoljenih zahtjeva na mreže za dostavu podataka.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Obriši metapodatke iz dopuštenih zahtjeva",
+        "message": "Ukloni metapodatke iz dopuštenih zahtjeva",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Izbriši osjetljive podatke iz dopuštenih CDN zahtjeva za poboljšanje privatnosti.",
+        "message": "Izbriši osjetljive podatke iz dopuštenih CDN zahtjeva za bolju privatnosti.",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Unesite domene da biste tamo onemogućili LocalCDN. Više unosa odvojite tačka-zarezom (;).",
+        "message": "Upiši domene za deaktiviranje LocalCDN-a na tom mjestu. Odvoji višestruke unose s točka-zarezom (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -60,7 +60,7 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "U slučaju da koristite uBlock Origin ili uMatrix, ovdje možete generirati pravila. Ova pravila morate ručno dodati u uBlock Origin ili uMatrix.",
+        "message": "U slučaju da koristiš uBlock Origin ili uMatrix, ovdje možeš generirati pravila. Ova pravila moraš ručno dodati u uBlock Origin ili uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
@@ -72,59 +72,59 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Omogućite prijavu na konzoli preglednika",
+        "message": "Aktiviraj prijavu na konzoli preglednika",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Otvori \"Konzola preglednika\" (CTRL + SHIFT + J) da biste prikazali nedostajuće resurse.",
+        "message": "Otvori „Konzola preglednika” (CTRL + SHIFT + J) za prikaz nedostajućih resursa.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "Onemogući bilješke izdanja",
+        "message": "Deaktiviraj napomene uz izdanja",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Uključite ovo tako da ne primate nikakve informacije o novim značajkama LocalCDN-a. To uključuje informacije o novim pravilima uBlock / uMatrix.",
+        "message": "Uključi ovo, ako ne želiš primati informacije o novim funkcijama LocalCDN-a. To uključuje informacije o novim pravilima za uBlock/uMatrix.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Ova značajka može pokvariti web stranice. Ne ostavljajte značajku omogućenim, osim ako niste spremni ručno dodati bijelu listu na bilo koju domenu.",
+        "message": "Ova funkcija sprečava pravilno funkcioniranje web-stranica. Deaktiviraj funkciju, osim ako želiš ručno dodavati dotične domene u popis poželjnih.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "Onemogući",
+        "message": "Deaktiviraj",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtriraj HTML izvorni kod",
+        "message": "Filtriraj izvorni HTML kod",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "Donirajte",
+        "message": "Doniraj",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Preokreni HTML filter",
+        "message": "Preokreni HTML filtar",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Omogućite ovu opciju tako da se uvijek primjenjuje HTML filter. Domene na popisu tada će se zanemariti. Ako je ta opcija onemogućena, HTML filtar se primjenjuje samo za domene na popisu.",
+        "message": "Aktiviraj ovu opciju, tako da se uvijek primjenjuje HTML filtar. Domene na popisu tada će se zanemariti. Ako je ova opcija deaktivirana, HTML filtar se primjenjuje samo za domene na popisu.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Ova funkcija može pokvariti web mjesta. Obratite pažnju na podatke na Wiki stranici.",
+        "message": "Ova funkcija može spriječiti pravilno funkcioniranje web-stranica. Pročitaj informacije o tome na Wiki stranici.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "Ne primjenjujte HTML filter na ove domene:",
+        "message": "Ne primjenjuj HTML filtar na ove domene:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Unesite domene kojima će se obrađivati ili zanemariti HTML filter. Odvojite više unosa s tačka-zarezom (;).",
+        "message": "Upiši domene koje će HTML filtar obraditi ili zanemariti. Odvoji višestruke unose s točka-zarezom (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "Primijenite HTML filter za ove domene:",
+        "message": "Primijeni HTML filtar za ove domene:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
@@ -132,11 +132,11 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Ako su dozvoljeni zahtjevi za nedostajuće resurse, veze na \"fonts.googleapis.com\" nisu blokirane. Omogućite ovu opciju za blokiranje ovih zahtjeva.",
+        "message": "Ako su zahtjevi za nedostajuće resurse dozvoljeni, veze na „fonts.googleapis.com” se ne blokiraju. Aktiviraj ovu opciju za blokiranje ovih zahtjeva.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "Odaberite ikonu za ovo proširenje",
+        "message": "Odaberi ikonu za ovo proširenje",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
@@ -144,7 +144,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Ova je funkcija trenutno u eksperimentalnoj fazi. Nema prijenosa podataka. Sve je lokalno na vašem uređaju.",
+        "message": "Ova se funkcija trenutačno nalazi u eksperimentalnoj fazi. Podaci se ne prenose. Sve je lokalno na tvom uređaju.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -172,7 +172,7 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "Prosjek (Zamjene po danu)",
+        "message": "Prosjek (broj zamjena po danu)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
@@ -180,11 +180,11 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Jeste li sigurni da želite izbrisati statistiku?",
+        "message": "Sigurno želiš izbrisati statistiku?",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Ove domene smiju učitati Google fontove. Odvoji višestruke unose s točka-zarezom (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     }
 }
