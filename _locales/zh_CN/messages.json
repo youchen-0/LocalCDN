@@ -140,47 +140,47 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "内部统计数据",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "此功能当前处于实验阶段。无数据传输。全部在本地设备上。",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "统计数据",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "今天",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "上周",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "上月",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "去年",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "删除",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "平均（替换每天）",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "已替换框架",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "您确实想要删除统计数据吗？",
         "description": "Are you sure you want to delete the statistics?"
     }
 }
