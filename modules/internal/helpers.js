@@ -378,6 +378,8 @@ helpers.setLastVersion = function (type, version) {
         return '6.9.15';
     } else if (type.includes('/fancybox/2.')) {
         return '2.1.5';
+    } else if (type.includes('/fancybox/3.')) {
+        return '3.5.7';
     } else if (type.includes('/flv.js/')) {
         return '1.5.0';
     } else if (type.includes('/fontawesome/3.')) {
