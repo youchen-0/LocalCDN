@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Exkludera domäner från inspektioner",
+        "message": "Exkludera domäner från inspektioner:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -60,11 +60,11 @@
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "Om du använder uBlock Origin eller uMatrix kan du generera reglerna här. Du måste lägga till dessa regler manuellt i uBlock Origin eller uMatrix.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Senaste uppdateringen:",
         "description": "Last update:"
     },
     "copyRuleSet": {
