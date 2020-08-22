@@ -241,6 +241,8 @@ helpers.determineBundle = function (path = '') {
         return 'Findify';
     } else if (path.includes('bootstrap-datepicker')) {
         return 'Bootstrap Datepicker';
+    } else if (path.includes('/jquery.lazy/')) {
+        return 'jQuery Lazy';
     } else {
         return '';
     }
@@ -413,6 +415,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.0.9';
     } else if (type.includes('/jquery.lazyload/1.')) {
         return '1.9.1';
+    } else if (type.includes('/jquery.lazy/1.')) {
+        return '1.7.11';
     } else if (type.includes('/jquery-migrate/1.')) {
         return '1.4.1';
     } else if (type.includes('/jquery-migrate/3.')) {
@@ -561,6 +565,16 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jquery.lazy.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.plugins.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.ajax.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.av.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.iframe.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.noop.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.picture.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.script.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.vimeo.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.youtube.min.jsm': 'jQuery Lazy (Bundle)',
     'fa-loader.jsm': 'Font Awesome CSS (WFL)',
     'fa-loader.css': 'Font Awesome JS (WFL)',
     'jquery.tooltipster.min.jsm': 'Tooltipster',

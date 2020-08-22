@@ -344,6 +344,11 @@ var resources = {
         'path': 'resources/jquery.lazyload/{version}/jquery.lazyload.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Lazy (Bundle)
+    'jQueryLazyBundle': {
+        'path': 'resources/jquery.lazy/{version}/',
+        'type': 'application/javascript'
+    },
     // jQuery Migrate
     'jQueryMigrate': {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
