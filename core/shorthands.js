@@ -111,7 +111,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
             'bundle': ''
         };
-    } else if (channelHost + channelPath + searchString === 'fonts.googleapis.com/icon?family=Material+Icons') {
+    } else if (/fonts\.googleapis\.com\/(icon|css)\?family=Material\+Icons/.test(channelHost + channelPath + searchString)) {
         return {
             'source': channelHost,
             'version': '3.0.1',
