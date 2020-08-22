@@ -182,5 +182,9 @@
     "dialogConfirmDeleteStatistics": {
         "message": "您确实想要删除统计数据吗？",
         "description": "Are you sure you want to delete the statistics?"
+    },
+    "labelDomainsWhitelistGoogleFonts": {
+        "message": "",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
     }
 }

@@ -182,5 +182,9 @@
     "dialogConfirmDeleteStatistics": {
         "message": "Bist du sicher, dass du die Statistiken löschen möchtest?",
         "description": "Are you sure you want to delete the statistics?"
+    },
+    "labelDomainsWhitelistGoogleFonts": {
+        "message": "Diese Domains dürfen Google-Schriften laden. Trenne mehrere Einträge durch Semikolons (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     }
 }
