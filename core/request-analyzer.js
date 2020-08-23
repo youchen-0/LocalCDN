@@ -130,7 +130,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
     for (let resourceMold of Object.keys(resourceMappings)) {
         if (resourcePattern.startsWith(resourceMold)) {
-            let targetPath, hostShorthands, versionDelivered, versionRequested;
+            let targetPath, versionDelivered, versionRequested;
 
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
@@ -140,14 +140,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
             versionRequested = versionNumber === null ? 'latest' : versionNumber[0];
 
-            hostShorthands = shorthands[channelHost];
-
-            if (hostShorthands && hostShorthands[targetPath]) {
-                let shorthand = hostShorthands[targetPath];
-
-                targetPath = shorthand.path;
-                versionDelivered = shorthand.version;
-            } else if (versionNumber === null) {
+            if (versionNumber === null) {
                 versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
             }
 
