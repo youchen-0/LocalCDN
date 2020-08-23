@@ -95,15 +95,15 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         It's not possible to respond to a request with multiple redirections
         https://gitlab.com/nobody42/localcdn/-/issues/45
     */
-    let regexJsDelivr = RegExp(/\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/);
-    if (channelHost.includes('cdn.jsdelivr.net') && regexJsDelivr.test(channelPath)) {
+
+    if (Regex.JSDELIVR_COMBINE.test(channelHost + channelPath)) {
         return {
             'source': channelHost,
             'version': 'beta',
             'path': 'resources/jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm',
             'bundle': ''
         };
-    } else if (channelHost.includes('cdn.jsdelivr.net') && channelPath.includes('algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2')) {
+    } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2') {
         // https://gitlab.com/nobody42/localcdn/-/issues/55
         return {
             'source': channelHost,
@@ -111,28 +111,28 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
             'bundle': ''
         };
-    } else if (/fonts\.googleapis\.com\/(icon|css)\?family=Material\+Icons/.test(channelHost + channelPath + searchString)) {
+    } else if (Regex.GOOGLE_MATERIAL_ICONS.test(channelHost + channelPath + searchString)) {
         return {
             'source': channelHost,
             'version': '3.0.1',
             'path': 'resources/google-material-design-icons/google-material-design-icons.css',
             'bundle': ''
         };
-    } else if (/\/bootstrap-datepicker3.*\.css/.test(channelPath)) {
+    } else if (Regex.BOOTSTRAP_DATEPICKER_3.test(channelPath)) {
         return {
             'source': channelHost,
             'version': '1.9.0',
             'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker3.standalone.min.css',
             'bundle': ''
         };
-    } else if (/\/bootstrap-datepicker.*\.css/.test(channelPath)) {
+    } else if (Regex.BOOTSTRAP_DATEPICKER.test(channelPath)) {
         return {
             'source': channelHost,
             'version': '1.9.0',
             'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker.standalone.min.css',
             'bundle': ''
         };
-    } else if (channelHost + channelPath === 'use.fontawesome.com/fa-code.css') {
+    } else if (Regex.FONT_AWESOME.test(channelHost + channelPath)) {
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
@@ -140,7 +140,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/webfont/fa-loader.css',
             'bundle': ''
         };
-    } else if (/use\.fontawesome\.com\/[a-z0-9]{10}\.js/.test(channelHost + channelPath)) {
+    } else if (Regex.FONT_AWESOME_WITH_CODE.test(channelHost + channelPath)) {
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
