@@ -86,6 +86,14 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/webfont/fa-loader.jsm',
             'bundle': ''
         };
+    } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/npm/vue') {
+        return {
+            'source': channelHost,
+            'versionRequested': 'latest',
+            'versionDelivered': '2.6.12',
+            'path': 'resources/vue/2.6.12/vue.min.jsm',
+            'bundle': ''
+        };
     } else {
         return false;
     }

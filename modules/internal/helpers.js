@@ -532,7 +532,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/vue/1.')) {
         return '1.0.28';
     } else if (type.includes('/vue/2.')) {
-        return '2.6.11';
+        return '2.6.12';
     } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
         return '4.0.0';
     } else if (type.includes('webfont')) {
@@ -714,7 +714,7 @@ const ListOfFiles = {
     'ui-bootstrap.min.jsm': 'Angular UI Bootstrap',
     'underscore-min.jsm': 'Underscore.js',
     'urlize.jsm': 'urlize',
-    'vue.jsm': 'Vue.js',
+    'vue.min.jsm': 'Vue.js',
     'webcomponents-loader.jsm': 'WebComponents Loader (JS)',
     'webfontloader.jsm': 'Web Font Loader',
     'wow.min.jsm': 'WOW'
