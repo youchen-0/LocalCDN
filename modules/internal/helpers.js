@@ -533,6 +533,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.0.28';
     } else if (type.includes('/vue/2.')) {
         return '2.6.12';
+    } else if (type.includes('/vue-resource/1.')) {
+        return '1.5.1';
     } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
         return '4.0.0';
     } else if (type.includes('webfont')) {
@@ -565,6 +567,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'vue-resource.min.jsm': 'vue-resource',
     'jquery.lazy.min.jsm': 'jQuery Lazy (Bundle)',
     'jquery.lazy.plugins.min.jsm': 'jQuery Lazy (Bundle)',
     'jquery.lazy.ajax.min.jsm': 'jQuery Lazy (Bundle)',

@@ -315,6 +315,7 @@ var mappings = {
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
+            'vue-resource/{version}/vue-resource.': resources.vueResource,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
             'webfont/{version}/webfont.js': resources.webfontloader,
             'webfont/{version}/webfontloader.js': resources.webfontloader,
@@ -382,6 +383,7 @@ var mappings = {
             'underscore@{version}/underscore-min.': resources.underscore,
             'urlize.js/urlize.js': resources.urlize,
             'vanilla-lazyload@{version}/dist/lazyload.': resources.vanillaLazyload,
+            'vue-resource@{version}/dist/vue-resource.': resources.vueResource,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfontloader
         },

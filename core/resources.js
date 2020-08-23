@@ -680,6 +680,11 @@ var resources = {
         'path': 'resources/vue/{version}/vue.min.jsm',
         'type': 'application/javascript'
     },
+    // vue-resource
+    'vueResource': {
+        'path': 'resources/vue-resource/{version}/vue-resource.min.jsm',
+        'type': 'application/javascript'
+    },
     // Waypoints (jQuery)
     'jQueryWaypoints': {
         'path': 'resources/waypoints/{version}/jquery.waypoints.min.jsm',
