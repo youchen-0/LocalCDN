@@ -42,15 +42,20 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
     targetPath = targetDetails.path;
 
-    if (requestDetails.url.includes('fonts.googleapis.com') && !requestDetails.url.includes('Material+Icons')) {
+    if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
         let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
         // Check if the website is allowed to load Google Fonts
         if (interceptor.blockGoogleFonts === true && !requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
             return {
                 'cancel': true
             };
+        } else if (interceptor.blockGoogleFonts === false || requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
+            return {
+                'cancel': false
+            };
         }
     }
+
     if (!targetDetails) {
         return interceptor._handleMissingCandidate(requestDetails.url);
     }
