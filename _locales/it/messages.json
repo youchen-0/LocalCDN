@@ -184,7 +184,7 @@
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "A questi domini è permesso caricare i font di Google. Separa le differenti voci fra loro con un punto e virgola (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     }
 }
