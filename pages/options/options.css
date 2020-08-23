@@ -250,16 +250,6 @@ body {
     font-style: normal;
 }
 
-#block-google-fonts {
-    padding-left: 25px;
-    padding-bottom: 0px;
-    padding-top: 0.5rem;
-}
-
-#block-google-fonts-desc {
-    padding-left: 0px;
-}
-
 .option-disabled > .title-option > .b-contain,
 .b-contain input[type="checkbox"]:disabled ~ .b-input {
     cursor: default !important;
@@ -277,6 +267,16 @@ body {
 .option-disabled > .title-option > .b-contain input:checked ~ .b-input {
     background: gray !important;
     border-color: gray !important;
+}
+
+#div-domains-whitelist-google-fonts {
+    margin-top: 1em;
+}
+
+#tf-domains-whitelist-google-fonts {
+    margin-top: 0px !important;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /**

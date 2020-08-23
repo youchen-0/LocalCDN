@@ -344,6 +344,11 @@ var resources = {
         'path': 'resources/jquery.lazyload/{version}/jquery.lazyload.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Lazy (Bundle)
+    'jQueryLazyBundle': {
+        'path': 'resources/jquery.lazy/{version}/',
+        'type': 'application/javascript'
+    },
     // jQuery Migrate
     'jQueryMigrate': {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
@@ -675,6 +680,11 @@ var resources = {
         'path': 'resources/vue/{version}/vue.min.jsm',
         'type': 'application/javascript'
     },
+    // vue-resource
+    'vueResource': {
+        'path': 'resources/vue-resource/{version}/vue-resource.min.jsm',
+        'type': 'application/javascript'
+    },
     // Waypoints (jQuery)
     'jQueryWaypoints': {
         'path': 'resources/waypoints/{version}/jquery.waypoints.min.jsm',
@@ -691,11 +701,11 @@ var resources = {
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeJS': {
-        'path': 'resources/webfont/a1f20be65b.jsm',
+        'path': 'resources/webfont/fa-code.jsm',
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeCSS': {
-        'path': 'resources/webfont/a1f20be65b.css',
+        'path': 'resources/webfont/fa-code.css',
         'type': 'text/css'
     },
     // WebRTC adapter

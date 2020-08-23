@@ -240,6 +240,7 @@ var mappings = {
             'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
             'jquery-csv/{version}/jquery.csv.min.js': resources.jQueryCSV,
             'jquery.lazyload/{version}/jquery.lazyload.min.js': resources.jQueryLazyLoad,
+            'jquery.lazy/{version}/': resources.jQueryLazyBundle,
             'jquery-migrate/{version}/jquery-migrate.min.js': resources.jQueryMigrate,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
@@ -314,6 +315,7 @@ var mappings = {
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
+            'vue-resource/{version}/vue-resource.': resources.vueResource,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
             'webfont/{version}/webfont.js': resources.webfontloader,
             'webfont/{version}/webfontloader.js': resources.webfontloader,
@@ -381,6 +383,7 @@ var mappings = {
             'underscore@{version}/underscore-min.': resources.underscore,
             'urlize.js/urlize.js': resources.urlize,
             'vanilla-lazyload@{version}/dist/lazyload.': resources.vanillaLazyload,
+            'vue-resource@{version}/dist/vue-resource.': resources.vueResource,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfontloader
         },
@@ -394,6 +397,10 @@ var mappings = {
             'bootstrap/{version}/js/bootstrap.': resources.bootstrapJS,
             'dojo/{version}/dojo.': resources.dojo,
             'emberjs/{version}/ember.': resources.ember,
+            'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.js': resources.fancyBoxJS,
+            'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.min.js': resources.fancyBoxJS,
+            'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.css': resources.fancyBoxCSS,
+            'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.min.css': resources.fancyBoxCSS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery.ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery.ui/{version}/jquery-ui.min.js': resources.jQueryUI,
@@ -421,7 +428,8 @@ var mappings = {
     // Google Material Icons
     'fonts.googleapis.com': {
         '/': {
-            'icon?family=Material+Icons': resources.googleMaterialIcons
+            'icon?family=Material+Icons': resources.googleMaterialIcons,
+            'css?family=Material+Icons': resources.googleMaterialIcons
         }
     },
     // Yandex CDN
@@ -732,8 +740,8 @@ var mappings = {
         '/': {
             'releases/v{version}/css/': resources.fontawesome5CSS,
             'releases/v{version}/js/': resources.fontawesome5JS,
-            'a1f20be65b.js': resources.webfontloaderFontawesomeJS,
-            'a1f20be65b.css': resources.webfontloaderFontawesomeCSS,
+            'fa-code.js': resources.webfontloaderFontawesomeJS,
+            'fa-code.css': resources.webfontloaderFontawesomeCSS,
             'webfontloader/{version}/webfontload': resources.webfontloader
         }
     },

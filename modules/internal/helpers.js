@@ -241,6 +241,8 @@ helpers.determineBundle = function (path = '') {
         return 'Findify';
     } else if (path.includes('bootstrap-datepicker')) {
         return 'Bootstrap Datepicker';
+    } else if (path.includes('/jquery.lazy/')) {
+        return 'jQuery Lazy';
     } else {
         return '';
     }
@@ -378,6 +380,8 @@ helpers.setLastVersion = function (type, version) {
         return '6.9.15';
     } else if (type.includes('/fancybox/2.')) {
         return '2.1.5';
+    } else if (type.includes('/fancybox/3.')) {
+        return '3.5.7';
     } else if (type.includes('/flv.js/')) {
         return '1.5.0';
     } else if (type.includes('/fontawesome/3.')) {
@@ -403,7 +407,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
         return '1.4.10';
     } else if (type.includes('/jqueryui/1.')) {
-        if (helpers.compareVersion('1.8.18', version)) return '1.8.18'; // <= v1.8.18
+        if (helpers.compareVersion('1.8.24', version)) return '1.8.24'; // <= v1.8.24
         else return '1.12.1'; // >= 1.8.19
     } else if (type.includes('/jquery.blockUI/2.')) {
         return '2.70';
@@ -411,6 +415,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.0.9';
     } else if (type.includes('/jquery.lazyload/1.')) {
         return '1.9.1';
+    } else if (type.includes('/jquery.lazy/1.')) {
+        return '1.7.11';
     } else if (type.includes('/jquery-migrate/1.')) {
         return '1.4.1';
     } else if (type.includes('/jquery-migrate/3.')) {
@@ -526,7 +532,9 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/vue/1.')) {
         return '1.0.28';
     } else if (type.includes('/vue/2.')) {
-        return '2.6.11';
+        return '2.6.12';
+    } else if (type.includes('/vue-resource/1.')) {
+        return '1.5.1';
     } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
         return '4.0.0';
     } else if (type.includes('webfont')) {
@@ -559,6 +567,19 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'vue-resource.min.jsm': 'vue-resource',
+    'jquery.lazy.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.plugins.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.ajax.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.av.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.iframe.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.noop.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.picture.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.script.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.vimeo.min.jsm': 'jQuery Lazy (Bundle)',
+    'jquery.lazy.youtube.min.jsm': 'jQuery Lazy (Bundle)',
+    'fa-loader.jsm': 'Font Awesome CSS (WFL)',
+    'fa-loader.css': 'Font Awesome JS (WFL)',
     'jquery.tooltipster.min.jsm': 'Tooltipster',
     'jquery.jscrollpane.min.jsm': 'jScrollPane',
     'stickyfill.min.jsm': 'Stickyfill',
@@ -696,7 +717,7 @@ const ListOfFiles = {
     'ui-bootstrap.min.jsm': 'Angular UI Bootstrap',
     'underscore-min.jsm': 'Underscore.js',
     'urlize.jsm': 'urlize',
-    'vue.jsm': 'Vue.js',
+    'vue.min.jsm': 'Vue.js',
     'webcomponents-loader.jsm': 'WebComponents Loader (JS)',
     'webfontloader.jsm': 'Web Font Loader',
     'wow.min.jsm': 'WOW'

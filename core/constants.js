@@ -76,7 +76,8 @@ const Setting = {
     'BLOCK_GOOGLE_FONTS': 'blockGoogleFonts',
     'SELECTED_ICON': 'selectedIcon',
     'INTERNAL_STATISTICS': 'internalStatistics',
-    'INTERNAL_STATISTICS_DATA': 'internalStatisticsData'
+    'INTERNAL_STATISTICS_DATA': 'internalStatisticsData',
+    'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts'
 };
 
 const WebRequest = {
@@ -164,6 +165,15 @@ const IconType = {
     }
 };
 
+const Regex = {
+    'GOOGLE_FONTS': /fonts\.googleapis\.com\/(css|icons)(?!.*Material\+Icons).*/,
+    'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/(icon|css)\?family=Material\+Icons/,
+    'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
+    'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
+    'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
+    'FONT_AWESOME': /use\.fontawesome\.com\/fa-code\.css/,
+    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.js/
+};
 
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder

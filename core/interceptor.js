@@ -29,23 +29,11 @@ var interceptor = {};
  */
 
 interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
-
     let validCandidate, targetDetails, targetPath;
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
 
-    // Possible URLs of Google Fonts: https://fonts.googleapis.com/css
-    //                                https://fonts.googleapis.com/css2
-    if (requestDetails.url.startsWith('https://fonts.googleapis.com/css')) {
-        if(interceptor.blockGoogleFonts  === true || interceptor.blockMissing === true) {
-            return {
-                'cancel': true
-            };
-        }
-    }
-
     if (!validCandidate) {
-
         return {
             'cancel': false
         };
@@ -53,6 +41,20 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
 
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
     targetPath = targetDetails.path;
+
+    if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
+        let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
+        // Check if the website is allowed to load Google Fonts
+        if (interceptor.blockGoogleFonts === true && !requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
+            return {
+                'cancel': true
+            };
+        } else if (interceptor.blockGoogleFonts === false || requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
+            return {
+                'cancel': false
+            };
+        }
+    }
 
     if (!targetDetails) {
         return interceptor._handleMissingCandidate(requestDetails.url);
@@ -72,18 +74,15 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
  */
 
 interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
-
     let requestUrlSegments;
 
     if (interceptor.blockMissing === true) {
-
         return {
             'cancel': true
         };
     }
 
     if (preserveUrl === true) {
-
         return {
             'cancel': false
         };
@@ -92,16 +91,13 @@ interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
     requestUrlSegments = new URL(requestUrl);
 
     if (requestUrlSegments.protocol === Address.HTTP) {
-
         requestUrlSegments.protocol = Address.HTTPS;
         requestUrl = requestUrlSegments.toString();
 
         return {
             'redirectUrl': requestUrl
         };
-
     } else {
-
         return {
             'cancel': false
         };
@@ -109,13 +105,16 @@ interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
 };
 
 interceptor._handleStorageChanged = function (changes) {
-
     if (Setting.XHR_TEST_DOMAIN in changes) {
         interceptor.xhrTestDomain = changes.xhrTestDomain.newValue;
     }
 
     if (Setting.BLOCK_MISSING in changes) {
         interceptor.blockMissing = changes.blockMissing.newValue;
+    }
+
+    if (Setting.BLOCK_GOOGLE_FONTS in changes) {
+        interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
     }
 
     if (Setting.BLOCK_GOOGLE_FONTS in changes) {
@@ -131,19 +130,21 @@ interceptor.amountInjected = 0;
 interceptor.xhrTestDomain = Address.LOCALCDN;
 interceptor.blockMissing = false;
 interceptor.blockGoogleFonts = true;
+interceptor.allowedDomainsGoogleFonts = {};
 
 interceptor.relatedSettings = [];
 
 interceptor.relatedSettings.push(Setting.AMOUNT_INJECTED);
 interceptor.relatedSettings.push(Setting.XHR_TEST_DOMAIN);
 interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
+interceptor.relatedSettings.push(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS);
 
 chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
-
     interceptor.amountInjected = items.amountInjected || 0;
     interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
     interceptor.blockMissing = items.blockMissing || false;
     interceptor.blockGoogleFonts = items.blockGoogleFonts || true;
+    interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
 });
 
 /**

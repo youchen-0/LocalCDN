@@ -22,69 +22,7 @@
  * Shorthands
  */
 
-var shorthands = {
-
-    // Google Hosted Libraries [Deprecated]
-    'ajax.googleapis.com': {
-        'resources/jquery/1.8/jquery.min.jsm': {
-            'path': 'resources/jquery/1.8.3/jquery.min.jsm',
-            'version': '1.8.3'
-        },
-        'resources/jquery/1.7/jquery.min.jsm': {
-            'path': 'resources/jquery/1.7.2/jquery.min.jsm',
-            'version': '1.7.2'
-        },
-        'resources/jquery/1.6/jquery.min.jsm': {
-            'path': 'resources/jquery/1.6.4/jquery.min.jsm',
-            'version': '1.6.4'
-        },
-        'resources/jquery/1.5/jquery.min.jsm': {
-            'path': 'resources/jquery/1.5.2/jquery.min.jsm',
-            'version': '1.5.2'
-        },
-        'resources/jquery/1.4/jquery.min.jsm': {
-            'path': 'resources/jquery/1.4.4/jquery.min.jsm',
-            'version': '1.4.4'
-        },
-        'resources/jquery/1.3/jquery.min.jsm': {
-            'path': 'resources/jquery/1.3.2/jquery.min.jsm',
-            'version': '1.3.2'
-        },
-        'resources/jquery/1.2/jquery.min.jsm': {
-            'path': 'resources/jquery/1.2.6/jquery.min.jsm',
-            'version': '1.2.6'
-        }
-    },
-    // jQuery CDN [Deprecated]
-    'code.jquery.com': {
-        'resources/jquery/1.7/jquery.min.jsm': {
-            'path': 'resources/jquery/1.7.0/jquery.min.jsm',
-            'version': '1.7.0'
-        },
-        'resources/jquery/1.6/jquery.min.jsm': {
-            'path': 'resources/jquery/1.6.0/jquery.min.jsm',
-            'version': '1.6.0'
-        },
-        'resources/jquery/1.5/jquery.min.jsm': {
-            'path': 'resources/jquery/1.5.0/jquery.min.jsm',
-            'version': '1.5.0'
-        },
-        'resources/jquery/1.4/jquery.min.jsm': {
-            'path': 'resources/jquery/1.4.0/jquery.min.jsm',
-            'version': '1.4.0'
-        },
-        'resources/jquery/1.3/jquery.min.jsm': {
-            'path': 'resources/jquery/1.3.0/jquery.min.jsm',
-            'version': '1.3.0'
-        }
-    }
-};
-
-// Geekzu Public Service [Mirror]
-shorthands['sdn.geekzu.org'] = shorthands['ajax.googleapis.com'];
-
-// USTC Linux User Group [Mirror]
-shorthands['ajax.proxy.ustclug.org'] = shorthands['ajax.googleapis.com'];
+var shorthands = {};
 
 shorthands.specialFiles = function (channelHost, channelPath, searchString) {
     /*
@@ -95,57 +33,65 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         It's not possible to respond to a request with multiple redirections
         https://gitlab.com/nobody42/localcdn/-/issues/45
     */
-    let regexJsDelivr = RegExp(/\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/);
-    if (channelHost.includes('cdn.jsdelivr.net') && regexJsDelivr.test(channelPath)) {
+
+    if (Regex.JSDELIVR_COMBINE.test(channelHost + channelPath)) {
         return {
             'source': channelHost,
-            'version': 'beta',
+            'versionDelivered': 'beta',
             'path': 'resources/jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm',
             'bundle': ''
         };
-    } else if (channelHost.includes('cdn.jsdelivr.net') && channelPath.includes('algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2')) {
+    } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2') {
         // https://gitlab.com/nobody42/localcdn/-/issues/55
         return {
             'source': channelHost,
-            'version': 'beta',
+            'versionDelivered': 'beta',
             'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
             'bundle': ''
         };
-    } else if (channelHost + channelPath + searchString === 'fonts.googleapis.com/icon?family=Material+Icons') {
+    } else if (Regex.GOOGLE_MATERIAL_ICONS.test(channelHost + channelPath + searchString)) {
         return {
             'source': channelHost,
-            'version': '3.0.1',
+            'versionDelivered': '3.0.1',
             'path': 'resources/google-material-design-icons/google-material-design-icons.css',
             'bundle': ''
         };
-    } else if (/\/bootstrap-datepicker3.*\.css/.test(channelPath)) {
+    } else if (Regex.BOOTSTRAP_DATEPICKER_3.test(channelPath)) {
         return {
             'source': channelHost,
-            'version': '1.9.0',
+            'versionDelivered': '1.9.0',
             'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker3.standalone.min.css',
             'bundle': ''
         };
-    } else if (/\/bootstrap-datepicker.*\.css/.test(channelPath)) {
+    } else if (Regex.BOOTSTRAP_DATEPICKER.test(channelPath)) {
         return {
             'source': channelHost,
-            'version': '1.9.0',
+            'versionDelivered': '1.9.0',
             'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker.standalone.min.css',
             'bundle': ''
         };
-    } else if (channelHost + channelPath === 'use.fontawesome.com/a1f20be65b.js') {
+    } else if (Regex.FONT_AWESOME.test(channelHost + channelPath)) {
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
             'versionDelivered': '4.7.0',
-            'path': 'resources/webfont/a1f20be65b.jsm',
+            'path': 'resources/webfont/fa-loader.css',
             'bundle': ''
         };
-    } else if (channelHost + channelPath === 'use.fontawesome.com/a1f20be65b.css') {
+    } else if (Regex.FONT_AWESOME_WITH_CODE.test(channelHost + channelPath)) {
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
             'versionDelivered': '4.7.0',
-            'path': 'resources/webfont/a1f20be65b.css',
+            'path': 'resources/webfont/fa-loader.jsm',
+            'bundle': ''
+        };
+    } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/npm/vue') {
+        return {
+            'source': channelHost,
+            'versionRequested': 'latest',
+            'versionDelivered': '2.6.12',
+            'path': 'resources/vue/2.6.12/vue.min.jsm',
             'bundle': ''
         };
     } else {
