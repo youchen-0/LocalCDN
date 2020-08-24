@@ -212,6 +212,23 @@ var resources = {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.jsm',
         'type': 'application/javascript'
     },
+    // Bootstrap Toggle
+    'bootstrapToggleJS': {
+        'path': 'resources/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrap2ToggleJS': {
+        'path': 'resources/bootstrap-toggle/2.2.2/js/bootstrap2-toggle.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrapToggleCSS': {
+        'path': 'resources/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css',
+        'type': 'text/css'
+    },
+    'bootstrap2ToggleCSS': {
+        'path': 'resources/bootstrap-toggle/2.2.2/css/bootstrap2-toggle.min.css',
+        'type': 'text/css'
+    },
     // Bootstrap 3 Typeahead
     'bootstrap3Typeahead': {
         'path': 'resources/bootstrap-3-typeahead/{version}/bootstrap3-typeahead.min.jsm',

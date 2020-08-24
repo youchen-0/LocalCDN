@@ -352,6 +352,8 @@ helpers.setLastVersion = function (type, version) {
         return '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
         return '1.13.17';
+    } else if (type.includes('/bootstrap-toggle/2.')) {
+        return '2.2.2';
     } else if (type.includes('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
     } else if (type.includes('/Chart.js/2.')) {
@@ -567,6 +569,10 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'bootstrap-toggle.min.jsm': 'Bootstrap Toggle (JS)',
+    'bootstrap2-toggle.min.jsm': 'Bootstrap2 Toggle (JS)',
+    'bootstrap-toggle.min.css': 'Bootstrap Toggle (CSS)',
+    'bootstrap2-toggle.min.css': 'Bootstrap2 Toggle (CSS)',
     'vue-resource.min.jsm': 'vue-resource',
     'jquery.lazy.min.jsm': 'jQuery Lazy (Bundle)',
     'jquery.lazy.plugins.min.jsm': 'jQuery Lazy (Bundle)',
