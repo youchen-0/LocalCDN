@@ -224,6 +224,8 @@ helpers.determineCdnName = function (domainName) {
             return 'PageCDN';
         case 'fonts.googleapis.com':
             return 'Google Fonts';
+        case 'gitcdn.github.io':
+            return 'GitHub';
         default:
             return 'Unknown';
     }

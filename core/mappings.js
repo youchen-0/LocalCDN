@@ -27,7 +27,7 @@
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-var lastMappingUpdate = "2020-08-09";
+var lastMappingUpdate = "2020-08-24";
 
 var mappings = {
 
@@ -760,6 +760,15 @@ var mappings = {
     'akamai-webcdn.kgstatic.net': {
         '/': {
             'renewal/static/js/lozad.min.': resources.lozad
+        }
+    },
+    // gitcdn.github.io
+    'gitcdn.github.io': {
+        '/': {
+            'bootstrap-toggle/{version}/js/bootstrap-toggle.': resources.bootstrapToggleJS,
+            'bootstrap-toggle/{version}/js/bootstrap2-toggle.': resources.bootstrap2ToggleJS,
+            'bootstrap-toggle/{version}/css/bootstrap-toggle.': resources.bootstrapToggleCSS,
+            'bootstrap-toggle/{version}/css/bootstrap2-toggle.': resources.bootstrap2ToggleCSS
         }
     }
 };
