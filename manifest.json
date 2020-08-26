@@ -50,7 +50,8 @@
   },
 
   "options_ui": {
-    "page": "pages/options/options.html"
+    "page": "pages/options/options.html",
+    "open_in_tab": true
   },
 
   "web_accessible_resources": [
