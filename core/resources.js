@@ -301,7 +301,6 @@ var resources = {
         'path': 'resources/flv.js/{version}/flv.min.jsm',
         'type': 'application/javascript'
     },
-
     // Font Awesome
     'fontawesome': {
         'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',

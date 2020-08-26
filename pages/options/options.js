@@ -42,7 +42,6 @@ options._renderContents = function () {
 
     if (BrowserType.CHROMIUM) {
         document.getElementById('html-filter-div').style.display = 'none';
-        document.getElementById('block-google-fonts').style.display = 'none';
     }
 
     if (!chrome.browserAction.setIcon) {
