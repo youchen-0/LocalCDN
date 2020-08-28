@@ -469,7 +469,7 @@ helpers.setLastVersion = function (type, version) {
         return '1.1.0';
     } else if (type.includes('/owl-carousel/1.')) {
         return '1.3.3';
-    } else if (type.includes('p2p-media-loader-core')) {
+    } else if (type.includes('p2p-media-loader-core') || type.includes('p2p-media-loader-hlsjs')) {
         return '0.6.2';
     } else if (type.includes('/page.js/1.')) {
         return '1.7.1';
@@ -571,6 +571,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'p2p-media-loader-hlsjs.min.jsm': 'P2P Media Loader Hls.js',
     'bootstrap-toggle.min.jsm': 'Bootstrap Toggle (JS)',
     'bootstrap2-toggle.min.jsm': 'Bootstrap2 Toggle (JS)',
     'bootstrap-toggle.min.css': 'Bootstrap Toggle (CSS)',

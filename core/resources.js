@@ -527,6 +527,10 @@ var resources = {
         'path': 'resources/p2p-media-loader-core/{version}/p2p-media-loader-core.min.jsm',
         'type': 'application/javascript'
     },
+    'p2pMediaLoaderHlsJS': {
+        'path': 'resources/p2p-media-loader-hlsjs/{version}/p2p-media-loader-hlsjs.min.jsm',
+        'type': 'application/javascript'
+    },
     // page.js
     'pageJs': {
         'path': 'resources/page.js/{version}/page.min.jsm',
