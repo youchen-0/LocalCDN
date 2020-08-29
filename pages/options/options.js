@@ -134,13 +134,12 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
     elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
     elements.selectedIcon.addEventListener('change', options._onOptionChanged);
-    let type = elements.ruleSets;
-    for (let i = 0; i < type.length; i++) {
-        type[i].addEventListener('change', options._openRuleSet);
-    }
-    elements.copyRuleSet.addEventListener('click', options._copyRuleSet);
+    elements.ruleSets[0].addEventListener('change', ruleGenerator.openRuleSet);
+    elements.ruleSets[1].addEventListener('change', ruleGenerator.openRuleSet);
+    elements.copyRuleSet.addEventListener('click', ruleGenerator.copyRuleSet);
     elements.internalStatistics.addEventListener('change', options._onOptionChanged);
     elements.allowedDomainsGoogleFonts.addEventListener('keyup', options._onOptionChanged);
+    elements.selectedIcon.addEventListener('change', options._onOptionChanged);
 };
 
 options._registerMiscellaneousEventListeners = function () {
@@ -299,12 +298,7 @@ options._onOptionChanged = function ({ target }) {
     }
 
     if (optionKey === Setting.SELECTED_ICON) {
-        wrappers.setIcon(
-            {
-                path: optionValue,
-            },
-            'Enabled'
-        );
+        wrappers.setIcon({ path: optionValue }, 'Enabled');
     }
 
     if (optionKey === Setting.INTERNAL_STATISTICS) {
@@ -316,39 +310,6 @@ options._onOptionChanged = function ({ target }) {
     storageType.set({
         [optionKey]: optionValue,
     });
-};
-
-options._openRuleSet = function ({ target }) {
-    let urls = mappings;
-    let optionKey = target.getAttribute('data-option');
-    let textArea = document.getElementById('generated-rules');
-    let btnCopy = document.getElementById('button-copy-rule-set');
-    let content = '';
-
-    textArea.style.display = 'block';
-    btnCopy.style.display = 'block';
-
-    for (var domain in urls) {
-        if (optionKey === 'uMatrix') {
-            content += '* ' + domain + ' script allow' + '\n';
-            content += '* ' + domain + ' css allow' + '\n';
-        } else if (optionKey === 'uBlock') {
-            content += '* ' + domain + ' * noop' + '\n';
-        }
-    }
-    textArea.value = content.replace(/\n+$/, '');
-};
-
-options._copyRuleSet = function () {
-    let textArea = document.getElementById('generated-rules');
-    navigator.clipboard.writeText(textArea.value).then(
-        function () {
-            textArea.select();
-        },
-        function () {
-            alert('Rule set cannot be copied!');
-        }
-    );
 };
 
 options._onClickHTMLFilterWarning = function () {

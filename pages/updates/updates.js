@@ -24,40 +24,6 @@ var updates = {};
 /**
  * Private Methods
  */
-updates._openRuleSet = function ({ target }) {
-    let urls = mappings;
-    let updateKey = target.getAttribute('data-option');
-
-    let textArea = document.getElementById('generated-rules');
-    let btnCopy = document.getElementById('button-copy-rule-set');
-
-    let content = '';
-
-    textArea.style.display = 'block';
-    btnCopy.style.display = 'block';
-
-    for (var domain in urls) {
-        if (updateKey === 'uMatrix') {
-            content += '* ' + domain + ' script allow' + '\n';
-            content += '* ' + domain + ' css allow' + '\n';
-        } else if (updateKey === 'uBlock') {
-            content += '* ' + domain + ' * noop' + '\n';
-        }
-    }
-    textArea.value = content.replace(/\n+$/, '');
-};
-
-updates._copyRuleSet = function () {
-    let textArea = document.getElementById('generated-rules');
-    navigator.clipboard.writeText(textArea.value).then(
-        function () {
-            textArea.select();
-        },
-        function () {
-            alert('Rule set cannot be copied!');
-        }
-    );
-};
 
 updates._openHistoryReleaseNotes = function () {
     let container = document.getElementById('history-release-notes');
@@ -82,10 +48,10 @@ updates._onDocumentLoaded = function () {
     };
 
     for (let i = 0; i < updateElements.ruleSets.length; i++) {
-        updateElements.ruleSets[i].addEventListener('change', updates._openRuleSet);
+        updateElements.ruleSets[i].addEventListener('change', ruleGenerator.openRuleSet);
     }
 
-    updateElements.copyRuleSet.addEventListener('click', updates._copyRuleSet);
+    updateElements.copyRuleSet.addEventListener('click', ruleGenerator.copyRuleSet);
 
     document.getElementById('history').addEventListener('click', updates._openHistoryReleaseNotes);
 
