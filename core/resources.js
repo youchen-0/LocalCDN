@@ -701,7 +701,7 @@ var resources = {
     },
     // vanilla-lazyload
     'vanillaLazyload': {
-        'path': 'resources/vanilla-lazyload/17.1.0/lazyload.min.jsm',
+        'path': 'resources/vanilla-lazyload/{version}/lazyload.min.jsm',
         'type': 'application/javascript'
     },
     // videojs-seek-buttons
