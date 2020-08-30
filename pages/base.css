@@ -64,7 +64,6 @@ a:hover {
 }
 
 .b-contain span {
-    line-height: 1.54;
     font-size: 12px;
     font-family: inherit;
 }
@@ -74,6 +73,7 @@ a:hover {
     position: relative;
     padding-left: 25px;
     cursor: pointer;
+    line-height: 1.2;
 }
 
 .b-contain input[type="checkbox"] ~ .b-input {

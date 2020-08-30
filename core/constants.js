@@ -198,6 +198,16 @@ const Regex = {
     'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.js/
 };
 
+const Links = {
+    'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
+    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-uBlock-Origin-or-uMatrix',
+    'WELCOME': chrome.extension.getURL('pages/welcome/welcome.html'),
+    'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
+    'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
+    'FAQ': chrome.extension.getURL('pages/help/help.html'),
+    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
+};
+
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder
 const EncodingTypes = {

@@ -45,8 +45,9 @@ options._renderContents = function () {
     }
 
     if (!chrome.browserAction.setIcon) {
-        document.getElementById('section-icon-style').style.display = 'none';
+        document.getElementById('icon-style-div').style.display = 'none';
     }
+    document.getElementById('label-version').textContent = helpers.formatVersion(chrome.runtime.getManifest().version);
 };
 
 options._renderOptionsPanel = function () {
@@ -98,16 +99,32 @@ options._renderOptionsPanel = function () {
         document.getElementById('div-domains-whitelist-google-fonts').style.display = 'none';
     }
 
+    if (elements.storageType === 'local') {
+        document.getElementById('storage-type-local').checked = true;
+    } else {
+        document.getElementById('storage-type-sync').checked = true;
+    }
+
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
-    document.getElementById('negate-html-filter-list-warning').addEventListener('click', options._onClickHTMLFilterWarning);
-    document.getElementById('link-welcome-page').addEventListener('click', options._onClickWelcomePage);
-    document.getElementById('link-changelog').addEventListener('click', options._onClickChangelog);
-    document.getElementById('link-donate').addEventListener('click', options._onClickDonate);
-    document.getElementById('link-faq').addEventListener('click', options._onClickFaq);
-    document.getElementById('ruleset-help-icon').addEventListener('click', options._onClickRulesetHelp);
-    document.getElementById('link-statistic').addEventListener('click', options._onClickStatistics);
+    document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
+    document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
+    document.getElementById('link-changelog').addEventListener('click', function () { options._onLinkClick(Links.CHANGELOG); });
+    document.getElementById('link-donate').addEventListener('click', function () { options._onLinkClick(Links.DONATE); });
+    document.getElementById('link-faq').addEventListener('click', function () { options._onLinkClick(Links.FAQ);});
+    document.getElementById('ruleset-help').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_RULESET); });
+    document.getElementById('sync-help').addEventListener('click', function () { options._onLinkClick(Links.FAQ + '#sync'); });
+    document.getElementById('link-statistic').addEventListener('click', function () { options._onLinkClick(Links.STATISTICS); });
+
+    document.getElementById('btn-general-tab').addEventListener('click', options._changeTab);
+    document.getElementById('btn-advanced-tab').addEventListener('click', options._changeTab);
+    document.getElementById('btn-export-import-tab').addEventListener('click', options._changeTab);
+    document.getElementById('btn-info-tab').addEventListener('click', options._changeTab);
+
     document.getElementById('storage-type-local').addEventListener('change', options._onStorageOptionChanged);
     document.getElementById('storage-type-sync').addEventListener('change', options._onStorageOptionChanged);
+    document.getElementById('export-data').addEventListener('click', storageManager.export);
+    document.getElementById('import-data').addEventListener('click', storageManager.startImportFilePicker);
+    document.getElementById('import-file-picker').addEventListener('change', storageManager.handleImportFilePicker);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -199,7 +216,6 @@ options._getOptionElements = function () {
         [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: options._getOptionElement(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS),
         [Setting.STORAGE_TYPE]: options._getOptionElement(Setting.STORAGE_TYPE)
     };
-
     return optionElements;
 };
 
@@ -316,53 +332,29 @@ options._onStorageOptionChanged = function ({ target }) {
     });
 };
 
-options._onClickHTMLFilterWarning = function () {
+options._onLinkClick = function (url) {
     chrome.tabs.create({
-        url: 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
-        active: true,
+        url: url,
+        active: true
     });
 };
 
-options._onClickWelcomePage = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/welcome/welcome.html'),
-        active: true,
-    });
-};
+options._changeTab = function ({ target }) {
+    let tabContent, tabButton, optionKey;
 
-options._onClickDonate = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/donate/donate.html'),
-        active: true,
-    });
-};
+    optionKey = target.getAttribute('data-option');
+    tabContent = document.getElementsByClassName('tab-content');
+    tabButton = document.getElementsByClassName('option-buttons');
 
-options._onClickChangelog = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/updates/updates.html'),
-        active: true,
-    });
-};
-
-options._onClickFaq = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/help/help.html'),
-        active: true,
-    });
-};
-
-options._onClickRulesetHelp = function () {
-    chrome.tabs.create({
-        url: 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-uBlock-Origin-or-uMatrix',
-        active: true,
-    });
-};
-
-options._onClickStatistics = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/statistics/statistics.html'),
-        active: true,
-    });
+    for (let i = 0; i < tabContent.length; i++) {
+        if (tabContent[i].id === optionKey) {
+            tabContent[i].style.display = 'block';
+            tabButton[i].classList.add('option-buttons-active');
+        } else {
+            tabContent[i].style.display = 'none';
+            tabButton[i].classList.remove('option-buttons-active');
+        }
+    }
 };
 
 /**
