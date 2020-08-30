@@ -228,11 +228,11 @@
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Import vellykket",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Import mislyktes",
         "description": "Import failed"
     }
 }
