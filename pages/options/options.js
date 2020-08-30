@@ -79,6 +79,7 @@ options._renderOptionsPanel = function () {
     elements.selectedIcon.value = options._optionValues.selectedIcon;
     elements.internalStatistics.checked = options._optionValues.internalStatistics;
     elements.allowedDomainsGoogleFonts.value = domainAllowedGoogleFonts;
+    elements.storageType = options._optionValues.storageType;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -105,6 +106,8 @@ options._renderOptionsPanel = function () {
     document.getElementById('link-faq').addEventListener('click', options._onClickFaq);
     document.getElementById('ruleset-help-icon').addEventListener('click', options._onClickRulesetHelp);
     document.getElementById('link-statistic').addEventListener('click', options._onClickStatistics);
+    document.getElementById('storage-type-local').addEventListener('change', options._onStorageOptionChanged);
+    document.getElementById('storage-type-sync').addEventListener('change', options._onStorageOptionChanged);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -157,7 +160,7 @@ options._determineOptionValues = function () {
     return new Promise((resolve) => {
         let optionKeys = Object.keys(options._optionElements);
 
-        chrome.storage.sync.get(optionKeys, function (items) {
+        storageManager.type.get(optionKeys, function (items) {
             options._optionValues = items;
             resolve();
         });
@@ -166,8 +169,9 @@ options._determineOptionValues = function () {
 
 options._determineLocalOptionValues = function () {
     return new Promise((resolve) => {
-        chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {
+        chrome.storage.local.get([Setting.INTERNAL_STATISTICS, Setting.STORAGE_TYPE], function (items) {
             options._internalStatistics = items.internalStatistics;
+            options._storageType = items.storageType;
             resolve();
         });
     });
@@ -193,6 +197,7 @@ options._getOptionElements = function () {
         [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS),
         [Setting.SELECTED_ICON]: options._getOptionElement(Setting.SELECTED_ICON),
         [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: options._getOptionElement(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS),
+        [Setting.STORAGE_TYPE]: options._getOptionElement(Setting.STORAGE_TYPE)
     };
 
     return optionElements;
@@ -252,7 +257,7 @@ options._onDocumentLoaded = function () {
 };
 
 options._onOptionChanged = function ({ target }) {
-    let optionKey, optionType, optionValue, storageType;
+    let optionKey, optionType, optionValue;
 
     optionKey = target.getAttribute('data-option');
     optionType = target.getAttribute('type');
@@ -300,15 +305,14 @@ options._onOptionChanged = function ({ target }) {
     if (optionKey === Setting.SELECTED_ICON) {
         wrappers.setIcon({ path: optionValue }, 'Enabled');
     }
-
-    if (optionKey === Setting.INTERNAL_STATISTICS) {
-        storageType = chrome.storage.local;
-    } else {
-        storageType = chrome.storage.sync;
-    }
-
-    storageType.set({
+    storageManager.type.set({
         [optionKey]: optionValue,
+    });
+};
+
+options._onStorageOptionChanged = function ({ target }) {
+    chrome.storage.local.set({
+        [Setting.STORAGE_TYPE]: target.value,
     });
 };
 
@@ -383,6 +387,7 @@ options._updatesDomainLists = function (changes) {
  * Initializations
  */
 options._internalStatistics = false;
+options._storageType = 'local';
 
 document.addEventListener('DOMContentLoaded', options._onDocumentLoaded);
 

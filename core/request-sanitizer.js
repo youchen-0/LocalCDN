@@ -65,7 +65,7 @@ requestSanitizer._stripMetadata = function (requestDetails) {
  * Initializations
  */
 
-chrome.storage.sync.get({[Setting.STRIP_METADATA]: true}, function (items) {
+storageManager.type.get({[Setting.STRIP_METADATA]: true}, function (items) {
 
     if (items === null || items.stripMetadata !== false) {
         requestSanitizer.enable();

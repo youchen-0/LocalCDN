@@ -30,7 +30,9 @@ var main = {};
 
 main._initializeSettings = function () {
 
-    chrome.storage.sync.get(settingDefaults, function (items) {
+    storageManager.checkStorageType();
+
+    storageManager.type.get(SettingDefaults, function (items) {
 
         if (items === null) {
             items = SettingDefaults; // Restore setting defaults.
@@ -47,21 +49,23 @@ main._initializeSettings = function () {
             'path': stateManager.selectedIcon
         }, 'Enabled');
 
-        chrome.storage.sync.set(items);
+        storageManager.type.set(items);
     });
 };
 
 main._showReleaseNotes = function (details) {
 
+    storageManager.checkStorageType();
+
     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
 
-        chrome.storage.sync.set({
+        storageManager.type.set({
             [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
         }, function() {
 
             if (details.temporary !== true) {
 
-                chrome.storage.sync.get([Setting.HIDE_RELEASE_NOTES], function (items) {
+                storageManager.type.get([Setting.HIDE_RELEASE_NOTES], function (items) {
 
                     if (items.hideReleaseNotes !== true) {
 
@@ -75,17 +79,22 @@ main._showReleaseNotes = function (details) {
         });
     } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
 
+        // TODO: Remove me in v2.4.1
+        storageManager.migrateData('local');
+
         // If add-on update true, check last update of mappings.js
-        chrome.storage.sync.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
+        storageManager.type.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
 
             let mappingUpdate = items.lastMappingUpdate !== lastMappingUpdate;
 
             if (mappingUpdate || !items.hideReleaseNotes) {
                 // Updated mappings.js
-                chrome.storage.sync.set({
+                storageManager.type.set({
                     [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
                 }, function() {
-                    if (!items.hideReleaseNotes) {
+                    // TODO: Remove me in v2.4.1
+                    // if (!items.hideReleaseNotes) {
+                    if (true) {
                         chrome.tabs.create({
                             'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
                             'active': false
