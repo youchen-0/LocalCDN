@@ -30,27 +30,10 @@ var main = {};
 
 main._initializeSettings = function () {
 
-    let settingDefaults = {
-        [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
-        [Setting.SHOW_ICON_BADGE]: true,
-        [Setting.BLOCK_MISSING]: false,
-        [Setting.DISABLE_PREFETCH]: true,
-        [Setting.ENFORCE_STAGING]: false,
-        [Setting.HIDE_RELEASE_NOTES]: false,
-        [Setting.STRIP_METADATA]: true,
-        [Setting.WHITELISTED_DOMAINS]: {},
-        [Setting.LOGGING]: false,
-        [Setting.DOMAINS_MANIPULATE_DOM]: {},
-        [Setting.NEGATE_HTML_FILTER_LIST]: false,
-        [Setting.BLOCK_GOOGLE_FONTS]: true,
-        [Setting.SELECTED_ICON]: 'Default',
-        [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: {}
-    };
-
     chrome.storage.sync.get(settingDefaults, function (items) {
 
         if (items === null) {
-            items = settingDefaults; // Restore setting defaults.
+            items = SettingDefaults; // Restore setting defaults.
         }
 
         if (items.disablePrefetch !== false) {

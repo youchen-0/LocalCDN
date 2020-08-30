@@ -77,7 +77,30 @@ const Setting = {
     'SELECTED_ICON': 'selectedIcon',
     'INTERNAL_STATISTICS': 'internalStatistics',
     'INTERNAL_STATISTICS_DATA': 'internalStatisticsData',
-    'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts'
+    'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts',
+    'STORAGE_TYPE': 'storageType'
+};
+
+const SettingDefaults = {
+    [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: {},
+    [Setting.AMOUNT_INJECTED]: 0,
+    [Setting.BLOCK_GOOGLE_FONTS]: true,
+    [Setting.BLOCK_MISSING]: false,
+    [Setting.DISABLE_PREFETCH]: true,
+    [Setting.DOMAINS_MANIPULATE_DOM]: {},
+    [Setting.LOGGING]: false,
+    [Setting.ENFORCE_STAGING]: false,
+    [Setting.HIDE_RELEASE_NOTES]: false,
+    [Setting.INTERNAL_STATISTICS]: false,
+    [Setting.INTERNAL_STATISTICS_DATA]: {},
+    [Setting.LAST_MAPPING_UPDATE]: '2020-01-01',
+    [Setting.NEGATE_HTML_FILTER_LIST]: false,
+    [Setting.SELECTED_ICON]: 'Default',
+    [Setting.SHOW_ICON_BADGE]: true,
+    [Setting.STORAGE_TYPE]: 'local',
+    [Setting.STRIP_METADATA]: true,
+    [Setting.WHITELISTED_DOMAINS]: {},
+    [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN
 };
 
 const WebRequest = {
