@@ -169,6 +169,15 @@ var resources = {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
         'type': 'application/javascript'
     },
+    // baguetteBox.js
+    'baguetteBoxJS': {
+        'path': 'resources/baguettebox.js/1.11.1/baguetteBox.min.jsm',
+        'type': 'application/javascript'
+    },
+    'baguetteBoxCSS': {
+        'path': 'resources/baguettebox.js/1.11.1/baguetteBox.min.css',
+        'type': 'text/css'
+    },
     // BootboxJS
     'bootbox': {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',

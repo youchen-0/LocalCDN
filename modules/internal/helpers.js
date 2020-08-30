@@ -336,6 +336,8 @@ helpers.setLastVersion = function (type, version) {
         return '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
         return '1.4.0';
+    } else if (type.includes('/baguettebox.js/1.')) {
+        return '1.11.1';
     } else if (type.includes('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.includes('/bootstrap.js/3.')) {
@@ -573,6 +575,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'baguetteBox.min.jsm': 'baguetteBox.js (JS)',
+    'baguetteBox.min.css': 'baguetteBox.js (CSS)',
     'videojs-seek-buttons.min.css': 'Videojs seek buttons (CSS)',
     'videojs-seek-buttons.min.jsm': 'Videojs seek buttons (JS)',
     'p2p-media-loader-hlsjs.min.jsm': 'P2P Media Loader Hls.js',
