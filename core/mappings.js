@@ -389,6 +389,10 @@ var mappings = {
             'underscore@{version}/underscore-min.': resources.underscore,
             'urlize.js/urlize.js': resources.urlize,
             'vanilla-lazyload@{version}/dist/lazyload.': resources.vanillaLazyload,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.css': resources.videojsSeekButtonsCSS,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.min.css': resources.videojsSeekButtonsCSS,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.js': resources.videojsSeekButtonsJS,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.min.js': resources.videojsSeekButtonsJS,
             'vue-resource@{version}/dist/vue-resource.': resources.vueResource,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfontloader

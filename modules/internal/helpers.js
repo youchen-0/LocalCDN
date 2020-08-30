@@ -533,6 +533,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.1.1';
     } else if (type.includes('/vanilla-lazyload')) {
         return '17.1.0';
+    } else if (type.includes('/videojs-seek-buttons/')) {
+        return '1.6.0';
     } else if (type.includes('/vue/1.')) {
         return '1.0.28';
     } else if (type.includes('/vue/2.')) {
@@ -571,6 +573,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'videojs-seek-buttons.min.css': 'Videojs seek buttons (CSS)',
+    'videojs-seek-buttons.min.jsm': 'Videojs seek buttons (JS)',
     'p2p-media-loader-hlsjs.min.jsm': 'P2P Media Loader Hls.js',
     'bootstrap-toggle.min.jsm': 'Bootstrap Toggle (JS)',
     'bootstrap2-toggle.min.jsm': 'Bootstrap2 Toggle (JS)',

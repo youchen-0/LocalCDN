@@ -695,6 +695,15 @@ var resources = {
         'path': 'resources/vanilla-lazyload/17.1.0/lazyload.min.jsm',
         'type': 'application/javascript'
     },
+    // videojs-seek-buttons
+    'videojsSeekButtonsJS': {
+        'path': 'resources/videojs-seek-buttons/{version}/videojs-seek-buttons.min.jsm',
+        'type': 'application/javascript'
+    },
+    'videojsSeekButtonsCSS': {
+        'path': 'resources/videojs-seek-buttons/{version}/videojs-seek-buttons.min.css',
+        'type': 'text/css'
+    },
     // Vue.js
     'vueJs': {
         'path': 'resources/vue/{version}/vue.min.jsm',
