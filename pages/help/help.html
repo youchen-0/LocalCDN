@@ -23,6 +23,7 @@
                         <li><a class="no-icon" href="#websites-issues">Some websites look strange or are not easy to use</a></li>
                         <li><a class="no-icon" href="#google-fonts">Why is there a "Block Google Fonts" option?</a></li>
                         <li><a class="no-icon" href="#statistics">What about the statistics? Is anything transferred to any servers?</a></li>
+                        <li><a class="no-icon" href="#sync">What will be synchronized when I select "sync" as storage type?</a></li>
                     </ul>
                 </div>
             </div>
@@ -65,6 +66,36 @@
                     <p><em>How do I know that's true?</em></p>
                     <p>The extension storage can be viewed directly with the Firefox browser. Open the URL "about:debugging", switch to "Storage" and select "Extension Storage". Under the key "internalStatisticsData" you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in <a href="https://www.localcdn.org/view-extension-storage.mp4">this video</a>.</p>
                 </div>
+            </div>
+            <div id="sync" class="notice">
+                <div class="subtle-hint"><div class="topic-label color-purple">What will be synchronized when I select "sync" as storage type?</div>
+                <p>Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices.</p>
+                <p>If you don't have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected.</p>
+                <p>Things that are never synchronized:</p>
+                <ul>
+                    <li>Amount injected <em>(Numbers of injections)</em></li>
+                    <li>Internal statistics <em>(Data)</em></li>
+                </ul>
+                <p>Settings that will be synchronized:</p>
+                <ul>
+                    <li>Display injection counts on icon <em>(Yes, No)</em></li>
+                    <li>Disable release notes <em>(Yes, No)</em></li>
+                    <li>Disable link prefetching <em>(Yes, No)</em></li>
+                    <li>Strip metadata from allowed requests <em>(Yes, No)</em></li>
+                    <li>Internal statistics <em>(Yes, No)</em></li>
+                    <li>Deactivate LocalCDN for these domains <em>(Yes, No, URLs)</em></li>
+                    <li>Block requests for missing resources <em>(Yes, No)</em></li>
+                    <li>Block Google Fonts <em>(Yes, No, URLs)</em></li>
+                    <li>Enable logging in browser console <em>(Yes, No)</em></li>
+                    <li>Apply HTML filter for these domains <em>(Yes, No, URLs)</em></li>
+                    <li>Invert HTML filter <em>(Yes, No)</em></li>
+                    <li>Choose an icon for this extension <em>(Default, Light, Blue/Grey)</em></li>
+                </ul>
+                <p>More information about Firefox Sync:</p>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Firefox_Sync">Wikipedia - Firefox Sync</a></li>
+                    <li><a href="https://support.mozilla.org/en-US/products/firefox/sync">support.mozilla.org</a></li>
+                </ul>
             </div>
         </div>
     </body>
