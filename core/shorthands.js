@@ -94,6 +94,13 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/vue/2.6.12/vue.min.jsm',
             'bundle': ''
         };
+    } else if ((channelHost + channelPath) === 'ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js') {
+        return {
+            'source': channelHost,
+            'versionRequested': 'latest',
+            'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm',
+            'bundle': ''
+        };
     } else {
         return false;
     }
