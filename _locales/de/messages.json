@@ -186,5 +186,53 @@
     "labelDomainsWhitelistGoogleFonts": {
         "message": "Diese Domains dürfen Google-Schriften laden. Trenne mehrere Einträge durch Semikolons (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+    },
+    "btnGeneral": {
+        "message": "Allgemein",
+        "description": "Basic"
+    },
+    "btnAdvanced": {
+        "message": "Fortgeschritten",
+        "description": "Advanced"
+    },
+    "btnOther": {
+        "message": "Sonstiges",
+        "description": "Other"
+    },
+    "btnInfo": {
+        "message": "Info",
+        "description": "Info"
+    },
+    "headerStorageType": {
+        "message": "Speichertyp",
+        "description": "Storage type"
+    },
+    "labelStorageTypeLocal": {
+        "message": "Lokal",
+        "description": "Local"
+    },
+    "labelStorageTypeSync": {
+        "message": "Sync",
+        "description": "Sync"
+    },
+    "headerImportExport": {
+        "message": "Import/Export",
+        "description": "Import/Export"
+    },
+    "labelExportData": {
+        "message": "Backup in eine Datei",
+        "description": "Back up to file"
+    },
+    "labelImportData": {
+        "message": "Aus einer Datei wiederherstellen",
+        "description": "Restore from file"
+    },
+    "dialogImportSuccessful": {
+        "message": "Erfolgreich importiert",
+        "description": "Import successful"
+    },
+    "dialogImportFailed": {
+        "message": "Importieren fehlgeschlagen",
+        "description": "Import failed"
     }
 }
