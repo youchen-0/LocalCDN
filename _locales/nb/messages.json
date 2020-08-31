@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Generelt",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Avansert",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Annet",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Lagringstype",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokal",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Synkronisert",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Import/Eksport",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Sikkerhetskopier til fil",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Gjenopprett fra fil",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Import vellykket",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Import mislyktes",
         "description": "Import failed"
     }
 }
