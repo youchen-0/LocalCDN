@@ -113,7 +113,7 @@
                     </div>
                     <div class="description-option" data-i18n-content="blockMissingDescription"></div>
                 </section>
-                <section class="option">
+                <section id="block-google-fonts" class="option">
                     <div class="title-option">
                         <label class="b-contain">
                             <input data-option="blockGoogleFonts" type="checkbox">
@@ -189,12 +189,25 @@
             <div id="icon-style-div" class="option-group">
                 <section id="section-icon-style" class="option">
                     <div class="title-option without-checkbox" data-i18n-content="chooseIconStyle">Choose an icon for this extension</div>
-                    <div>
-                        <select id="selected-icon" data-option="selectedIcon">
-                            <option value="Default">Default</option>
-                            <option value="Light">Light</option>
-                            <option value="Grey">Blue/Grey</option>
-                        </select>
+                    <div class="div-selected-icon">
+                        <label class="b-contain" for="icon-default">
+                            <img src="../../icons/action/default/icon32-default.png" alt="Default" class="icons">
+                            <img src="../../icons/action/default/icon32-disabled.png" alt="Default" class="icons">
+                            <input id="icon-default" name="selected-icon" type="radio" data-option="selectedIcon" value="Default">
+                            <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain" for="icon-grey">
+                            <img src="../../icons/action/grey/icon32-default.png" alt="Blue/Grey" class="icons">
+                            <img src="../../icons/action/grey/icon32-disabled.png" alt="Blue/Grey" class="icons">
+                            <input id="icon-grey" name="selected-icon" type="radio" data-option="selectedIcon" value="Grey">
+                            <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain" for="icon-light">
+                            <img src="../../icons/action/light/icon32-default.png" alt="Light" class="icons">
+                            <img src="../../icons/action/light/icon32-disabled.png" alt="Light" class="icons">
+                            <input id="icon-light" name="selected-icon" type="radio" data-option="selectedIcon" value="Light">
+                            <div class="b-input"></div>
+                        </label>
                     </div>
                 </section>
             </div>

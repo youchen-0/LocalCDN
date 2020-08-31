@@ -76,6 +76,22 @@ body {
     text-align: center;
 }
 
+.div-selected-icon {
+    padding-top: 10px
+}
+
+.div-selected-icon > label {
+    margin-bottom: 1em;
+}
+
+.div-selected-icon > label > .b-input {
+    margin-top: 8px;
+}
+
+.div-selected-icon > label > img {
+    margin-right: 10px;
+}
+
 /**
  * Fonts
  */
@@ -114,14 +130,6 @@ body {
     font-weight: 600;
 }
 
-.title-option-select {
-    line-height: 1.54;
-    font-size: 12px;
-    font-family: inherit;
-    font-weight: 600;
-    padding-left: 25px;
-}
-
 /**
  * Controls
  */
@@ -132,10 +140,6 @@ body {
     padding: 5px !important;
     margin-top: 10px !important;
     color: #555;
-}
-
-#selected-icon {
-    width: max-content;
 }
 
 /**
@@ -173,14 +177,6 @@ body {
     user-select: none;
     text-align: center;
     background: none;
-}
-
-.button:hover {
-    background-color: #fff;
-}
-
-.button:active {
-    background-color: #dedede;
 }
 
 .button-warning {

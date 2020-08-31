@@ -42,6 +42,7 @@ options._renderContents = function () {
 
     if (BrowserType.CHROMIUM) {
         document.getElementById('html-filter-div').style.display = 'none';
+        document.getElementById('block-google-fonts').style.display = 'none';
     }
 
     if (!chrome.browserAction.setIcon) {
@@ -67,6 +68,8 @@ options._renderOptionsPanel = function () {
     elements = options._optionElements;
     Object.assign(elements, { [Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics') });
 
+    Object.assign(elements, { [Setting.SELECTED_ICON]: document.getElementsByName('selected-icon') });
+
     elements.showIconBadge.checked = options._optionValues.showIconBadge;
     elements.blockMissing.checked = options._optionValues.blockMissing;
     elements.disablePrefetch.checked = options._optionValues.disablePrefetch;
@@ -77,7 +80,6 @@ options._renderOptionsPanel = function () {
     elements.domainsManipulateDOM.value = domainHtmlFilter;
     elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
     elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
-    elements.selectedIcon.value = options._optionValues.selectedIcon;
     elements.internalStatistics.checked = options._optionValues.internalStatistics;
     elements.allowedDomainsGoogleFonts.value = domainAllowedGoogleFonts;
     elements.storageType = options._optionValues.storageType;
@@ -103,6 +105,14 @@ options._renderOptionsPanel = function () {
         document.getElementById('storage-type-local').checked = true;
     } else {
         document.getElementById('storage-type-sync').checked = true;
+    }
+
+    if (options._optionValues.selectedIcon === 'Default') {
+        document.getElementById('icon-default').checked = true;
+    } else if (options._optionValues.selectedIcon === 'Grey') {
+        document.getElementById('icon-grey').checked = true;
+    } else if (options._optionValues.selectedIcon === 'Light') {
+        document.getElementById('icon-light').checked = true;
     }
 
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
@@ -153,13 +163,14 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
     elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
-    elements.selectedIcon.addEventListener('change', options._onOptionChanged);
+    elements.selectedIcon[0].addEventListener('change', options._onOptionChanged);
+    elements.selectedIcon[1].addEventListener('change', options._onOptionChanged);
+    elements.selectedIcon[2].addEventListener('change', options._onOptionChanged);
     elements.ruleSets[0].addEventListener('change', ruleGenerator.openRuleSet);
     elements.ruleSets[1].addEventListener('change', ruleGenerator.openRuleSet);
     elements.copyRuleSet.addEventListener('click', ruleGenerator.copyRuleSet);
     elements.internalStatistics.addEventListener('change', options._onOptionChanged);
     elements.allowedDomainsGoogleFonts.addEventListener('keyup', options._onOptionChanged);
-    elements.selectedIcon.addEventListener('change', options._onOptionChanged);
 };
 
 options._registerMiscellaneousEventListeners = function () {
