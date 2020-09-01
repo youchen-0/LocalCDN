@@ -220,7 +220,7 @@
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "Backup in eine Datei",
+        "message": "Sicherung in eine Datei",
         "description": "Back up to file"
     },
     "labelImportData": {
