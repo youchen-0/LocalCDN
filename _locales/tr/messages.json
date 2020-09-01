@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Temel",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Gelişmiş",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Diğer",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Bilgi",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Depolama türü",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Yerel",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Eşzamanlama",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "İçe/Dışa aktar",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Dosyaya yedekle",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Dosyadan geri yükle",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "İçe aktarma başarılı",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "İçe aktarma başarısız",
         "description": "Import failed"
     }
 }
