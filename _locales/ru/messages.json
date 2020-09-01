@@ -184,55 +184,55 @@
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Этим доменам разрешено загружать шрифты Google. Разделяйте несколько записей точкой с запятой (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Базовый",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Продвинутый",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Другие",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Информация",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Тип хранилища",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Локальный",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Синхронизировать",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Импорт/Экспорт",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Резервное копирование в файл",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Восстановить из файла",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Импорт успешен",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Ошибка импорта",
         "description": "Import failed"
     }
 }
