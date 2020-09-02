@@ -48,6 +48,7 @@ options._renderContents = function () {
     if (!chrome.browserAction.setIcon) {
         document.getElementById('icon-style-div').style.display = 'none';
     }
+    options._renderInfoPanel();
     document.getElementById('label-version').textContent = helpers.formatVersion(chrome.runtime.getManifest().version);
 };
 
@@ -242,7 +243,7 @@ options._configureLinkPrefetching = function (value) {
 };
 
 options._serializeWhitelistedDomains = function (whitelistedDomains) {
-    if (whitelistedDomains === undefined) return;
+    if (whitelistedDomains === undefined) return '';
 
     let domainWhitelist, whitelistedDomainKeys;
 
@@ -267,6 +268,28 @@ options._parseDomainWhitelist = function (domainWhitelist) {
     });
 
     return whitelistedDomains;
+};
+
+options._renderInfoPanel = function () {
+    let supportedFrameworks, supportedVersions, browserSpecific;
+
+    supportedFrameworks = {};
+    supportedVersions = {};
+
+    // Chromium based browser does not support Google Material Icons and Font Awesome
+    browserSpecific = BrowserType.CHROMIUM ? -1 : 1;
+
+    for (const val of Object.values(resources)) {
+        const res = val['path'].split('/');
+        supportedFrameworks[res[1]] = true;
+    }
+    document.getElementById('supported-cdns').textContent = Object.keys(mappings).length - 3;
+    document.getElementById('supported-frameworks').textContent = Object.keys(supportedFrameworks).length + browserSpecific;
+
+
+    if (BrowserType.CHROMIUM) {
+        document.getElementById('unsupported-frameworks').style.display = 'block';
+    }
 };
 
 /**

@@ -257,8 +257,12 @@ body {
     margin-right: 14px;
 }
 
-#generated-rules {
+#generated-rules, #unsupported-frameworks {
     display: none;
+}
+
+#unsupported-frameworks {
+    padding-left: 15px;
 }
 
 .ruleset-generator {
@@ -343,14 +347,11 @@ body[dir="rtl"] .input-text {
 
 .option-links {
     list-style-type: disclosure-closed;
-}
-
-.option-links-div > ul {
     padding-top: 2rem;
     margin-top: 0px;
 }
 
-.option-links-div > ul > li {
+.option-links > li {
     padding-bottom: .5rem;
 }
 
