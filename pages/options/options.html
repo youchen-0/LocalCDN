@@ -238,15 +238,16 @@
 
         <div id="info-tab" class="tab-content">
             <div class="option-group">
-                <section class="option">
-                    <ul class="option-links">
-                        <li>Supported CDNs: <span id="supported-cdns"></span></li>
-                        <li>Supported Frameworks: <span id="supported-frameworks"></span></li>
-                        <ul id="unsupported-frameworks">
-                            <li>Font Awesome are not supported by your browser</li>
-                            <li>Google Material Icons are not supported by your browser</li>
-                        </ul>
+                <section class="option info">
+                    <div>
+                        <input type="button" id="cdn"/>
+                        <input type="button" id="framework"/>
+                    </div>
+                    <ul id="unsupported-frameworks">
+                        <li>Font Awesome are not supported by your browser</li>
+                        <li>Google Material Icons are not supported by your browser</li>
                     </ul>
+                    <textarea rows="12" cols="15" id="generated-list" readonly></textarea>
                 </section>
             </div>
             <div class="option-group">

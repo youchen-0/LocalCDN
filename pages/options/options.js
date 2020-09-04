@@ -271,25 +271,63 @@ options._parseDomainWhitelist = function (domainWhitelist) {
 };
 
 options._renderInfoPanel = function () {
-    let supportedFrameworks, supportedVersions, browserSpecific;
+    let unsupportedFrameworks, btnCDNs, btnFrameworks;
 
-    supportedFrameworks = {};
-    supportedVersions = {};
+    unsupportedFrameworks = 0;
+    options._listOfFrameworks = {};
 
-    // Chromium based browser does not support Google Material Icons and Font Awesome
-    browserSpecific = BrowserType.CHROMIUM ? -1 : 1;
+    btnCDNs = document.getElementById('cdn');
+    btnCDNs.value = 'CDNs: ';
 
-    for (const val of Object.values(resources)) {
-        const res = val['path'].split('/');
-        supportedFrameworks[res[1]] = true;
-    }
-    document.getElementById('supported-cdns').textContent = Object.keys(mappings).length - 3;
-    document.getElementById('supported-frameworks').textContent = Object.keys(supportedFrameworks).length + browserSpecific;
+    btnFrameworks = document.getElementById('framework');
+    btnFrameworks.value = 'Frameworks: ';
 
+
+    Object.values(Object.values(resources)).forEach((element) => {
+        let path = Object.values(element)[0];
+        path = path.split('/');
+        options._listOfFrameworks[path[1]] = true;
+    });
 
     if (BrowserType.CHROMIUM) {
+        // Chromium based browser does not support Google Material Icons and Font Awesome
         document.getElementById('unsupported-frameworks').style.display = 'block';
+        unsupportedFrameworks = 2;
     }
+
+    options._createList('cdn');
+
+    btnFrameworks.addEventListener('click', options._btnCreateList);
+    btnCDNs.addEventListener('click', options._btnCreateList);
+
+    // Reduce CDNs by 3, because loli.net includes = cdn.css.net, cdnjs.loli.net, ajax.loli.net, fonts.loli.net
+    btnCDNs.value += Object.keys(mappings).length - 3;
+    btnFrameworks.value += Object.keys(options._listOfFrameworks).length - unsupportedFrameworks;
+};
+
+options._btnCreateList = function ({ target }) {
+    options._createList(target.id);
+};
+
+options._createList = function (type) {
+    let textArea, list;
+
+    textArea = document.getElementById('generated-list');
+    textArea.value = '';
+
+    if (type === 'cdn') {
+        list = Object.keys(mappings);
+    } else if (type === 'framework') {
+        list = Object.keys(options._listOfFrameworks);
+    } else {
+        return;
+    }
+
+    list.forEach((elem) => {
+        if (!(BrowserType.CHROMIUM && (elem === 'fontawesome' || elem === 'google-material-design-icons'))) {
+            textArea.value += elem + '\n';
+        }
+    });
 };
 
 /**
@@ -414,6 +452,8 @@ options._updatesDomainLists = function (changes) {
  */
 options._internalStatistics = false;
 options._storageType = 'local';
+options._listOfFrameworks = {};
+options._listOfCDNs = {};
 
 document.addEventListener('DOMContentLoaded', options._onDocumentLoaded);
 

@@ -261,8 +261,13 @@ body {
     display: none;
 }
 
-#unsupported-frameworks {
-    padding-left: 15px;
+#generated-list {
+    margin-top: 15px;
+}
+
+.info > p {
+    cursor: pointer;
+    padding-left: 25px;
 }
 
 .ruleset-generator {
