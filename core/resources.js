@@ -26,13 +26,7 @@ var resources = {
 
     // AlgoliaSearch
     'algoliaSearch': {
-        'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
-        'type': 'application/javascript'
-    },
-    // TEMPORARY SOLUTION
-    // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
-    'algoliasearchSearchlightHelper': {
-        'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+        'path': 'resources/algoliasearch/{version}/algoliasearch.min.jsm',
         'type': 'application/javascript'
     },
     // AnguComplete
@@ -89,6 +83,7 @@ var resources = {
     	'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
     	'type': 'application/javascript'
     },
+    // angularMaterialDesign
     'angularMaterialDesignJS': {
     	'path': 'resources/angular-material/{version}/angular-material.min.jsm',
     	'type': 'application/javascript'
@@ -171,11 +166,11 @@ var resources = {
     },
     // baguetteBox.js
     'baguetteBoxJS': {
-        'path': 'resources/baguettebox.js/1.11.1/baguetteBox.min.jsm',
+        'path': 'resources/baguettebox.js/{version}/baguetteBox.min.jsm',
         'type': 'application/javascript'
     },
     'baguetteBoxCSS': {
-        'path': 'resources/baguettebox.js/1.11.1/baguetteBox.min.css',
+        'path': 'resources/baguettebox.js/{version}/baguetteBox.min.css',
         'type': 'text/css'
     },
     // BootboxJS
@@ -183,14 +178,13 @@ var resources = {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',
         'type': 'application/javascript'
     },
-    // Bootstrap.js
+    // Bootstrap
     'bootstrapJS': {
-        'path': 'resources/bootstrap.js/{version}/bootstrap.min.jsm',
+        'path': 'resources/bootstrap/{version}/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
-    // Bootstrap.css
     'bootstrapCSS': {
-        'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
+        'path': 'resources/bootstrap/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
     // Bootstrap Daterangepicker
@@ -223,19 +217,19 @@ var resources = {
     },
     // Bootstrap Toggle
     'bootstrapToggleJS': {
-        'path': 'resources/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.jsm',
+        'path': 'resources/bootstrap-toggle/{version}/js/bootstrap-toggle.min.jsm',
         'type': 'application/javascript'
     },
     'bootstrap2ToggleJS': {
-        'path': 'resources/bootstrap-toggle/2.2.2/js/bootstrap2-toggle.min.jsm',
+        'path': 'resources/bootstrap-toggle/{version}/js/bootstrap2-toggle.min.jsm',
         'type': 'application/javascript'
     },
     'bootstrapToggleCSS': {
-        'path': 'resources/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css',
+        'path': 'resources/bootstrap-toggle/{version}/css/bootstrap-toggle.min.css',
         'type': 'text/css'
     },
     'bootstrap2ToggleCSS': {
-        'path': 'resources/bootstrap-toggle/2.2.2/css/bootstrap2-toggle.min.css',
+        'path': 'resources/bootstrap-toggle/{version}/css/bootstrap2-toggle.min.css',
         'type': 'text/css'
     },
     // Bootstrap 3 Typeahead
@@ -315,7 +309,6 @@ var resources = {
         'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
         'type': 'text/css'
     },
-    // Font Awesome
     'fontawesome5CSS': {
         'path': 'resources/fontawesome/{version}/css/all.min.css',
         'type': 'text/css'
@@ -346,7 +339,7 @@ var resources = {
     },
     // jQuery Ajax AutoComplete
     'jQueryAjaxAutoComplete': {
-        'path': 'resources/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.jsm',
+        'path': 'resources/jquery.devbridge-autocomplete/{version}/jquery.autocomplete.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery
@@ -361,7 +354,7 @@ var resources = {
     },
     // jQuery-csv
     'jQueryCSV': {
-        'path': 'resources/jquery-csv/1.0.9/jquery.csv.min.jsm',
+        'path': 'resources/jquery-csv/{version}/jquery.csv.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery Lazy Load
@@ -408,15 +401,14 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    'jQueryUiThemes': {
+        'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
+        'type': 'text/css'
+    },
     // jScrollPane
     'jScrollPane': {
         'path': 'resources/jScrollPane/{version}/jquery.jscrollpane.min.jsm',
         'type': 'application/javascript'
-    },
-    // jQuery UI Themes
-    'jQueryUiThemes': {
-        'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
-        'type': 'text/css'
     },
     // jQuery URLive
     'jqueryURLive': {
@@ -536,6 +528,7 @@ var resources = {
         'path': 'resources/p2p-media-loader-core/{version}/p2p-media-loader-core.min.jsm',
         'type': 'application/javascript'
     },
+    // P2P Media Loader Hls.js
     'p2pMediaLoaderHlsJS': {
         'path': 'resources/p2p-media-loader-hlsjs/{version}/p2p-media-loader-hlsjs.min.jsm',
         'type': 'application/javascript'
@@ -562,7 +555,7 @@ var resources = {
     },
     // Raven.js
     'ravenJS': {
-        'path': 'resources/raven/{version}/raven.min.jsm',
+        'path': 'resources/raven.js/{version}/raven.min.jsm',
         'type': 'application/javascript'
     },
     'ravenPluginAngularJS': {
@@ -571,12 +564,12 @@ var resources = {
     },
     // React
     'react': {
-        'path': 'resources/react/16.13.1/umd/react.production.min.jsm',
+        'path': 'resources/react/{version}/umd/react.production.min.jsm',
         'type': 'application/javascript'
     },
     // ReactDOM
     'reactDOM': {
-        'path': 'resources/react-dom/16.13.1/umd/react-dom.production.min.jsm',
+        'path': 'resources/react-dom/{version}/umd/react-dom.production.min.jsm',
         'type': 'application/javascript'
     },
     // rickshaw
@@ -669,22 +662,20 @@ var resources = {
         'path': 'resources/tether/{version}/js/tether.min.jsm',
         'type': 'application/javascript'
     },
-    // Twitter Bootstrap JS
+    // Twitter Bootstrap
     'twitterBootstrapJS': {
         'path': 'resources/twitter-bootstrap/{version}/js/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
-    // Twitter Bootstrap CSS
     'twitterBootstrapCSS': {
         'path': 'resources/twitter-bootstrap/{version}/css/bootstrap.min.css',
         'type': 'text/css'
     },
-    // toastr.js
+    // toastr
     'toastrCSS': {
         'path': 'resources/toastr.js/{version}/toastr.min.css',
         'type': 'text/css'
     },
-    // toastr.js
     'toastrJS': {
         'path': 'resources/toastr.js/{version}/toastr.min.jsm',
         'type': 'application/javascript'
@@ -754,6 +745,16 @@ var resources = {
     // WOW
     'wow': {
         'path': 'resources/wow/{version}/wow.min.jsm',
+        'type': 'application/javascript'
+    },
+    // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+    'algoliasearchSearchlightHelper': {
+        'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+        'type': 'application/javascript'
+    },
+    // jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm (in shorthands.js)
+    'jsdelivrCombineJqueryHoganAlgoliasearchAutocomplete': {
+        'path': 'resources/jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm',
         'type': 'application/javascript'
     }
 };
