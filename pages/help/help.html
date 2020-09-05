@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div id="html-filter" class="notice">
-                <div class="subtle-hint"><div class="topic-label color-purple">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</div>
+                <div class="subtle-hint"><div class="topic-label">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</div>
                     <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these options.</p>
                     <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
                 </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div id="google-fonts" class="notice">
-                <div class="subtle-hint"><div class="topic-label color-purple">Why is there a "Block Google Fonts" option?</div>
+                <div class="subtle-hint"><div class="topic-label">Why is there a "Block Google Fonts" option?</div>
                     <p>LocalCDN can replace "Google Material Icons". To catch the connection, uBlock/uMatrix must allow the request. LocalCDN listens on these requests and if the query contains "Google Material Icons", the resource will be replaced. If you uncheck the "Block requests for missing content" option, non-existent resources will be allowed to pass and "Google Fonts" will be loaded, because "Google Material Icons" and "Google Fonts" use the same domain. If you don't want this, you can block "Google Fonts" on LocalCDN.</p>
                 </div>
             </div>
@@ -68,12 +68,13 @@
                 </div>
             </div>
             <div id="sync" class="notice">
-                <div class="subtle-hint"><div class="topic-label color-purple">What will be synchronized when I select "sync" as storage type?</div>
+                <div class="subtle-hint"><div class="topic-label">What will be synchronized when I select "sync" as storage type?</div>
                 <p>Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices.</p>
                 <p>If you don't have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected.</p>
                 <p>Things that are never synchronized:</p>
                 <ul>
                     <li>Amount injected <em>(Numbers of injections)</em></li>
+                    <li>Internal statistics <em>(Yes, No)</em></li>
                     <li>Internal statistics <em>(Data)</em></li>
                 </ul>
                 <p>Settings that will be synchronized:</p>
@@ -82,7 +83,6 @@
                     <li>Disable release notes <em>(Yes, No)</em></li>
                     <li>Disable link prefetching <em>(Yes, No)</em></li>
                     <li>Strip metadata from allowed requests <em>(Yes, No)</em></li>
-                    <li>Internal statistics <em>(Yes, No)</em></li>
                     <li>Deactivate LocalCDN for these domains <em>(Yes, No, URLs)</em></li>
                     <li>Block requests for missing resources <em>(Yes, No)</em></li>
                     <li>Block Google Fonts <em>(Yes, No, URLs)</em></li>
