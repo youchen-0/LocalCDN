@@ -402,6 +402,11 @@ options._onStorageOptionChanged = function ({ target }) {
     chrome.storage.local.set({
         [Setting.STORAGE_TYPE]: target.value,
     });
+    if (target.value === 'local') {
+        storageManager.migrateData('local');
+    } else {
+        storageManager.migrateData('sync');
+    }
 };
 
 options._onLinkClick = function (url) {

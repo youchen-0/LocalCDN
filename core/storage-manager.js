@@ -35,38 +35,42 @@ storageManager.checkStorageType = function () {
 };
 
 storageManager.migrateData = function (target) {
-    let storageSource, storageDestination, newItems, onlyLocal;
-
-    newItems = {};
-    onlyLocal = {};
+    let storageSource, storageDestination;
 
     if (target === 'local') {
         storageSource = chrome.storage.sync;
         storageDestination = chrome.storage.local;
-    } else {
+    } else if (target === 'sync') {
         storageSource = chrome.storage.local;
         storageDestination = chrome.storage.sync;
+    } else {
+        return;
     }
 
-    storageSource.get(null, function (items) {
-        for (const [key, value] of Object.entries(items)) {
-            // Filter unused old data
-            if (Object.values(Setting).includes(key)) {
-                // Remove previous default values
-                if (key === 'xhrTestDomain' && value === 'decentraleyes.org') {
-                    newItems[key] = 'localcdn.org';
-                } else if (key === 'amountInjected' || key === 'internalStatistics' || key === 'internalStatisticsData') {
-                    onlyLocal[key] = value;
-                } else {
-                    newItems[key] = value;
-                }
-            }
-        }
-        chrome.storage.local.set(onlyLocal);
-        storageDestination.set(newItems);
-
-        // Clear sync storage
-        // chrome.storage.sync.clear();
+    storageSource.get(null, function (data) {
+        chrome.storage.local.set({
+            [Setting.AMOUNT_INJECTED]: data.amountInjected,
+            [Setting.INTERNAL_STATISTICS]: data.internalStatistics,
+            [Setting.INTERNAL_STATISTICS_DATA]: data.internalStatisticsData,
+            [Setting.STORAGE_TYPE]: target
+        });
+        storageDestination.set({
+            [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: data.allowedDomainsGoogleFonts,
+            [Setting.BLOCK_GOOGLE_FONTS]: data.blockGoogleFonts,
+            [Setting.BLOCK_MISSING]: data.blockMissing,
+            [Setting.DISABLE_PREFETCH]: data.disablePrefetch,
+            [Setting.DOMAINS_MANIPULATE_DOM]: data.domainsManipulateDOM,
+            [Setting.LOGGING]: data.logging,
+            [Setting.ENFORCE_STAGING]: data.enforceStaging,
+            [Setting.HIDE_RELEASE_NOTES]: data.hideReleaseNotes,
+            [Setting.LAST_MAPPING_UPDATE]: data.lastMappingUpdate,
+            [Setting.NEGATE_HTML_FILTER_LIST]: data.negateHtmlFilterList,
+            [Setting.SELECTED_ICON]: data.selectedIcon,
+            [Setting.SHOW_ICON_BADGE]: data.showIconBadge,
+            [Setting.STRIP_METADATA]: data.stripMetadata,
+            [Setting.WHITELISTED_DOMAINS]: data.whitelistedDomains,
+            [Setting.XHR_TEST_DOMAIN]: data.xhrTestDomain
+        });
     });
 };
 
