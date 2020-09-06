@@ -39,6 +39,11 @@ updates._openHistoryReleaseNotes = function () {
 };
 
 updates._onDocumentLoaded = function () {
+    // ********************************************************************************
+    // TODO: Remove me in v2.4.1
+    document.getElementById('export').addEventListener('click', updates._export);
+    // ********************************************************************************
+
     document.getElementById('generate-ublock-rules').checked = false;
     document.getElementById('generate-umatrix-rules').checked = false;
 
@@ -61,5 +66,21 @@ updates._onDocumentLoaded = function () {
         document.getElementById('generator-section').style.display = 'block';
     }
 };
+// ********************************************************************************
+// TODO: Remove me in v2.4.1
+updates._export = function () {
+    let filename = new Date().toISOString();
+    filename = filename.substring(0, 10) + '_localcdn_backup.txt';
 
+    chrome.storage.sync.get(null, function (items) {
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(items, null, '  ')));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    });
+};
+// ********************************************************************************
 document.addEventListener('DOMContentLoaded', updates._onDocumentLoaded);

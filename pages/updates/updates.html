@@ -18,11 +18,17 @@
     <body>
         <img src="../images/logo.svg" alt="Decentraleyes" class="logo"/>
         <div class="container">
+            <!-- ********************************************************************************
+                TODO: Remove me in v2.4.1
+            -->
             <div class="notice subtle-hint important">
                 <h1 style="font-weight: bold;">Please notice</h1>
-                <p><strong>Do you use Firefox/Chromium Sync or your own sync server?</strong> If not, you can ignore the following. </p>
+                <p><strong>1.) Do you use Firefox/Chromium Sync or your own sync server?</strong></p>
                 <p>In LocalCDN v2.4.0 the default storage type has been changed from <em>sync</em> to <em>local</em>. If you want to change this, you can do this in the settings. Please recognize that not all data are synced. More information can be found in the <a href="../help/help.html#sync">FAQs</a></p>
+                <p><strong>2.) Extension settings</strong></p>
+                <p>Your extension settings should be automatically transferred from <em>sync</em> to <em>local</em>, but in some cases the migration may fail. If you want, you can <input type="button" id="export" value="export"/> your extension settings to a file and import them on the options page.</p>
             </div>
+            <!-- ******************************************************************************** -->
             <h1>Release notes</h1>
             <div class="notice">
                 <div class="subtle-hint">
