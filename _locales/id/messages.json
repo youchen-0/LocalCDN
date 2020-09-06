@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Dasar",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Lanjutan",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Lainnya",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Tipe penyimpanan",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokal",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sinkron",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Impor/Ekspor",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Cadangkan ke berkas",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Pulihkan dari berkas",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Impor berhasil",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Impor gagal",
         "description": "Import failed"
     }
 }

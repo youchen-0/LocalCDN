@@ -188,19 +188,19 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Base",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Avanzato",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Altro",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
