@@ -204,35 +204,35 @@
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Tipo di archiviazione",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Locale",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sincronizza",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importa/Esporta",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Backup su file",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Ripristina da file",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Importazione riuscita",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Importazione fallita",
         "description": "Import failed"
     }
 }
