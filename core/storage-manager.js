@@ -161,6 +161,7 @@ storageManager._validation = function (content) {
     storageManager.type.set(imported);
 
     alert(chrome.i18n.getMessage('dialogImportSuccessful'));
+    chrome.tabs.reload();
 };
 
 storageManager._validateDomainsAndStatistics = function (type, obj) {
