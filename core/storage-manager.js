@@ -235,7 +235,7 @@ storageManager._validateStrings = function (value) {
 };
 
 storageManager._validateNumbers = function (value) {
-    return value > 0 && value < Number.MAX_VALUE ? value : 0;
+    return isNaN(value) ? 0 : value;
 };
 
 storageManager.data = {};
