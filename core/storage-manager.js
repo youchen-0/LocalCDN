@@ -144,6 +144,9 @@ storageManager._validation = function (content) {
             } else if (typeof value === 'boolean' || value instanceof Boolean) {
                 imported[key] = content[key];
             }
+        } else if (content[key] === undefined) {
+            // Set default if not existing in file
+            imported[key] = value;
         } else {
             alert(chrome.i18n.getMessage('dialogImportFailed'));
             throw 'Invalid file!';
