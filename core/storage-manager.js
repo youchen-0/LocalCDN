@@ -139,8 +139,10 @@ storageManager._validation = function (content) {
                 imported[key] = storageManager._validateDomainsAndStatistics(key, content[key]);
             } else if (typeof value === 'string' || value instanceof String) {
                 imported[key] = storageManager._validateStrings(content[key]);
-            } else if ((typeof value === 'number' || value instanceof Number) && key !== 'amountInjected') {
+            } else if (typeof value === 'number' || value instanceof Number) {
                 imported[key] = storageManager._validateNumbers(content[key]);
+            } else if (typeof value === 'boolean' || value instanceof Boolean) {
+                imported[key] = content[key];
             }
         } else {
             alert(chrome.i18n.getMessage('dialogImportFailed'));
