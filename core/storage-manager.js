@@ -152,7 +152,14 @@ storageManager._validation = function (content) {
             throw 'Invalid file!';
         }
     }
+
+    // set values directly
+    wrappers.setIcon({ path: imported['selectedIcon'] }, 'Enabled');
+    storageManager.amountInjected = imported['amountInjected'];
+    storageManager.statistics = imported['internalStatisticsData'];
+
     storageManager.type.set(imported);
+
     alert(chrome.i18n.getMessage('dialogImportSuccessful'));
 };
 
@@ -232,5 +239,7 @@ storageManager._validateNumbers = function (value) {
 
 storageManager.data = {};
 storageManager.type = chrome.storage.local;
+storageManager.amountInjected = 0;
+storageManager.statistics = {};
 
 chrome.storage.onChanged.addListener(storageManager._handleStorageChanged);

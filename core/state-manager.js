@@ -54,21 +54,21 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
         }
     }
 
-    if (isNaN(interceptor.amountInjected)) {
+    if (isNaN(storageManager.amountInjected)) {
 
         storageManager.type.get(Setting.AMOUNT_INJECTED, function (items) {
 
-            interceptor.amountInjected = items.amountInjected;
+            storageManager.amountInjected = items.amountInjected;
 
             storageManager.type.set({
-                [Setting.AMOUNT_INJECTED]: ++interceptor.amountInjected
+                [Setting.AMOUNT_INJECTED]: ++storageManager.amountInjected
             });
         });
 
     } else {
 
         chrome.storage.local.set({
-            [Setting.AMOUNT_INJECTED]: ++interceptor.amountInjected
+            [Setting.AMOUNT_INJECTED]: ++storageManager.amountInjected
         });
     }
     if (stateManager.internalStatistics) {

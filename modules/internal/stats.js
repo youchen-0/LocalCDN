@@ -23,7 +23,7 @@ var stats = {};
 stats.setStats = function (injection) {
     let data, today, cdn, framework, newEntry;
 
-    data = stats.data;
+    data = storageManager.statistics;
     today = new Date().toISOString().slice(0, 10);
     cdn = injection.source;
     framework = injection.path;
@@ -51,10 +51,8 @@ stats.setStats = function (injection) {
 
 stats.getStats = function () {
     chrome.storage.local.get([Setting.INTERNAL_STATISTICS_DATA], function (items) {
-        stats.data = items.internalStatisticsData || {};
+        storageManager.statistics = items.internalStatisticsData || {};
     });
 };
 
 stats.getStats();
-
-stats.data = {};
