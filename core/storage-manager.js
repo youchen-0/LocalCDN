@@ -176,32 +176,23 @@ storageManager._validateDomainsAndStatistics = function (type, obj) {
             }
         }
     } else if (type === 'internalStatisticsData') {
-        let statistics = {};
         for (const [date, values] of Object.entries(obj)) {
             if (/((2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])/.test(date)) {
                 for (const [types, category] of Object.entries(values)) {
                     if (types === 'frameworks') {
-                        let frameworks = {};
                         for (const [name, counter] of Object.entries(category)) {
-                            if (/resources\/[0-9a-z.-]+\/((?:\d{1,2}\.){1,3}\d{1,2})?.*\.(css|jsm)/.test(name) && counter > 0 && counter < Number.MAX_VALUE) {
-                                frameworks[name] = counter;
-                            } else {
+                            if (!/resources\/[0-9a-z.-]+\/((?:\d{1,2}\.){1,3}\d{1,2})?.*\.(css|jsm)/.test(name) && !storageManager._validateNumbers(counter)) {
                                 alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + name);
                                 throw 'Invalid file!';
                             }
                         }
-                        statistics[date] = frameworks;
                     } else if (types === 'cdns') {
-                        let cdns = {};
                         for (const [name, counter] of Object.entries(category)) {
-                            if (/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,24}/.test(name) && counter > 0 && counter < Number.MAX_VALUE) {
-                                cdns[name] = counter;
-                            } else {
+                            if (!/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,24}/.test(name) && !storageManager._validateNumbers(counter)) {
                                 alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + name);
                                 throw 'Invalid file!';
                             }
                         }
-                        statistics[date] = cdns;
                     } else {
                         alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + type);
                         throw 'Invalid file!';
@@ -212,7 +203,7 @@ storageManager._validateDomainsAndStatistics = function (type, obj) {
                 throw 'Invalid file!';
             }
         }
-        valid = statistics;
+        valid = obj;
     } else {
         alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + type);
         throw 'Invalid file!';
