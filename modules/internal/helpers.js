@@ -415,6 +415,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.70';
     } else if (type.includes('/jquery-csv/1.')) {
         return '1.0.9';
+    } else if (type.includes('/jquery-easing/1.')) {
+        return '1.4.1';
     } else if (type.includes('/jquery.lazyload/1.')) {
         return '1.9.1';
     } else if (type.includes('/jquery.lazy/1.')) {
@@ -571,6 +573,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jquery.easing.min.jsm': 'jQuery Easing Plugin',
     'baguetteBox.min.jsm': 'baguetteBox.js (JS)',
     'baguetteBox.min.css': 'baguetteBox.js (CSS)',
     'videojs-seek-buttons.min.css': 'Videojs seek buttons (CSS)',

@@ -357,6 +357,11 @@ var resources = {
         'path': 'resources/jquery-csv/{version}/jquery.csv.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Easing Plugin
+    'jQueryEasing': {
+        'path': 'resources/jquery-easing/{version}/jquery.easing.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Lazy Load
     'jQueryLazyLoad': {
         'path': 'resources/jquery.lazyload/{version}/jquery.lazyload.min.jsm',
