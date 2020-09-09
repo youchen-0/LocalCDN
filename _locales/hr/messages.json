@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Osnovno",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Napredno",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Ostalo",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Podaci",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Vrsta spremišta",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokalno",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sinkronizacija",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Uvoz/izvoz",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Spremi sigurnosnu kopiju u datoteku",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Obnovi iz datoteke",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Uvoz uspio",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Uvoz neuspio",
         "description": "Import failed"
     }
 }
