@@ -208,11 +208,11 @@
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Local",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sincronizar",
         "description": "Sync"
     },
     "headerImportExport": {
