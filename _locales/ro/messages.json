@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Exclude domeniile următoare de la inspecții",
+        "message": "Exclude domeniile următoare de la inspecții:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -108,7 +108,7 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Activează această opțiune pentru a aplica mereu filtrul HTML. Domeniile din listă vor fi apoi ignorate. Dacă această opțiune este dezactivată, filtrul HTML va fi aplicat doar la domeniile din listă.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -185,7 +185,7 @@
     },
     "labelDomainsWhitelistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
         "message": "",
