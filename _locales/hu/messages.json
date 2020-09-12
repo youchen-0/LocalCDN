@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "Véd attól, hogy az „ingyenes”, centralizált tartalomszolgáltatók kövessenek.",
+        "message": "Védelmet nyújt az „ingyenes”, centralizált tartalomkézbesítésen keresztüli követés ellen.",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "Telepítés óta beszúrt helyi Content Delivery Network erőforrások száma.",
+        "message": "Helyi tartalomkézbesítési hálózati erőforrások beszúrásainak száma a telepítés óta.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -16,23 +16,23 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "A beszúrt erőforrások számának megjelenítése a bővítmény ikonján.",
+        "message": "A beszúrt erőforrások számának megjelenítése a kiegészítő ikonján.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Hiányzó erőforrások blokkolása",
+        "message": "Hiányzó erőforrások kéréseinek blokkolása",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Megszakított kérések blokkolása, amennyiben a kért erőforrás nem érhető el helyben.",
+        "message": "Elfogott kérések megszakítása, ha a kért erőforrás nem érhető el helyileg.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Link prefetching letiltása",
+        "message": "Hivatkozás előtöltésének letiltása",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Letiltott kérések kiszivárgásának megakadályozása.",
+        "message": "Annak megakadályozása, hogy a letiltott kérések adatokat szivárogtassanak a kézbesítési hálózatok felé.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
@@ -40,27 +40,27 @@
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Érzékeny adatok törlése az engedélyezett CDN kérésekből.",
+        "message": "Érzékeny adatok törlése az engedélyezett CDN-kérésekből az adatvédelem fokozása érdekében.",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Domainek vizsgálatának elhagyása:",
+        "message": "A LocalCDN kikapcsolása ezeknél a tartományoknál:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "Írj be domaineket, amik ne legyenek megvizsgálva. Az elemeket pontosvesszővel (;) kell elválasztani.",
+        "message": "Adja meg a tartományokat, ahol a LocalCDN le lesz tiltva. Több bejegyzést pontosvesszővel (;) válasszon el.",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "Haladó",
+        "message": "Speciális",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Szabálykészleteket generálhat az uBlock vagy az uMatrix számára",
+        "message": "Szabálykészletek előállítása az uBlock vagy az uMatrix számára",
         "description": "Generate rule set title"
     },
     "generateRuleSetDescription": {
-        "message": "Ha esetleg uBlockot vagy uMatrixot használsz, itt generálhatsz szabályokat. Kézzel kell hozzáadnod őket a uBlockban vagy uMatrixban.",
+        "message": "uBlock Origin vagy uMatrix használata esetén itt állíthatja elő a szabályokat. Ezeket a szabályokat kézzel kell hozzáadnia a uBlock Origin vagy a uMatrix beállításaiban.",
         "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
     },
     "lastUpdate": {
@@ -76,7 +76,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Nyisd meg a „Böngészőkonzol”-t ( CTRL + SHIFT + J ) a hiányzó erőforrások mutatásáért.",
+        "message": "Nyissa meg a „böngészőkonzolt” (Ctrl + Shift + J) a hiányzó erőforrások megjelenítéshez.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -84,11 +84,11 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Kapcsold be, ha nem akarsz új LocalCDN funkciókról információt kapni. Ez tartalmazza az új uBlock/uMatrix szabályokat.",
+        "message": "Kapcsolja ezt be, hogy ne kapjon semmilyen információt az új LocalCDN funkciókról. Ez tartalmazza az új uBlock/uMatrix szabályokkal kapcsolatos információkat is.",
         "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Ez a funkció megakadályozza a weboldalak helyes működését. Ne hagyd engedélyezve, hacsak nem állsz készen manuálisan a fehérlistára helyezni bármilyen érintett domaint.",
+        "message": "Ez a funkció megakadályozza a weboldalak helyes működését. Ne hagyja engedélyezve, hacsak nincs felkészülve az érintett tartományok kézzel történő engedélyezésére.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
@@ -104,135 +104,135 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "HTML szűrő megfordítása",
+        "message": "HTML-szűrő megfordítása",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Engedélyezd ezt az opciót a HTML szűrő alkalmazásához. A listában szereplő domainek figyelmen kívül lesznek hagyva. Ha ez az opció ki van kapcsolva, a HTML szűrő csak a listában szereplő domainekre vonatkozik.",
+        "message": "Engedélyezze ezt a beállítást a HTML-szűrő állandó alkalmazásához. A listán lévő tartományok figyelmen kívül lesznek hagyva. Ha ez a beállítás le van tiltva, akkor a HTML-szűrő csak a listán lévő tartományokra lesz alkalmazva.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Ez a funkció megakadályozhatja a weboldalak helyes működését. Kérlek, vedd figyelembe a Wiki oldalon szereplő információt.",
+        "message": "Ez a funkció megakadályozhatja a weboldalak helyes működését. Vegye figyelembe a Wiki oldalon lévő információkat.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Ne alkalmazzon HTML-szűrőt ezekre a tartományokra:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Adja meg a HTML-szűrő által kezelendő vagy figyelmen kívül hagyandó tartományokat. Több bejegyzést pontosvesszővel (;) válasszon el.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "HTML-szűrő alkalmazása ezeknél a tartományoknál:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Google betűkészletek blokkolása",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Ha engedélyezve vannak a hiányzó erőforrások kérései, akkor a „fonts.googleapis.com” címhez való kapcsolódás nem lesz blokkolva. Engedélyezze ezt a beállítást ezen erőforrások blokkolásához.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Válasszon ikont ehhez a kiegészítőhöz",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Belső statisztikák",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Ez a funkció jelenleg kísérleti stádiumban van. Nincs adatátvitel. Ez mind az Ön eszközén van.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Statisztikák",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Ma",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Múlt hét",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Múlt hónap",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Múlt év",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Törlés",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Átlag (napi helyettesítések)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Helyettesített keretrendszerek",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Biztosan törölni szeretné a statisztikákat?",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
+        "message": "Ezeknek a tartományoknak engedélyezett a Google betűkészletek betöltése. Több bejegyzést pontosvesszővel (;) válasszon el.",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Alap",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Speciális",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Egyéb",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Információ",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Tároló típusa",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Helyi",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Szinkronizálás",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importálás és exportálás",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Biztonsági mentés fájlba",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Visszaállítás fájlból",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Az importálás sikeres",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Az importálás sikertelen",
         "description": "Import failed"
     }
 }
