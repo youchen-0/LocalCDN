@@ -291,6 +291,10 @@ helpers.setLastVersion = function (type, version) {
     }
     if (type.includes('/algoliasearch/3.')) {
         return '3.35.1';
+    } else if (type.includes('/anchor-js/3.')) {
+        return '3.2.2';
+    } else if (type.includes('/anchor-js/4.')) {
+        return '4.2.2';
     } else if (type.includes('/angularjs/1.')) {
         if (helpers.compareVersion('1.2.19', version)) return '1.2.19'; // <= v1.2.19
         else if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
@@ -575,6 +579,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'anchor.min.jsm': 'AnchorJS',
     'jquery.easing.min.jsm': 'jQuery Easing Plugin',
     'baguetteBox.min.jsm': 'baguetteBox.js (JS)',
     'baguetteBox.min.css': 'baguetteBox.js (CSS)',

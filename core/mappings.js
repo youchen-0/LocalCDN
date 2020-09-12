@@ -87,6 +87,7 @@ var mappings = {
         '/ajax/libs/': {
             'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
             'algoliasearch/{version}/algoliasearch.': resources.algoliaSearch,
+            'anchor-js/{version}/anchor.': resources.anchorJS,
             'angucomplete-alt/{version}/angucomplete-alt.': resources.anguComplete,
             'angular-bootstrap-colorpicker/{version}/css/colorpicker.': resources.angularBootstrapColorpickerCSS,
             'angular-bootstrap-colorpicker/{version}/js/bootstrap-colorpicker-module.': resources.angularBootstrapColorpickerJS,
@@ -344,6 +345,7 @@ var mappings = {
     // jsDelivr (Cloudflare)
     'cdn.jsdelivr.net': {
         '/npm/': {
+            'anchor-js@{version}/anchor.': resources.anchorJS,
             'angular@{version}/angular.': resources.angular,
             'angular@{version}/angular.min.': resources.angular,
             'angular-payments@{version}/lib/angular-payments.js': resources.angularPayments,
