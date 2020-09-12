@@ -477,6 +477,8 @@ helpers.setLastVersion = function (type, version) {
         return '3.5.10';
     } else if (type.includes('/popper.js/1.')) {
         return '1.16.1';
+    } else if (type.includes('/popper.js/2.')) {
+        return '2.4.4';
     } else if (type.includes('/prototype/1.')) {
         return '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {
