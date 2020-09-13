@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generer regelsett for uBlock eller uMatrix",
+        "message": "Generer regelsett for din reklameblokkerer",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "I tilfelle du bruker uBlock Origin eller uMatrix kan reglene genereres her. Reglene må legges til manuelt i uBlock Origin eller uMatrix.",
+        "message": "I tilfelle du bruker en reklameblokkerer kan reglene genereres her. Reglene må legges til manuelt i reklameblokkereren.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Slå på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for uBlock/uMatrix.",
+        "message": "Slå på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for din reklameblokkerer.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
