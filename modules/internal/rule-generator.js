@@ -41,6 +41,8 @@ ruleGenerator.openRuleSet = function ({ target }) {
             content += '* ' + domain + ' css allow' + '\n';
         } else if (key === 'uBlock') {
             content += '* ' + domain + ' * noop' + '\n';
+        } else if (key === 'AdGuard') {
+            content += '@@||' + domain + '^\n';
         }
     }
     textArea.value = content.replace(/\n+$/, '');

@@ -169,6 +169,7 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.selectedIcon[2].addEventListener('change', options._onOptionChanged);
     elements.ruleSets[0].addEventListener('change', ruleGenerator.openRuleSet);
     elements.ruleSets[1].addEventListener('change', ruleGenerator.openRuleSet);
+    elements.ruleSets[2].addEventListener('change', ruleGenerator.openRuleSet);
     elements.copyRuleSet.addEventListener('click', ruleGenerator.copyRuleSet);
     elements.internalStatistics.addEventListener('change', options._onOptionChanged);
     elements.allowedDomainsGoogleFonts.addEventListener('keyup', options._onOptionChanged);
