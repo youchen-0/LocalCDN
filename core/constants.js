@@ -200,7 +200,7 @@ const Regex = {
 
 const Links = {
     'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
-    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-uBlock-Origin-or-uMatrix',
+    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-your-adblocker',
     'WELCOME': chrome.extension.getURL('pages/welcome/welcome.html'),
     'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
     'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
