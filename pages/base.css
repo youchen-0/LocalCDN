@@ -190,6 +190,7 @@ textarea {
     opacity: .6;
     z-index: 99999;
     transform: scale(0);
+    visibility: hidden;
 }
 
 .b-contain input + .b-input::before {
@@ -198,10 +199,6 @@ textarea {
 
 .b-contain input:checked + .b-input::before {
     animation-name: b-ripple-duplicate;
-}
-
-.b-contain .b-input::before {
-    visibility: hidden;
 }
 
 .b-contain input:focus + .b-input::before {
