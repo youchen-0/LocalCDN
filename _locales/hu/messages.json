@@ -57,11 +57,11 @@
     },
     "generateRuleSetTitle": {
         "message": "Szabálykészleteket generálhat az uBlock vagy az uMatrix számára",
-        "description": "Generate rule set title"
+        "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
         "message": "Ha esetleg uBlockot vagy uMatrixot használsz, itt generálhatsz szabályokat. Kézzel kell hozzáadnod őket a uBlockban vagy uMatrixban.",
-        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
         "message": "Utolsó frissítés:",
@@ -85,7 +85,7 @@
     },
     "hideReleaseNotesDescription": {
         "message": "Kapcsold be, ha nem akarsz új LocalCDN funkciókról információt kapni. Ez tartalmazza az új uBlock/uMatrix szabályokat.",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Ez a funkció megakadályozza a weboldalak helyes működését. Ne hagyd engedélyezve, hacsak nem állsz készen manuálisan a fehérlistára helyezni bármilyen érintett domaint.",

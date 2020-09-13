@@ -57,11 +57,11 @@
     },
     "generateRuleSetTitle": {
         "message": "uBlock 또는 uMatrix에 대한 규칙 세트 생성",
-        "description": "Generate rule set title"
+        "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
         "message": "uBlock Origin 또는 uMatrix를 사용하는 경우 여기서 규칙을 생성하십시오. 이러한 규칙은 uBlock Origin 또는 uMatrix에서 수동으로 추가해야 한다.",
-        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
         "message": "최근 업데이트:",
@@ -85,7 +85,7 @@
     },
     "hideReleaseNotesDescription": {
         "message": "새 LocalCDN 기능에 대한 정보를 수신하지 않으려면 이 옵션을 설정하십시오. 여기에는 새로운 uBlock/uMatrix 규칙에 대한 정보가 포함된다.",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "이 기능은 웹사이트를 파괴합니다. 영향을 받는 도메인을 수동으로 화이트리스트할 준비가 되지 않은 경우 이 도메인을 활성화한 상태로 두지 마십시오.",

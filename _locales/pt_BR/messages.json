@@ -57,11 +57,11 @@
     },
     "generateRuleSetTitle": {
         "message": "Gere conjuntos de regras para uBlock ou uMatrix",
-        "description": "Generate rule set title"
+        "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
         "message": "No caso de você estar usando uBlock ou uMatrix você pode gerar as regras aqui. Você tem que adicionar essas regras manualmente no uBlock Origin ou uMatrix.",
-        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
         "message": "Última atualização:",
@@ -85,7 +85,7 @@
     },
     "hideReleaseNotesDescription": {
         "message": "Habilite isso para não receber informações sobre novos recursos do LocalCDN. Isso inclui informação sobre novas regras do uBlock/uMatrix.",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Esse recurso quebra sites. Não deixe habilitado, a não ser que você esteja preparado para manualmente colocar os sites afetados na Lista Branca.",
