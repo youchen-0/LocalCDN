@@ -84,13 +84,8 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-<<<<<<< HEAD
         "message": "Kapcsold be, ha nem akarsz új LocalCDN funkciókról információt kapni. Ez tartalmazza az új uBlock/uMatrix szabályokat.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-=======
-        "message": "Kapcsolja ezt be, hogy ne kapjon semmilyen információt az új LocalCDN funkciókról. Ez tartalmazza az új uBlock/uMatrix szabályokkal kapcsolatos információkat is.",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
->>>>>>> weblate/develop
     },
     "featureBreaksWebsitesDescription": {
         "message": "Ez a funkció megakadályozza a weboldalak helyes működését. Ne hagyja engedélyezve, hacsak nincs felkészülve az érintett tartományok kézzel történő engedélyezésére.",
