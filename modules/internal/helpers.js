@@ -336,6 +336,8 @@ helpers.setLastVersion = function (type, version) {
         return '0.37.1';
     } else if (type.includes('/angular-material/1.')) {
         return '1.1.21';
+    } else if (type.includes('/angular-material/0.')) {
+        return '1.1.21';
     } else if (type.includes('/angular-translate/2.')) {
         return '2.7.2';
     } else if (type.includes('/angular-translate-loader-static-files/2.')) {
