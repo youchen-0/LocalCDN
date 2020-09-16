@@ -336,6 +336,12 @@ helpers.setLastVersion = function (type, version) {
         return '0.37.1';
     } else if (type.includes('/angular-material/1.')) {
         return '1.1.21';
+    } else if (type.includes('/angular-translate/2.')) {
+        return '2.7.2';
+    } else if (type.includes('/angular-translate-loader-static-files/2.')) {
+        return '2.7.2';
+    } else if (type.includes('/angular-translate-interpolation-messageformat/2.')) {
+        return '2.7.2';
     } else if (type.includes('/backbone.js/0.')) {
         return '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
@@ -579,6 +585,9 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'angular-translate.min.jsm': 'Angular Translate',
+    'angular-translate-interpolation-messageformat.min.jsm': 'Angular Translate Interpolation Messageformat',
+    'angular-translate-loader-static-files.min.jsm': 'Angular Translate Load Static Files',
     'anchor.min.jsm': 'AnchorJS',
     'jquery.easing.min.jsm': 'jQuery Easing Plugin',
     'baguetteBox.min.jsm': 'baguetteBox.js (JS)',

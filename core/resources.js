@@ -154,6 +154,19 @@ var resources = {
         'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
         'type': 'application/javascript'
     },
+    // Angular Translate
+    'angularTranslate': {
+        'path': 'resources/angular-translate/{version}/angular-translate.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularTranslateInterpolationMessageformat': {
+        'path': 'resources/angular-translate/{version}/angular-translate-interpolation-messageformat.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularTranslateLoaderStaticFiles': {
+        'path': 'resources/angular-translate/{version}/angular-translate-loader-static-files.min.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',
