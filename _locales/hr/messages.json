@@ -56,15 +56,15 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generiraj skup pravila za uBlock ili uMatrix",
+        "message": "Generiraj skup pravila za tvoj blokator oglasa",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "U slučaju da koristiš uBlock Origin ili uMatrix, ovdje možeš generirati pravila. Ova pravila moraš ručno dodati u uBlock Origin ili uMatrix.",
+        "message": "U slučaju da koristiš blokator oglasa, ovdje možeš generirati pravila. Ova pravila moraš ručno dodati tvom blokatoru oglasa.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "Zadnje ažuriranje:",
+        "message": "Zadnje aktualiziranje:",
         "description": "Last update:"
     },
     "copyRuleSet": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Uključi ovo, ako ne želiš primati informacije o novim funkcijama LocalCDN-a. To uključuje informacije o novim pravilima za uBlock/uMatrix.",
+        "message": "Uključi ovo, ako ne želiš primati informacije o novim funkcijama LocalCDN-a. To uključuje informacije o novim pravilima za tvoj blokator oglasa.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
