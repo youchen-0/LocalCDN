@@ -459,6 +459,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.7.53';
     } else if (type.includes('/lodash.js/4.')) {
         return '4.17.10';
+    } else if (type.includes('/lodash.js/3.')) {
+        return '3.10.1';
     } else if (type.includes('lozad')) {
         return '1.14.0';
     } else if (type.includes('/mdbootstrap/4.')) {
