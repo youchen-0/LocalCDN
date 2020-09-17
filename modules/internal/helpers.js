@@ -245,6 +245,8 @@ helpers.determineBundle = function (path = '') {
         return 'Bootstrap Datepicker';
     } else if (path.includes('/jquery.lazy/')) {
         return 'jQuery Lazy';
+    } else if (path.includes('/waypoints/')) {
+        return 'Waypoints';
     } else {
         return '';
     }
@@ -559,8 +561,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.6.12';
     } else if (type.includes('/vue-resource/1.')) {
         return '1.5.1';
-    } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
-        return '4.0.0';
+    } else if (type.includes('/waypoints/4.')) {
+        return '4.0.1';
     } else if (type.includes('webfont')) {
         return '1.6.28';
     } else if (type.includes('/webrtc-adapter/6.')) {
@@ -593,6 +595,13 @@ helpers.compareVersion = function (v1, v2) {
 const ListOfFiles = {
     'slick-lightbox.css': 'slick-lightbox CSS',
     'slick-lightbox.min.jsm': 'slick-lightbox JS',
+    'noframework.waypoints.min.jsm': 'Waypoints (Bundle)',
+    'jquery.waypoints.min.jsm': 'Waypoints (Bundle)',
+    'waypoints.debug.jsm': 'Waypoints (Bundle)',
+    'zepto.waypoints.min.jsm': 'Waypoints (Bundle)',
+    'shortcuts/infinite.min.jsm': 'Waypoints (Bundle)',
+    'shortcuts/inview.min.jsm': 'Waypoints (Bundle)',
+    'shortcuts/sticky.min.jsm': 'Waypoints (Bundle)',
     'angular-translate.min.jsm': 'Angular Translate',
     'angular-translate-interpolation-messageformat.min.jsm': 'Angular Translate Interpolation Messageformat',
     'angular-translate-loader-static-files.min.jsm': 'Angular Translate Load Static Files',
@@ -630,7 +639,6 @@ const ListOfFiles = {
     'owl.theme.min.css': 'OwlCarousel (CSS Theme)',
     'owl.carousel.min.css': 'OwlCarousel (CSS)',
     'owl.carousel.min.jsm': 'OwlCarousel (JS)',
-    'jquery.waypoints.min.jsm': 'Waypoints (jQuery)',
     'bootstrap-datepicker3.standalone.min.css': 'Bootstrap Datepicker 3 (CSS)',
     'jets.min.jsm': 'Jets.js',
     'lazyload.min.jsm': 'Vanilla Lazyload',

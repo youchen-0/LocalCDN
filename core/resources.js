@@ -746,9 +746,9 @@ var resources = {
         'path': 'resources/vue-resource/{version}/vue-resource.min.jsm',
         'type': 'application/javascript'
     },
-    // Waypoints (jQuery)
+    // Waypoints (bundle)
     'jQueryWaypoints': {
-        'path': 'resources/waypoints/{version}/jquery.waypoints.min.jsm',
+        'path': 'resources/waypoints/{version}/',
         'type': 'application/javascript'
     },
     // WebComponents.js
