@@ -515,6 +515,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.11.2';
     } else if (type.includes('/slick-carousel/1.')) {
         return '1.9.0';
+    } else if (type.includes('/slick-lightbox/0.')) {
+        return '0.2.12';
     } else if (type.includes('/socket.io/2.')) {
         return '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
@@ -589,6 +591,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'slick-lightbox.css': 'slick-lightbox CSS',
+    'slick-lightbox.min.jsm': 'slick-lightbox JS',
     'angular-translate.min.jsm': 'Angular Translate',
     'angular-translate-interpolation-messageformat.min.jsm': 'Angular Translate Interpolation Messageformat',
     'angular-translate-loader-static-files.min.jsm': 'Angular Translate Load Static Files',

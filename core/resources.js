@@ -646,6 +646,15 @@ var resources = {
         'path': 'resources/slick-carousel/{version}/slick.min.css',
         'type': 'text/css'
     },
+    // slick-lightbox
+    'slickLightboxJS': {
+        'path': 'resources/slick-lightbox/{version}/slick-lightbox.min.jsm',
+        'type': 'application/javascript'
+    },
+    'slickLightboxCSS': {
+        'path': 'resources/slick-lightbox/{version}/slick-lightbox.css',
+        'type': 'text/css'
+    },
     // socket.io
     'socketIO': {
         'path': 'resources/socket.io/{version}/socket.io.jsm',
