@@ -81,13 +81,10 @@ main._showReleaseNotes = function (details) {
                     [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
                 }, function() {
                     if (!items.hideReleaseNotes) {
-                        // ********************************************************************************
-                        // TODO: Change me in v2.4.1
-                        // chrome.tabs.create({
-                        //     'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
-                        //     'active': false
-                        // });
-                        // ********************************************************************************
+                        chrome.tabs.create({
+                            'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
+                            'active': false
+                        });
                     }
                 });
             } else {
