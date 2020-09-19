@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Exclude domeniile următoare de la inspecții",
+        "message": "Exclude domeniile următoare de la inspecții:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -57,11 +57,11 @@
     },
     "generateRuleSetTitle": {
         "message": "Generați seturi de reguli pentru uBlock sau uMatrix",
-        "description": "Generate rule set title"
+        "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
         "message": "",
-        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
         "message": "",
@@ -85,7 +85,7 @@
     },
     "hideReleaseNotesDescription": {
         "message": "",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "",
@@ -108,7 +108,7 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Activează această opțiune pentru a aplica mereu filtrul HTML. Domeniile din listă vor fi apoi ignorate. Dacă această opțiune este dezactivată, filtrul HTML va fi aplicat doar la domeniile din listă.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -185,6 +185,54 @@
     },
     "labelDomainsWhitelistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+    },
+    "btnGeneral": {
+        "message": "",
+        "description": "Basic"
+    },
+    "btnAdvanced": {
+        "message": "",
+        "description": "Advanced"
+    },
+    "btnOther": {
+        "message": "",
+        "description": "Other"
+    },
+    "btnInfo": {
+        "message": "",
+        "description": "Info"
+    },
+    "headerStorageType": {
+        "message": "",
+        "description": "Storage type"
+    },
+    "labelStorageTypeLocal": {
+        "message": "",
+        "description": "Local"
+    },
+    "labelStorageTypeSync": {
+        "message": "",
+        "description": "Sync"
+    },
+    "headerImportExport": {
+        "message": "",
+        "description": "Import/Export"
+    },
+    "labelExportData": {
+        "message": "",
+        "description": "Back up to file"
+    },
+    "labelImportData": {
+        "message": "",
+        "description": "Restore from file"
+    },
+    "dialogImportSuccessful": {
+        "message": "",
+        "description": "Import successful"
+    },
+    "dialogImportFailed": {
+        "message": "",
+        "description": "Import failed"
     }
 }

@@ -112,7 +112,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString) {
     let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
 
-    chrome.storage.sync.get(Setting.LOGGING, function (items) {
+    storageManager.type.get(Setting.LOGGING, function (items) {
         requestAnalyzer.logging = items.enableLogging;
     });
 
@@ -171,17 +171,17 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 };
 
 requestAnalyzer._applyWhitelistedDomains = function () {
-    chrome.storage.sync.get(Setting.WHITELISTED_DOMAINS, function (items) {
+    storageManager.type.get(Setting.WHITELISTED_DOMAINS, function (items) {
         requestAnalyzer.whitelistedDomains = items.whitelistedDomains || {};
     });
 };
 requestAnalyzer._applyManipulateDOMDomains = function () {
-    chrome.storage.sync.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
+    storageManager.type.get(Setting.DOMAINS_MANIPULATE_DOM, function (items) {
         requestAnalyzer.domainsManipulateDOM = items.domainsManipulateDOM || {};
     });
 };
 requestAnalyzer._applyAllowedDomainsGoogleFonts = function () {
-    chrome.storage.sync.get(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS, function (items) {
+    storageManager.type.get(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS, function (items) {
         requestAnalyzer.domainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
     });
 };

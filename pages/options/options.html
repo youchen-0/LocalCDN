@@ -9,176 +9,269 @@
     </head>
     <body>
         <script src="../../core/constants.js"></script>
+        <script src="../../core/storage-manager.js"></script>
         <script src="../../modules/internal/helpers.js"></script>
+        <script src="../../modules/internal/rule-generator.js"></script>
         <script src="../../modules/internal/wrappers.js"></script>
         <script defer src="../../core/resources.js"></script>
         <script defer src="../../core/mappings.js"></script>
         <script src="options.js"></script>
-        <section class="notice notice-warning hidden" id="notice-block-missing">
-            <div class="notice-head">
-                <span data-i18n-content="blockMissingTitle"></span>
+
+        <div class="btn-group">
+            <input type="button" id="btn-general-tab" class="option-buttons option-buttons-active" data-option="general-tab" data-i18n-content="btnGeneral" value="General"/>
+            <input type="button" id="btn-advanced-tab" class="option-buttons" data-option="advanced-tab" data-i18n-content="btnAdvanced" value="Advanced"/>
+            <input type="button" id="btn-export-import-tab" class="option-buttons" data-option="export-import-tab" data-i18n-content="btnOther" value="Other"/>
+            <input type="button" id="btn-info-tab" class="option-buttons" data-option="info-tab" data-i18n-content="btnInfo" value="Info"/>
+        </div>
+
+        <div id="general-tab" class="tab-content">
+            <div class="option-group">
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="showIconBadge" type="checkbox">
+                            <span data-i18n-content="showIconBadgeTitle"></span>
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="description-option" data-i18n-content="showIconBadgeDescription"></div>
+                </section>
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="hideReleaseNotes" type="checkbox">
+                            <span data-i18n-content="hideReleaseNotesTitle">Disable release notes</span>
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="description-option" data-i18n-content="hideReleaseNotesDescription">If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.</div>
+                </section>
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="disablePrefetch" type="checkbox">
+                            <span data-i18n-content="disablePrefetchTitle"></span>
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="description-option" data-i18n-content="disablePrefetchDescription"></div>
+                </section>
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="stripMetadata" type="checkbox">
+                            <span data-i18n-content="stripMetadataTitle"></span>
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="description-option" data-i18n-content="stripMetadataDescription"></div>
+                </section>
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input id="checkbox-internal-statistics" data-option="internalStatistics" type="checkbox">
+                            <span data-i18n-content="internalStatisticsTitle">Internal statistics</span>
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <!-- TODO: Change if test successful -->
+                    <div class="description-option" data-i18n-content="internalStatisticsDescription">This function is currently in an experimental stage. No data transmission. It's all local on your device.</div>
+                </section>
             </div>
-            <div class="notice-body" dir="ltr">
-                <div class="notice-message" data-i18n-content="featureBreaksWebsitesDescription">
-                    This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains.
-                </div>
-                <div class="button button-notice button-warning" id="button-block-missing" data-i18n-content="featureBreaksWebsitesButton">
-                    Disable
-                </div>
+            <div class="option-group">
+                <section class="option">
+                    <div class="title-option without-checkbox" data-i18n-content="whitelistedDomainsTitle"></div>
+                    <input id="tf-domains-whitelist" class="input-text without-checkbox" data-option="whitelistedDomains" type="text">
+                    <div class="description-option without-checkbox" data-i18n-content="whitelistedDomainsDescription"></div>
+                </section>
             </div>
-        </section>
-        <div class="option-group">
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="showIconBadge" type="checkbox">
-                        <span data-i18n-content="showIconBadgeTitle"></span>
-                        <div class="b-input"></div>
-                    </label>
-                </div>
-                <div class="description-option" data-i18n-content="showIconBadgeDescription"></div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="blockMissing" type="checkbox">
-                        <span data-i18n-content="blockMissingTitle"></span>
-                        <div class="b-input"></div>
-                    </label>
-                    <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
-                </div>
-                <div class="description-option" data-i18n-content="blockMissingDescription"></div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="blockGoogleFonts" type="checkbox">
-                        <span data-i18n-content="blockGoogleFontsTitle">Block Google Fonts</span>
-                        <div class="b-input"></div>
-                    </label>
-                </div>
-                <div class="description-option" data-i18n-content="blockGoogleFontsDescription">If you use the rules of the rule generator, requests to "fonts.googleapis.com" are allowed to substitute "Google Material Icons" automatically. If you want to block the other requests, enable this option.</div>
-                <div id="div-domains-whitelist-google-fonts">
-                    <div class="description-option" data-i18n-content="labelDomainsWhitelistGoogleFonts">These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;).</div>
-                    <div class="description-option"><input id="tf-domains-whitelist-google-fonts" class="input-text without-checkbox" data-option="allowedDomainsGoogleFonts" type="text"></div>
-                </div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="disablePrefetch" type="checkbox">
-                        <span data-i18n-content="disablePrefetchTitle"></span>
-                        <div class="b-input"></div>
-                    </label>
-                    <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
-                </div>
-                <div class="description-option" data-i18n-content="disablePrefetchDescription"></div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="stripMetadata" type="checkbox">
-                        <span data-i18n-content="stripMetadataTitle"></span>
-                        <div class="b-input"></div>
-                    </label>
-                    <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
-                </div>
-                <div class="description-option" data-i18n-content="stripMetadataDescription"></div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="enableLogging" type="checkbox">
-                        <span data-i18n-content="loggingTitle">Enable logging in browser console</span>
-                        <div class="b-input"></div>
-                    </label>
-                </div>
-                <div class="description-option" data-i18n-content="loggingDescription">Open "Browser Console" ( CTRL + SHIFT + J ) to show missing resources</div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="hideReleaseNotes" type="checkbox">
-                        <span data-i18n-content="hideReleaseNotesTitle">Disable release notes</span>
-                        <div class="b-input"></div>
-                    </label>
-                    <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
-                </div>
-                <div class="description-option" data-i18n-content="hideReleaseNotesDescription">If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.</div>
-            </section>
-            <section id="section-icon-style" class="option">
-                <div class="title-option-select" data-i18n-content="chooseIconStyle">Choose an icon for this extension</div>
-                <div class="description-option">
-                    <select id="selected-icon" data-option="selectedIcon">
-                        <option value="Default">Default</option>
-                        <option value="Light">Light</option>
-                        <option value="Grey">Blue/Grey</option>
-                    </select>
-                </div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input id="checkbox-internal-statistics" data-option="internalStatistics" type="checkbox">
-                        <span data-i18n-content="internalStatisticsTitle">Internal statistics</span>
-                        <div class="b-input"></div>
-                    </label>
-                </div>
-                <!-- TODO: Change if test successful -->
-                <div class="description-option" data-i18n-content="internalStatisticsDescription">This function is currently in an experimental stage. No data transmission. It's all local on your device.</div>
-            </section>
         </div>
-        <div class="option-group">
-            <section class="option">
-                <div class="title-option without-checkbox" data-i18n-content="whitelistedDomainsTitle"></div>
-                <input id="tf-domains-whitelist" class="input-text without-checkbox" data-option="whitelistedDomains" type="text">
-                <div class="description-option without-checkbox" data-i18n-content="whitelistedDomainsDescription"></div>
+
+        <div id="advanced-tab" class="tab-content">
+            <section class="notice notice-warning hidden" id="notice-block-missing">
+                <div class="notice-head">
+                    <span data-i18n-content="blockMissingTitle"></span>
+                </div>
+                <div class="notice-body" dir="ltr">
+                    <div class="notice-message" data-i18n-content="featureBreaksWebsitesDescription">
+                        This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains.
+                    </div>
+                    <div class="button button-notice button-warning" id="button-block-missing" data-i18n-content="featureBreaksWebsitesButton">
+                        Disable
+                    </div>
+                </div>
             </section>
+            <div class="option-group">
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="blockMissing" type="checkbox">
+                            <span data-i18n-content="blockMissingTitle"></span>
+                            <div class="b-input"></div>
+                        </label>
+                        <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
+                    </div>
+                    <div class="description-option" data-i18n-content="blockMissingDescription"></div>
+                </section>
+                <section id="block-google-fonts" class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="blockGoogleFonts" type="checkbox">
+                            <span data-i18n-content="blockGoogleFontsTitle">Block Google Fonts</span>
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="description-option" data-i18n-content="blockGoogleFontsDescription">If you use the rules of the rule generator, requests to "fonts.googleapis.com" are allowed to substitute "Google Material Icons" automatically. If you want to block the other requests, enable this option.</div>
+                    <div id="div-domains-whitelist-google-fonts">
+                        <div class="description-option" data-i18n-content="labelDomainsWhitelistGoogleFonts">These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;).</div>
+                        <div class="description-option"><input id="tf-domains-whitelist-google-fonts" class="input-text without-checkbox" data-option="allowedDomainsGoogleFonts" type="text"></div>
+                    </div>
+                </section>
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="enableLogging" type="checkbox">
+                            <span data-i18n-content="loggingTitle">Enable logging in browser console</span>
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="description-option" data-i18n-content="loggingDescription">Open "Browser Console" ( CTRL + SHIFT + J ) to show missing resources</div>
+                </section>
+            </div>
+            <div id="html-filter-div" class="option-group">
+                <section class="option">
+                    <div id="html-filter-domains-title-exclude" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleExclude">Do not apply HTML filter to these domains:</div>
+                    <div id="html-filter-domains-title-include" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleInclude">Apply HTML filter to these domains:</div>
+                    <input id="tf-domains-manipulate-dom" class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text">
+                    <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;).</div>
+                </section>
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input data-option="negateHtmlFilterList" type="checkbox">
+                            <span data-i18n-content="negateHtmlFilterListTitle">Invert HTML filter</span>
+                            <div class="b-input"></div>
+                        </label>
+                        <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
+                    </div>
+                    <div class="description-option" data-i18n-content="negateHtmlFilterListDescription">Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list.</div>
+                </section>
+                <a id="negate-html-filter-list-warning" data-i18n-content="negateHtmlFilterListWarning">This function can break websites. Please note the information on the Wiki page.</a>
+            </div>
+            <div class="option-group">
+                <section class="option">
+                    <div class="title-option without-checkbox"><span data-i18n-content="generateRuleSetTitle">Generate rule set</span><span id="ruleset-help" class="options-help-icon"></span></div>
+                    <div class="description-option without-checkbox">
+                        <p class="without-checkbox" data-i18n-content="generateRuleSetDescription">In case you're using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker.</p>
+                    </div>
+                    <div class="ruleset-generator">
+                        <p id="last-mapping-update" class="description-option last-update without-checkbox" data-i18n-content="lastUpdate">Last update:</p>
+                    </div>
+                    <div class="ruleset-generator">
+                        <label class="b-contain" for="generate-ublock-rules">uBlock
+                            <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="ruleset-generator">
+                        <label class="b-contain" for="generate-umatrix-rules">uMatrix
+                            <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <div class="ruleset-generator">
+                        <label class="b-contain" for="generate-adguard-rules">AdGuard
+                            <input id="generate-adguard-rules" name="rule-sets" data-option="AdGuard" type="radio" value="AdGuard">
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                    <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
+                    <button id="button-copy-rule-set" value="Copy"><span data-i18n-content="copyRuleSet">Copy</span><span id="button-copy-rule-set-icon"></span></button>
+                </section>
+            </div>
         </div>
-        <div id="html-filter-div" class="option-group">
-            <section class="option">
-                <div id="html-filter-domains-title-exclude" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleExclude">Do not apply HTML filter to these domains:</div>
-                <div id="html-filter-domains-title-include" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleInclude">Apply HTML filter to these domains:</div>
-                <input id="tf-domains-manipulate-dom" class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text">
-                <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;).</div>
-            </section>
-            <section class="option">
-                <div class="title-option">
-                    <label class="b-contain">
-                        <input data-option="negateHtmlFilterList" type="checkbox">
-                        <span data-i18n-content="negateHtmlFilterListTitle">Invert HTML filter</span>
+
+        <div id="export-import-tab" class="tab-content">
+            <div id="icon-style-div" class="option-group">
+                <section id="section-icon-style" class="option">
+                    <div class="title-option without-checkbox" data-i18n-content="chooseIconStyle">Choose an icon for this extension</div>
+                    <div class="div-selected-icon">
+                        <label class="b-contain" for="icon-default">
+                            <img src="../../icons/action/default/icon32-default.png" alt="Default" class="icons">
+                            <img src="../../icons/action/default/icon32-disabled.png" alt="Default" class="icons">
+                            <input id="icon-default" name="selected-icon" type="radio" data-option="selectedIcon" value="Default">
+                            <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain" for="icon-grey">
+                            <img src="../../icons/action/grey/icon32-default.png" alt="Blue/Grey" class="icons">
+                            <img src="../../icons/action/grey/icon32-disabled.png" alt="Blue/Grey" class="icons">
+                            <input id="icon-grey" name="selected-icon" type="radio" data-option="selectedIcon" value="Grey">
+                            <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain" for="icon-light">
+                            <img src="../../icons/action/light/icon32-default.png" alt="Light" class="icons">
+                            <img src="../../icons/action/light/icon32-disabled.png" alt="Light" class="icons">
+                            <input id="icon-light" name="selected-icon" type="radio" data-option="selectedIcon" value="Light">
+                            <div class="b-input"></div>
+                        </label>
+                    </div>
+                </section>
+            </div>
+            <div class="option-group">
+                <section class="option">
+                    <div class="title-option without-checkbox"><span data-i18n-content="headerStorageType">Storage type</span><span id="sync-help" class="options-help-icon"></span></div>
+                    <label class="b-contain storage-type" for="storage-type-local"><span  data-i18n-content="labelStorageTypeLocal">Local (recommended)</span>
+                        <input id="storage-type-local" name="storage-type" data-option="storageTypeLocal" type="radio" value="local">
                         <div class="b-input"></div>
                     </label>
-                    <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
-                </div>
-                <div class="description-option" data-i18n-content="negateHtmlFilterListDescription">Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list.</div>
-            </section>
-            <a id="negate-html-filter-list-warning" data-i18n-content="negateHtmlFilterListWarning">This function can break websites. Please note the information on the Wiki page.</a>
+                    <label class="b-contain storage-type" for="storage-type-sync"><span data-i18n-content="labelStorageTypeSync">Sync</span>
+                        <input id="storage-type-sync" name="storage-type" data-option="storageTypeSync" type="radio" value="sync">
+                        <div class="b-input"></div>
+                    </label>
+                </section>
+                <section class="option">
+                    <div class="title-option without-checkbox" data-i18n-content="headerImportExport">Import/Export</div>
+                    <div class="import-export">
+                        <input type="button" id="import-data" value="Import Data" data-i18n-content="labelImportData"/>
+                        <input type="button" id="export-data" value="Export Data" data-i18n-content="labelExportData"/>
+                        <div class="hidden">
+                            <input id="import-file-picker" type="file" accept="text/plain">
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-        <div class="option-group">
-            <section class="option">
-                <div class="title-option without-checkbox"><span data-i18n-content="generateRuleSetTitle">Generate rule set</span><span id="ruleset-help-icon"></span></div>
-                <div class="description-option without-checkbox">
-                    <p class="without-checkbox" data-i18n-content="generateRuleSetDescription">In case you're using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix.</p>
-                </div>
-                <div class="ruleset-generator">
-                    <p id="last-mapping-update" class="description-option last-update without-checkbox" data-i18n-content="lastUpdate">Last update:</p>
-                </div>
-                <div class="ruleset-generator">
-                    <label class="b-contain" for="generate-ublock-rules">uBlock
-                        <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
-                        <div class="b-input"></div>
-                    </label>
-                </div>
-                <div class="ruleset-generator">
-                    <label class="b-contain" for="generate-umatrix-rules">uMatrix
-                        <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
-                        <div class="b-input"></div>
-                    </label>
-                </div>
-                <textarea rows="12" cols="15" id="generated-rules" readonly></textarea>
-                <button id="button-copy-rule-set" value="Copy"><span data-i18n-content="copyRuleSet">Copy</span><span id="button-copy-rule-set-icon"></span></button>
-            </section>
+
+        <div id="info-tab" class="tab-content">
+            <div class="option-group">
+                <section class="option info">
+                    <div>
+                        <input type="button" id="cdn"/>
+                        <input type="button" id="framework"/>
+                    </div>
+                    <ul id="unsupported-frameworks">
+                        <li>Font Awesome are not supported by your browser</li>
+                        <li>Google Material Icons are not supported by your browser</li>
+                    </ul>
+                    <textarea rows="12" cols="15" id="generated-list" readonly></textarea>
+                </section>
+            </div>
+            <div class="option-group">
+                <section class="option">
+                    <ul class="option-links">
+                        <li><a id="link-welcome-page" class="no-icon">Welcome page (In-App)</a></li>
+                        <li><a id="link-changelog" class="no-icon">Changelog (In-App)</a></li>
+                        <li><a id="link-donate" class="no-icon">Donate (In-App)</a></li>
+                        <li><a id="link-faq" class="no-icon">FAQ (In-App)</a></li>
+                        <li><a id="link-statistic" class="no-icon"><span data-i18n-content="internalStatisticsTitle">Statistics</span> <span>(In-App)</span></a></li><br>
+                        <li><a id="link-codeberg" href="https://codeberg.org/nobody/LocalCDN" target="_blank" rel="nofollow noopener noreferrer">Source (www.codeberg.org)</a></li>
+                        <li><a id="link-website" href="https://www.localcdn.org" target="_blank" rel="nofollow noopener noreferrer">Website (www.localcdn.org)</a></li>
+                        <li><a id="link-website-test" href="https://www.localcdn.org/test" target="_blank" rel="nofollow noopener noreferrer">Testing Utility (www.localcdn.org/test)</a></li>
+                        <li><a id="link-translate" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank" rel="nofollow noopener noreferrer">Translate (www.weblate.org)</a></li>
+                        <li><a id="link-translate" href="https://www.localcdn.org/thanks" target="_blank" rel="nofollow noopener noreferrer">Credits (www.localcdn.org)</a></li>
+                    </ul>
+                </section>
+            </div>
         </div>
         <section class="notice notice-default hidden" id="notice-locale">
             <div class="notice-body" dir="ltr">
@@ -190,18 +283,6 @@
                 </a>
             </div>
         </section>
-        <div class="option-links-div">
-            <ul class="option-links">
-                <li><a id="link-welcome-page" class="no-icon">Welcome page (In-App)</a></li>
-                <li><a id="link-changelog" class="no-icon">Changelog (In-App)</a></li>
-                <li><a id="link-donate" class="no-icon">Donate (In-App)</a></li>
-                <li><a id="link-faq" class="no-icon">FAQ (In-App)</a></li>
-                <li><a id="link-statistic" class="no-icon"><span data-i18n-content="internalStatisticsTitle">Statistics</span> <span>(In-App)</span></a></li><br>
-                <li><a id="link-codeberg" href="https://codeberg.org/nobody/LocalCDN" target="_blank" rel="nofollow noopener noreferrer">Source (www.codeberg.org)</a></li>
-                <li><a id="link-website" href="https://www.localcdn.org" target="_blank" rel="nofollow noopener noreferrer">Website (www.localcdn.org)</a></li>
-                <li><a id="link-website-test" href="https://www.localcdn.org/test" target="_blank" rel="nofollow noopener noreferrer">Testing Utility (www.localcdn.org/test)</a></li>
-                <li><a id="link-translate" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank" rel="nofollow noopener noreferrer">Translate (www.weblate.org)</a></li>
-            </ul>
-        </div>
+        <p class="footer">LocalCDN v<span id="label-version"></span></p>
     </body>
 </html>

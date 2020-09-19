@@ -57,11 +57,11 @@
     },
     "generateRuleSetTitle": {
         "message": "Generer regelsett for uBlock eller uMatrix",
-        "description": "Generate rule set title"
+        "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
         "message": "I tilfelle du bruker uBlock Origin eller uMatrix kan reglene genereres her. Reglene må legges til manuelt i uBlock Origin eller uMatrix.",
-        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
         "message": "Siste oppdatering:",
@@ -85,7 +85,7 @@
     },
     "hideReleaseNotesDescription": {
         "message": "Slå på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for uBlock/uMatrix.",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt hviteliste berørte domener.",
@@ -184,7 +184,55 @@
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Disse domenene tillates å laste Google Fonts. Skill flere oppføringer med semikolon (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+    },
+    "btnGeneral": {
+        "message": "Generelt",
+        "description": "Basic"
+    },
+    "btnAdvanced": {
+        "message": "Avansert",
+        "description": "Advanced"
+    },
+    "btnOther": {
+        "message": "Annet",
+        "description": "Other"
+    },
+    "btnInfo": {
+        "message": "Info",
+        "description": "Info"
+    },
+    "headerStorageType": {
+        "message": "Lagringstype",
+        "description": "Storage type"
+    },
+    "labelStorageTypeLocal": {
+        "message": "Lokal",
+        "description": "Local"
+    },
+    "labelStorageTypeSync": {
+        "message": "Synkronisert",
+        "description": "Sync"
+    },
+    "headerImportExport": {
+        "message": "Import/Eksport",
+        "description": "Import/Export"
+    },
+    "labelExportData": {
+        "message": "Sikkerhetskopier til fil",
+        "description": "Back up to file"
+    },
+    "labelImportData": {
+        "message": "Gjenopprett fra fil",
+        "description": "Restore from file"
+    },
+    "dialogImportSuccessful": {
+        "message": "Import vellykket",
+        "description": "Import successful"
+    },
+    "dialogImportFailed": {
+        "message": "Import mislyktes",
+        "description": "Import failed"
     }
 }

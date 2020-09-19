@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "Protege contra el rastreo con la entrega centralizada y «gratuita» de contenido.",
+        "message": "Le protege contra el rastreo mediante la entrega de contenido centralizado y «gratuito».",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "Cantidad de recursos inyectados de Redes de Entrega de Contenido desde la instalación.",
+        "message": "Número de recursos inyectados de Redes de Entrega de Contenido desde la instalación.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -12,7 +12,7 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Mostrar la cantidad de inyecciones en el icono",
+        "message": "Mostrar el número de inyecciones en el icono",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
@@ -28,7 +28,7 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Deshabilitar la captura previa de enlaces",
+        "message": "Deshabilitar la precarga de enlaces",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
@@ -40,11 +40,11 @@
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Borra los datos sensibles de solicitudes-CDN permitidas para mejorar la privacidad.",
+        "message": "Borra los datos sensibles de las solicitudes a las CDN permitidas para mejorar la privacidad.",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Desactivar LocalCDN para estos dominios:",
+        "message": "Desactivar LocalCDN en estos dominios:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -57,11 +57,11 @@
     },
     "generateRuleSetTitle": {
         "message": "Generar el conjunto de reglas para uBlock o uMatrix",
-        "description": "Generate rule set title"
+        "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Si usas uBlock Origin o uMatrix aquí puedes generar las reglas. Tienes que añadir las reglas manualmente en uBlock Origin o uMatrix.",
-        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
+        "message": "Si usa uBlock Origin o uMatrix, aquí puede generar las reglas. Tiene que añadir las reglas manualmente en uBlock Origin o uMatrix.",
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
         "message": "Última actualización:",
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Habilitar el inicio de sesión en la consola del navegador",
+        "message": "Habilitar los mensajes de registro en la consola del navegador",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Abre la \"Consola del Navegador\" ( CTRL + SHIFT + J ) mostrando los recursos que faltan.",
+        "message": "Abra la \"Consola del navegador\" ( CTRL + MAYÚSCULAS + J ) para que se muestren los recursos que faltan.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -85,10 +85,10 @@
     },
     "hideReleaseNotesDescription": {
         "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas de uBlock Origin/uMatrix.",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Esta característica rompe sitios web. No la deje habilitada, a menos que manualmente incluya en la lista blanca cualquier dominio afectado.",
+        "message": "Esta característica rompe sitios web. No la deje habilitada, a menos que esté dispuesto a añadir manualmente a la lista blanca cualquier dominio afectado.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
@@ -96,7 +96,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtrar código fuente HTML",
+        "message": "Filtrar el código fuente HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -112,7 +112,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Esta función puede romper sitios web. Por favor, tenga en cuenta la información de la página Wiki.",
+        "message": "Esta función puede romper sitios web. Por favor, tenga en cuenta la información en las páginas de la Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -124,7 +124,7 @@
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "Aplicar el filtro HTML para estos dominios:",
+        "message": "Aplicar el filtro HTML en estos dominios:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
@@ -144,7 +144,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Esta función se encuentra actualmente en estado experimental. Sin transmisión de datos. Todo es local en tu dispositivo.",
+        "message": "Esta función se encuentra actualmente en fase experimental. No hay transmisión de datos. Todo se hace en su dispositivo.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -156,15 +156,15 @@
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "Hace una semana",
+        "message": "La última semana",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "Hace un mes",
+        "message": "El último mes",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "Hace un año",
+        "message": "El último año",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
@@ -176,15 +176,63 @@
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "Frameworks reemplazados",
+        "message": "«Frameworks» reemplazados",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "¿Está seguro que quiere eliminar las estadísticas?",
+        "message": "¿Está seguro de querer borrar las estadísticas?",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Estos dominios tienen permitido cargar fuentes de Google. Separe las entradas múltiples con punto y coma (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+    },
+    "btnGeneral": {
+        "message": "Básico",
+        "description": "Basic"
+    },
+    "btnAdvanced": {
+        "message": "Avanzado",
+        "description": "Advanced"
+    },
+    "btnOther": {
+        "message": "Otro",
+        "description": "Other"
+    },
+    "btnInfo": {
+        "message": "Información",
+        "description": "Info"
+    },
+    "headerStorageType": {
+        "message": "Tipo de almacenamiento",
+        "description": "Storage type"
+    },
+    "labelStorageTypeLocal": {
+        "message": "Local",
+        "description": "Local"
+    },
+    "labelStorageTypeSync": {
+        "message": "Sincronizar",
+        "description": "Sync"
+    },
+    "headerImportExport": {
+        "message": "Importar/Exportar",
+        "description": "Import/Export"
+    },
+    "labelExportData": {
+        "message": "Respaldar en archivo",
+        "description": "Back up to file"
+    },
+    "labelImportData": {
+        "message": "Restaurar desde un archivo",
+        "description": "Restore from file"
+    },
+    "dialogImportSuccessful": {
+        "message": "Importación exitosa",
+        "description": "Import successful"
+    },
+    "dialogImportFailed": {
+        "message": "Importación fallida",
+        "description": "Import failed"
     }
 }

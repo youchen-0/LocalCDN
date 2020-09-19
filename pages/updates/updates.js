@@ -24,40 +24,6 @@ var updates = {};
 /**
  * Private Methods
  */
-updates._openRuleSet = function ({ target }) {
-    let urls = mappings;
-    let updateKey = target.getAttribute('data-option');
-
-    let textArea = document.getElementById('generated-rules');
-    let btnCopy = document.getElementById('button-copy-rule-set');
-
-    let content = '';
-
-    textArea.style.display = 'block';
-    btnCopy.style.display = 'block';
-
-    for (var domain in urls) {
-        if (updateKey === 'uMatrix') {
-            content += '* ' + domain + ' script allow' + '\n';
-            content += '* ' + domain + ' css allow' + '\n';
-        } else if (updateKey === 'uBlock') {
-            content += '* ' + domain + ' * noop' + '\n';
-        }
-    }
-    textArea.value = content.replace(/\n+$/, '');
-};
-
-updates._copyRuleSet = function () {
-    let textArea = document.getElementById('generated-rules');
-    navigator.clipboard.writeText(textArea.value).then(
-        function () {
-            textArea.select();
-        },
-        function () {
-            alert('Rule set cannot be copied!');
-        }
-    );
-};
 
 updates._openHistoryReleaseNotes = function () {
     let container = document.getElementById('history-release-notes');
@@ -73,6 +39,11 @@ updates._openHistoryReleaseNotes = function () {
 };
 
 updates._onDocumentLoaded = function () {
+    // ********************************************************************************
+    // TODO: Remove me in v2.4.1
+    document.getElementById('export').addEventListener('click', updates._export);
+    // ********************************************************************************
+
     document.getElementById('generate-ublock-rules').checked = false;
     document.getElementById('generate-umatrix-rules').checked = false;
 
@@ -82,10 +53,10 @@ updates._onDocumentLoaded = function () {
     };
 
     for (let i = 0; i < updateElements.ruleSets.length; i++) {
-        updateElements.ruleSets[i].addEventListener('change', updates._openRuleSet);
+        updateElements.ruleSets[i].addEventListener('change', ruleGenerator.openRuleSet);
     }
 
-    updateElements.copyRuleSet.addEventListener('click', updates._copyRuleSet);
+    updateElements.copyRuleSet.addEventListener('click', ruleGenerator.copyRuleSet);
 
     document.getElementById('history').addEventListener('click', updates._openHistoryReleaseNotes);
 
@@ -95,5 +66,21 @@ updates._onDocumentLoaded = function () {
         document.getElementById('generator-section').style.display = 'block';
     }
 };
+// ********************************************************************************
+// TODO: Remove me in v2.4.1
+updates._export = function () {
+    let filename = new Date().toISOString();
+    filename = filename.substring(0, 10) + '_localcdn_backup.txt';
 
+    chrome.storage.sync.get(null, function (items) {
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(items, null, '  ')));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    });
+};
+// ********************************************************************************
 document.addEventListener('DOMContentLoaded', updates._onDocumentLoaded);

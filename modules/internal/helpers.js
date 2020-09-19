@@ -224,6 +224,8 @@ helpers.determineCdnName = function (domainName) {
             return 'PageCDN';
         case 'fonts.googleapis.com':
             return 'Google Fonts';
+        case 'gitcdn.github.io':
+            return 'GitHub';
         default:
             return 'Unknown';
     }
@@ -243,6 +245,8 @@ helpers.determineBundle = function (path = '') {
         return 'Bootstrap Datepicker';
     } else if (path.includes('/jquery.lazy/')) {
         return 'jQuery Lazy';
+    } else if (path.includes('/waypoints/')) {
+        return 'Waypoints';
     } else {
         return '';
     }
@@ -289,11 +293,15 @@ helpers.setLastVersion = function (type, version) {
     }
     if (type.includes('/algoliasearch/3.')) {
         return '3.35.1';
+    } else if (type.includes('/anchor-js/3.')) {
+        return '3.2.2';
+    } else if (type.includes('/anchor-js/4.')) {
+        return '4.2.2';
     } else if (type.includes('/angularjs/1.')) {
         if (helpers.compareVersion('1.2.19', version)) return '1.2.19'; // <= v1.2.19
         else if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
-        else if (helpers.compareVersion('1.3.13', version)) return '1.3.13'; // > 1.2.32 to <= 1.3.13
-        else if (helpers.compareVersion('1.4.14', version)) return '1.4.14'; // > 1.3.13 to <= 1.4.14
+        else if (helpers.compareVersion('1.3.20', version)) return '1.3.20'; // > 1.2.32 to <= 1.3.20
+        else if (helpers.compareVersion('1.4.14', version)) return '1.4.14'; // > 1.3.20 to <= 1.4.14
         else if (helpers.compareVersion('1.5.11', version)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
         else if (helpers.compareVersion('1.6.10', version)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
         else return '1.7.9'; // >= 1.6.11
@@ -330,19 +338,25 @@ helpers.setLastVersion = function (type, version) {
         return '0.37.1';
     } else if (type.includes('/angular-material/1.')) {
         return '1.1.21';
+    } else if (type.includes('/angular-material/0.')) {
+        return '1.1.21';
+    } else if (type.includes('/angular-translate/2.')) {
+        return '2.7.2';
+    } else if (type.includes('/angular-translate-loader-static-files/2.')) {
+        return '2.7.2';
+    } else if (type.includes('/angular-translate-interpolation-messageformat/2.')) {
+        return '2.7.2';
     } else if (type.includes('/backbone.js/0.')) {
         return '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
         return '1.4.0';
+    } else if (type.includes('/baguettebox.js/1.')) {
+        return '1.11.1';
     } else if (type.includes('/bootbox.js/4.')) {
         return '4.4.0';
-    } else if (type.includes('/bootstrap.js/3.')) {
+    } else if (type.includes('/bootstrap/3.')) {
         return '3.3.7';
-    } else if (type.includes('/bootstrap.js/4.')) {
-        return '4.5.0';
-    } else if (type.includes('/bootstrap.css/3.')) {
-        return '3.3.7';
-    } else if (type.includes('/bootstrap.css/4.')) {
+    } else if (type.includes('/bootstrap/4.')) {
         return '4.5.0';
     } else if (type.includes('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
@@ -352,6 +366,8 @@ helpers.setLastVersion = function (type, version) {
         return '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
         return '1.13.17';
+    } else if (type.includes('/bootstrap-toggle/2.')) {
+        return '2.2.2';
     } else if (type.includes('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
     } else if (type.includes('/Chart.js/2.')) {
@@ -413,6 +429,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.70';
     } else if (type.includes('/jquery-csv/1.')) {
         return '1.0.9';
+    } else if (type.includes('/jquery-easing/1.')) {
+        return '1.4.1';
     } else if (type.includes('/jquery.lazyload/1.')) {
         return '1.9.1';
     } else if (type.includes('/jquery.lazy/1.')) {
@@ -445,6 +463,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.7.53';
     } else if (type.includes('/lodash.js/4.')) {
         return '4.17.10';
+    } else if (type.includes('/lodash.js/3.')) {
+        return '3.10.1';
     } else if (type.includes('lozad')) {
         return '1.14.0';
     } else if (type.includes('/mdbootstrap/4.')) {
@@ -465,7 +485,7 @@ helpers.setLastVersion = function (type, version) {
         return '1.1.0';
     } else if (type.includes('/owl-carousel/1.')) {
         return '1.3.3';
-    } else if (type.includes('p2p-media-loader-core')) {
+    } else if (type.includes('p2p-media-loader-core') || type.includes('p2p-media-loader-hlsjs')) {
         return '0.6.2';
     } else if (type.includes('/page.js/1.')) {
         return '1.7.1';
@@ -473,6 +493,8 @@ helpers.setLastVersion = function (type, version) {
         return '3.5.10';
     } else if (type.includes('/popper.js/1.')) {
         return '1.16.1';
+    } else if (type.includes('/popper.js/2.')) {
+        return '2.4.4';
     } else if (type.includes('/prototype/1.')) {
         return '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {
@@ -495,6 +517,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.11.2';
     } else if (type.includes('/slick-carousel/1.')) {
         return '1.9.0';
+    } else if (type.includes('/slick-lightbox/0.')) {
+        return '0.2.12';
     } else if (type.includes('/socket.io/2.')) {
         return '2.3.0';
     } else if (type.includes('/spin.js/2.')) {
@@ -529,14 +553,16 @@ helpers.setLastVersion = function (type, version) {
         return '1.1.1';
     } else if (type.includes('/vanilla-lazyload')) {
         return '17.1.0';
+    } else if (type.includes('/videojs-seek-buttons/')) {
+        return '1.6.0';
     } else if (type.includes('/vue/1.')) {
         return '1.0.28';
     } else if (type.includes('/vue/2.')) {
         return '2.6.12';
     } else if (type.includes('/vue-resource/1.')) {
         return '1.5.1';
-    } else if (type.includes('/waypoints/4.') && type.includes('jquery.waypoints')) {
-        return '4.0.0';
+    } else if (type.includes('/waypoints/4.')) {
+        return '4.0.1';
     } else if (type.includes('webfont')) {
         return '1.6.28';
     } else if (type.includes('/webrtc-adapter/6.')) {
@@ -567,6 +593,29 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'slick-lightbox.css': 'slick-lightbox CSS',
+    'slick-lightbox.min.jsm': 'slick-lightbox JS',
+    'noframework.waypoints.min.jsm': 'Waypoints (Bundle)',
+    'jquery.waypoints.min.jsm': 'Waypoints (Bundle)',
+    'waypoints.debug.jsm': 'Waypoints (Bundle)',
+    'zepto.waypoints.min.jsm': 'Waypoints (Bundle)',
+    'shortcuts/infinite.min.jsm': 'Waypoints (Bundle)',
+    'shortcuts/inview.min.jsm': 'Waypoints (Bundle)',
+    'shortcuts/sticky.min.jsm': 'Waypoints (Bundle)',
+    'angular-translate.min.jsm': 'Angular Translate',
+    'angular-translate-interpolation-messageformat.min.jsm': 'Angular Translate Interpolation Messageformat',
+    'angular-translate-loader-static-files.min.jsm': 'Angular Translate Load Static Files',
+    'anchor.min.jsm': 'AnchorJS',
+    'jquery.easing.min.jsm': 'jQuery Easing Plugin',
+    'baguetteBox.min.jsm': 'baguetteBox.js (JS)',
+    'baguetteBox.min.css': 'baguetteBox.js (CSS)',
+    'videojs-seek-buttons.min.css': 'Videojs seek buttons (CSS)',
+    'videojs-seek-buttons.min.jsm': 'Videojs seek buttons (JS)',
+    'p2p-media-loader-hlsjs.min.jsm': 'P2P Media Loader Hls.js',
+    'bootstrap-toggle.min.jsm': 'Bootstrap Toggle (JS)',
+    'bootstrap2-toggle.min.jsm': 'Bootstrap2 Toggle (JS)',
+    'bootstrap-toggle.min.css': 'Bootstrap Toggle (CSS)',
+    'bootstrap2-toggle.min.css': 'Bootstrap2 Toggle (CSS)',
     'vue-resource.min.jsm': 'vue-resource',
     'jquery.lazy.min.jsm': 'jQuery Lazy (Bundle)',
     'jquery.lazy.plugins.min.jsm': 'jQuery Lazy (Bundle)',
@@ -590,7 +639,6 @@ const ListOfFiles = {
     'owl.theme.min.css': 'OwlCarousel (CSS Theme)',
     'owl.carousel.min.css': 'OwlCarousel (CSS)',
     'owl.carousel.min.jsm': 'OwlCarousel (JS)',
-    'jquery.waypoints.min.jsm': 'Waypoints (jQuery)',
     'bootstrap-datepicker3.standalone.min.css': 'Bootstrap Datepicker 3 (CSS)',
     'jets.min.jsm': 'Jets.js',
     'lazyload.min.jsm': 'Vanilla Lazyload',
@@ -613,7 +661,7 @@ const ListOfFiles = {
     'algoliasearch.min.jsm': 'AlgoliaSearch',
     'algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm': 'jsDelivr combined',
     'all.min.css': 'Font Awesome (CSS)',
-    'all.min.js': 'Font Awesome (JS)',
+    'all.min.jsm': 'Font Awesome (JS)',
     'angucomplete-alt.min.jsm': 'AngulComplete',
     'angular-animate.min.jsm': 'AngularJS Animate',
     'angular-aria.min.jsm': 'AngularJS Aria',
@@ -707,7 +755,7 @@ const ListOfFiles = {
     'store.legacy.min.jsm': 'Store.js',
     'swfobject.jsm': 'SWFObject',
     'swiper.min.css': 'Swiper (CSS)',
-    'swiper.min.js': 'Swiper (JS)',
+    'swiper.min.jsm': 'Swiper (JS)',
     'tether.min.jsm': 'Tether (JS)',
     'toaster.min.css': 'AngularJS Toaster (CSS)',
     'toaster.min.jsm': 'AngularJS Toaster (JS)',

@@ -26,13 +26,12 @@ var resources = {
 
     // AlgoliaSearch
     'algoliaSearch': {
-        'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
+        'path': 'resources/algoliasearch/{version}/algoliasearch.min.jsm',
         'type': 'application/javascript'
     },
-    // TEMPORARY SOLUTION
-    // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
-    'algoliasearchSearchlightHelper': {
-        'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+    // AnchorJS
+    'anchorJS': {
+        'path': 'resources/anchor-js/{version}/anchor.min.jsm',
         'type': 'application/javascript'
     },
     // AnguComplete
@@ -89,6 +88,7 @@ var resources = {
     	'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
     	'type': 'application/javascript'
     },
+    // angularMaterialDesign
     'angularMaterialDesignJS': {
     	'path': 'resources/angular-material/{version}/angular-material.min.jsm',
     	'type': 'application/javascript'
@@ -154,6 +154,19 @@ var resources = {
         'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
         'type': 'application/javascript'
     },
+    // Angular Translate
+    'angularTranslate': {
+        'path': 'resources/angular-translate/{version}/angular-translate.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularTranslateInterpolationMessageformat': {
+        'path': 'resources/angular-translate/{version}/angular-translate-interpolation-messageformat.min.jsm',
+        'type': 'application/javascript'
+    },
+    'angularTranslateLoaderStaticFiles': {
+        'path': 'resources/angular-translate/{version}/angular-translate-loader-static-files.min.jsm',
+        'type': 'application/javascript'
+    },
     // Animate CSS
     'animateCSS': {
         'path': 'resources/animate.css/{version}/animate.min.css',
@@ -169,19 +182,27 @@ var resources = {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
         'type': 'application/javascript'
     },
+    // baguetteBox.js
+    'baguetteBoxJS': {
+        'path': 'resources/baguettebox.js/{version}/baguetteBox.min.jsm',
+        'type': 'application/javascript'
+    },
+    'baguetteBoxCSS': {
+        'path': 'resources/baguettebox.js/{version}/baguetteBox.min.css',
+        'type': 'text/css'
+    },
     // BootboxJS
     'bootbox': {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',
         'type': 'application/javascript'
     },
-    // Bootstrap.js
+    // Bootstrap
     'bootstrapJS': {
-        'path': 'resources/bootstrap.js/{version}/bootstrap.min.jsm',
+        'path': 'resources/bootstrap/{version}/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
-    // Bootstrap.css
     'bootstrapCSS': {
-        'path': 'resources/bootstrap.css/{version}/bootstrap.min.css',
+        'path': 'resources/bootstrap/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
     // Bootstrap Daterangepicker
@@ -211,6 +232,23 @@ var resources = {
     'bootstrapSliderJS': {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.jsm',
         'type': 'application/javascript'
+    },
+    // Bootstrap Toggle
+    'bootstrapToggleJS': {
+        'path': 'resources/bootstrap-toggle/{version}/js/bootstrap-toggle.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrap2ToggleJS': {
+        'path': 'resources/bootstrap-toggle/{version}/js/bootstrap2-toggle.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrapToggleCSS': {
+        'path': 'resources/bootstrap-toggle/{version}/css/bootstrap-toggle.min.css',
+        'type': 'text/css'
+    },
+    'bootstrap2ToggleCSS': {
+        'path': 'resources/bootstrap-toggle/{version}/css/bootstrap2-toggle.min.css',
+        'type': 'text/css'
     },
     // Bootstrap 3 Typeahead
     'bootstrap3Typeahead': {
@@ -284,13 +322,11 @@ var resources = {
         'path': 'resources/flv.js/{version}/flv.min.jsm',
         'type': 'application/javascript'
     },
-
     // Font Awesome
     'fontawesome': {
         'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
         'type': 'text/css'
     },
-    // Font Awesome
     'fontawesome5CSS': {
         'path': 'resources/fontawesome/{version}/css/all.min.css',
         'type': 'text/css'
@@ -321,7 +357,7 @@ var resources = {
     },
     // jQuery Ajax AutoComplete
     'jQueryAjaxAutoComplete': {
-        'path': 'resources/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.jsm',
+        'path': 'resources/jquery.devbridge-autocomplete/{version}/jquery.autocomplete.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery
@@ -336,7 +372,12 @@ var resources = {
     },
     // jQuery-csv
     'jQueryCSV': {
-        'path': 'resources/jquery-csv/1.0.9/jquery.csv.min.jsm',
+        'path': 'resources/jquery-csv/{version}/jquery.csv.min.jsm',
+        'type': 'application/javascript'
+    },
+    // jQuery Easing Plugin
+    'jQueryEasing': {
+        'path': 'resources/jquery-easing/{version}/jquery.easing.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery Lazy Load
@@ -383,15 +424,14 @@ var resources = {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm',
         'type': 'application/javascript'
     },
+    'jQueryUiThemes': {
+        'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
+        'type': 'text/css'
+    },
     // jScrollPane
     'jScrollPane': {
         'path': 'resources/jScrollPane/{version}/jquery.jscrollpane.min.jsm',
         'type': 'application/javascript'
-    },
-    // jQuery UI Themes
-    'jQueryUiThemes': {
-        'path': 'resources/jqueryui/{version}/themes/base/minified/jquery-ui.min.css',
-        'type': 'text/css'
     },
     // jQuery URLive
     'jqueryURLive': {
@@ -511,6 +551,11 @@ var resources = {
         'path': 'resources/p2p-media-loader-core/{version}/p2p-media-loader-core.min.jsm',
         'type': 'application/javascript'
     },
+    // P2P Media Loader Hls.js
+    'p2pMediaLoaderHlsJS': {
+        'path': 'resources/p2p-media-loader-hlsjs/{version}/p2p-media-loader-hlsjs.min.jsm',
+        'type': 'application/javascript'
+    },
     // page.js
     'pageJs': {
         'path': 'resources/page.js/{version}/page.min.jsm',
@@ -533,7 +578,7 @@ var resources = {
     },
     // Raven.js
     'ravenJS': {
-        'path': 'resources/raven/{version}/raven.min.jsm',
+        'path': 'resources/raven.js/{version}/raven.min.jsm',
         'type': 'application/javascript'
     },
     'ravenPluginAngularJS': {
@@ -542,12 +587,12 @@ var resources = {
     },
     // React
     'react': {
-        'path': 'resources/react/16.13.1/umd/react.production.min.jsm',
+        'path': 'resources/react/{version}/umd/react.production.min.jsm',
         'type': 'application/javascript'
     },
     // ReactDOM
     'reactDOM': {
-        'path': 'resources/react-dom/16.13.1/umd/react-dom.production.min.jsm',
+        'path': 'resources/react-dom/{version}/umd/react-dom.production.min.jsm',
         'type': 'application/javascript'
     },
     // rickshaw
@@ -601,6 +646,15 @@ var resources = {
         'path': 'resources/slick-carousel/{version}/slick.min.css',
         'type': 'text/css'
     },
+    // slick-lightbox
+    'slickLightboxJS': {
+        'path': 'resources/slick-lightbox/{version}/slick-lightbox.min.jsm',
+        'type': 'application/javascript'
+    },
+    'slickLightboxCSS': {
+        'path': 'resources/slick-lightbox/{version}/slick-lightbox.css',
+        'type': 'text/css'
+    },
     // socket.io
     'socketIO': {
         'path': 'resources/socket.io/{version}/socket.io.jsm',
@@ -640,22 +694,20 @@ var resources = {
         'path': 'resources/tether/{version}/js/tether.min.jsm',
         'type': 'application/javascript'
     },
-    // Twitter Bootstrap JS
+    // Twitter Bootstrap
     'twitterBootstrapJS': {
         'path': 'resources/twitter-bootstrap/{version}/js/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
-    // Twitter Bootstrap CSS
     'twitterBootstrapCSS': {
         'path': 'resources/twitter-bootstrap/{version}/css/bootstrap.min.css',
         'type': 'text/css'
     },
-    // toastr.js
+    // toastr
     'toastrCSS': {
         'path': 'resources/toastr.js/{version}/toastr.min.css',
         'type': 'text/css'
     },
-    // toastr.js
     'toastrJS': {
         'path': 'resources/toastr.js/{version}/toastr.min.jsm',
         'type': 'application/javascript'
@@ -672,8 +724,17 @@ var resources = {
     },
     // vanilla-lazyload
     'vanillaLazyload': {
-        'path': 'resources/vanilla-lazyload/17.1.0/lazyload.min.jsm',
+        'path': 'resources/vanilla-lazyload/{version}/lazyload.min.jsm',
         'type': 'application/javascript'
+    },
+    // videojs-seek-buttons
+    'videojsSeekButtonsJS': {
+        'path': 'resources/videojs-seek-buttons/{version}/videojs-seek-buttons.min.jsm',
+        'type': 'application/javascript'
+    },
+    'videojsSeekButtonsCSS': {
+        'path': 'resources/videojs-seek-buttons/{version}/videojs-seek-buttons.min.css',
+        'type': 'text/css'
     },
     // Vue.js
     'vueJs': {
@@ -685,9 +746,9 @@ var resources = {
         'path': 'resources/vue-resource/{version}/vue-resource.min.jsm',
         'type': 'application/javascript'
     },
-    // Waypoints (jQuery)
+    // Waypoints (bundle)
     'jQueryWaypoints': {
-        'path': 'resources/waypoints/{version}/jquery.waypoints.min.jsm',
+        'path': 'resources/waypoints/{version}/',
         'type': 'application/javascript'
     },
     // WebComponents.js
@@ -716,6 +777,16 @@ var resources = {
     // WOW
     'wow': {
         'path': 'resources/wow/{version}/wow.min.jsm',
+        'type': 'application/javascript'
+    },
+    // algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+    'algoliasearchSearchlightHelper': {
+        'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
+        'type': 'application/javascript'
+    },
+    // jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm (in shorthands.js)
+    'jsdelivrCombineJqueryHoganAlgoliasearchAutocomplete': {
+        'path': 'resources/jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.jsm',
         'type': 'application/javascript'
     }
 };

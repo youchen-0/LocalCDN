@@ -27,7 +27,7 @@
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-var lastMappingUpdate = "2020-08-09";
+var lastMappingUpdate = "2020-08-24";
 
 var mappings = {
 
@@ -87,6 +87,7 @@ var mappings = {
         '/ajax/libs/': {
             'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
             'algoliasearch/{version}/algoliasearch.': resources.algoliaSearch,
+            'anchor-js/{version}/anchor.': resources.anchorJS,
             'angucomplete-alt/{version}/angucomplete-alt.': resources.anguComplete,
             'angular-bootstrap-colorpicker/{version}/css/colorpicker.': resources.angularBootstrapColorpickerCSS,
             'angular-bootstrap-colorpicker/{version}/js/bootstrap-colorpicker-module.': resources.angularBootstrapColorpickerJS,
@@ -109,6 +110,16 @@ var mappings = {
             'angular.js/{version}/angular-sanitize.': resources.angularSanitize,
             'angular.js/{version}/angular-touch.': resources.angularTouch,
             'angular.js/{version}/angular.': resources.angular,
+            'angular-material/{version}/angular-material.min.css': resources.angularMaterialDesignCSS,
+            'angular-material/{version}/angular-material.css': resources.angularMaterialDesignCSS,
+            'angular-material/{version}/angular-material.min.js': resources.angularMaterialDesignJS,
+            'angular-material/{version}/angular-material.js': resources.angularMaterialDesignJS,
+            'angular-translate/{version}/angular-translate.min.js': resources.angularTranslate,
+            'angular-translate/{version}/angular-translate.js': resources.angularTranslate,
+            'angular-translate-loader-static-files/{version}/angular-translate-loader-static-files.min.js': resources.angularTranslateLoaderStaticFiles,
+            'angular-translate-loader-static-files/{version}/angular-translate-loader-static-files.js': resources.angularTranslateLoaderStaticFiles,
+            'angular-translate-interpolation-messageformat/{version}/angular-translate-interpolation-messageformat.min.js': resources.angularTranslateInterpolationMessageformat,
+            'angular-translate-interpolation-messageformat/{version}/angular-translate-interpolation-messageformat.js': resources.angularTranslateInterpolationMessageformat,
             'angularjs-toaster/{version}/toaster.min.css': resources.angularJsToasterCSS,
             'angularjs-toaster/{version}/toaster.min.js': resources.angularJsToasterJS,
             'angularjs-toaster/{version}/toaster.css': resources.angularJsToasterCSS,
@@ -117,6 +128,10 @@ var mappings = {
             'animate.css/{version}/animate.': resources.animateCSS,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
+            'baguettebox.js/{version}/baguetteBox.js': resources.baguetteBoxJS,
+            'baguettebox.js/{version}/baguetteBox.min.js': resources.baguetteBoxJS,
+            'baguettebox.js/{version}/baguetteBox.css': resources.baguetteBoxCSS,
+            'baguettebox.js/{version}/baguetteBox.min.css': resources.baguetteBoxCSS,
             'bootbox.js/{version}/bootbox.': resources.bootbox,
             'bootstrap-daterangepicker/{version}/daterangepicker.': resources.bootstrapDaterangepicker,
             'bootstrap-datepicker/{version}/js/bootstrap-datepicker.': resources.bootstrapDatepickerBundle,
@@ -211,6 +226,10 @@ var mappings = {
             'bootstrap-slider/{version}/css/bootstrap-slider.min.css': resources.bootstrapSliderCSS,
             'bootstrap-slider/{version}/css/bootstrap-slider.css': resources.bootstrapSliderCSS,
             'bootstrap-slider/{version}/bootstrap-slider.min.js': resources.bootstrapSliderJS,
+            'bootstrap-toggle/{version}/js/bootstrap-toggle.': resources.bootstrapToggleJS,
+            'bootstrap-toggle/{version}/js/bootstrap2-toggle.': resources.bootstrap2ToggleJS,
+            'bootstrap-toggle/{version}/css/bootstrap-toggle.': resources.bootstrapToggleCSS,
+            'bootstrap-toggle/{version}/css/bootstrap2-toggle.': resources.bootstrap2ToggleCSS,
             'bootstrap-3-typeahead/{version}/bootstrap3-typeahead.': resources.bootstrap3Typeahead,
             'Chart.js/{version}/Chart.bundle.': resources.chartJs,
             'Chart.js/{version}/Chart.min.js': resources.chartJs,
@@ -239,6 +258,7 @@ var mappings = {
             'jquery.devbridge-autocomplete/{version}/jquery.autocomplete.min.js': resources.jQueryAjaxAutoComplete,
             'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
             'jquery-csv/{version}/jquery.csv.min.js': resources.jQueryCSV,
+            'jquery-easing/{version}/jquery.easing.': resources.jQueryEasing,
             'jquery.lazyload/{version}/jquery.lazyload.min.js': resources.jQueryLazyLoad,
             'jquery.lazy/{version}/': resources.jQueryLazyBundle,
             'jquery-migrate/{version}/jquery-migrate.min.js': resources.jQueryMigrate,
@@ -293,6 +313,9 @@ var mappings = {
             'slick-carousel/{version}/slick.css': resources.slickCarouselCSS,
             'slick-carousel/{version}/slick.min.js': resources.slickCarouselJS,
             'slick-carousel/{version}/slick.js': resources.slickCarouselJS,
+            'slick-lightbox/{version}/slick-lightbox.min.js': resources.slickLightboxJS,
+            'slick-lightbox/{version}/slick-lightbox.js': resources.slickLightboxJS,
+            'slick-lightbox/{version}/slick-lightbox.css': resources.slickLightboxCSS,
             'spin.js/{version}/spin.min.js': resources.spinJS,
             'stickyfill/{version}/stickyfill.': resources.stickyfill,
             'socket.io/{version}/socket.io.': resources.socketIO,
@@ -316,7 +339,13 @@ var mappings = {
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
             'vue-resource/{version}/vue-resource.': resources.vueResource,
+            'waypoints/{version}/noframework.waypoints.': resources.jQueryWaypoints,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
+            'waypoints/{version}/waypoints.debug.': resources.jQueryWaypoints,
+            'waypoints/{version}/zepto.waypoints.': resources.jQueryWaypoints,
+            'waypoints/{version}/shortcuts/infinite.': resources.jQueryWaypoints,
+            'waypoints/{version}/shortcuts/inview.': resources.jQueryWaypoints,
+            'waypoints/{version}/shortcuts/sticky.': resources.jQueryWaypoints,
             'webfont/{version}/webfont.js': resources.webfontloader,
             'webfont/{version}/webfontloader.js': resources.webfontloader,
             'webrtc-adapter/{version}/adapter.min.js': resources.webRTCadapter,
@@ -335,6 +364,7 @@ var mappings = {
     // jsDelivr (Cloudflare)
     'cdn.jsdelivr.net': {
         '/npm/': {
+            'anchor-js@{version}/anchor.': resources.anchorJS,
             'angular@{version}/angular.': resources.angular,
             'angular@{version}/angular.min.': resources.angular,
             'angular-payments@{version}/lib/angular-payments.js': resources.angularPayments,
@@ -361,6 +391,7 @@ var mappings = {
             '@findify/bundle@{version}/dist/vendors~sentry.js': resources.findifyBundle,
             'flv.js/dist/flv.min.js': resources.flvJS,
             'hls.js/dist/hls.min.js': resources.hlsJS,
+            'hls.js@latest': resources.hlsJS,
             'jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery@{version}/dist/jquery.min.': resources.jQuery,
             'jquery-ui@{version}/jquery-ui.js': resources.jQueryUI,
@@ -376,13 +407,23 @@ var mappings = {
             'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
             'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
             'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
+            'p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js': resources.p2pMediaLoaderHlsJS,
+            'popper.js@{version}/dist/umd/popper.': resources.popperJS,
             'swfobject@{version}/index.js': resources.swfobject,
             'store-js@{version}/dist/store.legacy.min.js': resources.storeJS,
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
+            'slick-carousel@{version}/slick/slick.min.css': resources.slickCarouselCSS,
+            'slick-carousel@{version}/slick/slick.css': resources.slickCarouselCSS,
+            'slick-carousel@{version}/slick/slick.min.js': resources.slickCarouselJS,
+            'slick-carousel@{version}/slick/slick.js': resources.slickCarouselJS,
             'underscore@{version}/underscore.': resources.underscore,
             'underscore@{version}/underscore-min.': resources.underscore,
             'urlize.js/urlize.js': resources.urlize,
             'vanilla-lazyload@{version}/dist/lazyload.': resources.vanillaLazyload,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.css': resources.videojsSeekButtonsCSS,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.min.css': resources.videojsSeekButtonsCSS,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.js': resources.videojsSeekButtonsJS,
+            'videojs-seek-buttons/dist/videojs-seek-buttons.min.js': resources.videojsSeekButtonsJS,
             'vue-resource@{version}/dist/vue-resource.': resources.vueResource,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfontloader
@@ -756,6 +797,15 @@ var mappings = {
     'akamai-webcdn.kgstatic.net': {
         '/': {
             'renewal/static/js/lozad.min.': resources.lozad
+        }
+    },
+    // gitcdn.github.io
+    'gitcdn.github.io': {
+        '/': {
+            'bootstrap-toggle/{version}/js/bootstrap-toggle.': resources.bootstrapToggleJS,
+            'bootstrap-toggle/{version}/js/bootstrap2-toggle.': resources.bootstrap2ToggleJS,
+            'bootstrap-toggle/{version}/css/bootstrap-toggle.': resources.bootstrapToggleCSS,
+            'bootstrap-toggle/{version}/css/bootstrap2-toggle.': resources.bootstrap2ToggleCSS
         }
     }
 };

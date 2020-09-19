@@ -77,7 +77,30 @@ const Setting = {
     'SELECTED_ICON': 'selectedIcon',
     'INTERNAL_STATISTICS': 'internalStatistics',
     'INTERNAL_STATISTICS_DATA': 'internalStatisticsData',
-    'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts'
+    'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts',
+    'STORAGE_TYPE': 'storageType'
+};
+
+const SettingDefaults = {
+    [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: {},
+    [Setting.AMOUNT_INJECTED]: 0,
+    [Setting.BLOCK_GOOGLE_FONTS]: true,
+    [Setting.BLOCK_MISSING]: false,
+    [Setting.DISABLE_PREFETCH]: true,
+    [Setting.DOMAINS_MANIPULATE_DOM]: {},
+    [Setting.LOGGING]: false,
+    [Setting.ENFORCE_STAGING]: false,
+    [Setting.HIDE_RELEASE_NOTES]: false,
+    [Setting.INTERNAL_STATISTICS]: false,
+    [Setting.INTERNAL_STATISTICS_DATA]: {},
+    [Setting.LAST_MAPPING_UPDATE]: '2020-01-01',
+    [Setting.NEGATE_HTML_FILTER_LIST]: false,
+    [Setting.SELECTED_ICON]: 'Default',
+    [Setting.SHOW_ICON_BADGE]: true,
+    [Setting.STORAGE_TYPE]: 'local',
+    [Setting.STRIP_METADATA]: true,
+    [Setting.WHITELISTED_DOMAINS]: {},
+    [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN
 };
 
 const WebRequest = {
@@ -173,6 +196,16 @@ const Regex = {
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
     'FONT_AWESOME': /use\.fontawesome\.com\/fa-code\.css/,
     'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.js/
+};
+
+const Links = {
+    'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
+    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-your-adblocker',
+    'WELCOME': chrome.extension.getURL('pages/welcome/welcome.html'),
+    'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
+    'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
+    'FAQ': chrome.extension.getURL('pages/help/help.html'),
+    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
 };
 
 // Supported charsets for TextDecoder()

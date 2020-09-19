@@ -9,7 +9,7 @@ LocalCDN uses redirection for certain requests. There is a [mapping file](https:
 
 Currently only JavaScript and CSS files are redirected. However, some CSS files internally refer to other files, e.g. Font Awesome. All requests are redirected to a local file, e.g. [jQuery](https://codeberg.org/nobody/LocalCDN/src/branch/main/resources/jquery). This is the reason why the extension is currently 10 MB in size. Only if LocalCDN cannot find a local resource (and the option is enabled), a request will be blocked.
 
-An adblocker (uBlock Origin or uMatrix) decides which requests are allowed. Only if your adblocker allows a request, it will be intercepted by LocalCDN. LocalCDN catches the request after an adblocker and not before.
+An adblocker (e.g. uBlock Origin, uMatrix or AdGuard) decides which requests are allowed. Only if your adblocker allows a request, it will be intercepted by LocalCDN. LocalCDN catches the request after an adblocker and not before.
 
 ## Differences between LocalCDN and Decentraleyes
 
@@ -22,7 +22,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 * Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
 * Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
 * AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch
-* Prepared rules for uBlock/uMatrix
+* Prepared rules for uBlock Origin, uMatrix and AdGuard
 
 > **Note:** LocalCDN is no silver bullet, but it does prevent a lot of websites from making you send these kinds of requests. Ultimately, you can make LocalCDN block requests for any missing CDN resources, too.
 
@@ -66,10 +66,10 @@ On behalf of everyone: Thank you!
 ### Dark
 [<img src="screenshots/screenshot_dark.png" alt="Dark Theme" width="500"/>](screenshots/screenshot_dark.png)
 
-### Rule generator for uBlock/uMatrix (after an update)
+### Rule generator for uBlock Origin, uMatrix and AdGuard (after an update)
 [<img src="screenshots/screenshot_after_update.png" alt="Rule generator after an update" width="500"/>](screenshots/screenshot_after_update.png)
 
-### Rule generator for uBlock/uMatrix (settings page)
+### Rule generator for uBlock Origin, uMatrix and AdGuard (settings page)
 [<img src="screenshots/screenshot_settings.png" alt="Rule generator on settings page" width="500"/>](screenshots/screenshot_settings.png)
 
 ### Internal statistics

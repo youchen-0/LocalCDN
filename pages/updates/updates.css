@@ -42,3 +42,10 @@ input[type=radio], label {
 #generator-section {
     display: none;
 }
+
+.important {
+    background-color: #fbdcdc;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: #555;
+}

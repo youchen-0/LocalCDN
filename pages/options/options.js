@@ -46,8 +46,10 @@ options._renderContents = function () {
     }
 
     if (!chrome.browserAction.setIcon) {
-        document.getElementById('section-icon-style').style.display = 'none';
+        document.getElementById('icon-style-div').style.display = 'none';
     }
+    options._renderInfoPanel();
+    document.getElementById('label-version').textContent = helpers.formatVersion(chrome.runtime.getManifest().version);
 };
 
 options._renderOptionsPanel = function () {
@@ -67,6 +69,8 @@ options._renderOptionsPanel = function () {
     elements = options._optionElements;
     Object.assign(elements, { [Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics') });
 
+    Object.assign(elements, { [Setting.SELECTED_ICON]: document.getElementsByName('selected-icon') });
+
     elements.showIconBadge.checked = options._optionValues.showIconBadge;
     elements.blockMissing.checked = options._optionValues.blockMissing;
     elements.disablePrefetch.checked = options._optionValues.disablePrefetch;
@@ -77,9 +81,9 @@ options._renderOptionsPanel = function () {
     elements.domainsManipulateDOM.value = domainHtmlFilter;
     elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
     elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
-    elements.selectedIcon.value = options._optionValues.selectedIcon;
     elements.internalStatistics.checked = options._optionValues.internalStatistics;
     elements.allowedDomainsGoogleFonts.value = domainAllowedGoogleFonts;
+    elements.storageType = options._optionValues.storageType;
 
     options._registerOptionChangedEventListeners(elements);
     options._registerMiscellaneousEventListeners();
@@ -98,14 +102,40 @@ options._renderOptionsPanel = function () {
         document.getElementById('div-domains-whitelist-google-fonts').style.display = 'none';
     }
 
+    if (elements.storageType === 'local') {
+        document.getElementById('storage-type-local').checked = true;
+    } else {
+        document.getElementById('storage-type-sync').checked = true;
+    }
+
+    if (options._optionValues.selectedIcon === 'Default') {
+        document.getElementById('icon-default').checked = true;
+    } else if (options._optionValues.selectedIcon === 'Grey') {
+        document.getElementById('icon-grey').checked = true;
+    } else if (options._optionValues.selectedIcon === 'Light') {
+        document.getElementById('icon-light').checked = true;
+    }
+
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
-    document.getElementById('negate-html-filter-list-warning').addEventListener('click', options._onClickHTMLFilterWarning);
-    document.getElementById('link-welcome-page').addEventListener('click', options._onClickWelcomePage);
-    document.getElementById('link-changelog').addEventListener('click', options._onClickChangelog);
-    document.getElementById('link-donate').addEventListener('click', options._onClickDonate);
-    document.getElementById('link-faq').addEventListener('click', options._onClickFaq);
-    document.getElementById('ruleset-help-icon').addEventListener('click', options._onClickRulesetHelp);
-    document.getElementById('link-statistic').addEventListener('click', options._onClickStatistics);
+    document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
+    document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
+    document.getElementById('link-changelog').addEventListener('click', function () { options._onLinkClick(Links.CHANGELOG); });
+    document.getElementById('link-donate').addEventListener('click', function () { options._onLinkClick(Links.DONATE); });
+    document.getElementById('link-faq').addEventListener('click', function () { options._onLinkClick(Links.FAQ);});
+    document.getElementById('ruleset-help').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_RULESET); });
+    document.getElementById('sync-help').addEventListener('click', function () { options._onLinkClick(Links.FAQ + '#sync'); });
+    document.getElementById('link-statistic').addEventListener('click', function () { options._onLinkClick(Links.STATISTICS); });
+
+    document.getElementById('btn-general-tab').addEventListener('click', options._changeTab);
+    document.getElementById('btn-advanced-tab').addEventListener('click', options._changeTab);
+    document.getElementById('btn-export-import-tab').addEventListener('click', options._changeTab);
+    document.getElementById('btn-info-tab').addEventListener('click', options._changeTab);
+
+    document.getElementById('storage-type-local').addEventListener('change', options._onStorageOptionChanged);
+    document.getElementById('storage-type-sync').addEventListener('change', options._onStorageOptionChanged);
+    document.getElementById('export-data').addEventListener('click', storageManager.export);
+    document.getElementById('import-data').addEventListener('click', storageManager.startImportFilePicker);
+    document.getElementById('import-file-picker').addEventListener('change', storageManager.handleImportFilePicker);
 };
 
 options._renderBlockMissingNotice = function () {
@@ -134,12 +164,13 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
     elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
-    elements.selectedIcon.addEventListener('change', options._onOptionChanged);
-    let type = elements.ruleSets;
-    for (let i = 0; i < type.length; i++) {
-        type[i].addEventListener('change', options._openRuleSet);
-    }
-    elements.copyRuleSet.addEventListener('click', options._copyRuleSet);
+    elements.selectedIcon[0].addEventListener('change', options._onOptionChanged);
+    elements.selectedIcon[1].addEventListener('change', options._onOptionChanged);
+    elements.selectedIcon[2].addEventListener('change', options._onOptionChanged);
+    elements.ruleSets[0].addEventListener('change', ruleGenerator.openRuleSet);
+    elements.ruleSets[1].addEventListener('change', ruleGenerator.openRuleSet);
+    elements.ruleSets[2].addEventListener('change', ruleGenerator.openRuleSet);
+    elements.copyRuleSet.addEventListener('click', ruleGenerator.copyRuleSet);
     elements.internalStatistics.addEventListener('change', options._onOptionChanged);
     elements.allowedDomainsGoogleFonts.addEventListener('keyup', options._onOptionChanged);
 };
@@ -159,7 +190,7 @@ options._determineOptionValues = function () {
     return new Promise((resolve) => {
         let optionKeys = Object.keys(options._optionElements);
 
-        chrome.storage.sync.get(optionKeys, function (items) {
+        storageManager.type.get(optionKeys, function (items) {
             options._optionValues = items;
             resolve();
         });
@@ -168,8 +199,9 @@ options._determineOptionValues = function () {
 
 options._determineLocalOptionValues = function () {
     return new Promise((resolve) => {
-        chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {
+        chrome.storage.local.get([Setting.INTERNAL_STATISTICS, Setting.STORAGE_TYPE], function (items) {
             options._internalStatistics = items.internalStatistics;
+            options._storageType = items.storageType;
             resolve();
         });
     });
@@ -195,8 +227,8 @@ options._getOptionElements = function () {
         [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS),
         [Setting.SELECTED_ICON]: options._getOptionElement(Setting.SELECTED_ICON),
         [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: options._getOptionElement(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS),
+        [Setting.STORAGE_TYPE]: options._getOptionElement(Setting.STORAGE_TYPE)
     };
-
     return optionElements;
 };
 
@@ -212,7 +244,7 @@ options._configureLinkPrefetching = function (value) {
 };
 
 options._serializeWhitelistedDomains = function (whitelistedDomains) {
-    if (whitelistedDomains === undefined) return;
+    if (whitelistedDomains === undefined) return '';
 
     let domainWhitelist, whitelistedDomainKeys;
 
@@ -239,6 +271,66 @@ options._parseDomainWhitelist = function (domainWhitelist) {
     return whitelistedDomains;
 };
 
+options._renderInfoPanel = function () {
+    let unsupportedFrameworks, btnCDNs, btnFrameworks;
+
+    unsupportedFrameworks = 0;
+    options._listOfFrameworks = {};
+
+    btnCDNs = document.getElementById('cdn');
+    btnCDNs.value = 'CDNs: ';
+
+    btnFrameworks = document.getElementById('framework');
+    btnFrameworks.value = 'Frameworks: ';
+
+
+    Object.values(Object.values(resources)).forEach((element) => {
+        let path = Object.values(element)[0];
+        path = path.split('/');
+        options._listOfFrameworks[path[1]] = true;
+    });
+
+    if (BrowserType.CHROMIUM) {
+        // Chromium based browser does not support Google Material Icons and Font Awesome
+        document.getElementById('unsupported-frameworks').style.display = 'block';
+        unsupportedFrameworks = 2;
+    }
+
+    options._createList('cdn');
+
+    btnFrameworks.addEventListener('click', options._btnCreateList);
+    btnCDNs.addEventListener('click', options._btnCreateList);
+
+    // Reduce CDNs by 3, because loli.net includes = cdn.css.net, cdnjs.loli.net, ajax.loli.net, fonts.loli.net
+    btnCDNs.value += Object.keys(mappings).length - 3;
+    btnFrameworks.value += Object.keys(options._listOfFrameworks).length - unsupportedFrameworks;
+};
+
+options._btnCreateList = function ({ target }) {
+    options._createList(target.id);
+};
+
+options._createList = function (type) {
+    let textArea, list;
+
+    textArea = document.getElementById('generated-list');
+    textArea.value = '';
+
+    if (type === 'cdn') {
+        list = Object.keys(mappings);
+    } else if (type === 'framework') {
+        list = Object.keys(options._listOfFrameworks);
+    } else {
+        return;
+    }
+
+    list.forEach((elem) => {
+        if (!(BrowserType.CHROMIUM && (elem === 'fontawesome' || elem === 'google-material-design-icons'))) {
+            textArea.value += elem + '\n';
+        }
+    });
+};
+
 /**
  * Event Handlers
  */
@@ -254,7 +346,7 @@ options._onDocumentLoaded = function () {
 };
 
 options._onOptionChanged = function ({ target }) {
-    let optionKey, optionType, optionValue, storageType;
+    let optionKey, optionType, optionValue;
 
     optionKey = target.getAttribute('data-option');
     optionType = target.getAttribute('type');
@@ -300,105 +392,47 @@ options._onOptionChanged = function ({ target }) {
     }
 
     if (optionKey === Setting.SELECTED_ICON) {
-        wrappers.setIcon(
-            {
-                path: optionValue,
-            },
-            'Enabled'
-        );
+        wrappers.setIcon({ path: optionValue }, 'Enabled');
     }
-
-    if (optionKey === Setting.INTERNAL_STATISTICS) {
-        storageType = chrome.storage.local;
-    } else {
-        storageType = chrome.storage.sync;
-    }
-
-    storageType.set({
+    storageManager.type.set({
         [optionKey]: optionValue,
     });
 };
 
-options._openRuleSet = function ({ target }) {
-    let urls = mappings;
-    let optionKey = target.getAttribute('data-option');
-    let textArea = document.getElementById('generated-rules');
-    let btnCopy = document.getElementById('button-copy-rule-set');
-    let content = '';
+options._onStorageOptionChanged = function ({ target }) {
+    chrome.storage.local.set({
+        [Setting.STORAGE_TYPE]: target.value,
+    });
+    if (target.value === 'local') {
+        storageManager.migrateData('local');
+    } else {
+        storageManager.migrateData('sync');
+    }
+};
 
-    textArea.style.display = 'block';
-    btnCopy.style.display = 'block';
+options._onLinkClick = function (url) {
+    chrome.tabs.create({
+        url: url,
+        active: true
+    });
+};
 
-    for (var domain in urls) {
-        if (optionKey === 'uMatrix') {
-            content += '* ' + domain + ' script allow' + '\n';
-            content += '* ' + domain + ' css allow' + '\n';
-        } else if (optionKey === 'uBlock') {
-            content += '* ' + domain + ' * noop' + '\n';
+options._changeTab = function ({ target }) {
+    let tabContent, tabButton, optionKey;
+
+    optionKey = target.getAttribute('data-option');
+    tabContent = document.getElementsByClassName('tab-content');
+    tabButton = document.getElementsByClassName('option-buttons');
+
+    for (let i = 0; i < tabContent.length; i++) {
+        if (tabContent[i].id === optionKey) {
+            tabContent[i].style.display = 'block';
+            tabButton[i].classList.add('option-buttons-active');
+        } else {
+            tabContent[i].style.display = 'none';
+            tabButton[i].classList.remove('option-buttons-active');
         }
     }
-    textArea.value = content.replace(/\n+$/, '');
-};
-
-options._copyRuleSet = function () {
-    let textArea = document.getElementById('generated-rules');
-    navigator.clipboard.writeText(textArea.value).then(
-        function () {
-            textArea.select();
-        },
-        function () {
-            alert('Rule set cannot be copied!');
-        }
-    );
-};
-
-options._onClickHTMLFilterWarning = function () {
-    chrome.tabs.create({
-        url: 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
-        active: true,
-    });
-};
-
-options._onClickWelcomePage = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/welcome/welcome.html'),
-        active: true,
-    });
-};
-
-options._onClickDonate = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/donate/donate.html'),
-        active: true,
-    });
-};
-
-options._onClickChangelog = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/updates/updates.html'),
-        active: true,
-    });
-};
-
-options._onClickFaq = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/help/help.html'),
-        active: true,
-    });
-};
-
-options._onClickRulesetHelp = function () {
-    chrome.tabs.create({
-        url: 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-uBlock-Origin-or-uMatrix',
-        active: true,
-    });
-};
-
-options._onClickStatistics = function () {
-    chrome.tabs.create({
-        url: chrome.extension.getURL('pages/statistics/statistics.html'),
-        active: true,
-    });
 };
 
 /**
@@ -423,6 +457,9 @@ options._updatesDomainLists = function (changes) {
  * Initializations
  */
 options._internalStatistics = false;
+options._storageType = 'local';
+options._listOfFrameworks = {};
+options._listOfCDNs = {};
 
 document.addEventListener('DOMContentLoaded', options._onDocumentLoaded);
 

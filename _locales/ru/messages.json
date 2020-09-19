@@ -57,11 +57,11 @@
     },
     "generateRuleSetTitle": {
         "message": "Генерация наборов правил для uBlock или uMatrix",
-        "description": "Generate rule set title"
+        "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
         "message": "Если вы используете uBlock Origin или uMatrix, вы можете сгенерировать правила здесь и потом добавить их вручную в uBlock Origin или uMatrix.",
-        "description": "In case you are using uBlock Origin or uMatrix you can generate the rules here. You have to add these rules manually in uBlock Origin or uMatrix."
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
         "message": "Последнее обновление:",
@@ -85,7 +85,7 @@
     },
     "hideReleaseNotesDescription": {
         "message": "Включите данную опцию, если вы не хотите получать информацию о новых функциях LocalCDN. Она также содержит информацию о новых правилах для uBlock/uMatrix.",
-        "description": "If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules."
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Эта функция \"ломает\" сайты. Не включайте её, пока вручную не добавите в белый список все \"сломанные\" сайты.",
@@ -184,7 +184,55 @@
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Этим доменам разрешено загружать шрифты Google. Разделяйте несколько записей точкой с запятой (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+    },
+    "btnGeneral": {
+        "message": "Базовый",
+        "description": "Basic"
+    },
+    "btnAdvanced": {
+        "message": "Продвинутый",
+        "description": "Advanced"
+    },
+    "btnOther": {
+        "message": "Другие",
+        "description": "Other"
+    },
+    "btnInfo": {
+        "message": "Информация",
+        "description": "Info"
+    },
+    "headerStorageType": {
+        "message": "Тип хранилища",
+        "description": "Storage type"
+    },
+    "labelStorageTypeLocal": {
+        "message": "Локальный",
+        "description": "Local"
+    },
+    "labelStorageTypeSync": {
+        "message": "Синхронизировать",
+        "description": "Sync"
+    },
+    "headerImportExport": {
+        "message": "Импорт/Экспорт",
+        "description": "Import/Export"
+    },
+    "labelExportData": {
+        "message": "Резервное копирование в файл",
+        "description": "Back up to file"
+    },
+    "labelImportData": {
+        "message": "Восстановить из файла",
+        "description": "Restore from file"
+    },
+    "dialogImportSuccessful": {
+        "message": "Импорт успешен",
+        "description": "Import successful"
+    },
+    "dialogImportFailed": {
+        "message": "Ошибка импорта",
+        "description": "Import failed"
     }
 }

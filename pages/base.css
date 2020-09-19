@@ -13,10 +13,10 @@ a:hover {
 }
 
 .no-icon {
-    background-image: none;
+    background-image: none !important;
 }
 
-#button-copy-rule-set, #generated-rules {
+#button-copy-rule-set, textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -46,6 +46,9 @@ a:hover {
 
 #generated-rules {
     display: none;
+}
+
+textarea {
     margin-top: 20px;
 }
 
@@ -64,7 +67,6 @@ a:hover {
 }
 
 .b-contain span {
-    line-height: 1.54;
     font-size: 12px;
     font-family: inherit;
 }
@@ -74,6 +76,7 @@ a:hover {
     position: relative;
     padding-left: 25px;
     cursor: pointer;
+    line-height: 1.2;
 }
 
 .b-contain input[type="checkbox"] ~ .b-input {
@@ -187,6 +190,7 @@ a:hover {
     opacity: .6;
     z-index: 99999;
     transform: scale(0);
+    visibility: hidden;
 }
 
 .b-contain input + .b-input::before {
@@ -195,10 +199,6 @@ a:hover {
 
 .b-contain input:checked + .b-input::before {
     animation-name: b-ripple-duplicate;
-}
-
-.b-contain .b-input::before {
-    visibility: hidden;
 }
 
 .b-contain input:focus + .b-input::before {
@@ -222,15 +222,19 @@ a:hover {
         background-size: 10px 10px;
     }
 
-    .subtle-hint, body, h3, p {
+    .subtle-hint, body, h3, p, .option-buttons {
         color: #aeaeae !important;
     }
 
-    #button-copy-rule-set, #generated-rules {
+    .option-buttons:hover {
+        background-color: #434343;
+    }
+
+    #button-copy-rule-set, textarea,  {
         border: 1px solid #222;
     }
 
-    #generated-rules{
+    textarea {
         background-color: #434343;
         color: #aeaeae !important;
     }
@@ -247,5 +251,24 @@ a:hover {
     #button-copy-rule-set-icon {
         background: url('../../icons/copy-light.svg') no-repeat right center;
         background-size: 20px 20px;
+    }
+
+    .important, .important > p {
+        color: #555 !important;
+    }
+
+    .important > p > a {
+        color: #555;
+        background: url('../../icons/link-dark.svg') no-repeat right center;
+        background-size: 10px 10px;
+        padding-right: 13px;
+        text-decoration: underline;
+        font-weight: normal;
+    }
+
+    .important > p > a:hover {
+        color: #777;
+        text-decoration: none;
+        cursor: pointer;
     }
 }

@@ -126,7 +126,6 @@ interceptor._handleStorageChanged = function (changes) {
  * Initializations
  */
 
-interceptor.amountInjected = 0;
 interceptor.xhrTestDomain = Address.LOCALCDN;
 interceptor.blockMissing = false;
 interceptor.blockGoogleFonts = true;
@@ -139,8 +138,8 @@ interceptor.relatedSettings.push(Setting.XHR_TEST_DOMAIN);
 interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
 interceptor.relatedSettings.push(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS);
 
-chrome.storage.sync.get(interceptor.relatedSettings, function (items) {
-    interceptor.amountInjected = items.amountInjected || 0;
+storageManager.type.get(interceptor.relatedSettings, function (items) {
+    storageManager.amountInjected = items.amountInjected || 0;
     interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
     interceptor.blockMissing = items.blockMissing || false;
     interceptor.blockGoogleFonts = items.blockGoogleFonts || true;

@@ -237,7 +237,7 @@ popup._determineTargetTab = function () {
 
 popup._determineAmountInjected = function () {
     return new Promise((resolve) => {
-        chrome.storage.sync.get(Setting.AMOUNT_INJECTED, function (items) {
+        chrome.storage.local.get(Setting.AMOUNT_INJECTED, function (items) {
             popup._amountInjected = items.amountInjected || 0;
             resolve();
         });
@@ -246,7 +246,7 @@ popup._determineAmountInjected = function () {
 
 popup._determineNegateHtmlFilterOption = function () {
     return new Promise((resolve) => {
-        chrome.storage.sync.get(Setting.NEGATE_HTML_FILTER_LIST, function (items) {
+        storageManager.type.get(Setting.NEGATE_HTML_FILTER_LIST, function (items) {
             popup.negateHtmlFilterList = items.negateHtmlFilterList;
             resolve();
         });
