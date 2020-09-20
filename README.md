@@ -69,8 +69,12 @@ On behalf of everyone: Thank you!
 ### Rule generator for uBlock Origin, uMatrix and AdGuard (after an update)
 [<img src="screenshots/screenshot_after_update.png" alt="Rule generator after an update" width="500"/>](screenshots/screenshot_after_update.png)
 
-### Rule generator for uBlock Origin, uMatrix and AdGuard (settings page)
-[<img src="screenshots/screenshot_settings.png" alt="Rule generator on settings page" width="500"/>](screenshots/screenshot_settings.png)
+### Settings
+[<img src="screenshots/screenshot_settings_1.png" alt="Settings (Basic)" width="500"/>](screenshots/screenshot_settings_1.png)
+[<img src="screenshots/screenshot_settings_2.png" alt="Settings (Advanced)" width="500"/>](screenshots/screenshot_settings_2.png)
+[<img src="screenshots/screenshot_settings_3.png" alt="Settings (Other)" width="500"/>](screenshots/screenshot_settings_3.png)
+[<img src="screenshots/screenshot_settings_4.png" alt="Settings (Info)" width="500"/>](screenshots/screenshot_settings_4.png)
+
 
 ### Internal statistics
 [<img src="screenshots/screenshot_statistics_light.png" alt="Internal statistics" width="200"/>](screenshots/screenshot_statistics_light.png) [<img src="screenshots/screenshot_statistics_dark.png" alt="Internal statistics" width="200"/>](screenshots/screenshot_statistics_dark.png)
@@ -99,7 +103,12 @@ The language you want is not completely translated or you are a language talent?
 
 ## Donations
 
-LocalCDN is free and open-source. If you like LocalCDN you can support continued development by making a donation. Any help would be greatly appreciated! Every way to donate can be found inside the extension (Just click on the heart). At the moment donations are possible with SEPA bank transfer, Bitcoin and Ether.
+LocalCDN is free and open-source. If you like LocalCDN you can support continued development by making a donation. Any help would be greatly appreciated!
+
+* IBAN: `DE44 5003 1000 1069 4660 08` (BIC: `TRODDEF1XXX`)
+* Bitcoin: `1C4GRNyuUFkp9dMDjUkV4TwDwdfxdgLzde`
+* Ether: `0x2df49c1186f8b615c2059f29c3ed7f9f86d49552`
+* Monero: `46j26ggSZNT9rN7VeFYXp2PsKEMyJSSYneBVKXY4xeemdfZfCpNg6tQEXQZpWiTTuGX3SbnDPwuh3167cCoYSrqN72H9jPk`
 
 ## License
 
