@@ -513,6 +513,8 @@ helpers.setLastVersion = function (type, version) {
         return '16.13.1';
     } else if (type.includes('/react-redux/7.')) {
         return '7.2.1';
+    } else if (type.includes('/react-router/5.')) {
+        return '5.2.0';
     } else if (type.includes('/react-lifecycles-compat/')) {
         return '3.0.4';
     } else if (type.includes('/rickshaw/1.')) {
@@ -605,6 +607,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'react-router.min.jsm': 'react router',
     'react-redux.min.jsm': 'react redux',
     'react-lifecycles-compat.min.jsm': 'react lifecycles compat',
     'prop-types.min.jsm': 'prop-types',

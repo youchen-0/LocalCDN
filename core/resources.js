@@ -625,6 +625,11 @@ var resources = {
         'path': 'resources/react-redux/{version}/react-redux.min.jsm',
         'type': 'application/javascript'
     },
+    // React Router
+    'reactRouter': {
+        'path': 'resources/react-router/{version}/react-router.min.jsm',
+        'type': 'application/javascript'
+    },
     // rickshaw
     'rickshawJS': {
         'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',
