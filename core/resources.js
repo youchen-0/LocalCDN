@@ -177,6 +177,11 @@ var resources = {
         'path': 'resources/autocomplete.js/{version}/autocomplete.min.jsm',
         'type': 'application/javascript'
     },
+    // axios
+    'axios': {
+        'path': 'resources/axios/{version}/axios.min.jsm',
+        'type': 'application/javascript'
+    },
     // Backbone.js
     'backbone': {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
