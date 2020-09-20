@@ -511,6 +511,8 @@ helpers.setLastVersion = function (type, version) {
         return '16.13.1';
     } else if (type.includes('/react-dom/16.')) {
         return '16.13.1';
+    } else if (type.includes('/react-lifecycles-compat/')) {
+        return '3.0.4';
     } else if (type.includes('/rickshaw/1.')) {
         return '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
@@ -601,6 +603,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'react-lifecycles-compat.min.jsm': 'react lifecycles compat',
     'prop-types.min.jsm': 'prop-types',
     'history.min.jsm': 'history',
     'axios.min.jsm': 'Axios',

@@ -615,6 +615,11 @@ var resources = {
         'path': 'resources/react-dom/{version}/umd/react-dom.production.min.jsm',
         'type': 'application/javascript'
     },
+    // react-lifecycles-compat
+    'reactLifecyclesCompat': {
+        'path': 'resources/react-lifecycles-compat/{version}/react-lifecycles-compat.min.jsm',
+        'type': 'application/javascript'
+    },
     // rickshaw
     'rickshawJS': {
         'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',

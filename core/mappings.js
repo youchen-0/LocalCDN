@@ -408,6 +408,7 @@ var mappings = {
             'moment@{version}/moment.min.': resources.moment,
             'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
             'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
+            'react-lifecycles-compat@{version}/react-lifecycles-compat.': resources.reactLifecyclesCompat,
             'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
             'p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js': resources.p2pMediaLoaderHlsJS,
             'popper.js@{version}/dist/umd/popper.': resources.popperJS,
