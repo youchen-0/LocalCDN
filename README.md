@@ -71,8 +71,11 @@ On behalf of everyone: Thank you!
 
 ### Settings
 [<img src="screenshots/screenshot_settings_1.png" alt="Settings (Basic)" width="500"/>](screenshots/screenshot_settings_1.png)
+
 [<img src="screenshots/screenshot_settings_2.png" alt="Settings (Advanced)" width="500"/>](screenshots/screenshot_settings_2.png)
+
 [<img src="screenshots/screenshot_settings_3.png" alt="Settings (Other)" width="500"/>](screenshots/screenshot_settings_3.png)
+
 [<img src="screenshots/screenshot_settings_4.png" alt="Settings (Info)" width="500"/>](screenshots/screenshot_settings_4.png)
 
 
