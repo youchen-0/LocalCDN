@@ -56,7 +56,7 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "为 uBlock 或 uMatrix 生成规则集",
+        "message": "生成专属规则为你的广告过滤器",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "打开这个按钮以停止接受 LocalCDN 的所有新特性相关信息。这包括任何新的 uBlock/uMatrix 规则。",
+        "message": "打开这个按钮以停止接受 LocalCDN 的所有新特性相关信息。这包括任何为你的广告过滤器所设计的规则。",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
