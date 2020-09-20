@@ -635,6 +635,11 @@ var resources = {
         'path': 'resources/react-side-effect/{version}/react-side-effect.min.jsm',
         'type': 'application/javascript'
     },
+    // Redux
+    'redux': {
+        'path': 'resources/redux/{version}/redux.min.jsm',
+        'type': 'application/javascript'
+    },
     // rickshaw
     'rickshawJS': {
         'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',

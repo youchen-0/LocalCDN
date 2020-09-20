@@ -519,6 +519,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.1.0';
     } else if (type.includes('/react-lifecycles-compat/')) {
         return '3.0.4';
+    } else if (type.includes('/redux/4.')) {
+        return '4.0.5';
     } else if (type.includes('/rickshaw/1.')) {
         return '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
@@ -609,6 +611,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'redux.min.jsm': 'Redux',
     'react-side-effect.min.jsm': 'react-side-effect',
     'react-router.min.jsm': 'react router',
     'react-redux.min.jsm': 'react redux',
