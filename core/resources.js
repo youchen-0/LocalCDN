@@ -524,6 +524,11 @@ var resources = {
         'path': 'resources/nvd3/{version}/nv.d3.min.css',
         'type': 'text/css'
     },
+    // object-assign
+    'objectAssign': {
+        'path': 'resources/object-assign/{version}/object-assign.min.jsm',
+        'type': 'application/javascript'
+    },
     // ocLazyLoad
     'ocLazyLoad': {
         'path': 'resources/oclazyload/{version}/ocLazyLoad.min.jsm',

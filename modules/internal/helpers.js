@@ -481,6 +481,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/mootools/1.')) {
         if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
         else return '1.6.0'; // > 1.4.5
+    } else if (type.includes('/object-assign@4.')) {
+        return '4.1.1';
     } else if (type.includes('/oclazyload/1.')) {
         return '1.1.0';
     } else if (type.includes('/owl-carousel/1.')) {
@@ -593,6 +595,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'object-assign.min.jsm': 'Object assign',
     'slick-lightbox.css': 'slick-lightbox CSS',
     'slick-lightbox.min.jsm': 'slick-lightbox JS',
     'noframework.waypoints.min.jsm': 'Waypoints (Bundle)',

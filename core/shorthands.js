@@ -101,6 +101,13 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm',
             'bundle': ''
         };
+    } else if ((channelHost + channelPath) === 'unpkg.com/@umds/object-assign@4.1.1-beta.24/object-assign.min.js') {
+        return {
+            'source': channelHost,
+            'versionRequested': '4.1.1',
+            'path': 'resources/object-assign/4.1.1/object-assign.min.jsm',
+            'bundle': ''
+        };
     } else {
         return false;
     }
