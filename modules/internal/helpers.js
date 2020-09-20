@@ -408,6 +408,8 @@ helpers.setLastVersion = function (type, version) {
         return '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
         return '5.14.0';
+    } else if (type.includes('/history/')) {
+        return '4.10.1';
     } else if (type.includes('/hls.js/')) {
         return '0.13.2';
     } else if (type.includes('/jets/0.')) {
@@ -597,6 +599,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'history.min.jsm': 'history',
     'axios.min.jsm': 'Axios',
     'object-assign.min.jsm': 'Object assign',
     'slick-lightbox.css': 'slick-lightbox CSS',

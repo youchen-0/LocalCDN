@@ -345,6 +345,11 @@ var resources = {
         'path': 'resources/google-material-design-icons/google-material-design-icons.css',
         'type': 'text/css'
     },
+    // history
+    'history': {
+        'path': 'resources/history/{version}/history.min.jsm',
+        'type': 'application/javascript'
+    },
     // hls.js
     'hlsJS': {
         'path': 'resources/hls.js/{version}/hls.min.jsm',
