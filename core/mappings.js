@@ -417,6 +417,7 @@ var mappings = {
             'popper.js@{version}/dist/umd/popper.': resources.popperJS,
             'prop-types@{version}/prop-types.': resources.propTypes,
             'redux@{version}/dist/redux.': resources.redux,
+            'react-dom@{version}/umd/react-dom.production.min.js': resources.reactDOM,
             'react@{version}/umd/react.production.min.js': resources.react,
             'swfobject@{version}/index.js': resources.swfobject,
             'store-js@{version}/dist/store.legacy.min.js': resources.storeJS,
