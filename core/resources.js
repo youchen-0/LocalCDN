@@ -620,6 +620,11 @@ var resources = {
         'path': 'resources/react-lifecycles-compat/{version}/react-lifecycles-compat.min.jsm',
         'type': 'application/javascript'
     },
+    // React Redux
+    'reactRedux': {
+        'path': 'resources/react-redux/{version}/react-redux.min.jsm',
+        'type': 'application/javascript'
+    },
     // rickshaw
     'rickshawJS': {
         'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',
