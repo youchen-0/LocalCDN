@@ -501,6 +501,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.16.1';
     } else if (type.includes('/popper.js/2.')) {
         return '2.4.4';
+    } else if (type.includes('/prop-types/15.')) {
+        return '15.7.2';
     } else if (type.includes('/prototype/1.')) {
         return '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {
@@ -599,6 +601,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'prop-types.min.jsm': 'prop-types',
     'history.min.jsm': 'history',
     'axios.min.jsm': 'Axios',
     'object-assign.min.jsm': 'Object assign',

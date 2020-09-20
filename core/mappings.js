@@ -411,6 +411,7 @@ var mappings = {
             'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
             'p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js': resources.p2pMediaLoaderHlsJS,
             'popper.js@{version}/dist/umd/popper.': resources.popperJS,
+            'prop-types@{version}/prop-types.': resources.propTypes,
             'swfobject@{version}/index.js': resources.swfobject,
             'store-js@{version}/dist/store.legacy.min.js': resources.storeJS,
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,

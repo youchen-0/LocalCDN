@@ -586,6 +586,11 @@ var resources = {
         'path': 'resources/popper.js/{version}/umd/popper.min.jsm',
         'type': 'text/css'
     },
+    // prop-types
+    'propTypes': {
+        'path': 'resources/prop-types/{version}/prop-types.min.jsm',
+        'type': 'application/javascript'
+    },
     // Prototype
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.jsm',
