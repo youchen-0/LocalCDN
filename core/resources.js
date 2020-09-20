@@ -630,6 +630,11 @@ var resources = {
         'path': 'resources/react-router/{version}/react-router.min.jsm',
         'type': 'application/javascript'
     },
+    // React Side Effect
+    'reactSideEffect': {
+        'path': 'resources/react-side-effect/{version}/react-side-effect.min.jsm',
+        'type': 'application/javascript'
+    },
     // rickshaw
     'rickshawJS': {
         'path': 'resources/rickshaw/{version}/rickshaw.min.jsm',
