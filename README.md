@@ -108,7 +108,7 @@ The language you want is not completely translated or you are a language talent?
 
 LocalCDN is free and open-source. If you like LocalCDN you can support continued development by making a donation. Any help would be greatly appreciated!
 
-* IBAN: `DE44 5003 1000 1069 4660 08` (BIC: `TRODDEF1XXX`)
+* IBAN: `DE22 5003 1000 1069 4660 16` (BIC: `TRODDEF1XXX`)
 * Bitcoin: `1C4GRNyuUFkp9dMDjUkV4TwDwdfxdgLzde`
 * Ether: `0x2df49c1186f8b615c2059f29c3ed7f9f86d49552`
 * Monero: `46j26ggSZNT9rN7VeFYXp2PsKEMyJSSYneBVKXY4xeemdfZfCpNg6tQEXQZpWiTTuGX3SbnDPwuh3167cCoYSrqN72H9jPk`
