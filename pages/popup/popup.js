@@ -483,7 +483,7 @@ popup._close = function () {
 popup._onInfoButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: chrome.extension.getURL('pages/help/help.html'),
+            url: chrome.extension.getURL('pages/help/help.html#html-filter'),
             active: event.button === 0,
         });
     }
