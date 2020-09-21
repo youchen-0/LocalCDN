@@ -108,6 +108,14 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/object-assign/4.1.1/object-assign.min.jsm',
             'bundle': ''
         };
+    } else if ((channelHost + channelPath).includes('cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearch.')) {
+        return {
+            'source': channelHost,
+            'versionRequested': '3.0',
+            'versionDelivered': '3.35.1',
+            'path': 'resources/algoliasearch/3.35.1/algoliasearch.min.jsm',
+            'bundle': ''
+        };
     } else {
         return false;
     }
