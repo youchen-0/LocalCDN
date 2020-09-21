@@ -412,6 +412,10 @@ helpers.setLastVersion = function (type, version) {
         return '4.10.1';
     } else if (type.includes('/hls.js/')) {
         return '0.13.2';
+    } else if (type.includes('/instantsearch.js/3.')) {
+        return '3.7.0';
+    } else if (type.includes('/instantsearch.js/4.')) {
+        return '4.8.1';
     } else if (type.includes('/jets/0.')) {
         return '0.14.1';
     } else if (type.includes('/jquery/1.')) {
@@ -611,6 +615,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'instantsearch.production.min.jsm': 'InstantSearch.js',
     'redux.min.jsm': 'Redux',
     'react-side-effect.min.jsm': 'react-side-effect',
     'react-router.min.jsm': 'react router',

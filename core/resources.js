@@ -355,6 +355,11 @@ var resources = {
         'path': 'resources/hls.js/{version}/hls.min.jsm',
         'type': 'application/javascript'
     },
+    // InstantSearch.js
+    'InstantSearchJS': {
+        'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm',
+        'type': 'application/javascript'
+    },
     // jeditableJS
     'jeditableJS': {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
