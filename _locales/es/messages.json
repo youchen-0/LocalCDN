@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generar el conjunto de reglas para uBlock o uMatrix",
+        "message": "Generar el conjunto de reglas para tu bloqueador de publicidad",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Si usa uBlock Origin o uMatrix, aquí puede generar las reglas. Tiene que añadir las reglas manualmente en uBlock Origin o uMatrix.",
+        "message": "Si está usando un bloqueador de publicidad, aquí puede generar las reglas. Tiene que añadir las reglas manualmente a tu bloqueador de publicidad.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas de uBlock Origin/uMatrix.",
+        "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas para tu bloqueador de publicidad.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
@@ -156,15 +156,15 @@
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "La última semana",
+        "message": "Última semana",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "El último mes",
+        "message": "Último mes",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "El último año",
+        "message": "Último año",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
@@ -176,7 +176,7 @@
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "«Frameworks» reemplazados",
+        "message": "Frameworks reemplazados",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {

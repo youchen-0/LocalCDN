@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Podstawowe",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Zaawansowane",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Pozostałe",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Typ przechowywania danych",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokalnie",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Synchronizacja",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importowanie/Eksportowanie",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Zrób kopię zapasową do pliku",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Przywróć kopię zapasową z pliku",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Zaimportowano",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Importowanie się nie powiodło",
         "description": "Import failed"
     }
 }
