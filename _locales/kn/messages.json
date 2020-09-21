@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "",
+        "message": "\"ಉಚಿತ\",ಕೇಂದ್ರೀಕೃತ ವಿಷಯ ವಿತರಣೆ ಮೂಲಕ ಜಾಡಿಕರಣದಿಂದ ರಕ್ಷಿಸುತ್ತದೆ.",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
@@ -8,11 +8,11 @@
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "",
+        "message": "ಆಯ್ಕೆಗಳು",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "",
+        "message": "ಐಕಾನ್ ಮೇಲೆ ಅಳವಡಿಕೆಯ ಎಣಿಕೆಗಳನ್ನು ತೋರಿಸು",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
@@ -52,11 +52,11 @@
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "",
+        "message": "ಸುಧಾರಿತ",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "",
+        "message": "ನಿಮ್ಮ adblocker ಗೆ ನಿಯಮಗಳನ್ನು ಉತ್ಪಾದಿಸಿ",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
