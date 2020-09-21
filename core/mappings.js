@@ -372,6 +372,7 @@ var mappings = {
             'angular-payments@{version}/lib/angular-payments.js': resources.angularPayments,
             'angular-stripe-checkout@{version}/angular-stripe-checkout.js': resources.angularStripeCheckout,
             'animate.css@{version}/animate.min.css': resources.animateCSS,
+            'autocomplete.js@{version}/dist/autocomplete.': resources.autocompleteJS,
             'axios@{version}/dist/axios.': resources.axios,
             'backbone@{version}/backbone.': resources.backbone,
             'backbone@{version}/backbone-min.': resources.backbone,
