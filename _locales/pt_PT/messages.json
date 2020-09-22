@@ -16,7 +16,7 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Mostrar o número de recursos injetados no ícone da extensão.",
+        "message": "Mostrar a quantidade de recursos injetados no ícone da extensão.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -32,7 +32,7 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Impedir recursos não permitidos de vazar para as redes de entrega.",
+        "message": "Impedir recursos não permitidos de vazar às redes de entrega.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Gere conjuntos de regras para uBlock ou uMatrix",
+        "message": "Gerar conjuntos de regras para o seu adblocker",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Se estiver a usar uBlock ou uMatrix, pode gerar as regras aqui. Tem que adicionar essas regras manualmente no uBlock Origin ou uMatrix.",
+        "message": "Caso esteja a usar um adblocker, pode gerar as regras aqui. Tem que adicionar essas regras ao seu adblocker manualmente.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Ative isto para não receber informações sobre novos recursos do LocalCDN. Isso inclui informações sobre novas regras do uBlock/uMatrix.",
+        "message": "Ligue isto para não receber nenhuma informação sobre as novas funcionalidades do LocalCDN. Isto inclui informações sobre as novas regras para o seu adblocker.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Básico",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Avançado",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Outros",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Informações",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Tipo de armazenamento",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Local",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sync",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importar/Exportar",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Fazer backup para um ficheiro",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Restaurar do ficheiro",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Importação bem sucedida",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "A importação falhou",
         "description": "Import failed"
     }
 }
