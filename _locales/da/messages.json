@@ -140,11 +140,11 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Interne statistikker",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Denne funktion er i øjeblikket i et eksperimentelt stadium. Ingen datatransmission. Det hele er lokalt på din enhed.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -152,55 +152,55 @@
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "I dag",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Sidste uge",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Sidste måned",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Sidste år",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Slette",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Gennemsnit (injektioner pr. Dag)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Udskiftede rammer",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Er du sikker på, at du vil slette statistikken?",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Disse domæner har tilladelse til at indlæse Google-skrifttyper. Adskil flere poster med semikolon (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Grundlæggende",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Advanceret",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Anden",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
@@ -208,7 +208,7 @@
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokal",
         "description": "Local"
     },
     "labelStorageTypeSync": {
@@ -216,23 +216,23 @@
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Import/Export",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Backup til fil",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Gendan fra fil",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Import lykkedes",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Inport fejlede",
         "description": "Import failed"
     }
 }
