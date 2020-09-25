@@ -118,6 +118,7 @@ options._renderOptionsPanel = function () {
 
     let url = chrome.runtime.getURL('icons/action/' + options._optionValues.selectedIcon.toLowerCase() + '/icon38-default.png');
     document.getElementById('icon-badge-preview').src = url;
+
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
     document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
@@ -299,6 +300,7 @@ options._renderInfoPanel = function () {
     }
 
     options._createList('cdn');
+    document.getElementById('cdn').classList.add('btns-active');
 
     btnFrameworks.addEventListener('click', options._btnCreateList);
     btnCDNs.addEventListener('click', options._btnCreateList);
@@ -309,6 +311,13 @@ options._renderInfoPanel = function () {
 };
 
 options._btnCreateList = function ({ target }) {
+    if (target.id === 'cdn') {
+        document.getElementById('cdn').classList.add('btns-active');
+        document.getElementById('framework').classList.remove('btns-active');
+    } else {
+        document.getElementById('cdn').classList.remove('btns-active');
+        document.getElementById('framework').classList.add('btns-active');
+    }
     options._createList(target.id);
 };
 

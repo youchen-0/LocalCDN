@@ -21,7 +21,6 @@ a:hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid #aeaeae;
 }
 
 #button-copy-rule-set {
@@ -29,13 +28,11 @@ a:hover {
     padding: 5px;
     font-size: 1.3em;
     line-height: 2;
-    background-color: #f0f0f0;
     text-align: center;
 }
 
 #button-copy-rule-set:hover {
     cursor: pointer;
-    background-color: #c1c1c1;
 }
 
 #button-copy-rule-set-icon {
@@ -50,6 +47,28 @@ a:hover {
 
 textarea {
     margin-top: 20px;
+}
+
+.btns {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #aeaeae;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.btns:hover {
+    cursor: pointer;
+    background-color: #c1c1c1;
+}
+
+.btns-active {
+    background-color: #c4c4c4 !important;
+    color: #515151 !important;
 }
 
 /**
@@ -230,7 +249,7 @@ textarea {
         background-color: #434343;
     }
 
-    #button-copy-rule-set, textarea,  {
+    #button-copy-rule-set, textarea {
         border: 1px solid #222;
     }
 
@@ -240,12 +259,7 @@ textarea {
     }
 
     #button-copy-rule-set {
-        background-color: #333;
         color: #aeaeae;
-    }
-
-    #button-copy-rule-set:hover {
-        background-color: #2d2d2d;
     }
 
     #button-copy-rule-set-icon {
@@ -270,5 +284,20 @@ textarea {
         color: #777;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    .btns {
+        background-color: #3c3c3c;
+        border-color: #616161;
+        color: #bbb;
+    }
+
+    .btns:hover {
+        background-color: #616161;
+    }
+
+    .btns-active {
+        background-color: #9f9f9f !important;
+        color: #222 !important;
     }
 }
