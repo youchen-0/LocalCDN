@@ -79,7 +79,7 @@ body {
 .div-selected-icon {
     margin-top: 10px;
     padding-right: 25px;
-    min-width: 140px;
+    min-width: 113px;
 }
 
 .div-selected-icon > label {
@@ -214,7 +214,7 @@ body {
 
 .div-badge {
     margin-top: 10px;
-    padding-left: 25px;
+    padding-left: 30px;
     border-left: 1px solid #bbb;
 }
 
@@ -236,13 +236,33 @@ body {
 
 #pre-badged-background-color, #pre-badged-text-color {
     width: 30px;
-    height: auto;
-    margin: 10px 5px 0px 0px;
+    height: 30px;
+    margin-right: 5px;
 }
 
 .colorpicker {
     display: flex;
     padding-bottom: 5px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.colorpicker > input {
+    margin-top: 0px !important;
+}
+
+.color-error {
+    color: red;
+}
+
+#badged-background-color, #badged-text-color {
+    max-width: 150px;
+}
+
+.img-restore-color {
+    margin-left: 5px;
+    height: 15px;
+    cursor: pointer;
 }
 
 .import-export > input[type="button"] {
