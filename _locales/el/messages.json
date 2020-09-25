@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "Εξαίρεση διευθύνσεων από επιθεωρήσεις",
+        "message": "Απενεργοποίηση του LocalCDN γι' αυτούς τους τομείς:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
@@ -56,19 +56,19 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Δημιουργία συνόλων κανόνων για uBlock ή uMatrix",
+        "message": "Δημιουργία συνόλων κανόνων για το πρόγραμμα αποκλεισμού διαφημίσεων που χρησιμοποιείτε",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "Εάν χρησιμοποιείτε κάποιο πρόγραμμα αποκλεισμού διαφημίσεων μπορείτε να δημιουργήσετε τους κανόνες εδώ. Πρέπει να τους προσθέσετε χειροκίνητα στο πρόγραμμα αποκλεισμού διαφημίσεων.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Τελευταία ενημέρωση:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Αντιγραφή",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
@@ -84,23 +84,23 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "",
+        "message": "Ενεργοποίηση της μη ενημέρωσης για νέα χαρακτηριστικά του LocalCDN. Συμπεριλαμβάνονται οι νέοι κανόνες για το πρόγραμμα αποκλεισμού διαφημίσεών σας.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Αυτή η λειτουργία προκαλεί δυσλειτουργίες σε ιστοσελίδες.Να μην ενεργοποιηθεί, εκτός αν προτίθεστε να προσθέσετε, χειροκίνητα, στον κατάλογο επιτρεπόμενων όποιους τομείς επηρεάζονται.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Απενεργοποίηση",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Φίλτρο κώδικα πηγής HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Συνεισφέρετε",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
@@ -108,15 +108,15 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Ενεργοποίηση της επιλογής για μόνιμη εφαρμογή του φίλτρου HTML. Τότε, εξαιρούνται οι τομείς στον κατάλογο. Εάν αυτή η επιλογή είναι απενεργοποιημένη, η εφαρμογή του φίλτρου HTML θα γίνεται μόνο στους τομείς του καταλόγου.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Αυτή η λειτουργία μπορεί να προκαλέσει δυσλειτουργία σε ιστοσελίδες. Παρακαλώ σημειώστε τις πληροφορίες στην σελίδα Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Μη εφαρμογή φίλτρου HTML σε αυτούς τους τομείς:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
@@ -124,19 +124,19 @@
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Εφαρμογή φίλτρου HTML για αυτούς τους τομείς:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Μπλοκάρισμα γραμματοσειρών της Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Εάν επιτρέπονται τα αιτήματα για πόρους που λείπουν, οι συνδέσεις στο «fonts.googleapis.com» δεν μπλοκάρονται. Ενεργοποίηση της επιλογής για μπλοκάρισμα των αιτημάτων.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Επιλέξτε ένα εικονίδιο για αυτή την επέκταση",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
@@ -144,51 +144,51 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Αυτή η λειτουργία βρίσκεται προς το παρόν σε πειραματικό στάδιο. Δε γίνεται αποστολή δεδομένων. Είναι όλα τοπικά στη συσκευή σας.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Στατιστικά στοιχεία",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Σήμερα",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Την προηγούμενη εβδομάδα",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Τον προηγούμενο μήνα",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Τον προηγούμενο χρόνο",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Διαγραφή",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Μέσος όρος (Αντικαταστάσεις ανά ημέρα)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Πλαίσια που έχουν αντικατασταθεί",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Θέλεις σίγουρα να διαγράψεις τα στατιστικά στοιχεία;",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Χώρισε τις πολλαπλές καταχωρίσεις με ερωτηματικά (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Βασικό",
         "description": "Basic"
     },
     "btnAdvanced": {
@@ -196,27 +196,27 @@
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Άλλο",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Πληροφορίες",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Τύπος αποθήκευσης",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Τοπικός",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Συγχρονισμός",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Εισαγωγή/Εξαγωγή",
         "description": "Import/Export"
     },
     "labelExportData": {
@@ -224,15 +224,15 @@
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Επαναφορά από αρχείο",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Επιτυχής εισαγωγή",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Ανεπιτυχής εισαγωγή",
         "description": "Import failed"
     }
 }

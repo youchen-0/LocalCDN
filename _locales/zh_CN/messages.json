@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "为 uBlock 或 uMatrix 生成规则集",
+        "message": "生成专属规则为你的广告过滤器",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "如果你在使用 uBlock Origin 或者 uMatrix, 你可以在这里生成规则。你需要将这些规则手动添加到 uBlock Origin 或 uMatrix。",
+        "message": "如果你正在使用一个广告拦截器，你可以在这里生成规则。你必须在你的广告拦截器中手动添加这些规则。",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "打开这个按钮以停止接受 LocalCDN 的所有新特性相关信息。这包括任何新的 uBlock/uMatrix 规则。",
+        "message": "打开这个按钮以停止接受 LocalCDN 的所有新特性相关信息。这包括任何为你的广告过滤器所设计的规则。",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "基础",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "高级",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "其他",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "信息",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "存储类型",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "本地",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "同步",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "导入/导出",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "备份到文件",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "从文件还原",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "成功导入",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "导入失败",
         "description": "Import failed"
     }
 }
