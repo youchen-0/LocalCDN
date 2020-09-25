@@ -226,7 +226,7 @@ body {
 #counter-preview-badge {
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: -5px;
     color: white;
     background: black;
     padding: 1px 6px;
@@ -238,6 +238,10 @@ body {
     width: 30px;
     height: 30px;
     margin-right: 5px;
+}
+
+#icon-badge-preview {
+    margin-top: 5px;
 }
 
 .colorpicker {
