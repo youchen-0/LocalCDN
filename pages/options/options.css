@@ -461,4 +461,8 @@ body[dir="rtl"] .input-text {
         background-color: #434343;
         color: #aeaeae !important;
     }
+
+    .img-restore-color {
+        filter: invert(1);
+    }
 }
