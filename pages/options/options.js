@@ -116,6 +116,8 @@ options._renderOptionsPanel = function () {
         document.getElementById('icon-light').checked = true;
     }
 
+    let url = chrome.runtime.getURL('icons/action/' + options._optionValues.selectedIcon.toLowerCase() + '/icon38-default.png');
+    document.getElementById('icon-badge-preview').src = url;
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
     document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
@@ -331,6 +333,33 @@ options._createList = function (type) {
     });
 };
 
+options._colorPicker = function () {
+
+    storageManager.type.get([Setting.BADGE_COLOR, Setting.BADGE_TEXT_COLOR], function (items) {
+        options._textColor = items.badgeTextColor || '#FFFFFF';
+        options._backgroundColor = items.badgeColor || '#4A826C';
+
+        let badgeBackgroundColor = new CP(document.getElementById('badged-background-color'));
+        badgeBackgroundColor.on('change', function(r, g, b) {
+            options._backgroundColor = this.color(r, g, b);
+            this.source.value = options._backgroundColor
+            wrappers.setBadgeBackgroundColor({color: options._backgroundColor});
+            document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
+            document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
+        });
+
+        let badgeTextColor = new CP(document.getElementById('badged-text-color'));
+        badgeTextColor.on('change', function(r, g, b) {
+            options._textColor = this.color(r, g, b);
+            this.source.value = options._textColor
+            wrappers.setBadgeTextColor({color: options._textColor});
+            document.getElementById('counter-preview-badge').style.color = options._textColor;
+            document.getElementById('pre-badged-text-color').style.backgroundColor = options._textColor;
+        });
+    });
+};
+
+
 /**
  * Event Handlers
  */
@@ -341,6 +370,7 @@ options._onDocumentLoaded = function () {
     options._optionElements = options._getOptionElements();
     options._languageSupported = helpers.languageIsFullySupported(language);
     options._scriptDirection = helpers.determineScriptDirection(language);
+    options._colorPicker();
 
     options._renderContents();
 };
@@ -393,6 +423,8 @@ options._onOptionChanged = function ({ target }) {
 
     if (optionKey === Setting.SELECTED_ICON) {
         wrappers.setIcon({ path: optionValue }, 'Enabled');
+        let url = chrome.runtime.getURL('icons/action/' + optionValue.toLowerCase() + '/icon38-default.png');
+        document.getElementById('icon-badge-preview').src = url;
     }
     storageManager.type.set({
         [optionKey]: optionValue,

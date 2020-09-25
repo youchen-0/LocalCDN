@@ -4,10 +4,14 @@
         <title>LocalCDN Options</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../../modules/internal/color-picker/color-picker.min.css">
+
         <link rel="stylesheet" type="text/css" href="options.css">
         <link rel="stylesheet" type="text/css" href="../base.css">
     </head>
     <body>
+        <script src="../../modules/internal/color-picker/color-picker.min.js"></script>
+
         <script src="../../core/constants.js"></script>
         <script src="../../core/storage-manager.js"></script>
         <script src="../../modules/internal/helpers.js"></script>
@@ -195,25 +199,45 @@
             <div id="icon-style-div" class="option-group">
                 <section id="section-icon-style" class="option">
                     <div class="title-option without-checkbox" data-i18n-content="chooseIconStyle">Choose an icon for this extension</div>
-                    <div class="div-selected-icon">
-                        <label class="b-contain" for="icon-default">
-                            <img src="../../icons/action/default/icon32-default.png" alt="Default" class="icons">
-                            <img src="../../icons/action/default/icon32-disabled.png" alt="Default" class="icons">
-                            <input id="icon-default" name="selected-icon" type="radio" data-option="selectedIcon" value="Default">
-                            <div class="b-input"></div>
-                        </label>
-                        <label class="b-contain" for="icon-grey">
-                            <img src="../../icons/action/grey/icon32-default.png" alt="Blue/Grey" class="icons">
-                            <img src="../../icons/action/grey/icon32-disabled.png" alt="Blue/Grey" class="icons">
-                            <input id="icon-grey" name="selected-icon" type="radio" data-option="selectedIcon" value="Grey">
-                            <div class="b-input"></div>
-                        </label>
-                        <label class="b-contain" for="icon-light">
-                            <img src="../../icons/action/light/icon32-default.png" alt="Light" class="icons">
-                            <img src="../../icons/action/light/icon32-disabled.png" alt="Light" class="icons">
-                            <input id="icon-light" name="selected-icon" type="radio" data-option="selectedIcon" value="Light">
-                            <div class="b-input"></div>
-                        </label>
+                    <div class="div-icons-badge-colors">
+                        <div class="div-selected-icon">
+                            <label class="b-contain" for="icon-default">
+                                <img src="../../icons/action/default/icon32-default.png" alt="Default" class="icons">
+                                <img src="../../icons/action/default/icon32-disabled.png" alt="Default" class="icons">
+                                <input id="icon-default" name="selected-icon" type="radio" data-option="selectedIcon" value="Default">
+                                <div class="b-input"></div>
+                            </label>
+                            <label class="b-contain" for="icon-grey">
+                                <img src="../../icons/action/grey/icon32-default.png" alt="Blue/Grey" class="icons">
+                                <img src="../../icons/action/grey/icon32-disabled.png" alt="Blue/Grey" class="icons">
+                                <input id="icon-grey" name="selected-icon" type="radio" data-option="selectedIcon" value="Grey">
+                                <div class="b-input"></div>
+                            </label>
+                            <label class="b-contain" for="icon-light">
+                                <img src="../../icons/action/light/icon32-default.png" alt="Light" class="icons">
+                                <img src="../../icons/action/light/icon32-disabled.png" alt="Light" class="icons">
+                                <input id="icon-light" name="selected-icon" type="radio" data-option="selectedIcon" value="Light">
+                                <div class="b-input"></div>
+                            </label>
+                        </div>
+                        <div class="div-badge">
+                            <div id="badge-preview-top">
+                                <div>
+                                    <img id="icon-badge-preview" src="../../icons/action/default/icon38-default.png" alt="Default" class="icons">
+                                    <div id="counter-preview-badge"><span>17</span></div>
+                                </div>
+                            </div>
+                            <div id="badge-preview-bottom">
+                                <div class="colorpicker">
+                                    <div id="pre-badged-background-color"></div>
+                                    <input id="badged-background-color" class="input-text"><br>
+                                </div>
+                                <div class="colorpicker">
+                                    <div id="pre-badged-text-color"></div>
+                                    <input id="badged-text-color" class="input-text">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

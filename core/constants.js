@@ -78,7 +78,9 @@ const Setting = {
     'INTERNAL_STATISTICS': 'internalStatistics',
     'INTERNAL_STATISTICS_DATA': 'internalStatisticsData',
     'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts',
-    'STORAGE_TYPE': 'storageType'
+    'STORAGE_TYPE': 'storageType',
+    'BADGE_COLOR': 'badgeColor',
+    'BADGE_TEXT_COLOR': 'badgeTextColor'
 };
 
 const SettingDefaults = {
