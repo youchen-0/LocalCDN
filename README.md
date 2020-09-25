@@ -116,3 +116,7 @@ LocalCDN is free and open-source. If you like LocalCDN you can support continued
 ## License
 
 [MPL-2.0](https://www.mozilla.org/MPL/2.0).
+
+### External libraries
+
+* Color Picker (Taufik Nurrohman, https://github.com/taufik-nurrohman/color-picker, MIT License)
