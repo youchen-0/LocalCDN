@@ -53,7 +53,7 @@ options._renderContents = function () {
 };
 
 options._renderOptionsPanel = function () {
-    let whitelistedDomains, domainWhitelist, elements, htmlFilterDomains, domainHtmlFilter, googleFontsDomains, domainAllowedGoogleFonts;
+    let whitelistedDomains, domainWhitelist, elements, htmlFilterDomains, domainHtmlFilter, googleFontsDomains, domainAllowedGoogleFonts, url, bgColor, txtColor;
 
     Object.assign(options._optionValues, { [Setting.INTERNAL_STATISTICS]: options._internalStatistics });
 
@@ -116,8 +116,19 @@ options._renderOptionsPanel = function () {
         document.getElementById('icon-light').checked = true;
     }
 
-    let url = chrome.runtime.getURL('icons/action/' + options._optionValues.selectedIcon.toLowerCase() + '/icon38-default.png');
+    url = chrome.runtime.getURL('icons/action/' + options._optionValues.selectedIcon.toLowerCase() + '/icon38-default.png');
     document.getElementById('icon-badge-preview').src = url;
+
+    bgColor = options._optionValues.badgeColor || '#4A826C';
+    txtColor = options._optionValues.badgeTextColor || '#FFFFFF';
+
+    document.getElementById('counter-preview-badge').style.backgroundColor = bgColor;
+    document.getElementById('pre-badged-background-color').style.backgroundColor = bgColor;
+    document.getElementById('badged-background-color').value = bgColor;
+
+    document.getElementById('counter-preview-badge').style.color = txtColor;
+    document.getElementById('pre-badged-text-color').style.backgroundColor = txtColor;
+    document.getElementById('badged-text-color').value = txtColor;
 
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
@@ -139,10 +150,10 @@ options._renderOptionsPanel = function () {
     document.getElementById('export-data').addEventListener('click', storageManager.export);
     document.getElementById('import-data').addEventListener('click', storageManager.startImportFilePicker);
     document.getElementById('import-file-picker').addEventListener('change', storageManager.handleImportFilePicker);
-    
+
     document.getElementById('badged-background-color').addEventListener('keyup', options._onChangedHexColor);
     document.getElementById('badged-text-color').addEventListener('keyup', options._onChangedHexColor);
-    
+
     document.getElementById('restore-background-color').addEventListener('click', options._setDefaultColor);
     document.getElementById('restore-text-color').addEventListener('click', options._setDefaultColor);
 };
@@ -236,7 +247,9 @@ options._getOptionElements = function () {
         [Setting.BLOCK_GOOGLE_FONTS]: options._getOptionElement(Setting.BLOCK_GOOGLE_FONTS),
         [Setting.SELECTED_ICON]: options._getOptionElement(Setting.SELECTED_ICON),
         [Setting.ALLOWED_DOMAINS_GOOGLE_FONTS]: options._getOptionElement(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS),
-        [Setting.STORAGE_TYPE]: options._getOptionElement(Setting.STORAGE_TYPE)
+        [Setting.STORAGE_TYPE]: options._getOptionElement(Setting.STORAGE_TYPE),
+        [Setting.BADGE_COLOR]: options._getOptionElement(Setting.BADGE_COLOR),
+        [Setting.BADGE_TEXT_COLOR]: options._getOptionElement(Setting.BADGE_TEXT_COLOR)
     };
     return optionElements;
 };
@@ -349,42 +362,28 @@ options._createList = function (type) {
 };
 
 options._colorPicker = function () {
-
-    storageManager.type.get([Setting.BADGE_COLOR, Setting.BADGE_TEXT_COLOR], function (items) {
-        options._textColor = items.badgeTextColor || '#FFFFFF';
-        options._backgroundColor = items.badgeColor || '#4A826C';
-
+    const badgeBackgroundColor = new CP(document.getElementById('badged-background-color'));
+    badgeBackgroundColor.on('change', function(r, g, b) {
+        this.source.value = this.color(r, g, b);
+    });
+    badgeBackgroundColor.on('drag', function(r, g, b) {
+        options._backgroundColor = this.color(r, g, b);
+        this.source.value = options._backgroundColor
+        wrappers.setBadgeBackgroundColor({color: options._backgroundColor});
         document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
-        document.getElementById('counter-preview-badge').style.color = options._textColor;
         document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
+    });
+
+    const badgeTextColor = new CP(document.getElementById('badged-text-color'));
+    badgeTextColor.on('change', function(r, g, b) {
+        this.source.value = this.color(r, g, b);
+    });
+    badgeTextColor.on('drag', function(r, g, b) {
+        options._textColor = this.color(r, g, b);
+        this.source.value = options._textColor
+        wrappers.setBadgeTextColor({color: options._textColor});
+        document.getElementById('counter-preview-badge').style.color = options._textColor;
         document.getElementById('pre-badged-text-color').style.backgroundColor = options._textColor;
-
-        document.getElementById('badged-background-color').value = options._backgroundColor;
-        document.getElementById('badged-text-color').value = options._textColor;
-
-        let badgeBackgroundColor = new CP(document.getElementById('badged-background-color'));
-        badgeBackgroundColor.on('change', function(r, g, b) {
-            this.source.value = this.color(r, g, b);
-        });
-        badgeBackgroundColor.on('drag', function(r, g, b) {
-            options._backgroundColor = this.color(r, g, b);
-            this.source.value = options._backgroundColor
-            wrappers.setBadgeBackgroundColor({color: options._backgroundColor});
-            document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
-            document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
-        });
-
-        let badgeTextColor = new CP(document.getElementById('badged-text-color'));
-        badgeTextColor.on('change', function(r, g, b) {
-            this.source.value = this.color(r, g, b);
-        });
-        badgeTextColor.on('drag', function(r, g, b) {
-            options._textColor = this.color(r, g, b);
-            this.source.value = options._textColor
-            wrappers.setBadgeTextColor({color: options._textColor});
-            document.getElementById('counter-preview-badge').style.color = options._textColor;
-            document.getElementById('pre-badged-text-color').style.backgroundColor = options._textColor;
-        });
     });
 };
 
@@ -401,7 +400,7 @@ options._setDefaultColor = function ({ target }) {
         document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
         document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
         document.getElementById('badged-background-color').value = options._backgroundColor;
-        
+
     }
 };
 
