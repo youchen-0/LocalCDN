@@ -348,8 +348,19 @@ options._colorPicker = function () {
         options._textColor = items.badgeTextColor || '#FFFFFF';
         options._backgroundColor = items.badgeColor || '#4A826C';
 
+        document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
+        document.getElementById('counter-preview-badge').style.color = options._textColor;
+        document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
+        document.getElementById('pre-badged-text-color').style.backgroundColor = options._textColor;
+
+        document.getElementById('badged-background-color').value = options._backgroundColor;
+        document.getElementById('badged-text-color').value = options._textColor;
+
         let badgeBackgroundColor = new CP(document.getElementById('badged-background-color'));
         badgeBackgroundColor.on('change', function(r, g, b) {
+            this.source.value = this.color(r, g, b);
+        });
+        badgeBackgroundColor.on('drag', function(r, g, b) {
             options._backgroundColor = this.color(r, g, b);
             this.source.value = options._backgroundColor
             wrappers.setBadgeBackgroundColor({color: options._backgroundColor});
@@ -359,6 +370,9 @@ options._colorPicker = function () {
 
         let badgeTextColor = new CP(document.getElementById('badged-text-color'));
         badgeTextColor.on('change', function(r, g, b) {
+            this.source.value = this.color(r, g, b);
+        });
+        badgeTextColor.on('drag', function(r, g, b) {
             options._textColor = this.color(r, g, b);
             this.source.value = options._textColor
             wrappers.setBadgeTextColor({color: options._textColor});
