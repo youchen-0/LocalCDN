@@ -1,0 +1,12 @@
+Color Picker
+
+
+Taufik Nurrohman
+https://github.com/taufik-nurrohman/color-picker
+https://taufik-nurrohman.js.org/color-picker/
+
+MIT License (MIT)
+
+
+L328: Modified part (innerHTML removed, because AMO warning)
+      https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML

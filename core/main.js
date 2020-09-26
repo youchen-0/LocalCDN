@@ -81,13 +81,10 @@ main._showReleaseNotes = function (details) {
                     [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
                 }, function() {
                     if (!items.hideReleaseNotes) {
-                        // ********************************************************************************
-                        // TODO: Change me in v2.4.1
-                        // chrome.tabs.create({
-                        //     'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
-                        //     'active': false
-                        // });
-                        // ********************************************************************************
+                        chrome.tabs.create({
+                            'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
+                            'active': false
+                        });
                     }
                 });
             } else {
@@ -103,11 +100,3 @@ main._showReleaseNotes = function (details) {
  */
 chrome.runtime.onInstalled.addListener(main._showReleaseNotes);
 main._initializeSettings();
-
-wrappers.setBadgeBackgroundColor({
-    'color': [74, 130, 108, 255]
-});
-
-wrappers.setBadgeTextColor({
-    'color': [255, 255, 255, 255]
-});

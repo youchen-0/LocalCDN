@@ -177,6 +177,11 @@ var resources = {
         'path': 'resources/autocomplete.js/{version}/autocomplete.min.jsm',
         'type': 'application/javascript'
     },
+    // axios
+    'axios': {
+        'path': 'resources/axios/{version}/axios.min.jsm',
+        'type': 'application/javascript'
+    },
     // Backbone.js
     'backbone': {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
@@ -340,9 +345,19 @@ var resources = {
         'path': 'resources/google-material-design-icons/google-material-design-icons.css',
         'type': 'text/css'
     },
+    // history
+    'history': {
+        'path': 'resources/history/{version}/history.min.jsm',
+        'type': 'application/javascript'
+    },
     // hls.js
     'hlsJS': {
         'path': 'resources/hls.js/{version}/hls.min.jsm',
+        'type': 'application/javascript'
+    },
+    // InstantSearch.js
+    'InstantSearchJS': {
+        'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm',
         'type': 'application/javascript'
     },
     // jeditableJS
@@ -524,6 +539,11 @@ var resources = {
         'path': 'resources/nvd3/{version}/nv.d3.min.css',
         'type': 'text/css'
     },
+    // object-assign
+    'objectAssign': {
+        'path': 'resources/object-assign/{version}/object-assign.min.jsm',
+        'type': 'application/javascript'
+    },
     // ocLazyLoad
     'ocLazyLoad': {
         'path': 'resources/oclazyload/{version}/ocLazyLoad.min.jsm',
@@ -571,6 +591,11 @@ var resources = {
         'path': 'resources/popper.js/{version}/umd/popper.min.jsm',
         'type': 'text/css'
     },
+    // prop-types
+    'propTypes': {
+        'path': 'resources/prop-types/{version}/prop-types.min.jsm',
+        'type': 'application/javascript'
+    },
     // Prototype
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.jsm',
@@ -593,6 +618,31 @@ var resources = {
     // ReactDOM
     'reactDOM': {
         'path': 'resources/react-dom/{version}/umd/react-dom.production.min.jsm',
+        'type': 'application/javascript'
+    },
+    // react-lifecycles-compat
+    'reactLifecyclesCompat': {
+        'path': 'resources/react-lifecycles-compat/{version}/react-lifecycles-compat.min.jsm',
+        'type': 'application/javascript'
+    },
+    // React Redux
+    'reactRedux': {
+        'path': 'resources/react-redux/{version}/react-redux.min.jsm',
+        'type': 'application/javascript'
+    },
+    // React Router
+    'reactRouter': {
+        'path': 'resources/react-router/{version}/react-router.min.jsm',
+        'type': 'application/javascript'
+    },
+    // React Side Effect
+    'reactSideEffect': {
+        'path': 'resources/react-side-effect/{version}/react-side-effect.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Redux
+    'redux': {
+        'path': 'resources/redux/{version}/redux.min.jsm',
         'type': 'application/javascript'
     },
     // rickshaw

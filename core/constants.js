@@ -78,7 +78,9 @@ const Setting = {
     'INTERNAL_STATISTICS': 'internalStatistics',
     'INTERNAL_STATISTICS_DATA': 'internalStatisticsData',
     'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts',
-    'STORAGE_TYPE': 'storageType'
+    'STORAGE_TYPE': 'storageType',
+    'BADGE_COLOR': 'badgeColor',
+    'BADGE_TEXT_COLOR': 'badgeTextColor'
 };
 
 const SettingDefaults = {
@@ -100,7 +102,9 @@ const SettingDefaults = {
     [Setting.STORAGE_TYPE]: 'local',
     [Setting.STRIP_METADATA]: true,
     [Setting.WHITELISTED_DOMAINS]: {},
-    [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN
+    [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
+    [Setting.BADGE_COLOR]: '#4A826C',
+    [Setting.BADGE_TEXT_COLOR]: '#FFFFFF'
 };
 
 const WebRequest = {

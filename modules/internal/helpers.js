@@ -346,6 +346,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.7.2';
     } else if (type.includes('/angular-translate-interpolation-messageformat/2.')) {
         return '2.7.2';
+    } else if (type.includes('/axios/0.')) {
+        return '0.20.0';
     } else if (type.includes('/backbone.js/0.')) {
         return '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
@@ -406,8 +408,14 @@ helpers.setLastVersion = function (type, version) {
         return '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
         return '5.14.0';
+    } else if (type.includes('/history/')) {
+        return '4.10.1';
     } else if (type.includes('/hls.js/')) {
         return '0.13.2';
+    } else if (type.includes('/instantsearch.js/3.')) {
+        return '3.7.0';
+    } else if (type.includes('/instantsearch.js/4.')) {
+        return '4.8.1';
     } else if (type.includes('/jets/0.')) {
         return '0.14.1';
     } else if (type.includes('/jquery/1.')) {
@@ -481,6 +489,8 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/mootools/1.')) {
         if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
         else return '1.6.0'; // > 1.4.5
+    } else if (type.includes('/object-assign@4.')) {
+        return '4.1.1';
     } else if (type.includes('/oclazyload/1.')) {
         return '1.1.0';
     } else if (type.includes('/owl-carousel/1.')) {
@@ -495,6 +505,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.16.1';
     } else if (type.includes('/popper.js/2.')) {
         return '2.4.4';
+    } else if (type.includes('/prop-types/15.')) {
+        return '15.7.2';
     } else if (type.includes('/prototype/1.')) {
         return '1.7.3.0';
     } else if (type.includes('/raven.js/3.')) {
@@ -503,6 +515,16 @@ helpers.setLastVersion = function (type, version) {
         return '16.13.1';
     } else if (type.includes('/react-dom/16.')) {
         return '16.13.1';
+    } else if (type.includes('/react-redux/7.')) {
+        return '7.2.1';
+    } else if (type.includes('/react-router/5.')) {
+        return '5.2.0';
+    } else if (type.includes('/react-side-effect/')) {
+        return '2.1.0';
+    } else if (type.includes('/react-lifecycles-compat/')) {
+        return '3.0.4';
+    } else if (type.includes('/redux/4.')) {
+        return '4.0.5';
     } else if (type.includes('/rickshaw/1.')) {
         return '1.6.6';
     } else if (type.includes('/scriptaculous/1.')) {
@@ -593,6 +615,16 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'instantsearch.production.min.jsm': 'InstantSearch.js',
+    'redux.min.jsm': 'Redux',
+    'react-side-effect.min.jsm': 'react-side-effect',
+    'react-router.min.jsm': 'react router',
+    'react-redux.min.jsm': 'react redux',
+    'react-lifecycles-compat.min.jsm': 'react lifecycles compat',
+    'prop-types.min.jsm': 'prop-types',
+    'history.min.jsm': 'history',
+    'axios.min.jsm': 'Axios',
+    'object-assign.min.jsm': 'Object assign',
     'slick-lightbox.css': 'slick-lightbox CSS',
     'slick-lightbox.min.jsm': 'slick-lightbox JS',
     'noframework.waypoints.min.jsm': 'Waypoints (Bundle)',

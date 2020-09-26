@@ -69,7 +69,9 @@ storageManager.migrateData = function (target) {
             [Setting.SHOW_ICON_BADGE]: data.showIconBadge,
             [Setting.STRIP_METADATA]: data.stripMetadata,
             [Setting.WHITELISTED_DOMAINS]: data.whitelistedDomains,
-            [Setting.XHR_TEST_DOMAIN]: data.xhrTestDomain
+            [Setting.XHR_TEST_DOMAIN]: data.xhrTestDomain,
+            [Setting.BADGE_COLOR]: data.badgeColor,
+            [Setting.BADGE_TEXT_COLOR]: data.badgeTextColor
         });
     });
 };
@@ -212,7 +214,10 @@ storageManager._validateDomainsAndStatistics = function (type, obj) {
 };
 
 storageManager._validateStrings = function (value) {
+    console.log(value);
     if (/((2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])/.test(value)) {
+        return value;
+    } else if (/#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/.test(value)) {
         return value;
     } else if (value === 'Default' || value === 'Light' || value === 'Grey') {
         return value;

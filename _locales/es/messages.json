@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generar el conjunto de reglas para uBlock o uMatrix",
+        "message": "Generar el conjunto de reglas para su bloqueador de publicidad",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Si usa uBlock Origin o uMatrix, aquí puede generar las reglas. Tiene que añadir las reglas manualmente en uBlock Origin o uMatrix.",
+        "message": "Si está usando un bloqueador de publicidad, puede generar las reglas aquí. Tiene que añadir las reglas manualmente a su bloqueador de publicidad.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -76,7 +76,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Abra la \"Consola del navegador\" ( CTRL + MAYÚSCULAS + J ) para que se muestren los recursos que faltan.",
+        "message": "Abra la «Consola del navegador» ( CTRL + MAYÚSCULAS + J ) para que se muestren los recursos que faltan.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
@@ -84,7 +84,7 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas de uBlock Origin/uMatrix.",
+        "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas para su bloqueador de publicidad.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
@@ -132,7 +132,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Si se permiten peticiones de recursos que faltan, las conexiones a \"fonts.googleapis.com\" no se bloquean. Habilite esta opción para bloquear estas solicitudes.",
+        "message": "Si se permiten peticiones de recursos que faltan, las conexiones a «fonts.googleapis.com» no se bloquean. Habilite esta opción para bloquear estas solicitudes.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -156,15 +156,15 @@
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "La última semana",
+        "message": "Última semana",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "El último mes",
+        "message": "Último mes",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "El último año",
+        "message": "Último año",
         "description": "Statistics view for past year."
     },
     "labelDelete": {

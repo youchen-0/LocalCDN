@@ -1,0 +1,238 @@
+{
+    "extensionDescription": {
+        "message": "\"ಉಚಿತ\",ಕೇಂದ್ರೀಕೃತ ವಿಷಯ ವಿತರಣೆ ಮೂಲಕ ಜಾಡಿಕರಣದಿಂದ ರಕ್ಷಿಸುತ್ತದೆ.",
+        "description": "Extension description."
+    },
+    "amountInjectedDescription": {
+        "message": "",
+        "description": "Amount injected description."
+    },
+    "optionsTitle": {
+        "message": "ಆಯ್ಕೆಗಳು",
+        "description": "Options title"
+    },
+    "showIconBadgeTitle": {
+        "message": "ಐಕಾನ್ ಮೇಲೆ ಅಳವಡಿಕೆಯ ಎಣಿಕೆಗಳನ್ನು ತೋರಿಸು",
+        "description": "Show icon badge title"
+    },
+    "showIconBadgeDescription": {
+        "message": "",
+        "description": "Show icon badge description."
+    },
+    "blockMissingTitle": {
+        "message": "",
+        "description": "Block requests for missing resources title"
+    },
+    "blockMissingDescription": {
+        "message": "",
+        "description": "Block requests for missing resources description."
+    },
+    "disablePrefetchTitle": {
+        "message": "",
+        "description": "Disable prefetch title"
+    },
+    "disablePrefetchDescription": {
+        "message": "",
+        "description": "Disable prefetch description."
+    },
+    "stripMetadataTitle": {
+        "message": "",
+        "description": "Strip metadata title"
+    },
+    "stripMetadataDescription": {
+        "message": "",
+        "description": "Strip metadata description."
+    },
+    "whitelistedDomainsTitle": {
+        "message": "",
+        "description": "Deactivate LocalCDN for these domains:"
+    },
+    "whitelistedDomainsDescription": {
+        "message": "",
+        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+    },
+    "advancedLabel": {
+        "message": "ಸುಧಾರಿತ",
+        "description": "Advanced label"
+    },
+    "generateRuleSetTitle": {
+        "message": "ನಿಮ್ಮ adblocker ಗೆ ನಿಯಮಗಳನ್ನು ಉತ್ಪಾದಿಸಿ",
+        "description": "Generate rule sets for your adblocker"
+    },
+    "generateRuleSetDescription": {
+        "message": "ನೀವು adblocker ಅನ್ನು ಉಪಯೋಗಿಸುತ್ತಿದ್ದೀರಾ ಎಂದರೇ ನೀವು ಇಲ್ಲಿ ನಿಯಮಗಳನ್ನು ಉತ್ಪಾದಿಸಬಹುದು. ನೀವು ಈ ನಿಯಮಗಳನ್ನು ಕೈಯಾರೇ adblocker ನಲ್ಲಿ ಸೇರಿಸಬೇಕು.",
+        "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
+    },
+    "lastUpdate": {
+        "message": "ಕೊನೆಯ ನವೀಕರಣ:",
+        "description": "Last update:"
+    },
+    "copyRuleSet": {
+        "message": "ಪ್ರತಿ ಮಾಡು",
+        "description": "Text of button to copy ruleset"
+    },
+    "loggingTitle": {
+        "message": "",
+        "description": "Enable logging in browser console"
+    },
+    "loggingDescription": {
+        "message": "",
+        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+    },
+    "hideReleaseNotesTitle": {
+        "message": "",
+        "description": "Disable release notes"
+    },
+    "hideReleaseNotesDescription": {
+        "message": "",
+        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
+    },
+    "featureBreaksWebsitesDescription": {
+        "message": "",
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+    },
+    "featureBreaksWebsitesButton": {
+        "message": "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ",
+        "description": "Disable"
+    },
+    "labelManipulateDOM": {
+        "message": "",
+        "description": "Filter HTML source code"
+    },
+    "labelDonate": {
+        "message": "ದಾನ ನೀಡಿ",
+        "description": "Donate"
+    },
+    "negateHtmlFilterListTitle": {
+        "message": "",
+        "description": "Invert HTML filter"
+    },
+    "negateHtmlFilterListDescription": {
+        "message": "",
+        "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
+    },
+    "negateHtmlFilterListWarning": {
+        "message": "",
+        "description": "This function can break websites. Please note the information on the Wiki page."
+    },
+    "htmlFilterDomainsTitleExclude": {
+        "message": "",
+        "description": "Do not apply HTML filter to these domains:"
+    },
+    "htmlFilterDomainsDescription": {
+        "message": "",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+    },
+    "htmlFilterDomainsTitleInclude": {
+        "message": "",
+        "description": "Apply HTML filter for these domains:"
+    },
+    "blockGoogleFontsTitle": {
+        "message": "Google Fonts ಅನ್ನು ತಡೆಹಿಡಿ",
+        "description": "Block Google Fonts"
+    },
+    "blockGoogleFontsDescription": {
+        "message": "ಕಾಣೆಯಾಗಿರುವ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಅನುಮತಿಸಿದರೆ, \"fonts.googleapis.com\" ಗೆ ಸಂಪರ್ಕಗಳನ್ನು ತಡೆಹಿಡಿಯುವುದಿಲ್ಲ. ಈ ಸಂಪರ್ಕಗಳನ್ನು ತಡೆಹಿಡಿಯುವುದಕ್ಕೆ ಈ ಆಯ್ಕೆಯನ್ನು ಸಕ್ರಿಯಗೋಲಿಸಿ.",
+        "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
+    },
+    "chooseIconStyle": {
+        "message": "",
+        "description": "Choose an icon for this extension"
+    },
+    "internalStatisticsTitle": {
+        "message": "ಆಂತರಿಕ ಅಂಕಿಅಂಶಗಳು",
+        "description": "Internal statistics"
+    },
+    "internalStatisticsDescription": {
+        "message": "ಈ function ಒಂದು ಪ್ರಾಯೋಗಿಕ ಹಂತದಲ್ಲಿದೆ. ಡೇಟಾ ರವಾನೆ ಇಲ್ಲ. ಎಲ್ಲಾ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಸ್ಥಳೀಯ.",
+        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+    },
+    "headerStatistics": {
+        "message": "ಅಂಕಿಅಂಶಗಳು",
+        "description": "Statistics. The header of a statistics page."
+    },
+    "labelToday": {
+        "message": "ಇವತ್ತು",
+        "description": "Statistics view for today."
+    },
+    "labelPastWeek": {
+        "message": "ಕಳೆದ ವಾರ",
+        "description": "Statistics view for past week."
+    },
+    "labelPastMonth": {
+        "message": "ಕಳೆದ ತಿಂಗಳು",
+        "description": "Statistics view for past month."
+    },
+    "labelPastYear": {
+        "message": "ಕಳೆದ ವರ್ಷ",
+        "description": "Statistics view for past year."
+    },
+    "labelDelete": {
+        "message": "ಅಳಿಸಿ",
+        "description": "Button to delete all statistics data."
+    },
+    "labelAvg": {
+        "message": "ಸರಾಸರಿ (ದಿನಕ್ಕೆ ಬದಲಾವಣೆಗಳು)",
+        "description": "Followed by a number of average injections per day within a specific period."
+    },
+    "labelInjectedFrameworks": {
+        "message": "ಬದಲಿಸಿದ framework ಗಳು",
+        "description": "Followed by a number of injections within a specific period."
+    },
+    "dialogConfirmDeleteStatistics": {
+        "message": "ನೀವು ಖಚಿತವಾಗಿಯೂ ಅಂಕಿಅಂಶಗಳನ್ನು ಅಳಿಸಬೇಕಾ?",
+        "description": "Are you sure you want to delete the statistics?"
+    },
+    "labelDomainsWhitelistGoogleFonts": {
+        "message": "",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+    },
+    "btnGeneral": {
+        "message": "ಮೂಲ",
+        "description": "Basic"
+    },
+    "btnAdvanced": {
+        "message": "ಸುಧಾರಿತ",
+        "description": "Advanced"
+    },
+    "btnOther": {
+        "message": "ಇತರ",
+        "description": "Other"
+    },
+    "btnInfo": {
+        "message": "ಮಾಹಿತಿ",
+        "description": "Info"
+    },
+    "headerStorageType": {
+        "message": "ಸಂಗ್ರಹಣೆಯ ರೀತಿ",
+        "description": "Storage type"
+    },
+    "labelStorageTypeLocal": {
+        "message": "",
+        "description": "Local"
+    },
+    "labelStorageTypeSync": {
+        "message": "",
+        "description": "Sync"
+    },
+    "headerImportExport": {
+        "message": "",
+        "description": "Import/Export"
+    },
+    "labelExportData": {
+        "message": "",
+        "description": "Back up to file"
+    },
+    "labelImportData": {
+        "message": "",
+        "description": "Restore from file"
+    },
+    "dialogImportSuccessful": {
+        "message": "",
+        "description": "Import successful"
+    },
+    "dialogImportFailed": {
+        "message": "",
+        "description": "Import failed"
+    }
+}
