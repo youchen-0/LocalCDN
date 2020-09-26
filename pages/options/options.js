@@ -400,7 +400,6 @@ options._setDefaultColor = function ({ target }) {
         document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
         document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
         document.getElementById('badged-background-color').value = options._backgroundColor;
-
     }
 };
 
@@ -414,8 +413,8 @@ options._onDocumentLoaded = function () {
     options._optionElements = options._getOptionElements();
     options._languageSupported = helpers.languageIsFullySupported(language);
     options._scriptDirection = helpers.determineScriptDirection(language);
-    options._colorPicker();
 
+    options._colorPicker();
     options._renderContents();
 };
 
