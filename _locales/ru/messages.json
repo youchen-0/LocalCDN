@@ -68,7 +68,7 @@
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "Скопировать",
+        "message": "Копировать",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
