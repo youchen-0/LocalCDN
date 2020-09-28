@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Προστατεύει από παρακολούθηση μέσω \"δωρεάν\" διανομής περιεχόμενου.",
+        "message": "Προστατεύει από παρακολούθηση μέσω «δωρεάν» διανομής περιεχόμενου.",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
@@ -20,7 +20,7 @@
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Μπλοκ αιτήσεων για ανύπαρκτους πόρους",
+        "message": "Μπλοκάρισμα αιτήσεων για ανύπαρκτους πόρους",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -72,19 +72,19 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Ενεργοποίηση σύνδεσης στην κονσόλα προγράμματος περιήγησης",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Άνοιγμα «Κονσόλας Προγράμματος Περιήγησης» ( CTRL + SHIFT + J ) για εμφάνιση των πόρων που λείπουν.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "",
+        "message": "Απενεργοποίηση σημειώσεων έκδοσης",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Ενεργοποίηση της μη ενημέρωσης για νέα χαρακτηριστικά του LocalCDN. Συμπεριλαμβάνονται οι νέοι κανόνες για το πρόγραμμα αποκλεισμού διαφημίσεών σας.",
+        "message": "Απενεργοποίηση ενημερώσεων για νέα χαρακτηριστικά του LocalCDN, συμπεριλαμβανομένων των νέων κανόνων για το πρόγραμμα αποκλεισμού διαφημίσεων που χρησιμοποιείτε.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
@@ -104,7 +104,7 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Αντιστροφή φίλτρου HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -120,7 +120,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Εισαγωγή τομέων για διαχείριση ή αγνόηση από το φίλτρο HTML. Διαχώρισε πολλαπλές εισαγωγές με ερωτηματικά (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -132,7 +132,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Εάν επιτρέπονται τα αιτήματα για πόρους που λείπουν, οι συνδέσεις στο «fonts.googleapis.com» δεν μπλοκάρονται. Ενεργοποίηση της επιλογής για μπλοκάρισμα των αιτημάτων.",
+        "message": "Εάν επιτρέπονται τα αιτήματα για ανύπαρκτους πόρους, οι συνδέσεις στο «fonts.googleapis.com» δεν μπλοκάρονται. Ενεργοποίηση αυτής της επιλογής για μπλοκάρισμα των αιτημάτων.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -140,7 +140,7 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Εσωτερικά στατιστικά στοιχεία",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
@@ -184,7 +184,7 @@
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Χώρισε τις πολλαπλές καταχωρίσεις με ερωτηματικά (;).",
+        "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Διαχώρισε τις πολλαπλές καταχωρίσεις με ερωτηματικά (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
@@ -192,7 +192,7 @@
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Προχωρημένο",
         "description": "Advanced"
     },
     "btnOther": {
@@ -220,7 +220,7 @@
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Δημιουργία αντιγράφου ασφαλείας",
         "description": "Back up to file"
     },
     "labelImportData": {
