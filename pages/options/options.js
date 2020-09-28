@@ -43,6 +43,7 @@ options._renderContents = function () {
     if (BrowserType.CHROMIUM) {
         document.getElementById('html-filter-div').style.display = 'none';
         document.getElementById('block-google-fonts').style.display = 'none';
+        document.getElementById('div-badged-text-color').style.display = 'none';
     }
 
     if (!chrome.browserAction.setIcon) {
@@ -155,7 +156,7 @@ options._renderOptionsPanel = function () {
 
     if (options._platformSupportIcons) {
         document.getElementById('badged-background-color').addEventListener('keyup', options._onChangedHexColor);
-        document.getElementById('badged-text-color').addEventListener('keyup', options._onChangedHexColor);   
+        document.getElementById('badged-text-color').addEventListener('keyup', options._onChangedHexColor);
     }
 
     document.getElementById('restore-background-color').addEventListener('click', options._setDefaultColor);
