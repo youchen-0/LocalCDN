@@ -407,7 +407,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/fontawesome/4.')) {
         return '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
-        return '5.14.0';
+        return '5.15.0';
     } else if (type.includes('/history/')) {
         return '4.10.1';
     } else if (type.includes('/hls.js/')) {
