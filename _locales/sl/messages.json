@@ -1,238 +1,238 @@
 {
     "extensionDescription": {
-        "message": "保护你免受“免费”，中心化内容分发的跟踪。",
+        "message": "Varuje vas pred sledenjem z \"prostim\", centrali.",
         "description": "Extension description."
     },
     "amountInjectedDescription": {
-        "message": "自安装以来本地内容分发网络资源注入数量。",
+        "message": "",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "选项",
+        "message": "",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "在图标上显示注入数量",
+        "message": "",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "在扩展图标上显示注入资源的数量。",
+        "message": "",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "阻止缺失资源的请求",
+        "message": "",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "如果请求的资源在本地不可用，则取消被拦截的请求。",
+        "message": "",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "禁用链接预读取",
+        "message": "",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "避免本应禁止的请求发到网络。",
+        "message": "",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "清除被允许的请求中的元数据",
+        "message": "",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "从被允许的 CDN 请求中擦除敏感数据以保护隐私。",
+        "message": "",
         "description": "Strip metadata description."
     },
     "whitelistedDomainsTitle": {
-        "message": "排除要检查的域名:",
+        "message": "",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "whitelistedDomainsDescription": {
-        "message": "输入要禁用 LocalCDN 的域名。用分号 (;) 分隔多项。",
+        "message": "",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "高级",
+        "message": "",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "为你的广告拦截器生成规则集",
+        "message": "",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "如果你正在使用一个广告拦截器，你可以在这里生成规则。你必须在你的广告拦截器中手动添加这些规则。",
+        "message": "",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "最后更新：",
+        "message": "",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "复制",
+        "message": "",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "在浏览器控制台中启用日志记录",
+        "message": "",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "打开“浏览器控制台” ( CTRL + SHIFT + J ) 以展示缺失的资源.",
+        "message": "",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "hideReleaseNotesTitle": {
-        "message": "关闭发布说明",
+        "message": "",
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "打开这个选项以停止接受 LocalCDN 的所有新特性相关信息。这包括用于你的广告拦截器的新规则。",
+        "message": "",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "这个功能会破坏网页。除非你准备手动在白名单中添加任何受影响域名，不要启用此功能。",
+        "message": "",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "禁用",
+        "message": "",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "过滤 HTML 源码",
+        "message": "",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "捐赠",
+        "message": "",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "反转 HTML 过滤器",
+        "message": "",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "启用此选项以始终应用 HTML 过滤器。列表中的域将被忽略。如果禁用此选项，则 HTML 过滤器仅应用于列表中的域。",
+        "message": "",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "此功能可能会破坏网站。请注意 Wiki 页面上的信息。",
+        "message": "",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "不要将 HTML 过滤器应用于这些域：",
+        "message": "",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "输入 HTML 过滤器要处理或忽略的域。使用分号 (;) 分隔多项。",
+        "message": "",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "对这些域应用 HTML 过滤器：",
+        "message": "",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "屏蔽 Google Fonts",
+        "message": "",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "如果允许请求缺少资源，则不会阻止到 \"fonts.googleapis.com\" 的连接。启用此选项可阻止这些请求。",
+        "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "选择此扩展程序的图标",
+        "message": "",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "内部统计数据",
+        "message": "",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "此功能当前处于实验阶段。无数据传输。全部在本地设备上。",
+        "message": "",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "统计数据",
+        "message": "",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "今天",
+        "message": "",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "上周",
+        "message": "",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "上月",
+        "message": "",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "去年",
+        "message": "",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "删除",
+        "message": "",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "平均（替换每天）",
+        "message": "",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "已替换框架",
+        "message": "",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "您确实想要删除统计数据吗？",
+        "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsWhitelistGoogleFonts": {
-        "message": "允许这些域名加载 Google Fonts。用分号 (;) 分隔多项。",
+        "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "基础",
+        "message": "",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "高级",
+        "message": "",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "其他",
+        "message": "",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "信息",
+        "message": "",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "存储类型",
+        "message": "",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "本地",
+        "message": "",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "同步",
+        "message": "",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "导入/导出",
+        "message": "",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "备份到文件",
+        "message": "",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "从文件还原",
+        "message": "",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "成功导入",
+        "message": "",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "导入失败",
+        "message": "",
         "description": "Import failed"
     }
 }
