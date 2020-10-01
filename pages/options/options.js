@@ -43,10 +43,12 @@ options._renderContents = function () {
     if (BrowserType.CHROMIUM) {
         document.getElementById('html-filter-div').style.display = 'none';
         document.getElementById('block-google-fonts').style.display = 'none';
+        document.getElementById('div-badged-text-color').style.display = 'none';
     }
 
     if (!chrome.browserAction.setIcon) {
         document.getElementById('icon-style-div').style.display = 'none';
+        options._platformSupportIcons = false;
     }
     options._renderInfoPanel();
     document.getElementById('label-version').textContent = helpers.formatVersion(chrome.runtime.getManifest().version);
@@ -108,27 +110,28 @@ options._renderOptionsPanel = function () {
         document.getElementById('storage-type-sync').checked = true;
     }
 
-    if (options._optionValues.selectedIcon === 'Default') {
-        document.getElementById('icon-default').checked = true;
-    } else if (options._optionValues.selectedIcon === 'Grey') {
-        document.getElementById('icon-grey').checked = true;
-    } else if (options._optionValues.selectedIcon === 'Light') {
-        document.getElementById('icon-light').checked = true;
+    if (options._platformSupportIcons) {
+        if (options._optionValues.selectedIcon === 'Default') {
+            document.getElementById('icon-default').checked = true;
+        } else if (options._optionValues.selectedIcon === 'Grey') {
+            document.getElementById('icon-grey').checked = true;
+        } else if (options._optionValues.selectedIcon === 'Light') {
+            document.getElementById('icon-light').checked = true;
+        }
+        url = chrome.runtime.getURL('icons/action/' + options._optionValues.selectedIcon.toLowerCase() + '/icon38-default.png');
+        document.getElementById('icon-badge-preview').src = url;
+
+        bgColor = options._optionValues.badgeColor || '#4A826C';
+        txtColor = options._optionValues.badgeTextColor || '#FFFFFF';
+
+        document.getElementById('counter-preview-badge').style.backgroundColor = bgColor;
+        document.getElementById('pre-badged-background-color').style.backgroundColor = bgColor;
+        document.getElementById('badged-background-color').value = bgColor;
+
+        document.getElementById('counter-preview-badge').style.color = txtColor;
+        document.getElementById('pre-badged-text-color').style.backgroundColor = txtColor;
+        document.getElementById('badged-text-color').value = txtColor;
     }
-
-    url = chrome.runtime.getURL('icons/action/' + options._optionValues.selectedIcon.toLowerCase() + '/icon38-default.png');
-    document.getElementById('icon-badge-preview').src = url;
-
-    bgColor = options._optionValues.badgeColor || '#4A826C';
-    txtColor = options._optionValues.badgeTextColor || '#FFFFFF';
-
-    document.getElementById('counter-preview-badge').style.backgroundColor = bgColor;
-    document.getElementById('pre-badged-background-color').style.backgroundColor = bgColor;
-    document.getElementById('badged-background-color').value = bgColor;
-
-    document.getElementById('counter-preview-badge').style.color = txtColor;
-    document.getElementById('pre-badged-text-color').style.backgroundColor = txtColor;
-    document.getElementById('badged-text-color').value = txtColor;
 
     document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
@@ -151,8 +154,10 @@ options._renderOptionsPanel = function () {
     document.getElementById('import-data').addEventListener('click', storageManager.startImportFilePicker);
     document.getElementById('import-file-picker').addEventListener('change', storageManager.handleImportFilePicker);
 
-    document.getElementById('badged-background-color').addEventListener('keyup', options._onChangedHexColor);
-    document.getElementById('badged-text-color').addEventListener('keyup', options._onChangedHexColor);
+    if (options._platformSupportIcons) {
+        document.getElementById('badged-background-color').addEventListener('keyup', options._onChangedHexColor);
+        document.getElementById('badged-text-color').addEventListener('keyup', options._onChangedHexColor);
+    }
 
     document.getElementById('restore-background-color').addEventListener('click', options._setDefaultColor);
     document.getElementById('restore-text-color').addEventListener('click', options._setDefaultColor);
@@ -554,6 +559,7 @@ options._internalStatistics = false;
 options._storageType = 'local';
 options._listOfFrameworks = {};
 options._listOfCDNs = {};
+options._platformSupportIcons = true;
 
 document.addEventListener('DOMContentLoaded', options._onDocumentLoaded);
 
