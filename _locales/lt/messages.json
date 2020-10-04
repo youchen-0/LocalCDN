@@ -60,7 +60,7 @@
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Jei naudojate turinio blokatoriu jūs galite sugeneruoti taisyklės čia. Jus turėsite pridėti jas pats per jūsų turinio blokatoriu",
+        "message": "Jei naudojate skelbimų/reklamų blokatoriu jūs galite sugeneruoti taisyklės čia. Jus turėsite pridėti jas pats per jūsų skelbimų/reklamų blokatoriu",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
