@@ -372,7 +372,7 @@ helpers.setLastVersion = function (type, version) {
         return '2.2.2';
     } else if (type.includes('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
-    } else if (type.includes('/Chart.js/2.')) {
+    } else if (type.includes('/chart.js/2.')) {
         return '2.9.3';
     } else if (type.includes('/clipboard.js/1.')) {
         return '1.7.1';
