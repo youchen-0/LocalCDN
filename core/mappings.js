@@ -395,6 +395,7 @@ var mappings = {
             '@findify/bundle@{version}/dist/vendors~initializer.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/vendors~sentry.js': resources.findifyBundle,
             'flv.js/dist/flv.min.js': resources.flvJS,
+            'font-awesome@{version}/css/font-awesome.': resources.fontawesome,
             'hls.js/dist/hls.min.js': resources.hlsJS,
             'history@{version}/umd/history.min.js': resources.history,
             'hls.js@latest': resources.hlsJS,
