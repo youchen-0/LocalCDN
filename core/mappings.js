@@ -379,6 +379,7 @@ var mappings = {
             'backbone@{version}/backbone.min.': resources.backbone,
             'bootstrap@{version}/dist/js/bootstrap.': resources.bootstrapJS,
             'bootstrap@{version}/dist/css/bootstrap.': resources.bootstrapCSS,
+            'clipboard@{version}/dist/clipboard.': resources.clipboardJS,
             'dojo@{version}/dojo.': resources.dojo,
             'ember-source@{version}/dist/ember.': resources.ember,
             'ember-source@{version}/dist/ember.min.': resources.ember,
