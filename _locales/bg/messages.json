@@ -56,7 +56,7 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Генерирайте набори от правила за uBlock или uMatrix",
+        "message": "ГенерАко е активирано, няма да получавате никаква информация за нови функции в LocalCDN. Това включва информация за новите правила uBlock / uMatrix.ирайте набори от правила за uBlock или uMatrix",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
@@ -185,7 +185,7 @@
     },
     "labelDomainsWhitelistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
         "message": "",
