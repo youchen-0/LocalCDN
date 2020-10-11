@@ -56,7 +56,7 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "生成专属规则为你的广告过滤器",
+        "message": "为你的广告拦截器生成规则集",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
@@ -84,15 +84,15 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "打开这个按钮以停止接受 LocalCDN 的所有新特性相关信息。这包括任何为你的广告过滤器所设计的规则。",
+        "message": "打开这个选项以停止接受 LocalCDN 的所有新特性相关信息。这包括用于你的广告拦截器的新规则。",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "这个选项会损坏网页. 除非你准备要手动在白名单中添加任何被损坏的域名, 不要打开该选项.",
+        "message": "这个功能会破坏网页。除非你准备手动在白名单中添加任何受影响域名，不要启用此功能。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
     },
     "featureBreaksWebsitesButton": {
-        "message": "关闭",
+        "message": "禁用",
         "description": "Disable"
     },
     "labelManipulateDOM": {

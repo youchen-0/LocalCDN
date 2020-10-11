@@ -379,6 +379,7 @@ var mappings = {
             'backbone@{version}/backbone.min.': resources.backbone,
             'bootstrap@{version}/dist/js/bootstrap.': resources.bootstrapJS,
             'bootstrap@{version}/dist/css/bootstrap.': resources.bootstrapCSS,
+            'clipboard@{version}/dist/clipboard.': resources.clipboardJS,
             'dojo@{version}/dojo.': resources.dojo,
             'ember-source@{version}/dist/ember.': resources.ember,
             'ember-source@{version}/dist/ember.min.': resources.ember,
@@ -394,6 +395,7 @@ var mappings = {
             '@findify/bundle@{version}/dist/vendors~initializer.js': resources.findifyBundle,
             '@findify/bundle@{version}/dist/vendors~sentry.js': resources.findifyBundle,
             'flv.js/dist/flv.min.js': resources.flvJS,
+            'font-awesome@{version}/css/font-awesome.': resources.fontawesome,
             'hls.js/dist/hls.min.js': resources.hlsJS,
             'history@{version}/umd/history.min.js': resources.history,
             'hls.js@latest': resources.hlsJS,
@@ -787,7 +789,7 @@ var mappings = {
             '{version}/css/bootstrap.min.': resources.bootstrapCSS
         },
         '/font-awesome/': {
-            '{version}/css/font-awesome.css': resources.fontawesome
+            '{version}/css/font-awesome.': resources.fontawesome
         }
     },
     // Font Awesome CDN

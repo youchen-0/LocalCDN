@@ -117,8 +117,14 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     });
 
     resourcePath = channelPath.replace(basePath, '');
-    versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
-    resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
+    if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
+        versionNumber = channelPath.match(/\d/);
+        resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
+        versionNumber = [versionNumber + '.0'];
+    } else {
+        versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
+        resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
+    }
 
     shorthandResource = shorthands.specialFiles(channelHost, channelPath, destinationSearchString);
     if (shorthandResource) {
