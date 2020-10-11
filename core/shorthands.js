@@ -108,6 +108,14 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/object-assign/4.1.1/object-assign.min.jsm',
             'bundle': ''
         };
+    } else if ((channelHost + channelPath) === 'netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css') {
+        // This CDN delivers 'Font Awesome v4.7.0' as latest version
+        return {
+            'source': channelHost,
+            'versionRequested': '4.7.0',
+            'path': 'resources/fontawesome/4.7.0/css/font-awesome.min.css',
+            'bundle': ''
+        };
     } else {
         return false;
     }

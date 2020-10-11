@@ -789,7 +789,7 @@ var mappings = {
             '{version}/css/bootstrap.min.': resources.bootstrapCSS
         },
         '/font-awesome/': {
-            '{version}/css/font-awesome.css': resources.fontawesome
+            '{version}/css/font-awesome.': resources.fontawesome
         }
     },
     // Font Awesome CDN
