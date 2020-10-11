@@ -330,7 +330,7 @@ options._renderInfoPanel = function () {
     btnCDNs.addEventListener('click', options._btnCreateList);
 
     // Reduce CDNs by 3, because loli.net includes = cdn.css.net, cdnjs.loli.net, ajax.loli.net, fonts.loli.net
-    btnCDNs.value += Object.keys(mappings).length - 3;
+    btnCDNs.value += Object.keys(mappings.cdn).length - 3;
     btnFrameworks.value += Object.keys(options._listOfFrameworks).length - unsupportedFrameworks;
 };
 
@@ -352,7 +352,7 @@ options._createList = function (type) {
     textArea.value = '';
 
     if (type === 'cdn') {
-        list = Object.keys(mappings);
+        list = Object.keys(mappings.cdn);
     } else if (type === 'framework') {
         list = Object.keys(options._listOfFrameworks);
     } else {

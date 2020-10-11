@@ -77,7 +77,7 @@ requestAnalyzer.getLocalTarget = function (requestDetails) {
     }
 
     // Use the proper mappings for the targeted host.
-    hostMappings = mappings[destinationHost];
+    hostMappings = mappings.cdn[destinationHost];
 
     // Resource mapping files are never locally available.
     if (Resource.MAPPING_EXPRESSION.test(destinationPath)) {

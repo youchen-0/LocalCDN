@@ -115,7 +115,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
  */
 
  let whitelistedDomains = {};
- let cdnDomainsRE = new RegExp('//(' + Object.keys(mappings).map(m => m.replace(/\W/g, '\\$&')).join('|') + ')/');
+ let cdnDomainsRE = new RegExp('//(' + Object.keys(mappings.cdn).map(m => m.replace(/\W/g, '\\$&')).join('|') + ')/');
 
 
 /**

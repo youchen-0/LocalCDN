@@ -278,7 +278,7 @@ stateManager.validHosts = [];
 stateManager.selectedIcon = 'Default';
 stateManager.internalStatistics = false;
 
-for (let mapping in mappings) {
+for (let mapping in mappings.cdn) {
 
     let supportedHost = Address.ANY_PROTOCOL + mapping + Address.ANY_PATH;
     stateManager.validHosts.push(supportedHost);

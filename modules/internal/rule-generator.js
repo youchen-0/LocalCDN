@@ -24,7 +24,7 @@ var ruleGenerator = {};
  * Public Methods
  */
 ruleGenerator.openRuleSet = function ({ target }) {
-    let urls = mappings;
+    let urls = mappings.cdn;
     let key = target.getAttribute('data-option');
 
     let textArea = document.getElementById('generated-rules');
