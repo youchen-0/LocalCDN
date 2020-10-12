@@ -133,7 +133,7 @@ options._renderOptionsPanel = function () {
         document.getElementById('badged-text-color').value = txtColor;
     }
 
-    document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
+    document.getElementById('last-mapping-update').textContent += ' ' + mappings.lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
     document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
     document.getElementById('link-changelog').addEventListener('click', function () { options._onLinkClick(Links.CHANGELOG); });
