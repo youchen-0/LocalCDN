@@ -255,6 +255,10 @@ body {
     margin-top: 0px !important;
 }
 
+div[class="color-picker:a"] {
+    display: none;
+}
+
 .color-error {
     color: red;
 }
