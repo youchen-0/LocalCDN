@@ -744,15 +744,6 @@ var resources = {
         'path': 'resources/tether/{version}/js/tether.min.jsm',
         'type': 'application/javascript'
     },
-    // Twitter Bootstrap
-    'twitterBootstrapJS': {
-        'path': 'resources/twitter-bootstrap/{version}/js/bootstrap.min.jsm',
-        'type': 'application/javascript'
-    },
-    'twitterBootstrapCSS': {
-        'path': 'resources/twitter-bootstrap/{version}/css/bootstrap.min.css',
-        'type': 'text/css'
-    },
     // toastr
     'toastrCSS': {
         'path': 'resources/toastr.js/{version}/toastr.min.css',

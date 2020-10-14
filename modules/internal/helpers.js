@@ -561,12 +561,6 @@ helpers.setLastVersion = function (type, version) {
         return '1.4.7';
     } else if (type.includes('/tooltipster/3.')) {
         return '3.3.0';
-    } else if (type.includes('/twitter-bootstrap/4.')) {
-        return '4.5.0';
-    } else if (type.includes('/twitter-bootstrap/3.')) {
-        return '3.4.1';
-    } else if (type.includes('/twitter-bootstrap/2.')) {
-        return '2.3.2';
     } else if (type.includes('/toastr.js/2.')) {
         return '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
