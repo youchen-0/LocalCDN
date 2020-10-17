@@ -43,11 +43,11 @@
         "message": "从被允许的 CDN 请求中擦除敏感数据以保护隐私。",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "排除要检查的域名:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "输入要禁用 LocalCDN 的域名。用分号 (;) 分隔多项。",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "这个功能会破坏网页。除非你准备手动在白名单中添加任何受影响域名，不要启用此功能。",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "禁用",
@@ -183,7 +183,7 @@
         "message": "您确实想要删除统计数据吗？",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "允许这些域名加载 Google Fonts。用分号 (;) 分隔多项。",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

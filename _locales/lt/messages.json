@@ -43,11 +43,11 @@
         "message": "Išnaikinti sensityvią informacija iš leistinų CDN-Prašymų dėl pagerinto privatumo.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Išjungti LocalCDN šitiems Tinklapiams:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Įveskite Tinklapius kuriuos norite, kad būtų išjungtą LocalCDN. Daugiskaitinius Tinklus pažymėkite su (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Šitą funkciją sunaikiną tinklapius. Nepalikite ją įjungtą, nebendrais jei esate pasiruošė savarankiškai Įtraukinėti paveiktus tinklapius į Leistinų sąrašą.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Išjungti",
@@ -183,7 +183,7 @@
         "message": "Ar jūs esate tikras/-ra, kad norite ištrinti šitą statistiką?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Šitie tinklapiai yra leistini, įjungti Google šriftus. Daugiskaitinius tinklapius atskirkite su (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

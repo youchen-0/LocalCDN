@@ -43,11 +43,11 @@
         "message": "프라이버시 보호를 위해 허가된 CDN 요청에서 민감한 데이터를 지웁니다.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "다음 도메인에 대해 LocalCDN 비활성화:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "화이트 리스트에 등록할 도메인을 입력하세요. 여러 개를 입력할 경우 세미콜론 (;) 을 이용해 구분합니다.",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "이 기능은 웹사이트를 파괴합니다. 영향을 받는 도메인을 수동으로 화이트리스트할 준비가 되지 않은 경우 이 도메인을 활성화한 상태로 두지 마십시오.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "사용 안 함",
@@ -183,7 +183,7 @@
         "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
     },

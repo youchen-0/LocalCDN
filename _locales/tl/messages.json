@@ -43,12 +43,12 @@
         "message": "Burahin ang sensitibong datus mula sa mga pinahihintulutang kahilingan ng CDN para sa pinahusay na pagiging pribado nito.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Ibukod ang mga domain mula sa mga iinspeksyon",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
-        "message": "Ipasok ang mga domain upang i-whitelist sila. Paghiwalayin ang maramihang mga entry na may tuldok kuwit (;).",
+    "allowlistedDomainsDescription": {
+        "message": "Ipasok ang mga domain upang i-allowlist sila. Paghiwalayin ang maramihang mga entry na may tuldok kuwit (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "",
@@ -183,7 +183,7 @@
         "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
     },

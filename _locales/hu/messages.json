@@ -43,11 +43,11 @@
         "message": "Érzékeny adatok törlése az engedélyezett CDN-kérésekből az adatvédelem fokozása érdekében.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "A LocalCDN kikapcsolása ezeknél a tartományoknál:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Adja meg a tartományokat, ahol a LocalCDN le lesz tiltva. Több bejegyzést pontosvesszővel (;) válasszon el.",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Ez a funkció megakadályozza a weboldalak helyes működését. Ne hagyja engedélyezve, hacsak nincs felkészülve az érintett tartományok kézzel történő engedélyezésére.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Letiltás",
@@ -183,7 +183,7 @@
         "message": "Biztosan törölni szeretné a statisztikákat?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Ezeknek a tartományoknak engedélyezett a Google betűkészletek betöltése. Több bejegyzést pontosvesszővel (;) válasszon el.",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

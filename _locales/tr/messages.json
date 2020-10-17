@@ -43,11 +43,11 @@
         "message": "İleri düzey gizlilik için, izin verilen CDN isteklerinden hassas verileri sil.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Bu etki alanları için LocalCDN'yi devre dışı bırak:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "LocalCDN'nin devre dışı bırakılacağı etki alanlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Bu özellik web sitelerini bozar. Etkilenen alan adlarını elle beyaz listeye almaya hazır değilseniz, etkinleştirilmiş olarak bırakmayın.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Devre dışı bırak",
@@ -183,7 +183,7 @@
         "message": "İstatistikleri silmek istediğinize emin misiniz?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Bu etki alanların Google Yazı Tiplerini yüklemesine izin verilir. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

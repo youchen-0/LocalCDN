@@ -43,11 +43,11 @@
         "message": "Hapus data sensitif dari permintaan CDN yang diizinkan untuk meningkatkan privasi.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Nonaktifkan LocalCDN untuk domain ini:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Masukkan domain ke daftar putih. Pisahkan entri dengan titik koma (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Fitur ini akan membuat situs web tidak bekerja dengan benar. Jangan membiarkannya aktif, kecuali jika anda siap menambahkan secara manual semua domain yang terdampak ke dalam daftar putih.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Nonaktifkan",
@@ -183,7 +183,7 @@
         "message": "Apakah anda yakin ingin menghapus statistik?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Domain ini diizinkan untuk memuat Google Fonts. Pisahkan beberapa entri dengan titik-koma (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

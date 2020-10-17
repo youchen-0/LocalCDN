@@ -43,11 +43,11 @@
         "message": "مسح البيانات الحساسة من طلبات CDN المسموحة لتحسين الخصوصية.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "لا تتفحص النطاقات",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "حدد النطاقات التي سوف يتم تجاهلها. إفصل المداخل المتعددة بـفاصلة منقوطة (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "",
@@ -183,7 +183,7 @@
         "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
     },

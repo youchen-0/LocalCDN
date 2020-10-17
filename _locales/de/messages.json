@@ -43,11 +43,11 @@
         "message": "Entfernt sensible Daten aus erlaubten CDN-Anfragen zur Verbesserung des Datenschutzes.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "LocalCDN für diese Domains deaktivieren:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Gib zu ignorierende Domains an. Trenne mehrere Einträge durch Semikolons (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -88,8 +88,8 @@
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Diese Funktion verursacht bei manchen Websites Fehler. Lass diese Funktion deaktiviert, es sei denn, du bist bereit, betroffene Webseiten manuell auf die Whitelist zu setzen.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "message": "Diese Funktion verursacht bei manchen Websites Fehler. Lass diese Funktion deaktiviert, es sei denn, du bist bereit, betroffene Webseiten manuell auf die Erlaubt-Liste zu setzen.",
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Deaktivieren",
@@ -183,7 +183,7 @@
         "message": "Bist du sicher, dass du die Statistiken löschen möchtest?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Diese Domains dürfen Google-Schriften laden. Trenne mehrere Einträge durch Semikolons (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

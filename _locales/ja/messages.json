@@ -43,11 +43,11 @@
         "message": "プライバシー向上のために許可されたCDNリクエストから機密データを消去する。",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "これらのドメインの LocalCDN を無効化する：",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "ホワイトリストに登録したいドメインを入力してください。エントリが複数ある場合、セミコロン (;) で区切ってください。",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "この機能は Web サイトを壊しかねません。 影響を受けるドメインを、手動でホワイトリストに登録する準備ができていない限りは「有効にしない」でください。",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "無効化",
@@ -183,7 +183,7 @@
         "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "これらのドメインは Google Fonts をロードすることがゆるされています。多数のエントリはセミコロン『；』で分けてください。",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

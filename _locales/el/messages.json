@@ -43,11 +43,11 @@
         "message": "Διαγραφή ευαίσθητων δεδομένων από CDN αιτήσεις για ενίσχυση ασφάλειας.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Απενεργοποίηση του LocalCDN γι' αυτούς τους τομείς:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Εισαγωγή διευθύνσεων στις επιτρεπόμενες. Διαχωρίστε πολλαπλές καταχωρήσεις με ερωτηματικά (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Αυτή η λειτουργία προκαλεί δυσλειτουργίες σε ιστοσελίδες. Να μην ενεργοποιηθεί, εκτός αν προτίθεστε να προσθέσετε, χειροκίνητα, στον κατάλογο επιτρεπόμενων όποιους τομείς επηρεάζονται.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Απενεργοποίηση",
@@ -183,7 +183,7 @@
         "message": "Θέλεις σίγουρα να διαγράψεις τα στατιστικά στοιχεία;",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Διαχώρισε τις πολλαπλές καταχωρίσεις με ερωτηματικά (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

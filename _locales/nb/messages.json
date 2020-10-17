@@ -43,11 +43,11 @@
         "message": "Slett sensitive data fra tillatte CDN-forespørsler for bedret personvern.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Slå av LocalCDN for disse domenene:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Skriv inn domener for å slå av LocalCDN der. Skill flere oppføringer med semikolon (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt hviteliste berørte domener.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Slå av",
@@ -183,7 +183,7 @@
         "message": "Er du sikker på at du vil slette statistikken?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Disse domenene tillates å laste Google Fonts. Skill flere oppføringer med semikolon (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
