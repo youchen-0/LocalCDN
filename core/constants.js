@@ -204,8 +204,8 @@ const Regex = {
 };
 
 const Links = {
-    'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
-    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-your-adblocker',
+    'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-7-a-website-looks-weird-or-cannot-be-used-if-i-deactivate-localcdn-everything-works-what-is-the-problem',
+    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-6-why-do-i-need-this-rule-generator-i-use-an-adblocker-and-want-to-import-these-rules-how-does-it-work',
     'WELCOME': chrome.extension.getURL('pages/welcome/welcome.html'),
     'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
     'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
