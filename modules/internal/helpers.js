@@ -609,6 +609,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'v4-shims.css': 'Font Awesome (Shim)',
     'instantsearch.production.min.jsm': 'InstantSearch.js',
     'redux.min.jsm': 'Redux',
     'react-side-effect.min.jsm': 'react-side-effect',

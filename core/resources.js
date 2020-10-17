@@ -336,6 +336,10 @@ var resources = {
         'path': 'resources/fontawesome/{version}/css/all.min.css',
         'type': 'text/css'
     },
+    'fontawesome5CSSv4shims': {
+        'path': 'resources/fontawesome/{version}/css/v4-shims.css',
+        'type': 'text/css'
+    },
     'fontawesome5JS': {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
