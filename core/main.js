@@ -41,6 +41,12 @@ main._initializeSettings = function () {
                 'value': false
             });
         }
+
+        // Copy old data
+        if (items.allowlistedDomains === null) {
+            items.allowlistedDomains = items.whitelistedDomains;
+        }
+
         stateManager.selectedIcon = items.selectedIcon;
         wrappers.setIcon({
             'path': stateManager.selectedIcon

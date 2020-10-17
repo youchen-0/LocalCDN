@@ -69,7 +69,7 @@ const Setting = {
     'HIDE_RELEASE_NOTES': 'hideReleaseNotes',
     'STRIP_METADATA': 'stripMetadata',
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
-    'ALLOWLISTED_DOMAINS': 'whitelistedDomains',
+    'ALLOWLISTED_DOMAINS': 'allowlistedDomains',
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
