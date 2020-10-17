@@ -88,7 +88,7 @@
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Ova funkcija sprečava pravilno funkcioniranje web-stranica. Deaktiviraj funkciju, osim ako želiš ručno dodavati dotične domene u popis poželjnih.",
+        "message": "Ova funkcija sprečava ispravno funkcioniranje web-stranica. Deaktiviraj funkciju, osim ako želiš ručno dodavati dotične domene u popis dozvoljenih.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
