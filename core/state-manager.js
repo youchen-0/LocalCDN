@@ -76,25 +76,25 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
     }
 };
 
-stateManager.addDomainToWhitelist = function (domain) {
+stateManager.addDomainToAllowlist = function (domain) {
 
     return new Promise((resolve) => {
 
-        let whitelistedDomains = requestAnalyzer.whitelistedDomains;
-        whitelistedDomains[domain] = true;
+        let allowlistedDomains = requestAnalyzer.allowlistedDomains;
+        allowlistedDomains[domain] = true;
 
-        storageManager.type.set({whitelistedDomains}, resolve);
+        storageManager.type.set({allowlistedDomains}, resolve);
     });
 };
 
-stateManager.removeDomainFromWhitelist = function (domain) {
+stateManager.removeDomainFromAllowlist = function (domain) {
 
     return new Promise((resolve) => {
 
-        let whitelistedDomains = requestAnalyzer.whitelistedDomains;
-        delete whitelistedDomains[domain];
+        let allowlistedDomains = requestAnalyzer.allowlistedDomains;
+        delete allowlistedDomains[domain];
 
-        storageManager.type.set({whitelistedDomains}, resolve);
+        storageManager.type.set({allowlistedDomains}, resolve);
     });
 };
 
@@ -154,10 +154,10 @@ stateManager._removeTab = function (tabIdentifier) {
 
 stateManager._updateTab = function (details) {
 
-    let tabDomain, domainIsWhitelisted, frameIdentifier, tabIdentifier;
+    let tabDomain, domainIsAllowlisted, frameIdentifier, tabIdentifier;
 
     tabDomain = helpers.extractDomainFromUrl(details.url, true);
-    domainIsWhitelisted = stateManager._domainIsListed(tabDomain);
+    domainIsAllowlisted = stateManager._domainIsListed(tabDomain);
 
     frameIdentifier = details.frameId;
     tabIdentifier = details.tabId;
@@ -171,7 +171,7 @@ stateManager._updateTab = function (details) {
         'title': 'LocalCDN (0)'
     });
 
-    if (domainIsWhitelisted) {
+    if (domainIsAllowlisted) {
 
         stateManager._setIconDisabled(tabIdentifier);
 
@@ -242,17 +242,17 @@ stateManager._domainIsListed = function (domain, listname) {
 
     if (domain !== null) {
 
-        let whitelistRecord, isWhitelisted;
+        let allowlistRecord, isAllowlisted;
 
         if (listname === "manipulate-dom") {
-            whitelistRecord = requestAnalyzer.domainsManipulateDOM[domain];
-            isWhitelisted = Boolean(whitelistRecord);
+            allowlistRecord = requestAnalyzer.domainsManipulateDOM[domain];
+            isAllowlisted = Boolean(allowlistRecord);
         } else {
-            whitelistRecord = requestAnalyzer.whitelistedDomains[domain];
-            isWhitelisted = Boolean(whitelistRecord);
+            allowlistRecord = requestAnalyzer.allowlistedDomains[domain];
+            isAllowlisted = Boolean(allowlistRecord);
         }
 
-        return isWhitelisted;
+        return isAllowlisted;
     }
 
     return false;

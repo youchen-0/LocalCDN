@@ -69,7 +69,7 @@ const Setting = {
     'HIDE_RELEASE_NOTES': 'hideReleaseNotes',
     'STRIP_METADATA': 'stripMetadata',
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
-    'WHITELISTED_DOMAINS': 'whitelistedDomains',
+    'ALLOWLISTED_DOMAINS': 'whitelistedDomains',
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
@@ -102,7 +102,7 @@ const SettingDefaults = {
     [Setting.SHOW_ICON_BADGE]: true,
     [Setting.STORAGE_TYPE]: 'local',
     [Setting.STRIP_METADATA]: true,
-    [Setting.WHITELISTED_DOMAINS]: {},
+    [Setting.ALLOWLISTED_DOMAINS]: {},
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
     [Setting.BADGE_COLOR]: '#4A826C',
     [Setting.BADGE_TEXT_COLOR]: '#FFFFFF'
@@ -120,7 +120,7 @@ const WebRequestType = {
     'XHR': 'xmlhttprequest'
 };
 
-const Whitelist = {
+const Allowlist = {
     'TRIM_EXPRESSION': /^;+|;+$/g,
     'VALUE_SEPARATOR': ';'
 };

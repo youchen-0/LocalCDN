@@ -377,11 +377,11 @@ div[class="color-picker:a"] {
     border-color: gray !important;
 }
 
-#div-domains-whitelist-google-fonts {
+#div-domains-allowlist-google-fonts {
     margin-top: 1em;
 }
 
-#tf-domains-whitelist-google-fonts {
+#tf-domains-allowlist-google-fonts {
     margin-top: 0px !important;
     width: 100%;
     box-sizing: border-box;
