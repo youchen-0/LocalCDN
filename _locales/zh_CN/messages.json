@@ -88,7 +88,7 @@
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "这个功能会破坏网页。除非你准备手动在白名单中添加任何受影响域名，不要启用此功能。",
+        "message": "这个功能会破坏网站。不要让它处于启用状态，除非您准备手动将受影响的域添加到允许列表中。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
