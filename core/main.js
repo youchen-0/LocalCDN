@@ -43,7 +43,7 @@ main._initializeSettings = function () {
         }
 
         // Copy old data
-        if (items.allowlistedDomains === null) {
+        if (Object.keys(items.allowlistedDomains).length === 0) {
             items.allowlistedDomains = items.whitelistedDomains;
         }
 

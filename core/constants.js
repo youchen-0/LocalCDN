@@ -70,6 +70,7 @@ const Setting = {
     'STRIP_METADATA': 'stripMetadata',
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
     'ALLOWLISTED_DOMAINS': 'allowlistedDomains',
+    'WHITELISTED_DOMAINS': 'whitelistedDomains',
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
@@ -103,6 +104,7 @@ const SettingDefaults = {
     [Setting.STORAGE_TYPE]: 'local',
     [Setting.STRIP_METADATA]: true,
     [Setting.ALLOWLISTED_DOMAINS]: {},
+    [Setting.WHITELISTED_DOMAINS]: {},
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
     [Setting.BADGE_COLOR]: '#4A826C',
     [Setting.BADGE_TEXT_COLOR]: '#FFFFFF'
