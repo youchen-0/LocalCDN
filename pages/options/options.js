@@ -55,18 +55,18 @@ options._renderContents = function () {
 };
 
 options._renderOptionsPanel = function () {
-    let whitelistedDomains, domainWhitelist, elements, htmlFilterDomains, domainHtmlFilter, googleFontsDomains, domainAllowedGoogleFonts, url, bgColor, txtColor;
+    let allowlistedDomains, domainAllowlist, elements, htmlFilterDomains, domainHtmlFilter, googleFontsDomains, domainAllowedGoogleFonts, url, bgColor, txtColor;
 
     Object.assign(options._optionValues, { [Setting.INTERNAL_STATISTICS]: options._internalStatistics });
 
-    whitelistedDomains = options._optionValues.whitelistedDomains;
-    domainWhitelist = options._serializeWhitelistedDomains(whitelistedDomains);
+    allowlistedDomains = options._optionValues.allowlistedDomains;
+    domainAllowlist = options._serializeAllowlistedDomains(allowlistedDomains);
 
     htmlFilterDomains = options._optionValues.domainsManipulateDOM;
-    domainHtmlFilter = options._serializeWhitelistedDomains(htmlFilterDomains);
+    domainHtmlFilter = options._serializeAllowlistedDomains(htmlFilterDomains);
 
     googleFontsDomains = options._optionValues.allowedDomainsGoogleFonts;
-    domainAllowedGoogleFonts = options._serializeWhitelistedDomains(googleFontsDomains);
+    domainAllowedGoogleFonts = options._serializeAllowlistedDomains(googleFontsDomains);
 
     elements = options._optionElements;
     Object.assign(elements, { [Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics') });
@@ -79,7 +79,7 @@ options._renderOptionsPanel = function () {
     elements.stripMetadata.checked = options._optionValues.stripMetadata;
     elements.hideReleaseNotes.checked = options._optionValues.hideReleaseNotes;
     elements.enableLogging.checked = options._optionValues.enableLogging;
-    elements.whitelistedDomains.value = domainWhitelist;
+    elements.allowlistedDomains.value = domainAllowlist;
     elements.domainsManipulateDOM.value = domainHtmlFilter;
     elements.negateHtmlFilterList.checked = options._optionValues.negateHtmlFilterList;
     elements.blockGoogleFonts.checked = options._optionValues.blockGoogleFonts;
@@ -99,9 +99,9 @@ options._renderOptionsPanel = function () {
     }
 
     if (elements.blockGoogleFonts.checked) {
-        document.getElementById('div-domains-whitelist-google-fonts').style.display = 'block';
+        document.getElementById('div-domains-allowlist-google-fonts').style.display = 'block';
     } else {
-        document.getElementById('div-domains-whitelist-google-fonts').style.display = 'none';
+        document.getElementById('div-domains-allowlist-google-fonts').style.display = 'none';
     }
 
     if (elements.storageType === 'local') {
@@ -133,7 +133,7 @@ options._renderOptionsPanel = function () {
         document.getElementById('badged-text-color').value = txtColor;
     }
 
-    document.getElementById('last-mapping-update').textContent += ' ' + lastMappingUpdate;
+    document.getElementById('last-mapping-update').textContent += ' ' + mappings.lastMappingUpdate;
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
     document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
     document.getElementById('link-changelog').addEventListener('click', function () { options._onLinkClick(Links.CHANGELOG); });
@@ -185,7 +185,7 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.stripMetadata.addEventListener('change', options._onOptionChanged);
     elements.enableLogging.addEventListener('change', options._onOptionChanged);
     elements.hideReleaseNotes.addEventListener('change', options._onOptionChanged);
-    elements.whitelistedDomains.addEventListener('keyup', options._onOptionChanged);
+    elements.allowlistedDomains.addEventListener('keyup', options._onOptionChanged);
     elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
     elements.blockGoogleFonts.addEventListener('change', options._onOptionChanged);
@@ -242,7 +242,7 @@ options._getOptionElements = function () {
         [Setting.BLOCK_MISSING]: options._getOptionElement(Setting.BLOCK_MISSING),
         [Setting.DISABLE_PREFETCH]: options._getOptionElement(Setting.DISABLE_PREFETCH),
         [Setting.STRIP_METADATA]: options._getOptionElement(Setting.STRIP_METADATA),
-        [Setting.WHITELISTED_DOMAINS]: options._getOptionElement(Setting.WHITELISTED_DOMAINS),
+        [Setting.ALLOWLISTED_DOMAINS]: options._getOptionElement(Setting.ALLOWLISTED_DOMAINS),
         [Setting.HIDE_RELEASE_NOTES]: options._getOptionElement(Setting.HIDE_RELEASE_NOTES),
         [Setting.LOGGING]: options._getOptionElement(Setting.LOGGING),
         ['ruleSets']: document.getElementsByName('rule-sets'),
@@ -270,32 +270,32 @@ options._configureLinkPrefetching = function (value) {
     }
 };
 
-options._serializeWhitelistedDomains = function (whitelistedDomains) {
-    if (whitelistedDomains === undefined) return '';
+options._serializeAllowlistedDomains = function (allowlistedDomains) {
+    if (allowlistedDomains === undefined) return '';
 
-    let domainWhitelist, whitelistedDomainKeys;
+    let domainAllowlist, allowlistedDomainKeys;
 
-    whitelistedDomainKeys = Object.keys(whitelistedDomains);
-    domainWhitelist = '';
+    allowlistedDomainKeys = Object.keys(allowlistedDomains);
+    domainAllowlist = '';
 
-    whitelistedDomainKeys.forEach(function (domain) {
-        domainWhitelist = `${domainWhitelist}${domain};`;
+    allowlistedDomainKeys.forEach(function (domain) {
+        domainAllowlist = `${domainAllowlist}${domain};`;
     });
 
-    domainWhitelist = domainWhitelist.slice(0, -1);
-    domainWhitelist = domainWhitelist.replace(Whitelist.TRIM_EXPRESSION, '');
+    domainAllowlist = domainAllowlist.slice(0, -1);
+    domainAllowlist = domainAllowlist.replace(Allowlist.TRIM_EXPRESSION, '');
 
-    return domainWhitelist;
+    return domainAllowlist;
 };
 
-options._parseDomainWhitelist = function (domainWhitelist) {
-    let whitelistedDomains = {};
+options._parseDomainAllowlist = function (domainAllowlist) {
+    let allowlistedDomains = {};
 
-    domainWhitelist.split(Whitelist.VALUE_SEPARATOR).forEach(function (domain) {
-        whitelistedDomains[helpers.normalizeDomain(domain)] = true;
+    domainAllowlist.split(Allowlist.VALUE_SEPARATOR).forEach(function (domain) {
+        allowlistedDomains[helpers.normalizeDomain(domain)] = true;
     });
 
-    return whitelistedDomains;
+    return allowlistedDomains;
 };
 
 options._renderInfoPanel = function () {
@@ -330,7 +330,7 @@ options._renderInfoPanel = function () {
     btnCDNs.addEventListener('click', options._btnCreateList);
 
     // Reduce CDNs by 3, because loli.net includes = cdn.css.net, cdnjs.loli.net, ajax.loli.net, fonts.loli.net
-    btnCDNs.value += Object.keys(mappings).length - 3;
+    btnCDNs.value += Object.keys(mappings.cdn).length - 3;
     btnFrameworks.value += Object.keys(options._listOfFrameworks).length - unsupportedFrameworks;
 };
 
@@ -352,7 +352,7 @@ options._createList = function (type) {
     textArea.value = '';
 
     if (type === 'cdn') {
-        list = Object.keys(mappings);
+        list = Object.keys(mappings.cdn);
     } else if (type === 'framework') {
         list = Object.keys(options._listOfFrameworks);
     } else {
@@ -447,15 +447,15 @@ options._onOptionChanged = function ({ target }) {
         options._configureLinkPrefetching(optionValue);
     }
 
-    if (optionKey === Setting.WHITELISTED_DOMAINS || optionKey === Setting.DOMAINS_MANIPULATE_DOM || optionKey === Setting.ALLOWED_DOMAINS_GOOGLE_FONTS) {
-        optionValue = options._parseDomainWhitelist(optionValue);
+    if (optionKey === Setting.ALLOWLISTED_DOMAINS || optionKey === Setting.DOMAINS_MANIPULATE_DOM || optionKey === Setting.ALLOWED_DOMAINS_GOOGLE_FONTS) {
+        optionValue = options._parseDomainAllowlist(optionValue);
     }
 
     if (optionKey === Setting.BLOCK_GOOGLE_FONTS) {
         if (optionValue === true) {
-            document.getElementById('div-domains-whitelist-google-fonts').style.display = 'block';
+            document.getElementById('div-domains-allowlist-google-fonts').style.display = 'block';
         } else {
-            document.getElementById('div-domains-whitelist-google-fonts').style.display = 'none';
+            document.getElementById('div-domains-allowlist-google-fonts').style.display = 'none';
         }
     }
 
@@ -542,10 +542,10 @@ options._updatesDomainLists = function (changes) {
     let changedItems = Object.keys(changes);
 
     if (!document.hasFocus()) {
-        if (changedItems[0] === 'whitelistedDomains') {
-            document.getElementById('tf-domains-whitelist').value = options._serializeWhitelistedDomains(changes['whitelistedDomains'].newValue);
+        if (changedItems[0] === 'allowlistedDomains') {
+            document.getElementById('tf-domains-allowlist').value = options._serializeAllowlistedDomains(changes['allowlistedDomains'].newValue);
         } else if (changedItems[0] === 'domainsManipulateDOM') {
-            document.getElementById('tf-domains-manipulate-dom').value = options._serializeWhitelistedDomains(changes['domainsManipulateDOM'].newValue);
+            document.getElementById('tf-domains-manipulate-dom').value = options._serializeAllowlistedDomains(changes['domainsManipulateDOM'].newValue);
         }
     } else {
         // document has the focus

@@ -41,6 +41,12 @@ main._initializeSettings = function () {
                 'value': false
             });
         }
+
+        // Copy old data
+        if (Object.keys(items.allowlistedDomains).length === 0) {
+            items.allowlistedDomains = items.whitelistedDomains;
+        }
+
         stateManager.selectedIcon = items.selectedIcon;
         wrappers.setIcon({
             'path': stateManager.selectedIcon
@@ -55,7 +61,7 @@ main._showReleaseNotes = function (details) {
 
     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
         storageManager.type.set({
-            [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
+            [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
         }, function() {
             if (details.temporary !== true) {
 
@@ -73,12 +79,12 @@ main._showReleaseNotes = function (details) {
         });
     } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
         storageManager.type.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
-            let mappingUpdate = items.lastMappingUpdate !== lastMappingUpdate;
+            let mappingUpdate = items.lastMappingUpdate !== mappings.lastMappingUpdate;
 
             if (mappingUpdate || !items.hideReleaseNotes) {
                 // Updated mappings.js
                 storageManager.type.set({
-                    [Setting.LAST_MAPPING_UPDATE]: lastMappingUpdate
+                    [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
                 }, function() {
                     if (!items.hideReleaseNotes) {
                         chrome.tabs.create({

@@ -69,6 +69,7 @@ const Setting = {
     'HIDE_RELEASE_NOTES': 'hideReleaseNotes',
     'STRIP_METADATA': 'stripMetadata',
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
+    'ALLOWLISTED_DOMAINS': 'allowlistedDomains',
     'WHITELISTED_DOMAINS': 'whitelistedDomains',
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
@@ -102,6 +103,7 @@ const SettingDefaults = {
     [Setting.SHOW_ICON_BADGE]: true,
     [Setting.STORAGE_TYPE]: 'local',
     [Setting.STRIP_METADATA]: true,
+    [Setting.ALLOWLISTED_DOMAINS]: {},
     [Setting.WHITELISTED_DOMAINS]: {},
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
     [Setting.BADGE_COLOR]: '#4A826C',
@@ -120,7 +122,7 @@ const WebRequestType = {
     'XHR': 'xmlhttprequest'
 };
 
-const Whitelist = {
+const Allowlist = {
     'TRIM_EXPRESSION': /^;+|;+$/g,
     'VALUE_SEPARATOR': ';'
 };
@@ -199,13 +201,13 @@ const Regex = {
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
-    'FONT_AWESOME': /use\.fontawesome\.com\/fa-code\.css/,
-    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.js/
+    'FONT_AWESOME': /use\.fontawesome\.com\/fa-loader\.css/,
+    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/
 };
 
 const Links = {
-    'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Blank-websites-or-weird-characters',
-    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Ruleset-generator-for-your-adblocker',
+    'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-7-a-website-looks-weird-or-cannot-be-used-if-i-deactivate-localcdn-everything-works-what-is-the-problem',
+    'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-6-why-do-i-need-this-rule-generator-i-use-an-adblocker-and-want-to-import-these-rules-how-does-it-work',
     'WELCOME': chrome.extension.getURL('pages/welcome/welcome.html'),
     'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
     'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),

@@ -43,11 +43,11 @@
         "message": "Izbriši osjetljive podatke iz dopuštenih CDN zahtjeva za bolju privatnosti.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Deaktiviraj LocalCDN za ove domene:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Upiši domene za deaktiviranje LocalCDN-a na tom mjestu. Odvoji višestruke unose s točka-zarezom (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -88,8 +88,8 @@
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Ova funkcija sprečava pravilno funkcioniranje web-stranica. Deaktiviraj funkciju, osim ako želiš ručno dodavati dotične domene u popis poželjnih.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "message": "Ova funkcija sprečava ispravno funkcioniranje web-stranica. Deaktiviraj funkciju, osim ako želiš ručno dodavati dotične domene u popis dozvoljenih.",
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Deaktiviraj",
@@ -183,7 +183,7 @@
         "message": "Sigurno želiš izbrisati statistiku?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Ove domene smiju učitati Google fontove. Odvoji višestruke unose s točka-zarezom (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

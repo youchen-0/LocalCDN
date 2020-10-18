@@ -68,7 +68,7 @@ storageManager.migrateData = function (target) {
             [Setting.SELECTED_ICON]: data.selectedIcon,
             [Setting.SHOW_ICON_BADGE]: data.showIconBadge,
             [Setting.STRIP_METADATA]: data.stripMetadata,
-            [Setting.WHITELISTED_DOMAINS]: data.whitelistedDomains,
+            [Setting.ALLOWLISTED_DOMAINS]: data.allowlistedDomains,
             [Setting.XHR_TEST_DOMAIN]: data.xhrTestDomain,
             [Setting.BADGE_COLOR]: data.badgeColor,
             [Setting.BADGE_TEXT_COLOR]: data.badgeTextColor
@@ -168,7 +168,7 @@ storageManager._validation = function (content) {
 
 storageManager._validateDomainsAndStatistics = function (type, obj) {
     let valid = {};
-    if (type === 'allowedDomainsGoogleFonts' || type === 'domainsManipulateDOM' || type === 'whitelistedDomains') {
+    if (type === 'allowedDomainsGoogleFonts' || type === 'domainsManipulateDOM' || type === 'allowlistedDomains') {
         for (const [key, value] of Object.entries(obj)) {
             if ((/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,24}/.test(key) || key === '') && value === true) {
                 valid[key] = value;

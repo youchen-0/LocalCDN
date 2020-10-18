@@ -29,7 +29,7 @@ var requestAnalyzer = {};
  */
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
-    let initiatorDomain, isWhitelisted;
+    let initiatorDomain, isAllowlisted;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 
@@ -37,9 +37,9 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
         initiatorDomain = Address.EXAMPLE;
     }
 
-    isWhitelisted = requestAnalyzer.whitelistedDomains[initiatorDomain];
+    isAllowlisted = requestAnalyzer.allowlistedDomains[initiatorDomain];
 
-    if (isWhitelisted) {
+    if (isAllowlisted) {
         return false;
     }
 
@@ -77,7 +77,7 @@ requestAnalyzer.getLocalTarget = function (requestDetails) {
     }
 
     // Use the proper mappings for the targeted host.
-    hostMappings = mappings[destinationHost];
+    hostMappings = mappings.cdn[destinationHost];
 
     // Resource mapping files are never locally available.
     if (Resource.MAPPING_EXPRESSION.test(destinationPath)) {
@@ -176,9 +176,9 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     return false;
 };
 
-requestAnalyzer._applyWhitelistedDomains = function () {
-    storageManager.type.get(Setting.WHITELISTED_DOMAINS, function (items) {
-        requestAnalyzer.whitelistedDomains = items.whitelistedDomains || {};
+requestAnalyzer._applyAllowlistedDomains = function () {
+    storageManager.type.get(Setting.ALLOWLISTED_DOMAINS, function (items) {
+        requestAnalyzer.allowlistedDomains = items.allowlistedDomains || {};
     });
 };
 requestAnalyzer._applyManipulateDOMDomains = function () {
@@ -196,8 +196,8 @@ requestAnalyzer._applyAllowedDomainsGoogleFonts = function () {
  * Initializations
  */
 
-requestAnalyzer.whitelistedDomains = {};
-requestAnalyzer._applyWhitelistedDomains();
+requestAnalyzer.allowlistedDomains = {};
+requestAnalyzer._applyAllowlistedDomains();
 
 requestAnalyzer.domainsManipulateDOM = {};
 requestAnalyzer._applyManipulateDOMDomains();
@@ -208,6 +208,6 @@ requestAnalyzer._applyAllowedDomainsGoogleFonts();
  * Event Handlers
  */
 
-chrome.storage.onChanged.addListener(requestAnalyzer._applyWhitelistedDomains);
+chrome.storage.onChanged.addListener(requestAnalyzer._applyAllowlistedDomains);
 chrome.storage.onChanged.addListener(requestAnalyzer._applyManipulateDOMDomains);
 chrome.storage.onChanged.addListener(requestAnalyzer._applyAllowedDomainsGoogleFonts);

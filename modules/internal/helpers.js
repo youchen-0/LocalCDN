@@ -359,7 +359,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/bootstrap/3.')) {
         return '3.3.7';
     } else if (type.includes('/bootstrap/4.')) {
-        return '4.5.0';
+        return '4.5.3';
     } else if (type.includes('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
     } else if (type.includes('/bootstrap-datepicker/1.')) {
@@ -561,12 +561,6 @@ helpers.setLastVersion = function (type, version) {
         return '1.4.7';
     } else if (type.includes('/tooltipster/3.')) {
         return '3.3.0';
-    } else if (type.includes('/twitter-bootstrap/4.')) {
-        return '4.5.0';
-    } else if (type.includes('/twitter-bootstrap/3.')) {
-        return '3.4.1';
-    } else if (type.includes('/twitter-bootstrap/2.')) {
-        return '2.3.2';
     } else if (type.includes('/toastr.js/2.')) {
         return '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
@@ -615,6 +609,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'v4-shims.css': 'Font Awesome (Shim)',
     'instantsearch.production.min.jsm': 'InstantSearch.js',
     'redux.min.jsm': 'Redux',
     'react-side-effect.min.jsm': 'react-side-effect',

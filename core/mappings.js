@@ -22,14 +22,16 @@
  * Mappings
  */
 
+var mappings = {};
+
 /*
  * Date of last update.
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-var lastMappingUpdate = "2020-08-24";
+mappings.lastMappingUpdate = '2020-08-24';
 
-var mappings = {
+mappings.cdn = {
 
     // Google Hosted Libraries
     'ajax.googleapis.com': {
@@ -327,14 +329,14 @@ var mappings = {
             'tooltipster/{version}/js/jquery.tooltipster.': resources.jQueryTooltipster,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,
-            'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.twitterBootstrapJS,
-            'twitter-bootstrap/{version}-alpha.3/js/bootstrap.min.js': resources.twitterBootstrapJS,
-            'twitter-bootstrap/{version}-alpha.3/css/bootstrap.min.css': resources.twitterBootstrapCSS,
-            'twitter-bootstrap/{version}/css/bootstrap': resources.twitterBootstrapCSS,
-            'twitter-bootstrap/{version}/bootstrap.min.js': resources.twitterBootstrapJS,
-            'twitter-bootstrap/{version}/bootstrap.js': resources.twitterBootstrapJS,
-            'twitter-bootstrap/{version}/bootstrap.min.css': resources.twitterBootstrapCSS,
-            'twitter-bootstrap/{version}/bootstrap.css': resources.twitterBootstrapCSS,
+            'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.bootstrapJS,
+            'twitter-bootstrap/{version}-alpha.3/js/bootstrap.min.js': resources.bootstrapJS,
+            'twitter-bootstrap/{version}-alpha.3/css/bootstrap.min.css': resources.bootstrapCSS,
+            'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
+            'twitter-bootstrap/{version}/bootstrap.min.js': resources.bootstrapJS,
+            'twitter-bootstrap/{version}/bootstrap.js': resources.bootstrapJS,
+            'twitter-bootstrap/{version}/bootstrap.min.css': resources.bootstrapCSS,
+            'twitter-bootstrap/{version}/bootstrap.css': resources.bootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
@@ -778,7 +780,7 @@ var mappings = {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
-            'twitter-bootstrap/{version}/css/bootstrap': resources.twitterBootstrapCSS,
+            'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
     },
@@ -795,10 +797,11 @@ var mappings = {
     // Font Awesome CDN
     'use.fontawesome.com': {
         '/': {
-            'releases/v{version}/css/': resources.fontawesome5CSS,
+            'releases/v{version}/css/all': resources.fontawesome5CSS,
+            'releases/v{version}/css/v4-shims': resources.fontawesome5CSSv4shims,
             'releases/v{version}/js/': resources.fontawesome5JS,
-            'fa-code.js': resources.webfontloaderFontawesomeJS,
-            'fa-code.css': resources.webfontloaderFontawesomeCSS,
+            'fa-loader.js': resources.webfontloaderFontawesomeJS,
+            'fa-loader.css': resources.webfontloaderFontawesomeCSS,
             'webfontloader/{version}/webfontload': resources.webfontloader
         }
     },
@@ -827,38 +830,38 @@ var mappings = {
 };
 
 // Geekzu Public Service [Mirror]
-mappings['sdn.geekzu.org'] = {
-    '/ajax/ajax/libs/': mappings['ajax.googleapis.com']['/ajax/libs/']
+mappings.cdn['sdn.geekzu.org'] = {
+    '/ajax/ajax/libs/': mappings.cdn['ajax.googleapis.com']['/ajax/libs/']
 };
 
 // USTC Linux User Group [Mirror]
-mappings['ajax.proxy.ustclug.org'] = mappings['ajax.googleapis.com'];
+mappings.cdn['ajax.proxy.ustclug.org'] = mappings.cdn['ajax.googleapis.com'];
 
 //UNPKG (Cloudflare)
-mappings['unpkg.com'] = {
-    '/': mappings['cdn.jsdelivr.net']['/npm/']
+mappings.cdn['unpkg.com'] = {
+    '/': mappings.cdn['cdn.jsdelivr.net']['/npm/']
 };
 
 // PageCDN
-mappings['pagecdn.io'] = {
-    '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
+mappings.cdn['pagecdn.io'] = {
+    '/lib/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
 };
 
 // loli.net [Mirror]
-mappings['cdn.css.net'] = {
-    '/lib/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
+mappings.cdn['cdn.css.net'] = {
+    '/lib/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
 };
 
-mappings['cdnjs.loli.net'] = mappings['cdnjs.cloudflare.com'];
+mappings.cdn['cdnjs.loli.net'] = mappings.cdn['cdnjs.cloudflare.com'];
 
-mappings['ajax.loli.net'] = mappings['ajax.googleapis.com'];
+mappings.cdn['ajax.loli.net'] = mappings.cdn['ajax.googleapis.com'];
 
-mappings['fonts.loli.net'] = mappings['fonts.googleapis.com'];
+mappings.cdn['fonts.loli.net'] = mappings.cdn['fonts.googleapis.com'];
 
 // Qihoo 360 CDN [Mirror]
-mappings['lib.baomitu.com'] = {
-    '/': mappings['cdnjs.cloudflare.com']['/ajax/libs/']
+mappings.cdn['lib.baomitu.com'] = {
+    '/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
 }
 
 // Boot CDN New [Mirror]
-mappings['cdn.bootcdn.net'] = mappings['cdnjs.cloudflare.com'];
+mappings.cdn['cdn.bootcdn.net'] = mappings.cdn['cdnjs.cloudflare.com'];

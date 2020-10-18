@@ -41,26 +41,26 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
         return MessageResponse.SYNCHRONOUS;
     }
 
-    if (topic === 'domain:fetch-is-whitelisted') {
+    if (topic === 'domain:fetch-is-allowlisted') {
 
-        let whitelistRecord = requestAnalyzer.whitelistedDomains[value];
-        sendResponse({'value': Boolean(whitelistRecord)});
+        let allowlistRecord = requestAnalyzer.allowlistedDomains[value];
+        sendResponse({'value': Boolean(allowlistRecord)});
 
         return MessageResponse.SYNCHRONOUS;
     }
 
-    if (topic === 'whitelist:add-domain') {
+    if (topic === 'allowlist:add-domain') {
 
-        stateManager.addDomainToWhitelist(value).then(function () {
+        stateManager.addDomainToAllowlist(value).then(function () {
             sendResponse({'value': true});
         });
 
         return MessageResponse.ASYNCHRONOUS;
     }
 
-    if (topic === 'whitelist:remove-domain') {
+    if (topic === 'allowlist:remove-domain') {
 
-        stateManager.removeDomainFromWhitelist(value).then(function () {
+        stateManager.removeDomainFromAllowlist(value).then(function () {
             sendResponse({'value': true});
         });
 

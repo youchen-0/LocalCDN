@@ -43,11 +43,11 @@
         "message": "Cancella i dati sensibili dalle richieste consentite alle CDN per migliorare la privacy.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Disattiva LocalCDN per questi domini:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Inserisci i domini per cui disabilitare LocalCDN. Separa le differenti voci fra loro con un punto e virgola (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -88,8 +88,8 @@
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Questa funzione rompe i siti web. Non lasciarla abilitata, a meno che tu non sia pronto a mettere manualmente nella whitelist i domini interessati.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "message": "Questa funzione rompe i siti web. Non lasciarla abilitata, a meno che tu non sia pronto a mettere manualmente nella allowlist i domini interessati.",
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Disabilita",
@@ -183,7 +183,7 @@
         "message": "Sei sicuro di volere eliminare le statistiche?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "A questi domini è permesso caricare i font di Google. Separa le differenti voci fra loro con un punto e virgola (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

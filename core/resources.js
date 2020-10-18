@@ -336,6 +336,10 @@ var resources = {
         'path': 'resources/fontawesome/{version}/css/all.min.css',
         'type': 'text/css'
     },
+    'fontawesome5CSSv4shims': {
+        'path': 'resources/fontawesome/{version}/css/v4-shims.css',
+        'type': 'text/css'
+    },
     'fontawesome5JS': {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
@@ -744,15 +748,6 @@ var resources = {
         'path': 'resources/tether/{version}/js/tether.min.jsm',
         'type': 'application/javascript'
     },
-    // Twitter Bootstrap
-    'twitterBootstrapJS': {
-        'path': 'resources/twitter-bootstrap/{version}/js/bootstrap.min.jsm',
-        'type': 'application/javascript'
-    },
-    'twitterBootstrapCSS': {
-        'path': 'resources/twitter-bootstrap/{version}/css/bootstrap.min.css',
-        'type': 'text/css'
-    },
     // toastr
     'toastrCSS': {
         'path': 'resources/toastr.js/{version}/toastr.min.css',
@@ -812,11 +807,11 @@ var resources = {
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeJS': {
-        'path': 'resources/webfont/fa-code.jsm',
+        'path': 'resources/webfont/fa-loader.jsm',
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeCSS': {
-        'path': 'resources/webfont/fa-code.css',
+        'path': 'resources/webfont/fa-loader.css',
         'type': 'text/css'
     },
     // WebRTC adapter

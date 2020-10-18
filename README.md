@@ -53,7 +53,7 @@ The whole Internet is full of different frameworks and CDNs that negatively affe
 
 ### :warning: **Important** :warning:
 
-In some cases, it isn't possible to use our framework because the website sets up a strong "Same Origin Policy" (SOP). Please read [Broken JavaScript or CSS on some websites](https://codeberg.org/nobody/LocalCDN/wiki/Broken-JavaScript-or-CSS-on-some-websites) before opening an issue.
+In some cases, it isn't possible to use our framework because the website sets up a strong "Same Origin Policy" (SOP). Please read [Broken JavaScript or CSS on some websites](https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-7-a-website-looks-weird-or-cannot-be-used-if-i-deactivate-localcdn-everything-works-what-is-the-problem) before opening an issue.
 
 On behalf of everyone: Thank you!
 
@@ -89,11 +89,11 @@ Suggestions in the form of **Issues**, and contributions in the form of **Merge 
 ## Installation
 
 * Mozilla Firefox *(63 or higher)*: [get it on addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/)
-* Chromium based browser: [Chrome Web Store (by Emanuel Bennici)](https://chrome.google.com/webstore/detail/localcdn-fork-from-decent/njdfdhgcmkocbgbhcioffdbicglldapd) :warning: **Please note this Wiki article [FAQ: Chromium incompatibilities](https://codeberg.org/nobody/LocalCDN/wiki/Chromium-incompatibilities)** :warning:
+* Chromium based browser: [Chrome Web Store (by Emanuel Bennici)](https://chrome.google.com/webstore/detail/localcdn-fork-from-decent/njdfdhgcmkocbgbhcioffdbicglldapd) :warning: **Please note this Wiki article [FAQ: Chromium incompatibilities](https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-2-can-i-use-this-extension-in-my-chrome-browser)** :warning:
 
 #### Running the Code as temporary extension
 
-Please read this [guide](https://codeberg.org/nobody/LocalCDN/wiki/Running-the-code-as-temporary-extension) to run the extension from source.
+Please read this [guide](https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-5-you-recently-changed-something-in-the-code-and-i-would-like-to-test-it-how-do-you-do-that) to run the extension from source.
 
 > **Important:** All tagged commits are signed with GPG. It's likely best to ignore unsigned commits, unless you really know what you're doing. Please send an email if you have any questions or security concerns.
 

@@ -43,11 +43,11 @@
         "message": "Usuwaj wrażliwe dane z dozwolonych zapytań do CDN, aby zwiększyć prywatność.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Wyłącz LocalCDN dla tych domen:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Podaj domeny, aby dodać je do białej listy. Oddziel wpisy średnikami (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Ta opcja psuje strony. Nie włączaj jej, chyba że jesteś gotów samemu dodawać niedziałające domeny do białej listy.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Wyłącz",
@@ -183,7 +183,7 @@
         "message": "Czy na pewno chcesz usunąć statystyki?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Te domeny mogą wczytywać Google Fonts. Oddzielaj wiele wpisów za pomocą średników (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },

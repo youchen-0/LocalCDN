@@ -37,7 +37,7 @@ popup._renderContents = function () {
     popup._renderNonContextualContents();
 
     popup._determineTargetTab()
-        .then(popup._determineDomainWhitelistStatus)
+        .then(popup._determineDomainAllowlistStatus)
         .then(popup._determineStatusManipulateDOM)
         .then(popup._determineResourceInjections)
         .then(popup._determineNegateHtmlFilterOption)
@@ -76,7 +76,7 @@ popup._renderNonContextualContents = function () {
 
 popup._renderContextualContents = function () {
     if (popup._domain !== null) {
-        popup._renderDomainWhitelistPanel();
+        popup._renderDomainAllowlistPanel();
     }
 
     if (Object.keys(popup._resourceInjections).length > 0) {
@@ -84,7 +84,7 @@ popup._renderContextualContents = function () {
     }
 };
 
-popup._renderDomainWhitelistPanel = function () {
+popup._renderDomainAllowlistPanel = function () {
     let websiteContextElement, protectionToggleElement, domainIndicatorElement, manipulateDOMToggleElement, manipulateDOMToggleStyle;
 
     websiteContextElement = document.getElementById('website-context');
@@ -96,7 +96,7 @@ popup._renderDomainWhitelistPanel = function () {
     manipulateDOMToggleElement = document.getElementById('manipulateDOM-toggle-switch');
     manipulateDOMToggleStyle = document.getElementById('toggle-switch-manipulateDOM');
 
-    if (popup._domainIsWhitelisted === true) {
+    if (popup._domainIsAllowlisted === true) {
         manipulateDOMToggleElement.disabled = true;
         protectionToggleElement.checked = false;
 
@@ -138,7 +138,7 @@ popup._renderInjectionPanel = function (groupedInjections) {
 
 popup._enableProtection = function () {
     let message = {
-        topic: 'whitelist:remove-domain',
+        topic: 'allowlist:remove-domain',
         value: popup._domain,
     };
 
@@ -149,7 +149,7 @@ popup._enableProtection = function () {
 
 popup._disableProtection = function () {
     let message = {
-        topic: 'whitelist:add-domain',
+        topic: 'allowlist:add-domain',
         value: popup._domain,
     };
 
@@ -180,15 +180,15 @@ popup._disableManipulateDOM = function () {
     });
 };
 
-popup._determineDomainWhitelistStatus = function () {
+popup._determineDomainAllowlistStatus = function () {
     return new Promise((resolve) => {
         let message = {
-            topic: 'domain:fetch-is-whitelisted',
+            topic: 'domain:fetch-is-allowlisted',
             value: popup._domain,
         };
 
         chrome.runtime.sendMessage(message, function (response) {
-            popup._domainIsWhitelisted = response.value;
+            popup._domainIsAllowlisted = response.value;
             resolve();
         });
     });

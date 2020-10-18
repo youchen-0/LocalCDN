@@ -52,12 +52,12 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
     if (header && filtering) {
 
-        let mimeType, isWhitelisted;
+        let mimeType, isAllowlisted;
 
         mimeType = header.value.replace(/;.*/, '').toLowerCase();
-        isWhitelisted = stateManager._domainIsListed(initiatorDomain);
+        isAllowlisted = stateManager._domainIsListed(initiatorDomain);
 
-        if (!isWhitelisted && mimeType === 'text/html') {
+        if (!isAllowlisted && mimeType === 'text/html') {
 
             let asciiDecoder, decoder, encoder, charset, isFirstData, filter;
 
@@ -114,8 +114,8 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
  * Initializations
  */
 
- let whitelistedDomains = {};
- let cdnDomainsRE = new RegExp('//(' + Object.keys(mappings).map(m => m.replace(/\W/g, '\\$&')).join('|') + ')/');
+ let allowlistedDomains = {};
+ let cdnDomainsRE = new RegExp('//(' + Object.keys(mappings.cdn).map(m => m.replace(/\W/g, '\\$&')).join('|') + ')/');
 
 
 /**

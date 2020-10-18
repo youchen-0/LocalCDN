@@ -43,11 +43,11 @@
         "message": "Poista arkaluontoiset tiedot jakeluverkkojen sisältöpyynnöistä yksityisyyden parantamiseksi.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Poista LocalDNS käytöstä näillä verkkosivuilla:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Lisää verkkotunnus jottei sitä korvata. Erota rivit puolipisteellä (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Tämä ominaisuus rikkoo verkkosivuja. Älä jätä tätä päälle, ellet ole varautunut manuaalisesti sallimaan verkkotunnuksia, joihin tämä vaikuttaa.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Poista käytöstä",
@@ -183,7 +183,7 @@
         "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
     },

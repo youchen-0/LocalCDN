@@ -43,11 +43,11 @@
         "message": "Очистить дополнительные данные из разрешенных CDN запросов, для усиления приватности.",
         "description": "Strip metadata description."
     },
-    "whitelistedDomainsTitle": {
+    "allowlistedDomainsTitle": {
         "message": "Исключить домены из проверки:",
         "description": "Deactivate LocalCDN for these domains:"
     },
-    "whitelistedDomainsDescription": {
+    "allowlistedDomainsDescription": {
         "message": "Введите домены, на которых отключен LocalCDN. Разделяйте несколько записей точкой с запятой (;).",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
@@ -89,7 +89,7 @@
     },
     "featureBreaksWebsitesDescription": {
         "message": "Эта функция \"ломает\" сайты. Не включайте её, пока вручную не добавите в белый список все \"сломанные\" сайты.",
-        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually whitelist any affected domains."
+        "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
         "message": "Отключить",
@@ -183,7 +183,7 @@
         "message": "Вы уверены, что хотите удалить статистику?",
         "description": "Are you sure you want to delete the statistics?"
     },
-    "labelDomainsWhitelistGoogleFonts": {
+    "labelDomainsAllowlistGoogleFonts": {
         "message": "Этим доменам разрешено загружать шрифты Google. Разделяйте несколько записей точкой с запятой (;).",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
