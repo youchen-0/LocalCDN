@@ -800,8 +800,8 @@ mappings.cdn = {
             'releases/v{version}/css/all': resources.fontawesome5CSS,
             'releases/v{version}/css/v4-shims': resources.fontawesome5CSSv4shims,
             'releases/v{version}/js/': resources.fontawesome5JS,
-            'fa-code.js': resources.webfontloaderFontawesomeJS,
-            'fa-code.css': resources.webfontloaderFontawesomeCSS,
+            'fa-loader.js': resources.webfontloaderFontawesomeJS,
+            'fa-loader.css': resources.webfontloaderFontawesomeCSS,
             'webfontloader/{version}/webfontload': resources.webfontloader
         }
     },

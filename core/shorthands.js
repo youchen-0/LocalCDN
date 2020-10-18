@@ -79,11 +79,12 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if (Regex.FONT_AWESOME_WITH_CODE.test(channelHost + channelPath)) {
+        let fileExtension = channelPath.endsWith('css') ? 'css' : 'jsm';
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
             'versionDelivered': '4.7.0',
-            'path': 'resources/webfont/fa-loader.jsm',
+            'path': 'resources/webfont/fa-loader.' + fileExtension,
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/npm/vue') {

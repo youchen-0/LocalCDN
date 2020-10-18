@@ -807,11 +807,11 @@ var resources = {
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeJS': {
-        'path': 'resources/webfont/fa-code.jsm',
+        'path': 'resources/webfont/fa-loader.jsm',
         'type': 'application/javascript'
     },
     'webfontloaderFontawesomeCSS': {
-        'path': 'resources/webfont/fa-code.css',
+        'path': 'resources/webfont/fa-loader.css',
         'type': 'text/css'
     },
     // WebRTC adapter

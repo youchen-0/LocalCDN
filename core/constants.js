@@ -199,8 +199,8 @@ const Regex = {
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
-    'FONT_AWESOME': /use\.fontawesome\.com\/fa-code\.css/,
-    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.js/
+    'FONT_AWESOME': /use\.fontawesome\.com\/fa-loader\.css/,
+    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/
 };
 
 const Links = {
