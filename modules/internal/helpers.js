@@ -504,7 +504,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/popper.js/1.')) {
         return '1.16.1';
     } else if (type.includes('/popper.js/2.')) {
-        return '2.4.4';
+        return '2.5.3';
     } else if (type.includes('/prop-types/15.')) {
         return '15.7.2';
     } else if (type.includes('/prototype/1.')) {
