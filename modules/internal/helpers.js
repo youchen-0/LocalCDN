@@ -564,7 +564,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/toastr.js/2.')) {
         return '2.1.4';
     } else if (type.includes('/underscore.js/1.')) {
-        return '1.9.1';
+        return '1.11.0';
     } else if (type.includes('/urlive/1.')) {
         return '1.1.1';
     } else if (type.includes('/vanilla-lazyload')) {
