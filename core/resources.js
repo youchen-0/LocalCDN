@@ -522,7 +522,7 @@ var resources = {
     },
     // Moment.js
     'moment': {
-        'path': 'resources/moment.js/{version}/moment.min.jsm',
+        'path': 'resources/moment.js/{version}/moment-with-locales.min.jsm',
         'type': 'application/javascript'
     },
     // MooTools

@@ -485,7 +485,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/modernizr/2.')) {
         return '2.8.3';
     } else if (type.includes('/moment.js/2.')) {
-        return '2.24.0';
+        return '2.29.1';
     } else if (type.includes('/mootools/1.')) {
         if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
         else return '1.6.0'; // > 1.4.5
