@@ -56,7 +56,7 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "צור מערכי כללים עבור uBlock או uMatrix",
+        "message": "יצירת מערכי כללים עבור חוסם הפרסומות שלך",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
@@ -185,7 +185,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
         "message": "",
