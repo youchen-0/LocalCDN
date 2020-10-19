@@ -754,7 +754,7 @@ const ListOfFiles = {
     'mdb.min.css': 'MDBootstrap (CSS)',
     'mdb.min.jsm': 'MDBootstrap (JS)',
     'modernizr.min.jsm': 'Modernizr',
-    'moment.min.jsm': 'Modernizr',
+    'moment-with-locales.min.jsm': 'Moment.js',
     'mootools-yui-compressed.jsm': 'MooTools',
     'nv.d3.min.css': 'NVD3 (CSS)',
     'nv.d3.min.jsm': 'NVD3 (JS)',
