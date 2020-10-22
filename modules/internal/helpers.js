@@ -247,6 +247,8 @@ helpers.determineBundle = function (path = '') {
         return 'jQuery Lazy';
     } else if (path.includes('/waypoints/')) {
         return 'Waypoints';
+    } else if (path.includes('/highlight.js/')) {
+        return 'highlight.js';
     } else {
         return '';
     }
@@ -408,6 +410,8 @@ helpers.setLastVersion = function (type, version) {
         return '4.7.0';
     } else if (type.includes('/fontawesome/5.')) {
         return '5.15.1';
+    } else if (type.includes('/highlight.js/9.')) {
+        return '9.18.3';
     } else if (type.includes('/history/')) {
         return '4.10.1';
     } else if (type.includes('/hls.js/')) {

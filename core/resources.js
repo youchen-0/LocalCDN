@@ -349,6 +349,11 @@ var resources = {
         'path': 'resources/google-material-design-icons/google-material-design-icons.css',
         'type': 'text/css'
     },
+    // highlight.js (Bundle)
+    'highlightJS': {
+        'path': 'resources/highlight.js/{version}/',
+        'type': 'application/javascript'
+    },
     // history
     'history': {
         'path': 'resources/history/{version}/history.min.jsm',
