@@ -201,7 +201,7 @@ helpers.determineCdnName = function (domainName) {
         case 'upcdn.b0.upaiyun.com':
             return 'UpYun Library';
         case 'cdn.bootcss.com':
-            return 'BootCDN';
+            return 'BootCDN #1';
         case 'sdn.geekzu.org':
             return 'Geekzu Public Service [Mirror]';
         case 'ajax.proxy.ustclug.org':
@@ -226,6 +226,8 @@ helpers.determineCdnName = function (domainName) {
             return 'Google Fonts';
         case 'gitcdn.github.io':
             return 'GitHub';
+        case 'cdn.bootcdn.net':
+            return 'BootCDN #2';
         default:
             return 'Unknown';
     }
@@ -249,6 +251,8 @@ helpers.determineBundle = function (path = '') {
         return 'Waypoints';
     } else if (path.includes('/highlight.js/')) {
         return 'highlight.js';
+    } else if (path.includes('/element-ui/')) {
+        return 'ElementUI';
     } else {
         return '';
     }
@@ -280,6 +284,16 @@ helpers.formatVersion = function (version) {
     } else {
         return 'BETA';
     }
+};
+
+helpers.formatFilename = function (targetPath) {
+    if (targetPath.startsWith('resources/element-ui/')) {
+        targetPath = targetPath.toLowerCase();
+        if (!targetPath.endsWith('.min.jsm')) {
+            targetPath = targetPath.replace('.jsm', '.min.jsm');
+        }
+    }
+    return targetPath;
 };
 
 helpers.setLastVersion = function (type, version) {
@@ -386,6 +400,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.25.6';
     } else if (type.includes('/dojo/1.')) {
         return '1.14.1';
+    } else if (type.includes('/element-ui/2.')) {
+        return '2.13.2';
     } else if (type.includes('/ember.js/1.')) {
         return '1.13.13';
     } else if (type.includes('/ember.js/2.')) {

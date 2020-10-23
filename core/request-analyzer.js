@@ -155,6 +155,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             if (bundle !== '') {
                 filename = channelPath.split('/').pop();
                 targetPath = ( RegExp('.*\.css$').test(filename) ) ? targetPath + filename : targetPath + filename + 'm';
+                targetPath = helpers.formatFilename(targetPath);
             }
 
             if (requestAnalyzer.logging) {

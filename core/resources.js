@@ -289,6 +289,11 @@ var resources = {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
         'type': 'application/javascript'
     },
+    // Element-UI (Bundle)
+    'elementUI': {
+        'path': 'resources/element-ui/{version}/',
+        'type': 'application/javascript'
+    },
     // Ember.js
     'ember': {
         'path': 'resources/ember.js/{version}/ember.min.jsm',

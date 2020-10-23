@@ -242,6 +242,7 @@ mappings.cdn = {
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
             'dojo/{version}/dojo.': resources.dojo,
+            'element-ui/{version}/': resources.elementUI,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'fancybox/{version}/jquery.fancybox.min.js': resources.fancyBoxJS,
