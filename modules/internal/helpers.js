@@ -597,6 +597,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.0.28';
     } else if (type.includes('/vue/2.')) {
         return '2.6.12';
+    } else if (type.includes('/vue-i18n/8.')) {
+        return '8.22.1';
     } else if (type.includes('/vue-resource/1.')) {
         return '1.5.1';
     } else if (type.includes('/waypoints/4.')) {
@@ -631,6 +633,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'vue-i18n.min.jsm': 'Vue.js (i18n)',
     'v4-shims.css': 'Font Awesome (Shim)',
     'instantsearch.production.min.jsm': 'InstantSearch.js',
     'redux.min.jsm': 'Redux',

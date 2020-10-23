@@ -796,6 +796,11 @@ var resources = {
         'path': 'resources/vue/{version}/vue.min.jsm',
         'type': 'application/javascript'
     },
+    // Vue.js i18n
+    'vueI18N': {
+        'path': 'resources/vue-i18n/{version}/vue-i18n.min.jsm',
+        'type': 'application/javascript'
+    },
     // vue-resource
     'vueResource': {
         'path': 'resources/vue-resource/{version}/vue-resource.min.jsm',

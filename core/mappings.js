@@ -343,6 +343,7 @@ mappings.cdn = {
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
+            'vue-i18n/{version}/vue-i18n.': resources.vueI18N,
             'vue-resource/{version}/vue-resource.': resources.vueResource,
             'waypoints/{version}/noframework.waypoints.': resources.jQueryWaypoints,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
