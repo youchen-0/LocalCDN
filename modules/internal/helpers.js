@@ -515,6 +515,8 @@ helpers.setLastVersion = function (type, version) {
         return '4.1.1';
     } else if (type.includes('/oclazyload/1.')) {
         return '1.1.0';
+    } else if (type.includes('/owl-carousel/2.')) {
+        return '2.3.4';
     } else if (type.includes('/owl-carousel/1.')) {
         return '1.3.3';
     } else if (type.includes('p2p-media-loader-core') || type.includes('p2p-media-loader-hlsjs')) {
