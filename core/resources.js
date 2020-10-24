@@ -502,6 +502,11 @@ var resources = {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',
         'type': 'application/javascript'
     },
+    // markdown-it
+    'markdownIt': {
+        'path': 'resources/markdown-it/{version}/markdown-it.min.jsm',
+        'type': 'application/javascript'
+    },
     // Materialize
     'materializeCSS': {
         'path': 'resources/materialize/{version}/css/materialize.min.css',

@@ -497,6 +497,8 @@ helpers.setLastVersion = function (type, version) {
         return '3.10.1';
     } else if (type.includes('lozad')) {
         return '1.14.0';
+    } else if (type.includes('/markdown-it/')) {
+        return '12.0.2';
     } else if (type.includes('/mdbootstrap/4.')) {
         return '4.18.0';
     } else if (type.includes('/materialize/1.')) {
@@ -635,6 +637,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'markdown-it.min.jsm': 'markdown-it',
     'vue-i18n.min.jsm': 'Vue.js (i18n)',
     'v4-shims.css': 'Font Awesome (Shim)',
     'instantsearch.production.min.jsm': 'InstantSearch.js',
