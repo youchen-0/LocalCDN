@@ -215,6 +215,14 @@ const Links = {
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
 };
 
+const FrameworkAndBundle = {
+    'resources/element-ui/2.13.2/': 'ElementUI',
+    'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
+    'resources/jquery.lazy/1.7.11/': 'jQuery Lazy',
+    'resources/waypoints/4.0.1/': 'Waypoints',
+    'resources/findify-bundle/6.9.15/': 'Findify'
+};
+
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder
 const EncodingTypes = {

@@ -21,12 +21,18 @@
 var stats = {};
 
 stats.setStats = function (injection) {
-    let data, today, cdn, framework, newEntry;
+    let data, today, cdn, framework, newEntry, pathSegments;
 
     data = storageManager.statistics;
     today = new Date().toISOString().slice(0, 10);
     cdn = injection.source;
-    framework = injection.path;
+
+    if (injection.bundle !== '') {
+        pathSegments = injection.path.split('/');
+        framework = pathSegments[0] + '/' + pathSegments[1] + '/' + pathSegments[2] + '/';
+    } else {
+        framework = injection.path;
+    }
 
     if (today in data) {
         if (cdn in data[today]['cdns']) {
