@@ -223,6 +223,7 @@ statistics._deleteStatistic = function () {
         chrome.storage.local.set({
             [Setting.INTERNAL_STATISTICS_DATA]: {}
         });
+        chrome.runtime.sendMessage({ topic: 'deleteStatistic' });
     }
 };
 
