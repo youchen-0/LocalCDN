@@ -692,13 +692,9 @@ var resources = {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',
         'type': 'application/javascript'
     },
-    // Select2
-    'select2css': {
-        'path': 'resources/select2/{version}/select2.min.css',
-        'type': 'text/css'
-    },
-    'select2js': {
-        'path': 'resources/select2/{version}/select2.full.min.jsm',
+    // Select2 (Bundle)
+    'select2': {
+        'path': 'resources/select2/{version}/',
         'type': 'application/javascript'
     },
     // showdown

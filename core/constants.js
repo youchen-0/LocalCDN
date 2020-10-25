@@ -219,6 +219,7 @@ const Links = {
 // Also used for bundles
 // See: https://codeberg.org/nobody/LocalCDN/issues/151
 const FrameworkAndBundle = {
+    'resources/select2/4.0.12/': 'Select2',
     'resources/element-ui/2.13.2/': 'ElementUI',
     'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
     'resources/jquery.lazy/1.7.11/': 'jQuery Lazy',

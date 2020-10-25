@@ -253,6 +253,8 @@ helpers.determineBundle = function (path = '') {
         return 'highlight.js';
     } else if (path.includes('/element-ui/')) {
         return 'ElementUI';
+    } else if (path.includes('/select2/')) {
+        return 'Select2';
     } else {
         return '';
     }
@@ -558,7 +560,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/scriptaculous/1.')) {
         return '1.9.0';
     } else if (type.includes('/select2/4.')) {
-        return '4.0.12';
+        return '4.0.13';
     } else if (type.includes('/showdown/1.')) {
         return '1.9.1';
     } else if (type.includes('/showdown/0.')) {
