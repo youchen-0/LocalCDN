@@ -125,6 +125,18 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/owl-carousel/2.0.0-beta.2.4/owl.carousel.min.jsm',
             'bundle': ''
         };
+    } else if ((channelHost + channelPath).startsWith('cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/')) {
+        let file = helpers.extractFilenameFromPath(channelPath);
+        if (file.endsWith('js')) {
+            file = file + 'm';
+        }
+        return {
+            'source': channelHost,
+            'versionDelivered': '4.0.13',
+            'versionRequested': '4.1.0-beta.1',
+            'path': 'resources/select2/4.0.13/' + helpers.extractFilenameFromPath(channelPath),
+            'bundle': 'Select2'
+        };
     } else {
         return false;
     }
