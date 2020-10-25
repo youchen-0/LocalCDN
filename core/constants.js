@@ -215,9 +215,12 @@ const Links = {
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
 };
 
-// If a framework has been removed, this list should still display the names in the statistics
-// Also used for bundles
-// See: https://codeberg.org/nobody/LocalCDN/issues/151
+/**
+ * If a framework has been removed, this list should still display the names in the statistics
+ * Also used for bundles
+ * Note: Only the first two directory levels in 'resources'
+ * See: https://codeberg.org/nobody/LocalCDN/issues/151
+ */
 const FrameworkAndBundle = {
     'resources/select2/4.0.12/': 'Select2',
     'resources/element-ui/2.13.2/': 'ElementUI',
