@@ -274,6 +274,15 @@ var resources = {
         'path': 'resources/clipboard.js/{version}/clipboard.min.jsm',
         'type': 'application/javascript'
     },
+    // Cookie Consent
+    'cookieconsent2JS': {
+        'path': 'resources/cookieconsent2/{version}/cookieconsent.min.jsm',
+        'type': 'application/javascript'
+    },
+    'cookieconsent2CSS': {
+        'path': 'resources/cookieconsent2/{version}/cookieconsent.min.css',
+        'type': 'text/css'
+    },
     // D3.js
     'd3JS': {
         'path': 'resources/d3/{version}/d3.min.jsm',

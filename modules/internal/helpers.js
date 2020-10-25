@@ -394,6 +394,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.7.1';
     } else if (type.includes('/clipboard.js/2.')) {
         return '2.0.6';
+    } else if (type.includes('/cookieconsent2/3.')) {
+        return '3.1.1';
     } else if (type.includes('/d3/3.')) {
         return '3.5.17';
     } else if (type.includes('/d3-legend/2.')) {
@@ -637,6 +639,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'cookieconsent.min.css': 'Cookie Consent (CSS)',
+    'cookieconsent.min.jsm': 'Cookie Consent (JS)',
     'markdown-it.min.jsm': 'markdown-it',
     'vue-i18n.min.jsm': 'Vue.js (i18n)',
     'v4-shims.css': 'Font Awesome (Shim)',
