@@ -220,7 +220,13 @@ const FrameworkAndBundle = {
     'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
     'resources/jquery.lazy/1.7.11/': 'jQuery Lazy',
     'resources/waypoints/4.0.1/': 'Waypoints',
-    'resources/findify-bundle/6.9.15/': 'Findify'
+    'resources/findify-bundle/6.9.15/': 'Findify',
+    'resources/twitter-bootstrap/4.5.0/js/bootstrap.min.jsm': 'Bootstrap (JS)',
+    'resources/twitter-bootstrap/4.5.0/css/bootstrap.min.css': 'Bootstrap (CSS)',
+    'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.jsm': 'Bootstrap (JS)',
+    'resources/twitter-bootstrap/3.4.1/js/bootstrap.min.css': 'Bootstrap (CSS)',
+    'resources/twitter-bootstrap/2.3.2/js/bootstrap.min.jsm': 'Bootstrap (JS)',
+    'resources/twitter-bootstrap/2.3.2/js/bootstrap.min.css': 'Bootstrap (CSS)'
 };
 
 // Supported charsets for TextDecoder()
