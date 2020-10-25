@@ -88,7 +88,7 @@
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Esse recurso quebra sites. Não deixe ativado, a não ser que esteja preparado para manualmente pôr os sites afetados na Lista Branca.",
+        "message": "Esse recurso quebra sites. Não deixe ativado, a não ser que esteja preparado para adicionar manualmente os domínios afetados à lista de permissão.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
