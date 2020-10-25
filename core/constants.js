@@ -215,6 +215,9 @@ const Links = {
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
 };
 
+// If a framework has been removed, this list should still display the names in the statistics
+// Also used for bundles
+// See: https://codeberg.org/nobody/LocalCDN/issues/151
 const FrameworkAndBundle = {
     'resources/element-ui/2.13.2/': 'ElementUI',
     'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
