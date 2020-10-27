@@ -72,6 +72,7 @@ mappings.cdn = {
         '/ajax/': {
             'jQuery/jquery-{version}.': resources.jQuery,
             'jquery/jquery-{version}.': resources.jQuery,
+            'jquery.validate/{version}/jquery.validate.': resources.jqueryValidationPlugin,
             'modernizr/modernizr-{version}.': resources.modernizr,
             'bootstrap/{version}/bootstrap.min.': resources.bootstrapJS
         }
@@ -842,6 +843,8 @@ mappings.cdn = {
     // vjs.zencdn.net
     'vjs.zencdn.net': {
         '/': {
+            '{version}/video-js.min.css': resources.videoJScss,
+            '{version}/video.min.js': resources.videoJS
         }
     },
 };

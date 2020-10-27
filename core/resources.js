@@ -801,6 +801,15 @@ var resources = {
         'path': 'resources/videojs-seek-buttons/{version}/videojs-seek-buttons.min.css',
         'type': 'text/css'
     },
+    // video.js
+    'videoJS': {
+        'path': 'resources/video.js/{version}/video.min.jsm',
+        'type': 'application/javascript'
+    },
+    'videoJScss': {
+        'path': 'resources/video.js/{version}/video-js.min.css',
+        'type': 'text/css'
+    },
     // Vue.js
     'vueJs': {
         'path': 'resources/vue/{version}/vue.min.jsm',

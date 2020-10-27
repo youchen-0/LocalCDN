@@ -603,6 +603,10 @@ helpers.setLastVersion = function (type, version) {
         return '17.1.0';
     } else if (type.includes('/videojs-seek-buttons/')) {
         return '1.6.0';
+    } else if (type.includes('/video.js/')) {
+        if (helpers.compareVersion('5.20.5', version)) return '5.20.5'; // <= 5.20.5
+        else if (helpers.compareVersion('6.13.0', version)) return '6.13.0'; // > 5.20.5 to <= 6.13.0
+        else return '7.10.1'; // > 7.10.1
     } else if (type.includes('/vue/1.')) {
         return '1.0.28';
     } else if (type.includes('/vue/2.')) {
@@ -643,6 +647,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'video-js.min.css': 'Video.js (CSS)',
+    'video.min.jsm': 'Video.js (JS)',
     'cookieconsent.min.css': 'Cookie Consent (CSS)',
     'cookieconsent.min.jsm': 'Cookie Consent (JS)',
     'markdown-it.min.jsm': 'markdown-it',
