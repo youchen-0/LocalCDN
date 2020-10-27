@@ -29,7 +29,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-08-24';
+mappings.lastMappingUpdate = '2020-10-26';
 
 mappings.cdn = {
 
@@ -838,7 +838,12 @@ mappings.cdn = {
             'bootstrap-toggle/{version}/css/bootstrap-toggle.': resources.bootstrapToggleCSS,
             'bootstrap-toggle/{version}/css/bootstrap2-toggle.': resources.bootstrap2ToggleCSS
         }
-    }
+    },
+    // vjs.zencdn.net
+    'vjs.zencdn.net': {
+        '/': {
+        }
+    },
 };
 
 // Geekzu Public Service [Mirror]

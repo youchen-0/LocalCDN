@@ -228,6 +228,8 @@ helpers.determineCdnName = function (domainName) {
             return 'GitHub';
         case 'cdn.bootcdn.net':
             return 'BootCDN #2';
+        case 'vjs.zencdn.net':
+            return 'Video.js CDN';
         default:
             return 'Unknown';
     }
