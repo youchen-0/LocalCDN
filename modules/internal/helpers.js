@@ -433,7 +433,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/fontawesome/5.')) {
         return '5.15.1';
     } else if (type.includes('/highlight.js/10.')) {
-        return '10.3.1';
+        return '10.3.2';
     } else if (type.includes('/highlight.js/9.')) {
         return '9.18.3';
     } else if (type.includes('/history/')) {
