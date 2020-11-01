@@ -186,6 +186,9 @@ statistics._displayNameOfFramework = function (str, type) {
         filename = helpers.extractFilenameFromPath(str);
         filename = helpers.determineResourceName(filename);
 
+        if (filename === 'Unknown') {
+            filename = FrameworkAndBundle[str];
+        }
         version = str.match(Resource.VERSION_EXPRESSION);
         if (version !== null && version.length > 0) {
             version = version === 'latest' ? version : 'v' + version;
@@ -220,6 +223,7 @@ statistics._deleteStatistic = function () {
         chrome.storage.local.set({
             [Setting.INTERNAL_STATISTICS_DATA]: {}
         });
+        chrome.runtime.sendMessage({ topic: 'deleteStatistic' });
     }
 };
 

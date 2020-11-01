@@ -92,6 +92,10 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
 
         return MessageResponse.ASYNCHRONOUS;
     }
+
+    if (topic === 'deleteStatistic') {
+        storageManager.statistics = {};
+    }
 };
 
 /**

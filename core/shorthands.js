@@ -117,6 +117,26 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/fontawesome/4.7.0/css/font-awesome.min.css',
             'bundle': ''
         };
+    } else if ((channelHost + channelPath) === 'cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js') {
+        return {
+            'source': channelHost,
+            'versionDelivered': '2.0.0-beta.2.4',
+            'versionRequested': '2.0.0-beta.2.4',
+            'path': 'resources/owl-carousel/2.0.0-beta.2.4/owl.carousel.min.jsm',
+            'bundle': ''
+        };
+    } else if ((channelHost + channelPath).startsWith('cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/')) {
+        let file = helpers.extractFilenameFromPath(channelPath);
+        if (file.endsWith('js')) {
+            file = file + 'm';
+        }
+        return {
+            'source': channelHost,
+            'versionDelivered': '4.0.13',
+            'versionRequested': '4.1.0-beta.1',
+            'path': 'resources/select2/4.0.13/' + helpers.extractFilenameFromPath(channelPath),
+            'bundle': 'Select2'
+        };
     } else {
         return false;
     }

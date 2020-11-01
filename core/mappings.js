@@ -29,7 +29,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-08-24';
+mappings.lastMappingUpdate = '2020-10-26';
 
 mappings.cdn = {
 
@@ -72,6 +72,7 @@ mappings.cdn = {
         '/ajax/': {
             'jQuery/jquery-{version}.': resources.jQuery,
             'jquery/jquery-{version}.': resources.jQuery,
+            'jquery.validate/{version}/jquery.validate.': resources.jqueryValidationPlugin,
             'modernizr/modernizr-{version}.': resources.modernizr,
             'bootstrap/{version}/bootstrap.min.': resources.bootstrapJS
         }
@@ -239,9 +240,14 @@ mappings.cdn = {
             'Chart.js/{version}/Chart.css': resources.chartJsCSS,
             'Chart.js/{version}/Chart.min.css': resources.chartJsCSS,
             'clipboard.js/{version}/clipboard.min.js': resources.clipboardJS,
+            'cookieconsent2/{version}/cookieconsent.min.js': resources.cookieconsent2JS,
+            'cookieconsent2/{version}/cookieconsent.js': resources.cookieconsent2JS,
+            'cookieconsent2/{version}/cookieconsent.min.css': resources.cookieconsent2CSS,
+            'cookieconsent2/{version}/cookieconsent.css': resources.cookieconsent2CSS,
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
             'dojo/{version}/dojo.': resources.dojo,
+            'element-ui/{version}/': resources.elementUI,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'fancybox/{version}/jquery.fancybox.min.js': resources.fancyBoxJS,
@@ -252,6 +258,7 @@ mappings.cdn = {
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
             'font-awesome/{version}/css/': resources.fontawesome5CSS,
             'font-awesome/{version}/js/': resources.fontawesome5JS,
+            'highlight.js/{version}/': resources.highlightJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
             'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
@@ -279,6 +286,7 @@ mappings.cdn = {
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
             'lodash.js/{version}/lodash.': resources.lodashJS,
+            'markdown-it/{version}/markdown-it.': resources.markdownIt,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
@@ -292,6 +300,7 @@ mappings.cdn = {
             'nvd3/{version}/nv.d3.min.css': resources.nvd3CSS,
             'nvd3/{version}/nv.d3.css': resources.nvd3CSS,
             'oclazyload/{version}/ocLazyLoad.': resources.ocLazyLoad,
+            'OwlCarousel2/{version}/owl.carousel.': resources.owlCarouselJS,
             'owl-carousel/{version}/owl.carousel.js': resources.owlCarouselJS,
             'owl-carousel/{version}/owl.carousel.min.js': resources.owlCarouselJS,
             'owl-carousel/{version}/owl.carousel.css': resources.owlCarouselCSScarousel,
@@ -308,8 +317,7 @@ mappings.cdn = {
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
-            'select2/{version}/js/select2.min.js': resources.select2js,
-            'select2/{version}/css/select2.min.css': resources.select2css,
+            'select2/{version}/': resources.select2,
             'showdown/{version}/showdown.': resources.showdown,
             'showdown/{version}/Showdown.': resources.showdown,
             'slick-carousel/{version}/slick.min.css': resources.slickCarouselCSS,
@@ -341,6 +349,7 @@ mappings.cdn = {
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
             'vue/{version}/vue.min.js': resources.vueJs,
+            'vue-i18n/{version}/vue-i18n.': resources.vueI18N,
             'vue-resource/{version}/vue-resource.': resources.vueResource,
             'waypoints/{version}/noframework.waypoints.': resources.jQueryWaypoints,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
@@ -412,6 +421,7 @@ mappings.cdn = {
             'lozad': resources.lozad,
             'npm-modernizr@{version}/modernizr.': resources.modernizr,
             'npm-modernizr@{version}/modernizr.min.': resources.modernizr,
+            'markdown-it@{version}/dist/markdown-it.': resources.markdownIt,
             'moment@{version}/moment.': resources.moment,
             'moment@{version}/moment.min.': resources.moment,
             'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
@@ -427,6 +437,7 @@ mappings.cdn = {
             'redux@{version}/dist/redux.': resources.redux,
             'react-dom@{version}/umd/react-dom.production.min.js': resources.reactDOM,
             'react@{version}/umd/react.production.min.js': resources.react,
+            'select2@{version}/': resources.select2,
             'swfobject@{version}/index.js': resources.swfobject,
             'store-js@{version}/dist/store.legacy.min.js': resources.storeJS,
             'scriptaculous-js@{version}/scriptaculous.': resources.scriptaculous,
@@ -460,6 +471,7 @@ mappings.cdn = {
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.min.js': resources.fancyBoxJS,
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.css': resources.fancyBoxCSS,
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.min.css': resources.fancyBoxCSS,
+            'gh/highlightjs/cdn-release@{version}/build/': resources.highlightJS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery.ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery.ui/{version}/jquery-ui.min.js': resources.jQueryUI,
@@ -695,6 +707,7 @@ mappings.cdn = {
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
+            'element-ui/{version}/': resources.elementUI,
             'ember.js/{version}/ember.min.js': resources.ember.js,
             'ext-core/{version}/ext-core.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
@@ -826,7 +839,14 @@ mappings.cdn = {
             'bootstrap-toggle/{version}/css/bootstrap-toggle.': resources.bootstrapToggleCSS,
             'bootstrap-toggle/{version}/css/bootstrap2-toggle.': resources.bootstrap2ToggleCSS
         }
-    }
+    },
+    // vjs.zencdn.net
+    'vjs.zencdn.net': {
+        '/': {
+            '{version}/video-js.min.css': resources.videoJScss,
+            '{version}/video.min.js': resources.videoJS
+        }
+    },
 };
 
 // Geekzu Public Service [Mirror]

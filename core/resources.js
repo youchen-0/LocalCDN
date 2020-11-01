@@ -274,6 +274,15 @@ var resources = {
         'path': 'resources/clipboard.js/{version}/clipboard.min.jsm',
         'type': 'application/javascript'
     },
+    // Cookie Consent
+    'cookieconsent2JS': {
+        'path': 'resources/cookieconsent2/{version}/cookieconsent.min.jsm',
+        'type': 'application/javascript'
+    },
+    'cookieconsent2CSS': {
+        'path': 'resources/cookieconsent2/{version}/cookieconsent.min.css',
+        'type': 'text/css'
+    },
     // D3.js
     'd3JS': {
         'path': 'resources/d3/{version}/d3.min.jsm',
@@ -287,6 +296,11 @@ var resources = {
     // Dojo
     'dojo': {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
+        'type': 'application/javascript'
+    },
+    // Element-UI (Bundle)
+    'elementUI': {
+        'path': 'resources/element-ui/{version}/',
         'type': 'application/javascript'
     },
     // Ember.js
@@ -348,6 +362,11 @@ var resources = {
     'googleMaterialIcons': {
         'path': 'resources/google-material-design-icons/google-material-design-icons.css',
         'type': 'text/css'
+    },
+    // highlight.js (Bundle)
+    'highlightJS': {
+        'path': 'resources/highlight.js/{version}/',
+        'type': 'application/javascript'
     },
     // history
     'history': {
@@ -492,6 +511,11 @@ var resources = {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',
         'type': 'application/javascript'
     },
+    // markdown-it
+    'markdownIt': {
+        'path': 'resources/markdown-it/{version}/markdown-it.min.jsm',
+        'type': 'application/javascript'
+    },
     // Materialize
     'materializeCSS': {
         'path': 'resources/materialize/{version}/css/materialize.min.css',
@@ -522,7 +546,7 @@ var resources = {
     },
     // Moment.js
     'moment': {
-        'path': 'resources/moment.js/{version}/moment.min.jsm',
+        'path': 'resources/moment.js/{version}/moment-with-locales.min.jsm',
         'type': 'application/javascript'
     },
     // MooTools
@@ -668,13 +692,9 @@ var resources = {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',
         'type': 'application/javascript'
     },
-    // Select2
-    'select2css': {
-        'path': 'resources/select2/{version}/select2.min.css',
-        'type': 'text/css'
-    },
-    'select2js': {
-        'path': 'resources/select2/{version}/select2.full.min.jsm',
+    // Select2 (Bundle)
+    'select2': {
+        'path': 'resources/select2/{version}/',
         'type': 'application/javascript'
     },
     // showdown
@@ -781,9 +801,23 @@ var resources = {
         'path': 'resources/videojs-seek-buttons/{version}/videojs-seek-buttons.min.css',
         'type': 'text/css'
     },
+    // video.js
+    'videoJS': {
+        'path': 'resources/video.js/{version}/video.min.jsm',
+        'type': 'application/javascript'
+    },
+    'videoJScss': {
+        'path': 'resources/video.js/{version}/video-js.min.css',
+        'type': 'text/css'
+    },
     // Vue.js
     'vueJs': {
         'path': 'resources/vue/{version}/vue.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Vue.js i18n
+    'vueI18N': {
+        'path': 'resources/vue-i18n/{version}/vue-i18n.min.jsm',
         'type': 'application/javascript'
     },
     // vue-resource
