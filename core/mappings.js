@@ -286,6 +286,7 @@ mappings.cdn = {
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
+            'libsodium-wrappers/{version}/sodium.min.js': resources.libsodiumJS,
             'lodash.js/{version}/lodash.': resources.lodashJS,
             'markdown-it/{version}/markdown-it.': resources.markdownIt,
             'materialize/{version}/css/materialize.': resources.materializeCSS,

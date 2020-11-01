@@ -506,6 +506,11 @@ var resources = {
         'path': 'resources/libphonenumber-js/{version}/libphonenumber-js.min.jsm',
         'type': 'application/javascript'
     },
+    // libsodium.js
+    'libsodiumJS': {
+        'path': 'resources/libsodium.js/{version}/sodium.min.jsm',
+        'type': 'application/javascript'
+    },
     // Lodash
     'lodashJS': {
         'path': 'resources/lodash.js/{version}/lodash.min.jsm',
