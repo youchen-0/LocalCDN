@@ -368,6 +368,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.7.2';
     } else if (type.includes('/axios/0.')) {
         return '0.20.0';
+    } else if (type.includes('/babel-polyfill/')) {
+        return '7.12.1';
     } else if (type.includes('/backbone.js/0.')) {
         return '0.9.10';
     } else if (type.includes('/backbone.js/1.')) {
@@ -647,6 +649,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'polyfill.min.jsm': 'Babel Polyfill',
     'video-js.min.css': 'Video.js (CSS)',
     'video.min.jsm': 'Video.js (JS)',
     'cookieconsent.min.css': 'Cookie Consent (CSS)',
