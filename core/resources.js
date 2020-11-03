@@ -511,6 +511,15 @@ var resources = {
         'path': 'resources/libsodium.js/{version}/sodium.min.jsm',
         'type': 'application/javascript'
     },
+    // lightGallery
+    'lightGalleryJS': {
+        'path': 'resources/lightgallery/{version}/js/lightgallery-all.min.jsm',
+        'type': 'application/javascript'
+    },
+    'lightGalleryCSS': {
+        'path': 'resources/lightgallery/{version}/css/lightgallery.min.css',
+        'type': 'text/css'
+    },
     // Lodash
     'lodashJS': {
         'path': 'resources/lodash.js/{version}/lodash.min.jsm',

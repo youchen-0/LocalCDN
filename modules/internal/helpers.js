@@ -501,6 +501,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.7.53';
     } else if (type.includes('/libsodium.js/0.')) {
         return '0.5.4';
+    } else if (type.includes('/lightgallery/1.')) {
+        return '1.9.0';
     } else if (type.includes('/lodash.js/4.')) {
         return '4.17.10';
     } else if (type.includes('/lodash.js/3.')) {
@@ -653,6 +655,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'lightgallery-all.min.jsm': 'lightGallery (JS)',
+    'lightgallery.min.css': 'lightGallery (CSS)',
     'sodium.min.jsm': 'libsodium.js',
     'polyfill.min.jsm': 'Babel Polyfill',
     'video-js.min.css': 'Video.js (CSS)',
