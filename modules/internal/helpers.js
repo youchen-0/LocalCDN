@@ -589,6 +589,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.0.4';
     } else if (type.includes('/swfobject/2.')) {
         return '2.2';
+    } else if (type.includes('/swiper/3.')) {
+        return '3.4.2';
     } else if (type.includes('/swiper/4.')) {
         return '4.5.1';
     } else if (type.includes('/swiper/5.')) {
