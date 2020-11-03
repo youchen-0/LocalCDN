@@ -141,7 +141,11 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
             // Replace the requested version with the latest depending on major version
-            versionDelivered = helpers.setLastVersion(targetPath, versionNumber).toString();
+            versionDelivered = helpers.setLastVersion(targetPath, versionNumber);
+            if (versionDelivered === false) {
+                return false;
+            }
+            versionDelivered = versionDelivered.toString();
             targetPath = targetPath.replace(versionNumber, versionDelivered);
 
             versionRequested = versionNumber === null ? 'latest' : versionNumber[0];

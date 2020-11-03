@@ -640,6 +640,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (version === null) {
         return 'latest';
     }
+    return false;
 };
 
 helpers.compareVersion = function (v1, v2) {
