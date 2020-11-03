@@ -137,6 +137,13 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/select2/4.0.13/' + helpers.extractFilenameFromPath(channelPath),
             'bundle': 'Select2'
         };
+    } else if ((channelHost + channelPath).startsWith('use.fontawesome.com/releases/v5.')) {
+        return {
+            'source': channelHost,
+            'versionDelivered': '5.15.1',
+            'path': 'resources/fontawesome/5.15.1/css/all.min.css',
+            'bundle': ''
+        };
     } else {
         return false;
     }
