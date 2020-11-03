@@ -303,6 +303,15 @@ var resources = {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
         'type': 'application/javascript'
     },
+    // Drawer
+    'drawerJS': {
+        'path': 'resources/drawer/{version}/drawer.min.jsm',
+        'type': 'application/javascript'
+    },
+    'drawerCSS': {
+        'path': 'resources/drawer/{version}/drawer.min.css',
+        'type': 'text/css'
+    },
     // Element-UI (Bundle)
     'elementUI': {
         'path': 'resources/element-ui/{version}/',

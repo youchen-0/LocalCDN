@@ -248,6 +248,8 @@ mappings.cdn = {
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
             'dojo/{version}/dojo.': resources.dojo,
+            'drawer/{version}/js/drawer.min.js': resources.drawerJS,
+            'drawer/{version}/css/drawer.min.css': resources.drawerCSS,
             'element-ui/{version}/': resources.elementUI,
             'ember.js/{version}/ember.': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,

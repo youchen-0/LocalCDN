@@ -408,6 +408,8 @@ helpers.setLastVersion = function (type, version) {
         return '2.25.6';
     } else if (type.includes('/dojo/1.')) {
         return '1.14.1';
+    } else if (type.includes('/drawer/3.')) {
+        return '3.2.2';
     } else if (type.includes('/element-ui/2.')) {
         return '2.13.2';
     } else if (type.includes('/ember.js/1.')) {
@@ -655,6 +657,8 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'drawer.min.jsm': 'Drawer (JS)',
+    'drawer.min.css': 'Drawer (CSS)',
     'lightgallery-all.min.jsm': 'lightGallery (JS)',
     'lightgallery.min.css': 'lightGallery (CSS)',
     'sodium.min.jsm': 'libsodium.js',
