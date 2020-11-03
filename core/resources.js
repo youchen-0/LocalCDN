@@ -447,6 +447,11 @@ var resources = {
         'path': 'resources/jquery.lazy/{version}/',
         'type': 'application/javascript'
     },
+    // jquery.matchHeight.js
+    'jqueryMatchHeightJS': {
+        'path': 'resources/jquery.matchHeight/{version}/jquery.matchHeight-min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Migrate
     'jQueryMigrate': {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',

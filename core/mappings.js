@@ -275,6 +275,7 @@ mappings.cdn = {
             'jquery-easing/{version}/jquery.easing.': resources.jQueryEasing,
             'jquery.lazyload/{version}/jquery.lazyload.min.js': resources.jQueryLazyLoad,
             'jquery.lazy/{version}/': resources.jQueryLazyBundle,
+            'jquery.matchHeight/{version}/jquery.matchHeight-min.js': resources.jqueryMatchHeightJS,
             'jquery-migrate/{version}/jquery-migrate.min.js': resources.jQueryMigrate,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,

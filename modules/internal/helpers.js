@@ -477,6 +477,8 @@ helpers.setLastVersion = function (type, version) {
         return '1.9.1';
     } else if (type.includes('/jquery.lazy/1.')) {
         return '1.7.11';
+    } else if (type.includes('/jquery.matchHeight/0.')) {
+        return '0.7.2';
     } else if (type.includes('/jquery-migrate/1.')) {
         return '1.4.1';
     } else if (type.includes('/jquery-migrate/3.')) {
@@ -659,6 +661,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'jquery.matchHeight-min.jsm': 'jquery.matchHeight.js',
     'iscoll.min.jsm': 'iScroll',
     'drawer.min.jsm': 'Drawer (JS)',
     'drawer.min.css': 'Drawer (CSS)',
