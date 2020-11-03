@@ -397,6 +397,11 @@ var resources = {
         'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm',
         'type': 'application/javascript'
     },
+    // iScroll
+    'iScroll': {
+        'path': 'resources/iScroll/{version}/iscroll.min.jsm',
+        'type': 'application/javascript'
+    },
     // jeditableJS
     'jeditableJS': {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',

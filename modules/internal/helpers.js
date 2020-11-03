@@ -448,6 +448,8 @@ helpers.setLastVersion = function (type, version) {
         return '3.7.0';
     } else if (type.includes('/instantsearch.js/4.')) {
         return '4.8.1';
+    } else if (type.includes('/iScroll/5.')) {
+        return '5.2.0';
     } else if (type.includes('/jets/0.')) {
         return '0.14.1';
     } else if (type.includes('/jquery/1.')) {
@@ -657,6 +659,7 @@ helpers.compareVersion = function (v1, v2) {
 };
 
 const ListOfFiles = {
+    'iscoll.min.jsm': 'iScroll',
     'drawer.min.jsm': 'Drawer (JS)',
     'drawer.min.css': 'Drawer (CSS)',
     'lightgallery-all.min.jsm': 'lightGallery (JS)',

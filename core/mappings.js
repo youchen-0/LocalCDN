@@ -263,6 +263,7 @@ mappings.cdn = {
             'font-awesome/{version}/js/': resources.fontawesome5JS,
             'highlight.js/{version}/': resources.highlightJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
+            'iScroll/{version}/iscroll.min.js': resources.iScroll,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
             'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jets/{version}/jets.': resources.jetsJS,
