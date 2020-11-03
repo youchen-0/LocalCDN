@@ -594,7 +594,7 @@ helpers.setLastVersion = function (type, version) {
     } else if (type.includes('/swiper/4.')) {
         return '4.5.1';
     } else if (type.includes('/swiper/5.')) {
-        return '5.4.2';
+        return '5.4.5';
     } else if (type.includes('/tether/1.')) {
         return '1.4.7';
     } else if (type.includes('/tooltipster/3.')) {
