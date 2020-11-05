@@ -243,6 +243,15 @@ var resources = {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.jsm',
         'type': 'application/javascript'
     },
+    // Bootstrap Table
+    'bootstrapTableJS': {
+        'path': 'resources/bootstrap-table/{version}/bootstrap-table.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrapTableCSS': {
+        'path': 'resources/bootstrap-table/{version}/bootstrap-table.min.css',
+        'type': 'text/css'
+    },
     // Bootstrap Toggle
     'bootstrapToggleJS': {
         'path': 'resources/bootstrap-toggle/{version}/js/bootstrap-toggle.min.jsm',

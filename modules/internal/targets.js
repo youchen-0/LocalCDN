@@ -134,6 +134,8 @@ targets.setLastVersion = function (type, version) {
         return '10.6.2';
     } else if (type.includes('/bootstrap-select/1.')) {
         return '1.13.17';
+    } else if (type.includes('/bootstrap-table/1.')) {
+        return '1.18.0';
     } else if (type.includes('/bootstrap-toggle/2.')) {
         return '2.2.2';
     } else if (type.includes('/bootstrap-3-typeahead/4.')) {
@@ -394,6 +396,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bootstrap-table.min.jsm': 'Bootstrap Table (JS)',
+    'bootstrap-table.min.css': 'Bootstrap Table (CSS)',
     'jquery.matchHeight-min.jsm': 'jquery.matchHeight.js',
     'iscoll.min.jsm': 'iScroll',
     'drawer.min.jsm': 'Drawer (JS)',
