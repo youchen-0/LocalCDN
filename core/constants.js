@@ -222,6 +222,7 @@ const Links = {
  * See: https://codeberg.org/nobody/LocalCDN/issues/151
  */
 const FrameworkAndBundle = {
+    'resources/swiper/5.4.2/': 'Swiper',
     'resources/select2/4.0.12/': 'Select2',
     'resources/element-ui/2.13.2/': 'ElementUI',
     'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
