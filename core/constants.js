@@ -233,6 +233,36 @@ const FrameworkAndBundle = {
     'resources/twitter-bootstrap/2.3.2/': 'Bootstrap'
 };
 
+const CDNs = {
+    'ajax.googleapis.com': 'Google Hosted Libraries',
+    'ajax.aspnetcdn.com': 'Microsoft Ajax CDN',
+    'ajax.microsoft.com': 'Microsoft Ajax CDN [Deprecated]',
+    'cdnjs.cloudflare.com': 'CDNJS (Cloudflare)',
+    'code.jquery.com': 'jQuery CDN (MaxCDN)',
+    'cdn.jsdelivr.net': 'jsDelivr (Cloudflare)',
+    'yastatic.net': 'Yandex CDN',
+    'yandex.st': 'Yandex CDN [Deprecated]',
+    'apps.bdimg.com': 'Baidu CDN',
+    'libs.baidu.com': 'Baidu CDN [Deprecated]',
+    'lib.sinaapp.com': 'Sina Public Resources',
+    'upcdn.b0.upaiyun.com': 'UpYun Library',
+    'cdn.bootcss.com': 'BootCDN #1',
+    'sdn.geekzu.org': 'Geekzu Public Service [Mirror]',
+    'ajax.proxy.ustclug.org': 'USTC Linux User Group [Mirror]',
+    'unpkg.com': 'UNPKG (Cloudflare)',
+    'stackpath.bootstrapcdn.com': 'StackPath BootstrapCDN',
+    'maxcdn.bootstrapcdn.com': 'MaxCDN Bootstrap CDN',
+    'use.fontawesome.com': 'Font Awesome CDN',
+    'ajax.cloudflare.com': 'Cloudflare CDN',
+    'akamai-webcdn.kgstatic.net': 'Akamai WebCDN',
+    'netdna.bootstrapcdn.com': 'NetDNA',
+    'pagecdn.io': 'PageCDN',
+    'fonts.googleapis.com': 'Google Fonts',
+    'gitcdn.github.io': 'GitHub',
+    'cdn.bootcdn.net': 'BootCDN #2',
+    'vjs.zencdn.net': 'Video.js CDN',
+};
+
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder
 const EncodingTypes = {

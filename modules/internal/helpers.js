@@ -175,64 +175,7 @@ helpers.generateRandomHexString = function (length) {
 };
 
 helpers.determineCdnName = function (domainName) {
-    switch (domainName) {
-        case 'ajax.googleapis.com':
-            return 'Google Hosted Libraries';
-        case 'ajax.aspnetcdn.com':
-            return 'Microsoft Ajax CDN';
-        case 'ajax.microsoft.com':
-            return 'Microsoft Ajax CDN [Deprecated]';
-        case 'cdnjs.cloudflare.com':
-            return 'CDNJS (Cloudflare)';
-        case 'code.jquery.com':
-            return 'jQuery CDN (MaxCDN)';
-        case 'cdn.jsdelivr.net':
-            return 'jsDelivr (Cloudflare)';
-        case 'yastatic.net':
-            return 'Yandex CDN';
-        case 'yandex.st':
-            return 'Yandex CDN [Deprecated]';
-        case 'apps.bdimg.com':
-            return 'Baidu CDN';
-        case 'libs.baidu.com':
-            return 'Baidu CDN [Deprecated]';
-        case 'lib.sinaapp.com':
-            return 'Sina Public Resources';
-        case 'upcdn.b0.upaiyun.com':
-            return 'UpYun Library';
-        case 'cdn.bootcss.com':
-            return 'BootCDN #1';
-        case 'sdn.geekzu.org':
-            return 'Geekzu Public Service [Mirror]';
-        case 'ajax.proxy.ustclug.org':
-            return 'USTC Linux User Group [Mirror]';
-        case 'unpkg.com':
-            return 'UNPKG (Cloudflare)';
-        case 'stackpath.bootstrapcdn.com':
-            return 'StackPath BootstrapCDN';
-        case 'maxcdn.bootstrapcdn.com':
-            return 'MaxCDN Bootstrap CDN';
-        case 'use.fontawesome.com':
-            return 'Font Awesome CDN';
-        case 'ajax.cloudflare.com':
-            return 'Cloudflare CDN';
-        case 'akamai-webcdn.kgstatic.net':
-            return 'Akamai WebCDN';
-        case 'netdna.bootstrapcdn.com':
-            return 'NetDNA';
-        case 'pagecdn.io':
-            return 'PageCDN';
-        case 'fonts.googleapis.com':
-            return 'Google Fonts';
-        case 'gitcdn.github.io':
-            return 'GitHub';
-        case 'cdn.bootcdn.net':
-            return 'BootCDN #2';
-        case 'vjs.zencdn.net':
-            return 'Video.js CDN';
-        default:
-            return 'Unknown';
-    }
+    return CDNs[domainName] || 'Unknown';
 };
 
 helpers.determineScriptDirection = function (language) {
