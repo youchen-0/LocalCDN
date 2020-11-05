@@ -51,7 +51,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if (Regex.GOOGLE_MATERIAL_ICONS.test(channelHost + channelPath + searchString)) {
-        lastVersion = destinations.setLastVersion('/google-material-design-icons/');
+        lastVersion = targets.setLastVersion('/google-material-design-icons/');
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
@@ -59,7 +59,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if (Regex.BOOTSTRAP_DATEPICKER_3.test(channelPath)) {
-        lastVersion = destinations.setLastVersion('/bootstrap-datepicker/1.');
+        lastVersion = targets.setLastVersion('/bootstrap-datepicker/1.');
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
@@ -67,7 +67,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if (Regex.BOOTSTRAP_DATEPICKER.test(channelPath)) {
-        lastVersion = destinations.setLastVersion('/bootstrap-datepicker/1.');
+        lastVersion = targets.setLastVersion('/bootstrap-datepicker/1.');
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
@@ -75,7 +75,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if (Regex.FONT_AWESOME.test(channelHost + channelPath)) {
-        lastVersion = destinations.setLastVersion('/fontawesome/4.');
+        lastVersion = targets.setLastVersion('/fontawesome/4.');
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
@@ -85,7 +85,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         };
     } else if (Regex.FONT_AWESOME_WITH_CODE.test(channelHost + channelPath)) {
         let fileExtension = channelPath.endsWith('css') ? 'css' : 'jsm';
-        lastVersion = destinations.setLastVersion('/fontawesome/4.');
+        lastVersion = targets.setLastVersion('/fontawesome/4.');
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
@@ -94,7 +94,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/npm/vue') {
-        lastVersion = destinations.setLastVersion('/vue/2.');
+        lastVersion = targets.setLastVersion('/vue/2.');
         return {
             'source': channelHost,
             'versionRequested': 'latest',
@@ -110,7 +110,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'unpkg.com/@umds/object-assign@4.1.1-beta.24/object-assign.min.js') {
-        lastVersion = destinations.setLastVersion('/object-assign@4.');
+        lastVersion = targets.setLastVersion('/object-assign@4.');
         return {
             'source': channelHost,
             'versionRequested': '4.1.1',
@@ -120,7 +120,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         };
     } else if ((channelHost + channelPath) === 'netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css') {
         // This CDN delivers 'Font Awesome v4.7.0' as latest version
-        lastVersion = destinations.setLastVersion('/fontawesome/4.');
+        lastVersion = targets.setLastVersion('/fontawesome/4.');
         return {
             'source': channelHost,
             'versionRequested': lastVersion,
@@ -140,7 +140,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         if (file.endsWith('js')) {
             file = file + 'm';
         }
-        lastVersion = destinations.setLastVersion('/select2/4.');
+        lastVersion = targets.setLastVersion('/select2/4.');
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
