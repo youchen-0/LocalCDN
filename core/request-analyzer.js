@@ -141,7 +141,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
             // Replace the requested version with the latest depending on major version
-            versionDelivered = helpers.setLastVersion(targetPath, versionNumber);
+            versionDelivered = targets.setLastVersion(targetPath, versionNumber);
             if (versionDelivered === false) {
                 return false;
             }
@@ -155,7 +155,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             }
 
             // Get bundle name
-            let bundle = helpers.determineBundle(channelPath);
+            let bundle = targets.determineBundle(channelPath);
             if (bundle !== '') {
                 filename = channelPath.split('/').pop();
                 targetPath = ( RegExp('.*\.css$').test(filename) ) ? targetPath + filename : targetPath + filename + 'm';

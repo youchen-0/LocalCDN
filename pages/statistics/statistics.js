@@ -184,7 +184,7 @@ statistics._displayNameOfFramework = function (str, type) {
         lbVersion = document.createElement('span');
 
         filename = helpers.extractFilenameFromPath(str);
-        filename = helpers.determineResourceName(filename);
+        filename = targets.determineResourceName(filename);
 
         if (filename === 'Unknown') {
             filename = FrameworkAndBundle[str];

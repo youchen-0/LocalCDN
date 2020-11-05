@@ -345,7 +345,7 @@ popup._createInjectionElement = function (injection) {
 
     // If bundle empty, use filename
     if (injection.bundle === '') {
-        name = helpers.determineResourceName(filename);
+        name = targets.determineResourceName(filename);
     } else {
         name = injection.bundle + ' (Bundle)';
     }
