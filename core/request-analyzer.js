@@ -175,7 +175,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             };
         }
     }
-    if (requestAnalyzer.logging) {
+    if (requestAnalyzer.logging && channelHost + channelPath !== 'fonts.googleapis.com/css') {
         console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
     }
     return false;
