@@ -34,11 +34,11 @@
                     <div class="title-option">
                         <label class="b-contain">
                             <input data-option="showIconBadge" type="checkbox">
-                            <span data-i18n-content="showIconBadgeTitle"></span>
+                            <span data-i18n-content="showIconBadgeTitle">Display injection counts on icon</span>
                             <div class="b-input"></div>
                         </label>
                     </div>
-                    <div class="description-option" data-i18n-content="showIconBadgeDescription"></div>
+                    <div class="description-option" data-i18n-content="showIconBadgeDescription">Show the number of injected resources on the extension icon.</div>
                 </section>
                 <section class="option">
                     <div class="title-option">
@@ -54,21 +54,21 @@
                     <div class="title-option">
                         <label class="b-contain">
                             <input data-option="disablePrefetch" type="checkbox">
-                            <span data-i18n-content="disablePrefetchTitle"></span>
+                            <span data-i18n-content="disablePrefetchTitle">Disable link prefetching</span>
                             <div class="b-input"></div>
                         </label>
                     </div>
-                    <div class="description-option" data-i18n-content="disablePrefetchDescription"></div>
+                    <div class="description-option" data-i18n-content="disablePrefetchDescription">Prevent disallowed requests from leaking out to delivery networks.</div>
                 </section>
                 <section class="option">
                     <div class="title-option">
                         <label class="b-contain">
                             <input data-option="stripMetadata" type="checkbox">
-                            <span data-i18n-content="stripMetadataTitle"></span>
+                            <span data-i18n-content="stripMetadataTitle">Strip metadata from allowed requests</span>
                             <div class="b-input"></div>
                         </label>
                     </div>
-                    <div class="description-option" data-i18n-content="stripMetadataDescription"></div>
+                    <div class="description-option" data-i18n-content="stripMetadataDescription">Erase sensitive data from allowed CDN requests for improved privacy.</div>
                 </section>
                 <section class="option">
                     <div class="title-option">
@@ -84,9 +84,9 @@
             </div>
             <div class="option-group">
                 <section class="option">
-                    <div class="title-option without-checkbox" data-i18n-content="allowlistedDomainsTitle"></div>
+                    <div class="title-option without-checkbox" data-i18n-content="allowlistedDomainsTitle">Deactivate LocalCDN for these domains:</div>
                     <input id="tf-domains-allowlist" class="input-text without-checkbox" data-option="allowlistedDomains" type="text">
-                    <div class="description-option without-checkbox" data-i18n-content="allowlistedDomainsDescription"></div>
+                    <div class="description-option without-checkbox" data-i18n-content="allowlistedDomainsDescription">Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;).</div>
                 </section>
             </div>
         </div>
@@ -94,7 +94,7 @@
         <div id="advanced-tab" class="tab-content">
             <section class="notice notice-warning hidden" id="notice-block-missing">
                 <div class="notice-head">
-                    <span data-i18n-content="blockMissingTitle"></span>
+                    <span data-i18n-content="blockMissingTitle">Block requests for missing resources</span>
                 </div>
                 <div class="notice-body" dir="ltr">
                     <div class="notice-message" data-i18n-content="featureBreaksWebsitesDescription">
@@ -110,12 +110,12 @@
                     <div class="title-option">
                         <label class="b-contain">
                             <input data-option="blockMissing" type="checkbox">
-                            <span data-i18n-content="blockMissingTitle"></span>
+                            <span data-i18n-content="blockMissingTitle">Block requests for missing resources</span>
                             <div class="b-input"></div>
                         </label>
-                        <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
+                        <span class="badge badge-warning" data-i18n-content="advancedLabel">Advanced</span>
                     </div>
-                    <div class="description-option" data-i18n-content="blockMissingDescription"></div>
+                    <div class="description-option" data-i18n-content="blockMissingDescription">Cancel intercepted request if the required resource is not locally available.</div>
                 </section>
                 <section id="block-google-fonts" class="option">
                     <div class="title-option">
@@ -156,7 +156,7 @@
                             <span data-i18n-content="negateHtmlFilterListTitle">Invert HTML filter</span>
                             <div class="b-input"></div>
                         </label>
-                        <span class="badge badge-warning" data-i18n-content="advancedLabel"></span>
+                        <span class="badge badge-warning" data-i18n-content="advancedLabel">Advanced</span>
                     </div>
                     <div class="description-option" data-i18n-content="negateHtmlFilterListDescription">Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list.</div>
                 </section>
@@ -302,7 +302,7 @@
                 <div class="notice-message">
                     Your preferred language is not yet fully supported. Please help out by translating this add-on on Weblate.
                 </div>
-                <a class="button button-notice button-warning" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank" rel="noopener noreferrer">
+                <a class="button button-notice button-warning no-icon" href="https://hosted.weblate.org/projects/localcdn/localcdn/" target="_blank" rel="noopener noreferrer">
                     Translate
                 </a>
             </div>
