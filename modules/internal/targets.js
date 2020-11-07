@@ -45,23 +45,17 @@ targets.determineBundle = function (path = '') {
 };
 
 targets.setLastVersion = function (type, version) {
-    /**
-     * If-Else-If is the fastest way.
-     * Measurement results:
-     * Switch-Case (with Regex): 0-8ms (Average ~4ms)
-     * If-Else-If:               0-5ms (Average <1ms)
-     */
-
+    type = type.replace('resources', '');
     if (version !== null && version !== undefined) {
         version = version.toString();
     }
-    if (type.includes('/algoliasearch/3.')) {
+    if (type.startsWith('/algoliasearch/3.')) {
         return '3.35.1';
-    } else if (type.includes('/anchor-js/3.')) {
+    } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
-    } else if (type.includes('/anchor-js/4.')) {
+    } else if (type.startsWith('/anchor-js/4.')) {
         return '4.2.2';
-    } else if (type.includes('/angularjs/1.')) {
+    } else if (type.startsWith('/angularjs/1.')) {
         if (helpers.compareVersion('1.2.19', version)) return '1.2.19'; // <= v1.2.19
         else if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
         else if (helpers.compareVersion('1.3.20', version)) return '1.3.20'; // > 1.2.32 to <= 1.3.20
@@ -69,321 +63,321 @@ targets.setLastVersion = function (type, version) {
         else if (helpers.compareVersion('1.5.11', version)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
         else if (helpers.compareVersion('1.6.10', version)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
         else return '1.7.9'; // >= 1.6.11
-    } else if (type.includes('/angularjs-slider/6.')) {
+    } else if (type.startsWith('/angularjs-slider/6.')) {
         return '6.7.0';
-    } else if (type.includes('/angularjs-toaster/2.')) {
+    } else if (type.startsWith('/angularjs-toaster/2.')) {
         return '2.2.0';
-    } else if (type.includes('/angularjs-toaster/0.')) {
+    } else if (type.startsWith('/angularjs-toaster/0.')) {
         return '0.4.18';
-    } else if (type.includes('/angular-bootstrap-colorpicker/3.')) {
+    } else if (type.startsWith('/angular-bootstrap-colorpicker/3.')) {
         return '3.0.32';
-    } else if (type.includes('/angular-payments@1.')) {
+    } else if (type.startsWith('/angular-payments@1.')) {
         return '1.0.7';
-    } else if (type.includes('/angular-stripe-checkout@5.')) {
+    } else if (type.startsWith('/angular-stripe-checkout@5.')) {
         return '5.1.0';
-    } else if (type.includes('/angular-ui-bootstrap/')) {
+    } else if (type.startsWith('/angular-ui-bootstrap/')) {
         if (helpers.compareVersion('0.10.0', version)) return '0.10.0'; // <= v0.10.0
         else if (helpers.compareVersion('0.14.3', version)) return '0.14.3'; // > 0.10.0 <= v0.14.3
         return '1.3.3'; // > v0.14.0
-    } else if (type.includes('/angular-ui-router/')) {
+    } else if (type.startsWith('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', version)) return '0.4.3'; // <= 0.4.3
         else return '1.0.25'; // > 0.4.3
-    } else if (type.includes('/angular-ui-utils/0.')) {
+    } else if (type.startsWith('/angular-ui-utils/0.')) {
         return '0.1.1';
-    } else if (type.includes('/angular-ui-select/0.')) {
+    } else if (type.startsWith('/angular-ui-select/0.')) {
         return '0.20.0';
-    } else if (type.includes('/angular-sanitize/1.')) {
+    } else if (type.startsWith('/angular-sanitize/1.')) {
         return '1.7.9';
-    } else if (type.includes('/angucomplete-alt/3.')) {
+    } else if (type.startsWith('/angucomplete-alt/3.')) {
         return '3.0.0';
-    } else if (type.includes('/animate.css/3.')) {
+    } else if (type.startsWith('/animate.css/3.')) {
         return '3.7.2';
-    } else if (type.includes('/autocomplete.js/')) {
+    } else if (type.startsWith('/autocomplete.js/')) {
         return '0.37.1';
-    } else if (type.includes('/angular-material/1.')) {
+    } else if (type.startsWith('/angular-material/1.')) {
         return '1.1.21';
-    } else if (type.includes('/angular-material/0.')) {
+    } else if (type.startsWith('/angular-material/0.')) {
         return '1.1.21';
-    } else if (type.includes('/angular-translate/2.')) {
+    } else if (type.startsWith('/angular-translate/2.')) {
         return '2.7.2';
-    } else if (type.includes('/angular-translate-loader-static-files/2.')) {
+    } else if (type.startsWith('/angular-translate-loader-static-files/2.')) {
         return '2.7.2';
-    } else if (type.includes('/angular-translate-interpolation-messageformat/2.')) {
+    } else if (type.startsWith('/angular-translate-interpolation-messageformat/2.')) {
         return '2.7.2';
-    } else if (type.includes('/axios/0.')) {
+    } else if (type.startsWith('/axios/0.')) {
         return '0.20.0';
-    } else if (type.includes('/babel-polyfill/')) {
+    } else if (type.startsWith('/babel-polyfill/')) {
         return '7.12.1';
-    } else if (type.includes('/backbone.js/0.')) {
+    } else if (type.startsWith('/backbone.js/0.')) {
         return '0.9.10';
-    } else if (type.includes('/backbone.js/1.')) {
+    } else if (type.startsWith('/backbone.js/1.')) {
         return '1.4.0';
-    } else if (type.includes('/baguettebox.js/1.')) {
+    } else if (type.startsWith('/baguettebox.js/1.')) {
         return '1.11.1';
-    } else if (type.includes('/bootbox.js/4.')) {
+    } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
-    } else if (type.includes('/bootstrap/3.')) {
+    } else if (type.startsWith('/bootstrap/3.')) {
         return '3.3.7';
-    } else if (type.includes('/bootstrap/4.')) {
+    } else if (type.startsWith('/bootstrap/4.')) {
         return '4.5.3';
-    } else if (type.includes('/bootstrap-daterangepicker/2.')) {
+    } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
-    } else if (type.includes('/bootstrap-datepicker/1.')) {
+    } else if (type.startsWith('/bootstrap-datepicker/1.')) {
         return '1.9.0';
-    } else if (type.includes('/bootstrap-slider/10.')) {
+    } else if (type.startsWith('/bootstrap-slider/10.')) {
         return '10.6.2';
-    } else if (type.includes('/bootstrap-select/1.')) {
+    } else if (type.startsWith('/bootstrap-select/1.')) {
         return '1.13.17';
-    } else if (type.includes('/bootstrap-table/1.')) {
+    } else if (type.startsWith('/bootstrap-table/1.')) {
         return '1.18.0';
-    } else if (type.includes('/bootstrap-toggle/2.')) {
+    } else if (type.startsWith('/bootstrap-toggle/2.')) {
         return '2.2.2';
-    } else if (type.includes('/bootstrap-3-typeahead/4.')) {
+    } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
-    } else if (type.includes('/chart.js/2.')) {
+    } else if (type.startsWith('/chart.js/2.')) {
         return '2.9.4';
-    } else if (type.includes('/clipboard.js/1.')) {
+    } else if (type.startsWith('/clipboard.js/1.')) {
         return '1.7.1';
-    } else if (type.includes('/clipboard.js/2.')) {
+    } else if (type.startsWith('/clipboard.js/2.')) {
         return '2.0.6';
-    } else if (type.includes('/cookieconsent2/3.')) {
+    } else if (type.startsWith('/cookieconsent2/3.')) {
         return '3.1.1';
-    } else if (type.includes('/d3/3.')) {
+    } else if (type.startsWith('/d3/3.')) {
         return '3.5.17';
-    } else if (type.includes('/d3-legend/2.')) {
+    } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
-    } else if (type.includes('/dojo/1.')) {
+    } else if (type.startsWith('/dojo/1.')) {
         return '1.14.1';
-    } else if (type.includes('/drawer/3.')) {
+    } else if (type.startsWith('/drawer/3.')) {
         return '3.2.2';
-    } else if (type.includes('/element-ui/2.')) {
+    } else if (type.startsWith('/element-ui/2.')) {
         return '2.13.2';
-    } else if (type.includes('/ember.js/1.')) {
+    } else if (type.startsWith('/ember.js/1.')) {
         return '1.13.13';
-    } else if (type.includes('/ember.js/2.')) {
+    } else if (type.startsWith('/ember.js/2.')) {
         return '2.18.2';
-    } else if (type.includes('/ember.js/3.')) {
+    } else if (type.startsWith('/ember.js/3.')) {
         return '3.12.3';
-    } else if (type.includes('/ethjs')) {
+    } else if (type.startsWith('/ethjs')) {
         return '0.3.4';
-    } else if (type.includes('/ext-core/3.')) {
+    } else if (type.startsWith('/ext-core/3.')) {
         return '3.1.0';
-    } else if (type.includes('findify')) {
+    } else if (type.startsWith('findify')) {
         return '6.9.15';
-    } else if (type.includes('/fancybox/2.')) {
+    } else if (type.startsWith('/fancybox/2.')) {
         return '2.1.5';
-    } else if (type.includes('/fancybox/3.')) {
+    } else if (type.startsWith('/fancybox/3.')) {
         return '3.5.7';
-    } else if (type.includes('/flv.js/')) {
+    } else if (type.startsWith('/flv.js/')) {
         return '1.5.0';
-    } else if (type.includes('/fontawesome/3.')) {
+    } else if (type.startsWith('/fontawesome/3.')) {
         return '3.2.1';
-    } else if (type.includes('/fontawesome/4.')) {
+    } else if (type.startsWith('/fontawesome/4.')) {
         return '4.7.0';
-    } else if (type.includes('/fontawesome/5.')) {
+    } else if (type.startsWith('/fontawesome/5.')) {
         return '5.15.1';
-    } else if (type.includes('/google-material-design-icons/')) {
+    } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
-    } else if (type.includes('/highlight.js/10.')) {
+    } else if (type.startsWith('/highlight.js/10.')) {
         return '10.3.2';
-    } else if (type.includes('/highlight.js/9.')) {
+    } else if (type.startsWith('/highlight.js/9.')) {
         return '9.18.3';
-    } else if (type.includes('/history/')) {
+    } else if (type.startsWith('/history/')) {
         return '4.10.1';
-    } else if (type.includes('/hls.js/')) {
+    } else if (type.startsWith('/hls.js/')) {
         return '0.13.2';
-    } else if (type.includes('/instantsearch.js/3.')) {
+    } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
-    } else if (type.includes('/instantsearch.js/4.')) {
+    } else if (type.startsWith('/instantsearch.js/4.')) {
         return '4.8.1';
-    } else if (type.includes('/iScroll/5.')) {
+    } else if (type.startsWith('/iScroll/5.')) {
         return '5.2.0';
-    } else if (type.includes('/jets/0.')) {
+    } else if (type.startsWith('/jets/0.')) {
         return '0.14.1';
-    } else if (type.includes('/jquery/1.')) {
+    } else if (type.startsWith('/jquery/1.')) {
         if (helpers.compareVersion('1.7.1', version)) return '1.7.1'; // <= v1.7.1
         else if (helpers.compareVersion('1.8.3', version)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
         else return '1.12.4'; // >= 1.8.4
-    } else if (type.includes('/jquery/1.8.')) {
+    } else if (type.startsWith('/jquery/1.8.')) {
         return '1.8.3';
-    } else if (type.includes('/jquery/2.')) {
+    } else if (type.startsWith('/jquery/2.')) {
         return '2.2.4';
-    } else if (type.includes('/jquery/3.') || type.includes('/jquery/null')) {
+    } else if (type.startsWith('/jquery/3.') || type.startsWith('/jquery/null')) {
         return '3.5.1';
-    } else if (type.includes('/jquery.devbridge-autocomplete/1.')) {
+    } else if (type.startsWith('/jquery.devbridge-autocomplete/1.')) {
         return '1.4.10';
-    } else if (type.includes('/jqueryui/1.')) {
+    } else if (type.startsWith('/jqueryui/1.')) {
         if (helpers.compareVersion('1.8.24', version)) return '1.8.24'; // <= v1.8.24
         else return '1.12.1'; // >= 1.8.19
-    } else if (type.includes('/jquery.blockUI/2.')) {
+    } else if (type.startsWith('/jquery.blockUI/2.')) {
         return '2.70';
-    } else if (type.includes('/jquery-csv/1.')) {
+    } else if (type.startsWith('/jquery-csv/1.')) {
         return '1.0.9';
-    } else if (type.includes('/jquery-easing/1.')) {
+    } else if (type.startsWith('/jquery-easing/1.')) {
         return '1.4.1';
-    } else if (type.includes('/jquery.lazyload/1.')) {
+    } else if (type.startsWith('/jquery.lazyload/1.')) {
         return '1.9.1';
-    } else if (type.includes('/jquery.lazy/1.')) {
+    } else if (type.startsWith('/jquery.lazy/1.')) {
         return '1.7.11';
-    } else if (type.includes('/jquery.matchHeight/0.')) {
+    } else if (type.startsWith('/jquery.matchHeight/0.')) {
         return '0.7.2';
-    } else if (type.includes('/jquery-migrate/1.')) {
+    } else if (type.startsWith('/jquery-migrate/1.')) {
         return '1.4.1';
-    } else if (type.includes('/jquery-migrate/3.')) {
+    } else if (type.startsWith('/jquery-migrate/3.')) {
         return '3.1.0';
-    } else if (type.includes('/jquery-mousewheel/3.')) {
+    } else if (type.startsWith('/jquery-mousewheel/3.')) {
         return '3.1.13';
-    } else if (type.includes('/jScrollPane/2.')) {
+    } else if (type.startsWith('/jScrollPane/2.')) {
         return '2.2.2';
-    } else if (type.includes('/jquery-validate/1.')) {
+    } else if (type.startsWith('/jquery-validate/1.')) {
         return '1.19.1';
-    } else if (type.includes('/jquery-jeditable/1.')) {
+    } else if (type.startsWith('/jquery-jeditable/1.')) {
         return '1.8.0';
-    } else if (type.includes('tablesorter/2.')) {
+    } else if (type.startsWith('tablesorter/2.')) {
         return '2.31.3';
-    } else if (type.includes('/jquery-modal/0.')) {
+    } else if (type.startsWith('/jquery-modal/0.')) {
         return '0.9.2';
-    } else if (type.includes('/mobile/1.')) {
+    } else if (type.startsWith('/mobile/1.')) {
         return '1.4.5';
-    } else if (type.includes('/nvd3/1.')) {
+    } else if (type.startsWith('/nvd3/1.')) {
         return '1.8.6';
-    } else if (type.includes('/js-cookie/2.')) {
+    } else if (type.startsWith('/js-cookie/2.')) {
         return '2.2.1';
-    } else if (type.includes('/lazysizes/4.')) {
+    } else if (type.startsWith('/lazysizes/4.')) {
         return '4.1.8';
-    } else if (type.includes('/libphonenumber-js/1.')) {
+    } else if (type.startsWith('/libphonenumber-js/1.')) {
         return '1.7.53';
-    } else if (type.includes('/libsodium.js/0.')) {
+    } else if (type.startsWith('/libsodium.js/0.')) {
         return '0.5.4';
-    } else if (type.includes('/lightgallery/1.')) {
+    } else if (type.startsWith('/lightgallery/1.')) {
         return '1.9.0';
-    } else if (type.includes('/lodash.js/4.')) {
+    } else if (type.startsWith('/lodash.js/4.')) {
         return '4.17.10';
-    } else if (type.includes('/lodash.js/3.')) {
+    } else if (type.startsWith('/lodash.js/3.')) {
         return '3.10.1';
-    } else if (type.includes('lozad')) {
+    } else if (type.startsWith('lozad')) {
         return '1.14.0';
-    } else if (type.includes('/markdown-it/')) {
+    } else if (type.startsWith('/markdown-it/')) {
         return '12.0.2';
-    } else if (type.includes('/mdbootstrap/4.')) {
+    } else if (type.startsWith('/mdbootstrap/4.')) {
         return '4.18.0';
-    } else if (type.includes('/materialize/1.')) {
+    } else if (type.startsWith('/materialize/1.')) {
         return '1.0.0';
-    } else if (type.includes('/materialize/0.')) {
+    } else if (type.startsWith('/materialize/0.')) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return '0.100.2';
-    } else if (type.includes('/modernizr/2.')) {
+    } else if (type.startsWith('/modernizr/2.')) {
         return '2.8.3';
-    } else if (type.includes('/moment.js/2.')) {
+    } else if (type.startsWith('/moment.js/2.')) {
         return '2.29.1';
-    } else if (type.includes('/mootools/1.')) {
+    } else if (type.startsWith('/mootools/1.')) {
         if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
         else return '1.6.0'; // > 1.4.5
-    } else if (type.includes('/object-assign@4.')) {
+    } else if (type.startsWith('/object-assign@4.')) {
         return '4.1.1';
-    } else if (type.includes('/oclazyload/1.')) {
+    } else if (type.startsWith('/oclazyload/1.')) {
         return '1.1.0';
-    } else if (type.includes('/owl-carousel/2.')) {
+    } else if (type.startsWith('/owl-carousel/2.')) {
         return '2.3.4';
-    } else if (type.includes('/owl-carousel/1.')) {
+    } else if (type.startsWith('/owl-carousel/1.')) {
         return '1.3.3';
-    } else if (type.includes('p2p-media-loader-core') || type.includes('p2p-media-loader-hlsjs')) {
+    } else if (type.startsWith('/p2p-media-loader-core') || type.startsWith('/p2p-media-loader-hlsjs')) {
         return '0.6.2';
-    } else if (type.includes('/page.js/1.')) {
+    } else if (type.startsWith('/page.js/1.')) {
         return '1.7.1';
-    } else if (type.includes('/plyr/3.')) {
+    } else if (type.startsWith('/plyr/3.')) {
         return '3.5.10';
-    } else if (type.includes('/popper.js/1.')) {
+    } else if (type.startsWith('/popper.js/1.')) {
         return '1.16.1';
-    } else if (type.includes('/popper.js/2.')) {
+    } else if (type.startsWith('/popper.js/2.')) {
         return '2.5.4';
-    } else if (type.includes('/prop-types/15.')) {
+    } else if (type.startsWith('/prop-types/15.')) {
         return '15.7.2';
-    } else if (type.includes('/prototype/1.')) {
+    } else if (type.startsWith('/prototype/1.')) {
         return '1.7.3.0';
-    } else if (type.includes('/raven.js/3.')) {
+    } else if (type.startsWith('/raven.js/3.')) {
         return '3.26.2';
-    } else if (type.includes('/react/16.')) {
+    } else if (type.startsWith('/react/16.')) {
         return '16.13.1';
-    } else if (type.includes('/react-dom/16.')) {
+    } else if (type.startsWith('/react-dom/16.')) {
         return '16.13.1';
-    } else if (type.includes('/react-redux/7.')) {
+    } else if (type.startsWith('/react-redux/7.')) {
         return '7.2.1';
-    } else if (type.includes('/react-router/5.')) {
+    } else if (type.startsWith('/react-router/5.')) {
         return '5.2.0';
-    } else if (type.includes('/react-side-effect/')) {
+    } else if (type.startsWith('/react-side-effect/')) {
         return '2.1.0';
-    } else if (type.includes('/react-lifecycles-compat/')) {
+    } else if (type.startsWith('/react-lifecycles-compat/')) {
         return '3.0.4';
-    } else if (type.includes('/redux/4.')) {
+    } else if (type.startsWith('/redux/4.')) {
         return '4.0.5';
-    } else if (type.includes('/rickshaw/1.')) {
+    } else if (type.startsWith('/rickshaw/1.')) {
         return '1.6.6';
-    } else if (type.includes('/scriptaculous/1.')) {
+    } else if (type.startsWith('/scriptaculous/1.')) {
         return '1.9.0';
-    } else if (type.includes('/select2/4.')) {
+    } else if (type.startsWith('/select2/4.')) {
         return '4.0.13';
-    } else if (type.includes('/showdown/1.')) {
+    } else if (type.startsWith('/showdown/1.')) {
         return '1.9.1';
-    } else if (type.includes('/showdown/0.')) {
+    } else if (type.startsWith('/showdown/0.')) {
         return '0.5.1';
-    } else if (type.includes('/simplemde/')) {
+    } else if (type.startsWith('/simplemde/')) {
         return '1.11.2';
-    } else if (type.includes('/slick-carousel/1.')) {
+    } else if (type.startsWith('/slick-carousel/1.')) {
         return '1.9.0';
-    } else if (type.includes('/slick-lightbox/0.')) {
+    } else if (type.startsWith('/slick-lightbox/0.')) {
         return '0.2.12';
-    } else if (type.includes('/socket.io/2.')) {
+    } else if (type.startsWith('/socket.io/2.')) {
         return '2.3.0';
-    } else if (type.includes('/spin.js/2.')) {
+    } else if (type.startsWith('/spin.js/2.')) {
         return '2.3.2';
-    } else if (type.includes('/stickyfill/1.')) {
+    } else if (type.startsWith('/stickyfill/1.')) {
         return '1.1.4';
-    } else if (type.includes('/stickyfill/2.')) {
+    } else if (type.startsWith('/stickyfill/2.')) {
         return '2.1.0';
-    } else if (type.includes('/store.js/2.')) {
+    } else if (type.startsWith('/store.js/2.')) {
         return '2.0.4';
-    } else if (type.includes('/swfobject/2.')) {
+    } else if (type.startsWith('/swfobject/2.')) {
         return '2.2';
-    } else if (type.includes('/swiper/3.')) {
+    } else if (type.startsWith('/swiper/3.')) {
         return '3.4.2';
-    } else if (type.includes('/swiper/4.')) {
+    } else if (type.startsWith('/swiper/4.')) {
         return '4.5.1';
-    } else if (type.includes('/swiper/5.')) {
+    } else if (type.startsWith('/swiper/5.')) {
         return '5.4.5';
-    } else if (type.includes('/tether/1.')) {
+    } else if (type.startsWith('/tether/1.')) {
         return '1.4.7';
-    } else if (type.includes('/tooltipster/3.')) {
+    } else if (type.startsWith('/tooltipster/3.')) {
         return '3.3.0';
-    } else if (type.includes('/toastr.js/2.')) {
+    } else if (type.startsWith('/toastr.js/2.')) {
         return '2.1.4';
-    } else if (type.includes('/underscore.js/1.')) {
+    } else if (type.startsWith('/underscore.js/1.')) {
         return '1.11.0';
-    } else if (type.includes('/urlive/1.')) {
+    } else if (type.startsWith('/urlive/1.')) {
         return '1.1.1';
-    } else if (type.includes('/vanilla-lazyload')) {
+    } else if (type.startsWith('/vanilla-lazyload')) {
         return '17.1.0';
-    } else if (type.includes('/videojs-seek-buttons/')) {
+    } else if (type.startsWith('/videojs-seek-buttons/')) {
         return '1.6.0';
-    } else if (type.includes('/video.js/')) {
+    } else if (type.startsWith('/video.js/')) {
         if (helpers.compareVersion('5.20.5', version)) return '5.20.5'; // <= 5.20.5
         else if (helpers.compareVersion('6.13.0', version)) return '6.13.0'; // > 5.20.5 to <= 6.13.0
         else return '7.10.1'; // > 7.10.1
-    } else if (type.includes('/vue/1.')) {
+    } else if (type.startsWith('/vue/1.')) {
         return '1.0.28';
-    } else if (type.includes('/vue/2.')) {
+    } else if (type.startsWith('/vue/2.')) {
         return '2.6.12';
-    } else if (type.includes('/vue-i18n/8.')) {
+    } else if (type.startsWith('/vue-i18n/8.')) {
         return '8.22.1';
-    } else if (type.includes('/vue-resource/1.')) {
+    } else if (type.startsWith('/vue-resource/1.')) {
         return '1.5.1';
-    } else if (type.includes('/waypoints/4.')) {
+    } else if (type.startsWith('/waypoints/4.')) {
         return '4.0.1';
-    } else if (type.includes('webfont')) {
+    } else if (type.startsWith('/webfont')) {
         return '1.6.28';
-    } else if (type.includes('/webrtc-adapter/6.')) {
+    } else if (type.startsWith('/webrtc-adapter/6.')) {
         return '6.4.8';
-    } else if (type.includes('/wow/1.')) {
+    } else if (type.startsWith('/wow/1.')) {
         return '1.1.2';
     } else if (version === null) {
         return 'latest';
