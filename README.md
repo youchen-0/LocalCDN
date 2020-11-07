@@ -15,14 +15,16 @@ An adblocker (e.g. uBlock Origin, uMatrix or AdGuard) decides which requests are
 
 LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
-* Supports cloud storage by browsers sync feature (Firefox Sync or own Sync-Server) if enabled
-* Removed integrity checks of embedded script and style elements (Firefox only)
-* Font Awesome
-* jQuery up to 3.5.1
-* Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)
-* Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)
-* AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch
-* Prepared rules for uBlock Origin, uMatrix and AdGuard
+* Supports cloud storage by browsers sync feature (Firefox Sync or own Sync-Server) if enabled <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png"> <img width="15px" src="https://www.localcdn.org/img/icon-chrome-25.png">
+* Removed integrity checks of embedded script and style elements <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png">
+* Font Awesome <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png">
+* Google Material Icons <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png">
+* jQuery up to 3.5.1 <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png"> <img width="15px" src="https://www.localcdn.org/img/icon-chrome-25.png">
+* Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN) <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png">
+* Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN) <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png"> <img width="15px" src="https://www.localcdn.org/img/icon-chrome-25.png">
+* AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png"> <img width="15px" src="https://www.localcdn.org/img/icon-chrome-25.png">
+* React, Vue.js, Chart.js and many other frameworks/libraries <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png"> <img width="15px" src="https://www.localcdn.org/img/icon-chrome-25.png">
+* Prepared rules for uBlock Origin, uMatrix and AdGuard <img width="15px" src="https://www.localcdn.org/img/icon-firefox-25.png"> <img width="15px" src="https://www.localcdn.org/img/icon-chrome-25.png">
 
 > **Note:** LocalCDN is no silver bullet, but it does prevent a lot of websites from making you send these kinds of requests. Ultimately, you can make LocalCDN block requests for any missing CDN resources, too.
 
@@ -35,7 +37,7 @@ LocalCDN based on Decentraleyes. It includes more frameworks and more CDNs:
 
 :thumbsup: more frameworks/libraries (> 100 :tada: :tada: :tada:)
 
-:thumbsup: smaller size than other extensions
+:thumbsup: smaller size than other extensions (10 MB)
 
 :thumbsup: remove crossorigin and integrity attributes of script and stylesheet tags to increase replacements (Firefox only)
 
