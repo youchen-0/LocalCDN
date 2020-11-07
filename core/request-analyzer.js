@@ -175,7 +175,12 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             };
         }
     }
-    if (requestAnalyzer.logging && channelHost + channelPath !== 'fonts.googleapis.com/css') {
+
+    if (
+        requestAnalyzer.logging &&
+        channelHost + channelPath !== 'fonts.googleapis.com/css' &&
+        channelHost + channelPath !== 'fonts.googleapis.com/css2'
+    ) {
         console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
     }
     return false;
