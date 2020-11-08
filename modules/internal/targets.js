@@ -286,7 +286,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/page.js/1.')) {
         return '1.7.1';
     } else if (type.startsWith('/plyr/3.')) {
-        return '3.5.10';
+        return '3.6.2';
     } else if (type.startsWith('/popper.js/1.')) {
         return '1.16.1';
     } else if (type.startsWith('/popper.js/2.')) {
@@ -559,6 +559,7 @@ const ListOfFiles = {
     'p2p-media-loader-core.min.jsm': 'P2P Media Loader Core',
     'page.min.jsm': 'page.js',
     'plyr.min.css': 'plyr (CSS)',
+    'plyr.min.jsm': 'plyr (JS)',
     'popper.min.jsm': 'Popper',
     'prototype.jsm': 'Prototype',
     'raven.min.jsm': 'Raven.js',
