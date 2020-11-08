@@ -148,6 +148,16 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/select2/' + lastVersion + '/' + helpers.extractFilenameFromPath(channelPath),
             'bundle': 'Select2'
         };
+    } else if (channelHost + channelPath === 'cdn.jsdelivr.net/npm/anchor-js/anchor.min.js') {
+        // This CDN always delivers the latest version of 'AnchorJS'
+        lastVersion = targets.setLastVersion('/anchor-js/4.');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'versionRequested': lastVersion,
+            'path': 'resources/anchor-js/' + lastVersion + '/anchor.min.jsm',
+            'bundle': ''
+        };
     } else {
         return false;
     }
