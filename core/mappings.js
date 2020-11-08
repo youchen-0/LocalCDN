@@ -352,6 +352,7 @@ mappings.cdn = {
             'twitter-bootstrap/{version}-alpha.3/js/bootstrap.min.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}-alpha.3/css/bootstrap.min.css': resources.bootstrapCSS,
             'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
+            'twitter-bootstrap/{version}/js/bootstrap.': resources.bootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.min.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.min.css': resources.bootstrapCSS,
