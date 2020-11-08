@@ -26,7 +26,7 @@ var ruleGenerator = {};
 ruleGenerator.openRuleSet = function ({ target }) {
     let urls, key, textArea, btnCopy, content;
 
-    urls = CDNs;
+    urls = mappings.cdn;
     key = target.getAttribute('data-option');
     textArea = document.getElementById('generated-rules');
     btnCopy = document.getElementById('button-copy-rule-set');
