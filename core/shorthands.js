@@ -158,6 +158,13 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/anchor-js/' + lastVersion + '/anchor.min.jsm',
             'bundle': ''
         };
+    } else if (channelHost + channelPath === 'www.gstatic.com/charts/loader.js') {
+        // This CDN always delivers the latest version of 'Google Charts'
+        return {
+            'source': channelHost,
+            'path': 'resources/google-charts/loader.jsm',
+            'bundle': ''
+        };
     } else {
         return false;
     }

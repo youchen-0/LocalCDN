@@ -381,6 +381,11 @@ var resources = {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
     },
+    // Google Charts
+    'googleCharts': {
+        'path': 'resources/google-charts/loader.jsm',
+        'type': 'application/javascript'
+    },
     // Google Material Icons
     'googleMaterialIcons': {
         'path': 'resources/google-material-design-icons/google-material-design-icons.css',

@@ -392,6 +392,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'loader.jsm': 'Google Charts',
     'bootstrap-table.min.jsm': 'Bootstrap Table (JS)',
     'bootstrap-table.min.css': 'Bootstrap Table (CSS)',
     'jquery.matchHeight-min.jsm': 'jquery.matchHeight.js',
