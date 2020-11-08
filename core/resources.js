@@ -665,6 +665,10 @@ var resources = {
         'path': 'resources/plyr/{version}/plyr.min.jsm',
         'type': 'application/javascript'
     },
+    'plyrSVG': {
+        'path': 'resources/plyr/{version}/plyr.svg',
+        'type': 'image/svg+xml'
+    },
     // Popper
     'popperJS': {
         'path': 'resources/popper.js/{version}/umd/popper.min.jsm',

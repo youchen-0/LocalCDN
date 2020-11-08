@@ -29,7 +29,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-10-26';
+mappings.lastMappingUpdate = '2020-11-08';
 
 mappings.cdn = {
 
@@ -862,6 +862,12 @@ mappings.cdn = {
             '{version}/video.min.js': resources.videoJS
         }
     },
+    // Plyr CDN
+    'cdn.plyr.io': {
+        '/': {
+            '{version}/plyr.svg': resources.plyrSVG
+        }
+    }
 };
 
 // Geekzu Public Service [Mirror]

@@ -562,6 +562,7 @@ const ListOfFiles = {
     'page.min.jsm': 'page.js',
     'plyr.min.css': 'plyr (CSS)',
     'plyr.min.jsm': 'plyr (JS)',
+    'plyr.svg': 'plyr (SVG)',
     'popper.min.jsm': 'Popper',
     'prototype.jsm': 'Prototype',
     'raven.min.jsm': 'Raven.js',

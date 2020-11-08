@@ -223,6 +223,7 @@ const Links = {
  */
 const FrameworkAndBundle = {
     'resources/anchor-js/4.2.2/': 'AnchorJS',
+    'resources/plyr/3.5.10/': 'Plyr',
     'resources/swiper/5.4.2/': 'Swiper',
     'resources/select2/4.0.12/': 'Select2',
     'resources/element-ui/2.13.2/': 'ElementUI',
@@ -263,6 +264,7 @@ const CDNs = {
     'gitcdn.github.io': 'GitHub',
     'cdn.bootcdn.net': 'BootCDN #2',
     'vjs.zencdn.net': 'Video.js CDN',
+    'cdn.plyr.io': 'Plyr CDN'
 };
 
 // Supported charsets for TextDecoder()
