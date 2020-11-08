@@ -264,7 +264,8 @@ const CDNs = {
     'gitcdn.github.io': 'GitHub',
     'cdn.bootcdn.net': 'BootCDN #2',
     'vjs.zencdn.net': 'Video.js CDN',
-    'cdn.plyr.io': 'Plyr CDN'
+    'cdn.plyr.io': 'Plyr CDN',
+    'www.gstatic.com': 'gstatic.com',
 };
 
 // Supported charsets for TextDecoder()

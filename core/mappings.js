@@ -868,6 +868,12 @@ mappings.cdn = {
         '/': {
             '{version}/plyr.svg': resources.plyrSVG
         }
+    },
+    // gstatic
+    'www.gstatic.com': {
+        '/': {
+            'charts/loader.js': resources.googleCharts
+        }
     }
 };
 

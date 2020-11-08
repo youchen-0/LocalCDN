@@ -32,6 +32,8 @@ ruleGenerator.openRuleSet = function ({ target }) {
     btnCopy = document.getElementById('button-copy-rule-set');
     content = '';
 
+    // Exclude www.gstatic.com
+    delete urls['www.gstatic.com'];
 
     textArea.style.display = 'block';
     btnCopy.style.display = 'block';
