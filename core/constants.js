@@ -197,7 +197,7 @@ const IconType = {
 
 const Regex = {
     'GOOGLE_FONTS': /fonts\.googleapis\.com\/(css|icons)(?!.*Material\+Icons).*/,
-    'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/(icon|css)\?family=Material\+Icons/,
+    'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/(icon|css)\?family=.*Material\+Icons/,
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
@@ -222,6 +222,7 @@ const Links = {
  * See: https://codeberg.org/nobody/LocalCDN/issues/151
  */
 const FrameworkAndBundle = {
+    'resources/swiper/5.4.2/': 'Swiper',
     'resources/select2/4.0.12/': 'Select2',
     'resources/element-ui/2.13.2/': 'ElementUI',
     'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
@@ -231,6 +232,36 @@ const FrameworkAndBundle = {
     'resources/twitter-bootstrap/4.5.0/': 'Bootstrap',
     'resources/twitter-bootstrap/3.4.1/': 'Bootstrap',
     'resources/twitter-bootstrap/2.3.2/': 'Bootstrap'
+};
+
+const CDNs = {
+    'ajax.googleapis.com': 'Google Hosted Libraries',
+    'ajax.aspnetcdn.com': 'Microsoft Ajax CDN',
+    'ajax.microsoft.com': 'Microsoft Ajax CDN [Deprecated]',
+    'cdnjs.cloudflare.com': 'CDNJS (Cloudflare)',
+    'code.jquery.com': 'jQuery CDN (MaxCDN)',
+    'cdn.jsdelivr.net': 'jsDelivr (Cloudflare)',
+    'yastatic.net': 'Yandex CDN',
+    'yandex.st': 'Yandex CDN [Deprecated]',
+    'apps.bdimg.com': 'Baidu CDN',
+    'libs.baidu.com': 'Baidu CDN [Deprecated]',
+    'lib.sinaapp.com': 'Sina Public Resources',
+    'upcdn.b0.upaiyun.com': 'UpYun Library',
+    'cdn.bootcss.com': 'BootCDN #1',
+    'sdn.geekzu.org': 'Geekzu Public Service [Mirror]',
+    'ajax.proxy.ustclug.org': 'USTC Linux User Group [Mirror]',
+    'unpkg.com': 'UNPKG (Cloudflare)',
+    'stackpath.bootstrapcdn.com': 'StackPath BootstrapCDN',
+    'maxcdn.bootstrapcdn.com': 'MaxCDN Bootstrap CDN',
+    'use.fontawesome.com': 'Font Awesome CDN',
+    'ajax.cloudflare.com': 'Cloudflare CDN',
+    'akamai-webcdn.kgstatic.net': 'Akamai WebCDN',
+    'netdna.bootstrapcdn.com': 'NetDNA',
+    'pagecdn.io': 'PageCDN',
+    'fonts.googleapis.com': 'Google Fonts',
+    'gitcdn.github.io': 'GitHub',
+    'cdn.bootcdn.net': 'BootCDN #2',
+    'vjs.zencdn.net': 'Video.js CDN',
 };
 
 // Supported charsets for TextDecoder()

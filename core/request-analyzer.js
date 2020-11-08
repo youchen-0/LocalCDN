@@ -141,7 +141,11 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
             // Replace the requested version with the latest depending on major version
-            versionDelivered = helpers.setLastVersion(targetPath, versionNumber).toString();
+            versionDelivered = targets.setLastVersion(targetPath, versionNumber);
+            if (versionDelivered === false) {
+                return false;
+            }
+            versionDelivered = versionDelivered.toString();
             targetPath = targetPath.replace(versionNumber, versionDelivered);
 
             versionRequested = versionNumber === null ? 'latest' : versionNumber[0];
@@ -151,7 +155,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             }
 
             // Get bundle name
-            let bundle = helpers.determineBundle(channelPath);
+            let bundle = targets.determineBundle(channelPath);
             if (bundle !== '') {
                 filename = channelPath.split('/').pop();
                 targetPath = ( RegExp('.*\.css$').test(filename) ) ? targetPath + filename : targetPath + filename + 'm';
@@ -171,7 +175,12 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             };
         }
     }
-    if (requestAnalyzer.logging) {
+
+    if (
+        requestAnalyzer.logging &&
+        channelHost + channelPath !== 'fonts.googleapis.com/css' &&
+        channelHost + channelPath !== 'fonts.googleapis.com/css2'
+    ) {
         console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
     }
     return false;

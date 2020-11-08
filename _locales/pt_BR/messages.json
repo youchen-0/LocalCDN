@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Gere conjuntos de regras para uBlock ou uMatrix",
+        "message": "Gere conjuntos de regras para seu bloqueador de anúncios",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "No caso de você estar usando uBlock ou uMatrix você pode gerar as regras aqui. Você tem que adicionar essas regras manualmente no uBlock Origin ou uMatrix.",
+        "message": "No caso de você estar usando um bloqueador de anúncios você pode gerar as regras aqui. Você tem que adicionar essas regras manualmente no bloqueador de anúncios.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -84,11 +84,11 @@
         "description": "Disable release notes"
     },
     "hideReleaseNotesDescription": {
-        "message": "Habilite isso para não receber informações sobre novos recursos do LocalCDN. Isso inclui informação sobre novas regras do uBlock/uMatrix.",
+        "message": "Habilite isso para não receber informações sobre novos recursos do LocalCDN. Isso inclui informação sobre novas regras do bloqueador de anúncios.",
         "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Esse recurso quebra sites. Não deixe habilitado, a não ser que você esteja preparado para manualmente colocar os sites afetados na Lista Branca.",
+        "message": "Esse recurso quebra sites. Não deixe habilitado, a não ser que você esteja preparado para permitir manualmente os sites afetados.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -188,51 +188,51 @@
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Básico",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Avançado",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Outro",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Tipo de Armazenamento",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Local",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sincronizar",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importar/Exportar",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Salvar para arquivo",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Restaurar de arquivo",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Importação Concluida",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Falha no Importação",
         "description": "Import failed"
     }
 }

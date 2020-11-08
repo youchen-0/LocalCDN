@@ -25,6 +25,7 @@
 var shorthands = {};
 
 shorthands.specialFiles = function (channelHost, channelPath, searchString) {
+    let lastVersion;
     /*
         NOTE:
         jsDelivr allows to load several files in one request
@@ -50,49 +51,55 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if (Regex.GOOGLE_MATERIAL_ICONS.test(channelHost + channelPath + searchString)) {
+        lastVersion = targets.setLastVersion('/google-material-design-icons/');
         return {
             'source': channelHost,
-            'versionDelivered': '3.0.1',
+            'versionDelivered': lastVersion,
             'path': 'resources/google-material-design-icons/google-material-design-icons.css',
             'bundle': ''
         };
     } else if (Regex.BOOTSTRAP_DATEPICKER_3.test(channelPath)) {
+        lastVersion = targets.setLastVersion('/bootstrap-datepicker/1.');
         return {
             'source': channelHost,
-            'versionDelivered': '1.9.0',
-            'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker3.standalone.min.css',
+            'versionDelivered': lastVersion,
+            'path': 'resources/bootstrap-datepicker/' + lastVersion + '/bootstrap-datepicker3.standalone.min.css',
             'bundle': ''
         };
     } else if (Regex.BOOTSTRAP_DATEPICKER.test(channelPath)) {
+        lastVersion = targets.setLastVersion('/bootstrap-datepicker/1.');
         return {
             'source': channelHost,
-            'versionDelivered': '1.9.0',
-            'path': 'resources/bootstrap-datepicker/1.9.0/bootstrap-datepicker.standalone.min.css',
+            'versionDelivered': lastVersion,
+            'path': 'resources/bootstrap-datepicker/' + lastVersion + '/bootstrap-datepicker.standalone.min.css',
             'bundle': ''
         };
     } else if (Regex.FONT_AWESOME.test(channelHost + channelPath)) {
+        lastVersion = targets.setLastVersion('/fontawesome/4.');
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
-            'versionDelivered': '4.7.0',
+            'versionDelivered': lastVersion,
             'path': 'resources/webfont/fa-loader.css',
             'bundle': ''
         };
     } else if (Regex.FONT_AWESOME_WITH_CODE.test(channelHost + channelPath)) {
         let fileExtension = channelPath.endsWith('css') ? 'css' : 'jsm';
+        lastVersion = targets.setLastVersion('/fontawesome/4.');
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
-            'versionDelivered': '4.7.0',
+            'versionDelivered': lastVersion,
             'path': 'resources/webfont/fa-loader.' + fileExtension,
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/npm/vue') {
+        lastVersion = targets.setLastVersion('/vue/2.');
         return {
             'source': channelHost,
             'versionRequested': 'latest',
-            'versionDelivered': '2.6.12',
-            'path': 'resources/vue/2.6.12/vue.min.jsm',
+            'versionDelivered': lastVersion,
+            'path': 'resources/vue/' + lastVersion + '/vue.min.jsm',
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js') {
@@ -103,18 +110,21 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'unpkg.com/@umds/object-assign@4.1.1-beta.24/object-assign.min.js') {
+        lastVersion = targets.setLastVersion('/object-assign@4.');
         return {
             'source': channelHost,
             'versionRequested': '4.1.1',
-            'path': 'resources/object-assign/4.1.1/object-assign.min.jsm',
+            'versionDelivered': lastVersion,
+            'path': 'resources/object-assign/' + lastVersion + '/object-assign.min.jsm',
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css') {
         // This CDN delivers 'Font Awesome v4.7.0' as latest version
+        lastVersion = targets.setLastVersion('/fontawesome/4.');
         return {
             'source': channelHost,
-            'versionRequested': '4.7.0',
-            'path': 'resources/fontawesome/4.7.0/css/font-awesome.min.css',
+            'versionRequested': lastVersion,
+            'path': 'resources/fontawesome/' + lastVersion + '/css/font-awesome.min.css',
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js') {
@@ -130,11 +140,12 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         if (file.endsWith('js')) {
             file = file + 'm';
         }
+        lastVersion = targets.setLastVersion('/select2/4.');
         return {
             'source': channelHost,
-            'versionDelivered': '4.0.13',
+            'versionDelivered': lastVersion,
             'versionRequested': '4.1.0-beta.1',
-            'path': 'resources/select2/4.0.13/' + helpers.extractFilenameFromPath(channelPath),
+            'path': 'resources/select2/' + lastVersion + '/' + helpers.extractFilenameFromPath(channelPath),
             'bundle': 'Select2'
         };
     } else {

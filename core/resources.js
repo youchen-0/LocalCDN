@@ -182,6 +182,11 @@ var resources = {
         'path': 'resources/axios/{version}/axios.min.jsm',
         'type': 'application/javascript'
     },
+    // Babel Polyfill
+    'babelPolyfill': {
+        'path': 'resources/babel-polyfill/{version}/polyfill.min.jsm',
+        'type': 'application/javascript'
+    },
     // Backbone.js
     'backbone': {
         'path': 'resources/backbone.js/{version}/backbone-min.jsm',
@@ -237,6 +242,15 @@ var resources = {
     'bootstrapSliderJS': {
         'path': 'resources/bootstrap-slider/{version}/bootstrap-slider.min.jsm',
         'type': 'application/javascript'
+    },
+    // Bootstrap Table
+    'bootstrapTableJS': {
+        'path': 'resources/bootstrap-table/{version}/bootstrap-table.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrapTableCSS': {
+        'path': 'resources/bootstrap-table/{version}/bootstrap-table.min.css',
+        'type': 'text/css'
     },
     // Bootstrap Toggle
     'bootstrapToggleJS': {
@@ -297,6 +311,15 @@ var resources = {
     'dojo': {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
         'type': 'application/javascript'
+    },
+    // Drawer
+    'drawerJS': {
+        'path': 'resources/drawer/{version}/drawer.min.jsm',
+        'type': 'application/javascript'
+    },
+    'drawerCSS': {
+        'path': 'resources/drawer/{version}/drawer.min.css',
+        'type': 'text/css'
     },
     // Element-UI (Bundle)
     'elementUI': {
@@ -383,6 +406,11 @@ var resources = {
         'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm',
         'type': 'application/javascript'
     },
+    // iScroll
+    'iScroll': {
+        'path': 'resources/iScroll/{version}/iscroll.min.jsm',
+        'type': 'application/javascript'
+    },
     // jeditableJS
     'jeditableJS': {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
@@ -426,6 +454,11 @@ var resources = {
     // jQuery Lazy (Bundle)
     'jQueryLazyBundle': {
         'path': 'resources/jquery.lazy/{version}/',
+        'type': 'application/javascript'
+    },
+    // jquery.matchHeight.js
+    'jqueryMatchHeightJS': {
+        'path': 'resources/jquery.matchHeight/{version}/jquery.matchHeight-min.jsm',
         'type': 'application/javascript'
     },
     // jQuery Migrate
@@ -500,6 +533,20 @@ var resources = {
     'libphonenumber': {
         'path': 'resources/libphonenumber-js/{version}/libphonenumber-js.min.jsm',
         'type': 'application/javascript'
+    },
+    // libsodium.js
+    'libsodiumJS': {
+        'path': 'resources/libsodium.js/{version}/sodium.min.jsm',
+        'type': 'application/javascript'
+    },
+    // lightGallery
+    'lightGalleryJS': {
+        'path': 'resources/lightgallery/{version}/js/lightgallery-all.min.jsm',
+        'type': 'application/javascript'
+    },
+    'lightGalleryCSS': {
+        'path': 'resources/lightgallery/{version}/css/lightgallery.min.css',
+        'type': 'text/css'
     },
     // Lodash
     'lodashJS': {

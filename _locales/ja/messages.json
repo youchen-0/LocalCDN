@@ -156,19 +156,19 @@
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "先週",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "先月",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "昨年",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "削除",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
@@ -196,7 +196,7 @@
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "その他",
         "description": "Other"
     },
     "btnInfo": {
