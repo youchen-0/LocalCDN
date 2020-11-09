@@ -170,7 +170,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
-            'path': 'resources/fontawesome/' + lastVersion + '/' + helpers.extractFilenameFromPath(channelPath),
+            'path': 'resources/fontawesome/' + lastVersion + '/fonts/' + helpers.extractFilenameFromPath(channelPath),
             'bundle': 'Font Awesome (Fonts)'
         };
     } else {
