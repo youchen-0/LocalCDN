@@ -287,6 +287,8 @@ targets.setLastVersion = function (type, version) {
         return '0.6.2';
     } else if (type.startsWith('/page.js/1.')) {
         return '1.7.1';
+    } else if (type.startsWith('/paginationjs/2.')) {
+        return '2.1.5';
     } else if (type.startsWith('/plyr/3.')) {
         return '3.6.2';
     } else if (type.startsWith('/popper.js/1.')) {
@@ -392,6 +394,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'pagination.min.css': 'Pagination.js (CSS)',
+    'pagination.min.jsm': 'Pagination.js (JS)',
     'loader.jsm': 'Google Charts',
     'bootstrap-table.min.jsm': 'Bootstrap Table (JS)',
     'bootstrap-table.min.css': 'Bootstrap Table (CSS)',

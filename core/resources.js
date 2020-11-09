@@ -661,6 +661,15 @@ var resources = {
         'path': 'resources/page.js/{version}/page.min.jsm',
         'type': 'application/javascript'
     },
+    // Pagination.js
+    'paginationjsJS': {
+        'path': 'resources/paginationjs/2.1.5/pagination.min.jsm',
+        'type': 'application/javascript'
+    },
+    'paginationjsCSS': {
+        'path': 'resources/paginationjs/2.1.5/pagination.min.css',
+        'type': 'text/css'
+    },
     // plyr CSS
     'plyrCSS': {
         'path': 'resources/plyr/{version}/plyr.min.css',
