@@ -268,6 +268,11 @@ const CDNs = {
     'www.gstatic.com': 'gstatic.com',
 };
 
+const IgnoredHost = {
+    'fonts.googleapis.com': true,
+    'www.gstatic.com': true
+};
+
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder
 const EncodingTypes = {
