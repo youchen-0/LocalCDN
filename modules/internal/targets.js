@@ -257,7 +257,7 @@ targets.setLastVersion = function (type, version) {
         return '4.17.10';
     } else if (type.startsWith('/lodash.js/3.')) {
         return '3.10.1';
-    } else if (type.startsWith('lozad')) {
+    } else if (type.startsWith('/lozad')) {
         return '1.14.0';
     } else if (type.startsWith('/magnific-popup.js/1.')) {
         return '1.1.0';
