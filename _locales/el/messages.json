@@ -32,15 +32,15 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Αποτροπή διαρροής αποκλεισμένων κλήσεων προς δίκτυα διανομής.",
+        "message": "Αποτροπή διαρροής αποκλεισμένων αιτήσεων προς δίκτυα διανομής.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Διαγραφή μεταδεδομένων από επιτρεπόμενες κλήσεις",
+        "message": "Διαγραφή μεταδεδομένων από επιτρεπόμενες αιτήσεις",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Διαγραφή ευαίσθητων δεδομένων από CDN αιτήσεις για ενίσχυση ασφάλειας.",
+        "message": "Διαγραφή ευαίσθητων δεδομένων από επιτρεπόμενες αιτήσεις CDN για ενίσχυση ασφάλειας.",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
