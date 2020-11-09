@@ -294,6 +294,7 @@ mappings.cdn = {
             'lightgallery/{version}/js/lightgallery.': resources.lightGalleryJS,
             'lightgallery/{version}/css/lightgallery.': resources.lightGalleryCSS,
             'lodash.js/{version}/lodash.': resources.lodashJS,
+            'magnific-popup.js/{version}/jquery.magnific-popup.min.js': resources.magnificPopupJS,
             'markdown-it/{version}/markdown-it.': resources.markdownIt,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,

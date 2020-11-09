@@ -259,6 +259,8 @@ targets.setLastVersion = function (type, version) {
         return '3.10.1';
     } else if (type.startsWith('lozad')) {
         return '1.14.0';
+    } else if (type.startsWith('/magnific-popup.js/1.')) {
+        return '1.1.0';
     } else if (type.startsWith('/markdown-it/')) {
         return '12.0.2';
     } else if (type.startsWith('/mdbootstrap/4.')) {
@@ -394,6 +396,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.magnific-popup.min.jsm': 'magnific-popup.js',
     'pagination.min.css': 'Pagination.js (CSS)',
     'pagination.min.jsm': 'Pagination.js (JS)',
     'loader.jsm': 'Google Charts',

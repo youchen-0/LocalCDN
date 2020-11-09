@@ -563,6 +563,11 @@ var resources = {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',
         'type': 'application/javascript'
     },
+    // magnific-popup.js
+    'magnificPopupJS': {
+        'path': 'resources/magnific-popup.js/{version}/jquery.magnific-popup.min.jsm',
+        'type': 'application/javascript'
+    },
     // markdown-it
     'markdownIt': {
         'path': 'resources/markdown-it/{version}/markdown-it.min.jsm',
