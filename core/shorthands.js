@@ -165,6 +165,14 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/google-charts/loader.jsm',
             'bundle': ''
         };
+    } else if (Regex.FONT_AWESOME_ONLY_FONTS.test(channelPath)) {
+        lastVersion = targets.setLastVersion('/fontawesome/4.');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'path': 'resources/fontawesome/' + lastVersion + '/' + helpers.extractFilenameFromPath(channelPath),
+            'bundle': 'Font Awesome (Fonts)'
+        };
     } else {
         return false;
     }

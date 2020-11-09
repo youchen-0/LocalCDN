@@ -202,7 +202,8 @@ const Regex = {
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
     'FONT_AWESOME': /use\.fontawesome\.com\/fa-loader\.css/,
-    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/
+    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/,
+    'FONT_AWESOME_ONLY_FONTS': /\/font-awesome\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//
 };
 
 const Links = {
