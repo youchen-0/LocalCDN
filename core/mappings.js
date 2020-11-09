@@ -807,6 +807,7 @@ mappings.cdn = {
     // MaxCDN Bootstrap
     'maxcdn.bootstrapcdn.com': {
         '/': {
+            'bootstrap/{version}/js/bootstrap.bundle.min.': resources.bootstrapJS,
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
