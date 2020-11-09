@@ -396,7 +396,7 @@ const ListOfFiles = {
     'bootstrap-table.min.jsm': 'Bootstrap Table (JS)',
     'bootstrap-table.min.css': 'Bootstrap Table (CSS)',
     'jquery.matchHeight-min.jsm': 'jquery.matchHeight.js',
-    'iscoll.min.jsm': 'iScroll',
+    'iscroll.min.jsm': 'iScroll',
     'drawer.min.jsm': 'Drawer (JS)',
     'drawer.min.css': 'Drawer (CSS)',
     'lightgallery-all.min.jsm': 'lightGallery (JS)',
