@@ -222,6 +222,7 @@ const Links = {
  * See: https://codeberg.org/nobody/LocalCDN/issues/151
  */
 const FrameworkAndBundle = {
+    'resources/slick-carousel/1.9.0/': 'slick',
     'resources/anchor-js/4.2.2/': 'AnchorJS',
     'resources/plyr/3.5.10/': 'Plyr',
     'resources/swiper/5.4.2/': 'Swiper',
