@@ -261,6 +261,7 @@ mappings.cdn = {
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
             'font-awesome/{version}/css/': resources.fontawesome5CSS,
             'font-awesome/{version}/js/': resources.fontawesome5JS,
+            'gsap/{version}/': resources.gsapBundle,
             'highlight.js/{version}/': resources.highlightJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'iScroll/{version}/iscroll.min.js': resources.iScroll,

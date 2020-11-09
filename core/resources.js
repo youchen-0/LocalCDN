@@ -381,6 +381,11 @@ var resources = {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
     },
+    // GSAP
+    'gsapBundle': {
+        'path': 'resources/gsap/{version}/',
+        'type': 'application/javascript'
+    },
     // Google Charts
     'googleCharts': {
         'path': 'resources/google-charts/loader.jsm',

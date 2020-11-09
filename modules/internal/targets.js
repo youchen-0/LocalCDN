@@ -40,6 +40,8 @@ targets.determineBundle = function (path) {
         return 'ElementUI';
     } else if (path.startsWith('/select2/')) {
         return 'Select2';
+    } else if (path.startsWith('/gsap/')) {
+        return 'GSAP';
     } else {
         return '';
     }
@@ -179,6 +181,12 @@ targets.setLastVersion = function (type, version) {
         return '4.7.0';
     } else if (type.startsWith('/fontawesome/5.')) {
         return '5.15.1';
+    } else if (type.startsWith('/gsap/1.')) {
+        return '1.20.5';
+    } else if (type.startsWith('/gsap/2.')) {
+        return '2.1.3';
+    } else if (type.startsWith('/gsap/3.')) {
+        return '3.5.1';
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
     } else if (type.startsWith('/highlight.js/10.')) {
