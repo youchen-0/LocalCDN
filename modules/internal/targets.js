@@ -24,20 +24,21 @@ var targets = {};
  * Public Methods
  */
 
-targets.determineBundle = function (path = '') {
-    if (path.includes('findify')) {
+targets.determineBundle = function (path) {
+    path = path.replace('resources', '');
+    if (path.startsWith('/findify')) {
         return 'Findify';
-    } else if (path.includes('bootstrap-datepicker')) {
+    } else if (path.startsWith('/bootstrap-datepicker')) {
         return 'Bootstrap Datepicker';
-    } else if (path.includes('/jquery.lazy/')) {
+    } else if (path.startsWith('/jquery.lazy/')) {
         return 'jQuery Lazy';
-    } else if (path.includes('/waypoints/')) {
+    } else if (path.startsWith('/waypoints/')) {
         return 'Waypoints';
-    } else if (path.includes('/highlight.js/')) {
+    } else if (path.startsWith('/highlight.js/')) {
         return 'highlight.js';
-    } else if (path.includes('/element-ui/')) {
+    } else if (path.startsWith('/element-ui/')) {
         return 'ElementUI';
-    } else if (path.includes('/select2/')) {
+    } else if (path.startsWith('/select2/')) {
         return 'Select2';
     } else {
         return '';
