@@ -381,6 +381,9 @@ var resources = {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
     },
+    'fontawesomeFontsOnly': {
+        'path': 'resources/fontawesome/{version}/fonts/'
+    },
     // GSAP
     'gsapBundle': {
         'path': 'resources/gsap/{version}/',

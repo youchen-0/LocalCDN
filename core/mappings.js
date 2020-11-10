@@ -817,7 +817,8 @@ mappings.cdn = {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
-            'font-awesome/{version}/css/font-awesome': resources.fontawesome
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome,
+            'font-awesome/{version}/fonts/': resources.fontawesomeFontsOnly
         }
     },
     // NetDNA Bootstrap
