@@ -281,6 +281,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/materialize/0.')) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return '0.100.2';
+    } else if (type.startsWith('/modaal/0.')) {
+        return '0.4.4';
     } else if (type.startsWith('/modernizr/2.')) {
         return '2.8.3';
     } else if (type.startsWith('/moment.js/2.')) {
@@ -407,6 +409,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'modaal.min.jsm': 'Modaal (JS)',
+    'modaal.min.css': 'Modaal (CSS)',
     'jquery.magnific-popup.min.jsm': 'magnific-popup.js',
     'pagination.min.css': 'Pagination.js (CSS)',
     'pagination.min.jsm': 'Pagination.js (JS)',

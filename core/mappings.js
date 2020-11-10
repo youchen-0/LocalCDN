@@ -301,6 +301,8 @@ mappings.cdn = {
             'materialize/{version}/js/materialize.': resources.materializeJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
             'mdbootstrap/{version}/css/mdb.': resources.mdbootstrapCSS,
+            'Modaal/{version}/js/modaal.': resources.modaalJS,
+            'Modaal/{version}/css/modaal.': resources.modaalCSS,
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,

@@ -604,6 +604,15 @@ var resources = {
         'path': 'resources/mirage2/latest/mirage2.min.jsm',
         'type': 'application/javascript'
     },
+    // Modaal
+    'modaalJS': {
+        'path': 'resources/modaal/{version}/modaal.min.jsm',
+        'type': 'application/javascript'
+    },
+    'modaalCSS': {
+        'path': 'resources/modaal/{version}/modaal.min.css',
+        'type': 'text/css'
+    },
     // Modernizr
     'modernizr': {
         'path': 'resources/modernizr/{version}/modernizr.min.jsm',
