@@ -312,6 +312,8 @@ targets.setLastVersion = function (type, version) {
         return '2.5.4';
     } else if (type.startsWith('/prop-types/15.')) {
         return '15.7.2';
+    } else if (type.startsWith('/protonet-jquery.inview/1.')) {
+        return '1.1.2';
     } else if (type.startsWith('/prototype/1.')) {
         return '1.7.3.0';
     } else if (type.startsWith('/raven.js/3.')) {
@@ -409,6 +411,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.inview.min.jsm': 'inview (Protonet)',
     'modaal.min.jsm': 'Modaal (JS)',
     'modaal.min.css': 'Modaal (CSS)',
     'jquery.magnific-popup.min.jsm': 'magnific-popup.js',

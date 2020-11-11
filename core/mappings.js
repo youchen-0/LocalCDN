@@ -329,6 +329,7 @@ mappings.cdn = {
             'plyr/{version}/plyr.js': resources.plyrJS,
             'plyr/{version}/plyr.min.js': resources.plyrJS,
             'popper.js/{version}/umd/popper.min.js': resources.popperJS,
+            'protonet-jquery.inview/{version}/jquery.inview.': resources.protonetJqueryInview,
             'raven.js/{version}/raven.min.js': resources.ravenJS,
             'raven.js/{version}/plugins/angular.min.js': resources.ravenPluginAngularJS,
             'react/{version}/umd/react.production.min.js': resources.react,
