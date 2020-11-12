@@ -81,6 +81,7 @@ storageManager.export = function () {
     filename = filename.substring(0, 10) + '_localcdn_backup.txt';
 
     storageManager.type.get(null, function (items) {
+        delete items['whitelistedDomains'];
         let element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(items, null, '  ')));
         element.setAttribute('download', filename);
@@ -134,6 +135,12 @@ storageManager._readFileAsync = function (file) {
 
 storageManager._validation = function (content) {
     let imported = {};
+
+    if (Object.keys(content['allowlistedDomains']).length === 0) {
+        content['allowlistedDomains'] = content['whitelistedDomains'];
+    }
+    delete content['whitelistedDomains'];
+
     for (const [key, value] of Object.entries(SettingDefaults)) {
         // If type the same as default settings
         if (typeof value === typeof content[key]) {
@@ -214,7 +221,6 @@ storageManager._validateDomainsAndStatistics = function (type, obj) {
 };
 
 storageManager._validateStrings = function (value) {
-    console.log(value);
     if (/((2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])/.test(value)) {
         return value;
     } else if (/#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/.test(value)) {
