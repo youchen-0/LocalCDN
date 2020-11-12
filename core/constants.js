@@ -216,28 +216,6 @@ const Links = {
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
 };
 
-/**
- * If a framework has been removed, this list should still display the names in the statistics
- * Also used for bundles
- * Note: Only the first two directory levels in 'resources'
- * See: https://codeberg.org/nobody/LocalCDN/issues/151
- */
-const FrameworkAndBundle = {
-    'resources/slick-carousel/1.9.0/': 'slick',
-    'resources/anchor-js/4.2.2/': 'AnchorJS',
-    'resources/plyr/3.5.10/': 'Plyr',
-    'resources/swiper/5.4.2/': 'Swiper',
-    'resources/select2/4.0.12/': 'Select2',
-    'resources/element-ui/2.13.2/': 'ElementUI',
-    'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
-    'resources/jquery.lazy/1.7.11/': 'jQuery Lazy',
-    'resources/waypoints/4.0.1/': 'Waypoints',
-    'resources/findify-bundle/6.9.15/': 'Findify',
-    'resources/twitter-bootstrap/4.5.0/': 'Bootstrap',
-    'resources/twitter-bootstrap/3.4.1/': 'Bootstrap',
-    'resources/twitter-bootstrap/2.3.2/': 'Bootstrap'
-};
-
 const CDNs = {
     'ajax.googleapis.com': 'Google Hosted Libraries',
     'ajax.aspnetcdn.com': 'Microsoft Ajax CDN',
