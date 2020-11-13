@@ -129,6 +129,7 @@ mappings.cdn = {
             'angularjs-toaster/{version}/toaster.js': resources.angularJsToasterJS,
             'angular-sanitize/{version}/angular-sanitize.': resources.angularSanitize,
             'animate.css/{version}/animate.': resources.animateCSS,
+            'axios/{version}/axios.': resources.axios,
             'babel-polyfill/{version}/polyfill.': resources.babelPolyfill,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
