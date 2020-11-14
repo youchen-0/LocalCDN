@@ -140,7 +140,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootstrap-slider/10.')) {
         return '10.6.2';
     } else if (type.startsWith('/bootstrap-select/1.')) {
-        return '1.13.17';
+        return '1.13.18';
     } else if (type.startsWith('/bootstrap-table/1.')) {
         return '1.18.0';
     } else if (type.startsWith('/bootstrap-toggle/2.')) {
