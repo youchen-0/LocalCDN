@@ -125,6 +125,8 @@ targets.setLastVersion = function (type, version) {
         return '1.11.1';
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
+    } else if (type.startsWith('/bootbox.js/5.')) {
+        return '5.4.1';
     } else if (type.startsWith('/bootstrap/3.')) {
         return '3.3.7';
     } else if (type.startsWith('/bootstrap/4.')) {
