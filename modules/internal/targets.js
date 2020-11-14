@@ -448,7 +448,7 @@ const ListOfFiles = {
     'jquery.inview.min.jsm': 'inview (Protonet)',
     'modaal.min.jsm': 'Modaal (JS)',
     'modaal.min.css': 'Modaal (CSS)',
-    'jquery.magnific-popup.min.jsm': 'magnific-popup.js',
+    'jquery.magnific-popup.min.jsm': 'magnific-popup.js (JS)',
     'magnific-popup.min.css': 'magnific-popup.js (CSS)',
     'pagination.min.css': 'Pagination.js (CSS)',
     'pagination.min.jsm': 'Pagination.js (JS)',
