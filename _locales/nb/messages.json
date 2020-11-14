@@ -228,19 +228,19 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Varsel etter en oppdatering",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Aldri (stille oppdateringer)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Bare hvis nye CDN-er og regler",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Alltid",
         "description": "Always"
     }
 }
