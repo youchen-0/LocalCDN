@@ -168,7 +168,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
     } else if (type.startsWith('/dojo/1.')) {
-        return '1.14.1';
+        return '1.16.3';
     } else if (type.startsWith('/drawer/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/element-ui/2.')) {
