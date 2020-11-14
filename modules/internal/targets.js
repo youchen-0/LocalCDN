@@ -283,7 +283,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/libsodium.js/0.')) {
         return '0.5.4';
     } else if (type.startsWith('/lightgallery/1.')) {
-        return '1.9.0';
+        return '1.10.0';
     } else if (type.startsWith('/lodash.js/4.')) {
         return '4.17.10';
     } else if (type.startsWith('/lodash.js/3.')) {
