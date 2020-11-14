@@ -253,7 +253,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery-migrate/1.')) {
         return '1.4.1';
     } else if (type.startsWith('/jquery-migrate/3.')) {
-        return '3.1.0';
+        return '3.3.1';
     } else if (type.startsWith('/jquery-mousewheel/3.')) {
         return '3.1.13';
     } else if (type.startsWith('/jScrollPane/2.')) {
