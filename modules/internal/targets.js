@@ -400,6 +400,8 @@ targets.setLastVersion = function (type, version) {
         return '1.4.7';
     } else if (type.startsWith('/tooltipster/3.')) {
         return '3.3.0';
+    } else if (type.startsWith('/tooltipster/4.')) {
+        return '4.2.8';
     } else if (type.startsWith('/toastr.js/2.')) {
         return '2.1.4';
     } else if (type.startsWith('/underscore.js/1.')) {
