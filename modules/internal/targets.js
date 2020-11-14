@@ -241,7 +241,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery.blockUI/2.')) {
         return '2.70';
     } else if (type.startsWith('/jquery-csv/1.')) {
-        return '1.0.9';
+        return '1.0.11';
     } else if (type.startsWith('/jquery-easing/1.')) {
         return '1.4.1';
     } else if (type.startsWith('/jquery.lazyload/1.')) {
