@@ -47,6 +47,12 @@ main._initializeSettings = function () {
             items.allowlistedDomains = items.whitelistedDomains;
         }
 
+        // Delete old key
+        if (typeof items.whitelistedDomains !== 'undefined') {
+            delete items['whitelistedDomains'];
+            storageManager.type.remove('whitelistedDomains');
+        }
+
         // Convert value of notifications
         if (typeof items.hideReleaseNotes !== 'undefined') {
             items.updateNotification = items.hideReleaseNotes ? 0 : 2;
