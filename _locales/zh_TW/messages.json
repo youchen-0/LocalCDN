@@ -79,14 +79,6 @@
         "message": "打開「瀏覽器主控台」以顯示缺少的資源。",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "關閉發行說明",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "啟用此選項後，將不會收到任何有關 LocalCDN 新功能的相關資訊，包括新的廣告攔截軟體規則。",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "此功能會讓網站無法正常運作。不要啟用此選項，除非你已準備好將所有被影響的網域手動加入白名單。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "匯入失敗",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

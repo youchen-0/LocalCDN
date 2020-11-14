@@ -79,14 +79,6 @@
         "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "Slå av versjonsnotat",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Slå på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for din reklameblokkerer.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt sette berørte domener på tillatelseslisten.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Import mislyktes",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

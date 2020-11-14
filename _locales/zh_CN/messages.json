@@ -79,14 +79,6 @@
         "message": "打开“浏览器控制台” ( CTRL + SHIFT + J ) 以展示缺失的资源.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "关闭发布说明",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "打开这个选项以停止接受 LocalCDN 的所有新特性相关信息。这包括用于你的广告拦截器的新规则。",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "这个功能会破坏网站。不要让它处于启用状态，除非您准备手动将受影响的域添加到允许列表中。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "导入失败",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

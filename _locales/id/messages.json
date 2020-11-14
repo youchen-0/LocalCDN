@@ -79,14 +79,6 @@
         "message": "Buka \"Konsol Peramban\" ( CTRL + SHIFT + J ) untuk menampilkan sumber daya yang hilang.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "Nonaktifkan catatan rilis",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Aktifkan opsi ini untuk berhenti menerima informasi tentang fitur baru LocalCDN. Termasuk info tentang aturan baru untuk pemblokir iklan anda.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "Fitur ini akan membuat situs web tidak bekerja dengan benar. Jangan membiarkannya aktif, kecuali jika anda siap menambahkan secara manual semua domain yang terdampak ke dalam daftar putih.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Impor gagal",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

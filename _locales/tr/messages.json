@@ -79,14 +79,6 @@
         "message": "Eksik kaynakları göstermek için \"Tarayıcı Konsolunu\" (CTRL + SHIFT + J) açın.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "Sürüm notlarını devre dışı bırak",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Yeni LocalCDN özellikleri hakkında bilgi almamak için bunu açın. Buna reklam engelleyiciniz için yeni kurallar hakkında bilgiler de dahildir.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "Bu özellik web sitelerini bozar. Etkilenen alan adlarını elle izin listesine eklemeye hazır değilseniz, etkinleştirilmiş olarak bırakmayın.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "İçe aktarma başarısız",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

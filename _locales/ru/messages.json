@@ -79,14 +79,6 @@
         "message": "Открыть консоль браузера ( CTRL + SHIFT + J ) для просмотра пропущенных ресурсов.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "Отключить заметки к релизу",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Включите данную опцию, если вы не хотите получать информацию о новых функциях LocalCDN. Она также содержит информацию о новых правилах для вашего рекламного блокатора.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "Эта функция \"ломает\" сайты. Не включайте её, пока вручную не добавите в белый список все \"сломанные\" сайты.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Ошибка импорта",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

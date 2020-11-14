@@ -79,14 +79,6 @@
         "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "Disable release notes",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Import failed",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "Notification after an update",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "Never (Silent Updates)",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "Only if new CDNs and rules",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "Always",
+        "description": "Always"
     }
 }

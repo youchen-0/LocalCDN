@@ -79,14 +79,6 @@
         "message": "ブラウザコンソール（CTRL + SHIFT + J）を開いて、不足しているリソースを表示する。",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "リリースノートを無効にする",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "有効にすると、LocalCDN の新機能に関する情報を受け取ることはありません。 これには、広告ブロッカーの新しいルールに関する情報が含まれます。",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "この機能は Web サイトを壊しかねません。 影響を受けるドメインを、手動でホワイトリストに登録する準備ができていない限りは「有効にしない」でください。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "インポートに失敗しました",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

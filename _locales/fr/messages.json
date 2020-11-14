@@ -79,14 +79,6 @@
         "message": "Ouvrez la « Console du navigateur » ( CTRL + ALT + J ) pour afficher les ressources manquantes.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
-    "hideReleaseNotesTitle": {
-        "message": "Désactiver les notes de changement",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Ne pas recevoir plus d'infos sur de nouvelles fonctionnalités de LocalCDN, y compris des infos sur de nouvelles règles pour votre bloqueur de publicités.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
-    },
     "featureBreaksWebsitesDescription": {
         "message": "Cette fonctionnalité casse les sites internet. Ne la laissez pas activée, à moins que vous ne soyez prêt à mettre manuellement sur liste blanche tout domaine affecté.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Échec du chargement",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }
