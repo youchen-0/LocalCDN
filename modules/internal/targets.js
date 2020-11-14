@@ -374,6 +374,8 @@ targets.setLastVersion = function (type, version) {
         return '0.2.12';
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.3.0';
+    } else if (type.startsWith('/socket.io/3.')) {
+        return '3.0.1';
     } else if (type.startsWith('/spin.js/2.')) {
         return '2.3.2';
     } else if (type.startsWith('/stickyfill/1.')) {
