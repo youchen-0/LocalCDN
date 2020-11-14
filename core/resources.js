@@ -680,7 +680,7 @@ var resources = {
     },
     // page.js
     'pageJs': {
-        'path': 'resources/page.js/{version}/page.min.jsm',
+        'path': 'resources/page.js/{version}/page.jsm',
         'type': 'application/javascript'
     },
     // Pagination.js

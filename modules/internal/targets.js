@@ -321,7 +321,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/p2p-media-loader-core') || type.startsWith('/p2p-media-loader-hlsjs')) {
         return '0.6.2';
     } else if (type.startsWith('/page.js/1.')) {
-        return '1.7.1';
+        return '1.11.6';
     } else if (type.startsWith('/paginationjs/2.')) {
         return '2.1.5';
     } else if (type.startsWith('/plyr/3.')) {
