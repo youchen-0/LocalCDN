@@ -209,8 +209,10 @@ targets.setLastVersion = function (type, version) {
         return '10.3.2';
     } else if (type.startsWith('/highlight.js/9.')) {
         return '9.18.3';
-    } else if (type.startsWith('/history/')) {
+    } else if (type.startsWith('/history/4.')) {
         return '4.10.1';
+    } else if (type.startsWith('/history/5.')) {
+        return '5.0.0';
     } else if (type.startsWith('/hls.js/')) {
         return '0.13.2';
     } else if (type.startsWith('/instantsearch.js/3.')) {
