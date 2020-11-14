@@ -102,9 +102,9 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/autocomplete.js/')) {
         return '0.37.1';
     } else if (type.startsWith('/angular-material/1.')) {
-        return '1.1.21';
+        return '1.2.1';
     } else if (type.startsWith('/angular-material/0.')) {
-        return '1.1.21';
+        return '1.2.1';
     } else if (type.startsWith('/angular-translate/2.')) {
         return '2.7.2';
     } else if (type.startsWith('/angular-translate-loader-static-files/2.')) {
