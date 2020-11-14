@@ -41,14 +41,16 @@
                     <div class="description-option" data-i18n-content="showIconBadgeDescription">Show the number of injected resources on the extension icon.</div>
                 </section>
                 <section class="option">
-                    <div class="title-option">
-                        <label class="b-contain">
-                            <input data-option="hideReleaseNotes" type="checkbox">
-                            <span data-i18n-content="hideReleaseNotesTitle">Disable release notes</span>
-                            <div class="b-input"></div>
-                        </label>
+                    <div class="title-option b-contain">
+                        <span data-i18n-content="updateNotificationTitle">Notification after an update</span>
                     </div>
-                    <div class="description-option" data-i18n-content="hideReleaseNotesDescription">If enabled, you wont receive any information about new features in LocalCDN. This includes information about new uBlock/uMatrix rules.</div>
+                    <div class="description-option">
+                        <select id="update-notification" data-option="updateNotification">
+                            <option value="0" data-i18n-content="updateNotificationNever">Never (Silent Updates)</option>
+                            <option value="1" data-i18n-content="updateNotificationOnlyRules">Only new CDN and rules</option>
+                            <option value="2" data-i18n-content="updateNotificationAlways">Always</option>
+                        </select>
+                    </div>
                 </section>
                 <section class="option">
                     <div class="title-option">

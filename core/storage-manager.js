@@ -62,7 +62,7 @@ storageManager.migrateData = function (target) {
             [Setting.DOMAINS_MANIPULATE_DOM]: data.domainsManipulateDOM,
             [Setting.LOGGING]: data.logging,
             [Setting.ENFORCE_STAGING]: data.enforceStaging,
-            [Setting.HIDE_RELEASE_NOTES]: data.hideReleaseNotes,
+            [Setting.UPDATE_NOTIFICATION]: data.updateNotification,
             [Setting.LAST_MAPPING_UPDATE]: data.lastMappingUpdate,
             [Setting.NEGATE_HTML_FILTER_LIST]: data.negateHtmlFilterList,
             [Setting.SELECTED_ICON]: data.selectedIcon,
@@ -140,6 +140,11 @@ storageManager._validation = function (content) {
         content['allowlistedDomains'] = content['whitelistedDomains'];
     }
     delete content['whitelistedDomains'];
+
+    if (typeof content.hideReleaseNotes !== 'undefined') {
+        content.updateNotification = content.hideReleaseNotes ? 0 : 2;
+        delete content['hideReleaseNotes'];
+    }
 
     for (const [key, value] of Object.entries(SettingDefaults)) {
         // If type the same as default settings

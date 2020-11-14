@@ -31,7 +31,7 @@ var main = {};
 main._initializeSettings = function () {
     storageManager.checkStorageType();
 
-    storageManager.type.get(SettingDefaults, function (items) {
+    storageManager.type.get(null, function (items) {
         if (items === null) {
             items = SettingDefaults; // Restore setting defaults.
         }
@@ -45,6 +45,13 @@ main._initializeSettings = function () {
         // Copy old data
         if (Object.keys(items.allowlistedDomains).length === 0) {
             items.allowlistedDomains = items.whitelistedDomains;
+        }
+
+        // Convert value of notifications
+        if (typeof items.hideReleaseNotes !== 'undefined') {
+            items.updateNotification = items.hideReleaseNotes ? 0 : 2;
+            delete items['hideReleaseNotes'];
+            storageManager.type.remove('hideReleaseNotes');
         }
 
         stateManager.selectedIcon = items.selectedIcon;
@@ -64,34 +71,27 @@ main._showReleaseNotes = function (details) {
             [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
         }, function() {
             if (details.temporary !== true) {
-
-                storageManager.type.get([Setting.HIDE_RELEASE_NOTES], function (items) {
-
-                    if (items.hideReleaseNotes !== true) {
-
-                        chrome.tabs.create({
-                            'url': chrome.extension.getURL('pages/welcome/welcome.html'),
-                            'active': false
-                        });
-                    }
+                chrome.tabs.create({
+                    'url': chrome.extension.getURL('pages/welcome/welcome.html'),
+                    'active': false
                 });
             }
         });
     } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
-        storageManager.type.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
+        storageManager.type.get([Setting.LAST_MAPPING_UPDATE, Setting.UPDATE_NOTIFICATION], function (items) {
             let mappingUpdate = items.lastMappingUpdate !== mappings.lastMappingUpdate;
 
-            if (mappingUpdate || !items.hideReleaseNotes) {
-                // Updated mappings.js
+            // Updated mappings.js
+            if (mappingUpdate) {
                 storageManager.type.set({
                     [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
-                }, function() {
-                    if (!items.hideReleaseNotes) {
-                        chrome.tabs.create({
-                            'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
-                            'active': false
-                        });
-                    }
+                });
+            }
+
+            if ( (mappingUpdate && items.updateNotification == 1) || items.updateNotification == 2 ) {
+                chrome.tabs.create({
+                    'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
+                    'active': false
                 });
             } else {
                 // No mappings.js update

@@ -77,7 +77,7 @@ options._renderOptionsPanel = function () {
     elements.blockMissing.checked = options._optionValues.blockMissing;
     elements.disablePrefetch.checked = options._optionValues.disablePrefetch;
     elements.stripMetadata.checked = options._optionValues.stripMetadata;
-    elements.hideReleaseNotes.checked = options._optionValues.hideReleaseNotes;
+    elements.updateNotification.value = options._optionValues.updateNotification;
     elements.enableLogging.checked = options._optionValues.enableLogging;
     elements.allowlistedDomains.value = domainAllowlist;
     elements.domainsManipulateDOM.value = domainHtmlFilter;
@@ -184,7 +184,7 @@ options._registerOptionChangedEventListeners = function (elements) {
     elements.disablePrefetch.addEventListener('change', options._onOptionChanged);
     elements.stripMetadata.addEventListener('change', options._onOptionChanged);
     elements.enableLogging.addEventListener('change', options._onOptionChanged);
-    elements.hideReleaseNotes.addEventListener('change', options._onOptionChanged);
+    elements.updateNotification.addEventListener('change', options._onOptionChanged);
     elements.allowlistedDomains.addEventListener('keyup', options._onOptionChanged);
     elements.domainsManipulateDOM.addEventListener('keyup', options._onOptionChanged);
     elements.negateHtmlFilterList.addEventListener('change', options._onOptionChanged);
@@ -243,7 +243,7 @@ options._getOptionElements = function () {
         [Setting.DISABLE_PREFETCH]: options._getOptionElement(Setting.DISABLE_PREFETCH),
         [Setting.STRIP_METADATA]: options._getOptionElement(Setting.STRIP_METADATA),
         [Setting.ALLOWLISTED_DOMAINS]: options._getOptionElement(Setting.ALLOWLISTED_DOMAINS),
-        [Setting.HIDE_RELEASE_NOTES]: options._getOptionElement(Setting.HIDE_RELEASE_NOTES),
+        [Setting.UPDATE_NOTIFICATION]: options._getOptionElement(Setting.UPDATE_NOTIFICATION),
         [Setting.LOGGING]: options._getOptionElement(Setting.LOGGING),
         ['ruleSets']: document.getElementsByName('rule-sets'),
         ['copyRuleSet']: document.getElementById('button-copy-rule-set'),
