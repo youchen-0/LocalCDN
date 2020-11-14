@@ -172,7 +172,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/drawer/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/element-ui/2.')) {
-        return '2.13.2';
+        return '2.14.1';
     } else if (type.startsWith('/ember.js/1.')) {
         return '1.13.13';
     } else if (type.startsWith('/ember.js/2.')) {
