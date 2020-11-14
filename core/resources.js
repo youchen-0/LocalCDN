@@ -576,6 +576,10 @@ var resources = {
         'path': 'resources/magnific-popup.js/{version}/jquery.magnific-popup.min.jsm',
         'type': 'application/javascript'
     },
+    'magnificPopupCSS': {
+        'path': 'resources/magnific-popup.js/{version}/magnific-popup.min.css',
+        'type': 'text/css'
+    },
     // markdown-it
     'markdownIt': {
         'path': 'resources/markdown-it/{version}/markdown-it.min.jsm',

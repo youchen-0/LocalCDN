@@ -449,6 +449,7 @@ const ListOfFiles = {
     'modaal.min.jsm': 'Modaal (JS)',
     'modaal.min.css': 'Modaal (CSS)',
     'jquery.magnific-popup.min.jsm': 'magnific-popup.js',
+    'magnific-popup.min.css': 'magnific-popup.js (CSS)',
     'pagination.min.css': 'Pagination.js (CSS)',
     'pagination.min.jsm': 'Pagination.js (JS)',
     'loader.jsm': 'Google Charts',

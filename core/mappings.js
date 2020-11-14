@@ -298,6 +298,8 @@ mappings.cdn = {
             'lodash.js/{version}/lodash.': resources.lodashJS,
             'lozad.js/{version}/lozad.': resources.lozad,
             'magnific-popup.js/{version}/jquery.magnific-popup.min.js': resources.magnificPopupJS,
+            'magnific-popup.js/{version}/magnific-popup.css': resources.magnificPopupCSS,
+            'magnific-popup.js/{version}/magnific-popup.min.css': resources.magnificPopupCSS,
             'markdown-it/{version}/markdown-it.': resources.markdownIt,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,
