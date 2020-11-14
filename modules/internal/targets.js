@@ -139,6 +139,8 @@ targets.setLastVersion = function (type, version) {
         return '1.9.0';
     } else if (type.startsWith('/bootstrap-slider/10.')) {
         return '10.6.2';
+    } else if (type.startsWith('/bootstrap-slider/11.')) {
+        return '11.0.2';
     } else if (type.startsWith('/bootstrap-select/1.')) {
         return '1.13.18';
     } else if (type.startsWith('/bootstrap-table/1.')) {
