@@ -159,6 +159,12 @@ targets.setLastVersion = function (type, version) {
         return '3.1.1';
     } else if (type.startsWith('/d3/3.')) {
         return '3.5.17';
+    } else if (type.startsWith('/d3/4.')) {
+        return '4.13.0';
+    } else if (type.startsWith('/d3/5.')) {
+        return '5.16.0';
+    } else if (type.startsWith('/d3/6.')) {
+        return '6.2.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
     } else if (type.startsWith('/dojo/1.')) {
