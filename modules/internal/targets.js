@@ -378,6 +378,10 @@ targets.setLastVersion = function (type, version) {
         return '3.0.1';
     } else if (type.startsWith('/spin.js/2.')) {
         return '2.3.2';
+    } else if (type.startsWith('/spin.js/3.')) {
+        return '3.1.0';
+    } else if (type.startsWith('/spin.js/4.')) {
+        return '4.1.0';
     } else if (type.startsWith('/stickyfill/1.')) {
         return '1.1.4';
     } else if (type.startsWith('/stickyfill/2.')) {
