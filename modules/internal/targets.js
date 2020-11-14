@@ -133,6 +133,8 @@ targets.setLastVersion = function (type, version) {
         return '4.5.3';
     } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
+    } else if (type.startsWith('/bootstrap-daterangepicker/3.')) {
+        return '3.1';
     } else if (type.startsWith('/bootstrap-datepicker/1.')) {
         return '1.9.0';
     } else if (type.startsWith('/bootstrap-slider/10.')) {
