@@ -279,7 +279,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/lazysizes/5.')) {
         return '5.2.2';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
-        return '1.7.53';
+        return '1.9.4';
     } else if (type.startsWith('/libsodium.js/0.')) {
         return '0.5.4';
     } else if (type.startsWith('/lightgallery/1.')) {
