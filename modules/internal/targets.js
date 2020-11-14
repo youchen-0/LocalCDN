@@ -345,7 +345,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/react-dom/17.')) {
         return '17.0.1';
     } else if (type.startsWith('/react-redux/7.')) {
-        return '7.2.1';
+        return '7.2.2';
     } else if (type.startsWith('/react-router/5.')) {
         return '5.2.0';
     } else if (type.startsWith('/react-side-effect/')) {
