@@ -32,8 +32,31 @@ main._initializeSettings = function () {
     storageManager.checkStorageType();
 
     storageManager.type.get(null, function (items) {
-        if (items === null) {
-            items = SettingDefaults; // Restore setting defaults.
+        // Delete old keys
+        if (typeof items.whitelistedDomains !== 'undefined') {
+            if (Object.keys(items.allowlistedDomains).length === 0) {
+                items.allowlistedDomains = items.whitelistedDomains;
+            }
+            delete items['whitelistedDomains'];
+            storageManager.type.remove('whitelistedDomains');
+        }
+
+        // Convert value of notifications
+        if (typeof items.hideReleaseNotes !== 'undefined') {
+            if (items.hideReleaseNotes === true) {
+                items.updateNotification = 0;
+            } else {
+                items.updateNotification = 2;
+            }
+            delete items['hideReleaseNotes'];
+            storageManager.type.remove('hideReleaseNotes');
+        }
+
+        // Use default if key is missing
+        for (const key of Object.keys(SettingDefaults)) {
+            if (items[key] === undefined) {
+                items[key] = SettingDefaults[key];
+            }
         }
 
         if (items.disablePrefetch !== false) {
@@ -42,23 +65,6 @@ main._initializeSettings = function () {
             });
         }
 
-        // Copy old data
-        if (Object.keys(items.allowlistedDomains).length === 0) {
-            items.allowlistedDomains = items.whitelistedDomains;
-        }
-
-        // Delete old key
-        if (typeof items.whitelistedDomains !== 'undefined') {
-            delete items['whitelistedDomains'];
-            storageManager.type.remove('whitelistedDomains');
-        }
-
-        // Convert value of notifications
-        if (typeof items.hideReleaseNotes !== 'undefined') {
-            items.updateNotification = items.hideReleaseNotes ? 0 : 2;
-            delete items['hideReleaseNotes'];
-            storageManager.type.remove('hideReleaseNotes');
-        }
 
         stateManager.selectedIcon = items.selectedIcon;
         wrappers.setIcon({
