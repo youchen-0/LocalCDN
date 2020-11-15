@@ -136,7 +136,7 @@ statistics._determineInjections = function () {
 
     sum = 0;
     days = 0;
-    avg = 0;
+
     statistics._dataOverview = [];
 
     statistics._dateRange.forEach(function (entry) {
