@@ -228,11 +228,11 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "Benachrichtigung nach einem Update",
+        "message": "Benachrichtigung nach einer Aktualisierung",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "Niemals (Stilles Update)",
+        "message": "Niemals (Stille Aktualisierungen)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
