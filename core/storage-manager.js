@@ -136,11 +136,13 @@ storageManager._readFileAsync = function (file) {
 storageManager._validation = function (content) {
     let imported = {};
 
-    if (Object.keys(content['allowlistedDomains']).length === 0) {
-        content['allowlistedDomains'] = content['whitelistedDomains'];
+    // Delete old keys
+    if (typeof content.whitelistedDomains !== 'undefined') {
+        content.allowlistedDomains = content.whitelistedDomains;
+        delete content['whitelistedDomains'];
     }
-    delete content['whitelistedDomains'];
 
+    // Convert value of notifications
     if (typeof content.hideReleaseNotes !== 'undefined') {
         content.updateNotification = content.hideReleaseNotes ? 0 : 2;
         delete content['hideReleaseNotes'];
@@ -149,13 +151,13 @@ storageManager._validation = function (content) {
     for (const [key, value] of Object.entries(SettingDefaults)) {
         // If type the same as default settings
         if (typeof value === typeof content[key]) {
-            if (typeof value === 'object' || value instanceof Object) {
+            if (typeof value === 'object') {
                 imported[key] = storageManager._validateDomainsAndStatistics(key, content[key]);
-            } else if (typeof value === 'string' || value instanceof String) {
+            } else if (typeof value === 'string') {
                 imported[key] = storageManager._validateStrings(content[key]);
-            } else if (typeof value === 'number' || value instanceof Number) {
+            } else if (typeof value === 'number') {
                 imported[key] = storageManager._validateNumbers(content[key]);
-            } else if (typeof value === 'boolean' || value instanceof Boolean) {
+            } else if (typeof value === 'boolean') {
                 imported[key] = content[key];
             }
         } else if (content[key] === undefined) {
