@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Chrání před sledováním skrze centrálně doručovaný obsah.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Počet lokální uložených zdrojů vložených od instalace.",

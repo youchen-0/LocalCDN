@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Защитава ви от следене чрез свободна, централизирана доставка на съдържание.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Количество на местни вмъквания на ресурси от началото на инсталацията.",

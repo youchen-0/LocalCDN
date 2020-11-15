@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Protege contra monitorização através de entrega de conteúdo centralizado.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Quantidade de injeções de recurso Content Delivery Network locais desde a instalação.",

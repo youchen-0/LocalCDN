@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "保护你免受“免费”，中心化内容分发的跟踪。",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "自安装以来本地内容分发网络资源注入数量。",

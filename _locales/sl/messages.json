@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Varuje vas pred sledenjem z \"prostim\", centrali.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "",

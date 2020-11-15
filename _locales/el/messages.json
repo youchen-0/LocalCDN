@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Προστατεύει από παρακολούθηση μέσω «δωρεάν» διανομής περιεχόμενου.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Ποσοστό εμβόλιμων τοπικών πόρων Δικτύων Παροχής Περιεχομένου από την στιγμή της εγκατάστασης.",

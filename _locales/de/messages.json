@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Schützt vor Tracking durch „gratis“, zentralisiertes Abliefern von Content.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Anzahl der lokalen Injektionen von CDN-Ressourcen seit der Installation.",

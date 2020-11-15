@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Melindungi anda dari pelacakan distribusi konten \"gratis\" dan terpusat.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Jumlah injeksi sumber daya Jaringan Distribusi Konten lokal sejak pemasangan.",

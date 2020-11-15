@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
         "message": "\"무료\"라는 미끼로 당신을 추적하는 대규모 CDN을 사용하지 않음으로써 프라이버시를 지킵니다.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
-        "message": "Decentraleyes를 설치한 뒤, CDN에서 다운로드 하는 대신 로컬 자원을 사용한 횟수입니다.",
+        "message": "",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
         "message": "",

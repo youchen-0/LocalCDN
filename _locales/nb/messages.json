@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Beskytter mot sporing gjennom \"gratis\", sentralisert innholdslevering (CDN).",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Antall lokale injeksjoner av CDN-ressurser siden installering.",

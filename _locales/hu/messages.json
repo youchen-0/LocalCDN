@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Védelmet nyújt az „ingyenes”, centralizált tartalomkézbesítésen keresztüli követés ellen.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Helyi tartalomkézbesítési hálózati erőforrások beszúrásainak száma a telepítés óta.",

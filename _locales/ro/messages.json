@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Protejează împotriva urmăririi prin livrare de conținut gratuit, centralizat.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Cantitatea de resurse locale injectate de Rețelele care Livrează Conținut din momentul instalării.",

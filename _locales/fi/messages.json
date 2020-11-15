@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Suojaa sinua \"ilmaisten\" keskitettyjen sisällön jakeluverkkojen jäljitykseltä.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Korvatut sisältöpyynnöt lisäosan asennuksen jälkeen.",

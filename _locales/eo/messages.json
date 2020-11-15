@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
-        "message": "Decentraleyes protektas vin kontraŭ sekvado per senkostaj, centraj enhav-proviz-retoj.",
-        "description": "Extension description."
+        "message": "",
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Kvanto de lokaj CDN-risurcoj enmetitaj ekde instaliĝo.",
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Entajpu demajnojn, kiujn Decentraleyes ne devas inspekti. Disigu domajnojn per punktokomoj (;).",
+        "message": "",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
         "message": "",

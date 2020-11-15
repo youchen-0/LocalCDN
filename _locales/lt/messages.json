@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Apsaugo tave nuo sekimo per \"Laisva\", centralizuota, turinio pristatimų.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Kiekis lokalaus Turinio pristatymo tinklo resursai injekcijos nuo įdiegimo.",

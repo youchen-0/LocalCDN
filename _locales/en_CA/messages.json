@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Protects you against tracking through \"free\", centralized, content delivery.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Amount of local Content Delivery Network resource injections since installation.",

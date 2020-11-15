@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Verndar þig gegn eftirliti frá \"ókeypis\" miðlægum efnisveitum.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through \"free\", centralized, content delivery."
     },
     "amountInjectedDescription": {
         "message": "Fjöldi tilfanga frá miðlægum efnisveitum sem skipt hefur verið út síðan viðbótin var sett upp.",
