@@ -136,9 +136,8 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if ((channelHost + channelPath).startsWith('cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/')) {
-        let file = helpers.extractFilenameFromPath(channelPath);
-        if (file.endsWith('js')) {
-            file = file + 'm';
+        if (channelPath.endsWith('js')) {
+            channelPath += 'm';
         }
         lastVersion = targets.setLastVersion('/select2/4.');
         return {
