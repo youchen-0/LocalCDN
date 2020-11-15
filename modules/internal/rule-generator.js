@@ -24,13 +24,16 @@ var ruleGenerator = {};
  * Public Methods
  */
 ruleGenerator.openRuleSet = function ({ target }) {
-    let urls = mappings.cdn;
-    let key = target.getAttribute('data-option');
+    let urls, key, textArea, btnCopy, content;
 
-    let textArea = document.getElementById('generated-rules');
-    let btnCopy = document.getElementById('button-copy-rule-set');
+    urls = mappings.cdn;
+    key = target.getAttribute('data-option');
+    textArea = document.getElementById('generated-rules');
+    btnCopy = document.getElementById('button-copy-rule-set');
+    content = '';
 
-    let content = '';
+    // Exclude www.gstatic.com
+    delete urls['www.gstatic.com'];
 
     textArea.style.display = 'block';
     btnCopy.style.display = 'block';

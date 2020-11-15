@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Beskytter mot sporing gjennom \"gratis\", sentralisert innholdslevering (CDN).",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Antall lokale injeksjoner av CDN-ressurser siden installering.",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "Slå av versjonsnotat",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Slå på for å ikke motta info om nye funksjoner i LocalCDN. Dette inkluderer info om nye regler for din reklameblokkerer.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt sette berørte domener på tillatelseslisten.",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Import mislyktes",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "Varsel etter en oppdatering",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "Aldri (stille oppdateringer)",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "Bare hvis nye CDN-er og regler",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "Alltid",
+        "description": "Always"
     }
 }

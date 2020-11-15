@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Le protege contra el rastreo mediante la entrega de contenido centralizado y «gratuito».",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Número de recursos inyectados de Redes de Entrega de Contenido desde la instalación.",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "Abra la «Consola del navegador» ( CTRL + MAYÚSCULAS + J ) para que se muestren los recursos que faltan.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "Desactivar las notas de la versión",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Actívelo para no recibir información sobre las nuevas funciones de LocalCDN. Esto incluye información sobre las nuevas reglas para su bloqueador de publicidad.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Esta característica rompe sitios web. No la deje habilitada, a menos que esté dispuesto a añadir manualmente los dominios afectados a la lista de permitidos .",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Importación fallida",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

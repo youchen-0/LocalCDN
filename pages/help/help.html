@@ -12,7 +12,7 @@
         <script src="help.js"></script>
     </head>
     <body>
-        <img src="../images/logo.svg" alt="Decentraleyes" class="logo"/>
+        <img src="../images/logo.svg" alt="LocalCDN" class="logo"/>
         <div class="container">
             <h1>Help</h1>
             <div class="notice">
@@ -35,6 +35,9 @@
             <div id="html-filter" class="notice">
                 <div class="subtle-hint"><div class="topic-label">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</div>
                     <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these options.</p>
+                    <p><i>Why is it necessary to remove crossorigin and integrity attributes?</i></p>
+                    <p>The crossorigin attribute prevents the replacement because the source is no longer <code><b>cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js</b></code> but <code><b>moz-extension://UUID/resources/jquery/1.12.4</b></code>. crossorigin forces the browser to ignore other sources.</p>
+                    <p>To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won't include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different.</p>
                     <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
                 </div>
             </div>
@@ -80,7 +83,7 @@
                 <p>Settings that will be synchronized:</p>
                 <ul>
                     <li>Display injection counts on icon <em>(Yes, No)</em></li>
-                    <li>Disable release notes <em>(Yes, No)</em></li>
+                    <li>Notification after an update <em>(Never, New CDNs/Rules, Always)</em></li>
                     <li>Disable link prefetching <em>(Yes, No)</em></li>
                     <li>Strip metadata from allowed requests <em>(Yes, No)</em></li>
                     <li>Deactivate LocalCDN for these domains <em>(Yes, No, URLs)</em></li>

@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Sizi içerik dağıtımıyla yapılan merkezi ve \"ücretsiz\" takipten korur.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Kurulumdan bu yana yerel İçerik Dağıtım Ağı kaynak enjeksiyonlarının miktarı.",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "Eksik kaynakları göstermek için \"Tarayıcı Konsolunu\" (CTRL + SHIFT + J) açın.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "Sürüm notlarını devre dışı bırak",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Yeni LocalCDN özellikleri hakkında bilgi almamak için bunu açın. Buna reklam engelleyiciniz için yeni kurallar hakkında bilgiler de dahildir.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Bu özellik web sitelerini bozar. Etkilenen alan adlarını elle izin listesine eklemeye hazır değilseniz, etkinleştirilmiş olarak bırakmayın.",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "İçe aktarma başarısız",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "Güncellemeden sonra bildirim",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "Asla (Sessiz Güncellemeler)",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "Yalnızca yeni CDN'ler ve kurallar olduğunda",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "Her zaman",
+        "description": "Always"
     }
 }

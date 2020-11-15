@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "安裝以來，由本機檔案所取代的 CDN 資源數量。",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "打開「瀏覽器主控台」以顯示缺少的資源。",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "關閉發行說明",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "啟用此選項後，將不會收到任何有關 LocalCDN 新功能的相關資訊，包括新的廣告攔截軟體規則。",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "此功能會讓網站無法正常運作。不要啟用此選項，除非你已準備好將所有被影響的網域手動加入白名單。",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "匯入失敗",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

@@ -136,9 +136,8 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if ((channelHost + channelPath).startsWith('cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/')) {
-        let file = helpers.extractFilenameFromPath(channelPath);
-        if (file.endsWith('js')) {
-            file = file + 'm';
+        if (channelPath.endsWith('js')) {
+            channelPath += 'm';
         }
         lastVersion = targets.setLastVersion('/select2/4.');
         return {
@@ -147,6 +146,23 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'versionRequested': '4.1.0-beta.1',
             'path': 'resources/select2/' + lastVersion + '/' + helpers.extractFilenameFromPath(channelPath),
             'bundle': 'Select2'
+        };
+    } else if (channelHost + channelPath === 'cdn.jsdelivr.net/npm/anchor-js/anchor.min.js') {
+        // This CDN always delivers the latest version of 'AnchorJS'
+        lastVersion = targets.setLastVersion('/anchor-js/4.');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'versionRequested': lastVersion,
+            'path': 'resources/anchor-js/' + lastVersion + '/anchor.min.jsm',
+            'bundle': ''
+        };
+    } else if (channelHost + channelPath === 'www.gstatic.com/charts/loader.js') {
+        // This CDN always delivers the latest version of 'Google Charts'
+        return {
+            'source': channelHost,
+            'path': 'resources/google-charts/loader.jsm',
+            'bundle': ''
         };
     } else {
         return false;

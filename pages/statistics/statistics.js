@@ -136,7 +136,7 @@ statistics._determineInjections = function () {
 
     sum = 0;
     days = 0;
-    avg = 0;
+
     statistics._dataOverview = [];
 
     statistics._dateRange.forEach(function (entry) {
@@ -187,7 +187,10 @@ statistics._displayNameOfFramework = function (str, type) {
         filename = targets.determineResourceName(filename);
 
         if (filename === 'Unknown') {
-            filename = FrameworkAndBundle[str];
+            filename = targets.determineBundle(str);
+            if (filename === '' && str.startsWith('resources/fontawesome/')) {
+                filename = 'Font Awesome (Fonts)'
+            }
         }
         version = str.match(Resource.VERSION_EXPRESSION);
         if (version !== null && version.length > 0) {

@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Beskytter dig imod sporing af \"gratis\", centraliserede indholdsleverandører.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Antal injektioner af lokale ressourcer siden installation.",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "Åben \"Browser konsollen\" ( CTRL + SHIFT + J ) for at vise manglende ressourcer.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "Deaktiver udgivelses noter",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Aktiver denne for at slå information om nye LocalCDN funktioner fra. Dette gælder også info om nye uBlock/uMatrix regler.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funktion ødelægger hjemmesider. Lad være med at aktiver denne, med mindre at du er parat til at manuelt hvid liste nogen påvirket sider.",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Inport fejlede",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

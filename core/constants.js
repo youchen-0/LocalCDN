@@ -66,11 +66,10 @@ const Setting = {
     'DISABLE_PREFETCH': 'disablePrefetch',
     'ENFORCE_STAGING': 'enforceStaging',
     'SHOW_ICON_BADGE': 'showIconBadge',
-    'HIDE_RELEASE_NOTES': 'hideReleaseNotes',
+    'UPDATE_NOTIFICATION': 'updateNotification',
     'STRIP_METADATA': 'stripMetadata',
     'LAST_MAPPING_UPDATE': 'lastMappingUpdate',
     'ALLOWLISTED_DOMAINS': 'allowlistedDomains',
-    'WHITELISTED_DOMAINS': 'whitelistedDomains',
     'XHR_TEST_DOMAIN': 'xhrTestDomain',
     'LOGGING': 'enableLogging',
     'DOMAINS_MANIPULATE_DOM': 'domainsManipulateDOM',
@@ -94,7 +93,7 @@ const SettingDefaults = {
     [Setting.DOMAINS_MANIPULATE_DOM]: {},
     [Setting.LOGGING]: false,
     [Setting.ENFORCE_STAGING]: false,
-    [Setting.HIDE_RELEASE_NOTES]: false,
+    [Setting.UPDATE_NOTIFICATION]: 0,
     [Setting.INTERNAL_STATISTICS]: false,
     [Setting.INTERNAL_STATISTICS_DATA]: {},
     [Setting.LAST_MAPPING_UPDATE]: '2020-01-01',
@@ -104,7 +103,6 @@ const SettingDefaults = {
     [Setting.STORAGE_TYPE]: 'local',
     [Setting.STRIP_METADATA]: true,
     [Setting.ALLOWLISTED_DOMAINS]: {},
-    [Setting.WHITELISTED_DOMAINS]: {},
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
     [Setting.BADGE_COLOR]: '#4A826C',
     [Setting.BADGE_TEXT_COLOR]: '#FFFFFF'
@@ -202,7 +200,8 @@ const Regex = {
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
     'FONT_AWESOME': /use\.fontawesome\.com\/fa-loader\.css/,
-    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/
+    'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/,
+    'FONT_AWESOME_FONTS_ONLY': /\/fontawesome\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//
 };
 
 const Links = {
@@ -213,25 +212,6 @@ const Links = {
     'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
     'FAQ': chrome.extension.getURL('pages/help/help.html'),
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
-};
-
-/**
- * If a framework has been removed, this list should still display the names in the statistics
- * Also used for bundles
- * Note: Only the first two directory levels in 'resources'
- * See: https://codeberg.org/nobody/LocalCDN/issues/151
- */
-const FrameworkAndBundle = {
-    'resources/swiper/5.4.2/': 'Swiper',
-    'resources/select2/4.0.12/': 'Select2',
-    'resources/element-ui/2.13.2/': 'ElementUI',
-    'resources/bootstrap-datepicker/1.9.0/': 'Bootstrap DatePicker',
-    'resources/jquery.lazy/1.7.11/': 'jQuery Lazy',
-    'resources/waypoints/4.0.1/': 'Waypoints',
-    'resources/findify-bundle/6.9.15/': 'Findify',
-    'resources/twitter-bootstrap/4.5.0/': 'Bootstrap',
-    'resources/twitter-bootstrap/3.4.1/': 'Bootstrap',
-    'resources/twitter-bootstrap/2.3.2/': 'Bootstrap'
 };
 
 const CDNs = {
@@ -262,6 +242,13 @@ const CDNs = {
     'gitcdn.github.io': 'GitHub',
     'cdn.bootcdn.net': 'BootCDN #2',
     'vjs.zencdn.net': 'Video.js CDN',
+    'cdn.plyr.io': 'Plyr CDN',
+    'www.gstatic.com': 'gstatic.com',
+};
+
+const IgnoredHost = {
+    'fonts.googleapis.com': true,
+    'www.gstatic.com': true
 };
 
 // Supported charsets for TextDecoder()

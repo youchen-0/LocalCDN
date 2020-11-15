@@ -31,9 +31,32 @@ var main = {};
 main._initializeSettings = function () {
     storageManager.checkStorageType();
 
-    storageManager.type.get(SettingDefaults, function (items) {
-        if (items === null) {
-            items = SettingDefaults; // Restore setting defaults.
+    storageManager.type.get(null, function (items) {
+        // Delete old keys
+        if (typeof items.whitelistedDomains !== 'undefined') {
+            if (Object.keys(items.allowlistedDomains).length === 0) {
+                items.allowlistedDomains = items.whitelistedDomains;
+            }
+            delete items['whitelistedDomains'];
+            storageManager.type.remove('whitelistedDomains');
+        }
+
+        // Convert value of notifications
+        if (typeof items.hideReleaseNotes !== 'undefined') {
+            if (items.hideReleaseNotes === true) {
+                items.updateNotification = 0;
+            } else {
+                items.updateNotification = 2;
+            }
+            delete items['hideReleaseNotes'];
+            storageManager.type.remove('hideReleaseNotes');
+        }
+
+        // Use default if key is missing
+        for (const key of Object.keys(SettingDefaults)) {
+            if (items[key] === undefined) {
+                items[key] = SettingDefaults[key];
+            }
         }
 
         if (items.disablePrefetch !== false) {
@@ -42,10 +65,6 @@ main._initializeSettings = function () {
             });
         }
 
-        // Copy old data
-        if (Object.keys(items.allowlistedDomains).length === 0) {
-            items.allowlistedDomains = items.whitelistedDomains;
-        }
 
         stateManager.selectedIcon = items.selectedIcon;
         wrappers.setIcon({
@@ -64,34 +83,27 @@ main._showReleaseNotes = function (details) {
             [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
         }, function() {
             if (details.temporary !== true) {
-
-                storageManager.type.get([Setting.HIDE_RELEASE_NOTES], function (items) {
-
-                    if (items.hideReleaseNotes !== true) {
-
-                        chrome.tabs.create({
-                            'url': chrome.extension.getURL('pages/welcome/welcome.html'),
-                            'active': false
-                        });
-                    }
+                chrome.tabs.create({
+                    'url': chrome.extension.getURL('pages/welcome/welcome.html'),
+                    'active': false
                 });
             }
         });
     } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
-        storageManager.type.get([Setting.LAST_MAPPING_UPDATE, Setting.HIDE_RELEASE_NOTES], function (items) {
+        storageManager.type.get([Setting.LAST_MAPPING_UPDATE, Setting.UPDATE_NOTIFICATION], function (items) {
             let mappingUpdate = items.lastMappingUpdate !== mappings.lastMappingUpdate;
 
-            if (mappingUpdate || !items.hideReleaseNotes) {
-                // Updated mappings.js
+            // Updated mappings.js
+            if (mappingUpdate) {
                 storageManager.type.set({
                     [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
-                }, function() {
-                    if (!items.hideReleaseNotes) {
-                        chrome.tabs.create({
-                            'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
-                            'active': false
-                        });
-                    }
+                });
+            }
+
+            if ( (mappingUpdate && items.updateNotification == 1) || items.updateNotification == 2 ) {
+                chrome.tabs.create({
+                    'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
+                    'active': false
                 });
             } else {
                 // No mappings.js update

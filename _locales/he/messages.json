@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "מגן עליך מפני מעקב המבוצע דרך רשתות אספקת תוכן ריכוזיות ו\"חינמיות\".",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "כמות תוכן מקומי שהוזרק במקום רשתות אספקת תוכן מאז התקנת התוכנה.",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "יש לפתוח „מסוף דפדפן” ( Ctrl+Shift+J ) כדי לצפות במשאבים החסרים.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "השבתת הערות מהדורה",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "יש להפעיל את האפשרות הזאת כדי להפסיק לקבל מידע כלשהו על תכונות חדשות ב־LocalCDN. לרבות מידע על כללים חדשים לחוסם הפרסומות שלך.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "תכונה זו פוגמת בהצגת אתרים. אין להשאיר אותה פעילה אלא אם כן התכוננת להוסיף את כל שמות התחום שייפגעו לרשימת ההיתר.",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "הייבוא נכשל",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

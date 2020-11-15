@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Lhe protege de rastreamento feito usando centrais de disponibilização de conteúdo \"gratuitas\".",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Total de injeções locais de recursos de Redes de Distribuição de Conteúdo desde a instalação.",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "Abra \"Browser Console\" ( CTRL + SHIFT + J ) para mostrar recursos faltantes.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "Desabilitar notas de lançamento",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Habilite isso para não receber informações sobre novos recursos do LocalCDN. Isso inclui informação sobre novas regras do bloqueador de anúncios.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Esse recurso quebra sites. Não deixe habilitado, a não ser que você esteja preparado para permitir manualmente os sites afetados.",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Falha no Importação",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

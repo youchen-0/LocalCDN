@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Štiti te od praćenja, putem „besplatne”, centralizirane dostave podataka.",
-        "description": "Extension description."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Broj umetnutih resursa putem lokalne CDN-mreže od trenutka instalacije.",
@@ -78,14 +78,6 @@
     "loggingDescription": {
         "message": "Otvori „Konzola preglednika” (CTRL + SHIFT + J) za prikaz nedostajućih resursa.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
-    },
-    "hideReleaseNotesTitle": {
-        "message": "Deaktiviraj napomene uz izdanja",
-        "description": "Disable release notes"
-    },
-    "hideReleaseNotesDescription": {
-        "message": "Uključi ovo, ako ne želiš primati informacije o novim funkcijama LocalCDN-a. To uključuje informacije o novim pravilima za tvoj blokator oglasa.",
-        "description": "Turn this on to not receive any info about new LocalCDN features. This includes info about new rules for your adblocker."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Ova funkcija sprečava ispravno funkcioniranje web-stranica. Deaktiviraj funkciju, osim ako želiš ručno dodavati dotične domene u popis dozvoljenih.",
@@ -234,5 +226,21 @@
     "dialogImportFailed": {
         "message": "Uvoz neuspio",
         "description": "Import failed"
+    },
+    "updateNotificationTitle": {
+        "message": "",
+        "description": "Notification after an update"
+    },
+    "updateNotificationNever": {
+        "message": "",
+        "description": "Never (Silent Updates)"
+    },
+    "updateNotificationOnlyRules": {
+        "message": "",
+        "description": "Only if new CDNs and rules"
+    },
+    "updateNotificationAlways": {
+        "message": "",
+        "description": "Always"
     }
 }

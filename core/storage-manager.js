@@ -62,7 +62,7 @@ storageManager.migrateData = function (target) {
             [Setting.DOMAINS_MANIPULATE_DOM]: data.domainsManipulateDOM,
             [Setting.LOGGING]: data.logging,
             [Setting.ENFORCE_STAGING]: data.enforceStaging,
-            [Setting.HIDE_RELEASE_NOTES]: data.hideReleaseNotes,
+            [Setting.UPDATE_NOTIFICATION]: data.updateNotification,
             [Setting.LAST_MAPPING_UPDATE]: data.lastMappingUpdate,
             [Setting.NEGATE_HTML_FILTER_LIST]: data.negateHtmlFilterList,
             [Setting.SELECTED_ICON]: data.selectedIcon,
@@ -81,6 +81,7 @@ storageManager.export = function () {
     filename = filename.substring(0, 10) + '_localcdn_backup.txt';
 
     storageManager.type.get(null, function (items) {
+        delete items['whitelistedDomains'];
         let element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(items, null, '  ')));
         element.setAttribute('download', filename);
@@ -134,16 +135,29 @@ storageManager._readFileAsync = function (file) {
 
 storageManager._validation = function (content) {
     let imported = {};
+
+    // Delete old keys
+    if (typeof content.whitelistedDomains !== 'undefined') {
+        content.allowlistedDomains = content.whitelistedDomains;
+        delete content['whitelistedDomains'];
+    }
+
+    // Convert value of notifications
+    if (typeof content.hideReleaseNotes !== 'undefined') {
+        content.updateNotification = content.hideReleaseNotes ? 0 : 2;
+        delete content['hideReleaseNotes'];
+    }
+
     for (const [key, value] of Object.entries(SettingDefaults)) {
         // If type the same as default settings
         if (typeof value === typeof content[key]) {
-            if (typeof value === 'object' || value instanceof Object) {
+            if (typeof value === 'object') {
                 imported[key] = storageManager._validateDomainsAndStatistics(key, content[key]);
-            } else if (typeof value === 'string' || value instanceof String) {
+            } else if (typeof value === 'string') {
                 imported[key] = storageManager._validateStrings(content[key]);
-            } else if (typeof value === 'number' || value instanceof Number) {
+            } else if (typeof value === 'number') {
                 imported[key] = storageManager._validateNumbers(content[key]);
-            } else if (typeof value === 'boolean' || value instanceof Boolean) {
+            } else if (typeof value === 'boolean') {
                 imported[key] = content[key];
             }
         } else if (content[key] === undefined) {
@@ -214,7 +228,6 @@ storageManager._validateDomainsAndStatistics = function (type, obj) {
 };
 
 storageManager._validateStrings = function (value) {
-    console.log(value);
     if (/((2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])/.test(value)) {
         return value;
     } else if (/#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/.test(value)) {

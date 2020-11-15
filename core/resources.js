@@ -34,7 +34,7 @@ var resources = {
         'path': 'resources/anchor-js/{version}/anchor.min.jsm',
         'type': 'application/javascript'
     },
-    // AnguComplete
+    // AnguComplete [Deprecated]
     'anguComplete': {
         'path': 'resources/angucomplete-alt/{version}/angucomplete-alt.min.jsm',
         'type': 'application/javascript'
@@ -97,7 +97,7 @@ var resources = {
     	'path': 'resources/angular-material/{version}/angular-material.min.css',
         'type': 'text/css'
     },
-    // angular-bootstrap-colorpicker
+    // angular-bootstrap-colorpicker [Deprecated]
     'angularBootstrapColorpickerJS': {
         'path': 'resources/angular-bootstrap-colorpicker/{version}/js/bootstrap-colorpicker-module.min.jsm',
         'type': 'application/javascript'
@@ -111,17 +111,17 @@ var resources = {
         'path': 'resources/angularjs-slider/{version}/rzslider.min.jsm',
         'type': 'application/javascript'
     },
-    // AngularJS ui-select
+    // AngularJS ui-select [Deprecated]
     'angularJsUiSelect': {
         'path': 'resources/angular-ui-select/{version}/select.min.jsm',
         'type': 'application/javascript'
     },
-    // angular-ui-utils
+    // angular-ui-utils [Deprecated]
     'angularUiUtils': {
         'path': 'resources/angular-ui-utils/{version}/angular-ui-utils.min.jsm',
         'type': 'application/javascript'
     },
-    // AngularUI Bootstrap
+    // AngularUI Bootstrap [Deprecated]
     'angularUiBootstrapTPLS': {
         'path': 'resources/angular-ui-bootstrap/{version}/ui-bootstrap-tpls.min.jsm',
         'type': 'application/javascript'
@@ -135,7 +135,7 @@ var resources = {
         'path': 'resources/angular-ui-router/{version}/angular-ui-router.min.jsm',
         'type': 'application/javascript'
     },
-    // AngularJS Toaster
+    // AngularJS Toaster [Deprecated?]
     'angularJsToasterCSS': {
         'path': 'resources/angularjs-toaster/{version}/toaster.min.css',
         'type': 'text/css'
@@ -144,12 +144,12 @@ var resources = {
         'path': 'resources/angularjs-toaster/{version}/toaster.min.jsm',
         'type': 'application/javascript'
     },
-    // Angular Payments
+    // Angular Payments [Deprecated]
     'angularPayments': {
         'path': 'resources/angular-payments/{version}/angular-payments.jsm',
         'type': 'application/javascript'
     },
-    // Angular Stripe Checkout
+    // Angular Stripe Checkout [Deprecated]
     'angularStripeCheckout': {
         'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
         'type': 'application/javascript'
@@ -252,7 +252,7 @@ var resources = {
         'path': 'resources/bootstrap-table/{version}/bootstrap-table.min.css',
         'type': 'text/css'
     },
-    // Bootstrap Toggle
+    // Bootstrap Toggle [Deprecated]
     'bootstrapToggleJS': {
         'path': 'resources/bootstrap-toggle/{version}/js/bootstrap-toggle.min.jsm',
         'type': 'application/javascript'
@@ -288,7 +288,7 @@ var resources = {
         'path': 'resources/clipboard.js/{version}/clipboard.min.jsm',
         'type': 'application/javascript'
     },
-    // Cookie Consent
+    // Cookie Consent [Deprecated?]
     'cookieconsent2JS': {
         'path': 'resources/cookieconsent2/{version}/cookieconsent.min.jsm',
         'type': 'application/javascript'
@@ -302,7 +302,7 @@ var resources = {
         'path': 'resources/d3/{version}/d3.min.jsm',
         'type': 'application/javascript'
     },
-    // D3 Legend
+    // D3 Legend [Deprecated]
     'd3legend': {
         'path': 'resources/d3-legend/{version}/d3-legend.min.jsm',
         'type': 'application/javascript'
@@ -312,7 +312,7 @@ var resources = {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
         'type': 'application/javascript'
     },
-    // Drawer
+    // Drawer [Deprecated]
     'drawerJS': {
         'path': 'resources/drawer/{version}/drawer.min.jsm',
         'type': 'application/javascript'
@@ -331,7 +331,7 @@ var resources = {
         'path': 'resources/ember.js/{version}/ember.min.jsm',
         'type': 'application/javascript'
     },
-    // ethJs
+    // ethJs [Deprecated]
     'ethJs': {
         'path': 'resources/ethjs/{version}/ethjs.min.jsm',
         'type': 'application/javascript'
@@ -341,7 +341,7 @@ var resources = {
         'path': 'resources/ext-core/{version}/ext-core.jsm',
         'type': 'application/javascript'
     },
-    // fancyBox
+    // fancyBox [Deprecated?]
     'fancyBoxMediaJS': {
         'path': 'resources/fancybox/{version}/helpers/jquery.fancybox-media.jsm',
         'type': 'application/javascript'
@@ -359,7 +359,7 @@ var resources = {
         'path': 'resources/findify-bundle/{version}/',
         'type': 'application/javascript'
     },
-    // flv.js
+    // flv.js [Deprecated]
     'flvJS': {
         'path': 'resources/flv.js/{version}/flv.min.jsm',
         'type': 'application/javascript'
@@ -379,6 +379,19 @@ var resources = {
     },
     'fontawesome5JS': {
         'path': 'resources/fontawesome/{version}/js/all.min.jsm',
+        'type': 'application/javascript'
+    },
+    'fontawesomeFontsOnly': {
+        'path': 'resources/fontawesome/{version}/fonts/'
+    },
+    // GSAP
+    'gsapBundle': {
+        'path': 'resources/gsap/{version}/',
+        'type': 'application/javascript'
+    },
+    // Google Charts
+    'googleCharts': {
+        'path': 'resources/google-charts/loader.jsm',
         'type': 'application/javascript'
     },
     // Google Material Icons
@@ -406,7 +419,7 @@ var resources = {
         'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm',
         'type': 'application/javascript'
     },
-    // iScroll
+    // iScroll [Deprecated]
     'iScroll': {
         'path': 'resources/iScroll/{version}/iscroll.min.jsm',
         'type': 'application/javascript'
@@ -416,7 +429,7 @@ var resources = {
         'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
         'type': 'application/javascript'
     },
-    // Jets.js
+    // Jets.js [Deprecated]
     'jetsJS': {
         'path': 'resources/jets/{version}/jets.min.jsm',
         'type': 'application/javascript'
@@ -431,7 +444,7 @@ var resources = {
         'path': 'resources/jquery/{version}/jquery.min.jsm',
         'type': 'application/javascript'
     },
-    // jQuery BlockUI
+    // jQuery BlockUI [Deprecated]
     'jQueryBlockUI': {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
         'type': 'application/javascript'
@@ -446,7 +459,7 @@ var resources = {
         'path': 'resources/jquery-easing/{version}/jquery.easing.min.jsm',
         'type': 'application/javascript'
     },
-    // jQuery Lazy Load
+    // jQuery Lazy Load [Deprecated]
     'jQueryLazyLoad': {
         'path': 'resources/jquery.lazyload/{version}/jquery.lazyload.min.jsm',
         'type': 'application/javascript'
@@ -456,7 +469,7 @@ var resources = {
         'path': 'resources/jquery.lazy/{version}/',
         'type': 'application/javascript'
     },
-    // jquery.matchHeight.js
+    // jquery.matchHeight.js [Deprecated]
     'jqueryMatchHeightJS': {
         'path': 'resources/jquery.matchHeight/{version}/jquery.matchHeight-min.jsm',
         'type': 'application/javascript'
@@ -466,7 +479,7 @@ var resources = {
         'path': 'resources/jquery-migrate/{version}/jquery-migrate.min.jsm',
         'type': 'application/javascript'
     },
-    // jQuery Modal
+    // jQuery Modal [Deprecated]
     'jQueryModalJS': {
         'path': 'resources/jquery-modal/{version}/jquery.modal.min.jsm',
         'type': 'application/javascript'
@@ -475,7 +488,7 @@ var resources = {
         'path': 'resources/jquery-modal/{version}/jquery.modal.min.css',
         'type': 'text/css'
     },
-    // jqueryMousewheelJS
+    // jqueryMousewheelJS [Deprecated?]
     'jqueryMousewheelJS': {
         'path': 'resources/jquery-mousewheel/{version}/jquery.mousewheel.min.jsm',
         'type': 'application/javascript'
@@ -504,7 +517,7 @@ var resources = {
         'path': 'resources/jScrollPane/{version}/jquery.jscrollpane.min.jsm',
         'type': 'application/javascript'
     },
-    // jQuery URLive
+    // jQuery URLive [Deprecated]
     'jqueryURLive': {
         'path': 'resources/urlive/{version}/jquery.urlive.min.jsm',
         'type': 'application/javascript'
@@ -514,12 +527,12 @@ var resources = {
         'path': 'resources/jquery-validate/{version}/jquery.validate.min.jsm',
         'type': 'application/javascript'
     },
-    // jQuery Mobile
+    // jQuery Mobile [Deprecated]
     'jQueryMobile': {
         'path': 'resources/jquery-mobile/{version}/jquery.mobile.min.jsm',
         'type': 'application/javascript'
     },
-    // js-cookie
+    // js-cookie [Deprecated]
     'jscookie': {
         'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',
         'type': 'application/javascript'
@@ -558,12 +571,21 @@ var resources = {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm',
         'type': 'application/javascript'
     },
+    // magnific-popup.js [Deprecated]
+    'magnificPopupJS': {
+        'path': 'resources/magnific-popup.js/{version}/jquery.magnific-popup.min.jsm',
+        'type': 'application/javascript'
+    },
+    'magnificPopupCSS': {
+        'path': 'resources/magnific-popup.js/{version}/magnific-popup.min.css',
+        'type': 'text/css'
+    },
     // markdown-it
     'markdownIt': {
         'path': 'resources/markdown-it/{version}/markdown-it.min.jsm',
         'type': 'application/javascript'
     },
-    // Materialize
+    // Materialize [Deprecated?]
     'materializeCSS': {
         'path': 'resources/materialize/{version}/css/materialize.min.css',
         'type': 'text/css'
@@ -586,6 +608,15 @@ var resources = {
         'path': 'resources/mirage2/latest/mirage2.min.jsm',
         'type': 'application/javascript'
     },
+    // Modaal [Deprecated]
+    'modaalJS': {
+        'path': 'resources/modaal/{version}/modaal.min.jsm',
+        'type': 'application/javascript'
+    },
+    'modaalCSS': {
+        'path': 'resources/modaal/{version}/modaal.min.css',
+        'type': 'text/css'
+    },
     // Modernizr
     'modernizr': {
         'path': 'resources/modernizr/{version}/modernizr.min.jsm',
@@ -596,7 +627,7 @@ var resources = {
         'path': 'resources/moment.js/{version}/moment-with-locales.min.jsm',
         'type': 'application/javascript'
     },
-    // MooTools
+    // MooTools [Deprecated]
     'mootools': {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
@@ -605,7 +636,7 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
         'type': 'application/javascript'
     },
-    // NVD3
+    // NVD3 [Deprecated]
     'nvd3JS': {
         'path': 'resources/nvd3/{version}/nv.d3.min.jsm',
         'type': 'application/javascript'
@@ -619,12 +650,12 @@ var resources = {
         'path': 'resources/object-assign/{version}/object-assign.min.jsm',
         'type': 'application/javascript'
     },
-    // ocLazyLoad
+    // ocLazyLoad [Deprecated]
     'ocLazyLoad': {
         'path': 'resources/oclazyload/{version}/ocLazyLoad.min.jsm',
         'type': 'application/javascript'
     },
-    // OwlCarousel (TODO: Deprecated?)
+    // OwlCarousel [Deprecated]
     'owlCarouselJS': {
         'path': 'resources/owl-carousel/{version}/owl.carousel.min.jsm',
         'type': 'application/javascript'
@@ -651,15 +682,32 @@ var resources = {
         'path': 'resources/p2p-media-loader-hlsjs/{version}/p2p-media-loader-hlsjs.min.jsm',
         'type': 'application/javascript'
     },
-    // page.js
+    // page.js [Deprecated?]
     'pageJs': {
-        'path': 'resources/page.js/{version}/page.min.jsm',
+        'path': 'resources/page.js/{version}/page.jsm',
         'type': 'application/javascript'
+    },
+    // Pagination.js [Deprecated]
+    'paginationjsJS': {
+        'path': 'resources/paginationjs/2.1.5/pagination.min.jsm',
+        'type': 'application/javascript'
+    },
+    'paginationjsCSS': {
+        'path': 'resources/paginationjs/2.1.5/pagination.min.css',
+        'type': 'text/css'
     },
     // plyr CSS
     'plyrCSS': {
         'path': 'resources/plyr/{version}/plyr.min.css',
         'type': 'text/css'
+    },
+    'plyrJS': {
+        'path': 'resources/plyr/{version}/plyr.min.jsm',
+        'type': 'application/javascript'
+    },
+    'plyrSVG': {
+        'path': 'resources/plyr/{version}/plyr.svg',
+        'type': 'image/svg+xml'
     },
     // Popper
     'popperJS': {
@@ -671,7 +719,12 @@ var resources = {
         'path': 'resources/prop-types/{version}/prop-types.min.jsm',
         'type': 'application/javascript'
     },
-    // Prototype
+    // protonet-jquery.inview [Deprecated]
+    'protonetJqueryInview': {
+        'path': 'resources/protonet-jquery.inview/{version}/jquery.inview.min.jsm',
+        'type': 'application/javascript'
+    },
+    // Prototype [Deprecated]
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.jsm',
         'type': 'application/javascript'
@@ -734,7 +787,7 @@ var resources = {
         'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm',
         'type': 'application/javascript'
     },
-    // Scriptaculous
+    // Scriptaculous [Deprecated]
     'scriptaculous': {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm',
         'type': 'application/javascript'
@@ -744,12 +797,12 @@ var resources = {
         'path': 'resources/select2/{version}/',
         'type': 'application/javascript'
     },
-    // showdown
+    // showdown [Deprecated?]
     'showdown': {
         'path': 'resources/showdown/{version}/showdown.min.jsm',
         'type': 'application/javascript'
     },
-    // simplemde
+    // simplemde [Deprecated]
     'simplemdeJS': {
         'path': 'resources/simplemde/{version}/simplemde.min.jsm',
         'type': 'application/javascript'
@@ -758,7 +811,7 @@ var resources = {
         'path': 'resources/simplemde/{version}/simplemde.min.css',
         'type': 'text/css'
     },
-    // slick-carousel/slick.js
+    // slick-carousel/slick.js [Deprecated]
     'slickCarouselJS': {
         'path': 'resources/slick-carousel/{version}/slick.min.jsm',
         'type': 'application/javascript'
@@ -767,7 +820,7 @@ var resources = {
         'path': 'resources/slick-carousel/{version}/slick.min.css',
         'type': 'text/css'
     },
-    // slick-lightbox
+    // slick-lightbox [Deprecated]
     'slickLightboxJS': {
         'path': 'resources/slick-lightbox/{version}/slick-lightbox.min.jsm',
         'type': 'application/javascript'
@@ -786,17 +839,17 @@ var resources = {
         'path': 'resources/spin.js/{version}/spin.min.jsm',
         'type': 'application/javascript'
     },
-    // stickyfill
+    // stickyfill [Deprecated]
     'stickyfill': {
         'path': 'resources/stickyfill/{version}/stickyfill.min.jsm',
         'type': 'application/javascript'
     },
-    // Store.js
+    // Store.js [Deprecated]
     'storeJS': {
         'path': 'resources/store.js/{version}/store.legacy.min.jsm',
         'type': 'application/javascript'
     },
-    // SWFObject
+    // SWFObject [Deprecated]
     'swfobject': {
         'path': 'resources/swfobject/{version}/swfobject.jsm',
         'type': 'application/javascript'
@@ -810,12 +863,12 @@ var resources = {
         'path': 'resources/swiper/{version}/css/swiper.min.css',
         'type': 'text/css'
     },
-    // Tether JS
+    // Tether JS [Deprecated]
     'tetherJS': {
         'path': 'resources/tether/{version}/js/tether.min.jsm',
         'type': 'application/javascript'
     },
-    // toastr
+    // toastr [Deprecated]
     'toastrCSS': {
         'path': 'resources/toastr.js/{version}/toastr.min.css',
         'type': 'text/css'
@@ -872,12 +925,12 @@ var resources = {
         'path': 'resources/vue-resource/{version}/vue-resource.min.jsm',
         'type': 'application/javascript'
     },
-    // Waypoints (bundle)
+    // Waypoints (bundle) [Deprecated]
     'jQueryWaypoints': {
         'path': 'resources/waypoints/{version}/',
         'type': 'application/javascript'
     },
-    // WebComponents.js
+    // WebComponents.js [Deprecated]
     'webcomponentsJS': {
         'path': 'resources/webcomponentsjs/{version}/webcomponents-loader.jsm',
         'type': 'application/javascript'

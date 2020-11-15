@@ -29,7 +29,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-10-26';
+mappings.lastMappingUpdate = '2020-11-08';
 
 mappings.cdn = {
 
@@ -129,6 +129,7 @@ mappings.cdn = {
             'angularjs-toaster/{version}/toaster.js': resources.angularJsToasterJS,
             'angular-sanitize/{version}/angular-sanitize.': resources.angularSanitize,
             'animate.css/{version}/animate.': resources.animateCSS,
+            'axios/{version}/axios.': resources.axios,
             'babel-polyfill/{version}/polyfill.': resources.babelPolyfill,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
@@ -261,6 +262,7 @@ mappings.cdn = {
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
             'font-awesome/{version}/css/': resources.fontawesome5CSS,
             'font-awesome/{version}/js/': resources.fontawesome5JS,
+            'gsap/{version}/': resources.gsapBundle,
             'highlight.js/{version}/': resources.highlightJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'iScroll/{version}/iscroll.min.js': resources.iScroll,
@@ -294,11 +296,18 @@ mappings.cdn = {
             'lightgallery/{version}/js/lightgallery.': resources.lightGalleryJS,
             'lightgallery/{version}/css/lightgallery.': resources.lightGalleryCSS,
             'lodash.js/{version}/lodash.': resources.lodashJS,
+            'lozad.js/{version}/lozad.': resources.lozad,
+            'magnific-popup.js/{version}/jquery.magnific-popup.min.js': resources.magnificPopupJS,
+            'magnific-popup.js/{version}/jquery.magnific-popup.js': resources.magnificPopupJS,
+            'magnific-popup.js/{version}/magnific-popup.css': resources.magnificPopupCSS,
+            'magnific-popup.js/{version}/magnific-popup.min.css': resources.magnificPopupCSS,
             'markdown-it/{version}/markdown-it.': resources.markdownIt,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
             'mdbootstrap/{version}/css/mdb.': resources.mdbootstrapCSS,
+            'Modaal/{version}/js/modaal.': resources.modaalJS,
+            'Modaal/{version}/css/modaal.': resources.modaalCSS,
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
@@ -316,8 +325,16 @@ mappings.cdn = {
             'owl-carousel/{version}/owl.theme.': resources.owlCarouselCSStheme,
             'owl-carousel/{version}/owl.transitions.': resources.owlCarouselCSStransitions,
             'page.js/{version}/page.min.': resources.pageJs,
+            'paginationjs/{version}/pagination.min.js': resources.paginationjsJS,
+            'paginationjs/{version}/pagination.js': resources.paginationjsJS,
+            'paginationjs/{version}/pagination.min.css': resources.paginationjsCSS,
+            'paginationjs/{version}/pagination.css': resources.paginationjsCSS,
             'plyr/{version}/plyr.css': resources.plyrCSS,
+            'plyr/{version}/plyr.min.css': resources.plyrCSS,
+            'plyr/{version}/plyr.js': resources.plyrJS,
+            'plyr/{version}/plyr.min.js': resources.plyrJS,
             'popper.js/{version}/umd/popper.min.js': resources.popperJS,
+            'protonet-jquery.inview/{version}/jquery.inview.': resources.protonetJqueryInview,
             'raven.js/{version}/raven.min.js': resources.ravenJS,
             'raven.js/{version}/plugins/angular.min.js': resources.ravenPluginAngularJS,
             'react/{version}/umd/react.production.min.js': resources.react,
@@ -349,6 +366,7 @@ mappings.cdn = {
             'twitter-bootstrap/{version}-alpha.3/js/bootstrap.min.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}-alpha.3/css/bootstrap.min.css': resources.bootstrapCSS,
             'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
+            'twitter-bootstrap/{version}/js/bootstrap.': resources.bootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.min.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}/bootstrap.min.css': resources.bootstrapCSS,
@@ -803,10 +821,12 @@ mappings.cdn = {
     // MaxCDN Bootstrap
     'maxcdn.bootstrapcdn.com': {
         '/': {
+            'bootstrap/{version}/js/bootstrap.bundle.min.': resources.bootstrapJS,
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
-            'font-awesome/{version}/css/font-awesome': resources.fontawesome
+            'font-awesome/{version}/css/font-awesome': resources.fontawesome,
+            'font-awesome/{version}/fonts/': resources.fontawesomeFontsOnly
         }
     },
     // NetDNA Bootstrap
@@ -859,6 +879,18 @@ mappings.cdn = {
             '{version}/video.min.js': resources.videoJS
         }
     },
+    // Plyr CDN
+    'cdn.plyr.io': {
+        '/': {
+            '{version}/plyr.svg': resources.plyrSVG
+        }
+    },
+    // gstatic
+    'www.gstatic.com': {
+        '/': {
+            'charts/loader.js': resources.googleCharts
+        }
+    }
 };
 
 // Geekzu Public Service [Mirror]
