@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Штити вас од праћења преко „бесплатних“, централизованих достава садржаја.",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Број локално убризганих ресурса са мрежа за доставу садржаја од инсталације.",

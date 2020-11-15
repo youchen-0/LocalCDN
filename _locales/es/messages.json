@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Le protege contra el rastreo mediante la entrega de contenido centralizado y «gratuito».",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Número de recursos inyectados de Redes de Entrega de Contenido desde la instalación.",

@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Protège du pistage lié aux diffuseurs de contenus « gratuits », centralisés.",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Quantité de ressources CDN injectées localement depuis l'installation.",

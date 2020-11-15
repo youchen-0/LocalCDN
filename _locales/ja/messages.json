@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "「無料」と称してあなたを追跡する大規模なCDNを迂回して、プライバシーを守ります。",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "インストール後にローカルのCDNリソースを使用した回数です。",

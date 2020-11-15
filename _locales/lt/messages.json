@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Apsaugo tave nuo sekimo per \"Laisva\", centralizuota, turinio pristatimų.",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Kiekis lokalaus Turinio pristatymo tinklo resursai injekcijos nuo įdiegimo.",

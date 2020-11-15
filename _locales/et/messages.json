@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Kaitseb sind \"tasuta\", tsentraliseeritud sisu edastamisest tuleneva jälitamise vastu.",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Kohalike sisuedastusvõrkude ressursisisestuste arv alates installimisest.",

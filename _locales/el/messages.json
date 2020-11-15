@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Προστατεύει από παρακολούθηση μέσω «δωρεάν» διανομής περιεχόμενου.",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Ποσοστό εμβόλιμων τοπικών πόρων Δικτύων Παροχής Περιεχομένου από την στιγμή της εγκατάστασης.",

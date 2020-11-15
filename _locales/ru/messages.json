@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Защищает Вас от отслеживания через «бесплатные», централизованные CDN.",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Количество локально «доставленных» файлов с момента установки.",

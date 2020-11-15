@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "安裝以來，由本機檔案所取代的 CDN 資源數量。",

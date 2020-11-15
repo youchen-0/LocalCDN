@@ -1,7 +1,7 @@
 {
     "extensionDescription": {
         "message": "Chrání před sledováním skrze centrálně doručovaný obsah.",
-        "description": "Protects you against tracking through \"free\", centralized, content delivery."
+        "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
         "message": "Počet lokální uložených zdrojů vložených od instalace.",
