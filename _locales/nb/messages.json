@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Beskytter mot sporing gjennom \"gratis\", sentralisert innholdslevering (CDN).",
+        "message": "Beskytter mot sporing gjennom CDN-er (innholdsleveransenettverk) ved å videresende til lokale ressurser.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {

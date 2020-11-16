@@ -1,246 +1,246 @@
 {
     "extensionDescription": {
-        "message": "Le protege contra el rastreo de CDN (Redes de entrega de contenido) mediante la redirección a recursos locales.",
+        "message": "",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Número de recursos inyectados de Redes de Entrega de Contenido desde la instalación.",
+        "message": "",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "Opciones",
+        "message": "",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Mostrar el número de inyecciones en el icono",
+        "message": "",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Muestra el número de recursos inyectados en el icono de la extensión.",
+        "message": "",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Bloquear las peticiones de recursos que faltan",
+        "message": "",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Cancela las peticiones interceptadas cuando el recurso requerido no se encuentra localmente.",
+        "message": "",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Deshabilitar la precarga de enlaces",
+        "message": "",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Evita que las peticiones no permitidas se escapen hacia redes de distribución.",
+        "message": "",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Quitar los metadatos de las solicitudes permitidas",
+        "message": "",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Borra los datos sensibles de las solicitudes a las CDN permitidas para mejorar la privacidad.",
+        "message": "",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Desactivar LocalCDN en estos dominios:",
+        "message": "",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Escriba los dominios donde deshabilitar LocalCDN. Separe las entradas múltiples con punto y coma (;).",
+        "message": "",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "Avanzado",
+        "message": "",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generar el conjunto de reglas para su bloqueador de publicidad",
+        "message": "",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Si está usando un bloqueador de publicidad, puede generar las reglas aquí. Tiene que añadir las reglas manualmente a su bloqueador de publicidad.",
+        "message": "",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "Última actualización:",
+        "message": "",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "Copiar",
+        "message": "",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Habilitar los mensajes de registro en la consola del navegador",
+        "message": "",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Abra la «Consola del navegador» ( CTRL + MAYÚSCULAS + J ) para que se muestren los recursos que faltan.",
+        "message": "",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Esta característica rompe sitios web. No la deje habilitada, a menos que esté dispuesto a añadir manualmente los dominios afectados a la lista de permitidos .",
+        "message": "",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "Desactivar",
+        "message": "",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtrar el código fuente HTML",
+        "message": "",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "Donar",
+        "message": "",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Invertir el filtro HTML",
+        "message": "",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Habilite esta opción para aplicar siempre el filtro HTML. Los dominios en la lista serán ignorados. Si esta opción está desactivada, el filtro HTML solo se aplica a los dominios de la lista.",
+        "message": "",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Esta función puede romper sitios web. Por favor, tenga en cuenta la información en las páginas de la Wiki.",
+        "message": "",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "No aplicar el filtro HTML a estos dominios:",
+        "message": "",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Escriba los dominios que han sido usados o ignorados por el filtro HTML. Separe las entradas múltiples con punto y coma (;).",
+        "message": "",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "Aplicar el filtro HTML en estos dominios:",
+        "message": "",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "Bloquear las fuentes de Google",
+        "message": "",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Si se permiten peticiones de recursos que faltan, las conexiones a «fonts.googleapis.com» no se bloquean. Habilite esta opción para bloquear estas solicitudes.",
+        "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "Eligir un ícono para esta extensión",
+        "message": "",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "Estadísticas internas",
+        "message": "",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Esta función se encuentra actualmente en fase experimental. No hay transmisión de datos. Todo se hace en su dispositivo.",
+        "message": "",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "Estadísticas",
+        "message": "",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "Hoy",
+        "message": "",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "Última semana",
+        "message": "",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "Último mes",
+        "message": "",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "Último año",
+        "message": "",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "Eliminar",
+        "message": "",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "Promedio (Reemplazos por día)",
+        "message": "",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "«Frameworks» reemplazados",
+        "message": "",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "¿Está seguro de querer borrar las estadísticas?",
+        "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Estos dominios tienen permitido cargar fuentes de Google. Separe las entradas múltiples con punto y coma (;).",
+        "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "Básico",
+        "message": "",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "Avanzado",
+        "message": "",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "Otro",
+        "message": "",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "Información",
+        "message": "",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "Tipo de almacenamiento",
+        "message": "",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "Local",
+        "message": "",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Sincronizar",
+        "message": "",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "Importar/Exportar",
+        "message": "",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "Respaldar en archivo",
+        "message": "",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "Restaurar desde un archivo",
+        "message": "",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "Importación exitosa",
+        "message": "",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "Importación fallida",
+        "message": "",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "Notificar después de una actualización",
+        "message": "",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "Nunca (Actualización silenciosa)",
+        "message": "",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "Solo con nuevas CDN y reglas",
+        "message": "",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "Siempre",
+        "message": "",
         "description": "Always"
     }
 }
