@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "保护你免受“免费”，中心化内容分发的跟踪。",
+        "message": "通过重定向到本地资源，保护您免遭通过CDNs(内容交付网络)进行的跟踪。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
