@@ -65,7 +65,6 @@ main._initializeSettings = function () {
             });
         }
 
-
         stateManager.selectedIcon = items.selectedIcon;
         wrappers.setIcon({
             'path': stateManager.selectedIcon
@@ -90,14 +89,22 @@ main._showReleaseNotes = function (details) {
             }
         });
     } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) {
-        storageManager.type.get([Setting.LAST_MAPPING_UPDATE, Setting.UPDATE_NOTIFICATION], function (items) {
+        storageManager.type.get(null, function (items) {
             let mappingUpdate = items.lastMappingUpdate !== mappings.lastMappingUpdate;
+
+            // Remove old keys
+            for (const key of Object.keys(items)) {
+                if (!(key in SettingDefaults)) {
+                    delete items[key];
+                }
+            }
+            // Override old value https://codeberg.org/nobody/LocalCDN/issues/177
+            items.xhrTestDomain = 'localcdn.org';
 
             // Updated mappings.js
             if (mappingUpdate) {
-                storageManager.type.set({
-                    [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
-                });
+                items.lastMappingUpdate = mappings.lastMappingUpdate;
+                storageManager.type.set(items);
             }
 
             if ( (mappingUpdate && items.updateNotification == 1) || items.updateNotification == 2 ) {
