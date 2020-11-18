@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Štiti te od praćenja, putem „besplatne”, centralizirane dostave podataka.",
+        "message": "Štiti te od praćenja, putem CDN-ova (Content Delivery Networks) preusmjeravanjem na lokalne resurse.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -228,19 +228,19 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Obavijest nakon aktualiziranja",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Nikada (aktualiziranje bez obavještavanja)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Samo u slučaju novih CDN-ova i pravila",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Uvijek",
         "description": "Always"
     }
 }
