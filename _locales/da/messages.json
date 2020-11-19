@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Beskytter dig imod sporing af \"gratis\", centraliserede indholdsleverandører.",
+        "message": "Beskytter dig imod sporing af CDN (Content Delivery Network) ved at omdirigere til lokale ressourcer.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generer regelsæt for uBlock eller uMatrix",
+        "message": "Generer regelsæt for din adblocker",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "I det tilfælde at du bruger uBlock Origin eller uMatrix kan du generere regler her. Du skal tilføje disse regler manuelt i uBlock Origin eller uMatrix.",
+        "message": "I det tilfælde at du bruger en adblocker kan du generere regler her. Du skal tilføje disse regler manuelt i din adblocker.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -80,7 +80,7 @@
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Denne funktion ødelægger hjemmesider. Lad være med at aktiver denne, med mindre at du er parat til at manuelt hvid liste nogen påvirket sider.",
+        "message": "Denne funktion ødelægger hjemmesider. Lad være med at aktiver denne, med mindre at du er parat til manuelt at tilføje påvirkede sider til tilladlisten.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -140,7 +140,7 @@
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Statistikker",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
@@ -196,7 +196,7 @@
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Lagertype",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
@@ -204,7 +204,7 @@
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Synkronisering",
         "description": "Sync"
     },
     "headerImportExport": {
@@ -228,19 +228,19 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Notifikation efter en opdatering",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Aldrig (Stille Opdateringer)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Kun hvis nye CDNs og regler",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Altid",
         "description": "Always"
     }
 }
