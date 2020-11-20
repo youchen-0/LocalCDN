@@ -825,6 +825,7 @@ mappings.cdn = {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'twitter-bootstrap/{version}/css/bootstrap': resources.bootstrapCSS,
+            'bootstrap/{version}/fonts/': resources.bootstrapFontsOnly,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
             'font-awesome/{version}/fonts/': resources.fontawesomeFontsOnly
         }

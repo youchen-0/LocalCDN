@@ -164,6 +164,12 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/google-charts/loader.jsm',
             'bundle': ''
         };
+    } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(channelPath)) {
+        return {
+            'source': channelHost,
+            'path': 'resources/bootstrap/fonts/' + helpers.extractFilenameFromPath(channelPath),
+            'bundle': 'Bootstrap (Fonts)'
+        };
     } else {
         return false;
     }

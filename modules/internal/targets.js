@@ -44,6 +44,8 @@ targets.determineBundle = function (path) {
         return 'GSAP';
     } else if (Regex.FONT_AWESOME_FONTS_ONLY.test(path)) {
         return 'Font Awesome (Fonts)';
+    } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(path)) {
+        return 'Bootstrap (Fonts)';
     } else {
         return '';
     }
