@@ -46,11 +46,19 @@ requestSanitizer.disable = function () {
  */
 
 requestSanitizer._stripMetadata = function (requestDetails) {
+    let sensitiveHeaders, initiatorDomain, allowlistedDomains;
 
-    let sensitiveHeaders = [Header.COOKIE, Header.ORIGIN, Header.REFERER];
+    sensitiveHeaders = [Header.COOKIE, Header.ORIGIN, Header.REFERER];
+    initiatorDomain = helpers.extractDomainFromUrl(requestDetails.originUrl, true);
+    allowlistedDomains = stateManager._domainIsListed(initiatorDomain);
+
+    if (allowlistedDomains) {
+        return {
+            [WebRequest.HEADERS]: requestDetails.requestHeaders,
+        };
+    }
 
     for (let i = 0; i < requestDetails.requestHeaders.length; ++i) {
-
         if (sensitiveHeaders.indexOf(requestDetails.requestHeaders[i].name) > -1) {
             requestDetails.requestHeaders.splice(i--, 1);
         }
