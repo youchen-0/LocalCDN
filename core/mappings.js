@@ -447,6 +447,7 @@ mappings.cdn = {
             'jquery-ui@{version}/jquery-ui.min.js': resources.jQueryUI,
             'jquery-ui-dist@{version}/jquery-ui.js': resources.jQueryUI,
             'jquery-ui-dist@{version}/jquery-ui.min.js': resources.jQueryUI,
+            'jquery-validation@{version}/dist/jquery.validate.': resources.jqueryValidationPlugin,
             'lodash@{version}/lodash.min.js': resources.lodashJS,
             'lozad': resources.lozad,
             'npm-modernizr@{version}/modernizr.': resources.modernizr,
