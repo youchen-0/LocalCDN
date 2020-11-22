@@ -53,14 +53,10 @@ requestSanitizer._stripMetadata = function (requestDetails) {
     allowlistedDomains = stateManager._domainIsListed(initiatorDomain);
 
     if (allowlistedDomains) {
-        return {
-            [WebRequest.HEADERS]: requestDetails.requestHeaders,
-        };
-    }
-
-    for (let i = 0; i < requestDetails.requestHeaders.length; ++i) {
-        if (sensitiveHeaders.indexOf(requestDetails.requestHeaders[i].name) > -1) {
-            requestDetails.requestHeaders.splice(i--, 1);
+        for (let i = 0; i < requestDetails.requestHeaders.length; ++i) {
+            if (sensitiveHeaders.indexOf(requestDetails.requestHeaders[i].name) > -1) {
+                requestDetails.requestHeaders.splice(i--, 1);
+            }
         }
     }
 
