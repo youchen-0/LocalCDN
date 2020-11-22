@@ -397,6 +397,8 @@ targets.setLastVersion = function (type, version) {
         return '4.5.1';
     } else if (type.startsWith('/swiper/5.')) {
         return '5.4.5';
+    } else if (type.startsWith('/swiper/6.') || type.startsWith('/swiper/')) {
+        return '6.3.5';
     } else if (type.startsWith('/tether/1.')) {
         return '1.4.7';
     } else if (type.startsWith('/tooltipster/3.')) {
