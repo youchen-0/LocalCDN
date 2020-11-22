@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Sizi içerik dağıtımıyla yapılan merkezi ve \"ücretsiz\" takipten korur.",
+        "message": "Yerel kaynaklara yönlendirerek sizi CDN'ler (Content Delivery Networks - İçerik Dağıtım Ağları) üzerinden izlenmeye karşı korur.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {

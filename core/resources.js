@@ -215,6 +215,9 @@ var resources = {
         'path': 'resources/bootstrap/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
+    'bootstrapFontsOnly': {
+        'path': 'resources/bootstrap/fonts/'
+    },
     // Bootstrap Daterangepicker
     'bootstrapDaterangepicker': {
         'path': 'resources/bootstrap-daterangepicker/{version}/daterangepicker.min.jsm',
