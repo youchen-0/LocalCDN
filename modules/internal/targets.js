@@ -260,7 +260,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jScrollPane/2.')) {
         return '2.2.2';
     } else if (type.startsWith('/jquery-validate/1.')) {
-        return '1.19.1';
+        return '1.19.2';
     } else if (type.startsWith('/jquery-jeditable/1.')) {
         return '1.8.0';
     } else if (type.startsWith('/jquery-jeditable/2.')) {
