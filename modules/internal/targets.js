@@ -59,7 +59,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/algoliasearch/3.')) {
         return '3.35.1';
     } else if (type.startsWith('/algoliasearch/4.')) {
-        return '4.8.2';
+        return '4.8.3';
     } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
