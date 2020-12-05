@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "「無料」と称してあなたを追跡する大規模なCDNを迂回して、プライバシーを守ります。",
+        "message": "CDNから配信されるリソースをローカルリソースへリダイレクトすることでトラッキングから保護します。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -12,15 +12,15 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "ローカルのリソースを使用した回数をアイコンに表示する",
+        "message": "ローカルリソースが使用された回数をアイコンに表示する",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "拡張機能のアイコンに、ローカルのリソースを使用した回数を表示します。",
+        "message": "ローカルリソースが使用された回数を拡張機能のアイコンに表示します。",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "アドオンに含まれないリソースへのリクエストをブロックする",
+        "message": "拡張機能に含まれないリソースへのリクエストをブロックする",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -32,7 +32,7 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "許可されていないリクエストが配信ネットワークに漏洩するのを防止する。",
+        "message": "許可されていないリクエストが配信ネットワークに漏洩するのを防ぎます。",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
@@ -40,27 +40,27 @@
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "プライバシー向上のために許可されたCDNリクエストから機密データを消去する。",
+        "message": "プライバシー向上のために、許可されたCDNリクエストから機密データを消去します。",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "これらのドメインの LocalCDN を無効化する：",
+        "message": "LocalCDNを無効にするドメイン:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "ホワイトリストに登録したいドメインを入力してください。エントリが複数ある場合、セミコロン (;) で区切ってください。",
+        "message": "LocalCDNを無効にするドメインを入力してください。複数入力する場合はセミコロン (;) で区切ってください。",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "エラー内容",
+        "message": "高度な設定",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "あなたの広告ブロッカーのためのルールセットを生成する",
+        "message": "広告ブロッカー向けのルールセットを生成する",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "広告ブロッカーを使用している場合はここでルールを生成できます。このルールは手動で広告ブロッカーに追加する必要があります。",
+        "message": "広告ブロッカーを使用している場合はここでルールを生成できます。生成されたルールは手動で広告ブロッカーに設定する必要があります。",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -76,11 +76,11 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "ブラウザコンソール（CTRL + SHIFT + J）を開いて、不足しているリソースを表示する。",
+        "message": "ブラウザコンソール (CTRL + SHIFT + J) を開いて、不足しているリソースを表示できるようになります。",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "この機能は Web サイトを壊しかねません。 影響を受けるドメインを、手動でホワイトリストに登録する準備ができていない限りは「有効にしない」でください。",
+        "message": "この機能はウェブサイトを壊す可能性があります。影響を受けるドメインを許可リストに手動で追加する準備ができていない限り、この機能を有効にしたままにしないでください。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -88,43 +88,43 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "HTML ソースコードをフィルタリングする",
+        "message": "HTMLソースコードをフィルタリングする",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "寄付",
+        "message": "寄付する",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "HTML フィルタを反転",
+        "message": "HTMLフィルターを反転",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "このオプションを有効にすると、常に HTML フィルタが適用され「リスト内のドメインは無視」されます。 このオプションを無効にすると、HTML フィルタはリスト内のドメインにのみ適用されます。",
+        "message": "このオプションを有効にすると常にHTMLフィルターが適用され、リスト内のドメインは無視されます。このオプションを無効にすると、HTMLフィルターはリスト内のドメインにのみ適用されます。",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "この機能はウェブサイトを壊す可能性があります。 Wiki ページに関連情報があります。",
+        "message": "この機能はウェブサイトを壊す可能性があります。詳細はWikiページをご覧ください。",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "これらのドメインには、HTML フィルタを適用させない：",
+        "message": "HTMLフィルターを適用させないドメイン:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "HTML フィルタで処理や無視するドメインを入力します。 複数のエントリは、セミコロン（;）で区切ります。",
+        "message": "HTMLフィルターで処理する、もしくはフィルターを無視するドメインを入力します。複数入力する場合ははセミコロン(;)で区切ってください。",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "これらのドメインに、HTML フィルタを適用する：",
+        "message": "HTMLフィルターを適用させるドメイン：",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "Google Fonts をブロックする",
+        "message": "Google Fontsをブロックする",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "不足しているリソースのリクエストが許可されている場合は「fonts.googleapis.com」への接続はブロックされません。 これらのリクエストをブロックするには、このオプションを有効にします。",
+        "message": "不足しているリソースへのリクエストが許可されている場合、「fonts.googleapis.com」への接続はブロックされません。このオプションを有効にすると、これらのリクエストをブロックすることができます。",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -132,11 +132,11 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "内部統計",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "この機能は現在、実験段階です。データを転送することはありません。全てがデバイス上にあり、ローカルで処理されます。",
+        "message": "この機能は現在実験段階です。データを転送することはありません。全てがローカル上で処理されます。",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -164,27 +164,27 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "平均 (1日あたりの置き換え回数)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "置き換えられたフレームワーク",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "統計情報を削除してもよろしいですか？",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "これらのドメインは Google Fonts をロードすることがゆるされています。多数のエントリはセミコロン『；』で分けてください。",
+        "message": "これらのドメインは、Google Fontsの読み込みを許可しています。複数入力する場合はセミコロン(;)で区切ってください。",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "基本",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "詳細設定",
+        "message": "高度な設定",
         "description": "Advanced"
     },
     "btnOther": {
@@ -192,23 +192,23 @@
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "情報",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "ストレージタイプ",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "ローカル",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "同期",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "インポート／エクスポート",
+        "message": "インポート/エクスポート",
         "description": "Import/Export"
     },
     "labelExportData": {
@@ -228,19 +228,19 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "更新通知",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "しない (バックグラウンド更新)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "新しいCDNやルールが追加された場合",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "常時",
         "description": "Always"
     }
 }
