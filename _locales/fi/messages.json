@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Suojaa sinua \"ilmaisten\" keskitettyjen sisällön jakeluverkkojen jäljitykseltä.",
+        "message": "Suojaa sinua sisällön jakeluverkkojen jäljitykseltä uudelleenohjaamalla pyynnöt paikallisiin resursseihin.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Luo sääntöjoukot uBlockille tai uMatrixille",
+        "message": "Luo säännöt mainostentorjujallesi",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Jos käytät uBlockia tai uMatrixia, voit luoda säännöt täällä. Sinun täytyy lisätä nämä säännöt manuaalisesti uBlockiin tai uMatrixiin.",
+        "message": "Jos käytät mainostentorjujaa, voit luoda säännöt täällä. Sinun täytyy lisätä nämä säännöt manuaalisesti mainostentorjujaan.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -88,7 +88,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Suodattaa HTML lähdekoodia",
+        "message": "Suodata HTML lähdekoodi",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -128,39 +128,39 @@
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Valitse ikoni tälle lisäosalle",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Sisäiset tilastot",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Tämä toiminta on tällä hetkellä kokeilullisessa vaiheessa. Ei tiedonsiirtoa. Kaikki on paikallista sinun laitteellasi.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Tilastot",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Tänään",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Viime viikko",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Viime kuukausi",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Viime vuosi",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Poista",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
@@ -172,12 +172,12 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Oletko varma että haluat poistaa tilastot?",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
         "message": "",

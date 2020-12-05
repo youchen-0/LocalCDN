@@ -59,7 +59,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/algoliasearch/3.')) {
         return '3.35.1';
     } else if (type.startsWith('/algoliasearch/4.')) {
-        return '4.8.0';
+        return '4.8.3';
     } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
@@ -128,7 +128,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
-        return '5.4.1';
+        return '5.5.2';
     } else if (type.startsWith('/bootstrap/3.')) {
         return '3.4.1';
     } else if (type.startsWith('/bootstrap/4.')) {
@@ -166,7 +166,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/d3/5.')) {
         return '5.16.0';
     } else if (type.startsWith('/d3/6.')) {
-        return '6.2.0';
+        return '6.3.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
     } else if (type.startsWith('/dojo/1.')) {
@@ -208,7 +208,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
     } else if (type.startsWith('/highlight.js/10.')) {
-        return '10.4.0';
+        return '10.4.1';
     } else if (type.startsWith('/highlight.js/9.')) {
         return '9.18.3';
     } else if (type.startsWith('/history/4.')) {
@@ -220,7 +220,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
-        return '4.8.7';
+        return '4.9.0';
     } else if (type.startsWith('/iScroll/5.')) {
         return '5.2.0';
     } else if (type.startsWith('/jets/0.')) {
@@ -228,7 +228,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery/1.')) {
         if (helpers.compareVersion('1.7.1', version)) return '1.7.1'; // <= v1.7.1
         else if (helpers.compareVersion('1.8.3', version)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
-        else if (helpers.compareVersion('1.11.3', version)) return '1.11.3'; // > 1.8.3 to <= 1.11.3
+        else if (helpers.compareVersion('1.11.2', version)) return '1.11.2'; // > 1.8.3 to <= 1.11.2
+        else if (version === '1.11.3') return '1.11.3'; // = 1.11.3
         else return '1.12.4'; // > 1.11.3
     } else if (type.startsWith('/jquery/2.')) {
         return '2.2.4';
@@ -254,7 +255,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery-migrate/1.')) {
         return '1.4.1';
     } else if (type.startsWith('/jquery-migrate/3.')) {
-        return '3.3.1';
+        return '3.3.2';
     } else if (type.startsWith('/jquery-mousewheel/3.')) {
         return '3.1.13';
     } else if (type.startsWith('/jScrollPane/2.')) {
@@ -338,7 +339,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/prototype/1.')) {
         return '1.7.3.0';
     } else if (type.startsWith('/raven.js/3.')) {
-        return '3.26.2';
+        return '3.27.2';
     } else if (type.startsWith('/react/16.')) {
         return '16.13.1';
     } else if (type.startsWith('/react/17.')) {
@@ -412,7 +413,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/urlive/1.')) {
         return '1.1.1';
     } else if (type.startsWith('/vanilla-lazyload')) {
-        return '17.1.3';
+        return '17.3.0';
     } else if (type.startsWith('/videojs-seek-buttons/')) {
         return '1.6.0';
     } else if (type.startsWith('/video.js/')) {

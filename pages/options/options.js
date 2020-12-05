@@ -435,6 +435,10 @@ options._onOptionChanged = function ({ target }) {
         optionValue = target.value;
     }
 
+    if (optionKey === Setting.UPDATE_NOTIFICATION) {
+        optionValue = parseInt(optionValue);
+    }
+
     if (optionKey === Setting.BLOCK_MISSING) {
         if (optionValue === true) {
             options._renderBlockMissingNotice();
