@@ -148,6 +148,11 @@ storageManager._validation = function (content) {
         delete content['hideReleaseNotes'];
     }
 
+    // Convert type of updateNotification
+    if (typeof content.updateNotification === 'string') {
+        content.updateNotification = parseInt(content.updateNotification);
+    }
+
     for (const [key, value] of Object.entries(SettingDefaults)) {
         // If type the same as default settings
         if (typeof value === typeof content[key]) {
@@ -164,7 +169,7 @@ storageManager._validation = function (content) {
             // Set default if not existing in file
             imported[key] = value;
         } else {
-            alert(chrome.i18n.getMessage('dialogImportFailed'));
+            alert(chrome.i18n.getMessage('dialogImportFailed') + '\n\n' + key + ': ' + content[key]);
             throw 'Invalid file!';
         }
     }
