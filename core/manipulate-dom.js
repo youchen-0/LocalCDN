@@ -90,7 +90,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                 //remove crossorigin and integrity attributes
                 let str = decoder.decode(evt.data, {stream: true}).replace(/<(link|script)[^>]+>/ig, m => {
                     if (cdnDomainsRE.test(m)) {
-                        return m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=\s]+|)/ig, '');
+                        return m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=>\s]+|)/ig, '');
                     }
                     return m;
                 });
