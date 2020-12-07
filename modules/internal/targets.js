@@ -544,6 +544,7 @@ const ListOfFiles = {
     'materialize.min.css': 'Materialize (CSS)',
     'slick.min.jsm': 'slick (JS)',
     'slick.min.css': 'slick (CSS)',
+    'slick-theme.min.css': 'slick (Theme)',
     'google-material-design-icons.css': 'Google Material Icons',
     'Chart.bundle.min.jsm': 'Chart.js (JS)',
     'Chart.min.css': 'Chart.js (CSS)',

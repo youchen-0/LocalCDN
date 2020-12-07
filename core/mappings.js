@@ -352,6 +352,8 @@ mappings.cdn = {
             'slick-carousel/{version}/slick.css': resources.slickCarouselCSS,
             'slick-carousel/{version}/slick.min.js': resources.slickCarouselJS,
             'slick-carousel/{version}/slick.js': resources.slickCarouselJS,
+            'slick-carousel/{version}/slick-theme.css': resources.slickCarouselTheme,
+            'slick-carousel/{version}/slick-theme.min.css': resources.slickCarouselTheme,
             'slick-lightbox/{version}/slick-lightbox.min.js': resources.slickLightboxJS,
             'slick-lightbox/{version}/slick-lightbox.js': resources.slickLightboxJS,
             'slick-lightbox/{version}/slick-lightbox.css': resources.slickLightboxCSS,

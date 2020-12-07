@@ -837,6 +837,10 @@ var resources = {
         'path': 'resources/slick-carousel/{version}/slick.min.css',
         'type': 'text/css'
     },
+    'slickCarouselTheme': {
+        'path': 'resources/slick-carousel/{version}/slick-theme.min.css',
+        'type': 'text/css'
+    },
     // slick-lightbox [Deprecated]
     'slickLightboxJS': {
         'path': 'resources/slick-lightbox/{version}/slick-lightbox.min.jsm',
