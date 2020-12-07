@@ -322,6 +322,8 @@ targets.setLastVersion = function (type, version) {
         return '1.3.3';
     } else if (type.startsWith('/p2p-media-loader-core') || type.startsWith('/p2p-media-loader-hlsjs')) {
         return '0.6.2';
+    } else if (type.startsWith('/p5.js/1.')) {
+        return '1.1.9';
     } else if (type.startsWith('/page.js/1.')) {
         return '1.11.6';
     } else if (type.startsWith('/paginationjs/2.')) {
@@ -449,6 +451,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'p5.min.jsm': 'p5.js',
+    'p5.sound.min.jsm': 'p5.js (Sound)',
     'jquery.inview.min.jsm': 'inview (Protonet)',
     'modaal.min.jsm': 'Modaal (JS)',
     'modaal.min.css': 'Modaal (CSS)',
