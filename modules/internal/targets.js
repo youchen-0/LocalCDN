@@ -169,6 +169,8 @@ targets.setLastVersion = function (type, version) {
         return '6.3.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
+    } else if (type.startsWith('/dexie/3.')) {
+        return '3.0.3';
     } else if (type.startsWith('/dojo/1.')) {
         return '1.16.3';
     } else if (type.startsWith('/drawer/3.')) {
@@ -451,6 +453,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'dexie.min.jsm': 'dexie',
     'p5.min.jsm': 'p5.js',
     'p5.sound.min.jsm': 'p5.js (Sound)',
     'jquery.inview.min.jsm': 'inview (Protonet)',
