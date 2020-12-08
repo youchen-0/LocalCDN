@@ -334,6 +334,8 @@ targets.setLastVersion = function (type, version) {
         return '0.6.2';
     } else if (type.startsWith('/p5js/1.')) {
         return '1.1.9';
+    } else if (type.startsWith('/p5js/0.')) {
+        return '0.10.2';
     } else if (type.startsWith('/page.js/1.')) {
         return '1.11.6';
     } else if (type.startsWith('/paginationjs/2.')) {
