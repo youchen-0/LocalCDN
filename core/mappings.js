@@ -29,7 +29,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-11-08';
+mappings.lastMappingUpdate = '2020-12-08';
 
 mappings.cdn = {
 
@@ -908,6 +908,12 @@ mappings.cdn = {
     'www.gstatic.com': {
         '/': {
             'charts/loader.js': resources.googleCharts
+        }
+    },
+    // MaterialDesign (https://github.com/Templarian/MaterialDesign)
+    'cdn.materialdesignicons.com': {
+        '/': {
+            '{version}/css/materialdesignicons.min.css': resources.materialDesign
         }
     }
 };

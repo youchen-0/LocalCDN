@@ -245,6 +245,7 @@ const CDNs = {
     'vjs.zencdn.net': 'Video.js CDN',
     'cdn.plyr.io': 'Plyr CDN',
     'www.gstatic.com': 'gstatic.com',
+    'cdn.materialdesignicons.com': 'MaterialDesign'
 };
 
 const IgnoredHost = {
