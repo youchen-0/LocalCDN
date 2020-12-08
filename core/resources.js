@@ -697,11 +697,11 @@ var resources = {
     },
     // p5.js
     'p5JS': {
-        'path': 'resources/p5js/1.1.9/',
+        'path': 'resources/p5js/{version}/p5.min.jsm',
         'type': 'application/javascript'
     },
     'p5JSsound': {
-        'path': 'resources/p5js/1.1.9/p5.sound.min.jsm',
+        'path': 'resources/p5js/{version}/p5.sound.min.jsm',
         'type': 'application/javascript'
     },
     // page.js [Deprecated?]
