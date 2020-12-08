@@ -300,6 +300,14 @@ targets.setLastVersion = function (type, version) {
         return '12.0.2';
     } else if (type.startsWith('/mdbootstrap/4.')) {
         return '4.18.0';
+    } else if (type.startsWith('/material-design-icons/2.')) {
+        return '2.8.94';
+    } else if (type.startsWith('/material-design-icons/3.')) {
+        return '3.9.97';
+    } else if (type.startsWith('/material-design-icons/4.')) {
+        return '4.9.95';
+    } else if (type.startsWith('/material-design-icons/5.')) {
+        return '5.8.55';
     } else if (type.startsWith('/materialize/1.')) {
         return '1.0.0';
     } else if (type.startsWith('/materialize/0.')) {
@@ -453,6 +461,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'materialdesignicons.min.css': 'MaterialDesign',
     'dexie.min.jsm': 'dexie',
     'p5.min.jsm': 'p5.js',
     'p5.sound.min.jsm': 'p5.js (Sound)',

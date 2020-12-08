@@ -303,6 +303,7 @@ mappings.cdn = {
             'magnific-popup.js/{version}/magnific-popup.css': resources.magnificPopupCSS,
             'magnific-popup.js/{version}/magnific-popup.min.css': resources.magnificPopupCSS,
             'markdown-it/{version}/markdown-it.': resources.markdownIt,
+            'MaterialDesign-Webfont/{version}/css/materialdesignicons.': resources.materialDesign,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,

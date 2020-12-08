@@ -593,6 +593,11 @@ var resources = {
         'path': 'resources/markdown-it/{version}/markdown-it.min.jsm',
         'type': 'application/javascript'
     },
+    // MaterialDesign (https://github.com/Templarian/MaterialDesign)
+    'materialDesign': {
+        'path': 'resources/material-design-icons/{version}/css/materialdesignicons.min.css',
+        'type': 'text/css'
+    },
     // Materialize [Deprecated?]
     'materializeCSS': {
         'path': 'resources/materialize/{version}/css/materialize.min.css',
