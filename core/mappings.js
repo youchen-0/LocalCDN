@@ -400,7 +400,6 @@ mappings.cdn = {
     'code.jquery.com': {
         '/': {
             'jquery-{version}.': resources.jQuery,
-            'jquery-latest.': resources.jQuery,
             'ui/{version}/jquery-ui.': resources.jQueryUI,
             'mobile/{version}/jquery.mobile': resources.jQueryMobile
         }
@@ -446,7 +445,7 @@ mappings.cdn = {
             'font-awesome@{version}/css/font-awesome.': resources.fontawesome,
             'hls.js/dist/hls.min.js': resources.hlsJS,
             'history@{version}/umd/history.min.js': resources.history,
-            'hls.js@latest': resources.hlsJS,
+            'hls.js@{version}': resources.hlsJS,
             'instantsearch.js@{version}/dist/instantsearch.production.': resources.InstantSearchJS,
             'jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery@{version}/dist/jquery.min.': resources.jQuery,
@@ -468,8 +467,8 @@ mappings.cdn = {
             'react-router@{version}/umd/react-router.': resources.reactRouter,
             'react-side-effect@{version}/lib/index.umd.': resources.reactSideEffect,
             'react-lifecycles-compat@{version}/react-lifecycles-compat.': resources.reactLifecyclesCompat,
-            'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
-            'p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js': resources.p2pMediaLoaderHlsJS,
+            'p2p-media-loader-core@{version}/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
+            'p2p-media-loader-hlsjs@{version}/build/p2p-media-loader-hlsjs.min.js': resources.p2pMediaLoaderHlsJS,
             'p5@{version}/lib/p5.': resources.p5JS,
             'p5@{version}/lib/addons/p5.sound.': resources.p5JSsound,
             'popper.js@{version}/dist/umd/popper.': resources.popperJS,
@@ -530,10 +529,10 @@ mappings.cdn = {
             'momentjs/{version}/moment.': resources.moment,
             'momentjs/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-': resources.mootools,
-            'simplemde/latest/simplemde.js': resources.simplemdeJS,
-            'simplemde/latest/simplemde.min.js': resources.simplemdeJS,
-            'simplemde/latest/simplemde.css': resources.simplemdeCSS,
-            'simplemde/latest/simplemde.min.css': resources.simplemdeCSS,
+            'simplemde/{version}/simplemde.js': resources.simplemdeJS,
+            'simplemde/{version}/simplemde.min.js': resources.simplemdeJS,
+            'simplemde/{version}/simplemde.css': resources.simplemdeCSS,
+            'simplemde/{version}/simplemde.min.css': resources.simplemdeCSS,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,

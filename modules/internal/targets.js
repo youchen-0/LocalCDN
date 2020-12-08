@@ -169,7 +169,7 @@ targets.setLastVersion = function (type, version) {
         return '6.3.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
-    } else if (type.startsWith('/dexie/3.')) {
+    } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest') ) {
         return '3.0.3';
     } else if (type.startsWith('/dojo/1.')) {
         return '1.16.3';
@@ -235,7 +235,7 @@ targets.setLastVersion = function (type, version) {
         else return '1.12.4'; // > 1.11.3
     } else if (type.startsWith('/jquery/2.')) {
         return '2.2.4';
-    } else if (type.startsWith('/jquery/3.') || type.startsWith('/jquery/null')) {
+    } else if (type.startsWith('/jquery/3.') || type.startsWith('/jquery/latest')) {
         return '3.5.1';
     } else if (type.startsWith('/jquery.devbridge-autocomplete/1.')) {
         return '1.4.11';
