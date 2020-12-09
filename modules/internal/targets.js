@@ -218,7 +218,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/history/5.')) {
         return '5.0.0';
     } else if (type.startsWith('/hls.js/')) {
-        return '0.14.6';
+        return '0.14.17';
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
