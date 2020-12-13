@@ -130,7 +130,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootbox.js/5.')) {
         return '5.5.2';
     } else if (type.startsWith('/bootstrap/3.')) {
-        return '3.4.1';
+        if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
+        else return '3.4.1';
     } else if (type.startsWith('/bootstrap/4.')) {
         return '4.5.3';
     } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
