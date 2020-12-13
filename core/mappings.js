@@ -757,6 +757,8 @@ mappings.cdn = {
             'element-ui/{version}/': resources.elementUI,
             'ember.js/{version}/ember.min.js': resources.ember.js,
             'ext-core/{version}/ext-core.': resources.extCore,
+            'font-awesome/{version}/css/font-awesome.': resources.fontawesome,
+            'font-awesome/{version}/fonts/': resources.fontawesomeFontsOnly,
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
