@@ -228,7 +228,7 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "Να ειδοποιούμαι μετά από ενημέρωση του προσθέτου",
+        "message": "Να ειδοποιούμαι μετά από ενημέρωση της επεκτάσεως",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
