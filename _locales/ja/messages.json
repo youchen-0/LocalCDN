@@ -12,11 +12,11 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "ローカルリソースが使用された回数をアイコンに表示する",
+        "message": "ローカルのリソースが使用された回数をアイコンに表示する",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "ローカルリソースが使用された回数を拡張機能のアイコンに表示します。",
+        "message": "ローカルのリソースが使用された回数を拡張機能のアイコンに表示します。",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "広告ブロッカー向けのルールセットを生成する",
+        "message": "各種広告ブロッカー向けのルールセットを生成する",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "広告ブロッカーを使用している場合はここでルールを生成できます。生成されたルールは手動で広告ブロッカーに設定する必要があります。",
+        "message": "広告ブロッカーを使用している場合はここで専用のルールを生成できます。生成されたルールは手動で広告ブロッカーに設定する必要があります。",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -136,7 +136,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "この機能は現在実験段階です。データを転送することはありません。全てがローカル上で処理されます。",
+        "message": "この機能は現在実験段階です。データが転送されることはありません。全てがローカル上で処理されます。",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -144,7 +144,7 @@
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "本日",
+        "message": "今日",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "これらのドメインは、Google Fontsの読み込みを許可しています。複数入力する場合はセミコロン(;)で区切ってください。",
+        "message": "これらのドメインでは、Google Fontsの読み込みを許可しています。複数入力する場合はセミコロン(;)で区切ってください。",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
@@ -228,11 +228,11 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "更新通知",
+        "message": "更新完了後の通知",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "しない (バックグラウンド更新)",
+        "message": "しない (サイレント更新)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
@@ -240,7 +240,7 @@
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "常時",
+        "message": "常に",
         "description": "Always"
     }
 }

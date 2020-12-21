@@ -29,7 +29,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-11-08';
+mappings.lastMappingUpdate = '2020-12-08';
 
 mappings.cdn = {
 
@@ -248,6 +248,7 @@ mappings.cdn = {
             'cookieconsent2/{version}/cookieconsent.css': resources.cookieconsent2CSS,
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
+            'dexie/{version}/dexie.': resources.dexie,
             'dojo/{version}/dojo.': resources.dojo,
             'drawer/{version}/js/drawer.min.js': resources.drawerJS,
             'drawer/{version}/css/drawer.min.css': resources.drawerCSS,
@@ -302,6 +303,7 @@ mappings.cdn = {
             'magnific-popup.js/{version}/magnific-popup.css': resources.magnificPopupCSS,
             'magnific-popup.js/{version}/magnific-popup.min.css': resources.magnificPopupCSS,
             'markdown-it/{version}/markdown-it.': resources.markdownIt,
+            'MaterialDesign-Webfont/{version}/css/materialdesignicons.': resources.materialDesign,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
@@ -324,6 +326,8 @@ mappings.cdn = {
             'owl-carousel/{version}/owl.carousel.min.css': resources.owlCarouselCSScarousel,
             'owl-carousel/{version}/owl.theme.': resources.owlCarouselCSStheme,
             'owl-carousel/{version}/owl.transitions.': resources.owlCarouselCSStransitions,
+            'p5.js/{version}/p5.': resources.p5JS,
+            'p5.js/{version}/addons/p5.sound.': resources.p5JSsound,
             'page.js/{version}/page.min.': resources.pageJs,
             'paginationjs/{version}/pagination.min.js': resources.paginationjsJS,
             'paginationjs/{version}/pagination.js': resources.paginationjsJS,
@@ -349,6 +353,8 @@ mappings.cdn = {
             'slick-carousel/{version}/slick.css': resources.slickCarouselCSS,
             'slick-carousel/{version}/slick.min.js': resources.slickCarouselJS,
             'slick-carousel/{version}/slick.js': resources.slickCarouselJS,
+            'slick-carousel/{version}/slick-theme.css': resources.slickCarouselTheme,
+            'slick-carousel/{version}/slick-theme.min.css': resources.slickCarouselTheme,
             'slick-lightbox/{version}/slick-lightbox.min.js': resources.slickLightboxJS,
             'slick-lightbox/{version}/slick-lightbox.js': resources.slickLightboxJS,
             'slick-lightbox/{version}/slick-lightbox.css': resources.slickLightboxCSS,
@@ -394,7 +400,6 @@ mappings.cdn = {
     'code.jquery.com': {
         '/': {
             'jquery-{version}.': resources.jQuery,
-            'jquery-latest.': resources.jQuery,
             'ui/{version}/jquery-ui.': resources.jQueryUI,
             'mobile/{version}/jquery.mobile': resources.jQueryMobile
         }
@@ -421,6 +426,7 @@ mappings.cdn = {
             'bootstrap-table@{version}/dist/bootstrap-table.min.css': resources.bootstrapTableCSS,
             'bootstrap-table@{version}/dist/bootstrap-table.css': resources.bootstrapTableCSS,
             'clipboard@{version}/dist/clipboard.': resources.clipboardJS,
+            'dexie@{version}/dist/dexie.': resources.dexie,
             'dojo@{version}/dojo.': resources.dojo,
             'ember-source@{version}/dist/ember.': resources.ember,
             'ember-source@{version}/dist/ember.min.': resources.ember,
@@ -439,7 +445,7 @@ mappings.cdn = {
             'font-awesome@{version}/css/font-awesome.': resources.fontawesome,
             'hls.js/dist/hls.min.js': resources.hlsJS,
             'history@{version}/umd/history.min.js': resources.history,
-            'hls.js@latest': resources.hlsJS,
+            'hls.js@{version}': resources.hlsJS,
             'instantsearch.js@{version}/dist/instantsearch.production.': resources.InstantSearchJS,
             'jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery@{version}/dist/jquery.min.': resources.jQuery,
@@ -461,8 +467,10 @@ mappings.cdn = {
             'react-router@{version}/umd/react-router.': resources.reactRouter,
             'react-side-effect@{version}/lib/index.umd.': resources.reactSideEffect,
             'react-lifecycles-compat@{version}/react-lifecycles-compat.': resources.reactLifecyclesCompat,
-            'p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
-            'p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js': resources.p2pMediaLoaderHlsJS,
+            'p2p-media-loader-core@{version}/build/p2p-media-loader-core.min.js': resources.p2pMediaLoaderCore,
+            'p2p-media-loader-hlsjs@{version}/build/p2p-media-loader-hlsjs.min.js': resources.p2pMediaLoaderHlsJS,
+            'p5@{version}/lib/p5.': resources.p5JS,
+            'p5@{version}/lib/addons/p5.sound.': resources.p5JSsound,
             'popper.js@{version}/dist/umd/popper.': resources.popperJS,
             'prop-types@{version}/prop-types.': resources.propTypes,
             'redux@{version}/dist/redux.': resources.redux,
@@ -521,10 +529,10 @@ mappings.cdn = {
             'momentjs/{version}/moment.': resources.moment,
             'momentjs/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-': resources.mootools,
-            'simplemde/latest/simplemde.js': resources.simplemdeJS,
-            'simplemde/latest/simplemde.min.js': resources.simplemdeJS,
-            'simplemde/latest/simplemde.css': resources.simplemdeCSS,
-            'simplemde/latest/simplemde.min.css': resources.simplemdeCSS,
+            'simplemde/{version}/simplemde.js': resources.simplemdeJS,
+            'simplemde/{version}/simplemde.min.js': resources.simplemdeJS,
+            'simplemde/{version}/simplemde.css': resources.simplemdeCSS,
+            'simplemde/{version}/simplemde.min.css': resources.simplemdeCSS,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,
@@ -749,6 +757,8 @@ mappings.cdn = {
             'element-ui/{version}/': resources.elementUI,
             'ember.js/{version}/ember.min.js': resources.ember.js,
             'ext-core/{version}/ext-core.': resources.extCore,
+            'font-awesome/{version}/css/font-awesome.': resources.fontawesome,
+            'font-awesome/{version}/fonts/': resources.fontawesomeFontsOnly,
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
@@ -899,6 +909,12 @@ mappings.cdn = {
     'www.gstatic.com': {
         '/': {
             'charts/loader.js': resources.googleCharts
+        }
+    },
+    // MaterialDesign (https://github.com/Templarian/MaterialDesign)
+    'cdn.materialdesignicons.com': {
+        '/': {
+            '{version}/css/materialdesignicons.min.css': resources.materialDesign
         }
     }
 };

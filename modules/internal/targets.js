@@ -130,7 +130,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootbox.js/5.')) {
         return '5.5.2';
     } else if (type.startsWith('/bootstrap/3.')) {
-        return '3.4.1';
+        if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
+        else return '3.4.1';
     } else if (type.startsWith('/bootstrap/4.')) {
         return '4.5.3';
     } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
@@ -146,7 +147,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootstrap-select/1.')) {
         return '1.13.18';
     } else if (type.startsWith('/bootstrap-table/1.')) {
-        return '1.18.0';
+        return '1.18.1';
     } else if (type.startsWith('/bootstrap-toggle/2.')) {
         return '2.2.2';
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
@@ -166,9 +167,11 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/d3/5.')) {
         return '5.16.0';
     } else if (type.startsWith('/d3/6.')) {
-        return '6.3.0';
+        return '6.3.1';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
+    } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest') ) {
+        return '3.0.3';
     } else if (type.startsWith('/dojo/1.')) {
         return '1.16.3';
     } else if (type.startsWith('/drawer/3.')) {
@@ -216,11 +219,11 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/history/5.')) {
         return '5.0.0';
     } else if (type.startsWith('/hls.js/')) {
-        return '0.14.6';
+        return '0.14.17';
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
-        return '4.9.0';
+        return '4.9.2';
     } else if (type.startsWith('/iScroll/5.')) {
         return '5.2.0';
     } else if (type.startsWith('/jets/0.')) {
@@ -233,7 +236,7 @@ targets.setLastVersion = function (type, version) {
         else return '1.12.4'; // > 1.11.3
     } else if (type.startsWith('/jquery/2.')) {
         return '2.2.4';
-    } else if (type.startsWith('/jquery/3.') || type.startsWith('/jquery/null')) {
+    } else if (type.startsWith('/jquery/3.') || type.startsWith('/jquery/latest')) {
         return '3.5.1';
     } else if (type.startsWith('/jquery.devbridge-autocomplete/1.')) {
         return '1.4.11';
@@ -298,6 +301,14 @@ targets.setLastVersion = function (type, version) {
         return '12.0.2';
     } else if (type.startsWith('/mdbootstrap/4.')) {
         return '4.18.0';
+    } else if (type.startsWith('/material-design-icons/2.')) {
+        return '2.8.94';
+    } else if (type.startsWith('/material-design-icons/3.')) {
+        return '3.9.97';
+    } else if (type.startsWith('/material-design-icons/4.')) {
+        return '4.9.95';
+    } else if (type.startsWith('/material-design-icons/5.')) {
+        return '5.8.55';
     } else if (type.startsWith('/materialize/1.')) {
         return '1.0.0';
     } else if (type.startsWith('/materialize/0.')) {
@@ -322,6 +333,10 @@ targets.setLastVersion = function (type, version) {
         return '1.3.3';
     } else if (type.startsWith('/p2p-media-loader-core') || type.startsWith('/p2p-media-loader-hlsjs')) {
         return '0.6.2';
+    } else if (type.startsWith('/p5js/1.')) {
+        return '1.2.0';
+    } else if (type.startsWith('/p5js/0.')) {
+        return '0.10.2';
     } else if (type.startsWith('/page.js/1.')) {
         return '1.11.6';
     } else if (type.startsWith('/paginationjs/2.')) {
@@ -331,7 +346,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/popper.js/1.')) {
         return '1.16.1';
     } else if (type.startsWith('/popper.js/2.')) {
-        return '2.5.4';
+        return '2.6.0';
     } else if (type.startsWith('/prop-types/15.')) {
         return '15.7.2';
     } else if (type.startsWith('/protonet-jquery.inview/1.')) {
@@ -377,7 +392,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.3.0';
     } else if (type.startsWith('/socket.io/3.')) {
-        return '3.0.3';
+        return '3.0.4';
     } else if (type.startsWith('/spin.js/2.')) {
         return '2.3.2';
     } else if (type.startsWith('/spin.js/3.')) {
@@ -449,6 +464,10 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'materialdesignicons.min.css': 'MaterialDesign',
+    'dexie.min.jsm': 'dexie',
+    'p5.min.jsm': 'p5.js',
+    'p5.sound.min.jsm': 'p5.js (Sound)',
     'jquery.inview.min.jsm': 'inview (Protonet)',
     'modaal.min.jsm': 'Modaal (JS)',
     'modaal.min.css': 'Modaal (CSS)',
@@ -537,6 +556,7 @@ const ListOfFiles = {
     'materialize.min.css': 'Materialize (CSS)',
     'slick.min.jsm': 'slick (JS)',
     'slick.min.css': 'slick (CSS)',
+    'slick-theme.min.css': 'slick (Theme)',
     'google-material-design-icons.css': 'Google Material Icons',
     'Chart.bundle.min.jsm': 'Chart.js (JS)',
     'Chart.min.css': 'Chart.js (CSS)',

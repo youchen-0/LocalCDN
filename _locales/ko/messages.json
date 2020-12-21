@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "\"무료\"라는 미끼로 당신을 추적하는 대규모 CDN을 사용하지 않음으로써 프라이버시를 지킵니다.",
+        "message": "로컬 리소스로 리디렉션함으로서 CDN을 통한 추적으로부터 당신을 보호합니다.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "",
+        "message": "설치한 이후로 로컬 콘텐츠 딜리버리 네트워크(DN) 리소스가 삽입된 횟수.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -24,11 +24,11 @@
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "리소스를 로컬에서 가져올 수 없다면 리소스 요청을 취소합니다.",
+        "message": "필요한 리소스를 로컬에서 사용할 수 없는 경우 차단된 요청을 취소합니다.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "링크 프리페치를 비활성화",
+        "message": "링크 프리페칭 비활성화",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {

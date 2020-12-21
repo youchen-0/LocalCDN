@@ -1,246 +1,246 @@
 {
     "extensionDescription": {
-        "message": "Apsaugo tave nuo sekimo per „CDNs“ (Turinio Pervedimo Tinklą) kuris perveda į lokalius resursus.",
+        "message": "",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Kiekis lokalaus Turinio pristatymo tinklo resursai injekcijos nuo įdiegimo.",
+        "message": "",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "Nustatymai",
+        "message": "",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Rodyti injekcijos skaičių ant piktogramos",
+        "message": "",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Rodyti numeri injekcijų resursų ant papildinio piktogramos.",
+        "message": "",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Blokuoti prašymus dėl trūkstamų resursų",
+        "message": "",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Atšaukti sulaikyta prašymą, jei reikalingas resursas nėra lokaliai turimas.",
+        "message": "",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Išjungti nuorodų laikiną pasiruošimą",
+        "message": "",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Neleisti Neleistinus prašymus iš nutekėjimą į pristatymo tinklus.",
+        "message": "",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Nuoginti Metaduomenis iš priimtinų prašymų",
+        "message": "",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Išnaikinti sensityvią informacija iš leistinų CDN-Prašymų dėl pagerinto privatumo.",
+        "message": "",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Išjungti „LocalCDN“ šitiems Tinklapiams:",
+        "message": "",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Įveskite Tinklapius kuriuos norite, kad būtų išjungtą „LocalCDN“. Daugiskaitinius Tinklus pažymėkite su (;).",
+        "message": "",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "Išplėsti",
+        "message": "",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Sugeneruoti taisyklių sąrašą jūsų Turinio blokatoriui",
+        "message": "",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Jei naudojate skelbimų/reklamų blokatoriu jūs galite sugeneruoti taisyklės čia. Jus turėsite pridėti jas pats per jūsų skelbimų/reklamų blokatoriu.",
+        "message": "",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "Paskutinis atnaujinimas:",
+        "message": "",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "Kopijuoti",
+        "message": "",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Įjungti įrašymą per naršyklės konsolė",
+        "message": "",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Atidaryti „Naršyklės Konsolė“ (CTRL + SHIFT + J), kad rodytų trūkstamus resursus.",
+        "message": "",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Šitą funkciją sunaikiną tinklapius. Nepalikite ją įjungtą, nebendrais jei esate pasiruošė savarankiškai įtraukinėti paveiktus tinklapius į leistinų sąrašą.",
+        "message": "",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "Išjungti",
+        "message": "",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtruoti HTML Pagrindo kodą",
+        "message": "",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "Paaukoti",
+        "message": "",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Apversti HTML Filtrą",
+        "message": "",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Įjunkite šita nustatymą, kad visada būtų įjungtas HTML filtras. Tinklapiai sąraše būs ignoruoti. Jei šitas nustatymas yra išjungtas, tada HTML filtras bus įjungtas tik tinklapiams sąraše.",
+        "message": "",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Šitą funkciją gali sunaikinti tinklapius. Prašome pasižiūrėti informaciją ant Vikipedijos puslapio.",
+        "message": "",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "Ne naudoti HTML filtrą ant šitų tinklapių:",
+        "message": "",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Įveskite tinklapius, kad būtų suvaldyti arba ignoruoti HTML filtrui. Daugiskaitinius tinklapius atskirkite su (;).",
+        "message": "",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "Įjungti HTML filtrą šitiems tinklapiams:",
+        "message": "",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "Blokuoti „Google“ šriftus",
+        "message": "",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Jei prašymai dėl nerastų resursų yra leisti, prisijungimai prie „fonts.googleapis.com“ nebūs blokuojami. Įjunkite šitą nustatymą, kad blokuotumėte šituos prašymus.",
+        "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "Pasirinkite piktograma šitam priedui",
+        "message": "",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "Vidinė statistiką",
+        "message": "",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Šita funkciją yra eksperimentinė. Jokios Datos nebus siunčiamos. Viskas yra lokaliai ant jūsų įrenginio.",
+        "message": "",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "Statistiką",
+        "message": "",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "Šiandien",
+        "message": "",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "Paskutinė savaitė",
+        "message": "",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "Paskutinį mėnesi",
+        "message": "",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "Praeitus Metus",
+        "message": "",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "Ištrinti",
+        "message": "",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "Vidutinis (Pakeitimai per dieną)",
+        "message": "",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "Pakeisti „Frameworkai“",
+        "message": "",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Ar jūs esate tikras/-ra, kad norite ištrinti šitą statistiką?",
+        "message": "",
         "description": "Are you sure you want to delete the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Šitie tinklapiai yra leistini, įjungti „Google šriftus“. Daugiskaitinius tinklapius atskirkite su (;).",
+        "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "Pagrindinis",
+        "message": "",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "Išplėstiniai nustatymai",
+        "message": "",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "Kitas",
+        "message": "",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "Informaciją",
+        "message": "",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "Laikymo Tipas",
+        "message": "",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "Vietinis",
+        "message": "",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Sinchronizaciją",
+        "message": "",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "Importuoti/Eksportuoti",
+        "message": "",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "Sukurti Atsarginė kopiją failu",
+        "message": "",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "Atkurti nuo failo",
+        "message": "",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "Importas sėkmingas",
+        "message": "",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "Importas nepavyko",
+        "message": "",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "Pranešimas po atnaujinimo",
+        "message": "",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "Niekada (Nutildyti atnaujinimai)",
+        "message": "",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "Tik, jei nauji „CDNs“ ir taisyklės",
+        "message": "",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "Visada",
+        "message": "",
         "description": "Always"
     }
 }

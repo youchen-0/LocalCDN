@@ -310,6 +310,11 @@ var resources = {
         'path': 'resources/d3-legend/{version}/d3-legend.min.jsm',
         'type': 'application/javascript'
     },
+    // dexie
+    'dexie': {
+        'path': 'resources/dexie/{version}/dexie.min.jsm',
+        'type': 'application/javascript'
+    },
     // Dojo
     'dojo': {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
@@ -588,6 +593,11 @@ var resources = {
         'path': 'resources/markdown-it/{version}/markdown-it.min.jsm',
         'type': 'application/javascript'
     },
+    // MaterialDesign (https://github.com/Templarian/MaterialDesign)
+    'materialDesign': {
+        'path': 'resources/material-design-icons/{version}/css/materialdesignicons.min.css',
+        'type': 'text/css'
+    },
     // Materialize [Deprecated?]
     'materializeCSS': {
         'path': 'resources/materialize/{version}/css/materialize.min.css',
@@ -683,6 +693,15 @@ var resources = {
     // P2P Media Loader Hls.js
     'p2pMediaLoaderHlsJS': {
         'path': 'resources/p2p-media-loader-hlsjs/{version}/p2p-media-loader-hlsjs.min.jsm',
+        'type': 'application/javascript'
+    },
+    // p5.js
+    'p5JS': {
+        'path': 'resources/p5js/{version}/p5.min.jsm',
+        'type': 'application/javascript'
+    },
+    'p5JSsound': {
+        'path': 'resources/p5js/{version}/p5.sound.min.jsm',
         'type': 'application/javascript'
     },
     // page.js [Deprecated?]
@@ -821,6 +840,10 @@ var resources = {
     },
     'slickCarouselCSS': {
         'path': 'resources/slick-carousel/{version}/slick.min.css',
+        'type': 'text/css'
+    },
+    'slickCarouselTheme': {
+        'path': 'resources/slick-carousel/{version}/slick-theme.min.css',
         'type': 'text/css'
     },
     // slick-lightbox [Deprecated]
