@@ -90,7 +90,7 @@ targets.setLastVersion = function (type, version) {
         return '1.3.3'; // > v0.14.0
     } else if (type.startsWith('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', version)) return '0.4.3'; // <= 0.4.3
-        else return '1.0.28'; // > 0.4.3
+        else return '1.0.29'; // > 0.4.3
     } else if (type.startsWith('/angular-ui-utils/0.')) {
         return '0.1.1';
     } else if (type.startsWith('/angular-ui-select/0.')) {
