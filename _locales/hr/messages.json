@@ -172,7 +172,7 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Sigurno želiš izbrisati statistiku?",
+        "message": "Sigurno želiš izbrisati svu statistiku?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
