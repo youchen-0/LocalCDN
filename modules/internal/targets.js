@@ -268,7 +268,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery-jeditable/1.')) {
         return '1.8.0';
     } else if (type.startsWith('/jquery-jeditable/2.')) {
-        return '2.0.17';
+        return '2.0.18';
     } else if (type.startsWith('tablesorter/2.')) {
         return '2.31.3';
     } else if (type.startsWith('/jquery-modal/0.')) {
