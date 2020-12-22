@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Oletko varma että haluat poistaa tilastot?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "",

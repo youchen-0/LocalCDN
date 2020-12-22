@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Sigurno želiš izbrisati statistiku?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Ove domene smiju učitati Google fontove. Odvoji višestruke unose s točka-zarezom (;).",

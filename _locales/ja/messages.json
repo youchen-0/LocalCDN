@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "統計情報を削除してもよろしいですか？",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "これらのドメインでは、Google Fontsの読み込みを許可しています。複数入力する場合はセミコロン(;)で区切ってください。",

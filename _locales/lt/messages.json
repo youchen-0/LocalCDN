@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Ar jūs esate tikras/-ra, kad norite ištrinti šitą statistiką?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Šitie tinklapiai yra leistini, įjungti „Google šriftus“. Daugiskaitinius tinklapius atskirkite su (;).",

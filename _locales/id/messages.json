@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Apakah anda yakin ingin menghapus statistik?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Domain ini diizinkan untuk memuat Google Fonts. Pisahkan beberapa entri dengan titik-koma (;).",

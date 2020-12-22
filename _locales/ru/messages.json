@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Вы уверены, что хотите удалить статистику?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Этим доменам разрешено загружать шрифты Google. Разделяйте несколько записей точкой с запятой (;).",

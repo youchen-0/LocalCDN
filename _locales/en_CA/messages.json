@@ -172,8 +172,8 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Are you sure you want to delete the statistics?",
-        "description": "Are you sure you want to delete the statistics?"
+        "message": "Are you sure you want to delete all the statistics?",
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;).",
