@@ -172,7 +172,7 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "您确实想要删除统计数据吗？",
+        "message": "您确定要删除所有的统计数据吗？",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
