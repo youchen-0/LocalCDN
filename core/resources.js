@@ -201,6 +201,11 @@ var resources = {
         'path': 'resources/baguettebox.js/{version}/baguetteBox.min.css',
         'type': 'text/css'
     },
+    // blazy
+    'blazy': {
+        'path': 'resources/blazy/{version}/blazy.min.jsm',
+        'type': 'application/javascript'
+    },
     // BootboxJS
     'bootbox': {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',

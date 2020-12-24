@@ -125,6 +125,8 @@ targets.setLastVersion = function (type, version) {
         return '1.4.0';
     } else if (type.startsWith('/baguettebox.js/1.')) {
         return '1.11.1';
+    } else if (type.startsWith('/blazy/1.')) {
+        return '1.8.2';
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
@@ -464,6 +466,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'blazy.min.jsm': 'blazy',
     'materialdesignicons.min.css': 'MaterialDesign',
     'dexie.min.jsm': 'dexie',
     'p5.min.jsm': 'p5.js',

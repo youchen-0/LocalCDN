@@ -137,6 +137,7 @@ mappings.cdn = {
             'baguettebox.js/{version}/baguetteBox.min.js': resources.baguetteBoxJS,
             'baguettebox.js/{version}/baguetteBox.css': resources.baguetteBoxCSS,
             'baguettebox.js/{version}/baguetteBox.min.css': resources.baguetteBoxCSS,
+            'blazy/{version}/blazy.min.js': resources.blazy,
             'bootbox.js/{version}/bootbox.': resources.bootbox,
             'bootstrap-daterangepicker/{version}/daterangepicker.': resources.bootstrapDaterangepicker,
             'bootstrap-datepicker/{version}/js/bootstrap-datepicker.': resources.bootstrapDatepickerBundle,
