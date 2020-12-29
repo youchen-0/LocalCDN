@@ -32,15 +32,15 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Neleisti Neleistinus prašymus iš nutekėjimą į pristatymo tinklus.",
+        "message": "Neleisti neleistinus prašymus iš nutekėjiančių į pristatymo tinklus.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Nuoginti Metaduomenis iš priimtinų prašymų",
+        "message": "Nuoginti metaduomenis iš priimtinų prašymų",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Išnaikinti sensityvią informacija iš leistinų CDN-Prašymų dėl pagerinto privatumo.",
+        "message": "Išnaikinti sensityvią informacija iš leistinų „CDN-Prašymų“ dėl pagerinto privatumo.",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
@@ -104,7 +104,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Šitą funkciją gali sunaikinti tinklapius. Prašome pasižiūrėti informaciją ant Vikipedijos puslapio.",
+        "message": "Šitą funkciją gali sunaikinti tinklapius. Prašome pasižiūrėti informaciją ant Informacijos puslapio.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -172,7 +172,7 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Ar jūs esate tikras/-ra, kad norite ištrinti šitą statistiką?",
+        "message": "Ar jūs esate tikras/-ra, kad norite ištrinti visas statistikas?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
