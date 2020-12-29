@@ -174,6 +174,8 @@ targets.setLastVersion = function (type, version) {
         return '2.25.6';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest') ) {
         return '3.0.3';
+    } else if (type.startsWith('/docsearch.js/2.')) {
+        return '2.6.3';
     } else if (type.startsWith('/dojo/1.')) {
         return '1.16.3';
     } else if (type.startsWith('/drawer/3.')) {
@@ -466,6 +468,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'docsearch.min.jsm': 'docsearch.js (JS)',
+    'docsearch.min.css': 'docsearch.js (CSS)',
     'blazy.min.jsm': 'blazy',
     'materialdesignicons.min.css': 'MaterialDesign',
     'dexie.min.jsm': 'dexie',

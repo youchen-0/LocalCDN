@@ -320,6 +320,15 @@ var resources = {
         'path': 'resources/dexie/{version}/dexie.min.jsm',
         'type': 'application/javascript'
     },
+    // docsearch.js
+    'docsearchJS': {
+        'path': 'resources/docsearch.js/{version}/docsearch.min.jsm',
+        'type': 'application/javascript'
+    },
+    'docsearchCSS': {
+        'path': 'resources/docsearch.js/{version}/docsearch.min.css',
+        'type': 'text/css'
+    },
     // Dojo
     'dojo': {
         'path': 'resources/dojo/{version}/dojo/dojo.jsm',
