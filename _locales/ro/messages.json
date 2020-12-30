@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Protejează împotriva urmăririi prin livrare de conținut gratuit, centralizat.",
+        "message": "Te protejează împotriva urmăririi prin CDN-uri (Content Delivery Networks) prin redirecționarea către resurse locale.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
