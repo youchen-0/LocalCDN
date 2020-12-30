@@ -925,6 +925,12 @@ mappings.cdn = {
         '/': {
             '{version}/css/materialdesignicons.min.css': resources.materialDesign
         }
+    },
+    // Sentry's Raven.js (https://codeberg.org/nobody/LocalCDN/issues/214)
+    'cdn.ravenjs.com': {
+        '/': {
+            '{version}/raven.': resources.ravenJS
+        }
     }
 };
 
