@@ -318,6 +318,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/materialize/0.')) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return '0.100.2';
+    } else if (type.startsWith('/mdb-ui-kit/3.')) {
+        return '3.0.0';
     } else if (type.startsWith('/modaal/0.')) {
         return '0.4.4';
     } else if (type.startsWith('/modernizr/2.')) {
@@ -468,6 +470,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'mdb-ui-kit.min.jsm': 'MDB UI Kit (JS)',
+    'mdb-ui-kit.min.css': 'MDB UI Kit (CSS)',
     'docsearch.min.jsm': 'docsearch.js (JS)',
     'docsearch.min.css': 'docsearch.js (CSS)',
     'blazy.min.jsm': 'blazy',

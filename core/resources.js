@@ -630,6 +630,15 @@ var resources = {
         'path': 'resources/mdbootstrap/{version}/css/mdb.min.css',
         'type': 'text/css'
     },
+    // MDB UI Kit
+    'mdbUiKitJS': {
+        'path': 'resources/mdb-ui-kit/{version}/mdb-ui-kit.min.jsm',
+        'type': 'application/javascript'
+    },
+    'mdbUiKitCSS': {
+        'path': 'resources/mdb-ui-kit/{version}/mdb-ui-kit.min.css',
+        'type': 'text/css'
+    },
     // Cloudflare Mirage 2
     'mirage2': {
         'path': 'resources/mirage2/latest/mirage2.min.jsm',
