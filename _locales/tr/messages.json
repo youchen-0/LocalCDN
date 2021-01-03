@@ -172,8 +172,8 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "İstatistikleri silmek istediğinize emin misiniz?",
-        "description": "Are you sure you want to delete the statistics?"
+        "message": "Tüm istatistikleri silmek istediğinizden emin misiniz?",
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Bu etki alanların Google Yazı Tiplerini yüklemesine izin verilir. Birden çok girdiyi noktalı virgül (;) ile ayırın.",

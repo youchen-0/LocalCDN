@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "למחוק את הסטטיסטיקה?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "שמות תחום אלו מורשים לטעון את הגופנים של Google. יש להפריד בין רשומות בנקודה פסיק (;).",

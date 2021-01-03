@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Sei sicuro di volere eliminare le statistiche?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "A questi domini è permesso caricare i font di Google. Separa le differenti voci fra loro con un punto e virgola (;).",

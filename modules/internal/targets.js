@@ -90,7 +90,7 @@ targets.setLastVersion = function (type, version) {
         return '1.3.3'; // > v0.14.0
     } else if (type.startsWith('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', version)) return '0.4.3'; // <= 0.4.3
-        else return '1.0.28'; // > 0.4.3
+        else return '1.0.29'; // > 0.4.3
     } else if (type.startsWith('/angular-ui-utils/0.')) {
         return '0.1.1';
     } else if (type.startsWith('/angular-ui-select/0.')) {
@@ -125,6 +125,8 @@ targets.setLastVersion = function (type, version) {
         return '1.4.0';
     } else if (type.startsWith('/baguettebox.js/1.')) {
         return '1.11.1';
+    } else if (type.startsWith('/blazy/1.')) {
+        return '1.8.2';
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
@@ -172,6 +174,8 @@ targets.setLastVersion = function (type, version) {
         return '2.25.6';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest') ) {
         return '3.0.3';
+    } else if (type.startsWith('/docsearch.js/2.')) {
+        return '2.6.3';
     } else if (type.startsWith('/dojo/1.')) {
         return '1.16.3';
     } else if (type.startsWith('/drawer/3.')) {
@@ -183,7 +187,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/ember.js/2.')) {
         return '2.18.2';
     } else if (type.startsWith('/ember.js/3.')) {
-        return '3.23.0';
+        return '3.24.0';
     } else if (type.startsWith('/ethjs')) {
         return '0.3.4';
     } else if (type.startsWith('/ext-core/3.')) {
@@ -211,7 +215,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
     } else if (type.startsWith('/highlight.js/10.')) {
-        return '10.4.1';
+        return '10.5.0';
     } else if (type.startsWith('/highlight.js/9.')) {
         return '9.18.3';
     } else if (type.startsWith('/history/4.')) {
@@ -268,7 +272,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery-jeditable/1.')) {
         return '1.8.0';
     } else if (type.startsWith('/jquery-jeditable/2.')) {
-        return '2.0.17';
+        return '2.0.18';
     } else if (type.startsWith('tablesorter/2.')) {
         return '2.31.3';
     } else if (type.startsWith('/jquery-modal/0.')) {
@@ -282,7 +286,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/lazysizes/4.')) {
         return '4.1.8';
     } else if (type.startsWith('/lazysizes/5.')) {
-        return '5.2.2';
+        return '5.3.0';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
         return '1.9.4';
     } else if (type.startsWith('/libsodium.js/0.')) {
@@ -314,6 +318,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/materialize/0.')) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return '0.100.2';
+    } else if (type.startsWith('/mdb-ui-kit/3.')) {
+        return '3.0.0';
     } else if (type.startsWith('/modaal/0.')) {
         return '0.4.4';
     } else if (type.startsWith('/modernizr/2.')) {
@@ -464,6 +470,11 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'mdb-ui-kit.min.jsm': 'MDB UI Kit (JS)',
+    'mdb-ui-kit.min.css': 'MDB UI Kit (CSS)',
+    'docsearch.min.jsm': 'docsearch.js (JS)',
+    'docsearch.min.css': 'docsearch.js (CSS)',
+    'blazy.min.jsm': 'blazy',
     'materialdesignicons.min.css': 'MaterialDesign',
     'dexie.min.jsm': 'dexie',
     'p5.min.jsm': 'p5.js',

@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Er du sikker på, at du vil slette statistikken?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Disse domæner har tilladelse til at indlæse Google-skrifttyper. Adskil flere poster med semikolon (;).",

@@ -172,8 +172,8 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Θέλεις σίγουρα να διαγράψεις τα στατιστικά στοιχεία;",
-        "description": "Are you sure you want to delete the statistics?"
+        "message": "Θέλεις σίγουρα να διαγράψεις όλα τα στατιστικά στοιχεία;",
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Διαχώρισε τις πολλαπλές καταχωρίσεις με ερωτηματικά (;).",

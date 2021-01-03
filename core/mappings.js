@@ -137,6 +137,7 @@ mappings.cdn = {
             'baguettebox.js/{version}/baguetteBox.min.js': resources.baguetteBoxJS,
             'baguettebox.js/{version}/baguetteBox.css': resources.baguetteBoxCSS,
             'baguettebox.js/{version}/baguetteBox.min.css': resources.baguetteBoxCSS,
+            'blazy/{version}/blazy.min.js': resources.blazy,
             'bootbox.js/{version}/bootbox.': resources.bootbox,
             'bootstrap-daterangepicker/{version}/daterangepicker.': resources.bootstrapDaterangepicker,
             'bootstrap-datepicker/{version}/js/bootstrap-datepicker.': resources.bootstrapDatepickerBundle,
@@ -249,6 +250,10 @@ mappings.cdn = {
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
             'dexie/{version}/dexie.': resources.dexie,
+            'docsearch.js/{version}/docsearch.min.js': resources.docsearchJS,
+            'docsearch.js/{version}/docsearch.js': resources.docsearchJS,
+            'docsearch.js/{version}/docsearch.min.css': resources.docsearchCSS,
+            'docsearch.js/{version}/docsearch.css': resources.docsearchCSS,
             'dojo/{version}/dojo.': resources.dojo,
             'drawer/{version}/js/drawer.min.js': resources.drawerJS,
             'drawer/{version}/css/drawer.min.css': resources.drawerCSS,
@@ -308,6 +313,10 @@ mappings.cdn = {
             'materialize/{version}/js/materialize.': resources.materializeJS,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
             'mdbootstrap/{version}/css/mdb.': resources.mdbootstrapCSS,
+            'mdb-ui-kit/{version}/mdb.js': resources.mdbUiKitJS,
+            'mdb-ui-kit/{version}/mdb.min.js': resources.mdbUiKitJS,
+            'mdb-ui-kit/{version}/mdb.css': resources.mdbUiKitCSS,
+            'mdb-ui-kit/{version}/mdb.min.css': resources.mdbUiKitCSS,
             'Modaal/{version}/js/modaal.': resources.modaalJS,
             'Modaal/{version}/css/modaal.': resources.modaalCSS,
             'modernizr/{version}/modernizr.': resources.modernizr,
@@ -427,6 +436,10 @@ mappings.cdn = {
             'bootstrap-table@{version}/dist/bootstrap-table.css': resources.bootstrapTableCSS,
             'clipboard@{version}/dist/clipboard.': resources.clipboardJS,
             'dexie@{version}/dist/dexie.': resources.dexie,
+            'docsearch.js@{version}/dist/cdn/docsearch.min.js': resources.docsearchJS,
+            'docsearch.js@{version}/dist/cdn/docsearch.js': resources.docsearchJS,
+            'docsearch.js@{version}/dist/cdn/docsearch.min.css': resources.docsearchCSS,
+            'docsearch.js@{version}/dist/cdn/docsearch.css': resources.docsearchCSS,
             'dojo@{version}/dojo.': resources.dojo,
             'ember-source@{version}/dist/ember.': resources.ember,
             'ember-source@{version}/dist/ember.min.': resources.ember,
@@ -915,6 +928,12 @@ mappings.cdn = {
     'cdn.materialdesignicons.com': {
         '/': {
             '{version}/css/materialdesignicons.min.css': resources.materialDesign
+        }
+    },
+    // Sentry's Raven.js (https://codeberg.org/nobody/LocalCDN/issues/214)
+    'cdn.ravenjs.com': {
+        '/': {
+            '{version}/raven.': resources.ravenJS
         }
     }
 };

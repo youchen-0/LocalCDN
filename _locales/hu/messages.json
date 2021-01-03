@@ -173,7 +173,7 @@
     },
     "dialogConfirmDeleteStatistics": {
         "message": "Biztosan törölni szeretné a statisztikákat?",
-        "description": "Are you sure you want to delete the statistics?"
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Ezeknek a tartományoknak engedélyezett a Google betűkészletek betöltése. Több bejegyzést pontosvesszővel (;) válasszon el.",

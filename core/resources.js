@@ -201,6 +201,11 @@ var resources = {
         'path': 'resources/baguettebox.js/{version}/baguetteBox.min.css',
         'type': 'text/css'
     },
+    // blazy
+    'blazy': {
+        'path': 'resources/blazy/{version}/blazy.min.jsm',
+        'type': 'application/javascript'
+    },
     // BootboxJS
     'bootbox': {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',
@@ -314,6 +319,15 @@ var resources = {
     'dexie': {
         'path': 'resources/dexie/{version}/dexie.min.jsm',
         'type': 'application/javascript'
+    },
+    // docsearch.js
+    'docsearchJS': {
+        'path': 'resources/docsearch.js/{version}/docsearch.min.jsm',
+        'type': 'application/javascript'
+    },
+    'docsearchCSS': {
+        'path': 'resources/docsearch.js/{version}/docsearch.min.css',
+        'type': 'text/css'
     },
     // Dojo
     'dojo': {
@@ -614,6 +628,15 @@ var resources = {
     },
     'mdbootstrapCSS': {
         'path': 'resources/mdbootstrap/{version}/css/mdb.min.css',
+        'type': 'text/css'
+    },
+    // MDB UI Kit
+    'mdbUiKitJS': {
+        'path': 'resources/mdb-ui-kit/{version}/mdb-ui-kit.min.jsm',
+        'type': 'application/javascript'
+    },
+    'mdbUiKitCSS': {
+        'path': 'resources/mdb-ui-kit/{version}/mdb-ui-kit.min.css',
         'type': 'text/css'
     },
     // Cloudflare Mirage 2

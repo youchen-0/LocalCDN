@@ -172,8 +172,8 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "¿Está seguro de querer borrar las estadísticas?",
-        "description": "Are you sure you want to delete the statistics?"
+        "message": "¿Está seguro de querer borrar todas las estadísticas?",
+        "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Estos dominios tienen permitido cargar fuentes de Google. Separe las entradas múltiples con punto y coma (;).",
