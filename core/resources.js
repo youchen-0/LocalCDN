@@ -291,6 +291,11 @@ var resources = {
         'path': 'resources/chart.js/{version}/Chart.min.css',
         'type': 'text/css'
     },
+    // chosen
+    'chosen': {
+        'path': 'resources/chosen/{version}/chosen.jquery.min.jsm',
+        'type': 'application/javascript'
+    },
     // clipboard.js
     'clipboardJS': {
         'path': 'resources/clipboard.js/{version}/clipboard.min.jsm',

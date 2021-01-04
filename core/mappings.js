@@ -242,6 +242,7 @@ mappings.cdn = {
             'Chart.js/{version}/Chart.js': resources.chartJs,
             'Chart.js/{version}/Chart.css': resources.chartJsCSS,
             'Chart.js/{version}/Chart.min.css': resources.chartJsCSS,
+            'chosen/{version}/chosen.jquery.min.js': resources.chosen,
             'clipboard.js/{version}/clipboard.min.js': resources.clipboardJS,
             'cookieconsent2/{version}/cookieconsent.min.js': resources.cookieconsent2JS,
             'cookieconsent2/{version}/cookieconsent.js': resources.cookieconsent2JS,

@@ -156,6 +156,8 @@ targets.setLastVersion = function (type, version) {
         return '4.0.2';
     } else if (type.startsWith('/chart.js/2.')) {
         return '2.9.4';
+    } else if (type.startsWith('/chosen/1.')) {
+        return '1.8.7';
     } else if (type.startsWith('/clipboard.js/1.')) {
         return '1.7.1';
     } else if (type.startsWith('/clipboard.js/2.')) {
@@ -472,6 +474,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'chosen.jquery.min.jsm': 'chosen',
     'nouislider.min.jsm': 'noUiSlider (JS)',
     'mdb-ui-kit.min.jsm': 'MDB UI Kit (JS)',
     'mdb-ui-kit.min.css': 'MDB UI Kit (CSS)',
