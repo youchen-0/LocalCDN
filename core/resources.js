@@ -672,6 +672,11 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
         'type': 'application/javascript'
     },
+    // noUiSlider
+    'noUiSlider': {
+        'path': 'resources/noUiSlider/{version}/nouislider.min.jsm',
+        'type': 'application/javascript'
+    },
     // NVD3 [Deprecated]
     'nvd3JS': {
         'path': 'resources/nvd3/{version}/nv.d3.min.jsm',

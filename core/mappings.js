@@ -323,6 +323,8 @@ mappings.cdn = {
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,
+            'noUiSlider/{version}/nouislider.js': resources.noUiSlider,
+            'noUiSlider/{version}/nouislider.min.js': resources.noUiSlider,
             'nvd3/{version}/nv.d3.min.js': resources.nvd3JS,
             'nvd3/{version}/nv.d3.js': resources.nvd3JS,
             'nvd3/{version}/nv.d3.min.css': resources.nvd3CSS,

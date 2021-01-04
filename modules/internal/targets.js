@@ -293,6 +293,8 @@ targets.setLastVersion = function (type, version) {
         return '0.5.4';
     } else if (type.startsWith('/lightgallery/1.')) {
         return '1.10.0';
+    } else if (type.startsWith('/noUiSlider/14.')) {
+        return '14.6.3';
     } else if (type.startsWith('/lodash.js/4.')) {
         return '4.17.20';
     } else if (type.startsWith('/lodash.js/3.')) {
@@ -470,6 +472,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'nouislider.min.jsm': 'noUiSlider (JS)',
     'mdb-ui-kit.min.jsm': 'MDB UI Kit (JS)',
     'mdb-ui-kit.min.css': 'MDB UI Kit (CSS)',
     'docsearch.min.jsm': 'docsearch.js (JS)',
