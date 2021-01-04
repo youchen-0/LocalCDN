@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Chroni przed śledzeniem przez \"darmowe\", scentralizowane ośrodki CDN.",
+        "message": "Chroni cię przed śledzeniem przez CDN (scentralizowane ośrodki CDN) poprzez przekierowanie do lokalnych zródeł.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -80,7 +80,7 @@
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Ta opcja psuje strony. Nie włączaj jej, chyba że jesteś gotów samemu dodawać niedziałające domeny do białej listy.",
+        "message": "Ta opcja psuje strony. Nie pozostawiaj jej włączonej, chyba że jesteś gotów do ręcznego dodania niedziałające domeny do listy zezwolonych.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -172,7 +172,7 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Czy na pewno chcesz usunąć statystyki?",
+        "message": "Czy jesteś pewny że chcesz usunąć wszystkie statystyki?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
@@ -228,19 +228,19 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Powiadomienia po aktualizacji",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Nigdy (Ciche Aktualizacje)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Jeśli nowe CDN i zasady",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Zawsze",
         "description": "Always"
     }
 }
