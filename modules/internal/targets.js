@@ -116,7 +116,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular-translate-interpolation-messageformat/2.')) {
         return '2.7.2';
     } else if (type.startsWith('/axios/0.')) {
-        return '0.21.0';
+        return '0.21.1';
     } else if (type.startsWith('/babel-polyfill/')) {
         return '7.12.1';
     } else if (type.startsWith('/backbone.js/0.')) {
