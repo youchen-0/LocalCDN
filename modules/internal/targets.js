@@ -680,7 +680,7 @@ const ListOfFiles = {
     'select2.min.css': 'Select2 (CSS)',
     'simplemde.min.css': 'simplemde (CSS)',
     'simplemde.min.jsm': 'simplemde (JS)',
-    'socket.io.jsm': 'Socket.IO',
+    'socket.io.min.jsm': 'Socket.IO',
     'spin.min.jsm': 'spin.js',
     'store.legacy.min.jsm': 'Store.js',
     'swfobject.jsm': 'SWFObject',

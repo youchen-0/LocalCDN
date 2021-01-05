@@ -890,7 +890,7 @@ var resources = {
     },
     // socket.io
     'socketIO': {
-        'path': 'resources/socket.io/{version}/socket.io.jsm',
+        'path': 'resources/socket.io/{version}/socket.io.min.jsm',
         'type': 'application/javascript'
     },
     // spin.js
