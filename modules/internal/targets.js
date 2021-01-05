@@ -400,7 +400,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/slick-lightbox/0.')) {
         return '0.2.12';
     } else if (type.startsWith('/socket.io/2.')) {
-        return '2.3.0';
+        return '2.4.0';
     } else if (type.startsWith('/socket.io/3.')) {
         return '3.0.4';
     } else if (type.startsWith('/spin.js/2.')) {
