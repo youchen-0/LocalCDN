@@ -1,246 +1,246 @@
 {
     "extensionDescription": {
-        "message": "Beskytter mot sporing gjennom CDN-er (innholdsleveransenettverk) ved å videresende til lokale ressurser.",
+        "message": "",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Antall lokale injeksjoner av CDN-ressurser siden installering.",
+        "message": "",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "Innstillinger",
+        "message": "",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Vis antall injeksjoner på ikonet",
+        "message": "",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Vis antallet injiserte ressurser på utvidelsens ikon.",
+        "message": "",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Blokker forespørsler etter manglende ressurser",
+        "message": "",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Avbryt oppfanget forespørsel dersom den påkrevde ressursen ikke er lokalt tilgjengelig.",
+        "message": "",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "Slå av forhåndshenting av lenker",
+        "message": "",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Hindre at ikke tillatte forespørsler lekker ut til leveringsnettverk.",
+        "message": "",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Fjern metadata fra tillatte forespørsler",
+        "message": "",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Slett sensitive data fra tillatte CDN-forespørsler for bedret personvern.",
+        "message": "",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Slå av LocalCDN for disse domenene:",
+        "message": "",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Skriv inn domener for å slå av LocalCDN der. Skill flere oppføringer med semikolon (;).",
+        "message": "",
         "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
     },
     "advancedLabel": {
-        "message": "Avansert",
+        "message": "",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generer regelsett for din reklameblokkerer",
+        "message": "",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "I tilfelle du bruker en reklameblokkerer kan reglene genereres her. Reglene må legges til manuelt i reklameblokkereren.",
+        "message": "",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "Siste oppdatering:",
+        "message": "",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "Kopier",
+        "message": "",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Slå på logging i nettleserkonsoll",
+        "message": "",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
+        "message": "",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt sette berørte domener på tillatelseslisten.",
+        "message": "",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "Slå av",
+        "message": "",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Filtrer HTML-kildekode",
+        "message": "",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "Doner",
+        "message": "",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Inverter HTML-filter",
+        "message": "",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Slå på dette alternativet for å alltid bruke HTML-filteret. Domenene i listen blir da ignorert. Hvis dette alternativet er slått av, blir HTML-filteret bare brukt på domener i listen.",
+        "message": "",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Vær oppmerksom på informasjonen på Wiki-siden.",
+        "message": "",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "Ikke bruk HTML-filter på disse domenene:",
+        "message": "",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Skriv inn domener som vil bli behandlet eller ignorert av HTML-filteret. Skill flere oppføringer med semikolon (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+        "message": "",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "Bruk HTML-filter på disse domenene:",
+        "message": "",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "Blokker Google Fonts",
+        "message": "",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Hvis forespørsler etter manglende ressurser er tillatt, blir tilkoblinger til \"fonts.googleapis.com\" ikke blokkert. Slå på dette alternativet for å blokkere disse forespørslene.",
+        "message": "",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "Velg et ikon for denne utvidelsen",
+        "message": "",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "Intern statistikk",
+        "message": "",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Denne funksjonen er for tiden eksperimentell. Ingen dataoverføring. Alt er lokalt på din enhet.",
+        "message": "",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "Statistikk",
+        "message": "",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "I dag",
+        "message": "",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "Siste uke",
+        "message": "",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "Siste måned",
+        "message": "",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "Siste år",
+        "message": "",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "Slett",
+        "message": "",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "Gjennomsnitt (erstatninger per dag)",
+        "message": "",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "Erstattede rammeverk",
+        "message": "",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Er du sikker på at du vil slette all statistikk?",
+        "message": "",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Disse domenene tillates å laste Google Fonts. Skill flere oppføringer med semikolon (;).",
+        "message": "",
         "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "Generelt",
+        "message": "",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "Avansert",
+        "message": "",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "Annet",
+        "message": "",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "Info",
+        "message": "",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "Lagringstype",
+        "message": "",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "Lokal",
+        "message": "",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Synkronisert",
+        "message": "",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "Import/Eksport",
+        "message": "",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "Sikkerhetskopier til fil",
+        "message": "",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "Gjenopprett fra fil",
+        "message": "",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "Import vellykket",
+        "message": "",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "Import mislyktes",
+        "message": "",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "Varsel etter en oppdatering",
+        "message": "",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "Aldri (stille oppdateringer)",
+        "message": "",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "Bare hvis nye CDN-er og regler",
+        "message": "",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "Alltid",
+        "message": "",
         "description": "Always"
     }
 }
