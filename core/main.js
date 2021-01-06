@@ -34,7 +34,7 @@ main._initializeSettings = function () {
     storageManager.type.get(null, function (items) {
         // Delete old keys
         if (typeof items.whitelistedDomains !== 'undefined') {
-            if (items.allowlistedDomains === 'undefined' || Object.keys(items.allowlistedDomains).length === 0) {
+            if (typeof items.allowlistedDomains === 'undefined' || Object.keys(items.allowlistedDomains).length === 0) {
                 items['allowlistedDomains'] = items.whitelistedDomains;
             }
             delete items['whitelistedDomains'];
