@@ -29,7 +29,7 @@ var requestAnalyzer = {};
  */
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
-    let initiatorDomain, isAllowlisted;
+    let initiatorDomain, isAllowlisted, sDomain;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 
@@ -37,7 +37,15 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
         initiatorDomain = Address.EXAMPLE;
     }
 
-    isAllowlisted = requestAnalyzer.allowlistedDomains[initiatorDomain];
+
+    sDomain = initiatorDomain.split(".");
+    if (sDomain.length <= 2) {
+        isAllowlisted = requestAnalyzer.allowlistedDomains[initiatorDomain];
+    } else {
+        sDomain[0] = '*';
+        sDomain = sDomain.join().replace(/,/g, '.');
+        isAllowlisted = requestAnalyzer.allowlistedDomains[sDomain];
+    }
 
     if (isAllowlisted) {
         return false;

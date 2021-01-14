@@ -88,7 +88,10 @@
                 <section class="option">
                     <div class="title-option without-checkbox" data-i18n-content="allowlistedDomainsTitle">Deactivate LocalCDN for these domains:</div>
                     <input id="tf-domains-allowlist" class="input-text without-checkbox" data-option="allowlistedDomains" type="text">
-                    <div class="description-option without-checkbox" data-i18n-content="allowlistedDomainsDescription">Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;).</div>
+                    <div class="description-option without-checkbox">
+                        <span data-i18n-content="allowlistedDomainsDescription">Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;).</span><br><br>
+                        <span class="monoblock">domain.com;<br>sub.domain.com;<br>*.wildcard-domain.com;</span>
+                    </div>
                 </section>
             </div>
         </div>
