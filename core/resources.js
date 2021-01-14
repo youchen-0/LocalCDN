@@ -401,7 +401,7 @@ var resources = {
         'type': 'text/css'
     },
     'fontawesome5CSSv4shims': {
-        'path': 'resources/fontawesome/{version}/css/v4-shims.css',
+        'path': 'resources/fontawesome/{version}/css/v4-shims.min.css',
         'type': 'text/css'
     },
     'fontawesome5JS': {

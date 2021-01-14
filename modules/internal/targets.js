@@ -509,7 +509,7 @@ const ListOfFiles = {
     'cookieconsent.min.jsm': 'Cookie Consent (JS)',
     'markdown-it.min.jsm': 'markdown-it',
     'vue-i18n.min.jsm': 'Vue.js (i18n)',
-    'v4-shims.css': 'Font Awesome (Shim)',
+    'v4-shims.min.css': 'Font Awesome (Shim)',
     'instantsearch.production.min.jsm': 'InstantSearch.js',
     'redux.min.jsm': 'Redux',
     'react-side-effect.min.jsm': 'react-side-effect',
