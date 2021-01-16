@@ -174,14 +174,6 @@ helpers.formatNumber = function (number) {
     }
 };
 
-helpers.formatVersion = function (version) {
-    if (version.indexOf('beta') === -1) {
-        return version;
-    } else {
-        return 'BETA';
-    }
-};
-
 helpers.formatFilename = function (targetPath) {
     if (targetPath.startsWith('resources/element-ui/')) {
         targetPath = targetPath.toLowerCase();

@@ -51,7 +51,7 @@ options._renderContents = function () {
         options._platformSupportIcons = false;
     }
     options._renderInfoPanel();
-    document.getElementById('label-version').textContent = helpers.formatVersion(chrome.runtime.getManifest().version);
+    document.getElementById('label-version').textContent = chrome.runtime.getManifest().version;
 };
 
 options._renderOptionsPanel = function () {

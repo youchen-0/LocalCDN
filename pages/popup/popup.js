@@ -420,7 +420,7 @@ popup._onDocumentLoaded = function () {
     language = navigator.language;
 
     popup._name = manifest.name;
-    popup._version = helpers.formatVersion(manifest.version);
+    popup._version = manifest.version;
     popup._scriptDirection = helpers.determineScriptDirection(language);
 
     popup._determineAmountInjected()
