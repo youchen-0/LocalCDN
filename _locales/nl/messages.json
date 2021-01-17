@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Beschermt tegen tracking via het \"gratis\", gecentraliseerd, verzorgen van content.",
+        "message": "Beschermt je tegen tracking via CDN's (Content Delivery Networks) door te verwijzen naar lokale bronnen.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Sluit domeinen uit van inspecties",
+        "message": "Deactiveer de werking van LocalCDN voor de volgende domeinen:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
@@ -56,191 +56,191 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Genereer regelsets voor uBlock of uMatrix",
+        "message": "Genereer regelsets voor jouw adblocker",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "Indien je gebruikt maakt van een adblocker kun je hier regels genereren. Je zult deze handmatig aan je adblocker moeten toevoegen.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Laatste update:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Kopieer",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Zet logging in de browser console aan",
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) om missende bronnen te weergeven.",
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Deze optie zorgt voor slecht werkende websites. Laat deze optie niet aan staan tenzij je bereidt bent om handmatig domeinen toe te voegen aan de allow list.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Uitschakelen",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filter HTML broncode",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Doneer",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inverteer HTML filter",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Zet deze optie aan om het HTML filter op iedere website in te schakelen. De domeinen in de lijst zullen vervolgens worden genegeerd. Als deze optie is uitgeschakeld wordt het HTML filter enkel toegepast bij domeinen in de lijst.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Deze optie zorgt voor slecht werkend websites. Lees de informatie op de Wiki pagina.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Pas het HTML filter niet toe op de deze domeinen:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Vul de domeinen in die verwerkt of genegeerd moeten worden door het HTML filter. Scheidt meerdere vermeldingen met een puntkomma (;).",
         "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Pas het HTML filter toe voor de volgende domeinen:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Blokkeer Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Als verzoeken voor missende bronnen zijn toegestaan, zijn verbindingen met \"fonts.googleapis.com\" niet geblokkeerd. Schakel deze optie in om deze verzoek te blokkeren.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Kies een icoon voor deze extensie",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Interne statistieken",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Deze functie bevindt zich momenteel in een experimentele fase. Er is geen dataoverdracht. Alles is lokaal op deze machine.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Statistieken",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Vandaag",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Afgelopen week",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Afgelopen maand",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Afgelopen jaar",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Verwijderen",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Gemiddelde (vervangingen per dag)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Vervangen frameworks",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Weet je zeker dat je alle statistieken wilt verwijderen?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "message": "Deze domeinen zijn toegestaan om Google Fonts te laden. Scheid meerdere vermeldingen met een puntakomma (;).",
+        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Standaard",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Geavanceerd",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Overig",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Opslag type",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokaal",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Synchroniseer",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importeer/Exporteer",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Back up naar bestand",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Herstellen vanuit bestand",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Import succesvol",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Import gefaald",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Notificatie na een update",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Nooit (stille updates)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Alleen bij nieuwe CDN's en regels",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Altijd",
         "description": "Always"
     }
 }
