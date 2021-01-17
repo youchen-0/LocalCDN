@@ -474,6 +474,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'mirage2.min.jsm': 'mirage2',
     'chosen.jquery.min.jsm': 'chosen',
     'nouislider.min.jsm': 'noUiSlider (JS)',
     'mdb-ui-kit.min.jsm': 'MDB UI Kit (JS)',
