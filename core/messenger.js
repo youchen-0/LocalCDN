@@ -42,8 +42,7 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
     }
 
     if (topic === 'domain:fetch-is-allowlisted') {
-
-        let allowlistRecord = requestAnalyzer.allowlistedDomains[value];
+        let allowlistRecord = requestAnalyzer.allowlistedDomains[value] || requestAnalyzer.allowlistedDomains[helpers.getWildcard(value)];
         sendResponse({'value': Boolean(allowlistRecord)});
 
         return MessageResponse.SYNCHRONOUS;

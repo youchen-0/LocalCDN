@@ -91,8 +91,16 @@ stateManager.removeDomainFromAllowlist = function (domain) {
 
     return new Promise((resolve) => {
 
-        let allowlistedDomains = requestAnalyzer.allowlistedDomains;
-        delete allowlistedDomains[domain];
+        let allowlistedDomains, wildcard;
+
+        allowlistedDomains = requestAnalyzer.allowlistedDomains;
+        wildcard = helpers.getWildcard(domain);
+
+        if (allowlistedDomains[domain]) {
+            delete allowlistedDomains[domain];
+        } else {
+            delete allowlistedDomains[wildcard];
+        }
 
         storageManager.type.set({allowlistedDomains}, resolve);
     });
@@ -239,7 +247,6 @@ stateManager._removeIconBadgeFromTab = function (tab) {
 };
 
 stateManager._domainIsListed = function (domain, listname) {
-
     if (domain !== null) {
 
         let allowlistRecord, isAllowlisted;
@@ -248,7 +255,7 @@ stateManager._domainIsListed = function (domain, listname) {
             allowlistRecord = requestAnalyzer.domainsManipulateDOM[domain];
             isAllowlisted = Boolean(allowlistRecord);
         } else {
-            allowlistRecord = requestAnalyzer.allowlistedDomains[domain];
+            allowlistRecord = requestAnalyzer.allowlistedDomains[domain] || requestAnalyzer.allowlistedDomains[helpers.getWildcard(domain)];
             isAllowlisted = Boolean(allowlistRecord);
         }
 

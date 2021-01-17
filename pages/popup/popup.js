@@ -187,6 +187,10 @@ popup._determineDomainAllowlistStatus = function () {
             value: popup._domain,
         };
 
+        if (popup._domain === null) {
+            return;
+        }
+
         chrome.runtime.sendMessage(message, function (response) {
             popup._domainIsAllowlisted = response.value;
             resolve();

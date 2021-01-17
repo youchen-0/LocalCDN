@@ -126,6 +126,17 @@ helpers.extractDomainFromUrl = function (url, normalize) {
     return extractedDomain;
 };
 
+helpers.getWildcard = function(initiatorDomain) {
+    let domain = initiatorDomain.split(".");
+
+    if (domain.length > 2) {
+        domain[0] = '*';
+        domain = domain.join().replace(/,/g, '.');
+        return domain;
+    }
+
+};
+
 helpers.extractFilenameFromPath = function (path) {
     let pathSegments, filename;
 
