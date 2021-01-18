@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Sisesta domeenid, et lisada need valgesse nimekirja. Eralda mitu üksust semikoolonitega (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Edasijõudnuile",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)." 
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "",

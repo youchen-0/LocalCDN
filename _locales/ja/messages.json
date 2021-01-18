@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "LocalCDNを無効にするドメインを入力してください。複数入力する場合はセミコロン (;) で区切ってください。",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "高度な設定",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "HTMLフィルターで処理する、もしくはフィルターを無視するドメインを入力します。複数入力する場合ははセミコロン(;)で区切ってください。",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "HTMLフィルターを適用させるドメイン：",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "これらのドメインでは、Google Fontsの読み込みを許可しています。複数入力する場合はセミコロン(;)で区切ってください。",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "基本",

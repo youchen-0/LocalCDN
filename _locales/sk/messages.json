@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Zadajte domény na ktorých chcete vypnúť LocalCDN rozšírenie. Oddeľte jednotlivé položky bodkočiadkami (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Pokročilé",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Vložte domény, s ktorými má narábať, alebo ich ignorovať, HTML filter. Oddeľte jednotlivé položky bodkočiarkami (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Použiť HTML filter pre tieto domény:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Tieto domény majú povolené sťahovanie Google Fontov. Oddeľte jednotlivé položky bodkočiarkami (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Základné",

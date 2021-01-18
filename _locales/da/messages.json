@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Tilføj domæner der ikke skal inspiceres. Separer flere med semikolon (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Avanceret",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Indtast de domæner som skal håndteres eller ignoreres af HTML-filteret. Separer flere domæner med semikolon (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Benyt HTML-filter for følgende domæner:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Disse domæner har tilladelse til at indlæse Google-skrifttyper. Adskil flere poster med semikolon (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Grundlæggende",

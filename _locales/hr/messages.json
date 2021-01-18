@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Upiši domene za deaktiviranje LocalCDN-a na tom mjestu. Odvoji višestruke unose s točka-zarezom (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Napredno",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Upiši domene koje će HTML filtar obraditi ili zanemariti. Odvoji višestruke unose s točka-zarezom (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Primijeni HTML filtar za ove domene:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Ove domene smiju učitati Google fontove. Odvoji višestruke unose s točka-zarezom (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Osnovno",

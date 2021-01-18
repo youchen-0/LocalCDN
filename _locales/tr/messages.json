@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "LocalCDN'nin devre dışı bırakılacağı etki alanlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Gelişmiş",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "HTML filtresi tarafından işlenecek veya yok sayılacak etki alanlarını girin. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Bu etki alanları için HTML filtresini uygula:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Bu etki alanların Google Yazı Tiplerini yüklemesine izin verilir. Birden çok girdiyi noktalı virgül (;) ile ayırın.",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Temel",

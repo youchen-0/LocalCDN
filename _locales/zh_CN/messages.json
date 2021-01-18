@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "输入要禁用 LocalCDN 的域名。用分号 (;) 分隔多项。",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "高级",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "输入 HTML 过滤器要处理或忽略的域。使用分号 (;) 分隔多项。",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "对这些域应用 HTML 过滤器：",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "允许这些域名加载 Google Fonts。用分号 (;) 分隔多项。",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "基础",

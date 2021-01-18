@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "화이트 리스트에 등록할 도메인을 입력하세요. 여러 개를 입력할 경우 세미콜론 (;) 을 이용해 구분합니다.",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "고급",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "HTML 필터에서 처리하거나 무시할 도메인을 입력하십시오. 여러 개의 항목을 세미콜론(;)으로 구분하십시오.",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "다음 도메인에 HTML 필터 적용:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "",

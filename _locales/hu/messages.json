@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Adja meg a tartományokat, ahol a LocalCDN le lesz tiltva. Több bejegyzést pontosvesszővel (;) válasszon el.",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Speciális",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Adja meg a HTML-szűrő által kezelendő vagy figyelmen kívül hagyandó tartományokat. Több bejegyzést pontosvesszővel (;) válasszon el.",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "HTML-szűrő alkalmazása ezeknél a tartományoknál:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Ezeknek a tartományoknak engedélyezett a Google betűkészletek betöltése. Több bejegyzést pontosvesszővel (;) válasszon el.",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Alap",

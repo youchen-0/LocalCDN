@@ -89,7 +89,7 @@
                     <div class="title-option without-checkbox" data-i18n-content="allowlistedDomainsTitle">Deactivate LocalCDN for these domains:</div>
                     <input id="tf-domains-allowlist" class="input-text without-checkbox" data-option="allowlistedDomains" type="text">
                     <div class="description-option without-checkbox">
-                        <span data-i18n-content="allowlistedDomainsDescription">Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;).</span><br><br>
+                        <span data-i18n-content="allowlistedDomainsDescription">Enter domains to disable LocalCDN there. One domain per line.</span><br><br>
                         <span class="monoblock">domain.com;<br>sub.domain.com;<br>*.wildcard-domain.com;</span>
                     </div>
                 </section>
@@ -132,8 +132,8 @@
                     </div>
                     <div class="description-option" data-i18n-content="blockGoogleFontsDescription">If you use the rules of the rule generator, requests to "fonts.googleapis.com" are allowed to substitute "Google Material Icons" automatically. If you want to block the other requests, enable this option.</div>
                     <div id="div-domains-allowlist-google-fonts">
-                        <div class="description-option" data-i18n-content="labelDomainsAllowlistGoogleFonts">These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;).</div>
                         <div class="description-option"><input id="tf-domains-allowlist-google-fonts" class="input-text without-checkbox" data-option="allowedDomainsGoogleFonts" type="text"></div>
+                        <div class="description-option" data-i18n-content="labelDomainsAllowlistGoogleFonts">These domains are allowed to load Google Fonts. One domain per line.</div>
                     </div>
                 </section>
                 <section class="option">
@@ -152,7 +152,7 @@
                     <div id="html-filter-domains-title-exclude" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleExclude">Do not apply HTML filter to these domains:</div>
                     <div id="html-filter-domains-title-include" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleInclude">Apply HTML filter to these domains:</div>
                     <input id="tf-domains-manipulate-dom" class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text">
-                    <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;).</div>
+                    <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter the domains to be handled or ignored by the HTML filter. One domain per line.</div>
                 </section>
                 <section class="option">
                     <div class="title-option">
