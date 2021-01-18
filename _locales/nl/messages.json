@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Vul de domeinen in die verwerkt of genegeerd moeten worden door het HTML filter. Scheidt meerdere vermeldingen met een puntkomma (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Pas het HTML filter toe voor de volgende domeinen:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Deze domeinen zijn toegestaan om Google Fonts te laden. Scheid meerdere vermeldingen met een puntakomma (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Standaard",
