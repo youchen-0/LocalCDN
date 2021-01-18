@@ -255,7 +255,7 @@ stateManager._domainIsListed = function (domain, listname) {
             allowlistRecord = requestAnalyzer.domainsManipulateDOM[domain];
             isAllowlisted = Boolean(allowlistRecord);
         } else {
-            allowlistRecord = requestAnalyzer.allowlistedDomains[domain] || requestAnalyzer.allowlistedDomains[helpers.getWildcard(domain)];
+            allowlistRecord = helpers.checkAllowlisted(domain);
             isAllowlisted = Boolean(allowlistRecord);
         }
 

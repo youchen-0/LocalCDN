@@ -37,9 +37,7 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
         initiatorDomain = Address.EXAMPLE;
     }
 
-    wildcard = helpers.getWildcard(initiatorDomain);
-    isAllowlisted = requestAnalyzer.allowlistedDomains[initiatorDomain] || requestAnalyzer.allowlistedDomains[wildcard];
-
+    isAllowlisted = helpers.checkAllowlisted(initiatorDomain);
     if (isAllowlisted) {
         return false;
     }

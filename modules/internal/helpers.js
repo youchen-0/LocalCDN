@@ -89,13 +89,7 @@ helpers.languageIsFullySupported = function (language) {
 };
 
 helpers.normalizeDomain = function (domain) {
-    domain = domain.toLowerCase().trim();
-
-    if (domain.startsWith(Address.WWW_PREFIX)) {
-        domain = domain.slice(Address.WWW_PREFIX.length);
-    }
-
-    return domain;
+    return domain.toLowerCase().trim();
 };
 
 helpers.extractDomainFromUrl = function (url, normalize) {
@@ -135,6 +129,18 @@ helpers.getWildcard = function(initiatorDomain) {
         return domain;
     }
 
+};
+
+helpers.checkAllowlisted = function(domain) {
+    let domainWithoutPrefix, wildcard, list;
+
+    if (domain.startsWith(Address.WWW_PREFIX)) {
+        domainWithoutPrefix = domain.slice(Address.WWW_PREFIX.length);
+    }
+    wildcard = helpers.getWildcard(domain);
+    list = requestAnalyzer.allowlistedDomains;
+
+    return list[domain] || list[domainWithoutPrefix] || list[wildcard] || list[domainWithoutPrefix];
 };
 
 helpers.extractFilenameFromPath = function (path) {
