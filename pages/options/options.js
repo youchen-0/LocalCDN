@@ -279,7 +279,7 @@ options._serializeAllowlistedDomains = function (allowlistedDomains) {
     domainAllowlist = '';
 
     allowlistedDomainKeys.forEach(function (domain) {
-        domainAllowlist = `${domainAllowlist}${domain};`;
+        domainAllowlist = `${domainAllowlist}${domain}\n`;
     });
 
     domainAllowlist = domainAllowlist.slice(0, -1);

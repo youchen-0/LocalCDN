@@ -121,8 +121,8 @@ const WebRequestType = {
 };
 
 const Allowlist = {
-    'TRIM_EXPRESSION': /^;+|;+$/g,
-    'VALUE_SEPARATOR': ';'
+    'TRIM_EXPRESSION': /^\n+|\n+$/g,
+    'VALUE_SEPARATOR': '\n'
 };
 
 const BrowserType = {
