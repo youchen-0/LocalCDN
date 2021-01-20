@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Įveskite Tinklapius kuriuos norite, kad būtų išjungtą „LocalCDN“. Daugiskaitinius Tinklus pažymėkite su (;).",
+        "message": "Įveskite Tinklapius kuriuos norite, kad būtų išjungtą „LocalCDN“. Vienas įvedimas per liniją.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Įveskite tinklapius, kad būtų suvaldyti arba ignoruoti HTML filtrui. Daugiskaitinius tinklapius atskirkite su (;).",
+        "message": "Įveskite tinklapius, kad būtų suvaldyti arba ignoruoti HTML filtrui. Vienas įvedimas per liniją.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Šitie tinklapiai yra leistini, įjungti „Google šriftus“. Daugiskaitinius tinklapius atskirkite su (;).",
+        "message": "Šitie tinklapiai yra leistini, įjungti „Google šriftus“. Vienas įvedimas per liniją.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
