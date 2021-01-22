@@ -303,6 +303,7 @@ mappings.cdn = {
             'jquery-mousewheel/{version}/jquery.mousewheel.min.js': resources.jqueryMousewheelJS,
             'jScrollPane/{version}/script/jquery.jscrollpane.': resources.jScrollPane,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
+            'knockout/{version}/knockout': resources.knockout,
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
             'libsodium-wrappers/{version}/sodium.min.js': resources.libsodiumJS,

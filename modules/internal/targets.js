@@ -291,6 +291,8 @@ targets.setLastVersion = function (type, version) {
         return '1.8.6';
     } else if (type.startsWith('/js-cookie/2.')) {
         return '2.2.1';
+    } else if (type.startsWith('/knockout/3.')) {
+        return '3.5.1';
     } else if (type.startsWith('/lazysizes/4.')) {
         return '4.1.8';
     } else if (type.startsWith('/lazysizes/5.')) {
@@ -480,6 +482,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'knockout-latest.min.jsm': 'Knockout',
     'bootstrap-multiselect.min.jsm': 'Bootstrap Multiselect',
     'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',
     'bootstrap-vue.min.jsm': 'BootstrapVue (JS)',

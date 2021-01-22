@@ -583,6 +583,11 @@ var resources = {
         'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',
         'type': 'application/javascript'
     },
+    // knockout
+    'knockout': {
+        'path': 'resources/knockout/{version}/knockout-latest.min.jsm',
+        'type': 'application/javascript'
+    },
     // lazysizes
     'lazysizes': {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
