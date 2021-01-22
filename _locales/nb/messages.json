@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Skriv inn domener der LocalCDN skal slås av. En oppføring per linje.",
+        "message": "Skriv inn domener LocalCDN skal slås av for. Én oppføring per linje.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
