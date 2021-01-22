@@ -135,7 +135,7 @@ targets.setLastVersion = function (type, version) {
         if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
         else return '3.4.1';
     } else if (type.startsWith('/bootstrap/4.')) {
-        return '4.5.3';
+        return '4.6.0';
     } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
     } else if (type.startsWith('/bootstrap-daterangepicker/3.')) {
