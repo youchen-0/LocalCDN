@@ -440,6 +440,7 @@ mappings.cdn = {
             'backbone@{version}/backbone.min.': resources.backbone,
             'bootstrap@{version}/dist/js/bootstrap.': resources.bootstrapJS,
             'bootstrap@{version}/dist/css/bootstrap.': resources.bootstrapCSS,
+            'bootstrap-select@{version}/dist/js/bootstrap-select.': resources.bootstrapSelectJS,
             'bootstrap-table@{version}/dist/bootstrap-table.min.js': resources.bootstrapTableJS,
             'bootstrap-table@{version}/dist/bootstrap-table.js': resources.bootstrapTableJS,
             'bootstrap-table@{version}/dist/bootstrap-table.min.css': resources.bootstrapTableCSS,
