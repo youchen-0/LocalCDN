@@ -56,7 +56,9 @@ targets.setLastVersion = function (type, version) {
     if (version !== null && version !== undefined) {
         version = version.toString();
     }
-    if (type.startsWith('/algoliasearch/3.')) {
+    if (type.startsWith('/ajax-bootstrap-select/1.')) {
+        return '1.4.5';
+    } else if (type.startsWith('/algoliasearch/3.')) {
         return '3.35.1';
     } else if (type.startsWith('/algoliasearch/4.')) {
         return '4.8.4';
@@ -476,6 +478,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',
     'bootstrap-vue.min.jsm': 'BootstrapVue (JS)',
     'bootstrap-vue.min.css': 'BootstrapVue (CSS)',
     'mirage2.min.jsm': 'mirage2',

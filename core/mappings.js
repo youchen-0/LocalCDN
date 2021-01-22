@@ -88,6 +88,7 @@ mappings.cdn = {
     // CDNJS (Cloudflare)
     'cdnjs.cloudflare.com': {
         '/ajax/libs/': {
+            'ajax-bootstrap-select/{version}/js/ajax-bootstrap-select.': resources.ajaxBootstrapSelect,
             'algoliasearch/{version}/algoliasearch.angular.': resources.algoliaSearch,
             'algoliasearch/{version}/algoliasearch.': resources.algoliaSearch,
             'anchor-js/{version}/anchor.': resources.anchorJS,

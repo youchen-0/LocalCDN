@@ -24,6 +24,11 @@
 
 var resources = {
 
+    // Ajax Bootstrap Select
+    'ajaxBootstrapSelect': {
+        'path': 'resources/ajax-bootstrap-select/{version}/ajax-bootstrap-select.min.jsm',
+        'type': 'application/javascript'
+    },
     // AlgoliaSearch
     'algoliaSearch': {
         'path': 'resources/algoliasearch/{version}/algoliasearch.min.jsm',
