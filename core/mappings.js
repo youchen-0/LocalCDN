@@ -449,6 +449,7 @@ mappings.cdn = {
             'bootstrap-vue@{version}/dist/bootstrap-vue.css': resources.bootstrapVueCSS,
             'bootstrap-vue@{version}/dist/bootstrap-vue.min.js': resources.bootstrapVueJS,
             'bootstrap-vue@{version}/dist/bootstrap-vue.js': resources.bootstrapVueJS,
+            'chart.js@{version}': resources.chartJs,
             'clipboard@{version}/dist/clipboard.': resources.clipboardJS,
             'dexie@{version}/dist/dexie.': resources.dexie,
             'docsearch.js@{version}/dist/cdn/docsearch.min.js': resources.docsearchJS,
