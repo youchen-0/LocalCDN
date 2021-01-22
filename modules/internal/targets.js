@@ -144,6 +144,8 @@ targets.setLastVersion = function (type, version) {
         return '3.1';
     } else if (type.startsWith('/bootstrap-datepicker/1.')) {
         return '1.9.0';
+    } else if (type.startsWith('/bootstrap-multiselect/0.')) {
+        return '0.9.16';
     } else if (type.startsWith('/bootstrap-slider/10.')) {
         return '10.6.2';
     } else if (type.startsWith('/bootstrap-slider/11.')) {
@@ -478,6 +480,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bootstrap-multiselect.min.jsm': 'Bootstrap Multiselect',
     'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',
     'bootstrap-vue.min.jsm': 'BootstrapVue (JS)',
     'bootstrap-vue.min.css': 'BootstrapVue (CSS)',

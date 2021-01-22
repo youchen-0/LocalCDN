@@ -238,6 +238,11 @@ var resources = {
         'path': 'resources/bootstrap-datepicker/{version}/',
         'type': 'application/javascript'
     },
+    // bootstrap-multiselect
+    'bootstrapMultiselectJS': {
+        'path': 'resources/bootstrap-multiselect/{version}/bootstrap-multiselect.min.jsm',
+        'type': 'application/javascript'
+    },
     // Bootstrap-select
     'bootstrapSelectCSS': {
         'path': 'resources/bootstrap-select/{version}/css/bootstrap-select.min.css',

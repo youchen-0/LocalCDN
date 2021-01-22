@@ -228,6 +228,7 @@ mappings.cdn = {
             'bootstrap-datepicker/{version}/locales/bootstrap-datepicker.zh-CN.': resources.bootstrapDatepickerBundle,
             'bootstrap-datepicker/{version}/locales/bootstrap-datepicker.zh-TW.': resources.bootstrapDatepickerBundle,
             'bootstrap-datepicker/{version}/css/datepicker.': resources.bootstrapDatepickerBundle,
+            'bootstrap-multiselect/{version}/js/bootstrap-multiselect.': resources.bootstrapMultiselectJS,
             'bootstrap-select/{version}/css/bootstrap-select.': resources.bootstrapSelectCSS,
             'bootstrap-select/{version}/js/bootstrap-select.': resources.bootstrapSelectJS,
             'bootstrap-slider/{version}/css/bootstrap-slider.min.css': resources.bootstrapSliderCSS,
