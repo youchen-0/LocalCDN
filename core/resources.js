@@ -282,6 +282,15 @@ var resources = {
         'path': 'resources/bootstrap-3-typeahead/{version}/bootstrap3-typeahead.min.jsm',
         'type': 'application/javascript'
     },
+    // BootstrapVue
+    'bootstrapVueJS': {
+        'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrapVueCSS': {
+        'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css',
+        'type': 'text/css'
+    },
     // Chart.js
     'chartJs': {
         'path': 'resources/chart.js/{version}/Chart.bundle.min.jsm',

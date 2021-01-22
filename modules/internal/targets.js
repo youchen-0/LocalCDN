@@ -152,6 +152,8 @@ targets.setLastVersion = function (type, version) {
         return '1.18.1';
     } else if (type.startsWith('/bootstrap-toggle/2.')) {
         return '2.2.2';
+    } else if (type.startsWith('/bootstrap-vue/2.')) {
+        return '2.21.2';
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
     } else if (type.startsWith('/chart.js/2.')) {
@@ -474,6 +476,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bootstrap-vue.min.jsm': 'BootstrapVue (JS)',
+    'bootstrap-vue.min.css': 'BootstrapVue (CSS)',
     'mirage2.min.jsm': 'mirage2',
     'chosen.jquery.min.jsm': 'chosen',
     'nouislider.min.jsm': 'noUiSlider (JS)',
