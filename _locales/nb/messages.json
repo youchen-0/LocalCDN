@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Skriv inn domener for å slå av LocalCDN der. Skill flere oppføringer med semikolon (;).",
+        "message": "Skriv inn domener LocalCDN skal slås av for. Én oppføring per linje.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Skriv inn domener som vil bli behandlet eller ignorert av HTML-filteret. Skill flere oppføringer med semikolon (;).",
+        "message": "Skriv inn domener som vil bli behandlet eller ignorert av HTML-filteret. En oppføring per linje.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Disse domenene tillates å laste Google Fonts. Skill flere oppføringer med semikolon (;).",
+        "message": "Disse domenene tillates å laste Google Fonts. En oppføring per linje.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
