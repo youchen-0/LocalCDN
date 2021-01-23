@@ -48,8 +48,8 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Escriba los dominios donde deshabilitar LocalCDN. Separe las entradas múltiples con punto y coma (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "message": "Escriba los dominios donde deshabilitar LocalCDN. Uno por línea.",
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Avanzado",
@@ -112,8 +112,8 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Escriba los dominios que han sido usados o ignorados por el filtro HTML. Separe las entradas múltiples con punto y coma (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "message": "Escriba los dominios que han sido usados o ignorados por el filtro HTML. Uno por línea.",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Aplicar el filtro HTML en estos dominios:",
@@ -176,8 +176,8 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Estos dominios tienen permitido cargar fuentes de Google. Separe las entradas múltiples con punto y coma (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "message": "Estos dominios tienen permitido cargar fuentes de Google. Uno por línea.",
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Básico",

@@ -29,7 +29,7 @@ var requestAnalyzer = {};
  */
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
-    let initiatorDomain, isAllowlisted;
+    let initiatorDomain, isAllowlisted, wildcard;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 
@@ -37,8 +37,7 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
         initiatorDomain = Address.EXAMPLE;
     }
 
-    isAllowlisted = requestAnalyzer.allowlistedDomains[initiatorDomain];
-
+    isAllowlisted = helpers.checkAllowlisted(initiatorDomain);
     if (isAllowlisted) {
         return false;
     }

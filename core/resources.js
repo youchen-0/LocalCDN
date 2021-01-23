@@ -24,6 +24,11 @@
 
 var resources = {
 
+    // Ajax Bootstrap Select
+    'ajaxBootstrapSelect': {
+        'path': 'resources/ajax-bootstrap-select/{version}/ajax-bootstrap-select.min.jsm',
+        'type': 'application/javascript'
+    },
     // AlgoliaSearch
     'algoliaSearch': {
         'path': 'resources/algoliasearch/{version}/algoliasearch.min.jsm',
@@ -233,6 +238,11 @@ var resources = {
         'path': 'resources/bootstrap-datepicker/{version}/',
         'type': 'application/javascript'
     },
+    // bootstrap-multiselect
+    'bootstrapMultiselectJS': {
+        'path': 'resources/bootstrap-multiselect/{version}/bootstrap-multiselect.min.jsm',
+        'type': 'application/javascript'
+    },
     // Bootstrap-select
     'bootstrapSelectCSS': {
         'path': 'resources/bootstrap-select/{version}/css/bootstrap-select.min.css',
@@ -282,6 +292,15 @@ var resources = {
         'path': 'resources/bootstrap-3-typeahead/{version}/bootstrap3-typeahead.min.jsm',
         'type': 'application/javascript'
     },
+    // BootstrapVue
+    'bootstrapVueJS': {
+        'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.jsm',
+        'type': 'application/javascript'
+    },
+    'bootstrapVueCSS': {
+        'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css',
+        'type': 'text/css'
+    },
     // Chart.js
     'chartJs': {
         'path': 'resources/chart.js/{version}/Chart.bundle.min.jsm',
@@ -290,6 +309,11 @@ var resources = {
     'chartJsCSS': {
         'path': 'resources/chart.js/{version}/Chart.min.css',
         'type': 'text/css'
+    },
+    // chosen
+    'chosen': {
+        'path': 'resources/chosen/{version}/chosen.jquery.min.jsm',
+        'type': 'application/javascript'
     },
     // clipboard.js
     'clipboardJS': {
@@ -396,7 +420,7 @@ var resources = {
         'type': 'text/css'
     },
     'fontawesome5CSSv4shims': {
-        'path': 'resources/fontawesome/{version}/css/v4-shims.css',
+        'path': 'resources/fontawesome/{version}/css/v4-shims.min.css',
         'type': 'text/css'
     },
     'fontawesome5JS': {
@@ -559,6 +583,11 @@ var resources = {
         'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',
         'type': 'application/javascript'
     },
+    // knockout
+    'knockout': {
+        'path': 'resources/knockout/{version}/knockout-latest.min.jsm',
+        'type': 'application/javascript'
+    },
     // lazysizes
     'lazysizes': {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm',
@@ -670,6 +699,11 @@ var resources = {
     },
     'mootoolsYui': {
         'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
+        'type': 'application/javascript'
+    },
+    // noUiSlider
+    'noUiSlider': {
+        'path': 'resources/noUiSlider/{version}/nouislider.min.jsm',
         'type': 'application/javascript'
     },
     // NVD3 [Deprecated]
@@ -880,7 +914,7 @@ var resources = {
     },
     // socket.io
     'socketIO': {
-        'path': 'resources/socket.io/{version}/socket.io.jsm',
+        'path': 'resources/socket.io/{version}/socket.io.min.jsm',
         'type': 'application/javascript'
     },
     // spin.js

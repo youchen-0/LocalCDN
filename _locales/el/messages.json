@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Εισαγωγή διευθύνσεων στις επιτρεπόμενες. Διαχωρίστε πολλαπλές καταχωρήσεις με ερωτηματικά (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Για προχωρημένους",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Εισαγωγή τομέων για διαχείριση ή αγνόηση από το φίλτρο HTML. Διαχώρισε πολλαπλές εισαγωγές με ερωτηματικά (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Εφαρμογή φίλτρου HTML για αυτούς τους τομείς:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Διαχώρισε τις πολλαπλές καταχωρίσεις με ερωτηματικά (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Βασικό",

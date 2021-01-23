@@ -48,8 +48,8 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Masukkan domain ke daftar putih. Pisahkan entri dengan titik koma (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "message": "Masukkan domain ke daftar putih. 1 entri per baris.",
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Lanjutan",
@@ -112,8 +112,8 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Masukkan domain yang terdampak atau diabaikan oleh filter HTML. Pisahkan beberapa entri dengan titik koma (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "message": "Masukkan domain yang terdampak atau diabaikan oleh filter HTML. 1 entri per baris.",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Terapkan filter HTML untuk domain ini:",
@@ -176,8 +176,8 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Domain ini diizinkan untuk memuat Google Fonts. Pisahkan beberapa entri dengan titik-koma (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "message": "Domain ini diizinkan untuk memuat Google Fonts. 1 entri per baris.",
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Dasar",

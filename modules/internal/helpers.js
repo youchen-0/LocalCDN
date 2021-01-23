@@ -75,7 +75,7 @@ helpers.languageIsFullySupported = function (language) {
     supportedLanguages = [
         'ar','bg','cs','da','de','el','en','en_CA','en_US','eo','es','et','fi',
         'fr','he','hr','hu','id','is','it','ja','kn','ko','lb','lt',
-        'nb_NO','nl','pl','pt','pt_BR','pt_PT','ro','ru','sr','sv','tl',
+        'nb_NO','nl','pl','pt','pt_BR','pt_PT','ro','ru','sk','sr','sv','tl',
         'tr','zh_Hans','zh_Hant'
     ];
 
@@ -89,13 +89,7 @@ helpers.languageIsFullySupported = function (language) {
 };
 
 helpers.normalizeDomain = function (domain) {
-    domain = domain.toLowerCase().trim();
-
-    if (domain.startsWith(Address.WWW_PREFIX)) {
-        domain = domain.slice(Address.WWW_PREFIX.length);
-    }
-
-    return domain;
+    return domain.toLowerCase().trim();
 };
 
 helpers.extractDomainFromUrl = function (url, normalize) {
@@ -124,6 +118,29 @@ helpers.extractDomainFromUrl = function (url, normalize) {
     }
 
     return extractedDomain;
+};
+
+helpers.getWildcard = function(initiatorDomain) {
+    let domain = initiatorDomain.split(".");
+
+    if (domain.length > 2) {
+        domain[0] = '*';
+        domain = domain.join().replace(/,/g, '.');
+        return domain;
+    }
+
+};
+
+helpers.checkAllowlisted = function(domain) {
+    let domainWithoutPrefix, wildcard, list;
+
+    if (domain.startsWith(Address.WWW_PREFIX)) {
+        domainWithoutPrefix = domain.slice(Address.WWW_PREFIX.length);
+    }
+    wildcard = helpers.getWildcard(domain);
+    list = requestAnalyzer.allowlistedDomains;
+
+    return list[domain] || list[domainWithoutPrefix] || list[wildcard] || list[domainWithoutPrefix];
 };
 
 helpers.extractFilenameFromPath = function (path) {
@@ -171,14 +188,6 @@ helpers.determineScriptDirection = function (language) {
 helpers.formatNumber = function (number) {
     if (typeof number === 'number') {
         return number.toLocaleString();
-    }
-};
-
-helpers.formatVersion = function (version) {
-    if (version.indexOf('beta') === -1) {
-        return version;
-    } else {
-        return 'BETA';
     }
 };
 

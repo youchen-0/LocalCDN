@@ -94,6 +94,11 @@ body {
     margin-right: 10px;
 }
 
+.monoblock {
+    font-family: monospace;
+    font-style: normal;
+}
+
 /**
  * Fonts
  */

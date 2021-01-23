@@ -170,6 +170,12 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/bootstrap/fonts/' + helpers.extractFilenameFromPath(channelPath),
             'bundle': 'Bootstrap (Fonts)'
         };
+    } else if (channelHost + channelPath === 'cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js') {
+        return {
+            'source': channelHost,
+            'path': 'resources/js-cookie/latest/js.cookie.min.jsm',
+            'bundle': 'JSCookies'
+        };
     } else {
         return false;
     }

@@ -48,8 +48,8 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "输入要禁用 LocalCDN 的域名。用分号 (;) 分隔多项。",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "message": "此处输入要禁用 LocalCDN 的域名。每行一个域名。",
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "高级",
@@ -112,8 +112,8 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "输入 HTML 过滤器要处理或忽略的域。使用分号 (;) 分隔多项。",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "message": "输入 HTML 过滤器要处理或忽略的域。每行一个域名。",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "对这些域应用 HTML 过滤器：",
@@ -176,8 +176,8 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "允许这些域名加载 Google Fonts。用分号 (;) 分隔多项。",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "message": "允许这些域名加载 Google Fonts。每行一个域名。",
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "基础",

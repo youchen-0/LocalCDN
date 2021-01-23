@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Защищает Вас от отслеживания через «бесплатные», централизованные CDN.",
+        "message": "Защищает от отслеживания через CDN (сети доставки контента) перенаправляя запросы на локальное хранилище.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,8 +48,8 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Введите домены, на которых отключен LocalCDN. Разделяйте несколько записей точкой с запятой (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "message": "Введите домены, где LocalCDN будет отключен. По одному на строку.",
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Дополнительно",
@@ -112,8 +112,8 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Введите домены, которые будут обрабатываться или игнорироваться фильтром HTML. Разделяйте несколько записей точкой с запятой (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "message": "Введите домены для обработки или игнорирования фильтром HTML. По одному на строку.",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Применять фильтр HTML к этим доменам:",
@@ -172,12 +172,12 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Вы уверены, что хотите удалить статистику?",
+        "message": "Вы уверены, что хотите удалить всю статистику?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Этим доменам разрешено загружать шрифты Google. Разделяйте несколько записей точкой с запятой (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "message": "Этим доменам разрешено загружать шрифты Google. По одному на строку.",
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Базовый",

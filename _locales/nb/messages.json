@@ -48,8 +48,8 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Skriv inn domener for å slå av LocalCDN der. Skill flere oppføringer med semikolon (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "message": "Skriv inn domener LocalCDN skal slås av for. Én oppføring per linje.",
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Avansert",
@@ -112,8 +112,8 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Skriv inn domener som vil bli behandlet eller ignorert av HTML-filteret. Skill flere oppføringer med semikolon (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+        "message": "Skriv inn domener som vil bli behandlet eller ignorert av HTML-filteret. En oppføring per linje.",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Bruk HTML-filter på disse domenene:",
@@ -172,12 +172,12 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Er du sikker på at du vil slette statistikken?",
+        "message": "Er du sikker på at du vil slette all statistikk?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Disse domenene tillates å laste Google Fonts. Skill flere oppføringer med semikolon (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "message": "Disse domenene tillates å laste Google Fonts. En oppføring per linje.",
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Generelt",

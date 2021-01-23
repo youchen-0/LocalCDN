@@ -48,8 +48,8 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Gib zu ignorierende Domains an. Trenne mehrere Einträge durch Semikolons (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "message": "Gib zu ignorierende Domains an. Einen Eintrag pro Zeile.",
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Erweitert",
@@ -112,8 +112,8 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Gib die Domains an, die vom HTML-Filter behandelt oder ignoriert werden sollen. Trenne mehrere Einträge durch Semikolons (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;). Default: Apply HTML filter only for these domains."
+        "message": "Gib die Domains an, die vom HTML-Filter behandelt oder ignoriert werden sollen. Ein Eintrag pro Zeile.",
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "HTML-Filter für diese Domains anwenden:",
@@ -172,12 +172,12 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Bist du sicher, dass du die gesamte Statistiken löschen möchtest?",
+        "message": "Bist du sicher, dass du die gesamte Statistik löschen möchtest?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Diese Domains dürfen Google-Schriften laden. Trenne mehrere Einträge durch Semikolons (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "message": "Diese Domains dürfen Google-Schriften laden. Ein Eintrag pro Zeile.",
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Allgemein",

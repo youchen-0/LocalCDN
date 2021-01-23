@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Introduza os domínios para desativar o LocalCDN. Separe várias entradas com ponto e vírgula (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Avançado",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Entre os domínios que irão ser usados ou ignorados pelo filtro HTML. Separe múltiplas entradas com ponto e vírgula (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Aplique o filtro HTML para estes domínios:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Estes domínios são permitidos para carregar Google Fonts. Separe várias entradas com ponto e vírgula (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Básico",

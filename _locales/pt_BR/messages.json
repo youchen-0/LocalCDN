@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "Lhe protege de rastreamento feito usando centrais de disponibilização de conteúdo(CDNs) redirecionando para recursos locais.",
+        "message": "Te protege de rastreamento feito usando CDNs (Redes de Fornecimento de Conteúdo), redirecionando para recursos locais.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Total de injeções locais de recursos de Redes de Distribuição de Conteúdo desde a instalação.",
+        "message": "Total de injeções locais de recursos da Rede de Fornecimento de Conteúdo desde a instalação.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -16,15 +16,15 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Mostra o total de injeções de recursos no ícone do complemento.",
+        "message": "Mostra o número de recursos injetados no ícone da extensão.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Bloquear requisições a recursos faltosos",
+        "message": "Bloquear solicitações de recursos ausentes",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Cancela requisições interceptadas se o recurso necessário não está disponível localmente.",
+        "message": "Cancela solicitações interceptadas se o recurso necessário não está disponível localmente.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
@@ -49,7 +49,7 @@
     },
     "allowlistedDomainsDescription": {
         "message": "Digite os domínios para desabilitar o LocalCDN neles. Separe múltiplos domínios com ponto e vírgula (;).",
-        "description": "Enter domains to disable LocalCDN there. Separate multiple entries with semi-colons (;)."
+        "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
         "message": "Avançado",
@@ -113,7 +113,7 @@
     },
     "htmlFilterDomainsDescription": {
         "message": "Entre os domínios que irão ser usados ou ignorados pelo filtro HTML. Separe múltiplas entradas com ponto e vírgula (;).",
-        "description": "Enter the domains to be handled or ignored by the HTML filter. Separate multiple entries with semi-colons (;)."
+        "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
         "message": "Aplique o filtro HTML para esses domínios:",
@@ -177,7 +177,7 @@
     },
     "labelDomainsAllowlistGoogleFonts": {
         "message": "Estes domínios são permitidos para carregar Google Fonts. Separe várias entradas com ponto e vírgula (;).",
-        "description": "These domains are allowed to load Google Fonts. Separate multiple entries with semi-colons (;)."
+        "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
         "message": "Básico",
