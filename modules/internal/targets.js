@@ -407,6 +407,8 @@ targets.setLastVersion = function (type, version) {
         return '1.8.1';
     } else if (type.startsWith('/slick-lightbox/0.')) {
         return '0.2.12';
+    } else if (type.startsWith('/slider-pro/1.')) {
+        return '1.5.0';
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.4.0';
     } else if (type.startsWith('/socket.io/3.')) {
@@ -482,6 +484,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.sliderPro.min.js': 'Slider Pro (JS)',
     'knockout-latest.min.jsm': 'Knockout',
     'bootstrap-multiselect.min.jsm': 'Bootstrap Multiselect',
     'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',
