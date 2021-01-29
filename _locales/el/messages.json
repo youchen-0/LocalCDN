@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Εισαγωγή διευθύνσεων στις επιτρεπόμενες. Διαχωρίστε πολλαπλές καταχωρήσεις με ερωτηματικά (;).",
+        "message": "Εισαγωγή διευθύνσεων στις επιτρεπόμενες. Μία καταχώριση ανά γραμμή.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Εισαγωγή τομέων για διαχείριση ή αγνόηση από το φίλτρο HTML. Διαχώρισε πολλαπλές εισαγωγές με ερωτηματικά (;).",
+        "message": "Εισαγωγή τομέων για διαχείριση ή αγνόηση από το φίλτρο HTML. Μία καταχώριση ανά γραμμή.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Διαχώρισε τις πολλαπλές καταχωρίσεις με ερωτηματικά (;).",
+        "message": "Σε αυτούς τους τομείς επιτρέπεται η φόρτωση Γραμματοσειρών της Google. Μία καταχώριση ανά γραμμή.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
