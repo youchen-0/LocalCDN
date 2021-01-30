@@ -73,10 +73,11 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
             encoder = new TextEncoder();
             isFirstData = true;
             filter = browser.webRequest.filterResponseData(details.requestId);
+            let data = [];
 
             header.value = 'text/html; charset=UTF-8';
 
-            //Note that this will not work if the '<script crossorigin="anonymous" src="dfgsfgd.com">' string is divided into two chunks, but we want to flush this data asap.
+            // Note that should work if the '<script crossorigin="anonymous" src="dfgsfgd.com">' string is divided into two chunks.
             filter.ondata = evt => {
                 if (isFirstData) {
                     if (!charset) {
@@ -87,19 +88,25 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                     }
                     decoder = new TextDecoder(charset);
                 }
+                isFirstData = false;
+
+                data.push(evt.data);
+            }
+
+            filter.onstop = evt => {
+                let str = '';
+                for (let buffer of data) {
+                    str += decoder.decode(buffer, {stream: true});
+                }
+                str += decoder.decode(); // end-of-stream
+
                 //remove crossorigin and integrity attributes
-                let str = decoder.decode(evt.data, {stream: true}).replace(/<(link|script)[^>]+>/ig, m => {
+                str = str.replace(/<(link|script)[^>]+>/ig, m => {
                     if (cdnDomainsRE.test(m)) {
                         return m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=>\s]+|)/ig, '');
                     }
                     return m;
                 });
-                filter.write(encoder.encode(str));
-                isFirstData = false;
-            }
-
-            filter.onstop = evt => {
-                let str = decoder.decode(); //end-of-stream
                 filter.write(encoder.encode(str));
                 filter.close();
             }
