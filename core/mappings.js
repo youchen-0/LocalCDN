@@ -257,6 +257,7 @@ mappings.cdn = {
             'cookieconsent2/{version}/cookieconsent.css': resources.cookieconsent2CSS,
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
+            'dayjs/{version}/dayjs.': resources.dayjs,
             'dexie/{version}/dexie.': resources.dexie,
             'docsearch.js/{version}/docsearch.min.js': resources.docsearchJS,
             'docsearch.js/{version}/docsearch.js': resources.docsearchJS,

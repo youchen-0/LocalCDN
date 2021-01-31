@@ -180,6 +180,8 @@ targets.setLastVersion = function (type, version) {
         return '6.5.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
+    } else if (type.startsWith('/dayjs/1.')) {
+        return '1.10.4';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest') ) {
         return '3.0.3';
     } else if (type.startsWith('/docsearch.js/2.')) {
@@ -486,6 +488,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'dayjs.min.jsm': 'Day.js',
     'jquery.validate.unobtrusive.min.jsm': 'jQuery Validate Unobtrusive',
     'jquery.sliderPro.min.js': 'Slider Pro (JS)',
     'knockout-latest.min.jsm': 'Knockout',

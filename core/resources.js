@@ -339,6 +339,11 @@ var resources = {
         'path': 'resources/d3-legend/{version}/d3-legend.min.jsm',
         'type': 'application/javascript'
     },
+    // dayjs
+    'dayjs': {
+        'path': 'resources/dayjs/{version}/dayjs.min.jsm',
+        'type': 'application/javascript'
+    },
     // dexie
     'dexie': {
         'path': 'resources/dexie/{version}/dexie.min.jsm',
