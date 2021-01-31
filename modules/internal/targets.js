@@ -283,6 +283,8 @@ targets.setLastVersion = function (type, version) {
         return '1.8.0';
     } else if (type.startsWith('/jquery-jeditable/2.')) {
         return '2.0.18';
+    } else if (type.startsWith('/jquery.scrollbar/0.')) {
+        return '0.2.11';
     } else if (type.startsWith('/jquery-validation-unobtrusive/3.')) {
         return '3.2.11';
     } else if (type.startsWith('tablesorter/2.')) {
@@ -488,6 +490,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.scrollbar.min.jsm': 'jQuery Scrollbar',
     'dayjs.min.jsm': 'Day.js',
     'jquery.validate.unobtrusive.min.jsm': 'jQuery Validate Unobtrusive',
     'jquery.sliderPro.min.js': 'Slider Pro (JS)',

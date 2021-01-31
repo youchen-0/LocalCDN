@@ -544,6 +544,11 @@ var resources = {
         'path': 'resources/jquery-mousewheel/{version}/jquery.mousewheel.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Scrollbar [Deprecated]
+    'jQueryScrollbar': {
+        'path': 'resources/jquery.scrollbar/{version}/jquery.scrollbar.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Tablesorter
     'jQueryTablesorter': {
         'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
