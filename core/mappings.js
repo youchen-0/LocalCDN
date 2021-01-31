@@ -303,6 +303,7 @@ mappings.cdn = {
             'jquery-modal/{version}/jquery.modal.css': resources.jQueryModalCSS,
             'jquery-modal/{version}/jquery.modal.min.css': resources.jQueryModalCSS,
             'jquery-mousewheel/{version}/jquery.mousewheel.min.js': resources.jqueryMousewheelJS,
+            'jquery-cookie/{version}/jquery.cookie.': resources.jqueryCookie,
             'jquery.scrollbar/{version}/jquery.scrollbar.min.js': resources.jQueryScrollbar,
             'jquery.scrollbar/{version}/jquery.scrollbar.js': resources.jQueryScrollbar,
             'jquery-validation-unobtrusive/{version}/jquery.validate.unobtrusive.': resources.jQueryValidationUnobtrusive,

@@ -500,6 +500,11 @@ var resources = {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
         'type': 'application/javascript'
     },
+    // jquery.cookie [Deprecated]
+    'jqueryCookie': {
+        'path': 'resources/jquery-cookie/{version}/jquery.cookie.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery-csv
     'jQueryCSV': {
         'path': 'resources/jquery-csv/{version}/jquery.csv.min.jsm',

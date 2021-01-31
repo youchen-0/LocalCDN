@@ -259,6 +259,8 @@ targets.setLastVersion = function (type, version) {
         else return '1.12.1'; // >= 1.8.19
     } else if (type.startsWith('/jquery.blockUI/2.')) {
         return '2.70';
+    } else if (type.startsWith('/jquery-cookie/1.')) {
+        return '1.4.1';
     } else if (type.startsWith('/jquery-csv/1.')) {
         return '1.0.11';
     } else if (type.startsWith('/jquery-easing/1.')) {
@@ -490,6 +492,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.cookie.min.jsm': 'jquery-cookie',
     'jquery.scrollbar.min.jsm': 'jQuery Scrollbar',
     'dayjs.min.jsm': 'Day.js',
     'jquery.validate.unobtrusive.min.jsm': 'jQuery Validate Unobtrusive',
