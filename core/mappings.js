@@ -73,6 +73,7 @@ mappings.cdn = {
             'jQuery/jquery-{version}.': resources.jQuery,
             'jquery/jquery-{version}.': resources.jQuery,
             'jquery.validate/{version}/jquery.validate.': resources.jqueryValidationPlugin,
+            'jquery.validation.unobtrusive/{version}/jquery.validate.unobtrusive.': resources.jQueryValidationUnobtrusive,
             'modernizr/modernizr-{version}.': resources.modernizr,
             'bootstrap/{version}/bootstrap.min.': resources.bootstrapJS
         }
@@ -301,6 +302,7 @@ mappings.cdn = {
             'jquery-modal/{version}/jquery.modal.css': resources.jQueryModalCSS,
             'jquery-modal/{version}/jquery.modal.min.css': resources.jQueryModalCSS,
             'jquery-mousewheel/{version}/jquery.mousewheel.min.js': resources.jqueryMousewheelJS,
+            'jquery-validation-unobtrusive/{version}/jquery.validate.unobtrusive.': resources.jQueryValidationUnobtrusive,
             'jScrollPane/{version}/script/jquery.jscrollpane.': resources.jScrollPane,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'knockout/{version}/knockout': resources.knockout,

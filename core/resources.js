@@ -578,6 +578,11 @@ var resources = {
         'path': 'resources/jquery-mobile/{version}/jquery.mobile.min.jsm',
         'type': 'application/javascript'
     },
+    // jquery-validation-unobtrusive
+    'jQueryValidationUnobtrusive': {
+        'path': 'resources/jquery-validation-unobtrusive/{version}/jquery.validate.unobtrusive.min.jsm',
+        'type': 'application/javascript'
+    },
     // js-cookie [Deprecated]
     'jscookie': {
         'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',

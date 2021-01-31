@@ -281,6 +281,8 @@ targets.setLastVersion = function (type, version) {
         return '1.8.0';
     } else if (type.startsWith('/jquery-jeditable/2.')) {
         return '2.0.18';
+    } else if (type.startsWith('/jquery-validation-unobtrusive/3.')) {
+        return '3.2.11';
     } else if (type.startsWith('tablesorter/2.')) {
         return '2.31.3';
     } else if (type.startsWith('/jquery-modal/0.')) {
@@ -484,6 +486,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.validate.unobtrusive.min.jsm': 'jQuery Validate Unobtrusive',
     'jquery.sliderPro.min.js': 'Slider Pro (JS)',
     'knockout-latest.min.jsm': 'Knockout',
     'bootstrap-multiselect.min.jsm': 'Bootstrap Multiselect',
