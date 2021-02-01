@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "通过重定向到本地资源，保护您免遭通过CDNs(内容交付网络)进行的跟踪。",
+        "message": "通过重定向到本地资源，保护您免于 CDN (内容分发网络)的跟踪。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "自安装以来本地内容分发网络资源注入数量。",
+        "message": "自安装以来本地 CDN 资源的注入数量。",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -24,7 +24,7 @@
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "如果请求的资源在本地不可用，则取消被拦截的请求。",
+        "message": "如果请求的资源在本地不可用，则取消当前被拦截的请求。",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
@@ -32,7 +32,7 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "避免本应禁止的请求发到网络。",
+        "message": "防止误发被屏蔽的请求到CDN。",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
@@ -40,15 +40,15 @@
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "从被允许的 CDN 请求中擦除敏感数据以保护隐私。",
+        "message": "从被允许的 CDN 请求中擦除敏感数据，以保护隐私。",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "排除要检查的域名:",
+        "message": "在以下域名中暂停 LocalCDN:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "此处输入要禁用 LocalCDN 的域名。每行一个域名。",
+        "message": "请输入要禁用 LocalCDN 的域名。每行一个。",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -60,11 +60,11 @@
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "如果你正在使用一个广告拦截器，你可以在这里生成规则。你必须在你的广告拦截器中手动添加这些规则。",
+        "message": "如果你正在使用一个广告拦截器，你可以在这里生成规则，但必须手动添加到广告拦截器中。",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "最后更新：",
+        "message": "上次更新：",
         "description": "Last update:"
     },
     "copyRuleSet": {
@@ -80,7 +80,7 @@
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "这个功能会破坏网站。不要让它处于启用状态，除非您准备手动将受影响的域添加到允许列表中。",
+        "message": "这个功能会破坏网站功能。除非您准备手动将受影响的域名添加到允许列表中，否则请勿开启。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -100,23 +100,23 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "启用此选项以始终应用 HTML 过滤器。列表中的域将被忽略。如果禁用此选项，则 HTML 过滤器仅应用于列表中的域。",
+        "message": "开启此选项会始终应用 HTML 过滤器，此时列表中的域名将被忽略；若禁用此选项，则 HTML 过滤器仅应用于此列表中的域名。",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "此功能可能会破坏网站。请注意 Wiki 页面上的信息。",
+        "message": "此功能可能会破坏网站。请阅读 Wiki 页面以了解更多信息。",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "不要将 HTML 过滤器应用于这些域：",
+        "message": "不要将 HTML 过滤器应用于以下域名：",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "输入 HTML 过滤器要处理或忽略的域。每行一个域名。",
+        "message": "输入 HTML 过滤器要处理或忽略的域名，每行一个。",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "对这些域应用 HTML 过滤器：",
+        "message": "对这些域名应用 HTML 过滤器：",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
@@ -124,11 +124,11 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "如果允许请求缺少资源，则不会阻止到 \"fonts.googleapis.com\" 的连接。启用此选项可阻止这些请求。",
+        "message": "如果允许加载缺少的资源，则不会阻止到 \"fonts.googleapis.com\" 的连接。开启此选项可阻止这些请求。",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "选择此扩展程序的图标",
+        "message": "选择一个此扩展程序的图标",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
@@ -136,7 +136,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "此功能当前处于实验阶段。无数据传输。全部在本地设备上。",
+        "message": "此功能当前正处于实验阶段。数据全部存储在本地，不会外传。",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -164,7 +164,7 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "平均（替换每天）",
+        "message": "平均（每天的替换）",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "允许这些域名加载 Google Fonts。每行一个域名。",
+        "message": "允许以下域名加载 Google Fonts，每行一个。",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -236,7 +236,7 @@
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "仅当有新的CDN和规则时",
+        "message": "仅当有新的 CDN 和规则时",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
