@@ -66,7 +66,7 @@ targets.setLastVersion = function (type, version) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
         return '4.3.0';
-    } else if (type.startsWith('/angularjs/1.')) {
+    } else if (type.startsWith('/angular.js/1.')) {
         if (helpers.compareVersion('1.2.19', version)) return '1.2.19'; // <= v1.2.19
         else if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
         else if (helpers.compareVersion('1.3.20', version)) return '1.3.20'; // > 1.2.32 to <= 1.3.20
