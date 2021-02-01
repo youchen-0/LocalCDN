@@ -76,10 +76,14 @@ targets.setLastVersion = function (type, version) {
         else return '1.7.9'; // >= 1.6.11
     } else if (type.startsWith('/angularjs-slider/6.')) {
         return '6.7.0';
-    } else if (type.startsWith('/angularjs-toaster/2.')) {
-        return '2.2.0';
     } else if (type.startsWith('/angularjs-toaster/0.')) {
         return '0.4.18';
+    } else if (type.startsWith('/angularjs-toaster/1.')) {
+        return '1.2.0';
+    } else if (type.startsWith('/angularjs-toaster/2.')) {
+        return '2.2.0';
+    } else if (type.startsWith('/angularjs-toaster/3.')) {
+        return '3.0.0';
     } else if (type.startsWith('/angular-bootstrap-colorpicker/3.')) {
         return '3.0.32';
     } else if (type.startsWith('/angular-payments@1.')) {
