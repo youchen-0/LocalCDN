@@ -166,7 +166,7 @@ targets.setLastVersion = function (type, version) {
         return '2.21.2';
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
-    } else if (type.startsWith('/chart.js/2.')) {
+    } else if (type.startsWith('/Chart.js/2.')) {
         return '2.9.4';
     } else if (type.startsWith('/chosen/1.')) {
         return '1.8.7';

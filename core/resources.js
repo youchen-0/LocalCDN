@@ -303,11 +303,11 @@ var resources = {
     },
     // Chart.js
     'chartJs': {
-        'path': 'resources/chart.js/{version}/Chart.bundle.min.jsm',
+        'path': 'resources/Chart.js/{version}/Chart.bundle.min.jsm',
         'type': 'application/javascript'
     },
     'chartJsCSS': {
-        'path': 'resources/chart.js/{version}/Chart.min.css',
+        'path': 'resources/Chart.js/{version}/Chart.min.css',
         'type': 'text/css'
     },
     // chosen
