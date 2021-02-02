@@ -959,11 +959,11 @@ var resources = {
     },
     // Swiper
     'swiperJS': {
-        'path': 'resources/swiper/{version}/js/swiper.min.jsm',
+        'path': 'resources/Swiper/{version}/js/swiper.min.jsm',
         'type': 'application/javascript'
     },
     'swiperCSS': {
-        'path': 'resources/swiper/{version}/css/swiper.min.css',
+        'path': 'resources/Swiper/{version}/css/swiper.min.css',
         'type': 'text/css'
     },
     // Tether JS [Deprecated]

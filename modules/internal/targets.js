@@ -443,13 +443,13 @@ targets.setLastVersion = function (type, version) {
         return '2.0.4';
     } else if (type.startsWith('/swfobject/2.')) {
         return '2.2';
-    } else if (type.startsWith('/swiper/3.')) {
+    } else if (type.startsWith('/Swiper/3.')) {
         return '3.4.2';
-    } else if (type.startsWith('/swiper/4.')) {
+    } else if (type.startsWith('/Swiper/4.')) {
         return '4.5.1';
-    } else if (type.startsWith('/swiper/5.')) {
+    } else if (type.startsWith('/Swiper/5.')) {
         return '5.4.5';
-    } else if (type.startsWith('/swiper/6.') || type.startsWith('/swiper/')) {
+    } else if (type.startsWith('/Swiper/6.') || type.startsWith('/Swiper/')) {
         return '6.4.10';
     } else if (type.startsWith('/tether/1.')) {
         return '1.4.7';
