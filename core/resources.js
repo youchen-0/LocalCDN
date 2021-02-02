@@ -615,7 +615,7 @@ var resources = {
     },
     // libsodium.js
     'libsodiumJS': {
-        'path': 'resources/libsodium.js/{version}/sodium.min.jsm',
+        'path': 'resources/libsodium-wrappers/{version}/sodium.min.jsm',
         'type': 'application/javascript'
     },
     // lightGallery

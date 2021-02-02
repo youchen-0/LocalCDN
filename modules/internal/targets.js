@@ -315,7 +315,7 @@ targets.setLastVersion = function (type, version) {
         return '5.3.0';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
         return '1.9.4';
-    } else if (type.startsWith('/libsodium.js/0.')) {
+    } else if (type.startsWith('/libsodium-wrappers/0.')) {
         return '0.5.4';
     } else if (type.startsWith('/lightgallery/1.')) {
         return '1.10.0';
