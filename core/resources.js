@@ -417,23 +417,23 @@ var resources = {
     },
     // Font Awesome
     'fontawesome': {
-        'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
+        'path': 'resources/font-awesome/{version}/css/font-awesome.min.css',
         'type': 'text/css'
     },
     'fontawesome5CSS': {
-        'path': 'resources/fontawesome/{version}/css/all.min.css',
+        'path': 'resources/font-awesome/{version}/css/all.min.css',
         'type': 'text/css'
     },
     'fontawesome5CSSv4shims': {
-        'path': 'resources/fontawesome/{version}/css/v4-shims.min.css',
+        'path': 'resources/font-awesome/{version}/css/v4-shims.min.css',
         'type': 'text/css'
     },
     'fontawesome5JS': {
-        'path': 'resources/fontawesome/{version}/js/all.min.jsm',
+        'path': 'resources/font-awesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
     },
     'fontawesomeFontsOnly': {
-        'path': 'resources/fontawesome/{version}/fonts/'
+        'path': 'resources/font-awesome/{version}/fonts/'
     },
     // GSAP
     'gsapBundle': {

@@ -188,7 +188,7 @@ statistics._displayNameOfFramework = function (str, type) {
 
         if (filename === 'Unknown') {
             filename = targets.determineBundle(str);
-            if (filename === '' && str.startsWith('resources/fontawesome/')) {
+            if (filename === '' && str.startsWith('resources/font-awesome/')) {
                 filename = 'Font Awesome (Fonts)'
             }
         }

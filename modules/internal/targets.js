@@ -216,11 +216,11 @@ targets.setLastVersion = function (type, version) {
         return '3.5.7';
     } else if (type.startsWith('/flv.js/')) {
         return '1.5.0';
-    } else if (type.startsWith('/fontawesome/3.')) {
+    } else if (type.startsWith('/font-awesome/3.')) {
         return '3.2.1';
-    } else if (type.startsWith('/fontawesome/4.')) {
+    } else if (type.startsWith('/font-awesome/4.')) {
         return '4.7.0';
-    } else if (type.startsWith('/fontawesome/5.')) {
+    } else if (type.startsWith('/font-awesome/5.')) {
         return '5.15.2';
     } else if (type.startsWith('/gsap/1.')) {
         return '1.20.5';
