@@ -551,7 +551,7 @@ var resources = {
     },
     // jQuery Tablesorter
     'jQueryTablesorter': {
-        'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
+        'path': 'resources/jquery.tablesorter/{version}/jquery.tablesorter.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery Tooltipster

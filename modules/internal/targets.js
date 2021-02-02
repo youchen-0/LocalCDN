@@ -297,7 +297,7 @@ targets.setLastVersion = function (type, version) {
         return '0.2.11';
     } else if (type.startsWith('/jquery-validation-unobtrusive/3.')) {
         return '3.2.11';
-    } else if (type.startsWith('tablesorter/2.')) {
+    } else if (type.startsWith('/jquery.tablesorter/2.')) {
         return '2.31.3';
     } else if (type.startsWith('/jquery-modal/0.')) {
         return '0.9.2';
