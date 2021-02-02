@@ -531,7 +531,6 @@ const ListOfFiles = {
     'magnific-popup.min.css': 'magnific-popup.js (CSS)',
     'pagination.min.css': 'Pagination.js (CSS)',
     'pagination.min.jsm': 'Pagination.js (JS)',
-    'loader.jsm': 'Google Charts',
     'bootstrap-table.min.jsm': 'Bootstrap Table (JS)',
     'bootstrap-table.min.css': 'Bootstrap Table (CSS)',
     'jquery.matchHeight-min.jsm': 'jquery.matchHeight.js',

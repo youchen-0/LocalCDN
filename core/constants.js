@@ -244,14 +244,12 @@ const CDNs = {
     'cdn.bootcdn.net': 'BootCDN #2',
     'vjs.zencdn.net': 'Video.js CDN',
     'cdn.plyr.io': 'Plyr CDN',
-    'www.gstatic.com': 'gstatic.com',
     'cdn.materialdesignicons.com': 'MaterialDesign',
     'cdn.ravenjs.com': 'Raven.js'
 };
 
 const IgnoredHost = {
     'fonts.googleapis.com': true,
-    'www.gstatic.com': true
 };
 
 // Supported charsets for TextDecoder()
