@@ -289,9 +289,9 @@ targets.setLastVersion = function (type, version) {
         return '2.2.2';
     } else if (type.startsWith('/jquery-validate/1.')) {
         return '1.19.3';
-    } else if (type.startsWith('/jquery-jeditable/1.')) {
+    } else if (type.startsWith('/jeditable.js/1.')) {
         return '1.8.0';
-    } else if (type.startsWith('/jquery-jeditable/2.')) {
+    } else if (type.startsWith('/jeditable.js/2.')) {
         return '2.0.18';
     } else if (type.startsWith('/jquery.scrollbar/0.')) {
         return '0.2.11';

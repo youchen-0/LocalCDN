@@ -472,7 +472,7 @@ var resources = {
     },
     // jeditableJS
     'jeditableJS': {
-        'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
+        'path': 'resources/jeditable.js/{version}/jquery.jeditable.min.jsm',
         'type': 'application/javascript'
     },
     // Jets.js [Deprecated]
