@@ -151,7 +151,7 @@ var resources = {
     },
     // Angular Payments [Deprecated]
     'angularPayments': {
-        'path': 'resources/angular-payments/{version}/angular-payments.jsm',
+        'path': 'resources/zumper-angular-payments/{version}/angular-payments.jsm',
         'type': 'application/javascript'
     },
     // Angular Stripe Checkout [Deprecated]

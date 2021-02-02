@@ -88,7 +88,7 @@ targets.setLastVersion = function (type, version) {
         return '3.0.0';
     } else if (type.startsWith('/angular-bootstrap-colorpicker/3.')) {
         return '3.0.32';
-    } else if (type.startsWith('/angular-payments@1.')) {
+    } else if (type.startsWith('/zumper-angular-payments/1.')) {
         return '1.0.7';
     } else if (type.startsWith('/angular-stripe-checkout@5.')) {
         return '5.1.0';
