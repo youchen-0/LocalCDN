@@ -690,11 +690,11 @@ var resources = {
     },
     // Modaal [Deprecated]
     'modaalJS': {
-        'path': 'resources/modaal/{version}/modaal.min.jsm',
+        'path': 'resources/Modaal/{version}/modaal.min.jsm',
         'type': 'application/javascript'
     },
     'modaalCSS': {
-        'path': 'resources/modaal/{version}/modaal.min.css',
+        'path': 'resources/Modaal/{version}/modaal.min.css',
         'type': 'text/css'
     },
     // Modernizr

@@ -348,7 +348,7 @@ targets.setLastVersion = function (type, version) {
         return '0.100.2';
     } else if (type.startsWith('/mdb-ui-kit/3.')) {
         return '3.1.0';
-    } else if (type.startsWith('/modaal/0.')) {
+    } else if (type.startsWith('/Modaal/0.')) {
         return '0.4.4';
     } else if (type.startsWith('/modernizr/2.')) {
         return '2.8.3';
