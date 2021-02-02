@@ -218,15 +218,15 @@ var resources = {
     },
     // Bootstrap
     'bootstrapJS': {
-        'path': 'resources/bootstrap/{version}/bootstrap.min.jsm',
+        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
     'bootstrapCSS': {
-        'path': 'resources/bootstrap/{version}/bootstrap.min.css',
+        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
     'bootstrapFontsOnly': {
-        'path': 'resources/bootstrap/fonts/'
+        'path': 'resources/twitter-bootstrap/fonts/'
     },
     // Bootstrap Daterangepicker
     'bootstrapDaterangepicker': {
