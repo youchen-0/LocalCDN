@@ -212,7 +212,11 @@ const Links = {
     'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
     'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
     'FAQ': chrome.extension.getURL('pages/help/help.html'),
-    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
+    'FAQ_HTML_FILTER': chrome.extension.getURL('pages/help/help.html#html-filter'),
+    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html'),
+    'LOCALCDN_TEST': 'https://www.localcdn.org/test',
+    'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check?domain=',
+    'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/',
 };
 
 const CDNs = {
