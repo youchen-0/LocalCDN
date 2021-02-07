@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../style.css">
         <link rel="stylesheet" type="text/css" href="../base.css">
+        <link rel="stylesheet" type="text/css" href="help.css">
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
         <script src="../../modules/internal/helpers.js"></script>
@@ -20,6 +21,7 @@
                     <ul>
                         <li><a class="no-icon" href="#introduction">Introduction</a></li>
                         <li><a class="no-icon" href="#html-filter">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"?</a></li>
+                        <li><a class="no-icon" href="#rule-generator">Rule generator</a></li>
                         <li><a class="no-icon" href="#websites-issues">Some websites look strange or are not easy to use</a></li>
                         <li><a class="no-icon" href="#google-fonts">Why is there a "Block Google Fonts" option?</a></li>
                         <li><a class="no-icon" href="#statistics">What about the statistics? Is anything transferred to any servers?</a></li>
@@ -35,10 +37,51 @@
             <div id="html-filter" class="notice">
                 <div class="subtle-hint"><div class="topic-label">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</div>
                     <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these options.</p>
-                    <p><i>Why is it necessary to remove crossorigin and integrity attributes?</i></p>
-                    <p>The crossorigin attribute prevents the replacement because the source is no longer <code><b>cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js</b></code> but <code><b>moz-extension://UUID/resources/jquery/1.12.4</b></code>. crossorigin forces the browser to ignore other sources.</p>
+                    <p><em>Why is it necessary to remove crossorigin and integrity attributes?</em></p>
+                    <p>The crossorigin attribute prevents the replacement because the source is no longer <code><strong>cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js</strong></code> but <code><strong>moz-extension://UUID/resources/jquery/1.12.4</strong></code>. crossorigin forces the browser to ignore other sources.</p>
                     <p>To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won't include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different.</p>
                     <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
+                </div>
+            </div>
+            <div id="rule-generator" class="notice">
+                <div class="subtle-hint"><div class="topic-label">Rule generator</div>
+                    <p>If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections.</p>
+                    <p>If you do not want to add these rules, you must allow each CDN connection individually for each website.</p>
+                    <p>
+                        <u><strong>Only uBlock Origin:</strong></u> <br>
+                        These rules are only relevant in "medium" or "hard" mode, because it blocks all 3rd-party resources. They are not necessary in "default", "easy" or "very-easy" mode. For more information, please visit the uBlock Origin Wiki.
+                    </p>
+                    <table>
+                        <caption>Contact Information</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Icon</th>
+                                <th scope="col">Mode</th>
+                                <th scope="col">Rules useful</th>
+                                <th scope="col">uBlock Wiki</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="ublock-easy.png" alt="Default"></a></td>
+                                <td>Default/Easy</td>
+                                <td>No</td>
+                                <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode#very-easy-mode-details-" rel="nofollow">Link (github.com)</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="ublock-medium.png" alt="Medium"></a></td>
+                                <td>Medium</td>
+                                <td>Yes</td>
+                                <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode" rel="nofollow">Link (github.com)</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="ublock-hard.png" alt="Hard"></a></td>
+                                <td>Hard</td>
+                                <td>Yes</td>
+                                <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode" rel="nofollow">Link (github.com)</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div id="websites-issues" class="notice">
