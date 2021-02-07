@@ -26,29 +26,30 @@ var targets = {};
 
 targets.determineBundle = function (path) {
     path = path.replace('resources', '');
+    let val = '';
     if (path.startsWith('/findify')) {
-        return 'Findify';
+        val = 'Findify';
     } else if (path.startsWith('/bootstrap-datepicker')) {
-        return 'Bootstrap Datepicker';
+        val = 'Bootstrap Datepicker';
     } else if (path.startsWith('/jquery.lazy/')) {
-        return 'jQuery Lazy';
+        val = 'jQuery Lazy';
     } else if (path.startsWith('/waypoints/')) {
-        return 'Waypoints';
+        val = 'Waypoints';
     } else if (path.startsWith('/highlight.js/')) {
-        return 'highlight.js';
+        val = 'highlight.js';
     } else if (path.startsWith('/element-ui/')) {
-        return 'ElementUI';
+        val = 'ElementUI';
     } else if (path.startsWith('/select2/')) {
-        return 'Select2';
+        val = 'Select2';
     } else if (path.startsWith('/gsap/')) {
-        return 'GSAP';
+        val = 'GSAP';
     } else if (Regex.FONT_AWESOME_FONTS_ONLY.test(path)) {
-        return 'Font Awesome (Fonts)';
+        val = 'Font Awesome (Fonts)';
     } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(path)) {
-        return 'Bootstrap (Fonts)';
-    } else {
-        return '';
+        val = 'Bootstrap (Fonts)';
     }
+
+    return val === '' ? val : val + ' (Bundle)';
 };
 
 targets.setLastVersion = function (type, version) {
@@ -502,6 +503,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'highlight.min.jsm': 'highlight.js (Bundle)',
     'jquery.cookie.min.jsm': 'jquery-cookie',
     'jquery.scrollbar.min.jsm': 'jQuery Scrollbar',
     'dayjs.min.jsm': 'Day.js',
