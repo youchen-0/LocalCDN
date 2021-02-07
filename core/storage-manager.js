@@ -137,13 +137,13 @@ storageManager._validation = function (content) {
     let imported = {};
 
     // Delete old keys
-    if (typeof content.whitelistedDomains !== 'undefined') {
+    if (content.whitelistedDomains !== undefined) {
         content.allowlistedDomains = content.whitelistedDomains;
         delete content['whitelistedDomains'];
     }
 
     // Convert value of notifications
-    if (typeof content.hideReleaseNotes !== 'undefined') {
+    if (content.hideReleaseNotes !== undefined) {
         content.updateNotification = content.hideReleaseNotes ? 0 : 2;
         delete content['hideReleaseNotes'];
     }

@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Melindungi anda dari pelacakan melalui CDN (Content Delivery Networks) dengan mengalihkannya ke sumber lokal.",
+        "message": "Melindungi Anda dari pelacakan melalui CDN (Content Delivery Networks) dengan mengalihkannya ke sumber lokal.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Buat aturan untuk pemblokir iklan anda",
+        "message": "Buat aturan untuk pemblokir iklan Anda",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Jika anda menggunakan pemblokir iklan, anda bisa membuat aturannya di sini. Anda harus manambahkan aturan ini secara manual ke pemblokir iklan anda.",
+        "message": "Jika Anda menggunakan pemblokir iklan, Anda bisa membuat aturannya di sini. Anda harus manambahkan aturan ini secara manual ke pemblokir iklan Anda.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -80,7 +80,7 @@
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Fitur ini akan membuat situs web tidak bekerja dengan benar. Jangan membiarkannya aktif, kecuali jika anda siap menambahkan secara manual semua domain yang terdampak ke dalam daftar putih.",
+        "message": "Fitur ini akan membuat situs web tidak bekerja dengan benar. Jangan membiarkannya aktif, kecuali jika Anda siap menambahkan secara manual semua domain yang terdampak ke dalam daftar putih.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -136,7 +136,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Fungsi ini masih dalam tahap eksperimental. Tidak ada data yang dikirim. Semuanya lokal pada perangkat anda.",
+        "message": "Fungsi ini masih dalam tahap eksperimental. Tidak ada data yang dikirim. Semuanya lokal pada perangkat Anda.",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -172,7 +172,7 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Apakah anda yakin ingin menghapus semua statistik?",
+        "message": "Apakah Anda yakin ingin menghapus semua statistik?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {

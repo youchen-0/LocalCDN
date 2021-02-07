@@ -46,51 +46,51 @@ var resources = {
     },
     // AngularJS
     'angular': {
-    	'path': 'resources/angularjs/{version}/angular.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular.min.jsm',
     	'type': 'application/javascript'
     },
     'angularAnimate': {
-    	'path': 'resources/angularjs/{version}/angular-animate.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-animate.min.jsm',
     	'type': 'application/javascript'
     },
     'angularAria': {
-    	'path': 'resources/angularjs/{version}/angular-aria.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-aria.min.jsm',
     	'type': 'application/javascript'
     },
     'angularCookies': {
-    	'path': 'resources/angularjs/{version}/angular-cookies.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-cookies.min.jsm',
     	'type': 'application/javascript'
     },
     'angularLoader': {
-    	'path': 'resources/angularjs/{version}/angular-loader.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-loader.min.jsm',
     	'type': 'application/javascript'
     },
     'angularMessageFormat': {
-    	'path': 'resources/angularjs/{version}/angular-message-format.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-message-format.min.jsm',
     	'type': 'application/javascript'
     },
     'angularMessages': {
-    	'path': 'resources/angularjs/{version}/angular-messages.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-messages.min.jsm',
     	'type': 'application/javascript'
     },
     'angularParseExt': {
-    	'path': 'resources/angularjs/{version}/angular-parse-ext.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-parse-ext.min.jsm',
     	'type': 'application/javascript'
     },
     'angularResource': {
-    	'path': 'resources/angularjs/{version}/angular-resource.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-resource.min.jsm',
     	'type': 'application/javascript'
     },
     'angularRoute': {
-    	'path': 'resources/angularjs/{version}/angular-route.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-route.min.jsm',
     	'type': 'application/javascript'
     },
     'angularSanitize': {
-    	'path': 'resources/angularjs/{version}/angular-sanitize.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-sanitize.min.jsm',
     	'type': 'application/javascript'
     },
     'angularTouch': {
-    	'path': 'resources/angularjs/{version}/angular-touch.min.jsm',
+    	'path': 'resources/angular.js/{version}/angular-touch.min.jsm',
     	'type': 'application/javascript'
     },
     // angularMaterialDesign
@@ -151,7 +151,7 @@ var resources = {
     },
     // Angular Payments [Deprecated]
     'angularPayments': {
-        'path': 'resources/angular-payments/{version}/angular-payments.jsm',
+        'path': 'resources/zumper-angular-payments/{version}/angular-payments.jsm',
         'type': 'application/javascript'
     },
     // Angular Stripe Checkout [Deprecated]
@@ -218,15 +218,15 @@ var resources = {
     },
     // Bootstrap
     'bootstrapJS': {
-        'path': 'resources/bootstrap/{version}/bootstrap.min.jsm',
+        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.jsm',
         'type': 'application/javascript'
     },
     'bootstrapCSS': {
-        'path': 'resources/bootstrap/{version}/bootstrap.min.css',
+        'path': 'resources/twitter-bootstrap/{version}/bootstrap.min.css',
         'type': 'text/css'
     },
     'bootstrapFontsOnly': {
-        'path': 'resources/bootstrap/fonts/'
+        'path': 'resources/twitter-bootstrap/fonts/'
     },
     // Bootstrap Daterangepicker
     'bootstrapDaterangepicker': {
@@ -303,11 +303,11 @@ var resources = {
     },
     // Chart.js
     'chartJs': {
-        'path': 'resources/chart.js/{version}/Chart.bundle.min.jsm',
+        'path': 'resources/Chart.js/{version}/Chart.bundle.min.jsm',
         'type': 'application/javascript'
     },
     'chartJsCSS': {
-        'path': 'resources/chart.js/{version}/Chart.min.css',
+        'path': 'resources/Chart.js/{version}/Chart.min.css',
         'type': 'text/css'
     },
     // chosen
@@ -337,6 +337,11 @@ var resources = {
     // D3 Legend [Deprecated]
     'd3legend': {
         'path': 'resources/d3-legend/{version}/d3-legend.min.jsm',
+        'type': 'application/javascript'
+    },
+    // dayjs
+    'dayjs': {
+        'path': 'resources/dayjs/{version}/dayjs.min.jsm',
         'type': 'application/javascript'
     },
     // dexie
@@ -412,32 +417,27 @@ var resources = {
     },
     // Font Awesome
     'fontawesome': {
-        'path': 'resources/fontawesome/{version}/css/font-awesome.min.css',
+        'path': 'resources/font-awesome/{version}/css/font-awesome.min.css',
         'type': 'text/css'
     },
     'fontawesome5CSS': {
-        'path': 'resources/fontawesome/{version}/css/all.min.css',
+        'path': 'resources/font-awesome/{version}/css/all.min.css',
         'type': 'text/css'
     },
     'fontawesome5CSSv4shims': {
-        'path': 'resources/fontawesome/{version}/css/v4-shims.min.css',
+        'path': 'resources/font-awesome/{version}/css/v4-shims.min.css',
         'type': 'text/css'
     },
     'fontawesome5JS': {
-        'path': 'resources/fontawesome/{version}/js/all.min.jsm',
+        'path': 'resources/font-awesome/{version}/js/all.min.jsm',
         'type': 'application/javascript'
     },
     'fontawesomeFontsOnly': {
-        'path': 'resources/fontawesome/{version}/fonts/'
+        'path': 'resources/font-awesome/{version}/fonts/'
     },
     // GSAP
     'gsapBundle': {
         'path': 'resources/gsap/{version}/',
-        'type': 'application/javascript'
-    },
-    // Google Charts
-    'googleCharts': {
-        'path': 'resources/google-charts/loader.jsm',
         'type': 'application/javascript'
     },
     // Google Material Icons
@@ -472,7 +472,7 @@ var resources = {
     },
     // jeditableJS
     'jeditableJS': {
-        'path': 'resources/jquery-jeditable/{version}/jquery.jeditable.min.jsm',
+        'path': 'resources/jeditable.js/{version}/jquery.jeditable.min.jsm',
         'type': 'application/javascript'
     },
     // Jets.js [Deprecated]
@@ -493,6 +493,11 @@ var resources = {
     // jQuery BlockUI [Deprecated]
     'jQueryBlockUI': {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm',
+        'type': 'application/javascript'
+    },
+    // jquery.cookie [Deprecated]
+    'jqueryCookie': {
+        'path': 'resources/jquery-cookie/{version}/jquery.cookie.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery-csv
@@ -539,9 +544,14 @@ var resources = {
         'path': 'resources/jquery-mousewheel/{version}/jquery.mousewheel.min.jsm',
         'type': 'application/javascript'
     },
+    // jQuery Scrollbar [Deprecated]
+    'jQueryScrollbar': {
+        'path': 'resources/jquery.scrollbar/{version}/jquery.scrollbar.min.jsm',
+        'type': 'application/javascript'
+    },
     // jQuery Tablesorter
     'jQueryTablesorter': {
-        'path': 'resources/jquery-tablesorter/{version}/jquery.tablesorter.min.jsm',
+        'path': 'resources/jquery.tablesorter/{version}/jquery.tablesorter.min.jsm',
         'type': 'application/javascript'
     },
     // jQuery Tooltipster
@@ -578,6 +588,11 @@ var resources = {
         'path': 'resources/jquery-mobile/{version}/jquery.mobile.min.jsm',
         'type': 'application/javascript'
     },
+    // jquery-validation-unobtrusive
+    'jQueryValidationUnobtrusive': {
+        'path': 'resources/jquery-validation-unobtrusive/{version}/jquery.validate.unobtrusive.min.jsm',
+        'type': 'application/javascript'
+    },
     // js-cookie [Deprecated]
     'jscookie': {
         'path': 'resources/js-cookie/{version}/js.cookie.min.jsm',
@@ -600,7 +615,7 @@ var resources = {
     },
     // libsodium.js
     'libsodiumJS': {
-        'path': 'resources/libsodium.js/{version}/sodium.min.jsm',
+        'path': 'resources/libsodium-wrappers/{version}/sodium.min.jsm',
         'type': 'application/javascript'
     },
     // lightGallery
@@ -675,11 +690,11 @@ var resources = {
     },
     // Modaal [Deprecated]
     'modaalJS': {
-        'path': 'resources/modaal/{version}/modaal.min.jsm',
+        'path': 'resources/Modaal/{version}/modaal.min.jsm',
         'type': 'application/javascript'
     },
     'modaalCSS': {
-        'path': 'resources/modaal/{version}/modaal.min.css',
+        'path': 'resources/Modaal/{version}/modaal.min.css',
         'type': 'text/css'
     },
     // Modernizr
@@ -754,11 +769,11 @@ var resources = {
     },
     // p5.js
     'p5JS': {
-        'path': 'resources/p5js/{version}/p5.min.jsm',
+        'path': 'resources/p5.js/{version}/p5.min.jsm',
         'type': 'application/javascript'
     },
     'p5JSsound': {
-        'path': 'resources/p5js/{version}/p5.sound.min.jsm',
+        'path': 'resources/p5.js/{version}/p5.sound.min.jsm',
         'type': 'application/javascript'
     },
     // page.js [Deprecated?]
@@ -912,6 +927,11 @@ var resources = {
         'path': 'resources/slick-lightbox/{version}/slick-lightbox.css',
         'type': 'text/css'
     },
+    // Slider Pro [Deprecated?]
+    'sliderProJS': {
+        'path': 'resources/slider-pro/{version}/jquery.sliderPro.min.jsm',
+        'type': 'application/javascript'
+    },
     // socket.io
     'socketIO': {
         'path': 'resources/socket.io/{version}/socket.io.min.jsm',
@@ -939,11 +959,11 @@ var resources = {
     },
     // Swiper
     'swiperJS': {
-        'path': 'resources/swiper/{version}/js/swiper.min.jsm',
+        'path': 'resources/Swiper/{version}/js/swiper.min.jsm',
         'type': 'application/javascript'
     },
     'swiperCSS': {
-        'path': 'resources/swiper/{version}/css/swiper.min.css',
+        'path': 'resources/Swiper/{version}/css/swiper.min.css',
         'type': 'text/css'
     },
     // Tether JS [Deprecated]

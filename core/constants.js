@@ -212,7 +212,11 @@ const Links = {
     'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
     'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
     'FAQ': chrome.extension.getURL('pages/help/help.html'),
-    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html')
+    'FAQ_HTML_FILTER': chrome.extension.getURL('pages/help/help.html#html-filter'),
+    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html'),
+    'LOCALCDN_TEST': 'https://www.localcdn.org/test',
+    'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check?domain=',
+    'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/',
 };
 
 const CDNs = {
@@ -244,14 +248,12 @@ const CDNs = {
     'cdn.bootcdn.net': 'BootCDN #2',
     'vjs.zencdn.net': 'Video.js CDN',
     'cdn.plyr.io': 'Plyr CDN',
-    'www.gstatic.com': 'gstatic.com',
     'cdn.materialdesignicons.com': 'MaterialDesign',
     'cdn.ravenjs.com': 'Raven.js'
 };
 
 const IgnoredHost = {
     'fonts.googleapis.com': true,
-    'www.gstatic.com': true
 };
 
 // Supported charsets for TextDecoder()

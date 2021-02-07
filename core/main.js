@@ -33,8 +33,8 @@ main._initializeSettings = function () {
 
     storageManager.type.get(null, function (items) {
         // Delete old keys
-        if (typeof items.whitelistedDomains !== 'undefined') {
-            if (typeof items.allowlistedDomains === 'undefined' || Object.keys(items.allowlistedDomains).length === 0) {
+        if (items.whitelistedDomains !== undefined) {
+            if (items.allowlistedDomains === undefined || Object.keys(items.allowlistedDomains).length === 0) {
                 items['allowlistedDomains'] = items.whitelistedDomains;
             }
             delete items['whitelistedDomains'];
@@ -42,7 +42,7 @@ main._initializeSettings = function () {
         }
 
         // Convert value of notifications
-        if (typeof items.hideReleaseNotes !== 'undefined') {
+        if (items.hideReleaseNotes !== undefined) {
             if (items.hideReleaseNotes === true) {
                 items.updateNotification = 0;
             } else {

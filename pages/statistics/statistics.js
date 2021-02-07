@@ -89,6 +89,11 @@ statistics._filterAndSortData = function () {
 
 statistics._mergeObjects = function (obj, arr) {
     for (let [key, value] of Object.entries(obj)) {
+        let bundle = targets.determineBundle(key);
+        if (bundle !== '') {
+            bundle = key.split('/');
+            key = bundle[0] + '/' + bundle[1] + '/' + bundle[2] + '/';
+        }
         // If CDN/Framework exists, add it, otherwise create new one
         if (arr[key]) {
             arr[key] += value;
@@ -188,13 +193,13 @@ statistics._displayNameOfFramework = function (str, type) {
 
         if (filename === 'Unknown') {
             filename = targets.determineBundle(str);
-            if (filename === '' && str.startsWith('resources/fontawesome/')) {
+            if (filename === '' && str.startsWith('resources/font-awesome/')) {
                 filename = 'Font Awesome (Fonts)'
             }
         }
         version = str.match(Resource.VERSION_EXPRESSION);
         if (version !== null && version.length > 0) {
-            version = version === 'latest' ? version : 'v' + version;
+            version = version[0] === 'latest' ? version[0] : 'v' + version[0];
         } else {
             version = '';
         }

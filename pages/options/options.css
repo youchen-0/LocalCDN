@@ -156,7 +156,7 @@ body {
 .options-help-icon {
     display: inline-block;
     cursor: pointer;
-    background-image: url("../../icons/info-dark.svg");
+    background-image: url("../../icons/help-dark.svg");
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;

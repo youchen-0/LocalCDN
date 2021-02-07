@@ -75,7 +75,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': ''
         };
     } else if (Regex.FONT_AWESOME.test(channelHost + channelPath)) {
-        lastVersion = targets.setLastVersion('/fontawesome/4.');
+        lastVersion = targets.setLastVersion('/font-awesome/4.');
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
@@ -85,7 +85,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         };
     } else if (Regex.FONT_AWESOME_WITH_CODE.test(channelHost + channelPath)) {
         let fileExtension = channelPath.endsWith('css') ? 'css' : 'jsm';
-        lastVersion = targets.setLastVersion('/fontawesome/4.');
+        lastVersion = targets.setLastVersion('/font-awesome/4.');
         return {
             'source': channelHost,
             'versionRequested': '4.6.3',
@@ -120,11 +120,11 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         };
     } else if ((channelHost + channelPath) === 'netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css') {
         // This CDN delivers 'Font Awesome v4.7.0' as latest version
-        lastVersion = targets.setLastVersion('/fontawesome/4.');
+        lastVersion = targets.setLastVersion('/font-awesome/4.');
         return {
             'source': channelHost,
             'versionRequested': lastVersion,
-            'path': 'resources/fontawesome/' + lastVersion + '/css/font-awesome.min.css',
+            'path': 'resources/font-awesome/' + lastVersion + '/css/font-awesome.min.css',
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js') {
@@ -157,17 +157,10 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/anchor-js/' + lastVersion + '/anchor.min.jsm',
             'bundle': ''
         };
-    } else if (channelHost + channelPath === 'www.gstatic.com/charts/loader.js') {
-        // This CDN always delivers the latest version of 'Google Charts'
-        return {
-            'source': channelHost,
-            'path': 'resources/google-charts/loader.jsm',
-            'bundle': ''
-        };
     } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(channelPath)) {
         return {
             'source': channelHost,
-            'path': 'resources/bootstrap/fonts/' + helpers.extractFilenameFromPath(channelPath),
+            'path': 'resources/twitter-bootstrap/fonts/' + helpers.extractFilenameFromPath(channelPath),
             'bundle': 'Bootstrap (Fonts)'
         };
     } else if (channelHost + channelPath === 'cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js') {

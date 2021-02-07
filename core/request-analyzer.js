@@ -29,7 +29,7 @@ var requestAnalyzer = {};
  */
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
-    let initiatorDomain, isAllowlisted, wildcard;
+    let initiatorDomain, isAllowlisted;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 

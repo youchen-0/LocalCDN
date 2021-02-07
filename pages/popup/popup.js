@@ -77,6 +77,7 @@ popup._renderNonContextualContents = function () {
 popup._renderContextualContents = function () {
     if (popup._domain !== null) {
         popup._renderDomainAllowlistPanel();
+        document.getElementById('testing-utility-link').style.display = 'block';
     }
 
     if (Object.keys(popup._resourceInjections).length > 0) {
@@ -435,7 +436,7 @@ popup._onDocumentLoaded = function () {
 popup._onTestingUtilityLinkClicked = function (event) {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: 'https://www.localcdn.org/test',
+            url: Links.LOCALCDN_TEST_WEBSITE + popup._targetTab.url,
             active: event.button === 0,
         });
     }
@@ -453,7 +454,7 @@ popup._onOptionsButtonClicked = function () {
 popup._onDonationButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: chrome.extension.getURL('pages/donate/donate.html'),
+            url: Links.DONATE,
             active: event.button === 0,
         });
     }
@@ -487,7 +488,7 @@ popup._close = function () {
 popup._onInfoButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: chrome.extension.getURL('pages/help/help.html#html-filter'),
+            url: Links.FAQ_HTML_FILTER,
             active: event.button === 0,
         });
     }
@@ -500,7 +501,7 @@ popup._onInfoButtonClicked = function () {
 popup._onIncompleteTranslation = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: 'https://hosted.weblate.org/projects/localcdn/',
+            url: Links.Weblate,
             active: event.button === 0,
         });
     }
@@ -513,7 +514,7 @@ popup._onIncompleteTranslation = function () {
 popup._onStatisticsButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: chrome.extension.getURL('pages/statistics/statistics.html'),
+            url: Links.STATISTICS,
             active: event.button === 0,
         });
     }

@@ -3,17 +3,17 @@
  *  File modified by nobody/LocalCDN
  *
  */
-@import url('../fontawesome/4.7.0/css/font-awesome.min.css');
+@import url('../font-awesome/4.7.0/css/font-awesome.min.css');
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fontawesome/4.7.0/fonts/fontawesome-webfont.eot');
-  src: url('../fontawesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fontawesome/4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'),
-       url('../fontawesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
-       url('../fontawesome/4.7.0/fonts/fontawesome-webfont.ttf') format('truetype'),
-       url('../fontawesome/4.7.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  src: url('../font-awesome/4.7.0/fonts/fontawesome-webfont.eot');
+  src: url('../font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font-awesome/4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('../font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
+       url('../font-awesome/4.7.0/fonts/fontawesome-webfont.ttf') format('truetype'),
+       url('../font-awesome/4.7.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }

@@ -22,6 +22,20 @@ header {
     justify-content: space-between;
 }
 
+#manipulateDOM-indicator {
+    background: url('../../icons/help-dark.svg') no-repeat right center;
+    color: #555;
+    background-size: 15px 15px;
+    padding-right: 20px;
+    text-decoration: underline;
+}
+
+#manipulateDOM-indicator:hover {
+    color: #777;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .panel {
     overflow: hidden;
 }
@@ -58,6 +72,11 @@ footer {
 
 #testing-utility {
     flex-grow: 1;
+}
+
+#testing-utility-link {
+    display: none;
+    float: left;
 }
 
 /**
@@ -411,6 +430,15 @@ input:checked + .slider:hover {
 
     header {
         border-bottom-color: #292929;
+    }
+
+    #manipulateDOM-indicator {
+        background: url('../../icons/help-light.svg') no-repeat right center;
+        background-size: 15px 15px;
+        padding-right: 20px;
+        text-decoration: underline;
+        color: #f2f2f2;
+        font-weight: bold;
     }
 
     /**

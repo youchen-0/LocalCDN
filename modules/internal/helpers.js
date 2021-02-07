@@ -140,7 +140,7 @@ helpers.checkAllowlisted = function(domain) {
     wildcard = helpers.getWildcard(domain);
     list = requestAnalyzer.allowlistedDomains;
 
-    return list[domain] || list[domainWithoutPrefix] || list[wildcard] || list[domainWithoutPrefix];
+    return Boolean(list[domain] || list[domainWithoutPrefix] || list[wildcard] || list[domainWithoutPrefix]);
 };
 
 helpers.extractFilenameFromPath = function (path) {

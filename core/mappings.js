@@ -73,6 +73,7 @@ mappings.cdn = {
             'jQuery/jquery-{version}.': resources.jQuery,
             'jquery/jquery-{version}.': resources.jQuery,
             'jquery.validate/{version}/jquery.validate.': resources.jqueryValidationPlugin,
+            'jquery.validation.unobtrusive/{version}/jquery.validate.unobtrusive.': resources.jQueryValidationUnobtrusive,
             'modernizr/modernizr-{version}.': resources.modernizr,
             'bootstrap/{version}/bootstrap.min.': resources.bootstrapJS
         }
@@ -256,6 +257,7 @@ mappings.cdn = {
             'cookieconsent2/{version}/cookieconsent.css': resources.cookieconsent2CSS,
             'd3/{version}/d3.min.js': resources.d3JS,
             'd3-legend/{version}/d3-legend.': resources.d3legend,
+            'dayjs/{version}/dayjs.': resources.dayjs,
             'dexie/{version}/dexie.': resources.dexie,
             'docsearch.js/{version}/docsearch.min.js': resources.docsearchJS,
             'docsearch.js/{version}/docsearch.js': resources.docsearchJS,
@@ -301,6 +303,10 @@ mappings.cdn = {
             'jquery-modal/{version}/jquery.modal.css': resources.jQueryModalCSS,
             'jquery-modal/{version}/jquery.modal.min.css': resources.jQueryModalCSS,
             'jquery-mousewheel/{version}/jquery.mousewheel.min.js': resources.jqueryMousewheelJS,
+            'jquery-cookie/{version}/jquery.cookie.': resources.jqueryCookie,
+            'jquery.scrollbar/{version}/jquery.scrollbar.min.js': resources.jQueryScrollbar,
+            'jquery.scrollbar/{version}/jquery.scrollbar.js': resources.jQueryScrollbar,
+            'jquery-validation-unobtrusive/{version}/jquery.validate.unobtrusive.': resources.jQueryValidationUnobtrusive,
             'jScrollPane/{version}/script/jquery.jscrollpane.': resources.jScrollPane,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'knockout/{version}/knockout': resources.knockout,
@@ -377,6 +383,7 @@ mappings.cdn = {
             'slick-lightbox/{version}/slick-lightbox.min.js': resources.slickLightboxJS,
             'slick-lightbox/{version}/slick-lightbox.js': resources.slickLightboxJS,
             'slick-lightbox/{version}/slick-lightbox.css': resources.slickLightboxCSS,
+            'slider-pro/{version}/js/jquery.sliderPro.': resources.sliderProJS,
             'spin.js/{version}/spin.min.js': resources.spinJS,
             'stickyfill/{version}/stickyfill.': resources.stickyfill,
             'socket.io/{version}/socket.io.': resources.socketIO,
@@ -689,7 +696,7 @@ mappings.cdn = {
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
-            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ember.js/{version}/ember.min.js': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
@@ -721,7 +728,7 @@ mappings.cdn = {
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
-            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ember.js/{version}/ember.min.js': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
@@ -754,7 +761,7 @@ mappings.cdn = {
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
-            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ember.js/{version}/ember.min.js': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
@@ -787,7 +794,7 @@ mappings.cdn = {
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo.': resources.dojo,
             'element-ui/{version}/': resources.elementUI,
-            'ember.js/{version}/ember.min.js': resources.ember.js,
+            'ember.js/{version}/ember.min.js': resources.ember,
             'ext-core/{version}/ext-core.': resources.extCore,
             'font-awesome/{version}/css/font-awesome.': resources.fontawesome,
             'font-awesome/{version}/fonts/': resources.fontawesomeFontsOnly,
@@ -935,12 +942,6 @@ mappings.cdn = {
     'cdn.plyr.io': {
         '/': {
             '{version}/plyr.svg': resources.plyrSVG
-        }
-    },
-    // gstatic
-    'www.gstatic.com': {
-        '/': {
-            'charts/loader.js': resources.googleCharts
         }
     },
     // MaterialDesign (https://github.com/Templarian/MaterialDesign)
