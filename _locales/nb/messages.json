@@ -242,5 +242,9 @@
     "updateNotificationAlways": {
         "message": "Alltid",
         "description": "Always"
+    },
+    "websiteBroken": {
+        "message": "",
+        "description": "Website broken?"
     }
 }

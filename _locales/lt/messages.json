@@ -242,5 +242,9 @@
     "updateNotificationAlways": {
         "message": "Visada",
         "description": "Always"
+    },
+    "websiteBroken": {
+        "message": "",
+        "description": "Website broken?"
     }
 }
