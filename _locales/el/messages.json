@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Μήπως δε λειτουργεί σωστά ο ιστότοπος;",
         "description": "Website broken?"
     }
 }
