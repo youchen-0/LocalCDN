@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Web sitesi bozuk mu?",
         "description": "Website broken?"
     }
 }
