@@ -478,4 +478,8 @@ body[dir="rtl"] .input-text {
     .img-restore-color {
         filter: invert(1);
     }
+
+    .options-help-icon {
+        background-image: url("../../icons/help-light.svg");
+    }
 }
