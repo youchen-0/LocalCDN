@@ -29,7 +29,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-12-30';
+mappings.lastMappingUpdate = '2021-02-10';
 
 mappings.cdn = {
 
@@ -994,3 +994,6 @@ mappings.cdn['lib.baomitu.com'] = {
 
 // Boot CDN New [Mirror]
 mappings.cdn['cdn.bootcdn.net'] = mappings.cdn['cdnjs.cloudflare.com'];
+
+// CDN for the "Block Google Fonts" option (see: https://codeberg.org/nobody/LocalCDN/issues/269)
+mappings.cdn['fonts.gstatic.com'] = mappings.cdn['fonts.googleapis.com'];

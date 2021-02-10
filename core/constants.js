@@ -194,7 +194,7 @@ const IconType = {
 };
 
 const Regex = {
-    'GOOGLE_FONTS': /fonts\.googleapis\.com\/(css|icons)(?!.*Material\+Icons).*/,
+    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/.*/,
     'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/(icon|css)\?family=.*Material\+Icons/,
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
@@ -254,6 +254,7 @@ const CDNs = {
 
 const IgnoredHost = {
     'fonts.googleapis.com': true,
+    'fonts.gstatic.com': true,
 };
 
 // Supported charsets for TextDecoder()

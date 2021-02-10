@@ -117,8 +117,8 @@ interceptor._handleStorageChanged = function (changes) {
         interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
     }
 
-    if (Setting.BLOCK_GOOGLE_FONTS in changes) {
-        interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
+    if (Setting.ALLOWED_DOMAINS_GOOGLE_FONTS in changes) {
+        interceptor.allowedDomainsGoogleFonts = changes.allowedDomainsGoogleFonts.newValue;
     }
 };
 
