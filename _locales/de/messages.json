@@ -80,7 +80,7 @@
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Diese Funktion verursacht bei manchen Websites Fehler. Lass diese Funktion deaktiviert, es sei denn, du bist bereit, betroffene Webseiten manuell auf die Positivliste zu setzen.",
+        "message": "Diese Funktion verursacht bei manchen Websites Fehler. Lass diese Funktion deaktiviert, es sei denn, du bist bereit, betroffene Webseiten manuell auf die Ausnahmeliste zu setzen.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
