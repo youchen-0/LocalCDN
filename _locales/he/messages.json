@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "מגן עליך מפני מעקב המבוצע דרך רשתות אספקת תוכן ריכוזיות ו\"חינמיות\".",
+        "message": "מגן עליך מפני מעקב המבוצע דרך רשתות אספקת תוכן ריכוזיות על ידי הפנייה למשאבים מקומיים.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "נא למלא שמות תחום שברצונך להוסיף לרשימת ההיתר. ההפרדה בין הערכים השונים היא נקודה פסיק (;).",
+        "message": "נא למלא שמות תחום שברצונך להוסיף לרשימת ההיתר. ערך אחד בשורה.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "נא להזין את שמות התחום לטיפול או להתעלמות מול מסנן ה־HTML. יש להפריד בין רשומות בנקודה פסיק (;).",
+        "message": "נא להזין את שמות התחום לטיפול או להתעלמות מול מסנן ה־HTML. ערך אחד לשורה.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -172,11 +172,11 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "למחוק את הסטטיסטיקה?",
+        "message": "למחוק את כל הסטטיסטיקה?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "שמות תחום אלו מורשים לטעון את הגופנים של Google. יש להפריד בין רשומות בנקודה פסיק (;).",
+        "message": "שמות תחום אלו מורשים לטעון את הגופנים של Google. ערך אחד לשורה.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -228,23 +228,23 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "התראה אחרי עדכון",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "אף פעם (עדכונים שקטים)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "רק אם נוספו רשתות אספקת תוכן או חוקים חדשים",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "תמיד",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "האתר לא תקין?",
         "description": "Website broken?"
     }
 }
