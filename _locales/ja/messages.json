@@ -32,7 +32,7 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "許可されていないリクエストが配信ネットワークに漏洩するのを防ぎます。",
+        "message": "許可されていないリクエストがCDNへ流出するのを防ぎます。",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "LocalCDNを無効にするドメインを入力してください。複数入力する場合はセミコロン (;) で区切ってください。",
+        "message": "LocalCDNを無効にするドメインを入力してください。1行につき1件入力できます。",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -100,7 +100,7 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "このオプションを有効にすると常にHTMLフィルターが適用され、リスト内のドメインは無視されます。このオプションを無効にすると、HTMLフィルターはリスト内のドメインにのみ適用されます。",
+        "message": "このオプションを有効にするとHTMLフィルターは常時適用され、リスト内のドメインでのみ無効になります。このオプションが無効の場合は、HTMLフィルターはリスト内のドメインでのみ適用されます。",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "HTMLフィルターで処理する、もしくはフィルターを無視するドメインを入力します。複数入力する場合ははセミコロン(;)で区切ってください。",
+        "message": "HTMLフィルターで処理する、もしくはフィルターを無視するドメインを入力します。1行につき1件入力できます。",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -136,7 +136,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "この機能は現在実験段階です。データが転送されることはありません。全てがローカル上で処理されます。",
+        "message": "この機能は現在実験段階です。データは外部に転送されず、全てローカル上で処理されます。",
         "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "これらのドメインでは、Google Fontsの読み込みを許可しています。複数入力する場合はセミコロン(;)で区切ってください。",
+        "message": "これらのドメインでは、Google Fontsの読み込みを許可しています。1行につき1件入力できます。",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "ウェブサイトが機能していませんか？",
         "description": "Website broken?"
     }
 }
