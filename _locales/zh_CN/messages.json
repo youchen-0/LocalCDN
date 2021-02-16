@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "在以下域名中暂停 LocalCDN:",
+        "message": "在以下域名中暂停 LocalCDN：",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
