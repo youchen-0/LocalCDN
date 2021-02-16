@@ -508,7 +508,7 @@ const ListOfFiles = {
     'jquery.scrollbar.min.jsm': 'jQuery Scrollbar',
     'dayjs.min.jsm': 'Day.js',
     'jquery.validate.unobtrusive.min.jsm': 'jQuery Validate Unobtrusive',
-    'jquery.sliderPro.min.js': 'Slider Pro (JS)',
+    'jquery.sliderPro.min.jsm': 'Slider Pro (JS)',
     'knockout-latest.min.jsm': 'Knockout',
     'bootstrap-multiselect.min.jsm': 'Bootstrap Multiselect',
     'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',
