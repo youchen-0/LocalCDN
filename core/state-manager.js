@@ -18,11 +18,13 @@
 
 'use strict';
 
+
 /**
  * State Manager
  */
 
 var stateManager = {};
+
 
 /**
  * Public Methods
@@ -251,7 +253,7 @@ stateManager._domainIsListed = function (domain, listname) {
 
         let allowlistRecord, isAllowlisted;
 
-        if (listname === "manipulate-dom") {
+        if (listname === 'manipulate-dom') {
             allowlistRecord = requestAnalyzer.domainsManipulateDOM[domain];
             isAllowlisted = Boolean(allowlistRecord);
         } else {

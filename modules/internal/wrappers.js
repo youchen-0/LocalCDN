@@ -17,11 +17,13 @@
 
 'use strict';
 
+
 /**
  * Wrappers
  */
 
 var wrappers = {};
+
 
 /**
  * Public Methods
@@ -64,6 +66,6 @@ storageManager.type.get([Setting.BADGE_COLOR, Setting.BADGE_TEXT_COLOR], functio
     wrappers.textColor = items.badgeTextColor || '#FFFFFF';
     wrappers.backgroundColor = items.badgeColor || '#4A826C';
 
-    wrappers.setBadgeTextColor({color: wrappers.textColor});
-    wrappers.setBadgeBackgroundColor({color: wrappers.backgroundColor});
+    wrappers.setBadgeTextColor({'color': wrappers.textColor});
+    wrappers.setBadgeBackgroundColor({'color': wrappers.backgroundColor});
 });

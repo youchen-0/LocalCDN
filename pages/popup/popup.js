@@ -18,14 +18,18 @@
 
 'use strict';
 
+
 /**
  * Popup
  */
+
 var popup = {};
+
 
 /**
  * Private Methods
  */
+
 popup._renderContents = function () {
     helpers.insertI18nContentIntoDocument(document);
     helpers.insertI18nTitlesIntoDocument(document);
@@ -49,7 +53,8 @@ popup._renderContents = function () {
 };
 
 popup._renderNonContextualContents = function () {
-    let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement, optionsButtonElement, donationButtonElement, infoButtonLabel;
+    let versionLabelElement, nameLabelElement, counterElement, testingUtilityLinkElement,
+        optionsButtonElement, donationButtonElement, infoButtonLabel;
 
     versionLabelElement = document.getElementById('version-label');
     nameLabelElement = document.getElementById('name-label');
@@ -86,7 +91,8 @@ popup._renderContextualContents = function () {
 };
 
 popup._renderDomainAllowlistPanel = function () {
-    let websiteContextElement, protectionToggleElement, domainIndicatorElement, manipulateDOMToggleElement, manipulateDOMToggleStyle;
+    let websiteContextElement, protectionToggleElement, domainIndicatorElement,
+        manipulateDOMToggleElement, manipulateDOMToggleStyle;
 
     websiteContextElement = document.getElementById('website-context');
     protectionToggleElement = document.getElementById('protection-toggle-switch');
@@ -139,8 +145,8 @@ popup._renderInjectionPanel = function (groupedInjections) {
 
 popup._enableProtection = function () {
     let message = {
-        topic: 'allowlist:remove-domain',
-        value: popup._domain,
+        'topic': 'allowlist:remove-domain',
+        'value': popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -150,8 +156,8 @@ popup._enableProtection = function () {
 
 popup._disableProtection = function () {
     let message = {
-        topic: 'allowlist:add-domain',
-        value: popup._domain,
+        'topic': 'allowlist:add-domain',
+        'value': popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -161,8 +167,8 @@ popup._disableProtection = function () {
 
 popup._enableManipulateDOM = function () {
     let message = {
-        topic: 'manipulateDOM:add-domain',
-        value: popup._domain,
+        'topic': 'manipulateDOM:add-domain',
+        'value': popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -172,8 +178,8 @@ popup._enableManipulateDOM = function () {
 
 popup._disableManipulateDOM = function () {
     let message = {
-        topic: 'manipulateDOM:remove-domain',
-        value: popup._domain,
+        'topic': 'manipulateDOM:remove-domain',
+        'value': popup._domain,
     };
 
     chrome.runtime.sendMessage(message, function () {
@@ -184,8 +190,8 @@ popup._disableManipulateDOM = function () {
 popup._determineDomainAllowlistStatus = function () {
     return new Promise((resolve) => {
         let message = {
-            topic: 'domain:fetch-is-allowlisted',
-            value: popup._domain,
+            'topic': 'domain:fetch-is-allowlisted',
+            'value': popup._domain,
         };
 
         if (popup._domain === null) {
@@ -202,8 +208,8 @@ popup._determineDomainAllowlistStatus = function () {
 popup._determineStatusManipulateDOM = function () {
     return new Promise((resolve) => {
         let message = {
-            topic: 'domain:fetch-is-manipulateDOM',
-            value: popup._domain,
+            'topic': 'domain:fetch-is-manipulateDOM',
+            'value': popup._domain,
         };
 
         chrome.runtime.sendMessage(message, function (response) {
@@ -216,8 +222,8 @@ popup._determineStatusManipulateDOM = function () {
 popup._determineResourceInjections = function () {
     return new Promise((resolve) => {
         let message = {
-            topic: 'tab:fetch-injections',
-            value: popup._targetTab.id,
+            'topic': 'tab:fetch-injections',
+            'value': popup._targetTab.id,
         };
 
         chrome.runtime.sendMessage(message, function (response) {
@@ -231,7 +237,7 @@ popup._determineResourceInjections = function () {
 
 popup._determineTargetTab = function () {
     return new Promise((resolve) => {
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        chrome.tabs.query({'active': true, 'currentWindow': true}, function (tabs) {
             popup._targetTab = tabs[0];
             popup._domain = helpers.extractDomainFromUrl(tabs[0].url, true);
 
@@ -271,7 +277,7 @@ popup._groupResourceInjections = function (injections) {
     let groupedInjections = {};
 
     for (let index in injections) {
-        let { source } = injections[index];
+        let {source} = injections[index];
 
         groupedInjections[source] = groupedInjections[source] || [];
         groupedInjections[source].push(injections[index]);
@@ -320,14 +326,14 @@ popup._createInjectionGroupHeaderElement = function (source, cdn) {
 };
 
 popup._createInjectionGroupElement = function (source, cdn) {
-    let injectionGroupElement;
+    let injectionGroupElement, bundle, filtered;
 
     // Filter duplicates
-    let bundle = [];
+    bundle = [];
     for (let injection of cdn) {
         bundle.push(injection);
     }
-    let filtered = popup._filterDuplicates(bundle, 'bundle');
+    filtered = popup._filterDuplicates(bundle, 'bundle');
 
     injectionGroupElement = document.createElement('ul');
     injectionGroupElement.setAttribute('class', 'sublist');
@@ -352,7 +358,7 @@ popup._createInjectionElement = function (injection) {
     if (injection.bundle === '') {
         name = targets.determineResourceName(filename);
     } else {
-        name = injection.bundle + ' (Bundle)';
+        name = `${injection.bundle} (Bundle)`;
     }
 
     nameTextNode = document.createTextNode(`- ${name}`);
@@ -393,7 +399,9 @@ popup._filterDuplicates = function (array, key) {
      */
     let filtered = array
         .map((e) => e[key])
-        .map((value, index, newArray) => (value != '' ? newArray.indexOf(value) === index && index : index))
+        .map(function (value, index, newArray) {
+            return value !== '' ? newArray.indexOf(value) === index && index : index;
+        })
         .filter((e) => array[e])
         .map((e) => array[e]);
 
@@ -414,10 +422,10 @@ popup._renderLocaleNotice = function () {
 };
 
 
-
 /**
  * Event Handlers
  */
+
 popup._onDocumentLoaded = function () {
     let manifest, language;
 
@@ -436,8 +444,8 @@ popup._onDocumentLoaded = function () {
 popup._onTestingUtilityLinkClicked = function (event) {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: Links.LOCALCDN_TEST_WEBSITE + popup._targetTab.url,
-            active: event.button === 0,
+            'url': Links.LOCALCDN_TEST_WEBSITE + popup._targetTab.url,
+            'active': event.button === 0,
         });
     }
 
@@ -454,8 +462,8 @@ popup._onOptionsButtonClicked = function () {
 popup._onDonationButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: Links.DONATE,
-            active: event.button === 0,
+            'url': Links.DONATE,
+            'active': event.button === 0,
         });
     }
 
@@ -467,7 +475,7 @@ popup._onDonationButtonClicked = function () {
 popup._onToggled = function () {
     let bypassCache = typeof browser === 'undefined';
 
-    chrome.tabs.reload(popup._targetTab.id, { bypassCache });
+    chrome.tabs.reload(popup._targetTab.id, {bypassCache});
     setTimeout(function () {
         popup._close();
     }, 200);
@@ -488,8 +496,8 @@ popup._close = function () {
 popup._onInfoButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: Links.FAQ_HTML_FILTER,
-            active: event.button === 0,
+            'url': Links.FAQ_HTML_FILTER,
+            'active': event.button === 0,
         });
     }
 
@@ -501,8 +509,8 @@ popup._onInfoButtonClicked = function () {
 popup._onIncompleteTranslation = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: Links.Weblate,
-            active: event.button === 0,
+            'url': Links.Weblate,
+            'active': event.button === 0,
         });
     }
 
@@ -514,8 +522,8 @@ popup._onIncompleteTranslation = function () {
 popup._onStatisticsButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            url: Links.STATISTICS,
-            active: event.button === 0,
+            'url': Links.STATISTICS,
+            'active': event.button === 0,
         });
     }
     if (event.button === 0) {
@@ -523,9 +531,11 @@ popup._onStatisticsButtonClicked = function () {
     }
 };
 
+
 /**
  * Initializations
  */
+
 popup.negateHtmlFilterList = false;
 popup._statisticsStatus = false;
 

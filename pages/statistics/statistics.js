@@ -14,14 +14,18 @@
 
 'use strict';
 
+
 /**
  * Statistic
  */
+
 var statistics = {};
+
 
 /**
  * Private Methods
  */
+
 statistics._onDocumentLoaded = function () {
     helpers.insertI18nContentIntoDocument(document);
     helpers.insertI18nTitlesIntoDocument(document);
@@ -63,7 +67,7 @@ statistics._generateTable = function (data, type) {
         valueColumn.appendChild(document.createTextNode(value[1]));
         row.appendChild(valueColumn);
 
-        document.getElementById('tbody-' + type).appendChild(row);
+        document.getElementById(`tbody-${type}`).appendChild(row);
     }
 };
 
@@ -92,7 +96,7 @@ statistics._mergeObjects = function (obj, arr) {
         let bundle = targets.determineBundle(key);
         if (bundle !== '') {
             bundle = key.split('/');
-            key = bundle[0] + '/' + bundle[1] + '/' + bundle[2] + '/';
+            key = `${bundle[0]}/${bundle[1]}/${bundle[2]}/`;
         }
         // If CDN/Framework exists, add it, otherwise create new one
         if (arr[key]) {
@@ -125,9 +129,11 @@ statistics._setDateRange = function () {
 
     if (days > 1) {
         for (let i = 0; i < days; i++) {
+            let diff, day;
+
             // NOTE: setDate/getDate is buggy over day/month/year boundaries
-            let diff = 24 * 3600000 * i;
-            let day = from.setTime(today.getTime() - diff);
+            diff = 24 * 3600000 * i;
+            day = from.setTime(today.getTime() - diff);
             statistics._dateRange.push(new Date(day).toISOString().slice(0, 10));
         }
     }
@@ -194,12 +200,12 @@ statistics._displayNameOfFramework = function (str, type) {
         if (filename === 'Unknown') {
             filename = targets.determineBundle(str);
             if (filename === '' && str.startsWith('resources/font-awesome/')) {
-                filename = 'Font Awesome (Fonts)'
+                filename = 'Font Awesome (Fonts)';
             }
         }
         version = str.match(Resource.VERSION_EXPRESSION);
         if (version !== null && version.length > 0) {
-            version = version[0] === 'latest' ? version[0] : 'v' + version[0];
+            version = version[0] === 'latest' ? version[0] : `v${version[0]}`;
         } else {
             version = '';
         }
@@ -215,7 +221,7 @@ statistics._displayNameOfFramework = function (str, type) {
     return document.createTextNode(str);
 };
 
-statistics._handlerDateRange = function ({ target }) {
+statistics._handlerDateRange = function ({target}) {
     let type = target.value;
     if (type === 'day' || type === 'week' || type === 'month' || type === 'year') {
         statistics._dateUnit = type;
@@ -231,20 +237,22 @@ statistics._deleteStatistic = function () {
         chrome.storage.local.set({
             [Setting.INTERNAL_STATISTICS_DATA]: {}
         });
-        chrome.runtime.sendMessage({ topic: 'deleteStatistic' });
+        chrome.runtime.sendMessage({'topic': 'deleteStatistic'});
     }
 };
 
 statistics._registerListener = function () {
     document.getElementById('date-range').addEventListener('change', statistics._handlerDateRange);
     document.getElementById('btn-delete').addEventListener('click', function () {
-        statistics._handlerDateRange({ target: { value: 'delete' } });
+        statistics._handlerDateRange({'target': {'value': 'delete'}});
     });
 };
+
 
 /**
  * Initializations
  */
+
 statistics._data = {};
 statistics._dataSortedCDNs = {};
 statistics._dataSortedFrameworks = {};

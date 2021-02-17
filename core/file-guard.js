@@ -16,11 +16,13 @@
 
 'use strict';
 
+
 /**
  * File Guard
  */
 
 var fileGuard = {};
+
 
 /**
  * Private Methods
@@ -46,6 +48,7 @@ fileGuard._verifyRequest = function (requestDetails) {
         return {redirectUrl};
     }
 };
+
 
 /**
  * Initializations

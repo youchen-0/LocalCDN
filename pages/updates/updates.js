@@ -15,19 +15,23 @@
 
 'use strict';
 
+
 /**
  * Updates
  */
 
 var updates = {};
 
+
 /**
  * Private Methods
  */
 
 updates._openHistoryReleaseNotes = function () {
-    let container = document.getElementById('history-release-notes');
-    let toggle = document.getElementById('history-indicator');
+    let container, toggle;
+
+    container = document.getElementById('history-release-notes');
+    toggle = document.getElementById('history-indicator');
 
     if (container.style.display === 'none') {
         container.style.display = 'block';
@@ -39,11 +43,13 @@ updates._openHistoryReleaseNotes = function () {
 };
 
 updates._onDocumentLoaded = function () {
+    let updateElements, urlParams;
+
     document.getElementById('generate-ublock-rules').checked = false;
     document.getElementById('generate-umatrix-rules').checked = false;
     document.getElementById('generate-adguard-rules').checked = false;
 
-    let updateElements = {
+    updateElements = {
         ['ruleSets']: document.getElementsByName('rule-sets'),
         ['copyRuleSet']: document.getElementById('button-copy-rule-set'),
     };
@@ -57,7 +63,7 @@ updates._onDocumentLoaded = function () {
     document.getElementById('history').addEventListener('click', updates._openHistoryReleaseNotes);
 
     // GET parameter to display the rule set generator
-    let urlParams = new URLSearchParams(window.location.search);
+    urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('mappingupdate') === 'true') {
         document.getElementById('generator-section').style.display = 'block';
     }

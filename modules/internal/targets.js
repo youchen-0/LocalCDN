@@ -14,11 +14,13 @@
 
 'use strict';
 
+
 /**
  * Targets
  */
 
 var targets = {};
+
 
 /**
  * Public Methods
@@ -49,7 +51,7 @@ targets.determineBundle = function (path) {
         val = 'Bootstrap (Fonts)';
     }
 
-    return val === '' ? val : val + ' (Bundle)';
+    return val === '' ? val : `${val} (Bundle)`;
 };
 
 targets.setLastVersion = function (type, version) {
@@ -189,7 +191,7 @@ targets.setLastVersion = function (type, version) {
         return '2.25.6';
     } else if (type.startsWith('/dayjs/1.')) {
         return '1.10.4';
-    } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest') ) {
+    } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest')) {
         return '3.0.3';
     } else if (type.startsWith('/docsearch.js/2.')) {
         return '2.6.3';
@@ -499,6 +501,7 @@ targets.setLastVersion = function (type, version) {
 };
 
 targets.determineResourceName = function (filename) {
+    // eslint-disable-next-line no-use-before-define
     return ListOfFiles[filename] || 'Unknown';
 };
 

@@ -18,11 +18,13 @@
 
 'use strict';
 
+
 /**
  * Main
  */
 
 var main = {};
+
 
 /**
  * Private Methods
@@ -80,7 +82,7 @@ main._showReleaseNotes = function (details) {
     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
         storageManager.type.set({
             [Setting.LAST_MAPPING_UPDATE]: mappings.lastMappingUpdate
-        }, function() {
+        }, function () {
             if (details.temporary !== true) {
                 chrome.tabs.create({
                     'url': chrome.extension.getURL('pages/welcome/welcome.html'),
@@ -107,18 +109,19 @@ main._showReleaseNotes = function (details) {
                 storageManager.type.set(items);
             }
 
-            if ( (mappingUpdate && items.updateNotification == 1) || items.updateNotification == 2 ) {
+            if ((mappingUpdate && items.updateNotification === 1) || items.updateNotification === 2) {
                 chrome.tabs.create({
-                    'url': chrome.extension.getURL('pages/updates/updates.html?mappingupdate=' + mappingUpdate),
+                    'url': chrome.extension.getURL(`pages/updates/updates.html?mappingupdate=${mappingUpdate}`),
                     'active': false
                 });
             } else {
                 // No mappings.js update
-                return;
+
             }
         });
     }
 };
+
 
 /**
  * Initializations

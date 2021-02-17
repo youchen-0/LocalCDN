@@ -18,6 +18,7 @@
 
 'use strict';
 
+
 /**
  * Mappings
  */
@@ -490,7 +491,7 @@ mappings.cdn = {
             'jquery-ui-dist@{version}/jquery-ui.js': resources.jQueryUI,
             'jquery-ui-dist@{version}/jquery-ui.min.js': resources.jQueryUI,
             'jquery-validation@{version}/dist/jquery.validate.': resources.jqueryValidationPlugin,
-            'js-cookie@beta/dist/js.cookie.':resources.jscookie,
+            'js-cookie@beta/dist/js.cookie.': resources.jscookie,
             'lodash@{version}/lodash.min.js': resources.lodashJS,
             'lozad': resources.lozad,
             'npm-modernizr@{version}/modernizr.': resources.modernizr,
@@ -818,7 +819,7 @@ mappings.cdn = {
     },
     // Tencent Public Libraries
     'mat1.gtimg.com': {
-        '/libs/' :{
+        '/libs/': {
             'angular.js/{version}/angular-animate.': resources.angularAnimate,
             'angular.js/{version}/angular-aria.': resources.angularAria,
             'angular.js/{version}/angular-cookies.': resources.angularCookies,
@@ -966,7 +967,7 @@ mappings.cdn['sdn.geekzu.org'] = {
 // USTC Linux User Group [Mirror]
 mappings.cdn['ajax.proxy.ustclug.org'] = mappings.cdn['ajax.googleapis.com'];
 
-//UNPKG (Cloudflare)
+// UNPKG (Cloudflare)
 mappings.cdn['unpkg.com'] = {
     '/': mappings.cdn['cdn.jsdelivr.net']['/npm/']
 };
@@ -990,7 +991,7 @@ mappings.cdn['fonts.loli.net'] = mappings.cdn['fonts.googleapis.com'];
 // Qihoo 360 CDN [Mirror]
 mappings.cdn['lib.baomitu.com'] = {
     '/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
-}
+};
 
 // Boot CDN New [Mirror]
 mappings.cdn['cdn.bootcdn.net'] = mappings.cdn['cdnjs.cloudflare.com'];

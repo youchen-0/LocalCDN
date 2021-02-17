@@ -13,11 +13,13 @@
 
 'use strict';
 
+
 /**
  * Request Sanitizer
  */
 
 var requestSanitizer = {};
+
 
 /**
  * Public Methods
@@ -40,6 +42,7 @@ requestSanitizer.disable = function () {
         'urls': stateManager.validHosts
     }, [WebRequest.BLOCKING, WebRequest.HEADERS]);
 };
+
 
 /**
  * Private Methods
@@ -68,6 +71,7 @@ requestSanitizer._stripMetadata = function (requestDetails) {
         [WebRequest.HEADERS]: requestDetails.requestHeaders
     };
 };
+
 
 /**
  * Initializations

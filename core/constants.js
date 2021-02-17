@@ -21,7 +21,6 @@
 /**
  * Constants
  */
-
 const Address = {
     'ANY': '*://*/*',
     'ANY_PATH': '/*',
@@ -126,8 +125,8 @@ const Allowlist = {
 };
 
 const BrowserType = {
-    'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension"),
-    'FIREFOX': chrome.runtime.getURL("/").startsWith("moz-extension")
+    'CHROMIUM': chrome.runtime.getURL('/').startsWith('chrome-extension'),
+    'FIREFOX': chrome.runtime.getURL('/').startsWith('moz-extension')
 };
 
 const IconType = {
