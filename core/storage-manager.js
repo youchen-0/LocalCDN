@@ -107,15 +107,22 @@ storageManager.startImportFilePicker = function () {
     input.click();
 };
 
-storageManager.handleImportFilePicker = async function () {
-    try {
-        let file = document.getElementById('import-file-picker').files[0];
-        let content = await storageManager._readFileAsync(file);
-        storageManager._validation(JSON.parse(content));
-    } catch (err) {
-        console.error('[ LocalCDN ] ' + err);
-    }
+storageManager.handleImportFilePicker = function () {
+    return new Promise((resolve) => {
+        try {
+            let file = document.getElementById('import-file-picker').files[0];
+            storageManager._readFile(file)
+                .then(JSON.parse)
+                .then(storageManager._validation);
+            resolve();
+
+        } catch (err) {
+            console.error(`[ LocalCDN ] ${err}`);
+            alert(err);
+        }
+    });
 };
+
 
 /**
  * Private Methods
@@ -131,7 +138,7 @@ storageManager._handleStorageChanged = function (type) {
     }
 };
 
-storageManager._readFileAsync = function (file) {
+storageManager._readFile = function (file) {
     return new Promise((resolve, reject) => {
         let reader = new FileReader();
         reader.onload = () => {
