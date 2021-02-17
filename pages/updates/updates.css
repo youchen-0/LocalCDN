@@ -3,7 +3,7 @@
  */
 
 .release-date {
-     font-weight: bold;
+    font-weight: bold;
 }
 
 ul {
@@ -16,7 +16,7 @@ ul {
  */
 
 input[type=radio] {
-    margin: 0px;
+    margin: 0;
 }
 
 label {
@@ -28,8 +28,8 @@ input[type=radio], label {
 }
 
 .ruleset-generator {
-    margin-top: 10px;
     display: inline-flex;
+    margin-top: 10px;
     width: 100%;
 }
 

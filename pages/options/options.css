@@ -1,31 +1,27 @@
-/**
- * Sections
- */
-
 body {
     color: #555;
     cursor: default;
     font-family: 'Noto Sans', Arial, sans-serif !important;
     font-size: 14px;
-    margin-top: -15px;
-    padding: 10px !important;
-    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -15px;
+    max-width: 800px;
+    padding: 10px !important;
 }
 
 .option-buttons {
-    border: none;
-    padding: 5px 10px;
-    margin: 5px 10px;
     background-color: transparent;
-    font-weight: normal;
+    border: none;
     cursor: pointer;
+    font-weight: normal;
+    margin: 5px 10px;
+    padding: 5px 10px;
 }
 
 .option-buttons-active {
-    font-weight: bold;
     border-bottom: 1px solid #555;
+    font-weight: bold;
 }
 
 .option-buttons:hover {
@@ -60,8 +56,8 @@ body {
 }
 
 .without-checkbox {
-    margin: 0px !important;
-    padding: 0px !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 #advanced-tab, #export-import-tab, #info-tab {
@@ -78,8 +74,8 @@ body {
 
 .div-selected-icon {
     margin-top: 10px;
-    padding-right: 25px;
     min-width: 113px;
+    padding-right: 25px;
 }
 
 .div-selected-icon > label {
@@ -99,37 +95,26 @@ body {
     font-style: normal;
 }
 
-/**
- * Fonts
- */
-
 @font-face {
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('../../modules/noto-sans/noto-sans.woff2')
-         format('woff2');
+    src: url('../../modules/noto-sans/noto-sans.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 600;
-    src: url('../../modules/noto-sans/noto-sans-bold.woff2')
-         format('woff2');
+    src: url('../../modules/noto-sans/noto-sans-bold.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Noto Sans';
     font-style: italic;
     font-weight: 400;
-    src: url('../../modules/noto-sans/noto-sans-italic.woff2')
-         format('woff2');
+    src: url('../../modules/noto-sans/noto-sans-italic.woff2') format('woff2');
 }
-
-/**
- * Titles
- */
 
 .title-option {
     align-items: center;
@@ -137,52 +122,41 @@ body {
     font-weight: 600;
 }
 
-/**
- * Controls
- */
-
 .input-text {
-    border-radius: 3px;
     border: 1px solid darkgrey;
-    padding: 5px !important;
-    margin-top: 10px !important;
+    border-radius: 3px;
     color: #555;
+    margin-top: 10px !important;
+    padding: 5px !important;
 }
-
-/**
- * Icons
- */
 
 .options-help-icon {
-    display: inline-block;
-    cursor: pointer;
     background-image: url("../../icons/help-dark.svg");
-    background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
     margin-left: 5px;
     width: 15px;
-    height: 15px;
 }
 
-/**
- * Buttons
- */
-
 .button {
-    -moz-user-select: none;
     background-color: #f5f5f5;
-    border-radius: 2px;
     border: 1px solid #cfcfcf;
+    border-radius: 2px;
     color: #5f5f5f;
     cursor: pointer;
     float: right;
     font-size: 12px;
-    outline: 0;
     padding: 5px 22px;
-    text-decoration: none;
-    user-select: none;
     text-align: center;
+    text-decoration: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .button-warning {
@@ -218,9 +192,9 @@ body {
 }
 
 .div-badge {
+    border-left: 1px solid #bbb;
     margin-top: 10px;
     padding-left: 30px;
-    border-left: 1px solid #bbb;
 }
 
 #badge-preview-top {
@@ -229,20 +203,20 @@ body {
 }
 
 #counter-preview-badge {
-    position: absolute;
-    top: 0px;
-    right: -5px;
-    color: white;
     background: black;
-    padding: 1px 6px;
-    font-size: 10px;
     border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    padding: 1px 6px;
+    position: absolute;
+    right: -5px;
+    top: 0;
 }
 
 #pre-badged-background-color, #pre-badged-text-color {
-    width: 30px;
     height: 30px;
     margin-right: 5px;
+    width: 30px;
 }
 
 #icon-badge-preview {
@@ -250,14 +224,14 @@ body {
 }
 
 .colorpicker {
-    display: flex;
-    padding-bottom: 5px;
-    margin-top: 10px;
     align-items: center;
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 5px;
 }
 
 .colorpicker > input {
-    margin-top: 0px !important;
+    margin-top: 0 !important;
 }
 
 div[class="color-picker:a"] {
@@ -273,24 +247,20 @@ div[class="color-picker:a"] {
 }
 
 .img-restore-color {
-    margin-left: 5px;
-    height: 15px;
     cursor: pointer;
+    height: 15px;
+    margin-left: 5px;
 }
 
 .import-export > input[type="button"] {
     margin-bottom: 5px;
 }
 
-/**
- * Miscellaneous
- */
-
 .description-option {
     color: #777;
+    font-size: 12px;
     font-style: italic;
     padding-left: 25px;
-    font-size: 12px;
 }
 
 .badge {
@@ -307,7 +277,7 @@ div[class="color-picker:a"] {
 }
 
 #negate-html-filter-list-warning {
-    margin: 10px 0px 30px 0px;
+    margin: 10px 0 30px 0;
 }
 
 .hidden {
@@ -343,24 +313,24 @@ div[class="color-picker:a"] {
 }
 
 .ruleset-generator {
-    display: flex;
     align-items: center;
-    padding: 5px 0px;
+    display: flex;
+    padding: 5px 0;
 }
 
 .last-update {
-    font-weight: 600;
     background-color: #ffa500;
     border-radius: 3px;
     color: #fff;
     font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
     padding: 3px 5px !important;
     text-transform: uppercase;
-    font-style: normal;
 }
 
 .storage-type {
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 .option-disabled > .title-option > .b-contain,
@@ -387,14 +357,10 @@ div[class="color-picker:a"] {
 }
 
 #tf-domains-allowlist-google-fonts {
-    margin-top: 0px !important;
-    width: 100%;
     box-sizing: border-box;
+    margin-top: 0 !important;
+    width: 100%;
 }
-
-/**
- * Right to Left
- */
 
 body[dir="rtl"] .badge {
     margin-left: 0;
@@ -417,19 +383,19 @@ body[dir="rtl"] .input-text {
 
 .option-group {
     background-color: #e1e1e1;
-    padding: 1.5rem;
     border-radius: 5px;
-    margin: 20px 0px;
+    margin: 20px 0;
+    padding: 1.5rem;
 }
 
 .option-links {
     list-style-type: disclosure-closed;
+    margin-top: 0;
     padding-top: 2rem;
-    margin-top: 0px;
 }
 
 .option-links > li {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 500px) {
@@ -442,9 +408,10 @@ body[dir="rtl"] .input-text {
     .div-icons-badge-colors {
         flex-wrap: wrap;
     }
+
     .div-badge {
         border: none;
-        padding-left: 0px;
+        padding-left: 0;
         width: 100%;
     }
 }
