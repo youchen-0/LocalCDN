@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Un problème avec le site ?",
         "description": "Website broken?"
     }
 }
