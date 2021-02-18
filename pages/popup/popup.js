@@ -509,7 +509,7 @@ popup._onInfoButtonClicked = function () {
 popup._onIncompleteTranslation = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            'url': Links.Weblate,
+            'url': Links.WEBLATE,
             'active': event.button === 0,
         });
     }

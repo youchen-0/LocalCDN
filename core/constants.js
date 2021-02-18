@@ -215,7 +215,7 @@ const Links = {
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html'),
     'LOCALCDN_TEST': 'https://www.localcdn.org/test',
     'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check?domain=',
-    'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/',
+    'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/localcdn/',
 };
 
 const CDNs = {
