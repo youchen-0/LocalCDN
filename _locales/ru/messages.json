@@ -80,7 +80,7 @@
         "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Эта функция \"ломает\" сайты. Не включайте её, пока вручную не добавите в белый список все \"сломанные\" сайты.",
+        "message": "Эта функция ломает отображение сайтов. Не включайте её, если не готовы вручную править белый список.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
