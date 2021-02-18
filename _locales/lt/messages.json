@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Tinklapis sugedęs?",
         "description": "Website broken?"
     }
 }
