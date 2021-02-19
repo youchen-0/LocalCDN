@@ -31,24 +31,20 @@ var stateManager = {};
  */
 
 stateManager.registerInjection = function (tabIdentifier, injection) {
-
     let injectionIdentifier, registeredTab, injectionCount;
 
     injectionIdentifier = injection.source + injection.path + injection.version;
     registeredTab = stateManager.tabs[tabIdentifier];
-
     registeredTab.injections[injectionIdentifier] = injection;
     injectionCount = Object.keys(registeredTab.injections).length || 0;
 
     if (injectionCount > 0) {
-
         chrome.browserAction.setTitle({
             'tabId': tabIdentifier,
             'title': `LocalCDN (${injectionCount})`
         });
 
         if (stateManager.showIconBadge === true) {
-
             wrappers.setBadgeText({
                 'tabId': tabIdentifier,
                 'text': injectionCount.toString()
@@ -57,42 +53,34 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
     }
 
     if (isNaN(storageManager.amountInjected)) {
-
         storageManager.type.get(Setting.AMOUNT_INJECTED, function (items) {
-
             storageManager.amountInjected = items.amountInjected;
-
             storageManager.type.set({
                 [Setting.AMOUNT_INJECTED]: ++storageManager.amountInjected
             });
         });
-
     } else {
-
         chrome.storage.local.set({
             [Setting.AMOUNT_INJECTED]: ++storageManager.amountInjected
         });
     }
+
     if (stateManager.internalStatistics) {
         stats.setStats(injection);
     }
 };
 
 stateManager.addDomainToAllowlist = function (domain) {
-
     return new Promise((resolve) => {
-
         let allowlistedDomains = requestAnalyzer.allowlistedDomains;
-        allowlistedDomains[domain] = true;
 
+        allowlistedDomains[domain] = true;
         storageManager.type.set({allowlistedDomains}, resolve);
     });
 };
 
 stateManager.removeDomainFromAllowlist = function (domain) {
-
     return new Promise((resolve) => {
-
         let allowlistedDomains, wildcard;
 
         allowlistedDomains = requestAnalyzer.allowlistedDomains;
@@ -109,10 +97,9 @@ stateManager.removeDomainFromAllowlist = function (domain) {
 };
 
 stateManager.addDomainToManipulateDOMlist = function (domain) {
-
     return new Promise((resolve) => {
-
         let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOM;
+
         domainsManipulateDOM[domain] = true;
 
         storageManager.type.set({domainsManipulateDOM}, resolve);
@@ -120,10 +107,9 @@ stateManager.addDomainToManipulateDOMlist = function (domain) {
 };
 
 stateManager.removeDomainFromManipulateDOMlist = function (domain) {
-
     return new Promise((resolve) => {
-
         let domainsManipulateDOM = requestAnalyzer.domainsManipulateDOM;
+
         delete domainsManipulateDOM[domain];
 
         storageManager.type.set({domainsManipulateDOM}, resolve);
@@ -136,7 +122,6 @@ stateManager.removeDomainFromManipulateDOMlist = function (domain) {
  */
 
 stateManager._createTab = function (tab) {
-
     let tabIdentifier, requestFilters;
 
     tabIdentifier = tab.id;
@@ -151,10 +136,8 @@ stateManager._createTab = function (tab) {
     };
 
     chrome.webRequest.onBeforeRequest.addListener(function (requestDetails) {
-
         tab = stateManager.tabs[tabIdentifier].details || {};
         return interceptor.handleRequest(requestDetails, tabIdentifier, tab);
-
     }, requestFilters, [WebRequest.BLOCKING]);
 };
 
@@ -163,12 +146,10 @@ stateManager._removeTab = function (tabIdentifier) {
 };
 
 stateManager._updateTab = function (details) {
-
     let tabDomain, domainIsAllowlisted, frameIdentifier, tabIdentifier;
 
     tabDomain = helpers.extractDomainFromUrl(details.url, true);
     domainIsAllowlisted = stateManager._domainIsListed(tabDomain);
-
     frameIdentifier = details.frameId;
     tabIdentifier = details.tabId;
 
@@ -182,9 +163,7 @@ stateManager._updateTab = function (details) {
     });
 
     if (domainIsAllowlisted) {
-
         stateManager._setIconDisabled(tabIdentifier);
-
         chrome.browserAction.setTitle({
             'tabId': tabIdentifier,
             'title': 'LocalCDN (–)'
@@ -201,43 +180,30 @@ stateManager._updateTab = function (details) {
 };
 
 stateManager._handleStorageChanged = function (changes) {
-
     if (Setting.SHOW_ICON_BADGE in changes) {
-
         stateManager.showIconBadge = changes.showIconBadge.newValue;
-
         if (changes.showIconBadge.newValue !== true) {
-
             chrome.tabs.query({}, function (tabs) {
                 tabs.forEach(stateManager._removeIconBadgeFromTab);
             });
         }
-    }
-
-    if (Setting.STRIP_METADATA in changes) {
-
+    } else if (Setting.STRIP_METADATA in changes) {
         requestSanitizer.disable();
-
         if (changes.stripMetadata.newValue !== false) {
             requestSanitizer.enable();
         }
-    }
-    if (Setting.NEGATE_HTML_FILTER_LIST in changes) {
+    } else if (Setting.NEGATE_HTML_FILTER_LIST in changes) {
         stateManager.getInvertOption = changes.negateHtmlFilterList.newValue;
-    }
-    if (Setting.SELECTED_ICON in changes) {
+    } else if (Setting.SELECTED_ICON in changes) {
         stateManager.selectedIcon = changes.selectedIcon.newValue;
-    }
-    if (Setting.INTERNAL_STATISTICS in changes) {
+    } else if (Setting.INTERNAL_STATISTICS in changes) {
         stateManager.internalStatistics = changes.internalStatistics.newValue;
-    }
-    if (Setting.INTERNAL_STATISTICS_DATA in changes) {
+    } else if (Setting.INTERNAL_STATISTICS_DATA in changes) {
         stats.data = changes.internalStatisticsData.newValue;
     }
 };
 
 stateManager._clearBadgeText = function (tabIdentifier) {
-
     wrappers.setBadgeText({
         'tabId': tabIdentifier,
         'text': ''
@@ -250,7 +216,6 @@ stateManager._removeIconBadgeFromTab = function (tab) {
 
 stateManager._domainIsListed = function (domain, listname) {
     if (domain !== null) {
-
         let allowlistRecord, isAllowlisted;
 
         if (listname === 'manipulate-dom') {
@@ -260,15 +225,12 @@ stateManager._domainIsListed = function (domain, listname) {
             allowlistRecord = helpers.checkAllowlisted(domain);
             isAllowlisted = Boolean(allowlistRecord);
         }
-
         return isAllowlisted;
     }
-
     return false;
 };
 
 stateManager._setIconDisabled = function (tabIdentifier) {
-
     wrappers.setIcon({
         'path': stateManager.selectedIcon,
         'tabId': tabIdentifier
@@ -288,7 +250,6 @@ stateManager.selectedIcon = 'Default';
 stateManager.internalStatistics = false;
 
 for (let mapping in mappings.cdn) {
-
     let supportedHost = Address.ANY_PROTOCOL + mapping + Address.ANY_PATH;
     stateManager.validHosts.push(supportedHost);
 }
@@ -298,7 +259,6 @@ chrome.tabs.query({}, function (tabs) {
 });
 
 storageManager.type.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], function (items) {
-
     if (items.showIconBadge === undefined) {
         items.showIconBadge = true;
     }
@@ -322,14 +282,11 @@ chrome.tabs.onCreated.addListener(stateManager._createTab);
 chrome.tabs.onRemoved.addListener(stateManager._removeTab);
 
 chrome.webRequest.onBeforeRequest.addListener(function (requestDetails) {
-
     if (requestDetails.tabId !== -1 && stateManager.tabs[requestDetails.tabId]) {
-
         stateManager.tabs[requestDetails.tabId].details = {
             'url': requestDetails.url
         };
     }
-
 }, {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]}, [WebRequest.BLOCKING]);
 
 chrome.webNavigation.onCommitted.addListener(stateManager._updateTab, {
@@ -337,23 +294,17 @@ chrome.webNavigation.onCommitted.addListener(stateManager._updateTab, {
 });
 
 chrome.webRequest.onErrorOccurred.addListener(function (requestDetails) {
-
     if (stateManager.requests[requestDetails.requestId]) {
         delete stateManager.requests[requestDetails.requestId];
     }
-
 }, {'urls': [Address.ANY]});
 
 chrome.webRequest.onBeforeRedirect.addListener(function (requestDetails) {
-
     let knownRequest = stateManager.requests[requestDetails.requestId];
-
     if (knownRequest) {
-
         stateManager.registerInjection(knownRequest.tabIdentifier, knownRequest.targetDetails);
         delete stateManager.requests[requestDetails.requestId];
     }
-
 }, {'urls': [Address.ANY]});
 
 chrome.storage.onChanged.addListener(stateManager._handleStorageChanged);
