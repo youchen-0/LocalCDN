@@ -246,28 +246,23 @@ popup._determineTargetTab = function () {
     });
 };
 
-popup._determineAmountInjected = function () {
+popup._readLocalStorage = function () {
     return new Promise((resolve) => {
-        chrome.storage.local.get(Setting.AMOUNT_INJECTED, function (items) {
+        chrome.storage.local.get([
+            Setting.AMOUNT_INJECTED,
+            Setting.INTERNAL_STATISTICS
+        ], function (items) {
             popup._amountInjected = items.amountInjected || 0;
-            resolve();
-        });
-    });
-};
-
-popup._determineNegateHtmlFilterOption = function () {
-    return new Promise((resolve) => {
-        storageManager.type.get(Setting.NEGATE_HTML_FILTER_LIST, function (items) {
-            popup.negateHtmlFilterList = items.negateHtmlFilterList;
-            resolve();
-        });
-    });
-};
-
-popup._getStatisticsStatus = function () {
-    return new Promise((resolve) => {
-        chrome.storage.local.get(Setting.INTERNAL_STATISTICS, function (items) {
             popup._statisticsStatus = items.internalStatistics || false;
+            resolve();
+        });
+    });
+};
+
+popup._readStorage = function () {
+    return new Promise((resolve) => {
+        storageManager.type.get([Setting.NEGATE_HTML_FILTER_LIST], function (items) {
+            popup.negateHtmlFilterList = items.negateHtmlFilterList;
             resolve();
         });
     });
@@ -436,8 +431,8 @@ popup._onDocumentLoaded = function () {
     popup._version = manifest.version;
     popup._scriptDirection = helpers.determineScriptDirection(language);
 
-    popup._determineAmountInjected()
-        .then(popup._getStatisticsStatus)
+    popup._readLocalStorage()
+        .then(popup._readStorage)
         .then(popup._renderContents);
 };
 
