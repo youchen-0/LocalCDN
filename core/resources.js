@@ -461,6 +461,11 @@ var resources = {
         'path': 'resources/hls.js/{version}/hls.min.jsm',
         'type': 'application/javascript'
     },
+    // hogan.js
+    'hoganJS': {
+        'path': 'resources/hogan.js/{version}/hogan.min.jsm',
+        'type': 'application/javascript'
+    },
     // InstantSearch.js
     'InstantSearchJS': {
         'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm',

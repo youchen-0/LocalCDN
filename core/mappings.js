@@ -280,6 +280,7 @@ mappings.cdn = {
             'font-awesome/{version}/js/': resources.fontawesome5JS,
             'gsap/{version}/': resources.gsapBundle,
             'highlight.js/{version}/': resources.highlightJS,
+            'hogan.js/{version}/hogan.': resources.hoganJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'iScroll/{version}/iscroll.min.js': resources.iScroll,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,

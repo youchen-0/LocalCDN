@@ -243,6 +243,8 @@ targets.setLastVersion = function (type, version) {
         return '5.0.0';
     } else if (type.startsWith('/hls.js/')) {
         return '0.14.17';
+    } else if (type.startsWith('/hogan.js/')) {
+        return '3.0.2';
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
@@ -506,6 +508,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'hogan.min.jsm': 'hogan.js',
     'highlight.min.jsm': 'highlight.js (Bundle)',
     'jquery.cookie.min.jsm': 'jquery-cookie',
     'jquery.scrollbar.min.jsm': 'jQuery Scrollbar',
