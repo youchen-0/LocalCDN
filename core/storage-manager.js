@@ -14,11 +14,20 @@
 
 'use strict';
 
+
+/**
+ * Constants
+ */
+
+const InvalidFile = 'Invalid file!';
+
+
 /**
  * Storage Manager
  */
 
 var storageManager = {};
+
 
 /**
  * Public Methods
@@ -78,12 +87,12 @@ storageManager.migrateData = function (target) {
 
 storageManager.export = function () {
     let filename = new Date().toISOString();
-    filename = filename.substring(0, 10) + '_localcdn_backup.txt';
+    filename = `${filename.substring(0, 10)}_localcdn_backup.txt`;
 
     storageManager.type.get(null, function (items) {
         delete items['whitelistedDomains'];
         let element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(items, null, '  ')));
+        element.setAttribute('href', `data:text/plain;charset=utf-8,${encodeURIComponent(JSON.stringify(items, null, '  '))}`);
         element.setAttribute('download', filename);
         element.style.display = 'none';
         document.body.appendChild(element);
@@ -98,15 +107,22 @@ storageManager.startImportFilePicker = function () {
     input.click();
 };
 
-storageManager.handleImportFilePicker = async function () {
-    try {
-        let file = document.getElementById('import-file-picker').files[0];
-        let content = await storageManager._readFileAsync(file);
-        storageManager._validation(JSON.parse(content));
-    } catch (err) {
-        console.error('[ LocalCDN ] ' + err);
-    }
+storageManager.handleImportFilePicker = function () {
+    return new Promise((resolve) => {
+        try {
+            let file = document.getElementById('import-file-picker').files[0];
+            storageManager._readFile(file)
+                .then(JSON.parse)
+                .then(storageManager._validation);
+            resolve();
+
+        } catch (err) {
+            console.error(`[ LocalCDN ] ${err}`);
+            alert(err);
+        }
+    });
 };
+
 
 /**
  * Private Methods
@@ -122,7 +138,7 @@ storageManager._handleStorageChanged = function (type) {
     }
 };
 
-storageManager._readFileAsync = function (file) {
+storageManager._readFile = function (file) {
     return new Promise((resolve, reject) => {
         let reader = new FileReader();
         reader.onload = () => {
@@ -169,13 +185,13 @@ storageManager._validation = function (content) {
             // Set default if not existing in file
             imported[key] = value;
         } else {
-            alert(chrome.i18n.getMessage('dialogImportFailed') + '\n\n' + key + ': ' + content[key]);
-            throw 'Invalid file!';
+            alert(`${chrome.i18n.getMessage('dialogImportFailed')}\n\n${key}: ${content[key]}`);
+            throw InvalidFile;
         }
     }
 
     // set values directly
-    wrappers.setIcon({ path: imported['selectedIcon'] }, 'Enabled');
+    wrappers.setIcon({'path': imported['selectedIcon']}, 'Enabled');
     storageManager.amountInjected = imported['amountInjected'];
     storageManager.statistics = imported['internalStatisticsData'];
 
@@ -187,13 +203,15 @@ storageManager._validation = function (content) {
 
 storageManager._validateDomainsAndStatistics = function (type, obj) {
     let valid = {};
+
     if (type === 'allowedDomainsGoogleFonts' || type === 'domainsManipulateDOM' || type === 'allowlistedDomains') {
         for (const [key, value] of Object.entries(obj)) {
+            // eslint-disable-next-line no-useless-escape
             if ((/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,24}/.test(key) || key === '') && value === true) {
                 valid[key] = value;
             } else {
-                alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + key);
-                throw 'Invalid file!';
+                alert(`${chrome.i18n.getMessage('dialogImportFailed')}: ${key}`);
+                throw InvalidFile;
             }
         }
     } else if (type === 'internalStatisticsData') {
@@ -202,32 +220,34 @@ storageManager._validateDomainsAndStatistics = function (type, obj) {
                 for (const [types, category] of Object.entries(values)) {
                     if (types === 'frameworks') {
                         for (const [name, counter] of Object.entries(category)) {
-                            if (!/resources\/[0-9a-z.-]+\/((?:\d{1,2}\.){1,3}\d{1,2})?.*\.(css|jsm)/.test(name) && !storageManager._validateNumbers(counter)) {
-                                alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + name);
-                                throw 'Invalid file!';
+                            // eslint-disable-next-line max-len
+                            if (!(/resources\/[0-9a-z.-]+\/((?:\d{1,2}\.){1,3}\d{1,2})?.*\.(css|jsm)/).test(name) && !storageManager._validateNumbers(counter)) {
+                                alert(`${chrome.i18n.getMessage('dialogImportFailed')}: ${name}`);
+                                throw InvalidFile;
                             }
                         }
                     } else if (types === 'cdns') {
                         for (const [name, counter] of Object.entries(category)) {
-                            if (!/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,24}/.test(name) && !storageManager._validateNumbers(counter)) {
-                                alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + name);
-                                throw 'Invalid file!';
+                            // eslint-disable-next-line no-useless-escape, max-len
+                            if (!(/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,24}/).test(name) && !storageManager._validateNumbers(counter)) {
+                                alert(`${chrome.i18n.getMessage('dialogImportFailed')}: ${name}`);
+                                throw InvalidFile;
                             }
                         }
                     } else {
-                        alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + type);
-                        throw 'Invalid file!';
+                        alert(`${chrome.i18n.getMessage('dialogImportFailed')}: ${type}`);
+                        throw InvalidFile;
                     }
                 }
             } else {
-                alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + date);
-                throw 'Invalid file!';
+                alert(`${chrome.i18n.getMessage('dialogImportFailed')}: ${date}`);
+                throw InvalidFile;
             }
         }
         valid = obj;
     } else {
-        alert(chrome.i18n.getMessage('dialogImportFailed') + ': ' + type);
-        throw 'Invalid file!';
+        alert(`${chrome.i18n.getMessage('dialogImportFailed')}: ${type}`);
+        throw InvalidFile;
     }
     return valid;
 };
@@ -251,6 +271,11 @@ storageManager._validateStrings = function (value) {
 storageManager._validateNumbers = function (value) {
     return isNaN(value) ? 0 : value;
 };
+
+
+/**
+ * Initializations
+ */
 
 storageManager.data = {};
 storageManager.type = chrome.storage.local;

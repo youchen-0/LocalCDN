@@ -18,11 +18,13 @@
 
 'use strict';
 
+
 /**
  * Helpers
  */
 
 var helpers = {};
+
 
 /**
  * Public Methods
@@ -73,10 +75,10 @@ helpers.languageIsFullySupported = function (language) {
     languageSupported = false;
 
     supportedLanguages = [
-        'ar','bg','cs','da','de','el','en','en_CA','en_US','eo','es','et','fi',
-        'fr','he','hr','hu','id','is','it','ja','kn','ko','lb','lt',
-        'nb_NO','nl','pl','pt','pt_BR','pt_PT','ro','ru','sk','sr','sv','tl',
-        'tr','zh_Hans','zh_Hant'
+        'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en_CA', 'en_US', 'eo', 'es', 'et', 'fi',
+        'fr', 'he', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'kn', 'ko', 'lb', 'lt',
+        'nb_NO', 'nl', 'pl', 'pt', 'pt_BR', 'pt_PT', 'ro', 'ru', 'sk', 'sr', 'sv', 'tl',
+        'tr', 'zh_Hans', 'zh_Hant'
     ];
 
     for (let supportedLanguage of supportedLanguages) {
@@ -120,8 +122,8 @@ helpers.extractDomainFromUrl = function (url, normalize) {
     return extractedDomain;
 };
 
-helpers.getWildcard = function(initiatorDomain) {
-    let domain = initiatorDomain.split(".");
+helpers.getWildcard = function (initiatorDomain) {
+    let domain = initiatorDomain.split('.');
 
     if (domain.length > 2) {
         domain[0] = '*';
@@ -131,7 +133,7 @@ helpers.getWildcard = function(initiatorDomain) {
 
 };
 
-helpers.checkAllowlisted = function(domain) {
+helpers.checkAllowlisted = function (domain) {
     let domainWithoutPrefix, wildcard, list;
 
     if (domain.startsWith(Address.WWW_PREFIX)) {
@@ -213,8 +215,12 @@ helpers.compareVersion = function (v1, v2) {
     for (let i = 0; i < k; ++i) {
         v1[i] = parseInt(v1[i], 10);
         v2[i] = parseInt(v2[i], 10);
-        if (v1[i] > v2[i]) return true;
-        if (v1[i] < v2[i]) return false;
+        if (v1[i] > v2[i]) {
+            return true;
+        }
+        if (v1[i] < v2[i]) {
+            return false;
+        }
     }
-    return v1.length == v2.length ? true : v1.length < v2.length ? false : true;
+    return v1.length === v2.length ? true : v1.length < v2.length ? false : true;
 };

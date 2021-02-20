@@ -14,11 +14,13 @@
 
 'use strict';
 
+
 /**
  * Targets
  */
 
 var targets = {};
+
 
 /**
  * Public Methods
@@ -49,7 +51,7 @@ targets.determineBundle = function (path) {
         val = 'Bootstrap (Fonts)';
     }
 
-    return val === '' ? val : val + ' (Bundle)';
+    return val === '' ? val : `${val} (Bundle)`;
 };
 
 targets.setLastVersion = function (type, version) {
@@ -62,7 +64,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/algoliasearch/3.')) {
         return '3.35.1';
     } else if (type.startsWith('/algoliasearch/4.')) {
-        return '4.8.4';
+        return '4.8.5';
     } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
@@ -189,7 +191,7 @@ targets.setLastVersion = function (type, version) {
         return '2.25.6';
     } else if (type.startsWith('/dayjs/1.')) {
         return '1.10.4';
-    } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest') ) {
+    } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest')) {
         return '3.0.3';
     } else if (type.startsWith('/docsearch.js/2.')) {
         return '2.6.3';
@@ -204,7 +206,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/ember.js/2.')) {
         return '2.18.2';
     } else if (type.startsWith('/ember.js/3.')) {
-        return '3.24.1';
+        return '3.25.1';
     } else if (type.startsWith('/ethjs')) {
         return '0.3.4';
     } else if (type.startsWith('/ext-core/3.')) {
@@ -232,7 +234,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
     } else if (type.startsWith('/highlight.js/10.')) {
-        return '10.5.0';
+        return '10.6.0';
     } else if (type.startsWith('/highlight.js/9.')) {
         return '9.18.3';
     } else if (type.startsWith('/history/4.')) {
@@ -241,10 +243,12 @@ targets.setLastVersion = function (type, version) {
         return '5.0.0';
     } else if (type.startsWith('/hls.js/')) {
         return '0.14.17';
+    } else if (type.startsWith('/hogan.js/')) {
+        return '3.0.2';
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
-        return '4.13.2';
+        return '4.14.2';
     } else if (type.startsWith('/iScroll/5.')) {
         return '5.2.0';
     } else if (type.startsWith('/jets/0.')) {
@@ -381,7 +385,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/popper.js/1.')) {
         return '1.16.1';
     } else if (type.startsWith('/popper.js/2.')) {
-        return '2.6.0';
+        return '2.8.0';
     } else if (type.startsWith('/prop-types/15.')) {
         return '15.7.2';
     } else if (type.startsWith('/protonet-jquery.inview/1.')) {
@@ -461,7 +465,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/toastr.js/2.')) {
         return '2.1.4';
     } else if (type.startsWith('/underscore.js/1.')) {
-        return '1.11.0';
+        return '1.12.0';
     } else if (type.startsWith('/urlive/1.')) {
         return '1.1.1';
     } else if (type.startsWith('/vanilla-lazyload')) {
@@ -499,16 +503,18 @@ targets.setLastVersion = function (type, version) {
 };
 
 targets.determineResourceName = function (filename) {
+    // eslint-disable-next-line no-use-before-define
     return ListOfFiles[filename] || 'Unknown';
 };
 
 const ListOfFiles = {
+    'hogan.min.jsm': 'hogan.js',
     'highlight.min.jsm': 'highlight.js (Bundle)',
     'jquery.cookie.min.jsm': 'jquery-cookie',
     'jquery.scrollbar.min.jsm': 'jQuery Scrollbar',
     'dayjs.min.jsm': 'Day.js',
     'jquery.validate.unobtrusive.min.jsm': 'jQuery Validate Unobtrusive',
-    'jquery.sliderPro.min.js': 'Slider Pro (JS)',
+    'jquery.sliderPro.min.jsm': 'Slider Pro (JS)',
     'knockout-latest.min.jsm': 'Knockout',
     'bootstrap-multiselect.min.jsm': 'Bootstrap Multiselect',
     'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',

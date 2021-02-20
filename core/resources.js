@@ -18,6 +18,7 @@
 
 'use strict';
 
+
 /**
  * Resources
  */
@@ -46,60 +47,60 @@ var resources = {
     },
     // AngularJS
     'angular': {
-    	'path': 'resources/angular.js/{version}/angular.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular.min.jsm',
+        'type': 'application/javascript'
     },
     'angularAnimate': {
-    	'path': 'resources/angular.js/{version}/angular-animate.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-animate.min.jsm',
+        'type': 'application/javascript'
     },
     'angularAria': {
-    	'path': 'resources/angular.js/{version}/angular-aria.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-aria.min.jsm',
+        'type': 'application/javascript'
     },
     'angularCookies': {
-    	'path': 'resources/angular.js/{version}/angular-cookies.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-cookies.min.jsm',
+        'type': 'application/javascript'
     },
     'angularLoader': {
-    	'path': 'resources/angular.js/{version}/angular-loader.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-loader.min.jsm',
+        'type': 'application/javascript'
     },
     'angularMessageFormat': {
-    	'path': 'resources/angular.js/{version}/angular-message-format.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-message-format.min.jsm',
+        'type': 'application/javascript'
     },
     'angularMessages': {
-    	'path': 'resources/angular.js/{version}/angular-messages.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-messages.min.jsm',
+        'type': 'application/javascript'
     },
     'angularParseExt': {
-    	'path': 'resources/angular.js/{version}/angular-parse-ext.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-parse-ext.min.jsm',
+        'type': 'application/javascript'
     },
     'angularResource': {
-    	'path': 'resources/angular.js/{version}/angular-resource.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-resource.min.jsm',
+        'type': 'application/javascript'
     },
     'angularRoute': {
-    	'path': 'resources/angular.js/{version}/angular-route.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-route.min.jsm',
+        'type': 'application/javascript'
     },
     'angularSanitize': {
-    	'path': 'resources/angular.js/{version}/angular-sanitize.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-sanitize.min.jsm',
+        'type': 'application/javascript'
     },
     'angularTouch': {
-    	'path': 'resources/angular.js/{version}/angular-touch.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular.js/{version}/angular-touch.min.jsm',
+        'type': 'application/javascript'
     },
     // angularMaterialDesign
     'angularMaterialDesignJS': {
-    	'path': 'resources/angular-material/{version}/angular-material.min.jsm',
-    	'type': 'application/javascript'
+        'path': 'resources/angular-material/{version}/angular-material.min.jsm',
+        'type': 'application/javascript'
     },
     'angularMaterialDesignCSS': {
-    	'path': 'resources/angular-material/{version}/angular-material.min.css',
+        'path': 'resources/angular-material/{version}/angular-material.min.css',
         'type': 'text/css'
     },
     // angular-bootstrap-colorpicker [Deprecated]
@@ -458,6 +459,11 @@ var resources = {
     // hls.js
     'hlsJS': {
         'path': 'resources/hls.js/{version}/hls.min.jsm',
+        'type': 'application/javascript'
+    },
+    // hogan.js
+    'hoganJS': {
+        'path': 'resources/hogan.js/{version}/hogan.min.jsm',
         'type': 'application/javascript'
     },
     // InstantSearch.js

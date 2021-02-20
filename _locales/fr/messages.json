@@ -242,5 +242,9 @@
     "updateNotificationAlways": {
         "message": "Toujours",
         "description": "Always"
+    },
+    "websiteBroken": {
+        "message": "Un problème avec le site ?",
+        "description": "Website broken?"
     }
 }

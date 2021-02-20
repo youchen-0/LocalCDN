@@ -18,11 +18,13 @@
 
 'use strict';
 
+
 /**
  * Interceptor
  */
 
 var interceptor = {};
+
 
 /**
  * Public Methods
@@ -68,6 +70,7 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         'redirectUrl': chrome.extension.getURL(targetPath + fileGuard.secret)
     };
 };
+
 
 /**
  * Private Methods
@@ -117,10 +120,11 @@ interceptor._handleStorageChanged = function (changes) {
         interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
     }
 
-    if (Setting.BLOCK_GOOGLE_FONTS in changes) {
-        interceptor.blockGoogleFonts = changes.blockGoogleFonts.newValue;
+    if (Setting.ALLOWED_DOMAINS_GOOGLE_FONTS in changes) {
+        interceptor.allowedDomainsGoogleFonts = changes.allowedDomainsGoogleFonts.newValue;
     }
 };
+
 
 /**
  * Initializations
@@ -145,6 +149,7 @@ storageManager.type.get(interceptor.relatedSettings, function (items) {
     interceptor.blockGoogleFonts = items.blockGoogleFonts || true;
     interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
 });
+
 
 /**
  * Event Handlers

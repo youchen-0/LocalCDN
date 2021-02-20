@@ -1,0 +1,7 @@
+--ignore = bulletproof-font-face,
+           important,
+           ids,
+           box-sizing,
+           fallback-colors,
+           universal-selector,
+           box-model,

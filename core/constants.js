@@ -21,7 +21,6 @@
 /**
  * Constants
  */
-
 const Address = {
     'ANY': '*://*/*',
     'ANY_PATH': '/*',
@@ -126,8 +125,8 @@ const Allowlist = {
 };
 
 const BrowserType = {
-    'CHROMIUM': chrome.runtime.getURL("/").startsWith("chrome-extension"),
-    'FIREFOX': chrome.runtime.getURL("/").startsWith("moz-extension")
+    'CHROMIUM': chrome.runtime.getURL('/').startsWith('chrome-extension'),
+    'FIREFOX': chrome.runtime.getURL('/').startsWith('moz-extension')
 };
 
 const IconType = {
@@ -194,7 +193,7 @@ const IconType = {
 };
 
 const Regex = {
-    'GOOGLE_FONTS': /fonts\.googleapis\.com\/(css|icons)(?!.*Material\+Icons).*/,
+    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/.*/,
     'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/(icon|css)\?family=.*Material\+Icons/,
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
@@ -216,7 +215,7 @@ const Links = {
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html'),
     'LOCALCDN_TEST': 'https://www.localcdn.org/test',
     'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check?domain=',
-    'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/',
+    'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/localcdn/',
 };
 
 const CDNs = {
@@ -254,6 +253,7 @@ const CDNs = {
 
 const IgnoredHost = {
     'fonts.googleapis.com': true,
+    'fonts.gstatic.com': true,
 };
 
 // Supported charsets for TextDecoder()

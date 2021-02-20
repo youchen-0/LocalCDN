@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Te protege de rastreamento feito usando CDNs (Redes de Fornecimento de Conteúdo), redirecionando para recursos locais.",
+        "message": "Te protege contra o rastreamento usando CDNs (Redes de Fornecimento de Conteúdo), redirecionando para recursos locais.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Digite os domínios para desabilitar o LocalCDN neles. Separe múltiplos domínios com ponto e vírgula (;).",
+        "message": "Digite os domínios para desabilitar o LocalCDN neles. Uma entrada por linha.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Entre os domínios que irão ser usados ou ignorados pelo filtro HTML. Separe múltiplas entradas com ponto e vírgula (;).",
+        "message": "Digite os domínios que serão usados ou ignorados pelo filtro HTML. Uma entrada por linha.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -172,11 +172,11 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Você tem certeza de que quer apagar as estatísticas?",
+        "message": "Você tem certeza de que quer apagar todas as estatísticas?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Estes domínios são permitidos para carregar Google Fonts. Separe várias entradas com ponto e vírgula (;).",
+        "message": "Estes domínios tem permissão para carregar Google Fonts. Uma entrada por linha.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -242,5 +242,9 @@
     "updateNotificationAlways": {
         "message": "Sempre",
         "description": "Always"
+    },
+    "websiteBroken": {
+        "message": "Site quebrado?",
+        "description": "Website broken?"
     }
 }

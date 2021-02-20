@@ -14,11 +14,17 @@
 
 'use strict';
 
+
 /**
  * Help
  */
 
 var help = {};
+
+
+/**
+ * Private Methods
+ */
 
 help._onDocumentLoaded = function () {
     let language = navigator.language;
@@ -28,5 +34,10 @@ help._onDocumentLoaded = function () {
 
     helpers.insertI18nContentIntoDocument(document);
 };
+
+
+/**
+ * Initializations
+ */
 
 document.addEventListener('DOMContentLoaded', help._onDocumentLoaded);

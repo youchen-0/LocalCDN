@@ -18,11 +18,13 @@
 
 'use strict';
 
+
 /**
  * Messenger
  */
 
 var messenger = {};
+
 
 /**
  * Private Methods
@@ -96,6 +98,7 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
         storageManager.statistics = {};
     }
 };
+
 
 /**
  * Event Handlers

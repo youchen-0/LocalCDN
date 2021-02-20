@@ -1,15 +1,18 @@
 a {
-    color: #555;
     background: url('../../icons/link-dark.svg') no-repeat right center;
     background-size: 10px 10px;
+    color: #777;
     padding-right: 13px;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #777;
-    text-decoration: none;
+    background: url('../../icons/link-light.svg') no-repeat right center;
+    background-size: 10px 10px;
+    color: #c4c4c4;
     cursor: pointer;
+    filter: invert(0.2);
+    text-decoration: none;
 }
 
 .no-icon {
@@ -17,17 +20,17 @@ a:hover {
 }
 
 #button-copy-rule-set, textarea {
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
 }
 
 #button-copy-rule-set {
     display: none;
-    padding: 5px;
     font-size: 1.3em;
     line-height: 2;
+    padding: 5px;
     text-align: center;
 }
 
@@ -50,20 +53,20 @@ textarea {
 }
 
 .btns {
-    padding: 5px 10px;
     background-color: #f0f0f0;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     border: 1px solid #aeaeae;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     font-size: 1em;
     line-height: 1.5;
+    padding: 5px 10px;
+    text-align: center;
 }
 
 .btns:hover {
-    cursor: pointer;
     background-color: #c1c1c1;
+    cursor: pointer;
 }
 
 .btns-active {
@@ -71,82 +74,78 @@ textarea {
     color: #515151 !important;
 }
 
-/**
- * Checkboxes, Radiobuttons
- */
-
 .b-contain *, .b-contain *::before, .b-contain *::after {
     box-sizing: content-box !important;
 }
 
 .b-contain input {
+    opacity: 0;
     position: absolute;
     z-index: -1;
-    opacity: 0;
 }
 
 .b-contain span {
-    font-size: 12px;
     font-family: inherit;
+    font-size: 12px;
 }
 
 .b-contain {
-    display: table;
-    position: relative;
-    padding-left: 25px;
     cursor: pointer;
+    display: table;
     line-height: 1.2;
+    padding-left: 25px;
+    position: relative;
 }
 
 .b-contain input[type="checkbox"] ~ .b-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 16px;
-    width: 16px;
     background: rgba(241, 245, 248, 1);
-    transition: background 250ms;
     border: 1px solid rgba(184, 194, 204, 1);
     border-radius: 2px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background 250ms;
+    width: 16px;
 }
 
 .b-contain input[type="radio"] ~ .b-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 16px;
-    width: 16px;
     background: rgba(241, 245, 248, 1);
-    transition: background 250ms;
     border: 1px solid rgba(184, 194, 204, 1);
     border-radius: 10px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background 250ms;
+    width: 16px;
 }
 
 .b-contain input[type="checkbox"] ~ .b-input::after {
-    content: '';
-    position: absolute;
-    display: none;
-    left: 5px;
-    top: 1px;
-    width: 4px;
-    height: 10px;
     border: solid rgba(255, 255, 255, 1);
     border-width: 0 2px 2px 0;
-    transition: background 250ms;
+    content: '';
+    display: none;
+    height: 10px;
+    left: 5px;
+    position: absolute;
+    top: 1px;
     transform: rotate(45deg);
+    transition: background 250ms;
+    width: 4px;
 }
 
 .b-contain input[type="radio"] ~ .b-input::after {
-    content: '';
-    position: absolute;
-    display: none;
-    left: 4px;
-    top: 4px;
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
     background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    content: '';
+    display: none;
+    height: 8px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
     transition: background 250ms;
+    width: 8px;
 }
 
 .b-contain input:disabled ~ .b-input::after {
@@ -163,7 +162,7 @@ textarea {
 }
 
 .b-contain input:focus ~ .b-input {
-    box-shadow: 0 0 0 2px rgba(52,144,220,0.5);
+    box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.5);
 }
 
 .b-contain input:checked ~ .b-input {
@@ -174,15 +173,15 @@ textarea {
 .b-contain input[type="checkbox"]:disabled ~ .b-input {
     background: rgba(241, 245, 248, 1);
     border-color: rgba(184, 194, 204, 1);
-    opacity: 0.6;
     cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .b-contain input[type="radio"]:disabled ~ .b-input {
     background: rgba(241, 245, 248, 1);
     border-color: rgba(184, 194, 204, 1);
-    opacity: 0.6;
     cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .b-contain input[type="radio"]:disabled ~ .b-input::after {
@@ -195,21 +194,21 @@ textarea {
 }
 
 .b-contain .b-input::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3rem;
-    height: 3rem;
-    margin-left: -0.85rem;
-    margin-top: -0.85rem;
     background: rgba(0, 130, 243, 1);
     border-radius: 2rem;
-    opacity: .6;
-    z-index: 99999;
+    content: '';
+    display: block;
+    height: 3rem;
+    left: 0;
+    margin-left: -0.85rem;
+    margin-top: -0.85rem;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
     transform: scale(0);
     visibility: hidden;
+    width: 3rem;
+    z-index: 99999;
 }
 
 .b-contain input + .b-input::before {
@@ -230,14 +229,15 @@ textarea {
 
 @media (prefers-color-scheme: dark) {
     a {
-        color: #f2f2f2;
-        font-weight: bold;
         background: url('../../icons/link-light.svg') no-repeat right center;
         background-size: 10px 10px;
-        padding-right:13px;
+        color: #f2f2f2;
+        font-weight: bold;
+        padding-right: 13px;
     }
-    a:hover{
-        background: url('../../icons/link-dark.svg') no-repeat right center;
+
+    a:hover {
+        background: url('../../icons/link-dark.svg') no-repeat right center; /* csslint allow: duplicate-background-images */
         background-size: 10px 10px;
     }
 
@@ -272,18 +272,18 @@ textarea {
     }
 
     .important > p > a {
-        color: #555;
-        background: url('../../icons/link-dark.svg') no-repeat right center;
+        background: url('../../icons/link-dark.svg') no-repeat right center; /* csslint allow: duplicate-background-images */
         background-size: 10px 10px;
+        color: #555;
+        font-weight: normal;
         padding-right: 13px;
         text-decoration: underline;
-        font-weight: normal;
     }
 
     .important > p > a:hover {
         color: #777;
-        text-decoration: none;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .btns {

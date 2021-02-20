@@ -18,11 +18,13 @@
 
 'use strict';
 
+
 /**
  * Request Analyzer
  */
 
 var requestAnalyzer = {};
+
 
 /**
  * Public Methods
@@ -64,9 +66,10 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 };
 
 requestAnalyzer.getLocalTarget = function (requestDetails) {
-    let destinationUrl, destinationHost, destinationPath, hostMappings, basePath, resourceMappings;
-    let destinationSearchString = '';
+    let destinationUrl, destinationHost, destinationPath, hostMappings, basePath,
+        resourceMappings, destinationSearchString;
 
+    destinationSearchString = '';
     destinationUrl = new URL(requestDetails.url);
 
     destinationHost = destinationUrl.host;
@@ -91,8 +94,10 @@ requestAnalyzer.getLocalTarget = function (requestDetails) {
     }
 
     // Return either the local target's path or false.
+    // eslint-disable-next-line max-len
     return requestAnalyzer._findLocalTarget(resourceMappings, basePath, destinationHost, destinationPath, destinationSearchString);
 };
+
 
 /**
  * Private Methods
@@ -108,6 +113,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
     return false;
 };
 
+// eslint-disable-next-line max-len
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString) {
     let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
 
@@ -119,7 +125,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
         versionNumber = channelPath.match(/\d/);
         resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
-        versionNumber = [versionNumber + '.0'];
+        versionNumber = [`${versionNumber}.0`];
     } else {
         versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
         resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
@@ -128,14 +134,14 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     shorthandResource = shorthands.specialFiles(channelHost, channelPath, destinationSearchString);
     if (shorthandResource) {
         if (requestAnalyzer.logging) {
-            console.log('[ LocalCDN ] Replaced resource: ' + shorthandResource.path);
+            console.log(`[ LocalCDN ] Replaced resource: ${shorthandResource.path}`);
         }
         return shorthandResource;
     }
 
     for (let resourceMold of Object.keys(resourceMappings)) {
         if (resourcePattern.startsWith(resourceMold)) {
-            let targetPath, versionDelivered, versionRequested;
+            let targetPath, versionDelivered, versionRequested, bundle;
 
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
@@ -154,15 +160,15 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             }
 
             // Get bundle name
-            let bundle = targets.determineBundle(targetPath);
+            bundle = targets.determineBundle(targetPath);
             if (bundle !== '') {
                 filename = channelPath.split('/').pop();
-                targetPath = ( filename.endsWith('.js') ) ? targetPath + filename + 'm' : targetPath + filename;
+                targetPath = (filename.endsWith('.js')) ? `${targetPath + filename}m` : targetPath + filename;
                 targetPath = helpers.formatFilename(targetPath);
             }
 
             if (requestAnalyzer.logging) {
-                console.log('[ LocalCDN ] Replaced resource: ' + targetPath);
+                console.log(`[ LocalCDN ] Replaced resource: ${targetPath}`);
             }
             // Prepare and return a local target.
             return {
@@ -176,7 +182,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     }
 
     if (requestAnalyzer.logging && !IgnoredHost[channelHost]) {
-        console.warn('[ LocalCDN ] Missing resource: ' + channelHost + channelPath);
+        console.warn(`[ LocalCDN ] Missing resource: ${channelHost}${channelPath}`);
     }
     return false;
 };
@@ -197,6 +203,7 @@ requestAnalyzer._applyAllowedDomainsGoogleFonts = function () {
     });
 };
 
+
 /**
  * Initializations
  */
@@ -209,6 +216,8 @@ requestAnalyzer._applyManipulateDOMDomains();
 
 requestAnalyzer.domainsGoogleFonts = {};
 requestAnalyzer._applyAllowedDomainsGoogleFonts();
+
+
 /**
  * Event Handlers
  */

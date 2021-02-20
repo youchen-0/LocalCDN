@@ -18,6 +18,7 @@
 
 'use strict';
 
+
 /**
  * Mappings
  */
@@ -29,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2020-12-30';
+mappings.lastMappingUpdate = '2021-02-10';
 
 mappings.cdn = {
 
@@ -279,6 +280,7 @@ mappings.cdn = {
             'font-awesome/{version}/js/': resources.fontawesome5JS,
             'gsap/{version}/': resources.gsapBundle,
             'highlight.js/{version}/': resources.highlightJS,
+            'hogan.js/{version}/hogan.': resources.hoganJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'iScroll/{version}/iscroll.min.js': resources.iScroll,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
@@ -490,7 +492,7 @@ mappings.cdn = {
             'jquery-ui-dist@{version}/jquery-ui.js': resources.jQueryUI,
             'jquery-ui-dist@{version}/jquery-ui.min.js': resources.jQueryUI,
             'jquery-validation@{version}/dist/jquery.validate.': resources.jqueryValidationPlugin,
-            'js-cookie@beta/dist/js.cookie.':resources.jscookie,
+            'js-cookie@beta/dist/js.cookie.': resources.jscookie,
             'lodash@{version}/lodash.min.js': resources.lodashJS,
             'lozad': resources.lozad,
             'npm-modernizr@{version}/modernizr.': resources.modernizr,
@@ -818,7 +820,7 @@ mappings.cdn = {
     },
     // Tencent Public Libraries
     'mat1.gtimg.com': {
-        '/libs/' :{
+        '/libs/': {
             'angular.js/{version}/angular-animate.': resources.angularAnimate,
             'angular.js/{version}/angular-aria.': resources.angularAria,
             'angular.js/{version}/angular-cookies.': resources.angularCookies,
@@ -966,7 +968,7 @@ mappings.cdn['sdn.geekzu.org'] = {
 // USTC Linux User Group [Mirror]
 mappings.cdn['ajax.proxy.ustclug.org'] = mappings.cdn['ajax.googleapis.com'];
 
-//UNPKG (Cloudflare)
+// UNPKG (Cloudflare)
 mappings.cdn['unpkg.com'] = {
     '/': mappings.cdn['cdn.jsdelivr.net']['/npm/']
 };
@@ -990,7 +992,10 @@ mappings.cdn['fonts.loli.net'] = mappings.cdn['fonts.googleapis.com'];
 // Qihoo 360 CDN [Mirror]
 mappings.cdn['lib.baomitu.com'] = {
     '/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
-}
+};
 
 // Boot CDN New [Mirror]
 mappings.cdn['cdn.bootcdn.net'] = mappings.cdn['cdnjs.cloudflare.com'];
+
+// CDN for the "Block Google Fonts" option (see: https://codeberg.org/nobody/LocalCDN/issues/269)
+mappings.cdn['fonts.gstatic.com'] = mappings.cdn['fonts.googleapis.com'];

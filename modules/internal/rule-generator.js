@@ -14,16 +14,19 @@
 
 'use strict';
 
+
 /**
  * Updates
  */
 
 var ruleGenerator = {};
 
+
 /**
  * Public Methods
  */
-ruleGenerator.openRuleSet = function ({ target }) {
+
+ruleGenerator.openRuleSet = function ({target}) {
     let urls, key, textArea, btnCopy, content;
 
     urls = mappings.cdn;
@@ -35,14 +38,14 @@ ruleGenerator.openRuleSet = function ({ target }) {
     textArea.style.display = 'block';
     btnCopy.style.display = 'block';
 
-    for (var domain in urls) {
+    for (const domain in urls) {
         if (key === 'uMatrix') {
-            content += '* ' + domain + ' script allow' + '\n';
-            content += '* ' + domain + ' css allow' + '\n';
+            content += `* ${domain} script allow\n`;
+            content += `* ${domain} css allow\n`;
         } else if (key === 'uBlock') {
-            content += '* ' + domain + ' * noop' + '\n';
+            content += `* ${domain} * noop\n`;
         } else if (key === 'AdGuard') {
-            content += '@@||' + domain + '^\n';
+            content += `@@||${domain}^\n`;
         }
     }
     textArea.value = content.replace(/\n+$/, '');

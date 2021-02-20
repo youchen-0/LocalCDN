@@ -242,5 +242,9 @@
     "updateNotificationAlways": {
         "message": "Uvijek",
         "description": "Always"
+    },
+    "websiteBroken": {
+        "message": "Web-stranica ne radi?",
+        "description": "Website broken?"
     }
 }

@@ -92,7 +92,7 @@
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "Συνεισφέρετε",
+        "message": "Δωρεά",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
@@ -242,5 +242,9 @@
     "updateNotificationAlways": {
         "message": "Πάντα",
         "description": "Always"
+    },
+    "websiteBroken": {
+        "message": "Μήπως δε λειτουργεί σωστά ο ιστότοπος;",
+        "description": "Website broken?"
     }
 }

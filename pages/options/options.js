@@ -18,11 +18,13 @@
 
 'use strict';
 
+
 /**
  * Options
  */
 
 var options = {};
+
 
 /**
  * Private Methods
@@ -55,9 +57,10 @@ options._renderContents = function () {
 };
 
 options._renderOptionsPanel = function () {
-    let allowlistedDomains, domainAllowlist, elements, htmlFilterDomains, domainHtmlFilter, googleFontsDomains, domainAllowedGoogleFonts, url, bgColor, txtColor;
+    let allowlistedDomains, domainAllowlist, elements, htmlFilterDomains, domainHtmlFilter,
+        googleFontsDomains, domainAllowedGoogleFonts, url, bgColor, txtColor;
 
-    Object.assign(options._optionValues, { [Setting.INTERNAL_STATISTICS]: options._internalStatistics });
+    Object.assign(options._optionValues, {[Setting.INTERNAL_STATISTICS]: options._internalStatistics});
 
     allowlistedDomains = options._optionValues.allowlistedDomains;
     domainAllowlist = options._serializeAllowlistedDomains(allowlistedDomains);
@@ -69,9 +72,9 @@ options._renderOptionsPanel = function () {
     domainAllowedGoogleFonts = options._serializeAllowlistedDomains(googleFontsDomains);
 
     elements = options._optionElements;
-    Object.assign(elements, { [Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics') });
+    Object.assign(elements, {[Setting.INTERNAL_STATISTICS]: document.getElementById('checkbox-internal-statistics')});
 
-    Object.assign(elements, { [Setting.SELECTED_ICON]: document.getElementsByName('selected-icon') });
+    Object.assign(elements, {[Setting.SELECTED_ICON]: document.getElementsByName('selected-icon')});
 
     elements.showIconBadge.checked = options._optionValues.showIconBadge;
     elements.blockMissing.checked = options._optionValues.blockMissing;
@@ -111,14 +114,16 @@ options._renderOptionsPanel = function () {
     }
 
     if (options._platformSupportIcons) {
-        if (options._optionValues.selectedIcon === 'Default') {
+        let selectedIcon = options._optionValues.selectedIcon;
+
+        if (selectedIcon === 'Default') {
             document.getElementById('icon-default').checked = true;
-        } else if (options._optionValues.selectedIcon === 'Grey') {
+        } else if (selectedIcon === 'Grey') {
             document.getElementById('icon-grey').checked = true;
-        } else if (options._optionValues.selectedIcon === 'Light') {
+        } else if (selectedIcon === 'Light') {
             document.getElementById('icon-light').checked = true;
         }
-        url = chrome.runtime.getURL('icons/action/' + options._optionValues.selectedIcon.toLowerCase() + '/icon38-default.png');
+        url = chrome.runtime.getURL(`icons/action/${selectedIcon.toLowerCase()}/icon38-default.png`);
         document.getElementById('icon-badge-preview').src = url;
 
         bgColor = options._optionValues.badgeColor || '#4A826C';
@@ -133,15 +138,31 @@ options._renderOptionsPanel = function () {
         document.getElementById('badged-text-color').value = txtColor;
     }
 
-    document.getElementById('last-mapping-update').textContent += ' ' + mappings.lastMappingUpdate;
-    document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
-    document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
-    document.getElementById('link-changelog').addEventListener('click', function () { options._onLinkClick(Links.CHANGELOG); });
-    document.getElementById('link-donate').addEventListener('click', function () { options._onLinkClick(Links.DONATE); });
-    document.getElementById('link-faq').addEventListener('click', function () { options._onLinkClick(Links.FAQ);});
-    document.getElementById('ruleset-help').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_RULESET); });
-    document.getElementById('sync-help').addEventListener('click', function () { options._onLinkClick(Links.FAQ + '#sync'); });
-    document.getElementById('link-statistic').addEventListener('click', function () { options._onLinkClick(Links.STATISTICS); });
+    document.getElementById('last-mapping-update').textContent += ` ${mappings.lastMappingUpdate}`;
+    document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () {
+        options._onLinkClick(Links.CODEBERG_HTML_FILTER);
+    });
+    document.getElementById('link-welcome-page').addEventListener('click', function () {
+        options._onLinkClick(Links.WELCOME);
+    });
+    document.getElementById('link-changelog').addEventListener('click', function () {
+        options._onLinkClick(Links.CHANGELOG);
+    });
+    document.getElementById('link-donate').addEventListener('click', function () {
+        options._onLinkClick(Links.DONATE);
+    });
+    document.getElementById('link-faq').addEventListener('click', function () {
+        options._onLinkClick(Links.FAQ);
+    });
+    document.getElementById('ruleset-help').addEventListener('click', function () {
+        options._onLinkClick(Links.CODEBERG_RULESET);
+    });
+    document.getElementById('sync-help').addEventListener('click', function () {
+        options._onLinkClick(`${Links.FAQ}#sync`);
+    });
+    document.getElementById('link-statistic').addEventListener('click', function () {
+        options._onLinkClick(Links.STATISTICS);
+    });
 
     document.getElementById('btn-general-tab').addEventListener('click', options._changeTab);
     document.getElementById('btn-advanced-tab').addEventListener('click', options._changeTab);
@@ -265,13 +286,15 @@ options._configureLinkPrefetching = function (value) {
         chrome.privacy.network.networkPredictionEnabled.clear({});
     } else {
         chrome.privacy.network.networkPredictionEnabled.set({
-            value: false,
+            'value': false,
         });
     }
 };
 
 options._serializeAllowlistedDomains = function (allowlistedDomains) {
-    if (allowlistedDomains === undefined) return '';
+    if (allowlistedDomains === undefined) {
+        return '';
+    }
 
     let domainAllowlist, allowlistedDomainKeys;
 
@@ -334,7 +357,7 @@ options._renderInfoPanel = function () {
     btnFrameworks.value += Object.keys(options._listOfFrameworks).length - unsupportedFrameworks;
 };
 
-options._btnCreateList = function ({ target }) {
+options._btnCreateList = function ({target}) {
     if (target.id === 'cdn') {
         document.getElementById('cdn').classList.add('btns-active');
         document.getElementById('framework').classList.remove('btns-active');
@@ -361,52 +384,55 @@ options._createList = function (type) {
 
     list.forEach((elem) => {
         if (!(BrowserType.CHROMIUM && (elem === 'fontawesome' || elem === 'google-material-design-icons'))) {
-            textArea.value += elem + '\n';
+            textArea.value += `${elem}\n`;
         }
     });
 };
 
 options._colorPicker = function () {
+    /* eslint-disable no-undef, no-invalid-this */
     const badgeBackgroundColor = new CP(document.getElementById('badged-background-color'));
-    badgeBackgroundColor.on('change', function(r, g, b) {
+    badgeBackgroundColor.on('change', function (r, g, b) {
         this.source.value = this.color(r, g, b);
     });
-    badgeBackgroundColor.on('drag', function(r, g, b) {
+    badgeBackgroundColor.on('drag', function (r, g, b) {
         options._backgroundColor = this.color(r, g, b);
-        this.source.value = options._backgroundColor
-        wrappers.setBadgeBackgroundColor({color: options._backgroundColor});
+        this.source.value = options._backgroundColor;
+        wrappers.setBadgeBackgroundColor({'color': options._backgroundColor});
         document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
         document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
     });
 
     const badgeTextColor = new CP(document.getElementById('badged-text-color'));
-    badgeTextColor.on('change', function(r, g, b) {
+    badgeTextColor.on('change', function (r, g, b) {
         this.source.value = this.color(r, g, b);
     });
-    badgeTextColor.on('drag', function(r, g, b) {
+    badgeTextColor.on('drag', function (r, g, b) {
         options._textColor = this.color(r, g, b);
-        this.source.value = options._textColor
-        wrappers.setBadgeTextColor({color: options._textColor});
+        this.source.value = options._textColor;
+        wrappers.setBadgeTextColor({'color': options._textColor});
         document.getElementById('counter-preview-badge').style.color = options._textColor;
         document.getElementById('pre-badged-text-color').style.backgroundColor = options._textColor;
     });
+    /* eslint-enable no-undef, no-invalid-this */
 };
 
-options._setDefaultColor = function ({ target }) {
+options._setDefaultColor = function ({target}) {
     if (target.id === 'restore-text-color') {
         options._textColor = '#FFFFFF';
-        wrappers.setBadgeTextColor({color: options._textColor});
+        wrappers.setBadgeTextColor({'color': options._textColor});
         document.getElementById('counter-preview-badge').style.color = options._textColor;
         document.getElementById('pre-badged-text-color').style.backgroundColor = options._textColor;
         document.getElementById('badged-text-color').value = options._textColor;
     } else if (target.id === 'restore-background-color') {
         options._backgroundColor = '#4A826C';
-        wrappers.setBadgeBackgroundColor({color: options._backgroundColor});
+        wrappers.setBadgeBackgroundColor({'color': options._backgroundColor});
         document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
         document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
         document.getElementById('badged-background-color').value = options._backgroundColor;
     }
 };
+
 
 /**
  * Event Handlers
@@ -423,7 +449,7 @@ options._onDocumentLoaded = function () {
     options._renderContents();
 };
 
-options._onOptionChanged = function ({ target }) {
+options._onOptionChanged = function ({target}) {
     let optionKey, optionType, optionValue;
 
     optionKey = target.getAttribute('data-option');
@@ -451,7 +477,10 @@ options._onOptionChanged = function ({ target }) {
         options._configureLinkPrefetching(optionValue);
     }
 
-    if (optionKey === Setting.ALLOWLISTED_DOMAINS || optionKey === Setting.DOMAINS_MANIPULATE_DOM || optionKey === Setting.ALLOWED_DOMAINS_GOOGLE_FONTS) {
+    if (optionKey === Setting.ALLOWLISTED_DOMAINS ||
+        optionKey === Setting.DOMAINS_MANIPULATE_DOM ||
+        optionKey === Setting.ALLOWED_DOMAINS_GOOGLE_FONTS) {
+
         optionValue = options._parseDomainAllowlist(optionValue);
     }
 
@@ -474,8 +503,8 @@ options._onOptionChanged = function ({ target }) {
     }
 
     if (optionKey === Setting.SELECTED_ICON) {
-        wrappers.setIcon({ path: optionValue }, 'Enabled');
-        let url = chrome.runtime.getURL('icons/action/' + optionValue.toLowerCase() + '/icon38-default.png');
+        wrappers.setIcon({'path': optionValue}, 'Enabled');
+        let url = chrome.runtime.getURL(`icons/action/${optionValue.toLowerCase()}/icon38-default.png`);
         document.getElementById('icon-badge-preview').src = url;
     }
     storageManager.type.set({
@@ -483,7 +512,7 @@ options._onOptionChanged = function ({ target }) {
     });
 };
 
-options._onStorageOptionChanged = function ({ target }) {
+options._onStorageOptionChanged = function ({target}) {
     chrome.storage.local.set({
         [Setting.STORAGE_TYPE]: target.value,
     });
@@ -496,12 +525,12 @@ options._onStorageOptionChanged = function ({ target }) {
 
 options._onLinkClick = function (url) {
     chrome.tabs.create({
-        url: url,
-        active: true
+        'url': url,
+        'active': true
     });
 };
 
-options._changeTab = function ({ target }) {
+options._changeTab = function ({target}) {
     let tabContent, tabButton, optionKey;
 
     optionKey = target.getAttribute('data-option');
@@ -519,17 +548,17 @@ options._changeTab = function ({ target }) {
     }
 };
 
-options._onChangedHexColor = function ({ target }) {
+options._onChangedHexColor = function ({target}) {
     if (/#([a-f0-9]{3}){1,2}\b/i.test(target.value)) {
         target.classList.remove('color-error');
         if (target.id === 'badged-text-color') {
             options._textColor = target.value;
-            wrappers.setBadgeTextColor({color: options._textColor});
+            wrappers.setBadgeTextColor({'color': options._textColor});
             document.getElementById('counter-preview-badge').style.color = options._textColor;
             document.getElementById('pre-badged-text-color').style.backgroundColor = options._textColor;
         } else {
             options._backgroundColor = target.value;
-            wrappers.setBadgeBackgroundColor({color: options._backgroundColor});
+            wrappers.setBadgeBackgroundColor({'color': options._backgroundColor});
             document.getElementById('counter-preview-badge').style.backgroundColor = options._backgroundColor;
             document.getElementById('pre-badged-background-color').style.backgroundColor = options._backgroundColor;
         }
@@ -555,6 +584,7 @@ options._updatesDomainLists = function (changes) {
         // document has the focus
     }
 };
+
 
 /**
  * Initializations

@@ -15,10 +15,17 @@
 
 'use strict';
 
+
 /**
  * Stats
  */
+
 var stats = {};
+
+
+/**
+ * Public Methods
+ */
 
 stats.setStats = function (injection) {
     let data, today, cdn, framework, newEntry, pathSegments;
@@ -29,7 +36,7 @@ stats.setStats = function (injection) {
 
     if (injection.bundle !== '') {
         pathSegments = injection.path.split('/');
-        framework = pathSegments[0] + '/' + pathSegments[1] + '/' + pathSegments[2] + '/';
+        framework = `${pathSegments[0]}/${pathSegments[1]}/${pathSegments[2]}/`;
     } else {
         framework = injection.path;
     }
@@ -38,15 +45,15 @@ stats.setStats = function (injection) {
         if (cdn in data[today]['cdns']) {
             data[today]['cdns'][cdn] = ++data[today]['cdns'][cdn];
         } else {
-            Object.assign(data[today]['cdns'], { [cdn]: 1 });
+            Object.assign(data[today]['cdns'], {[cdn]: 1});
         }
         if (framework in data[today]['frameworks']) {
             data[today]['frameworks'][framework] = ++data[today]['frameworks'][framework];
         } else {
-            Object.assign(data[today]['frameworks'], { [framework]: 1 });
+            Object.assign(data[today]['frameworks'], {[framework]: 1});
         }
     } else {
-        newEntry = { frameworks: { [framework]: 1 }, cdns: { [cdn]: 1 } };
+        newEntry = {'frameworks': {[framework]: 1}, 'cdns': {[cdn]: 1}};
         data[today] = newEntry;
     }
 

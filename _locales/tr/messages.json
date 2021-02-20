@@ -242,5 +242,9 @@
     "updateNotificationAlways": {
         "message": "Her zaman",
         "description": "Always"
+    },
+    "websiteBroken": {
+        "message": "Web sitesi bozuk mu?",
+        "description": "Website broken?"
     }
 }

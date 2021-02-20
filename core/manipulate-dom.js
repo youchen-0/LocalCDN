@@ -28,27 +28,27 @@ var manipulateDOM = {};
 
 manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
-    if(!BrowserType.FIREFOX) {
+    if (!BrowserType.FIREFOX) {
         // Chromium (and other) browsers do not support webRequest.filterResponseData
         // https://bugs.chromium.org/p/chromium/issues/detail?id=487422
         console.warn('[ LocalCDN ] browser.webRequest.filterResponseData not supported by your browser.');
         return;
     }
 
-    let initiatorDomain, listedToManipulateDOM, negateHtmlFilter, filtering;
+    let initiatorDomain, listedToManipulateDOM, negateHtmlFilter, filtering, header;
 
     initiatorDomain = helpers.extractDomainFromUrl(details.url, true) || Address.EXAMPLE;
-    listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, "manipulate-dom");
+    listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, 'manipulate-dom');
     negateHtmlFilter = stateManager.getInvertOption;
 
-    if( ( negateHtmlFilter || listedToManipulateDOM ) && !( negateHtmlFilter && listedToManipulateDOM ) ) {
+    if ((negateHtmlFilter || listedToManipulateDOM) && !(negateHtmlFilter && listedToManipulateDOM)) {
         filtering = true;
     } else {
         filtering = false;
     }
 
     // by Jaap (https://gitlab.com/Jaaap)
-    let header = details.responseHeaders.find(h => h.name.toLowerCase() === 'content-type');
+    header = details.responseHeaders.find((h) => h.name.toLowerCase() === 'content-type');
 
     if (header && filtering) {
 
@@ -59,13 +59,13 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
         if (!isAllowlisted && mimeType === 'text/html') {
 
-            let asciiDecoder, decoder, encoder, charset, isFirstData, filter;
+            let asciiDecoder, decoder, encoder, charset, isFirstData, filter, data;
 
-            charset = /charset\s*=/.test(header.value) && header.value.replace(/^.*?charset\s*=\s*/, '').replace(/["']?/g, '');
+            charset = (/charset\s*=/).test(header.value) && header.value.replace(/^.*?charset\s*=\s*/, '').replace(/["']?/g, '');
 
             // Check if charset is supported by TextDecoder()
-            if(/charset\s*=/.test(header.value) && !EncodingTypes[charset.toString().toLowerCase()]){
-                console.error('[ LocalCDN ] Unsupported charset: ' + charset);
+            if (/charset\s*=/.test(header.value) && !EncodingTypes[charset.toString().toLowerCase()]) {
+                console.error(`[ LocalCDN ] Unsupported charset: ${charset}`);
                 return;
             }
 
@@ -73,35 +73,40 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
             encoder = new TextEncoder();
             isFirstData = true;
             filter = browser.webRequest.filterResponseData(details.requestId);
-            let data = [];
+            data = [];
 
             header.value = 'text/html; charset=UTF-8';
 
-            // Note that should work if the '<script crossorigin="anonymous" src="dfgsfgd.com">' string is divided into two chunks.
-            filter.ondata = evt => {
+            // NOTE: should work if 'script' string is divided into two chunks
+            filter.ondata = (evt) => {
                 if (isFirstData) {
                     if (!charset) {
-                        //content-type has no charset declared
-                        let htmlHead = asciiDecoder.decode(evt.data, {stream: false});
-                        let charsetMatch = htmlHead.match(/<meta.*charset=["']?([^>"'\/]+)["'].*[>\/]/i);
-                        charset = charsetMatch ? charsetMatch[1] : "UTF-8";
+                        // content-type has no charset declared
+                        let htmlHead, charsetMatch;
+
+                        htmlHead = asciiDecoder.decode(evt.data, {'stream': false});
+                        // eslint-disable-next-line no-useless-escape
+                        charsetMatch = htmlHead.match(/<meta.*charset=["']?([^>"'\/]+)["'].*[>\/]/i);
+
+                        charset = charsetMatch ? charsetMatch[1] : 'UTF-8';
                     }
                     decoder = new TextDecoder(charset);
                 }
                 isFirstData = false;
 
                 data.push(evt.data);
-            }
+            };
 
-            filter.onstop = evt => {
+            filter.onstop = () => {
                 let str = '';
                 for (let buffer of data) {
-                    str += decoder.decode(buffer, {stream: true});
+                    str += decoder.decode(buffer, {'stream': true});
                 }
                 str += decoder.decode(); // end-of-stream
 
-                //remove crossorigin and integrity attributes
-                str = str.replace(/<(link|script)[^>]+>/ig, m => {
+                // remove crossorigin and integrity attributes
+                str = str.replace(/<(link|script)[^>]+>/ig, (m) => {
+                    // eslint-disable-next-line no-use-before-define
                     if (cdnDomainsRE.test(m)) {
                         return m.replace(/\s+(integrity|crossorigin)(="[^"]*"|='[^']*'|=[^"'`=>\s]+|)/ig, '');
                     }
@@ -109,9 +114,9 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                 });
                 filter.write(encoder.encode(str));
                 filter.close();
-            }
+            };
         }
-        return {responseHeaders: details.responseHeaders};
+        return {'responseHeaders': details.responseHeaders};
 
     }
 };
@@ -121,13 +126,14 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
  * Initializations
  */
 
- let allowlistedDomains = {};
- let cdnDomainsRE = new RegExp('//(' + Object.keys(mappings.cdn).map(m => m.replace(/\W/g, '\\$&')).join('|') + ')/');
+/* eslint-disable one-var */
+let cdnDomainsRE = new RegExp(`//(${Object.keys(mappings.cdn).map((m) => m.replace(/\W/g, '\\$&')).join('|')})/`);
+/* eslint-enable one-var */
 
 
 /**
-* Event Handlers
-*/
+ * Event Handlers
+ */
 
 chrome.webRequest.onHeadersReceived.addListener(
     manipulateDOM._removeCrossOriginAndIntegrityAttr,

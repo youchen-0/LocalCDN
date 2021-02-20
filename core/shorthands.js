@@ -18,6 +18,7 @@
 
 'use strict';
 
+
 /**
  * Shorthands
  */
@@ -25,15 +26,18 @@
 var shorthands = {};
 
 shorthands.specialFiles = function (channelHost, channelPath, searchString) {
-    let lastVersion;
-    /*
-        NOTE:
-        jsDelivr allows to load several files in one request
-        This is just a workaround. If there are more websites which use this, we will have to do crazy things here to find and redirect these files.
 
-        It's not possible to respond to a request with multiple redirections
-        https://gitlab.com/nobody42/localcdn/-/issues/45
-    */
+    let lastVersion;
+
+    /**
+     * NOTE:
+     * jsDelivr allows to load several files in one request
+     * This is just a workaround. If there are more websites which use this,
+     * we will have to do crazy things here to find and redirect these files.
+     *
+     * It's not possible to respond to a request with multiple redirections
+     * https://gitlab.com/nobody42/localcdn/-/issues/45
+     */
 
     if (Regex.JSDELIVR_COMBINE.test(channelHost + channelPath)) {
         return {
@@ -63,7 +67,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
-            'path': 'resources/bootstrap-datepicker/' + lastVersion + '/bootstrap-datepicker3.standalone.min.css',
+            'path': `resources/bootstrap-datepicker/${lastVersion}/bootstrap-datepicker3.standalone.min.css`,
             'bundle': ''
         };
     } else if (Regex.BOOTSTRAP_DATEPICKER.test(channelPath)) {
@@ -71,7 +75,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
-            'path': 'resources/bootstrap-datepicker/' + lastVersion + '/bootstrap-datepicker.standalone.min.css',
+            'path': `resources/bootstrap-datepicker/${lastVersion}/bootstrap-datepicker.standalone.min.css`,
             'bundle': ''
         };
     } else if (Regex.FONT_AWESOME.test(channelHost + channelPath)) {
@@ -90,7 +94,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'source': channelHost,
             'versionRequested': '4.6.3',
             'versionDelivered': lastVersion,
-            'path': 'resources/webfont/fa-loader.' + fileExtension,
+            'path': `resources/webfont/fa-loader.${fileExtension}`,
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'cdn.jsdelivr.net/npm/vue') {
@@ -99,7 +103,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'source': channelHost,
             'versionRequested': 'latest',
             'versionDelivered': lastVersion,
-            'path': 'resources/vue/' + lastVersion + '/vue.min.jsm',
+            'path': `resources/vue/${lastVersion}/vue.min.jsm`,
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js') {
@@ -115,7 +119,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'source': channelHost,
             'versionRequested': '4.1.1',
             'versionDelivered': lastVersion,
-            'path': 'resources/object-assign/' + lastVersion + '/object-assign.min.jsm',
+            'path': `resources/object-assign/${lastVersion}/object-assign.min.jsm`,
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css') {
@@ -124,7 +128,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
         return {
             'source': channelHost,
             'versionRequested': lastVersion,
-            'path': 'resources/font-awesome/' + lastVersion + '/css/font-awesome.min.css',
+            'path': `resources/font-awesome/${lastVersion}/css/font-awesome.min.css`,
             'bundle': ''
         };
     } else if ((channelHost + channelPath) === 'cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js') {
@@ -144,7 +148,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'source': channelHost,
             'versionDelivered': lastVersion,
             'versionRequested': '4.1.0-beta.1',
-            'path': 'resources/select2/' + lastVersion + '/' + helpers.extractFilenameFromPath(channelPath),
+            'path': `resources/select2/${lastVersion}/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Select2'
         };
     } else if (channelHost + channelPath === 'cdn.jsdelivr.net/npm/anchor-js/anchor.min.js') {
@@ -154,13 +158,13 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'source': channelHost,
             'versionDelivered': lastVersion,
             'versionRequested': lastVersion,
-            'path': 'resources/anchor-js/' + lastVersion + '/anchor.min.jsm',
+            'path': `resources/anchor-js/${lastVersion}/anchor.min.jsm`,
             'bundle': ''
         };
     } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(channelPath)) {
         return {
             'source': channelHost,
-            'path': 'resources/twitter-bootstrap/fonts/' + helpers.extractFilenameFromPath(channelPath),
+            'path': `resources/twitter-bootstrap/fonts/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Bootstrap (Fonts)'
         };
     } else if (channelHost + channelPath === 'cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js') {

@@ -8,32 +8,32 @@ body {
     font-family: 'Noto Sans', Arial, sans-serif !important;
     font-size: 75%;
     margin: 0 auto;
-    overflow-y: auto;
-    overflow-x: hidden;
     max-width: 348px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 header {
     align-items: center;
     border-bottom: solid #d3d3d3 1px;
     display: flex;
-    position: relative;
-    padding: 8px 15px 8px 4px;
     justify-content: space-between;
+    padding: 8px 15px 8px 4px;
+    position: relative;
 }
 
 #manipulateDOM-indicator {
     background: url('../../icons/help-dark.svg') no-repeat right center;
-    color: #555;
     background-size: 15px 15px;
+    color: #555;
     padding-right: 20px;
     text-decoration: underline;
 }
 
 #manipulateDOM-indicator:hover {
     color: #777;
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .panel {
@@ -41,16 +41,16 @@ header {
 }
 
 .subpanel {
-    padding-top: 8px;
     max-height: 200px;
     overflow: auto;
+    padding-top: 8px;
 }
 
 .panel-overflow {
+    margin-left: 0;
     max-height: 300px;
     overflow: auto;
-    margin-left: 0px;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .subpanel:last-child {
@@ -59,15 +59,15 @@ header {
 }
 
 .content {
-    padding: 0px 15px;
+    padding: 0 15px;
 }
 
 footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     overflow: hidden;
     padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 #testing-utility {
@@ -83,38 +83,35 @@ footer {
  * Fonts
  */
 @font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../../modules/noto-sans/noto-sans.woff2')
-       format('woff2');
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../modules/noto-sans/noto-sans.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../../modules/noto-sans/noto-sans-bold.woff2')
-       format('woff2');
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../modules/noto-sans/noto-sans-bold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Noto Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: url('../../modules/noto-sans/noto-sans-italic.woff2')
-       format('woff2');
+    font-family: 'Noto Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../../modules/noto-sans/noto-sans-italic.woff2') format('woff2');
 }
 
 /**
  * Headings
  */
 .heading {
+    align-items: center;
+    display: flex;
     font-size: 14px;
     font-weight: 600;
     padding-left: 0;
-    display: flex;
-    align-items: center;
 }
 
 /**
@@ -141,12 +138,12 @@ footer {
     border: 1px solid #e0e0e0;
     box-shadow: inset 0 2px 10px #e2e2e2;
     list-style: none;
-    padding: 0px 0px 0px 8px;
+    padding: 0 0 0 8px;
 }
 
 .sublist:last-child {
     border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .sublist-item {
@@ -161,15 +158,15 @@ footer {
 }
 
 #label-donate {
-    margin: 0px 5px 0px 0px;
+    margin: 0 5px 0 0;
 }
 
 #get-more-injections-btn, #label-donate {
-    cursor: pointer;
     background-color: #f0f0f0;
     color: #555;
+    cursor: pointer;
     font-weight: 600;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 #get-more-injections-btn:hover {
@@ -191,17 +188,19 @@ footer {
  * Buttons
  */
 .button {
-    -moz-user-select: none;
-    user-select: none;
     background-color: #f5f5f5;
-    border-radius: 2px;
     border: 1px solid #cfcfcf;
+    border-radius: 2px;
     color: #5f5f5f;
     cursor: pointer;
     float: right;
     font-size: 12px;
-    padding: 5px 22px;
     margin-left: 10px;
+    padding: 5px 22px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .button:hover {
@@ -214,21 +213,23 @@ footer {
 
 .button-svg {
     background-size: cover;
-    width: 15px;
     height: 15px;
+    width: 15px;
 }
 
 /**
  * Donate
  */
 #donate-button {
-    -moz-user-select: none;
-    user-select: none;
     color: #5f5f5f;
     cursor: pointer;
+    display: flex;
     float: right;
     font-size: 12px;
-    display: flex;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #donate-button:hover #donate-button-svg {
@@ -251,7 +252,7 @@ footer {
 }
 
 #options-button:hover {
-    filter: contrast(.5);
+    filter: contrast(0.5);
 }
 
 /**
@@ -263,7 +264,7 @@ footer {
 }
 
 #statistics-button:hover {
-    filter: contrast(.5);
+    filter: contrast(0.5);
 }
 
 #statistics-button {
@@ -274,59 +275,61 @@ footer {
  * Toggles
  */
 #protection-toggle, #manipulateDOM-toggle {
-  -moz-user-select: none;
-  cursor: pointer;
-  float: right;
-  user-select: none;
+    cursor: pointer;
+    float: right;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 18px;
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    width: 40px;
 }
 
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    height: 0;
+    opacity: 0;
+    width: 0;
 }
 
 .slider, .slider-disabled {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #b40000;
-  -webkit-transition: .1s;
-  transition: .1s;
-  border-radius: 34px;
+    background-color: #b40000;
+    border-radius: 34px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
 }
 
-.slider:before, .slider-disabled:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 2px;
-  bottom: 2px;
-  background-color: #f9f9fa;
-  -webkit-transition: .3s;
-  transition: .3s;
-  border-radius: 50%;
+.slider::before, .slider-disabled::before {
+    background-color: #f9f9fa;
+    border-radius: 50%;
+    bottom: 2px;
+    content: "";
+    height: 14px;
+    left: 2px;
+    position: absolute;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 14px;
 }
 
 input:checked + .slider {
-  background-color: #6bb798;
+    background-color: #6bb798;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(22px);
-  -ms-transform: translateX(22px);
-  transform: translateX(22px);
+input:checked + .slider::before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
 }
 
 .slider-disabled {
@@ -341,7 +344,6 @@ input:checked + .slider:before {
 input:checked + .slider:hover {
     background-color: #4b806a;
 }
-
 
 /**
  * Miscellaneous
@@ -379,7 +381,7 @@ input:checked + .slider:hover {
 .label-version {
     color: #6aac91;
     font-size: 9px;
-    margin: 0px 0px 5px 2px;
+    margin: 0 0 5px 2px;
 }
 
 .label-domain {
@@ -397,13 +399,13 @@ input:checked + .slider:hover {
 }
 
 #popup-incomplete-translation {
-    width: 100%;
-    color: white;
-    text-align: center;
-    font-weight: bold;
     background-color: #ffa500;
-    padding: 0px;
+    color: white;
     cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
+    width: 100%;
 }
 
 /**
@@ -411,14 +413,12 @@ input:checked + .slider:hover {
  */
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-
     body {
         width: 348px;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-
     /**
      * Sections
      */
@@ -435,10 +435,10 @@ input:checked + .slider:hover {
     #manipulateDOM-indicator {
         background: url('../../icons/help-light.svg') no-repeat right center;
         background-size: 15px 15px;
-        padding-right: 20px;
-        text-decoration: underline;
         color: #f2f2f2;
         font-weight: bold;
+        padding-right: 20px;
+        text-decoration: underline;
     }
 
     /**
@@ -505,8 +505,8 @@ input:checked + .slider:hover {
         background-color: #b54b4b;
     }
 
-    .slider:before {
-		background-color: #323232;
+    .slider::before {
+        background-color: #323232;
     }
 
     .slider-disabled {
@@ -514,14 +514,14 @@ input:checked + .slider:hover {
         cursor: not-allowed;
     }
 
-    .slider-disabled:before {
+    .slider-disabled::before {
         background-color: #323232;
     }
 
     #label-donate {
-        cursor: pointer;
         background-color: #404040;
         color: #bbb;
+        cursor: pointer;
         font-weight: 600;
     }
 
