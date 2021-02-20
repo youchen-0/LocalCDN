@@ -385,7 +385,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/popper.js/1.')) {
         return '1.16.1';
     } else if (type.startsWith('/popper.js/2.')) {
-        return '2.7.0';
+        return '2.7.2';
     } else if (type.startsWith('/prop-types/15.')) {
         return '15.7.2';
     } else if (type.startsWith('/protonet-jquery.inview/1.')) {
