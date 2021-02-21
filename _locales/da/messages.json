@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Åben \"Browser konsollen\" ( CTRL + SHIFT + J ) for at vise manglende ressourcer.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funktion ødelægger hjemmesider. Lad være med at aktiver denne, med mindre at du er parat til manuelt at tilføje påvirkede sider til tilladlisten.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Denne funktion er i øjeblikket i et eksperimentelt stadium. Ingen datatransmission. Det hele er lokalt på din enhed.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistikker",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

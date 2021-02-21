@@ -76,8 +76,8 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Öffne die „Browser-Konsole“ ( STRG + UMSCHALT + J ), um fehlende Ressourcen anzuzeigen.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Sie können das Protokoll über das Symbol im Menü öffnen. Das Protokoll wird gelöscht, wenn Sie den Browser schließen oder die Protokollierung deaktivieren.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Diese Funktion verursacht bei manchen Websites Fehler. Lass diese Funktion deaktiviert, es sei denn, du bist bereit, betroffene Webseiten manuell auf die Ausnahmeliste zu setzen.",
@@ -136,8 +136,8 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "Diese Funktion befindet sich derzeit in einem experimentellen Stadium. Keine Datenübertragung. Alles wird lokal auf deinem Gerät gespeichert.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "message": "Keine Datenübertragung. Alles wird lokal auf deinem Gerät gespeichert.",
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistiken",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "Website defekt?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Spenden Button ausblenden",
+        "description": "Hide donation button"
     }
 }

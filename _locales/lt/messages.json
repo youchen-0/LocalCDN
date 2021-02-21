@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Atidaryti „Naršyklės Konsolė“ (CTRL + SHIFT + J), kad rodytų trūkstamus resursus.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Šitą funkciją sunaikiną tinklapius. Nepalikite ją įjungtą, nebendrais jei esate pasiruošė savarankiškai įtraukinėti paveiktus tinklapius į leistinų sąrašą.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Šita funkciją yra eksperimentinė. Jokios Datos nebus siunčiamos. Viskas yra lokaliai ant jūsų įrenginio.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistiką",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "Tinklapis sugedęs?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

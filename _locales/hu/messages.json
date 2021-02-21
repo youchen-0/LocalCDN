@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Nyissa meg a „böngészőkonzolt” (Ctrl + Shift + J) a hiányzó erőforrások megjelenítéshez.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Ez a funkció megakadályozza a weboldalak helyes működését. Ne hagyja engedélyezve, hacsak nincs felkészülve az érintett tartományok kézzel történő engedélyezésére.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Ez a funkció jelenleg kísérleti stádiumban van. Nincs adatátvitel. Ez mind az Ön eszközén van.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statisztikák",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

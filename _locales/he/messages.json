@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "יש לפתוח „מסוף דפדפן” ( Ctrl+Shift+J ) כדי לצפות במשאבים החסרים.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "תכונה זו פוגמת בהצגת אתרים. אין להשאיר אותה פעילה אלא אם כן התכוננת להוסיף את כל שמות התחום שייפגעו לרשימת ההיתר.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "תכונה זו נמצאת בשלבי ניסוי. לא מתבצעת העברת נתונים. הכול נעשה מקומית במכשיר שלך.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "סטטיסטיקה",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "האתר לא תקין?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

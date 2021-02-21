@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "打開「瀏覽器主控台」以顯示缺少的資源。",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "此功能會讓網站無法正常運作。不要啟用此選項，除非你已準備好將所有被影響的網域手動加入白名單。",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "此功能目前還在開發中。所有資料僅儲存在裝置上，不會被上傳。",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "統計",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

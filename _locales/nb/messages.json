@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt sette berørte domener på tillatelseslisten.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Denne funksjonen er for tiden eksperimentell. Ingen dataoverføring. Alt er lokalt på din enhet.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistikk",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "Nettsted defekt?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Avaa \"Selain konsoli\" ( CTRL + SHIFT + J ) näyttääksesi puuttuvat resurssit.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Tämä ominaisuus rikkoo verkkosivuja. Älä jätä tätä päälle, ellet ole varautunut manuaalisesti sallimaan verkkotunnuksia, joihin tämä vaikuttaa.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Tämä toiminta on tällä hetkellä kokeilullisessa vaiheessa. Ei tiedonsiirtoa. Kaikki on paikallista sinun laitteellasi.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Tilastot",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

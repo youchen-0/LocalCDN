@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Buka \"Konsol Peramban\" ( CTRL + SHIFT + J ) untuk menampilkan sumber daya yang hilang.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Fitur ini akan membuat situs web tidak bekerja dengan benar. Jangan membiarkannya aktif, kecuali jika Anda siap menambahkan secara manual semua domain yang terdampak ke dalam daftar putih.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Fungsi ini masih dalam tahap eksperimental. Tidak ada data yang dikirim. Semuanya lokal pada perangkat Anda.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistik",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "Situs web tidak bekerja?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

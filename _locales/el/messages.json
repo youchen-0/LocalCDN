@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Άνοιγμα «Κονσόλας Προγράμματος Περιήγησης» ( CTRL + SHIFT + J ) για εμφάνιση ανύπαρκτων πόρων .",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Αυτή η λειτουργία προκαλεί δυσλειτουργίες σε ιστοσελίδες. Να μην ενεργοποιηθεί, εκτός αν προτίθεστε να προσθέσετε, χειροκίνητα, στον κατάλογο επιτρεπόμενων όποιους τομείς επηρεάζονται.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Αυτή η λειτουργία βρίσκεται προς το παρόν σε πειραματικό στάδιο. Δε γίνεται αποστολή δεδομένων. Είναι όλα τοπικά στη συσκευή σας.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Στατιστικά στοιχεία",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "Μήπως δε λειτουργεί σωστά ο ιστότοπος;",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

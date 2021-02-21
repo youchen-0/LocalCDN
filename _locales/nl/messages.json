@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) om missende bronnen te weergeven.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Deze optie zorgt voor slecht werkende websites. Laat deze optie niet aan staan tenzij je bereidt bent om handmatig domeinen toe te voegen aan de allow list.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Deze functie bevindt zich momenteel in een experimentele fase. Er is geen dataoverdracht. Alles is lokaal op deze machine.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistieken",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "Website stuk?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "누락된 리소스를 표시하려면 \"브라우저 콘솔\" (Ctrl + Shift + J )을 여십시오.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "이 기능은 웹사이트를 파괴합니다. 영향을 받는 도메인을 수동으로 화이트리스트할 준비가 되지 않은 경우 이 도메인을 활성화한 상태로 두지 마십시오.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

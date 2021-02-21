@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Abra \"Browser Console\" ( CTRL + SHIFT + J ) para mostrar recursos faltantes.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Esse recurso quebra sites. Não deixe ativado, a não ser que esteja preparado para adicionar manualmente os domínios afetados à lista de permissão.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Esta função está atualmente numa fase experimental. Não há transmissão de dados. É tudo local no seu aparelho.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Estatísticas",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }

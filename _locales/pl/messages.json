@@ -77,7 +77,7 @@
     },
     "loggingDescription": {
         "message": "Otwórz \"Konsolę przeglądarki\" ( CTRL + SHIFT + J), żeby wyświetlić brakujące zasoby.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Ta opcja psuje strony. Nie pozostawiaj jej włączonej, chyba że jesteś gotów do ręcznego dodania niedziałające domeny do listy zezwolonych.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Funkcja ta jest obecnie w fazie eksperymentalnej. Brak transmisji danych. Wszystko jest przechowywane lokalnie na twoim urządzeniu.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statystyki",
@@ -246,5 +246,9 @@
     "websiteBroken": {
         "message": "",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
     }
 }
