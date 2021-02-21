@@ -216,6 +216,7 @@ const Links = {
     'LOCALCDN_TEST': 'https://www.localcdn.org/test',
     'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check',
     'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/localcdn/',
+    'LOGGING': chrome.extension.getURL('pages/logging/logging.html'),
 };
 
 const CDNs = {

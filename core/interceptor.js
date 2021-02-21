@@ -41,7 +41,7 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         };
     }
 
-    targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
+    targetDetails = requestAnalyzer.getLocalTarget(requestDetails, tab.url);
     targetPath = targetDetails.path;
 
     if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {

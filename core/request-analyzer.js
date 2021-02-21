@@ -65,7 +65,7 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     return requestDetails.method === WebRequest.GET;
 };
 
-requestAnalyzer.getLocalTarget = function (requestDetails) {
+requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
     let destinationUrl, destinationHost, destinationPath, hostMappings, basePath,
         resourceMappings, destinationSearchString;
 
@@ -95,7 +95,7 @@ requestAnalyzer.getLocalTarget = function (requestDetails) {
 
     // Return either the local target's path or false.
     // eslint-disable-next-line max-len
-    return requestAnalyzer._findLocalTarget(resourceMappings, basePath, destinationHost, destinationPath, destinationSearchString);
+    return requestAnalyzer._findLocalTarget(resourceMappings, basePath, destinationHost, destinationPath, destinationSearchString, initiator);
 };
 
 
@@ -114,7 +114,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
 };
 
 // eslint-disable-next-line max-len
-requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString) {
+requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString, initiator) {
     let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
 
     storageManager.type.get(Setting.LOGGING, function (items) {

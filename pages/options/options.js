@@ -260,6 +260,12 @@ options.onOptionChanged = function ({target}) {
         case Setting.SELECTED_ICON:
             optionsOther._setIcon(optionValue);
             break;
+        case Setting.LOGGING:
+            console.log(optionValue);
+            if (optionValue === false) {
+                chrome.runtime.sendMessage({'topic': 'logs:delete', 'value': ''});
+            }
+            break;
     }
 
     storageManager.type.set({

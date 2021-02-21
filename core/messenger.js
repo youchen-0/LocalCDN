@@ -107,6 +107,15 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
             'runAt': 'document_start'
         });
     }
+
+    if (topic === 'logs:get') {
+        sendResponse({'logs': log.data});
+        return MessageResponse.SYNCHRONOUS;
+    }
+
+    if (topic === 'logs:delete') {
+        log.data = [];
+    }
 };
 
 

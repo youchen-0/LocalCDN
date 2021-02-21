@@ -77,6 +77,11 @@ popup._renderNonContextualContents = function () {
         document.getElementById('statistics-button').style.display = 'block';
         document.getElementById('statistics-button').addEventListener('mouseup', popup._onStatisticsButtonClicked);
     }
+
+    if (popup._loggingStatus) {
+        document.getElementById('logging-button').style.display = 'block';
+        document.getElementById('logging-button').addEventListener('mouseup', popup._onLoggingButtonClicked);
+    }
 };
 
 popup._renderContextualContents = function () {
@@ -261,8 +266,12 @@ popup._readLocalStorage = function () {
 
 popup._readStorage = function () {
     return new Promise((resolve) => {
-        storageManager.type.get([Setting.NEGATE_HTML_FILTER_LIST], function (items) {
+        storageManager.type.get([
+            Setting.NEGATE_HTML_FILTER_LIST,
+            Setting.LOGGING
+        ], function (items) {
             popup.negateHtmlFilterList = items.negateHtmlFilterList;
+            popup._loggingStatus = items.enableLogging;
             resolve();
         });
     });
@@ -538,6 +547,17 @@ popup._onStatisticsButtonClicked = function () {
     }
 };
 
+popup._onLoggingButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+        chrome.tabs.create({
+            'url': Links.LOGGING,
+            'active': event.button === 0,
+        });
+    }
+    if (event.button === 0) {
+        window.close();
+    }
+};
 
 /**
  * Initializations
@@ -545,5 +565,6 @@ popup._onStatisticsButtonClicked = function () {
 
 popup.negateHtmlFilterList = false;
 popup._statisticsStatus = false;
+popup._loggingStatus = false;
 
 document.addEventListener('DOMContentLoaded', popup._onDocumentLoaded);
