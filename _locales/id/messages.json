@@ -76,7 +76,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Buka \"Konsol Peramban\" ( CTRL + SHIFT + J ) untuk menampilkan sumber daya yang hilang.",
+        "message": "Anda bisa membuka log dengan tombol di dalam menu. Log akan dihapus setelah Anda menutup peramban atau menonaktifkannya.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Sembunyikan tombol donasi",
         "description": "Hide donation button"
     }
 }
