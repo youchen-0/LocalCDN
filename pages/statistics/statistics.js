@@ -201,6 +201,10 @@ statistics._displayNameOfFramework = function (str, type) {
             filename = targets.determineBundle(str);
             if (filename === '' && str.startsWith('resources/font-awesome/')) {
                 filename = 'Font Awesome (Fonts)';
+            } else if (str === 'resources/google-charts/loader.jsm') {
+                filename = 'Google Charts';
+            } else if (str === 'resources/fontawesome/5.15.1/css/v4-shims.css') {
+                filename = 'Font Awesome (Shim)';
             }
         }
         version = str.match(Resource.VERSION_EXPRESSION);
