@@ -30,7 +30,7 @@ ruleGenerator.openRuleSet = function ({target}) {
     let urls, key, textArea, btnCopy, content;
 
     urls = mappings.cdn;
-    key = target.getAttribute('data-option');
+    key = target.getAttribute('data-ruleset');
     textArea = document.getElementById('generated-rules');
     btnCopy = document.getElementById('button-copy-rule-set');
     content = '';

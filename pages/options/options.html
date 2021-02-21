@@ -19,13 +19,19 @@
         <script src="../../modules/internal/wrappers.js"></script>
         <script defer src="../../core/resources.js"></script>
         <script defer src="../../core/mappings.js"></script>
+
+        <script src="options-basic.js"></script>
+        <script src="options-advanced.js"></script>
+        <script src="options-other.js"></script>
+        <script src="options-info.js"></script>
+
         <script src="options.js"></script>
 
         <div class="btn-group">
-            <input type="button" id="btn-general-tab" class="option-buttons option-buttons-active" data-option="general-tab" data-i18n-content="btnGeneral" value="General"/>
-            <input type="button" id="btn-advanced-tab" class="option-buttons" data-option="advanced-tab" data-i18n-content="btnAdvanced" value="Advanced"/>
-            <input type="button" id="btn-export-import-tab" class="option-buttons" data-option="export-import-tab" data-i18n-content="btnOther" value="Other"/>
-            <input type="button" id="btn-info-tab" class="option-buttons" data-option="info-tab" data-i18n-content="btnInfo" value="Info"/>
+            <input type="button" id="btn-general-tab" class="option-buttons option-buttons-active" data-option-tab="general-tab" data-i18n-content="btnGeneral" value="General"/>
+            <input type="button" id="btn-advanced-tab" class="option-buttons" data-option-tab="advanced-tab" data-i18n-content="btnAdvanced" value="Advanced"/>
+            <input type="button" id="btn-export-import-tab" class="option-buttons" data-option-tab="export-import-tab" data-i18n-content="btnOther" value="Other"/>
+            <input type="button" id="btn-info-tab" class="option-buttons" data-option-tab="info-tab" data-i18n-content="btnInfo" value="Info"/>
         </div>
 
         <div id="general-tab" class="tab-content">
@@ -75,22 +81,21 @@
                 <section class="option">
                     <div class="title-option">
                         <label class="b-contain">
-                            <input id="checkbox-internal-statistics" data-option="internalStatistics" type="checkbox">
+                            <input data-option="internalStatistics" type="checkbox">
                             <span data-i18n-content="internalStatisticsTitle">Internal statistics</span>
                             <div class="b-input"></div>
                         </label>
                     </div>
-                    <!-- TODO: Change if test successful -->
-                    <div class="description-option" data-i18n-content="internalStatisticsDescription">This function is currently in an experimental stage. No data transmission. It's all local on your device.</div>
+                    <div class="description-option" data-i18n-content="internalStatisticsDescription">No data transmission. It's all local on your device.</div>
                 </section>
             </div>
             <div class="option-group">
                 <section class="option">
                     <div class="title-option without-checkbox" data-i18n-content="allowlistedDomainsTitle">Deactivate LocalCDN for these domains:</div>
-                    <textarea rows="7" id="tf-domains-allowlist" class="input-text without-checkbox" data-option="allowlistedDomains" type="text"></textarea>
+                    <textarea rows="7" id="allowlistedDomains" class="input-text without-checkbox" data-option="allowlistedDomains" type="text"></textarea>
                     <div class="description-option without-checkbox">
                         <span data-i18n-content="allowlistedDomainsDescription">Enter domains to disable LocalCDN there. One domain per line.</span><br><br>
-                        <span class="monoblock">domain.com;<br>sub.domain.com;<br>*.wildcard-domain.com;</span>
+                        <span class="monoblock">domain.com<br>sub.domain.com<br>*.wildcard-domain.com</span>
                     </div>
                 </section>
             </div>
@@ -114,7 +119,7 @@
                 <section class="option">
                     <div class="title-option">
                         <label class="b-contain">
-                            <input data-option="blockMissing" type="checkbox">
+                            <input id="blockMissing" data-option="blockMissing" type="checkbox">
                             <span data-i18n-content="blockMissingTitle">Block requests for missing resources</span>
                             <div class="b-input"></div>
                         </label>
@@ -125,7 +130,7 @@
                 <section id="block-google-fonts" class="option">
                     <div class="title-option">
                         <label class="b-contain">
-                            <input data-option="blockGoogleFonts" type="checkbox">
+                            <input id="blockGoogleFonts" data-option="blockGoogleFonts" type="checkbox">
                             <span data-i18n-content="blockGoogleFontsTitle">Block Google Fonts</span>
                             <div class="b-input"></div>
                         </label>
@@ -139,7 +144,7 @@
                 <section class="option">
                     <div class="title-option">
                         <label class="b-contain">
-                            <input data-option="enableLogging" type="checkbox">
+                            <input id="enableLogging" data-option="enableLogging" type="checkbox">
                             <span data-i18n-content="loggingTitle">Enable logging in browser console</span>
                             <div class="b-input"></div>
                         </label>
@@ -151,13 +156,13 @@
                 <section class="option">
                     <div id="html-filter-domains-title-exclude" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleExclude">Do not apply HTML filter to these domains:</div>
                     <div id="html-filter-domains-title-include" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleInclude">Apply HTML filter to these domains:</div>
-                    <textarea rows="7" id="tf-domains-manipulate-dom" class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text"></textarea>
+                    <textarea rows="7" id="domainsManipulateDOM" class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text"></textarea>
                     <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter the domains to be handled or ignored by the HTML filter. One domain per line.</div>
                 </section>
                 <section class="option">
                     <div class="title-option">
                         <label class="b-contain">
-                            <input data-option="negateHtmlFilterList" type="checkbox">
+                            <input id="negateHtmlFilterList" data-option="negateHtmlFilterList" type="checkbox">
                             <span data-i18n-content="negateHtmlFilterListTitle">Invert HTML filter</span>
                             <div class="b-input"></div>
                         </label>
@@ -183,19 +188,19 @@
                     </div>
                     <div class="ruleset-generator">
                         <label class="b-contain" for="generate-ublock-rules">uBlock
-                            <input id="generate-ublock-rules" name="rule-sets" data-option="uBlock" type="radio" value="uBlock">
+                            <input id="generate-ublock-rules" name="rule-sets" data-ruleset="uBlock" type="radio" value="uBlock">
                             <div class="b-input"></div>
                         </label>
                     </div>
                     <div class="ruleset-generator">
                         <label class="b-contain" for="generate-umatrix-rules">uMatrix
-                            <input id="generate-umatrix-rules" name="rule-sets" data-option="uMatrix" type="radio" value="uMatrix">
+                            <input id="generate-umatrix-rules" name="rule-sets" data-ruleset="uMatrix" type="radio" value="uMatrix">
                             <div class="b-input"></div>
                         </label>
                     </div>
                     <div class="ruleset-generator">
                         <label class="b-contain" for="generate-adguard-rules">AdGuard
-                            <input id="generate-adguard-rules" name="rule-sets" data-option="AdGuard" type="radio" value="AdGuard">
+                            <input id="generate-adguard-rules" name="rule-sets" data-ruleset="AdGuard" type="radio" value="AdGuard">
                             <div class="b-input"></div>
                         </label>
                     </div>
@@ -255,11 +260,11 @@
                 <section class="option">
                     <div class="title-option without-checkbox"><span data-i18n-content="headerStorageType">Storage type</span><span id="sync-help" class="options-help-icon"></span></div>
                     <label class="b-contain storage-type" for="storage-type-local"><span  data-i18n-content="labelStorageTypeLocal">Local (recommended)</span>
-                        <input id="storage-type-local" name="storage-type" data-option="storageTypeLocal" type="radio" value="local">
+                        <input id="storage-type-local" name="storage-type" type="radio" value="local">
                         <div class="b-input"></div>
                     </label>
                     <label class="b-contain storage-type" for="storage-type-sync"><span data-i18n-content="labelStorageTypeSync">Sync</span>
-                        <input id="storage-type-sync" name="storage-type" data-option="storageTypeSync" type="radio" value="sync">
+                        <input id="storage-type-sync" name="storage-type" type="radio" value="sync">
                         <div class="b-input"></div>
                     </label>
                 </section>
