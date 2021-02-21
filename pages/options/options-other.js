@@ -84,10 +84,8 @@ optionsOther._setIcon = function (optionValue) {
 optionsOther._preSelectStorage = function (type) {
     if (type === 'local') {
         document.getElementById('storage-type-local').checked = true;
-        optionsOther._storageSize(chrome.storage.local);
     } else {
         document.getElementById('storage-type-sync').checked = true;
-        optionsOther._storageSize(chrome.storage.sync);
     }
 };
 
@@ -97,26 +95,9 @@ optionsOther._onStorageOptionChanged = function ({target}) {
     });
     if (target.value === 'local') {
         storageManager.migrateData('local');
-        optionsOther._storageSize(chrome.storage.local);
     } else {
         storageManager.migrateData('sync');
-        optionsOther._storageSize(chrome.storage.sync);
     }
-};
-
-optionsOther._storageSize = function (type) {
-
-    return new Promise((resolve) => {
-        type.get(null, function (items) {
-            let value = new TextEncoder().encode(Object.entries(items)
-                .map(([key, value]) => key + JSON.stringify(value))
-                .join('')).length;
-            value /= 1000;
-            // document.getElementById('storage-size').textContent = `${value.toLocaleString()} KB`;
-            console.log(`${value.toLocaleString()} KB`);
-            resolve();
-        });
-    });
 };
 
 optionsOther._colorPicker = function () {

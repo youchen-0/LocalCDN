@@ -48,8 +48,7 @@ optionsBasic.init = function (opt) {
 
     internalStatistics = options.getOptionElement(Setting.INTERNAL_STATISTICS);
     internalStatistics.addEventListener('change', options.onOptionChanged);
-    internalStatistics.checked = true;// opt[Setting.INTERNAL_STATISTICS];
-
+    internalStatistics.checked = opt[Setting.INTERNAL_STATISTICS];
 
     hideDonationButton = options.getOptionElement(Setting.HIDE_DONATION_BUTTON);
     hideDonationButton.addEventListener('change', options.onOptionChanged);
