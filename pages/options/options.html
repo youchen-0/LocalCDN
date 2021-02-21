@@ -254,11 +254,11 @@
                             <div id="badge-preview-bottom">
                                 <div class="colorpicker">
                                     <div id="pre-badged-background-color"></div>
-                                    <input id="badged-background-color" class="input-text" maxlength="7"><img id="restore-background-color" class="img-restore-color" src="../../icons/restore.svg"><br>
+                                    <input id="badged-background-color" data-option="badgeColor" class="input-text" maxlength="7"><img id="restore-background-color" class="img-restore-color" src="../../icons/restore.svg"><br>
                                 </div>
                                 <div id="div-badged-text-color" class="colorpicker">
                                     <div id="pre-badged-text-color"></div>
-                                    <input id="badged-text-color" class="input-text" maxlength="7"><img id="restore-text-color" class="img-restore-color" src="../../icons/restore.svg">
+                                    <input id="badged-text-color"  data-option="badgeTextColor" class="input-text" maxlength="7"><img id="restore-text-color" class="img-restore-color" src="../../icons/restore.svg">
                                 </div>
                             </div>
                         </div>
@@ -269,11 +269,11 @@
                 <section class="option">
                     <div class="title-option without-checkbox"><span data-i18n-content="headerStorageType">Storage type</span><span id="sync-help" class="options-help-icon"></span></div>
                     <label class="b-contain storage-type" for="storage-type-local"><span  data-i18n-content="labelStorageTypeLocal">Local (recommended)</span>
-                        <input id="storage-type-local" name="storage-type" type="radio" value="local">
+                        <input id="storage-type-local" data-option="storageType" name="storage-type" type="radio" value="local">
                         <div class="b-input"></div>
                     </label>
                     <label class="b-contain storage-type" for="storage-type-sync"><span data-i18n-content="labelStorageTypeSync">Sync</span>
-                        <input id="storage-type-sync" name="storage-type" type="radio" value="sync">
+                        <input id="storage-type-sync" data-option="storageType" name="storage-type" type="radio" value="sync">
                         <div class="b-input"></div>
                     </label>
                 </section>
