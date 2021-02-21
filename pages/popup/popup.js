@@ -439,14 +439,26 @@ popup._onDocumentLoaded = function () {
 popup._onTestingUtilityLinkClicked = function (event) {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            'url': Links.LOCALCDN_TEST_WEBSITE + popup._targetTab.url,
+            'url': Links.LOCALCDN_TEST_WEBSITE,
             'active': event.button === 0,
+        }, function (tab) {
+            popup._injectDomain(tab.id);
         });
     }
 
     if (event.button === 0) {
         window.close();
     }
+};
+
+popup._injectDomain = function (tabId) {
+    let message = {
+        'topic': 'injection',
+        'value': tabId,
+        'url': popup._targetTab.url
+    };
+
+    chrome.runtime.sendMessage(message);
 };
 
 popup._onOptionsButtonClicked = function () {
