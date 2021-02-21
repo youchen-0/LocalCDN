@@ -32,6 +32,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
         // Chromium (and other) browsers do not support webRequest.filterResponseData
         // https://bugs.chromium.org/p/chromium/issues/detail?id=487422
         console.warn('[ LocalCDN ] browser.webRequest.filterResponseData not supported by your browser.');
+        log.append(details.url, '-', 'browser.webRequest.filterResponseData not supported by your browser', true);
         return;
     }
     if (details.statusCode === 200) {
@@ -66,6 +67,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                 // Check if charset is supported by TextDecoder()
                 if (/charset\s*=/.test(header.value) && !EncodingTypes[charset.toString().toLowerCase()]) {
                     console.error(`[ LocalCDN ] Unsupported charset: ${charset}`);
+                    log.append(details.url, '-', `Unsupported charset: ${charset}`, true);
                     return;
                 }
 

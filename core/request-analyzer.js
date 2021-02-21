@@ -48,16 +48,19 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     if (BrowserType.CHROMIUM) {
         if (/(font-awesome|fontawesome)/.test(requestDetails.url)) {
             console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
+            log.append(tabDetails.url, requestDetails.url, 'Font Awesome is not fully supported by your browser', true);
             return false;
         } else if (requestDetails.url.startsWith('https://fonts.googleapis.com')) {
             // also valid for Google Material icons
             console.warn('[ LocalCDN ] Google Material Icons are not fully supported by your browser.');
+            log.append(tabDetails.url, requestDetails.url, 'Google Material Icons are not fully supported by your browser', true);
             return false;
         }
     }
 
     // Disable LocalCDN if website is 'yandex.com' and CDN is 'yastatic.net', because website and CDN are the same.
     if (tabDetails.url.includes('yandex.com') && requestDetails.url.includes('yastatic.net')) {
+        log.append(tabDetails.url, requestDetails.url, 'Workaround. Disable LocalCDN if website and CDN are the same', true);
         return false;
     }
 
@@ -135,6 +138,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     if (shorthandResource) {
         if (requestAnalyzer.logging) {
             console.log(`[ LocalCDN ] Replaced resource: ${shorthandResource.path}`);
+            log.append(initiator, channelHost + channelPath, shorthandResource.path, false);
         }
         return shorthandResource;
     }
@@ -169,6 +173,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
             if (requestAnalyzer.logging) {
                 console.log(`[ LocalCDN ] Replaced resource: ${targetPath}`);
+                log.append(initiator, channelHost + channelPath, targetPath, false);
             }
             // Prepare and return a local target.
             return {
@@ -183,6 +188,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
 
     if (requestAnalyzer.logging && !IgnoredHost[channelHost]) {
         console.warn(`[ LocalCDN ] Missing resource: ${channelHost}${channelPath}`);
+        log.append(initiator, channelHost + channelPath, '-', true);
     }
     return false;
 };
