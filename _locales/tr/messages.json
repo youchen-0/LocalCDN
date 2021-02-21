@@ -76,7 +76,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "Eksik kaynakları göstermek için \"Tarayıcı Konsolunu\" (CTRL + SHIFT + J) açın.",
+        "message": "Günlüğü menüdeki simgesi ile açabilirsiniz. Tarayıcıyı kapattığınızda veya günlük kaydını devre dışı bıraktığınızda günlük silinecektir.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Bağış düğmesini gizle",
         "description": "Hide donation button"
     }
 }
