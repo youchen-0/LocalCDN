@@ -64,6 +64,7 @@ options._renderOptionsPanel = function () {
         'disablePrefetch': options._optionValues.disablePrefetch,
         'stripMetadata': options._optionValues.stripMetadata,
         'internalStatistics': options._internalStatistics,
+        'hideDonationButton': options._optionValues.hideDonationButton,
         'allowlistedDomains': domainAllowlist
     };
 

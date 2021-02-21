@@ -80,7 +80,8 @@ const Setting = {
     'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts',
     'STORAGE_TYPE': 'storageType',
     'BADGE_COLOR': 'badgeColor',
-    'BADGE_TEXT_COLOR': 'badgeTextColor'
+    'BADGE_TEXT_COLOR': 'badgeTextColor',
+    'HIDE_DONATION_BUTTON': 'hideDonationButton'
 };
 
 const SettingDefaults = {
@@ -104,7 +105,8 @@ const SettingDefaults = {
     [Setting.ALLOWLISTED_DOMAINS]: {},
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
     [Setting.BADGE_COLOR]: '#4A826C',
-    [Setting.BADGE_TEXT_COLOR]: '#FFFFFF'
+    [Setting.BADGE_TEXT_COLOR]: '#FFFFFF',
+    [Setting.HIDE_DONATION_BUTTON]: false
 };
 
 const WebRequest = {

@@ -82,6 +82,10 @@ popup._renderNonContextualContents = function () {
         document.getElementById('logging-button').style.display = 'block';
         document.getElementById('logging-button').addEventListener('mouseup', popup._onLoggingButtonClicked);
     }
+
+    if (!popup.hideDonationButton) {
+        document.getElementById('donate-button').style.display = 'flex';
+    }
 };
 
 popup._renderContextualContents = function () {

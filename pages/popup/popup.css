@@ -223,7 +223,7 @@ footer {
 #donate-button {
     color: #5f5f5f;
     cursor: pointer;
-    display: flex;
+    display: none;
     float: right;
     font-size: 12px;
     -moz-user-select: none;

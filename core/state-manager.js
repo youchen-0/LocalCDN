@@ -200,6 +200,8 @@ stateManager._handleStorageChanged = function (changes) {
         stateManager.internalStatistics = changes.internalStatistics.newValue;
     } else if (Setting.INTERNAL_STATISTICS_DATA in changes) {
         stats.data = changes.internalStatisticsData.newValue;
+    } else if (Setting.HIDE_DONATION_BUTTON in changes) {
+        stateManager.hideDonationButton = changes.hideDonationButton.newValue;
     }
 };
 
@@ -248,6 +250,7 @@ stateManager.getInvertOption = false;
 stateManager.validHosts = [];
 stateManager.selectedIcon = 'Default';
 stateManager.internalStatistics = false;
+stateManager.hideDonationButton = false;
 
 for (let mapping in mappings.cdn) {
     let supportedHost = Address.ANY_PROTOCOL + mapping + Address.ANY_PATH;
