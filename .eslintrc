@@ -30,18 +30,25 @@
         "files": true,
         "helpers": true,
         "interceptor": true,
+        "log": true,
+        "logging": true,
+        "manipulateDOM": true,
         "mappings": true,
+        "options": true,
+        "optionsAdvanced": true,
+        "optionsBasic": true,
+        "optionsInfo": true,
+        "optionsOther": true,
         "requestAnalyzer": true,
         "requestSanitizer": true,
+        "ruleGenerator": true,
         "resources": true,
         "shorthands": true,
         "stateManager": true,
-        "wrappers": true,
-        "storageManager": true,
-        "manipulateDOM": true,
         "stats": true,
+        "storageManager": true,
         "targets": true,
-        "ruleGenerator": true,
+        "wrappers": true,
     },
     "overrides": {
         "files": [
@@ -62,7 +69,11 @@
         "arrow-parens": "error",
         "arrow-spacing": "error",
         "block-spacing": "error",
-        "brace-style": "error",
+        "brace-style": [
+            "error",
+            "1tbs",
+            { "allowSingleLine": true }
+        ],
         "camelcase": "error",
         "comma-spacing": "error",
         "comma-style": "error",
@@ -76,7 +87,8 @@
         "generator-star-spacing": "error",
         "indent": [
             "error",
-            4
+            4,
+            {"SwitchCase": 1}
         ],
         "key-spacing": "error",
         "keyword-spacing": "error",
