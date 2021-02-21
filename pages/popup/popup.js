@@ -272,10 +272,12 @@ popup._readStorage = function () {
     return new Promise((resolve) => {
         storageManager.type.get([
             Setting.NEGATE_HTML_FILTER_LIST,
-            Setting.LOGGING
+            Setting.LOGGING,
+            Setting.HIDE_DONATION_BUTTON
         ], function (items) {
             popup.negateHtmlFilterList = items.negateHtmlFilterList;
             popup._loggingStatus = items.enableLogging;
+            popup.hideDonationButton = items.hideDonationButton;
             resolve();
         });
     });
