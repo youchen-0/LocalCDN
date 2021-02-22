@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "Spenden Button ausblenden",
+        "message": "Spenden-Schaltfläche ausblenden",
         "description": "Hide donation button"
     }
 }
