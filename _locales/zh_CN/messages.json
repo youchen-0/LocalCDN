@@ -76,7 +76,7 @@
         "description": "Enable logging in browser console"
     },
     "loggingDescription": {
-        "message": "打开“浏览器控制台” ( CTRL + SHIFT + J ) 以展示缺失的资源.",
+        "message": "你可以使用菜单中的图标打开日志。 关闭浏览器或禁用日志记录后，日志将被删除。",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "隐藏捐赠按钮",
         "description": "Hide donation button"
     }
 }
