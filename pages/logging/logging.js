@@ -24,8 +24,12 @@ var logging = {};
 logging._onDocumentLoaded = function () {
     logging._getLoggingData()
         .then(logging._generateTable);
-    document.getElementById('btn-delete').addEventListener('click', logging._deleteLogs);
     document.getElementById('btn-reload').addEventListener('click', logging._resfresh);
+    document.getElementById('btn-copy').addEventListener('click', logging._openCopySection);
+    document.getElementById('btn-delete').addEventListener('click', logging._deleteLogs);
+
+    document.getElementById('btn-raw').addEventListener('click', function () { logging._prepareCopiedData('btn-raw'); });
+    document.getElementById('btn-markdown').addEventListener('click', function () { logging._prepareCopiedData('btn-markdown'); });
 };
 
 logging._generateTable = function () {
@@ -103,11 +107,56 @@ logging._showTable = function (value) {
 
     document.getElementById('logging-content').style.display = v1;
     document.getElementById('btn-delete').style.display = v1;
+    document.getElementById('btn-copy').style.display = v1;
     document.getElementById('no-logging-content').style.display = v2;
 };
 
 logging._resfresh = function () {
     location.reload();
+};
+
+logging._openCopySection = function () {
+    document.getElementById('copy-to-clipboard-section').style.display = 'block';
+    logging._prepareCopiedData('btn-raw');
+};
+
+logging._prepareCopiedData = function (type) {
+    let data, str;
+
+    data = logging._data;
+
+    if (type === 'btn-markdown') {
+        str = '| Number | Initiator | Resource | Redirected to |\n';
+        str += '| -------- | -------- | -------- | -------- |\n';
+        for (let i = 0; i < data.length; i++) {
+            str += String(`| \`${i + 1}\` |`);
+            str += String(` \`${Object.values(data[i])[0]}\` |`);
+            str += String(` \`${Object.values(data[i])[1]}\` |`);
+            str += String(` \`${Object.values(data[i])[2]}\` |\n`);
+        }
+    } else {
+        str = '"number";"initiator";"resource";"redirected to";\n';
+        for (let i = 0; i < data.length; i++) {
+            str += String(`"${i + 1}";`);
+            str += String(`"${Object.values(data[i])[0]}";`);
+            str += String(`"${Object.values(data[i])[1]}";`);
+            str += String(`"${Object.values(data[i])[2]}";\n`);
+        }
+    }
+    document.getElementById('copied-data').value = str;
+    logging._copy();
+};
+
+logging._copy = function () {
+    let textArea = document.getElementById('copied-data');
+    navigator.clipboard.writeText(textArea.value).then(
+        function () {
+            textArea.select();
+        },
+        function () {
+            alert('Rule set cannot be copied!');
+        }
+    );
 };
 
 logging._data = [];
