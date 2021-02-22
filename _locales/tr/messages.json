@@ -72,7 +72,7 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Tarayıcı konsolunda günlük kaydını etkinleştir",
+        "message": "Günlük kaydını etkinleştir",
         "description": "Enable logging"
     },
     "loggingDescription": {
