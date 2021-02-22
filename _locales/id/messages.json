@@ -72,7 +72,7 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Aktifkan pencatatan log di dalam konsol peramban",
+        "message": "Aktifkan pencatatan log",
         "description": "Enable logging"
     },
     "loggingDescription": {
