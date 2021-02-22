@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Slå på logging i nettleserkonsoll",
+        "message": "Slå på logging",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
+        "message": "Du kan åpne loggen med ikonen i menyen. Loggen vil bli slettet når du lukker nettleseren eller skrur av logging.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Skjul donasjonsknapp",
         "description": "Hide donation button"
     }
 }
