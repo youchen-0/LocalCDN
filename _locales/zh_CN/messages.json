@@ -72,7 +72,7 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "在浏览器控制台中启用日志记录",
+        "message": "启用日志记录",
         "description": "Enable logging"
     },
     "loggingDescription": {
