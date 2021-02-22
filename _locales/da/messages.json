@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Aktiver logning i browser konsollen",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Åben \"Browser konsollen\" ( CTRL + SHIFT + J ) for at vise manglende ressourcer.",

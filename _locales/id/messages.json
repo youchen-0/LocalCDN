@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Aktifkan pencatatan log di dalam konsol peramban",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Anda bisa membuka log dengan tombol di dalam menu. Log akan dihapus setelah Anda menutup peramban atau menonaktifkannya.",

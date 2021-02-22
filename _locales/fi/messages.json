@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Ota lokitus käyttöön selaimessa",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Avaa \"Selain konsoli\" ( CTRL + SHIFT + J ) näyttääksesi puuttuvat resurssit.",

@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Tarayıcı konsolunda günlük kaydını etkinleştir",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Günlüğü menüdeki simgesi ile açabilirsiniz. Tarayıcıyı kapattığınızda veya günlük kaydını devre dışı bıraktığınızda günlük silinecektir.",

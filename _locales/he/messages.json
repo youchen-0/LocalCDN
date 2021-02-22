@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "הפעלת תיעוד יומן במסוף הדפדפן",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "יש לפתוח „מסוף דפדפן” ( Ctrl+Shift+J ) כדי לצפות במשאבים החסרים.",

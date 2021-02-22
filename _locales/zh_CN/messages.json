@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "在浏览器控制台中启用日志记录",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "你可以使用菜单中的图标打开日志。 关闭浏览器或禁用日志记录后，日志将被删除。",

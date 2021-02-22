@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Activer la journalisation dans la console du navigateur",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Ouvrez la « Console du navigateur » ( CTRL + ALT + J ) pour afficher les ressources manquantes.",

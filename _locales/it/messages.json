@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Mostra i log nella console del browser",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Apri la \"Console del browser\" ( CTRL + SHIFT + J ) per mostrare le risorse mancanti.",

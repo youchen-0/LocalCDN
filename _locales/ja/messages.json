@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "ブラウザコンソール内のログを有効にする",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "ブラウザコンソール (CTRL + SHIFT + J) を開いて、不足しているリソースが表示できるようになります。",

@@ -72,8 +72,8 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Protokollierung in der Browser-Konsole aktivieren",
-        "description": "Enable logging in browser console"
+        "message": "Protokollierung aktivieren",
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Sie können das Protokoll über das Symbol im Menü öffnen. Das Protokoll wird gelöscht, wenn Sie den Browser schließen oder die Protokollierung deaktivieren.",

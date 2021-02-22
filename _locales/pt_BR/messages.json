@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Habilitar logging no console do browser",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Abra \"Browser Console\" ( CTRL + SHIFT + J ) para mostrar recursos faltantes.",

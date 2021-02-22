@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Habilitar los mensajes de registro en la consola del navegador",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Abra la «Consola del navegador» ( CTRL + MAYÚSCULAS + J ) para que se muestren los recursos que faltan.",

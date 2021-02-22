@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Включить логирование в консоли браузера",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Открыть консоль браузера ( CTRL + SHIFT + J ) для просмотра пропущенных ресурсов.",

@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "",

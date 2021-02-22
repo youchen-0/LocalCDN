@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "在瀏覽器控制台中啟用日誌記錄",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "打開「瀏覽器主控台」以顯示缺少的資源。",

@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Įjungti įrašymą per naršyklės konsolė",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Atidaryti „Naršyklės Konsolė“ (CTRL + SHIFT + J), kad rodytų trūkstamus resursus.",

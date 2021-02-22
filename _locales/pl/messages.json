@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Włącz zapis zdarzeń w konsoli przeglądarki",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Otwórz \"Konsolę przeglądarki\" ( CTRL + SHIFT + J), żeby wyświetlić brakujące zasoby.",

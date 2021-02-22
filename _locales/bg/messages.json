@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Включване на логване в конзолата на браузъра",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Отворете \"конзола на браузъра\" ( CTRL + SHIFT + J ), за да се покажат липсващите ресурси.",

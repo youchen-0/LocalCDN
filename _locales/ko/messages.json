@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "브라우저 콘솔에서 로깅 사용",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "누락된 리소스를 표시하려면 \"브라우저 콘솔\" (Ctrl + Shift + J )을 여십시오.",

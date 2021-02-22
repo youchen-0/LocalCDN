@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Slå på loggning i webbläsarkonsollen",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Öppna \"Webbläsarkonsol\" ( CTRL + SKIFT + J ) för att visa saknade resurser.",

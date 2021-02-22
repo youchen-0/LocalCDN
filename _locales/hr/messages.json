@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Aktiviraj prijavu na konzoli preglednika",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Otvori „Konzola preglednika” (CTRL + SHIFT + J) za prikaz nedostajućih resursa.",

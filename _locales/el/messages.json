@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Ενεργοποίηση σύνδεσης στην κονσόλα προγράμματος περιήγησης",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Άνοιγμα «Κονσόλας Προγράμματος Περιήγησης» ( CTRL + SHIFT + J ) για εμφάνιση ανύπαρκτων πόρων .",

@@ -73,7 +73,7 @@
     },
     "loggingTitle": {
         "message": "Zet logging in de browser console aan",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) om missende bronnen te weergeven.",
