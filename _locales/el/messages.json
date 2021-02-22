@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Ενεργοποίηση σύνδεσης στην κονσόλα προγράμματος περιήγησης",
+        "message": "Ενεργοποίηση καταγραφής",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Άνοιγμα «Κονσόλας Προγράμματος Περιήγησης» ( CTRL + SHIFT + J ) για εμφάνιση ανύπαρκτων πόρων .",
+        "message": "Μπορείτε να ανοίξετε το αρχείο καταγραφής με το εικονίδιο στο μενού. Το αρχείο καταγραφής θα διαγραφεί όταν κλείσετε το πρόγραμμα περιήγησης ή απενεργοποιήσετε την καταγραφή.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Απόκρυψη επιλογής «Συνεισφέρετε»",
         "description": "Hide donation button"
     }
 }
