@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Įjungti įrašymą per naršyklės konsolė",
+        "message": "Įjungti pranešimų/įvykių įrašymą",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Atidaryti „Naršyklės Konsolė“ (CTRL + SHIFT + J), kad rodytų trūkstamus resursus.",
+        "message": "Jūs galite atidaryti pranešimų/įvykių žurnalą per meniu. Pranešimų/įvykių žurnalas bus ištrintas/pravalytas kai jūs uždarysite naršyklę ar savanoriškai išjungsite, kad laikytų tokį žurnalą.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Slėpti „Aukoti“ mygtuką",
         "description": "Hide donation button"
     }
 }
