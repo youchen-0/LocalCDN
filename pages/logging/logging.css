@@ -27,7 +27,7 @@ td {
 }
 
 textarea {
-    height: 400px;
+    height: 200px;
     margin: 0 0 20px 0;
 }
 
@@ -52,11 +52,15 @@ textarea {
     display: flex;
 }
 
+.button-active {
+    background-color: #ccc;
+}
+
 #no-logging-content, #logging-content, #btn-delete, #btn-copy {
     display: none;
 }
 
-#btn-reload:hover, #btn-copy#hover {
+#btn-reload:hover, #btn-copy:hover {
     background-color: #ddd;
 }
 
@@ -64,6 +68,10 @@ textarea {
     background-color: #dd4b39;
     border-color: #d73925;
     color: white;
+}
+
+#btn-markdown {
+    margin-left: -1px;
 }
 
 .missing {
@@ -91,6 +99,10 @@ textarea {
         background-color: #3c3c3c;
         border-color: #323232;
         color: #bbb;
+    }
+
+    .button-active {
+        background-color: #2b2b2b;
     }
 
     #btn-reload:hover, #btn-copy:hover {

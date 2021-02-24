@@ -25,7 +25,7 @@ logging._onDocumentLoaded = function () {
     logging._getLoggingData()
         .then(logging._generateTable);
     document.getElementById('btn-reload').addEventListener('click', logging._resfresh);
-    document.getElementById('btn-copy').addEventListener('click', logging._openCopySection);
+    document.getElementById('btn-copy').addEventListener('click', logging._toggleCopySection);
     document.getElementById('btn-delete').addEventListener('click', logging._deleteLogs);
 
     document.getElementById('btn-raw').addEventListener('click', function () { logging._prepareCopiedData('btn-raw'); });
@@ -115,8 +115,22 @@ logging._resfresh = function () {
     location.reload();
 };
 
-logging._openCopySection = function () {
-    document.getElementById('copy-to-clipboard-section').style.display = 'block';
+logging._toggleCopySection = function () {
+    let copyBtn, copySection;
+
+    copyBtn = document.getElementById('btn-copy');
+    copySection = document.getElementById('copy-to-clipboard-section');
+
+    if (copyBtn.classList.contains('button-active')) {
+        copyBtn.textContent = 'Copy';
+        copyBtn.classList.remove('button-active');
+        copySection.style.display = 'none';
+    } else {
+        copyBtn.classList.add('button-active');
+        copyBtn.textContent = 'Close';
+        copySection.style.display = 'block';
+    }
+
     logging._prepareCopiedData('btn-raw');
 };
 
@@ -143,8 +157,11 @@ logging._prepareCopiedData = function (type) {
             str += String(`"${Object.values(data[i])[2]}";\n`);
         }
     }
+
     document.getElementById('copied-data').value = str;
+
     logging._copy();
+    logging._switchExportType(type);
 };
 
 logging._copy = function () {
@@ -157,6 +174,21 @@ logging._copy = function () {
             alert('Rule set cannot be copied!');
         }
     );
+};
+
+logging._switchExportType = function (type) {
+    let btnRaw, btnMarkdown;
+
+    btnRaw = document.getElementById('btn-raw');
+    btnMarkdown = document.getElementById('btn-markdown');
+
+    if (type === 'btn-raw') {
+        btnMarkdown.classList.remove('button-active');
+        btnRaw.classList.add('button-active');
+    } else {
+        btnMarkdown.classList.add('button-active');
+        btnRaw.classList.remove('button-active');
+    }
 };
 
 logging._data = [];
