@@ -76,7 +76,7 @@
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Du kan åpne loggen med ikonen i menyen. Loggen vil bli slettet når du lukker nettleseren eller skrur av logging.",
+        "message": "Du kan åpne loggen med ikonet i menyen. Loggen blir slettet når du lukker nettleseren eller slår av logging.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
