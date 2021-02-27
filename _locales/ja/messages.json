@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "CDNから配信されるリソースをローカルリソースへリダイレクトしトラッキングからあなたを守ります。",
+        "message": "CDNから配信されるリソースをローカルリソースへリダイレクトし、トラッキングからあなたを守ります。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "インストール以来にローカルのCDNリソースを使用した合計回数です。",
+        "message": "インストールしてからローカルのCDNリソースが使用された合計回数です。",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "ブラウザコンソール内のログを有効にする",
+        "message": "ログを有効にする",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "ブラウザコンソール (CTRL + SHIFT + J) を開いて、不足しているリソースが表示できるようになります。",
+        "message": "ログはメニュー内のアイコンから表示できます。ブラウザを閉じるかログを無効にするとログは削除されます。",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "寄付ボタンを隠す",
         "description": "Hide donation button"
     }
 }
