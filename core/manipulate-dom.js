@@ -88,9 +88,17 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 
                             htmlHead = asciiDecoder.decode(evt.data, {'stream': false});
                             // eslint-disable-next-line no-useless-escape
-                            charsetMatch = htmlHead.match(/<meta.*charset=["']?([^>"'\/]+)["'].*[>\/]/i);
+                            charsetMatch = htmlHead.match(/<meta\s+charset=["']?([^>"'\/]+)["'>\/]/i);
+                            if (charsetMatch === null) {
+                                // eslint-disable-next-line no-useless-escape
+                                charsetMatch = htmlHead.match(/<meta.*charset=["']?([^>"'\/]+)["'].*[>\/]/i);
+                            }
 
-                            charset = charsetMatch ? charsetMatch[1] : 'UTF-8';
+                            if (EncodingTypes[charsetMatch[1].toLowerCase()] !== undefined) {
+                                charset = charsetMatch[1];
+                            } else {
+                                charset = 'UTF-8';
+                            }
                         }
                         decoder = new TextDecoder(charset);
                     }
