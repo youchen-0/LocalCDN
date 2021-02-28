@@ -653,7 +653,7 @@ const ListOfFiles = {
     'angular-resource.min.jsm': 'AngularJS Resource',
     'angular-route.min.jsm': 'AngularJS Route',
     'angular-sanitize.min.jsm': 'AngularJS Sanitize',
-    'angular-stripe-checkout.jsm': 'Angular Stripe Checkout',
+    'angular-stripe-checkout.min.jsm': 'Angular Stripe Checkout',
     'angular-touch.min.jsm': 'AngularJS Touch',
     'angular-ui-router.min.jsm': 'Angular UI Router',
     'angular.min.jsm': 'Angular (JS)',

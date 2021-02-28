@@ -157,7 +157,7 @@ var resources = {
     },
     // Angular Stripe Checkout [Deprecated]
     'angularStripeCheckout': {
-        'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
+        'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.min.jsm',
         'type': 'application/javascript'
     },
     // Angular Translate
