@@ -8,7 +8,7 @@
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "",
+        "message": "විකල්ප",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
@@ -68,7 +68,7 @@
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "පිටපත්",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
