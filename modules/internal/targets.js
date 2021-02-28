@@ -391,7 +391,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/protonet-jquery.inview/1.')) {
         return '1.1.2';
     } else if (type.startsWith('/prototype/1.')) {
-        return '1.7.3.0';
+        return '1.7.3';
     } else if (type.startsWith('/raven.js/3.')) {
         return '3.27.2';
     } else if (type.startsWith('/react/16.')) {
@@ -712,7 +712,7 @@ const ListOfFiles = {
     'plyr.min.jsm': 'plyr (JS)',
     'plyr.svg': 'plyr (SVG)',
     'popper.min.jsm': 'Popper',
-    'prototype.jsm': 'Prototype',
+    'prototype.min.jsm': 'Prototype',
     'raven.min.jsm': 'Raven.js',
     'react-dom.production.min.jsm': 'ReactDOM',
     'react.production.min.jsm': 'React',

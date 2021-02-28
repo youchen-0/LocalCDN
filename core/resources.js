@@ -822,7 +822,7 @@ var resources = {
     },
     // Prototype [Deprecated]
     'prototypeJS': {
-        'path': 'resources/prototype/{version}/prototype.jsm',
+        'path': 'resources/prototype/{version}/prototype.min.jsm',
         'type': 'application/javascript'
     },
     // Raven.js
