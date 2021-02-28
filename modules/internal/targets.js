@@ -76,7 +76,7 @@ targets.setLastVersion = function (type, version) {
         else if (helpers.compareVersion('1.4.14', version)) return '1.4.14'; // > 1.3.20 to <= 1.4.14
         else if (helpers.compareVersion('1.5.11', version)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
         else if (helpers.compareVersion('1.6.10', version)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
-        else return '1.7.9'; // >= 1.6.11
+        else return '1.8.2'; // >= 1.6.11
     } else if (type.startsWith('/angularjs-slider/6.')) {
         return '6.7.0';
     } else if (type.startsWith('/angularjs-slider/7.')) {
