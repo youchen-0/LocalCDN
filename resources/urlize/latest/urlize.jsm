@@ -174,7 +174,7 @@
   var trailing_punctuation_improved = ['.', ',', ':', ';', '.)'];
   var wrapping_punctuation_django = [['(', ')'], ['<', '>'], ['&lt;', '&gt;']];
   var wrapping_punctuation_improved = [['(', ')'], ['<', '>'], ['&lt;', '&gt;'],
-  				     ['\u201c', '\u201d'], ['\u2018', '\u2019']];
+  				     ['“', '”'], ['‘', '’']];
   var word_split_re_django = /(\s+)/;
   var word_split_re_improved = /([\s<>"]+)/;
   var simple_url_re = /^https?:\/\/\w/i;
