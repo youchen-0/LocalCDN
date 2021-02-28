@@ -361,8 +361,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/moment.js/2.')) {
         return '2.29.1';
     } else if (type.startsWith('/mootools/1.')) {
-        if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
-        else return '1.6.0'; // > 1.4.5
+        return '1.6.0';
     } else if (type.startsWith('/object-assign@4.')) {
         return '4.1.1';
     } else if (type.startsWith('/oclazyload/1.')) {

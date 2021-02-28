@@ -718,10 +718,6 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
-    'mootoolsYui': {
-        'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
-        'type': 'application/javascript'
-    },
     // noUiSlider
     'noUiSlider': {
         'path': 'resources/noUiSlider/{version}/nouislider.min.jsm',
