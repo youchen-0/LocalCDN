@@ -745,7 +745,7 @@ const ListOfFiles = {
     'underscore-min.jsm': 'Underscore.js',
     'urlize.jsm': 'urlize',
     'vue.min.jsm': 'Vue.js',
-    'webcomponents-loader.jsm': 'WebComponents Loader (JS)',
+    'webcomponents-loader.min.jsm': 'WebComponents Loader (JS)',
     'webfontloader.jsm': 'Web Font Loader',
     'wow.min.jsm': 'WOW'
 };

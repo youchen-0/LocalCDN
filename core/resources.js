@@ -1037,7 +1037,7 @@ var resources = {
     },
     // WebComponents.js [Deprecated]
     'webcomponentsJS': {
-        'path': 'resources/webcomponentsjs/{version}/webcomponents-loader.jsm',
+        'path': 'resources/webcomponentsjs/{version}/webcomponents-loader.min.jsm',
         'type': 'application/javascript'
     },
     // Web Font Loader
