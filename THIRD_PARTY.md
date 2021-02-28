@@ -1,3 +1,4 @@
+```
 https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js
 https://cdn.jsdelivr.net/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js
 https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
@@ -1030,3 +1031,4 @@ https://github.com/Templarian/MaterialDesign-Webfont/blob/v5.8.55/css/materialde
 https://github.com/Templarian/MaterialDesign-Webfont/blob/v5.8.55/fonts/materialdesignicons-webfont.woff2
 https://raw.githubusercontent.com/jquery-validation/jquery-validation/1.19.3/dist/jquery.validate.min.js
 https://unpkg.com/object-assign@4.1.1/index.js
+```
