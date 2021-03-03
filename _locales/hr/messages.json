@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Sakrij gumb za donacije",
         "description": "Hide donation button"
     }
 }
