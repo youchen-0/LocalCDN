@@ -759,6 +759,10 @@ var resources = {
         'path': 'resources/owl-carousel/{version}/owl.carousel.min.css',
         'type': 'text/css'
     },
+    'owlCarousel2Bundle': {
+        'path': 'resources/OwlCarousel2/{version}/',
+        'type': 'application/javascript'
+    },
     // P2P Media Loader Core
     'p2pMediaLoaderCore': {
         'path': 'resources/p2p-media-loader-core/{version}/p2p-media-loader-core.min.jsm',

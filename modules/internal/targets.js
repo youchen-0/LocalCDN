@@ -45,6 +45,8 @@ targets.determineBundle = function (path) {
         val = 'Select2';
     } else if (path.startsWith('/gsap/')) {
         val = 'GSAP';
+    } else if (path.startsWith('/OwlCarousel2/')) {
+        val = 'Owl Carousel 2';
     } else if (Regex.FONT_AWESOME_FONTS_ONLY.test(path)) {
         val = 'Font Awesome (Fonts)';
     } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(path)) {
@@ -367,6 +369,8 @@ targets.setLastVersion = function (type, version) {
         return '4.1.1';
     } else if (type.startsWith('/oclazyload/1.')) {
         return '1.1.0';
+    } else if (type.startsWith('/OwlCarousel2/2.')) {
+        return '2.3.4';
     } else if (type.startsWith('/owl-carousel/2.')) {
         return '2.3.4';
     } else if (type.startsWith('/owl-carousel/1.')) {

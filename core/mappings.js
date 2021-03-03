@@ -345,7 +345,7 @@ mappings.cdn = {
             'nvd3/{version}/nv.d3.min.css': resources.nvd3CSS,
             'nvd3/{version}/nv.d3.css': resources.nvd3CSS,
             'oclazyload/{version}/ocLazyLoad.': resources.ocLazyLoad,
-            'OwlCarousel2/{version}/owl.carousel.': resources.owlCarouselJS,
+            'OwlCarousel2/{version}/': resources.owlCarousel2Bundle,
             'owl-carousel/{version}/owl.carousel.js': resources.owlCarouselJS,
             'owl-carousel/{version}/owl.carousel.min.js': resources.owlCarouselJS,
             'owl-carousel/{version}/owl.carousel.css': resources.owlCarouselCSScarousel,
