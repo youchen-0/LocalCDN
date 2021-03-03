@@ -160,17 +160,9 @@ var resources = {
         'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.min.jsm',
         'type': 'application/javascript'
     },
-    // Angular Translate
+    // Angular Translate (Bundle)
     'angularTranslate': {
-        'path': 'resources/angular-translate/{version}/angular-translate.min.jsm',
-        'type': 'application/javascript'
-    },
-    'angularTranslateInterpolationMessageformat': {
-        'path': 'resources/angular-translate/{version}/angular-translate-interpolation-messageformat.min.jsm',
-        'type': 'application/javascript'
-    },
-    'angularTranslateLoaderStaticFiles': {
-        'path': 'resources/angular-translate/{version}/angular-translate-loader-static-files.min.jsm',
+        'path': 'resources/angular-translate/{version}/',
         'type': 'application/javascript'
     },
     // Animate CSS

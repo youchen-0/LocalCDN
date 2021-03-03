@@ -45,6 +45,8 @@ targets.determineBundle = function (path) {
         val = 'Select2';
     } else if (path.startsWith('/gsap/')) {
         val = 'GSAP';
+    } else if (path.startsWith('/angular-translate/')) {
+        val = 'angular-translate';
     } else if (path.startsWith('/OwlCarousel2/')) {
         val = 'Owl Carousel 2';
     } else if (Regex.FONT_AWESOME_FONTS_ONLY.test(path)) {
@@ -123,11 +125,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular-material/0.')) {
         return '1.2.1';
     } else if (type.startsWith('/angular-translate/2.')) {
-        return '2.7.2';
-    } else if (type.startsWith('/angular-translate-loader-static-files/2.')) {
-        return '2.7.2';
-    } else if (type.startsWith('/angular-translate-interpolation-messageformat/2.')) {
-        return '2.7.2';
+        return '2.18.4';
     } else if (type.startsWith('/axios/0.')) {
         return '0.21.1';
     } else if (type.startsWith('/babel-polyfill/')) {
@@ -583,9 +581,6 @@ const ListOfFiles = {
     'shortcuts/infinite.min.jsm': 'Waypoints (Bundle)',
     'shortcuts/inview.min.jsm': 'Waypoints (Bundle)',
     'shortcuts/sticky.min.jsm': 'Waypoints (Bundle)',
-    'angular-translate.min.jsm': 'Angular Translate',
-    'angular-translate-interpolation-messageformat.min.jsm': 'Angular Translate Interpolation Messageformat',
-    'angular-translate-loader-static-files.min.jsm': 'Angular Translate Load Static Files',
     'anchor.min.jsm': 'AnchorJS',
     'jquery.easing.min.jsm': 'jQuery Easing Plugin',
     'baguetteBox.min.jsm': 'baguetteBox.js (JS)',
