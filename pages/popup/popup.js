@@ -368,7 +368,7 @@ popup._createInjectionElement = function (injection) {
     if (injection.bundle === '') {
         name = targets.determineResourceName(filename);
     } else {
-        name = `${injection.bundle} (Bundle)`;
+        name = `${injection.bundle}`;
     }
 
     nameTextNode = document.createTextNode(`- ${name}`);
