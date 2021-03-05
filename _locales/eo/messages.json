@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "",
+        "message": "Protektas vin kontraŭ spurado per CDN-oj (Enhavo-Liveraj Retoj), uzante alidirektadon al lokaja risurcoj.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -12,7 +12,7 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Montri nombrilon sur piktogramo",
+        "message": "Montri nombrilon de enmetoj sur piktogramo",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
@@ -44,11 +44,11 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Neinspektendaj domajnoj",
+        "message": "Neinspektendaj retejoj:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "",
+        "message": "Entajpu retejojn, ĉe kiuj LocalCDN malŝaltiĝos. Po unu en linio.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -56,199 +56,199 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generi regulojn por uBlock aŭ uMatrix",
+        "message": "Generi regulojn por via reklamobarilo",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "Se vi uzas reklamobarilon, vi povas generi la regulojn por ĝi ĉi tie. Vi devas mane aldoni ĉi tiujn regulojn por via reklamobarilo.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Lasta ĝisdatigo:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Kopii",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Ŝalti protokoladon",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Vi povas malfermi la protokolon per la piktogramo en la menuo. La protokolo estos forviŝita kiam vi fermos la TTT-legilon aŭ malŝaltos protokoladon.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Ĉi tiu funkcio misfunkciigos retejojn. Ne lasu ĝin ŝaltita, krom se vi pretas mane aldoni misfunkciontajn retejojn en la permesoliston.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Malŝalti",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filtri HTML-fontkodon",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Donaci",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inversigi HTML-filtrilon",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Ŝaltu ĉi tiun opcion por ĉiam uzi la HTML-filtrilon. La retejoj en la listo estos ignorataj tiam. Se ĉi tiu opcio estas malŝaltita, la HTML-filtrilo estas uzata nur por retejoj en la listo.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Ĉi tiu funkcio povas misfunkciigi retejojn. Bonvolu noti la informojn sur la Vikia paĝo.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Ne filtru HTML-fontkodon ĉe la jenaj retejoj:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Entajpu la retejojn filtrotajn aŭ ignorotajn de la HTML-filtrilo. Po unu en linio.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Filtru HTML-fontkodon ĉe la jenaj retejoj:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Forbari Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Se petoj pri mankantaj risurcoj estas permesataj, konektoj al \"fonts.googleapis.com\" ne estas forbarataj. Ŝaltu ĉi tiun opcion por forbari tiajn petojn.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Elektu piktogramon por ĉi tiu etendaĵo",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Internaj statistikoj",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Ĉi tiu funkcio estas nuntempe eksperimenta. Neniu datentransmisio. Ĉio estas loka en via aparato.",
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Statistikoj",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Hodiaŭ",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Lasta semajno",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Lasta monato",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Lasta jaro",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Forviŝi",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Averaĝo (Nombro de anstataŭigoj en unu tago)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Anstataŭigitaj framoj",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Ĉu vi certas, ke vi volas forviŝi ĉiujn statistikojn?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "",
+        "message": "Jen retejoj por kiuj Google Fonts estas permesata. Po unu en linio.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Baznivela",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Altnivela",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Alia",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Informo",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Speco de konservejo",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Loka",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sinkroniga",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Enporti/Elporti",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Fari savkopion en dosieron",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Restarigi el dosiero",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Enporto sukcesis",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Enporto malsukcesis",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Sciigo post ĝisdatigo",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Neniam (Silentaj Ĝisdatigoj)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Nur pri novaj CDN-oj kaj reguloj",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Ĉiam",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Ĉu retejo misfunkcias?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Kaŝi butonon pri donacado",
         "description": "Hide donation button"
     }
 }
