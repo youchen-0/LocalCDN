@@ -215,6 +215,7 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap2-togg
 https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.css
 https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js
+https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css
 https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css
 https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
@@ -1010,7 +1011,6 @@ https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js
 https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.6/vue.global.prod.js
 https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/8.23.0/vue-i18n.min.js
 https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/9.0.0/vue-i18n.cjs.min.js
-https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.2/vue-resource.min.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/infinite.min.js
@@ -1019,6 +1019,7 @@ https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/waypoints.debug.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/zepto.waypoints.min.js
 https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.5.0/webcomponents-loader.min.js
+https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js
 https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.8/adapter.min.js
 https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.4.0/adapter.min.js
 https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js
@@ -1056,8 +1057,8 @@ https://cdn.jsdelivr.net/npm/urlize.js/urlize.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.css
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.min.js
 https://fonts.googleapis.com/css?family=Material+Icons
-https://fonts.googleapis.com/css?family=Material+Icons
 https://raw.githubusercontent.com/jquery-validation/jquery-validation/1.19.3/dist/jquery.validate.min.js
+https://raw.githubusercontent.com/pagekit/vue-resource/1.5.2/dist/vue-resource.min.js
 https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v2.8.94/css/materialdesignicons.min.css
 https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v2.8.94/fonts/materialdesignicons-webfont.woff2
 https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v3.9.97/css/materialdesignicons.min.css
