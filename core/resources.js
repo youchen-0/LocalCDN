@@ -294,6 +294,11 @@ var resources = {
         'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css',
         'type': 'text/css'
     },
+    // Bulma
+    'bulma': {
+        'path': 'resources/bulma/{version}/css/bulma.min.css',
+        'type': 'text/css'
+    },
     // Chart.js
     'chartJs': {
         'path': 'resources/Chart.js/{version}/Chart.bundle.min.jsm',

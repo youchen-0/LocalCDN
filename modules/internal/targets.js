@@ -169,6 +169,8 @@ targets.setLastVersion = function (type, version) {
         return '2.21.2';
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
+    } else if (type.startsWith('/bulma/0.')) {
+        return '0.9.2';
     } else if (type.startsWith('/Chart.js/2.')) {
         return '2.9.4';
     } else if (type.startsWith('/chosen/1.')) {
@@ -514,6 +516,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bulma.min.css': 'Bulma',
     'hogan.min.jsm': 'hogan.js',
     'highlight.min.jsm': 'highlight.js (Bundle)',
     'jquery.cookie.min.jsm': 'jquery-cookie',
