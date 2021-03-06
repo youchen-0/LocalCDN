@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Habilitar los mensajes de registro en la consola del navegador",
+        "message": "Habilitar el registro",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Abra la «Consola del navegador» ( CTRL + MAYÚSCULAS + J ) para que se muestren los recursos que faltan.",
+        "message": "Puede abrir el registro con el icono en el menú. El registro se eliminará cuando cierre el navegador o deshabilite el registro.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Ocultar el botón de donación",
         "description": "Hide donation button"
     }
 }
