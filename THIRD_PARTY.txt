@@ -1056,7 +1056,7 @@ https://cdn.jsdelivr.net/npm/react-lifecycles-compat@3.0.4/react-lifecycles-comp
 https://cdn.jsdelivr.net/npm/urlize.js/urlize.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.css
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.min.js
-https://fonts.googleapis.com/css?family=Material+Icons
+https://fonts.gstatic.com/s/materialicons/v80/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2
 https://raw.githubusercontent.com/jquery-validation/jquery-validation/1.19.3/dist/jquery.validate.min.js
 https://raw.githubusercontent.com/pagekit/vue-resource/1.5.2/dist/vue-resource.min.js
 https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v2.8.94/css/materialdesignicons.min.css
