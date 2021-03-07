@@ -30,12 +30,13 @@ statistics._onDocumentLoaded = function () {
     helpers.insertI18nContentIntoDocument(document);
     helpers.insertI18nTitlesIntoDocument(document);
 
-    // Default view is 'today'
-    statistics._dateRange = [new Date().toISOString().slice(0, 10)];
-    document.getElementById('date-range').value = statistics._dateUnit;
-
-    statistics._registerListener();
-    statistics._getStatistics().then(statistics._renderContents);
+    chrome.storage.local.get([Setting.DEFAULT_RANGE_STATISTIC], function (items) {
+        document.getElementById('date-range').value = items.defaultRangeStatistic;
+        statistics._dateUnit = items.defaultRangeStatistic;
+        statistics._setDateRange(items.defaultRangeStatistic);
+        statistics._registerListener();
+        statistics._getStatistics().then(statistics._renderContents);
+    });
 };
 
 statistics._renderContents = function () {
@@ -229,6 +230,7 @@ statistics._handlerDateRange = function ({target}) {
     let type = target.value;
     if (type === 'day' || type === 'week' || type === 'month' || type === 'year') {
         statistics._dateUnit = type;
+        statistics._saveDefaultRange(type);
     } else if (type === 'delete') {
         statistics._deleteStatistic();
     }
@@ -243,6 +245,12 @@ statistics._deleteStatistic = function () {
         });
         chrome.runtime.sendMessage({'topic': 'deleteStatistic'});
     }
+};
+
+statistics._saveDefaultRange = function (value) {
+    chrome.storage.local.set({
+        [Setting.DEFAULT_RANGE_STATISTIC]: value
+    });
 };
 
 statistics._registerListener = function () {
@@ -262,6 +270,6 @@ statistics._dataSortedCDNs = {};
 statistics._dataSortedFrameworks = {};
 statistics._dataOverview = [];
 statistics._dateRange = [];
-statistics._dateUnit = 'day';
+statistics._dateUnit = 'week';
 
 document.addEventListener('DOMContentLoaded', statistics._onDocumentLoaded);
