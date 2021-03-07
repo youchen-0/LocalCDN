@@ -16,7 +16,7 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Προβολή του αριθμού των εμβόλιμων πόρων στο εικονίδιο του πρόσθετου.",
+        "message": "Προβολή του αριθμού των εμβόλιμων πόρων στο εικονίδιο της επεκτάσεως.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "Μήπως δε λειτουργεί σωστά ο ιστότοπος;",
+        "message": "Δυσλειτουργεί ο ιστότοπος;",
         "description": "Website broken?"
     },
     "hideDonationButton": {
