@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Aktiviraj prijavu na konzoli preglednika",
+        "message": "Aktiviraj zapisivanje dnevnika",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Otvori „Konzola preglednika” (CTRL + SHIFT + J) za prikaz nedostajućih resursa.",
+        "message": "Dnevnik možeš otvoriti pomoću ikone u izborniku. Dnevnik će se izbrisati kad zatvoriš preglednik ili kad deaktiviraš zapisivanje dnevnika.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
