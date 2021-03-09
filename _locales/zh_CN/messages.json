@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "通过重定向到本地资源，保护你免于 CDN（内容分发网络）的跟踪。",
+        "message": "将请求重定向到本地资源，保护你免于 CDN（内容分发网络）的跟踪。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "自安装以来本地 CDN 资源的注入数量。",
+        "message": "自安装以来本地 CDN 资源的注入次数。",
         "description": "Amount injected description."
     },
     "optionsTitle": {
