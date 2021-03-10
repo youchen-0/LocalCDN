@@ -379,7 +379,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/p2p-media-loader-core') || type.startsWith('/p2p-media-loader-hlsjs')) {
         return '0.6.2';
     } else if (type.startsWith('/p5.js/1.')) {
-        return '1.2.0';
+        return '1.3.0';
     } else if (type.startsWith('/p5.js/0.')) {
         return '0.10.2';
     } else if (type.startsWith('/page.js/1.')) {
