@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Podaj domeny, aby dodać je do białej listy. Oddziel wpisy średnikami (;).",
+        "message": "Podaj domeny, aby dodać je do białej listy. Jeden wpis na wiersz.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Włącz zapis zdarzeń w konsoli przeglądarki",
+        "message": "Włącz zapis zdarzeń",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Otwórz \"Konsolę przeglądarki\" ( CTRL + SHIFT + J), żeby wyświetlić brakujące zasoby.",
+        "message": "Możesz otworzyć dziennik zdarzeń za pomocą ikony w menu. Dziennik zostanie usunięty, gdy zamkniesz przeglądarkę lub wyłączysz rejestrowanie zdarzeń.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Możesz wykluczyć domeny z pomocą powyższej listy. Oddzielaj wiele wpisów za pomocą średników (;).",
+        "message": "Możesz wykluczyć domeny z pomocą powyższej listy. Jedne wpis na wiersz.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Te domeny mogą wczytywać Google Fonts. Oddzielaj wiele wpisów za pomocą średników (;).",
+        "message": "Te domeny mogą wczytywać Google Fonts. Jeden wpis na wiersz.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -244,11 +244,11 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Zepsuta strona?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Ukryj przycisk dotacji",
         "description": "Hide donation button"
     }
 }
