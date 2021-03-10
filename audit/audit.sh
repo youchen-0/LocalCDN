@@ -6,30 +6,53 @@
 # - Bash >= 4.4
 # - LocalCDN >= v2.6.3
 # - Local Tor SOCKS5 Proxy (optional, but recommended)
-USE_TOR=true    #slow
-# USE_TOR=false   #fast
 #
 # =============================================================================
-# TOR:
+# SETTINGS:
+#
+# Use local Tor Proxy
+# USE_TOR=false   #fast (~ 4 minutes)
+USE_TOR=true    #slow (~ 15 minutes)
+#
+# Set this value to "true" to generate the THIRD_PARTY.txt file.
+# This file contains all source URLs that were used for the check.
+# CREATE_THIRD_PARTY_FILE=true
+CREATE_THIRD_PARTY_FILE=false
+#
+# =============================================================================
+# INSTALL TOR PROXY:
 # - sudo apt install tor
 #   e.g. https://linuxconfig.org/install-tor-proxy-on-ubuntu-20-04-linux
 #
-#   CHECK TOR:
-#   - systemctl status tor@default.service
-#   - systemctl status tor.service
+# CHECK TOR:
+# - systemctl status tor@default.service
+# - systemctl status tor.service
 #
 # =============================================================================
-# AUTOMATICALLY REPLACE IF THERE IS A HASH MISMATCH:
+# HOW TO START:
 #
-# If wanted, start the script with the argument "replace", e.g.
+# A) Check all files:
+#      bash audit.sh
 #
-#     bash audit.sh replace
+# B) Check only one library:
+#    Choose the folder name from /resources/, e.g. jquery
+#      bash audit.sh jquery
+#
+# C) Check all files and replace in case of hash mismatch:
+#      bash audit.sh replace
+#
+# D) Check only one library files and replace in case of hash mismatch:
+#    Choose the folder name from /resources/, e.g. jquery
+#      bash audit.sh replace jquery
+#
 
+# =============================================================================
 CLOUDFLARE="https://cdnjs.cloudflare.com/ajax/libs"
 CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
 JSDELIVR="https://cdn.jsdelivr.net"
 GITHUB="https://raw.githubusercontent.com"
 
+# =============================================================================
 REGEX_JS=".*\.jsm$"
 COUNTER_ALL=0
 COUNTER_HASH_FAILED=0
@@ -43,26 +66,57 @@ FILES_FAILED=""
 FILES_SKIPPED=""
 FILES_NO_CONNECTION=""
 
+# =============================================================================
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NOCOLOR='\033[0m'
 BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
+DIVIDER=$(printf '%*s\n' 141 '' | tr ' ' "=")
 
-if [ "$1" = "replace" ]; then
+# =============================================================================
+if [ "$1" = "replace" ] && [ "$2" = "" ]; then
     REPLACE=true
+    CHECK="ALL"
+    echo -e "CHECK:   All"
+    echo -e "REPLACE: Yes"
+elif [ "$1" != "" ] && [ "$1" != "replace" ]; then
+    CHECK=$1
+    echo -e "CHECK:   $1"
+    echo -e "REPLACE: No"
+elif [ "$1" = "replace" ] && [ "$2" != "" ]; then
+    REPLACE=true
+    CHECK=$2
+    echo -e "CHECK:   $2"
+    echo -e "REPLACE: Yes"
+else
+    CHECK="ALL"
+    echo -e "CHECK:   ALL"
+    echo -e "REPLACE: No"
 fi
 
+# =============================================================================
 if [[ "$USE_TOR" != true && "$USE_TOR" != false ]]; then
     echo -e "USE_TOR not set. Please select yes (true) or no (false)!"
     exit 1
 fi
 
+# =============================================================================
 function create_url
 {
     path=$1
     folder=$(echo -e "$path" | cut -d"/" -f3)
+
+    if [ "$CHECK" != "ALL" ] && [ "$CHECK" != "$folder" ]; then
+        return 0
+    fi
+
+    ((COUNTER_ALL++))
+    echo -e "$DIVIDER"
+    echo -e "SCANNED:     ${COUNTER_ALL}/${#array[@]}"
+    echo -e "PATH:        $i"
+
     version=$(echo -e "$path" | cut -d"/" -f4)
     file=$(echo -e "$path" | cut -d"/" -f5)
     subfile=$(echo -e "$path" | awk -F"/" '{print $NF}')
@@ -319,55 +373,51 @@ function create_url
         fi
     fi
 
-    if [ "$url" = "" ]; then
-        echo -e "No target URL for $path!"
-        exit 1
+    if [ "$USE_TOR" = true ]; then
+        if ! torsocks wget -qO ./tmp "$url"; then
+            error=true
+        fi
     else
-        if [ "$USE_TOR" = true ]; then
-            if ! torsocks wget -qO ./tmp "$url"; then
-                error=true
-            fi
-        else
-            if ! wget -qO ./tmp "$url"; then
-                error=true
-            fi
+        if ! wget -qO ./tmp "$url"; then
+            error=true
         fi
-        if [ "$error" = true ]; then
-            echo -e "${YELLOW}LOCAL HASH:  -${NOCOLOR}"
-            echo -e "${YELLOW}REMOTE HASH: -${NOCOLOR}"
-            echo -e "${YELLOW}STATUS:      NO CONNECTION $url${NOCOLOR}"
-            FILES_NO_CONNECTION="${YELLOW}No connection: $path --> $url${NOCOLOR}\n$FILES_NO_CONNECTION"
-            ((COUNTER_CONNECT_FAILED++))
-            return 0;
-        fi
-
-        REMOTE_HASH=$(sha512sum ./tmp | cut -d " " -f 1)
-
-        if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
-            echo -e "${RED}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
-            echo -e "${RED}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
-            echo -e "${RED}STATUS:      FAILED${NOCOLOR}"
-            if [ "$REPLACE" = true ]; then
-                if [ "$is_javascript" = true ]; then
-                    mv ./tmp "${path}m"
-                else
-                    mv ./tmp "${path}"
-                fi
-                echo -e "${RED}             FILE ALREADY REPLACED${NOCOLOR}"
-                FILES_FAILED="${RED}Hash mismatch: $path (File already replaced)${NOCOLOR}\n$FILES_FAILED"
-            else
-                # No replace
-                FILES_FAILED="${RED}Hash mismatch: $path${NOCOLOR}\n$FILES_FAILED"
-            fi
-            ((COUNTER_HASH_FAILED++))
-        else
-            echo -e "${GREEN}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
-            echo -e "${GREEN}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
-            echo -e "${GREEN}STATUS:      PASSED${NOCOLOR}"
-            ((COUNTER_HASH_OK++))
-        fi
-        third_party+=("${url}")
     fi
+
+    if [ "$error" = true ]; then
+        echo -e "${YELLOW}LOCAL HASH:  -${NOCOLOR}"
+        echo -e "${YELLOW}REMOTE HASH: -${NOCOLOR}"
+        echo -e "${YELLOW}STATUS:      NO CONNECTION $url${NOCOLOR}"
+        FILES_NO_CONNECTION="${YELLOW}No connection: $path --> $url${NOCOLOR}\n$FILES_NO_CONNECTION"
+        ((COUNTER_CONNECT_FAILED++))
+        return 0;
+    fi
+
+    REMOTE_HASH=$(sha512sum ./tmp | cut -d " " -f 1)
+
+    if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+        echo -e "${RED}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
+        echo -e "${RED}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
+        echo -e "${RED}STATUS:      FAILED${NOCOLOR}"
+        if [ "$REPLACE" = true ]; then
+            if [ "$is_javascript" = true ]; then
+                mv ./tmp "${path}m"
+            else
+                mv ./tmp "${path}"
+            fi
+            echo -e "${RED}             FILE ALREADY REPLACED${NOCOLOR}"
+            FILES_FAILED="${RED}Hash mismatch: $path (File already replaced)${NOCOLOR}\n$FILES_FAILED"
+        else
+            # No replace
+            FILES_FAILED="${RED}Hash mismatch: $path${NOCOLOR}\n$FILES_FAILED"
+        fi
+        ((COUNTER_HASH_FAILED++))
+    else
+        echo -e "${GREEN}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
+        echo -e "${GREEN}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
+        echo -e "${GREEN}STATUS:      PASSED${NOCOLOR}"
+        ((COUNTER_HASH_OK++))
+    fi
+    third_party+=("${url}")
 }
 
 
@@ -379,16 +429,12 @@ function create_url
 array=()
 while IFS=  read -r -d $'\0'; do
     array+=("$REPLY")
-done < <(find ./resources/ -type f \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) ! -iname "fa-loader.jsm" ! -iname "fa-loader.css" ! -iname "google-material-design-icons.css" -print0)
+done < <(find ../resources/ -type f \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) ! -iname "fa-loader.jsm" ! -iname "fa-loader.css" ! -iname "google-material-design-icons.css" -print0)
 
 third_party=()
 
 for i in "${array[@]}"
 do
-    ((COUNTER_ALL++))
-    echo -e "============================================================================================================================================="
-    echo -e "SCANNED:     ${COUNTER_ALL}/${#array[@]}"
-    echo -e "PATH:        $i"
     create_url "$i"
 done
 
@@ -397,12 +443,15 @@ rm ./tmp
 IFS=$'\n' sorted=($(sort <<<"${third_party[*]}"))
 unset IFS
 
-printf "%s\n" "${sorted[@]}" > THIRD_PARTY.txt
+if [ "$CREATE_THIRD_PARTY_FILE" = true ]; then
+    printf "%s\n" "${sorted[@]}" > ../THIRD_PARTY.txt
+fi
+
 echo -e "\n\n\n"
-echo -e "============================================================================================================================================="
+echo -e "$DIVIDER"
 echo -e "${GREEN}${BOLD}D O N E${NORMAL}${NOCOLOR}"
-echo -e "============================================================================================================================================="
-echo -e "${BOLD}Total:${NORMAL}       ${#array[@]}"
+echo -e "$DIVIDER"
+echo -e "${BOLD}Total:${NORMAL}          $COUNTER_ALL"
 echo -e ""
 echo -e "${BOLD}Hash passed:  ${NORMAL}  $COUNTER_HASH_OK"
 echo -e "${BOLD}Hash mismatch:${NORMAL}  $COUNTER_HASH_FAILED"
