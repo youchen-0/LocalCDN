@@ -969,6 +969,7 @@ https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.
 https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.5.0/js/jquery.sliderPro.min.js
 https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.4.0/socket.io.min.js
 https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.2/socket.io.min.js
+https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js
 https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js
 https://cdnjs.cloudflare.com/ajax/libs/spin.js/3.1.0/spin.min.js
 https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.0/spin.min.js
