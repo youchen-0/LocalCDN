@@ -178,7 +178,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/clipboard.js/1.')) {
         return '1.7.1';
     } else if (type.startsWith('/clipboard.js/2.')) {
-        return '2.0.6';
+        return '2.0.8';
     } else if (type.startsWith('/cookieconsent2/3.')) {
         return '3.1.1';
     } else if (type.startsWith('/d3/3.')) {
