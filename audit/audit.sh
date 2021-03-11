@@ -1,5 +1,16 @@
 #!/bin/bash
-
+# =============================================================================
+# AUDIT SCRIPT TO VERIFY THE INTEGRITY OF THE BUNDLED RESOURCES
+#
+# Author        nobody
+# Versions      1.1
+#
+# License       MPL 2.0
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at http://mozilla.org/MPL/2.0/.
+#
 # =============================================================================
 # PREREQUISITES:
 #
@@ -45,13 +56,25 @@ CREATE_THIRD_PARTY_FILE=false
 #    Choose the folder name from /resources/, e.g. jquery
 #      bash audit.sh replace jquery
 #
+# =============================================================================
+# WHICH FILES WILL BE CHECKED?
+#
+# All files in the directory /resources/
+#
+# Exceptions:
+#   /resources/*/note
+#   /resources/google-material-design-icons/google-material-design-icons.css
 
+# =============================================================================
+# CDNs
 # =============================================================================
 CLOUDFLARE="https://cdnjs.cloudflare.com/ajax/libs"
 CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
 JSDELIVR="https://cdn.jsdelivr.net"
 GITHUB="https://raw.githubusercontent.com"
 
+# =============================================================================
+# GLOBALS
 # =============================================================================
 REGEX_JS=".*\.jsm$"
 COUNTER_ALL=0
@@ -67,6 +90,8 @@ FILES_SKIPPED=""
 FILES_NO_CONNECTION=""
 
 # =============================================================================
+# FORMATTING
+# =============================================================================
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -76,34 +101,37 @@ NORMAL=$(tput sgr0)
 DIVIDER=$(printf '%*s\n' 141 '' | tr ' ' "=")
 
 # =============================================================================
+# ARGUMENTS HANDLING
+# =============================================================================
 if [ "$1" = "replace" ] && [ "$2" = "" ]; then
     REPLACE=true
     CHECK="ALL"
-    echo -e "CHECK:   All"
-    echo -e "REPLACE: Yes"
+    echo -e "CHECK:   ALL"
+    echo -e "REPLACE: YES"
 elif [ "$1" != "" ] && [ "$1" != "replace" ]; then
     CHECK=$1
     echo -e "CHECK:   $1"
-    echo -e "REPLACE: No"
+    echo -e "REPLACE: NO"
 elif [ "$1" = "replace" ] && [ "$2" != "" ]; then
     REPLACE=true
     CHECK=$2
     echo -e "CHECK:   $2"
-    echo -e "REPLACE: Yes"
+    echo -e "REPLACE: YES"
 else
     CHECK="ALL"
     echo -e "CHECK:   ALL"
-    echo -e "REPLACE: No"
+    echo -e "REPLACE: NO"
 fi
 
-# =============================================================================
 if [[ "$USE_TOR" != true && "$USE_TOR" != false ]]; then
     echo -e "USE_TOR not set. Please select yes (true) or no (false)!"
     exit 1
 fi
 
 # =============================================================================
-function create_url
+# CHECK RESOURCE
+# =============================================================================
+function check_resource
 {
     path=$1
     folder=$(echo -e "$path" | cut -d"/" -f3)
@@ -125,8 +153,6 @@ function create_url
     is_javascript=false
     error=false
 
-    LOCAL_HASH=$(sha512sum "$path" | cut -d " " -f 1)
-
     if [[ $path =~ $REGEX_JS ]]; then
         path=$(echo "$path" | sed 's/.$//')
         jfile=$(echo "$file" | sed 's/.$//')
@@ -134,6 +160,64 @@ function create_url
         is_javascript=true
     fi
 
+    # Get URL of CDN
+    create_url
+
+    # Use Tor Proxy if set
+    if [ "$USE_TOR" = true ]; then
+        if ! torsocks wget -qO ./tmp "$url"; then
+            error=true
+        fi
+    else
+        if ! wget -qO ./tmp "$url"; then
+            error=true
+        fi
+    fi
+
+    if [ "$error" = true ]; then
+        echo -e "${YELLOW}LOCAL HASH:  -${NOCOLOR}"
+        echo -e "${YELLOW}REMOTE HASH: -${NOCOLOR}"
+        echo -e "${YELLOW}STATUS:      NO CONNECTION $url${NOCOLOR}"
+        FILES_NO_CONNECTION="${YELLOW}No connection: $path --> $url${NOCOLOR}\n$FILES_NO_CONNECTION"
+        ((COUNTER_CONNECT_FAILED++))
+        return 0;
+    fi
+
+    # Calculate hash value
+    LOCAL_HASH=$(sha512sum "$path" | cut -d " " -f 1)
+    REMOTE_HASH=$(sha512sum ./tmp | cut -d " " -f 1)
+
+    if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+        echo -e "${RED}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
+        echo -e "${RED}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
+        echo -e "${RED}STATUS:      FAILED${NOCOLOR}"
+        if [ "$REPLACE" = true ]; then
+            if [ "$is_javascript" = true ]; then
+                mv ./tmp "${path}m"
+            else
+                mv ./tmp "${path}"
+            fi
+            echo -e "${RED}             FILE ALREADY REPLACED${NOCOLOR}"
+            FILES_FAILED="${RED}Hash mismatch: $path (File already replaced)${NOCOLOR}\n$FILES_FAILED"
+        else
+            # No replace
+            FILES_FAILED="${RED}Hash mismatch: $path${NOCOLOR}\n$FILES_FAILED"
+        fi
+        ((COUNTER_HASH_FAILED++))
+    else
+        echo -e "${GREEN}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
+        echo -e "${GREEN}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
+        echo -e "${GREEN}STATUS:      PASSED${NOCOLOR}"
+        ((COUNTER_HASH_OK++))
+    fi
+    third_party+=("${url}")
+}
+
+# =============================================================================
+# CREATE URLs
+# =============================================================================
+function create_url
+{
     if [ "$folder" = "angular-stripe-checkout" ]; then
         url="$JSDELIVR/npm/angular-stripe-checkout@$version/angular-stripe-checkout.min.js"
     elif [ "$folder" = "ethjs" ]; then
@@ -159,7 +243,7 @@ function create_url
     elif [ "$folder" = "rocket-loader" ]; then
         url="$CLOUDFLARE_AJAX/7089c43e/cloudflare-static/rocket-loader.min.js"
     elif [ "$folder" = "google-material-design-icons" ]; then
-        url="https://fonts.gstatic.com/s/materialicons/v80/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+        url="https://fonts.gstatic.com/s/materialicons/$version/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
     elif [ "$folder" = "object-assign" ]; then
         url="$JSDELIVR/npm/object-assign@4.1.1/index.js"
     elif [ "$folder" = "mirage2" ]; then
@@ -324,7 +408,7 @@ function create_url
         url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"
     elif [ "$folder" = "vue-i18n" ] && [ "$version" = "9.0.0" ]; then
         url="$CLOUDFLARE/$folder/$version/vue-i18n.cjs.min.js"
-    elif [ "$path" = "twitter-bootstrap/fonts/glyphicons-halflings-regular.woff2" ]; then
+    elif [ "$path" = "../resources/twitter-bootstrap/fonts/glyphicons-halflings-regular.woff2" ]; then
         url="$CLOUDFLARE/twitter-bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2"
     elif [ "$subfile" = "jquery-ui.min.css" ]; then
         url="$CLOUDFLARE/jqueryui/1.8.24/themes/base/minified/jquery-ui.min.css"
@@ -362,9 +446,13 @@ function create_url
     elif [ "$subfile" = "videojs-seek-buttons.min.js" ]; then
         url="$JSDELIVR/npm/videojs-seek-buttons/dist/videojs-seek-buttons.js"
     elif [ "$subfile" = "jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.js" ]; then
-        url="$JSDELIVR/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js"
+        url="$JSDELIVR/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/\
+             hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/\
+             autocomplete.js@0.31.0/dist/autocomplete.min.js"
     elif [ "$folder" = "vue-resource" ]; then
         url="$GITHUB/pagekit/vue-resource/$version/dist/vue-resource.min.js"
+    elif [ "$path" = "../resources/webfont/fa-loader.js" ]; then
+        url="https://use.fontawesome.com/a1f20be65b.js"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
@@ -372,73 +460,24 @@ function create_url
             url="$CLOUDFLARE/$folder/$version/$file/$subfile"
         fi
     fi
-
-    if [ "$USE_TOR" = true ]; then
-        if ! torsocks wget -qO ./tmp "$url"; then
-            error=true
-        fi
-    else
-        if ! wget -qO ./tmp "$url"; then
-            error=true
-        fi
-    fi
-
-    if [ "$error" = true ]; then
-        echo -e "${YELLOW}LOCAL HASH:  -${NOCOLOR}"
-        echo -e "${YELLOW}REMOTE HASH: -${NOCOLOR}"
-        echo -e "${YELLOW}STATUS:      NO CONNECTION $url${NOCOLOR}"
-        FILES_NO_CONNECTION="${YELLOW}No connection: $path --> $url${NOCOLOR}\n$FILES_NO_CONNECTION"
-        ((COUNTER_CONNECT_FAILED++))
-        return 0;
-    fi
-
-    REMOTE_HASH=$(sha512sum ./tmp | cut -d " " -f 1)
-
-    if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
-        echo -e "${RED}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
-        echo -e "${RED}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
-        echo -e "${RED}STATUS:      FAILED${NOCOLOR}"
-        if [ "$REPLACE" = true ]; then
-            if [ "$is_javascript" = true ]; then
-                mv ./tmp "${path}m"
-            else
-                mv ./tmp "${path}"
-            fi
-            echo -e "${RED}             FILE ALREADY REPLACED${NOCOLOR}"
-            FILES_FAILED="${RED}Hash mismatch: $path (File already replaced)${NOCOLOR}\n$FILES_FAILED"
-        else
-            # No replace
-            FILES_FAILED="${RED}Hash mismatch: $path${NOCOLOR}\n$FILES_FAILED"
-        fi
-        ((COUNTER_HASH_FAILED++))
-    else
-        echo -e "${GREEN}LOCAL HASH:  $LOCAL_HASH${NOCOLOR}"
-        echo -e "${GREEN}REMOTE HASH: $REMOTE_HASH${NOCOLOR}"
-        echo -e "${GREEN}STATUS:      PASSED${NOCOLOR}"
-        ((COUNTER_HASH_OK++))
-    fi
-    third_party+=("${url}")
 }
 
-
 # =============================================================================
-#
 # MAIN
-#
 # =============================================================================
 array=()
+# Find files in /resource/
 while IFS=  read -r -d $'\0'; do
     array+=("$REPLY")
-done < <(find ../resources/ -type f \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) ! -iname "fa-loader.jsm" ! -iname "fa-loader.css" ! -iname "google-material-design-icons.css" -print0)
+done < <(find ../resources/ -type f \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) ! -iname "fa-loader.css" ! -iname "google-material-design-icons.css" -print0)
 
 third_party=()
 
-for i in "${array[@]}"
-do
-    create_url "$i"
+for i in "${array[@]}"; do
+    check_resource "$i"
 done
 
-rm ./tmp
+rm ./tmp 2> /dev/null
 
 IFS=$'\n' sorted=($(sort <<<"${third_party[*]}"))
 unset IFS
