@@ -3,7 +3,7 @@
 # AUDIT SCRIPT TO VERIFY THE INTEGRITY OF THE BUNDLED RESOURCES
 #
 # Author        nobody
-# Versions      1.1
+# Versions      1.2
 #
 # License       MPL 2.0
 #
@@ -184,7 +184,7 @@ function check_resource
     fi
 
     # Calculate hash value
-    LOCAL_HASH=$(sha512sum "$path" | cut -d " " -f 1)
+    LOCAL_HASH=$(sha512sum "$1" | cut -d " " -f 1)
     REMOTE_HASH=$(sha512sum ./tmp | cut -d " " -f 1)
 
     if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
@@ -446,9 +446,7 @@ function create_url
     elif [ "$subfile" = "videojs-seek-buttons.min.js" ]; then
         url="$JSDELIVR/npm/videojs-seek-buttons/dist/videojs-seek-buttons.js"
     elif [ "$subfile" = "jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.js" ]; then
-        url="$JSDELIVR/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/\
-             hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/\
-             autocomplete.js@0.31.0/dist/autocomplete.min.js"
+        url="$JSDELIVR/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js"
     elif [ "$folder" = "vue-resource" ]; then
         url="$GITHUB/pagekit/vue-resource/$version/dist/vue-resource.min.js"
     elif [ "$path" = "../resources/webfont/fa-loader.js" ]; then
