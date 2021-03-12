@@ -31,12 +31,15 @@ var stateManager = {};
  */
 
 stateManager.registerInjection = function (tabIdentifier, injection) {
-    let injectionIdentifier, registeredTab, injectionCount;
+    let injectionIdentifier, registeredTab, injectionCount, missingCount, badgeText;
 
     injectionIdentifier = injection.source + injection.path + injection.version;
     registeredTab = stateManager.tabs[tabIdentifier];
     registeredTab.injections[injectionIdentifier] = injection;
+
     injectionCount = Object.keys(registeredTab.injections).length || 0;
+    missingCount = registeredTab.missing || 0;
+    badgeText = `${injectionCount}`;
 
     if (injectionCount > 0) {
         chrome.browserAction.setTitle({
@@ -47,9 +50,29 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
         if (stateManager.showIconBadge === true) {
             wrappers.setBadgeText({
                 'tabId': tabIdentifier,
-                'text': injectionCount.toString()
+                'text': badgeText
             });
         }
+    }
+
+    if (missingCount > 0) {
+        chrome.browserAction.setBadgeTextColor({
+            'tabId': tabIdentifier,
+            'color': 'black'
+        });
+        chrome.browserAction.setBadgeBackgroundColor({
+            'tabId': tabIdentifier,
+            'color': 'yellow'
+        });
+    } else {
+        chrome.browserAction.setBadgeTextColor({
+            'tabId': tabIdentifier,
+            'color': wrappers.textColor
+        });
+        chrome.browserAction.setBadgeBackgroundColor({
+            'tabId': tabIdentifier,
+            'color': wrappers.backgroundColor
+        });
     }
 
     if (isNaN(storageManager.amountInjected)) {
@@ -127,7 +150,8 @@ stateManager._createTab = function (tab) {
     tabIdentifier = tab.id;
 
     stateManager.tabs[tabIdentifier] = {
-        'injections': {}
+        'injections': {},
+        'missing': 0
     };
 
     requestFilters = {
@@ -176,6 +200,7 @@ stateManager._updateTab = function (details) {
 
     if (stateManager.tabs[tabIdentifier]) {
         stateManager.tabs[tabIdentifier].injections = {};
+        stateManager.tabs[tabIdentifier].missing = 0;
     }
 };
 

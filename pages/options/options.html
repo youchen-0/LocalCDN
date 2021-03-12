@@ -154,11 +154,22 @@
                     <div class="title-option">
                         <label class="b-contain">
                             <input id="enableLogging" data-option="enableLogging" type="checkbox">
-                            <span data-i18n-content="loggingTitle">Enable logging in browser console</span>
+                            <span data-i18n-content="loggingTitle">Enable logging</span>
                             <div class="b-input"></div>
                         </label>
                     </div>
-                    <div class="description-option" data-i18n-content="loggingDescription">Open "Browser Console" ( CTRL + SHIFT + J ) to show missing resources</div>
+                    <div class="description-option" data-i18n-content="loggingDescription">You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging.</div>
+                </section>
+                <section class="option">
+                    <div class="title-option">
+                        <label class="b-contain">
+                            <input id="changeBadgeColorMissingResources" data-option="changeBadgeColorMissingResources" type="checkbox">
+                            <span data-i18n-content="changeBadgeColorMissingResourcesTitle">Indicate missing resources on the icon</span>
+                            <div class="b-input"></div>
+                        </label>
+                        <span class="badge badge-warning" data-i18n-content="betaLabel">Beta</span>
+                    </div>
+                    <div class="description-option" data-i18n-content="changeBadgeColorMissingResourcesDescription">Change the badge color if resources are missing.</div>
                 </section>
             </div>
             <div id="html-filter-div" class="option-group">

@@ -54,7 +54,8 @@ optionsAdvanced.preSelectBlockGoogleFonts = function (value) {
 };
 
 optionsAdvanced.init = function (opt) {
-    let blockMissing, blockGoogleFonts, allowedDomainsGoogleFonts, logging, domainsManipulateDOM, negateHtmlFilterList;
+    let blockMissing, blockGoogleFonts, allowedDomainsGoogleFonts, logging, domainsManipulateDOM,
+        negateHtmlFilterList, changeBadgeColorMissingResources;
 
     if (BrowserType.CHROMIUM) {
         document.getElementById('html-filter-div').style.display = 'none';
@@ -86,6 +87,10 @@ optionsAdvanced.init = function (opt) {
     negateHtmlFilterList = options.getOptionElement(Setting.NEGATE_HTML_FILTER_LIST);
     negateHtmlFilterList.addEventListener('change', options.onOptionChanged);
     negateHtmlFilterList.checked = opt[Setting.NEGATE_HTML_FILTER_LIST];
+
+    changeBadgeColorMissingResources = options.getOptionElement(Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES);
+    changeBadgeColorMissingResources.addEventListener('change', options.onOptionChanged);
+    changeBadgeColorMissingResources.checked = opt[Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES];
 
     document.getElementById('generate-ublock-rules').addEventListener('change', ruleGenerator.openRuleSet);
     document.getElementById('generate-umatrix-rules').addEventListener('change', ruleGenerator.openRuleSet);

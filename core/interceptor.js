@@ -44,6 +44,10 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails, tab.url);
     targetPath = targetDetails.path;
 
+    if (targetDetails === false) {
+        ++stateManager.tabs[tabIdentifier].missing;
+    }
+
     if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
         let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
         // Check if the website is allowed to load Google Fonts

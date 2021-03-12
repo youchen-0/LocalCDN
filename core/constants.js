@@ -82,7 +82,8 @@ const Setting = {
     'STORAGE_TYPE': 'storageType',
     'BADGE_COLOR': 'badgeColor',
     'BADGE_TEXT_COLOR': 'badgeTextColor',
-    'HIDE_DONATION_BUTTON': 'hideDonationButton'
+    'HIDE_DONATION_BUTTON': 'hideDonationButton',
+    'CHANGE_BADGE_COLOR_MISSING_RESOURCES': 'changeBadgeColorMissingResources',
 };
 
 const SettingDefaults = {
@@ -108,7 +109,8 @@ const SettingDefaults = {
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
     [Setting.BADGE_COLOR]: '#4A826C',
     [Setting.BADGE_TEXT_COLOR]: '#FFFFFF',
-    [Setting.HIDE_DONATION_BUTTON]: false
+    [Setting.HIDE_DONATION_BUTTON]: false,
+    [Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES]: false,
 };
 
 const WebRequest = {
