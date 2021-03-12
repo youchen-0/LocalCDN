@@ -252,15 +252,15 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "测试版",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "在图标上标示缺失的资源",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "如果资源缺失，改变徽章颜色。",
         "description": "Change the badge color if resources are missing."
     }
 }
