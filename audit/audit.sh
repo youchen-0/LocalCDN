@@ -22,7 +22,7 @@
 # SETTINGS:
 #
 # Use local Tor Proxy
-# USE_TOR=false   #fast (~ 4 minutes)
+# USE_TOR=false   #fast (~ 5 minutes)
 USE_TOR=true    #slow (~ 15 minutes)
 #
 # Set this value to "true" to generate the THIRD_PARTY.txt file.
@@ -65,6 +65,51 @@ CREATE_THIRD_PARTY_FILE=false
 #   /resources/*/note
 #   /resources/google-material-design-icons/google-material-design-icons.css
 
+
+# =============================================================================
+# PreCheck
+# =============================================================================
+if [[ "$USE_TOR" != true && "$USE_TOR" != false ]]; then
+    echo -e "ERROR: USE_TOR not set. Please select yes (true) or no (false)!"
+    read -r -p "Press enter to close..."; exit 1
+fi
+
+if [[ "$CREATE_THIRD_PARTY_FILE" != true && "$CREATE_THIRD_PARTY_FILE" != false ]]; then
+    echo -e "ERROR: CREATE_THIRD_PARTY_FILE not set. Please select yes (true) or no (false)!"
+    read -r -p "Press enter to close..."; exit 1
+fi
+
+if [ "$USE_TOR" = true ] && ! command -v torsocks &> /dev/null; then
+    echo "Command not found: torsocks"
+    read -r -p "Press enter to close..."; exit 1
+fi
+
+if ! command -v wget &> /dev/null; then
+    echo "Command not found: wget"
+	read -r -p "Press enter to close..."; exit 1
+fi
+
+if ! command -v sha512sum &> /dev/null; then
+    echo "Command not found: sha512sum"
+	read -r -p "Press enter to close..."; exit 1
+fi
+
+if ! command -v sed &> /dev/null; then
+    echo "Command not found: sed"
+	read -r -p "Press enter to close..."; exit 1
+fi
+
+if ! command -v cut &> /dev/null; then
+    echo "Command not found: cut"
+	read -r -p "Press enter to close..."; exit 1
+fi
+
+if ! command -v awk &> /dev/null; then
+    echo "Command not found: awk"
+	read -r -p "Press enter to close..."; exit 1
+fi
+
+
 # =============================================================================
 # CDNs
 # =============================================================================
@@ -72,6 +117,7 @@ CLOUDFLARE="https://cdnjs.cloudflare.com/ajax/libs"
 CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
 JSDELIVR="https://cdn.jsdelivr.net"
 GITHUB="https://raw.githubusercontent.com"
+
 
 # =============================================================================
 # GLOBALS
@@ -89,6 +135,7 @@ FILES_FAILED=""
 FILES_SKIPPED=""
 FILES_NO_CONNECTION=""
 
+
 # =============================================================================
 # FORMATTING
 # =============================================================================
@@ -99,6 +146,7 @@ NOCOLOR='\033[0m'
 BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
 DIVIDER=$(printf '%*s\n' 141 '' | tr ' ' "=")
+
 
 # =============================================================================
 # ARGUMENTS HANDLING
@@ -123,10 +171,6 @@ else
     echo -e "REPLACE: NO"
 fi
 
-if [[ "$USE_TOR" != true && "$USE_TOR" != false ]]; then
-    echo -e "USE_TOR not set. Please select yes (true) or no (false)!"
-    exit 1
-fi
 
 # =============================================================================
 # CHECK RESOURCE
@@ -162,6 +206,10 @@ function check_resource
 
     # Get URL of CDN
     create_url
+
+    # Random sleep if the CDN rejects connections (DoS)
+    # sleep 0.1s - 0.9s per request
+    # sleep 0.$(( (RANDOM % 10) + 1 ))s
 
     # Use Tor Proxy if set
     if [ "$USE_TOR" = true ]; then
@@ -210,8 +258,11 @@ function check_resource
         echo -e "${GREEN}STATUS:      PASSED${NOCOLOR}"
         ((COUNTER_HASH_OK++))
     fi
+
+    # Append URL to THIRD_PARTY.txt
     third_party+=("${url}")
 }
+
 
 # =============================================================================
 # CREATE URLs
@@ -459,6 +510,7 @@ function create_url
         fi
     fi
 }
+
 
 # =============================================================================
 # MAIN

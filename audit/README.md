@@ -27,7 +27,7 @@ This script makes it possible for any user and extension reviewer to verify the 
 
 
 ### How to start
-Open up a terminal and cd into this directory. However you run the script, the output can be redirected to a file with ` > output.txt`
+Open up a terminal and `cd` into this directory. However you run the script, the output can be redirected to a file with ` > output.txt`
 * Check all files:
   * `bash audit.sh`
   * `bash audit.sh > output.txt`
