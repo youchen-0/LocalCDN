@@ -250,5 +250,17 @@
     "hideDonationButton": {
         "message": "Skjul donasjonsknapp",
         "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "",
+        "description": "Change the badge color if resources are missing."
     }
 }

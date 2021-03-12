@@ -250,5 +250,17 @@
     "hideDonationButton": {
         "message": "Hide donation button",
         "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "Beta",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "Indicate missing resources on the icon",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "Change the badge color if resources are missing.",
+        "description": "Change the badge color if resources are missing."
     }
 }

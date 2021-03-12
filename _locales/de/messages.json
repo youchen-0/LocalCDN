@@ -250,5 +250,17 @@
     "hideDonationButton": {
         "message": "Spenden-Schaltfläche ausblenden",
         "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "Beta",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "Fehlende Ressourcen im Symbol kennzeichnen",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "Farbe des Zählers ändern, wenn Ressourcen fehlen.",
+        "description": "Change the badge color if resources are missing."
     }
 }
