@@ -74,7 +74,8 @@ options._renderOptionsPanel = function () {
         'allowedDomainsGoogleFonts': domainAllowedGoogleFonts,
         'enableLogging': options._optionValues.enableLogging,
         'domainsManipulateDOM': domainHtmlFilter,
-        'negateHtmlFilterList': options._optionValues.negateHtmlFilterList
+        'negateHtmlFilterList': options._optionValues.negateHtmlFilterList,
+        'changeBadgeColorMissingResources': options._optionValues.changeBadgeColorMissingResources
     };
 
     other = {
