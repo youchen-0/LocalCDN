@@ -9,6 +9,7 @@ This script makes it possible for any user and extension reviewer to verify the 
 
 
 ### Settings
+* The script has 2 different settings. You have to edit them manually inside the script.
 * Use local Tor Proxy
   * `USE_TOR=true` slow (~ 15 minutes)
   * `USE_TOR=false` fast (~ 4 minutes)
