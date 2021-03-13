@@ -252,15 +252,15 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta-Versio",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Indiki mankantajn risurcojn sur la piktogramo",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Ŝanĝi la koloron de insigno se risurcoj mankas.",
         "description": "Change the badge color if resources are missing."
     }
 }
