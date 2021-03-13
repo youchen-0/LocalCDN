@@ -54,27 +54,13 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
             });
         }
     }
-
-    if (missingCount > 0) {
-        chrome.browserAction.setBadgeTextColor({
-            'tabId': tabIdentifier,
-            'color': 'black'
-        });
-        chrome.browserAction.setBadgeBackgroundColor({
-            'tabId': tabIdentifier,
-            'color': 'yellow'
-        });
-    } else {
-        chrome.browserAction.setBadgeTextColor({
-            'tabId': tabIdentifier,
-            'color': wrappers.textColor
-        });
-        chrome.browserAction.setBadgeBackgroundColor({
-            'tabId': tabIdentifier,
-            'color': wrappers.backgroundColor
-        });
+    if (stateManager.showIconBadge === true) {
+        if (missingCount > 0 && stateManager.changeBadgeColorMissingResources) {
+            wrappers.setBadgeMissing(tabIdentifier, injectionCount);
+        } else {
+            wrappers.defaultBadge(tabIdentifier, injectionCount);
+        }
     }
-
     if (isNaN(storageManager.amountInjected)) {
         storageManager.type.get(Setting.AMOUNT_INJECTED, function (items) {
             storageManager.amountInjected = items.amountInjected;
@@ -171,7 +157,6 @@ stateManager._removeTab = function (tabIdentifier) {
 
 stateManager._updateTab = function (details) {
     let tabDomain, domainIsAllowlisted, frameIdentifier, tabIdentifier;
-
     tabDomain = helpers.extractDomainFromUrl(details.url, true);
     domainIsAllowlisted = stateManager._domainIsListed(tabDomain);
     frameIdentifier = details.frameId;
@@ -227,6 +212,8 @@ stateManager._handleStorageChanged = function (changes) {
         stats.data = changes.internalStatisticsData.newValue;
     } else if (Setting.HIDE_DONATION_BUTTON in changes) {
         stateManager.hideDonationButton = changes.hideDonationButton.newValue;
+    } else if (Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES in changes) {
+        stateManager.changeBadgeColorMissingResources = changes.changeBadgeColorMissingResources.newValue;
     }
 };
 
@@ -276,6 +263,7 @@ stateManager.validHosts = [];
 stateManager.selectedIcon = 'Default';
 stateManager.internalStatistics = false;
 stateManager.hideDonationButton = false;
+stateManager.changeBadgeColorMissingResources = false;
 
 for (let mapping in mappings.cdn) {
     let supportedHost = Address.ANY_PROTOCOL + mapping + Address.ANY_PATH;
@@ -286,7 +274,11 @@ chrome.tabs.query({}, function (tabs) {
     tabs.forEach(stateManager._createTab);
 });
 
-storageManager.type.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], function (items) {
+storageManager.type.get([
+    Setting.SHOW_ICON_BADGE,
+    Setting.SELECTED_ICON,
+    Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES
+], function (items) {
     if (items.showIconBadge === undefined) {
         items.showIconBadge = true;
     }
@@ -295,6 +287,7 @@ storageManager.type.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], functi
     }
     stateManager.showIconBadge = items.showIconBadge;
     stateManager.selectedIcon = items.selectedIcon;
+    stateManager.changeBadgeColorMissingResources = items.changeBadgeColorMissingResources;
 });
 
 chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {
