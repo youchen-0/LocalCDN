@@ -8,7 +8,7 @@ body {
     font-family: 'Noto Sans', Arial, sans-serif !important;
     font-size: 75%;
     margin: 0 auto;
-    max-width: 348px;
+    min-width: 348px;
     overflow-x: hidden;
     overflow-y: auto;
 }
