@@ -19,18 +19,6 @@
 # - Local Tor SOCKS5 Proxy (optional, but recommended)
 #
 # =============================================================================
-# SETTINGS:
-#
-# Use local Tor Proxy
-# USE_TOR=false   #fast (~ 5 minutes)
-USE_TOR=true    #slow (~ 15 minutes)
-#
-# Set this value to "true" to generate the THIRD_PARTY.txt file.
-# This file contains all source URLs that were used for the check.
-# CREATE_THIRD_PARTY_FILE=true
-CREATE_THIRD_PARTY_FILE=false
-#
-# =============================================================================
 # INSTALL TOR PROXY:
 # - sudo apt install tor
 #   e.g. https://linuxconfig.org/install-tor-proxy-on-ubuntu-20-04-linux
@@ -45,16 +33,19 @@ CREATE_THIRD_PARTY_FILE=false
 # A) Check all files:
 #      bash audit.sh
 #
-# B) Check only one library:
-#    Choose the folder name from /resources/, e.g. jquery
-#      bash audit.sh jquery
+# B) Check all files and use local Tor proxy (torsocks):
+#      bash audit.sh -t
 #
-# C) Check all files and replace in case of hash mismatch:
-#      bash audit.sh replace
-#
-# D) Check only one library files and replace in case of hash mismatch:
+# C) Check only one library:
 #    Choose the folder name from /resources/, e.g. jquery
-#      bash audit.sh replace jquery
+#      bash audit.sh -d jquery
+#
+# D) Check all files and replace in case of hash mismatch:
+#      bash audit.sh -r
+#
+# E) Check only one library files and replace in case of hash mismatch:
+#    Choose the folder name from /resources/, e.g. jquery
+#      bash audit.sh -rd jquery
 #
 # =============================================================================
 # WHICH FILES WILL BE CHECKED?
@@ -64,65 +55,31 @@ CREATE_THIRD_PARTY_FILE=false
 # Exceptions:
 #   /resources/*/note
 #   /resources/google-material-design-icons/google-material-design-icons.css
-
-
+#
 # =============================================================================
-# PreCheck
+# WHY ARE THESE FILES EXCLUDED?
+# google-material-design-icons.css  This is a separate file so that the WOFF2
+#                                   file in this extension is used and not an
+#                                   external one.
+#
+# /resources/*/note                 These files contain notes if a file has
+#                                   been renamed.
 # =============================================================================
-if [[ "$USE_TOR" != true && "$USE_TOR" != false ]]; then
-    echo -e "ERROR: USE_TOR not set. Please select yes (true) or no (false)!"
-    read -r -p "Press enter to close..."; exit 1
-fi
-
-if [[ "$CREATE_THIRD_PARTY_FILE" != true && "$CREATE_THIRD_PARTY_FILE" != false ]]; then
-    echo -e "ERROR: CREATE_THIRD_PARTY_FILE not set. Please select yes (true) or no (false)!"
-    read -r -p "Press enter to close..."; exit 1
-fi
-
-if [ "$USE_TOR" = true ] && ! command -v torsocks &> /dev/null; then
-    echo "Command not found: torsocks"
-    read -r -p "Press enter to close..."; exit 1
-fi
-
-if ! command -v wget &> /dev/null; then
-    echo "Command not found: wget"
-	read -r -p "Press enter to close..."; exit 1
-fi
-
-if ! command -v sha512sum &> /dev/null; then
-    echo "Command not found: sha512sum"
-	read -r -p "Press enter to close..."; exit 1
-fi
-
-if ! command -v sed &> /dev/null; then
-    echo "Command not found: sed"
-	read -r -p "Press enter to close..."; exit 1
-fi
-
-if ! command -v cut &> /dev/null; then
-    echo "Command not found: cut"
-	read -r -p "Press enter to close..."; exit 1
-fi
-
-if ! command -v awk &> /dev/null; then
-    echo "Command not found: awk"
-	read -r -p "Press enter to close..."; exit 1
-fi
 
 
 # =============================================================================
 # CDNs
 # =============================================================================
-CLOUDFLARE="https://cdnjs.cloudflare.com/ajax/libs"
-CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
-JSDELIVR="https://cdn.jsdelivr.net"
-GITHUB="https://raw.githubusercontent.com"
+readonly CLOUDFLARE="https://cdnjs.cloudflare.com/ajax/libs"
+readonly CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
+readonly JSDELIVR="https://cdn.jsdelivr.net"
+readonly GITHUB="https://raw.githubusercontent.com"
 
 
 # =============================================================================
 # GLOBALS
 # =============================================================================
-REGEX_JS=".*\.jsm$"
+readonly REGEX_JS=".*\.jsm$"
 COUNTER_ALL=0
 COUNTER_HASH_FAILED=0
 COUNTER_CONNECT_FAILED=0
@@ -130,53 +87,109 @@ COUNTER_HASH_OK=0
 COUNTER_SKIPPED=0
 LOCAL_HASH=""
 REMOTE_HASH=""
-REPLACE=false
 FILES_FAILED=""
 FILES_SKIPPED=""
 FILES_NO_CONNECTION=""
+
+USE_TOR=false
+CHECK="ALL"
+REPLACE=false
+CREATE_THIRD_PARTY_FILE=false
 
 
 # =============================================================================
 # FORMATTING
 # =============================================================================
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-NOCOLOR='\033[0m'
-BOLD=$(tput bold)
-NORMAL=$(tput sgr0)
-DIVIDER=$(printf '%*s\n' 141 '' | tr ' ' "=")
+readonly RED='\033[0;31m'
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly NOCOLOR='\033[0m'
+readonly BOLD=$(tput bold)
+readonly NORMAL=$(tput sgr0)
+readonly DIVIDER=$(printf '%*s\n' 141 '' | tr ' ' "=")
 
 
 # =============================================================================
-# ARGUMENTS HANDLING
+# HELP
 # =============================================================================
-if [ "$1" = "replace" ] && [ "$2" = "" ]; then
-    REPLACE=true
-    CHECK="ALL"
-    echo -e "CHECK:   ALL"
-    echo -e "REPLACE: YES"
-elif [ "$1" != "" ] && [ "$1" != "replace" ]; then
-    CHECK=$1
-    echo -e "CHECK:   $1"
-    echo -e "REPLACE: NO"
-elif [ "$1" = "replace" ] && [ "$2" != "" ]; then
-    REPLACE=true
-    CHECK=$2
-    echo -e "CHECK:   $2"
-    echo -e "REPLACE: YES"
-else
-    CHECK="ALL"
-    echo -e "CHECK:   ALL"
-    echo -e "REPLACE: NO"
-fi
+function help() {
+    echo -e "Audit script to verify the integrity of the bundled resources.\n"
+    echo -e "Usage:"
+    echo -e "           bash audit.sh [options]"
+    echo -e "           bash audit.sh [options] -d [resource]\n"
+    echo -e "Example:"
+    echo -e "           bash audit.sh"
+    echo -e "           bash audit.sh -tfr"
+    echo -e "           bash audit.sh -tfrd jquery\n"
+    echo -e "Options:"
+    echo -e "  -t       Use local Tor proxy (torsocks)"
+    echo -e "  -f       Create THIRD_PARTY.txt file with all contacted URLs"
+    echo -e "  -r       Replace in case of hash mismatch"
+    echo -e "  -l       List all resources"
+    echo -e "  -d       Check only ONE resource, e.g. jquery"
+    echo -e "           'bash audit.sh -d jquery'"
+    exit 0
+}
+
+# =============================================================================
+# LIST RESOURCES
+# =============================================================================
+function list_resources() {
+    echo -e "Usage:"
+    echo -e "           bash audit.sh -d [resource]\n"
+    echo -e "Example:"
+    echo -e "           bash audit.sh -d jquery"
+    echo -e "           bash audit.sh -d angular-bootstrap-colorpicker\n"
+    echo -e "Resources:"
+    resources=()
+    while IFS=  read -r -d $'\0'; do
+        resources+=( $(echo "$REPLY" | cut -d"/" -f3) )
+    done < <(find ../resources/ -maxdepth 1 -print0)
+    printf "           %s\n" "${resources[@]}"
+    exit 0
+}
+
+
+# =============================================================================
+# PreCheck
+# =============================================================================
+function pre_check() {
+    if [ "$USE_TOR" = true ] && ! command -v torsocks &> /dev/null; then
+        echo "Command not found: torsocks"
+        read -r -p "Press enter to close..."; exit 1
+    fi
+
+    if ! command -v wget &> /dev/null; then
+        echo "Command not found: wget"
+        read -r -p "Press enter to close..."; exit 1
+    fi
+
+    if ! command -v sha512sum &> /dev/null; then
+        echo "Command not found: sha512sum"
+        read -r -p "Press enter to close..."; exit 1
+    fi
+
+    if ! command -v sed &> /dev/null; then
+        echo "Command not found: sed"
+        read -r -p "Press enter to close..."; exit 1
+    fi
+
+    if ! command -v cut &> /dev/null; then
+        echo "Command not found: cut"
+        read -r -p "Press enter to close..."; exit 1
+    fi
+
+    if ! command -v awk &> /dev/null; then
+        echo "Command not found: awk"
+        read -r -p "Press enter to close..."; exit 1
+    fi
+}
 
 
 # =============================================================================
 # CHECK RESOURCE
 # =============================================================================
-function check_resource
-{
+function check_resource() {
     path=$1
     folder=$(echo -e "$path" | cut -d"/" -f3)
 
@@ -267,8 +280,7 @@ function check_resource
 # =============================================================================
 # CREATE URLs
 # =============================================================================
-function create_url
-{
+function create_url() {
     if [ "$folder" = "angular-stripe-checkout" ]; then
         url="$JSDELIVR/npm/angular-stripe-checkout@$version/angular-stripe-checkout.min.js"
     elif [ "$folder" = "ethjs" ]; then
@@ -515,23 +527,44 @@ function create_url
 # =============================================================================
 # MAIN
 # =============================================================================
+
+# Check if all used commands exist
+pre_check
+
+# Handle arguments
+while getopts dfhlrt:: opt; do
+   case $opt in
+       d) CHECK="$OPTARG";;
+       f) CREATE_THIRD_PARTY_FILE=true;;
+       h) help;;
+       l) list_resources;;
+       r) REPLACE=true;;
+       t) USE_TOR=true;;
+       ?) help;;
+   esac
+done
+
+
 array=()
+third_party=()
+
 # Find files in /resource/
 while IFS=  read -r -d $'\0'; do
     array+=("$REPLY")
 done < <(find ../resources/ -type f \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) ! -iname "fa-loader.css" ! -iname "google-material-design-icons.css" -print0)
 
-third_party=()
 
 for i in "${array[@]}"; do
     check_resource "$i"
 done
 
+# remove temporary file
 rm ./tmp 2> /dev/null
 
 IFS=$'\n' sorted=($(sort <<<"${third_party[*]}"))
 unset IFS
 
+# create THIRD_PARTY.txt
 if [ "$CREATE_THIRD_PARTY_FILE" = true ]; then
     printf "%s\n" "${sorted[@]}" > ../THIRD_PARTY.txt
 fi
