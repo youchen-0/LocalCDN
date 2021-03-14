@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "Nettsted defekt?",
+        "message": "Nettside defekt?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
@@ -260,7 +260,7 @@
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "Endre skiltfargen hvis ressurser mangler.",
+        "message": "Endre farge på tellermerke hvis ressurser mangler.",
         "description": "Change the badge color if resources are missing."
     }
 }
