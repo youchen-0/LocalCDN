@@ -85,15 +85,14 @@ interceptor._handleMissingCandidate = function (requestUrl, tabIdentifier) {
     let requestUrlSegments, injectionCount, missingCount;
 
     if (stateManager.showIconBadge === true) {
+        injectionCount = Object.keys(stateManager.tabs[tabIdentifier].injections).length || 0;
         if (stateManager.changeBadgeColorMissingResources === true) {
             missingCount = stateManager.tabs[tabIdentifier].missing || 0;
-            injectionCount = Object.keys(stateManager.tabs[tabIdentifier].injections).length || 0;
-
             if (missingCount > 0 && injectionCount === 0) {
                 wrappers.setBadgeMissing(tabIdentifier, injectionCount);
             }
         } else {
-            wrappers.defaultBadge(tabIdentifier);
+            wrappers.defaultBadge(tabIdentifier, injectionCount);
         }
     }
 

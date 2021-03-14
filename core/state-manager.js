@@ -31,7 +31,7 @@ var stateManager = {};
  */
 
 stateManager.registerInjection = function (tabIdentifier, injection) {
-    let injectionIdentifier, registeredTab, injectionCount, missingCount, badgeText;
+    let injectionIdentifier, registeredTab, injectionCount, missingCount;
 
     injectionIdentifier = injection.source + injection.path + injection.version;
     registeredTab = stateManager.tabs[tabIdentifier];
@@ -39,20 +39,12 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
 
     injectionCount = Object.keys(registeredTab.injections).length || 0;
     missingCount = registeredTab.missing || 0;
-    badgeText = `${injectionCount}`;
 
     if (injectionCount > 0) {
         chrome.browserAction.setTitle({
             'tabId': tabIdentifier,
             'title': `LocalCDN (${injectionCount})`
         });
-
-        if (stateManager.showIconBadge === true) {
-            wrappers.setBadgeText({
-                'tabId': tabIdentifier,
-                'text': badgeText
-            });
-        }
     }
     if (stateManager.showIconBadge === true) {
         if (missingCount > 0 && stateManager.changeBadgeColorMissingResources) {
