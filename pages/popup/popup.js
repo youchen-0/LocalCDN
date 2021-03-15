@@ -77,6 +77,15 @@ popup._renderNonContextualContents = function () {
         document.getElementById('statistics-button').style.display = 'block';
         document.getElementById('statistics-button').addEventListener('mouseup', popup._onStatisticsButtonClicked);
     }
+
+    if (popup._loggingStatus) {
+        document.getElementById('logging-button').style.display = 'block';
+        document.getElementById('logging-button').addEventListener('mouseup', popup._onLoggingButtonClicked);
+    }
+
+    if (!popup.hideDonationButton) {
+        document.getElementById('donate-button').style.display = 'flex';
+    }
 };
 
 popup._renderContextualContents = function () {
@@ -261,8 +270,14 @@ popup._readLocalStorage = function () {
 
 popup._readStorage = function () {
     return new Promise((resolve) => {
-        storageManager.type.get([Setting.NEGATE_HTML_FILTER_LIST], function (items) {
+        storageManager.type.get([
+            Setting.NEGATE_HTML_FILTER_LIST,
+            Setting.LOGGING,
+            Setting.HIDE_DONATION_BUTTON
+        ], function (items) {
             popup.negateHtmlFilterList = items.negateHtmlFilterList;
+            popup._loggingStatus = items.enableLogging;
+            popup.hideDonationButton = items.hideDonationButton;
             resolve();
         });
     });
@@ -353,7 +368,7 @@ popup._createInjectionElement = function (injection) {
     if (injection.bundle === '') {
         name = targets.determineResourceName(filename);
     } else {
-        name = `${injection.bundle} (Bundle)`;
+        name = `${injection.bundle}`;
     }
 
     nameTextNode = document.createTextNode(`- ${name}`);
@@ -439,14 +454,26 @@ popup._onDocumentLoaded = function () {
 popup._onTestingUtilityLinkClicked = function (event) {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            'url': Links.LOCALCDN_TEST_WEBSITE + popup._targetTab.url,
+            'url': Links.LOCALCDN_TEST_WEBSITE,
             'active': event.button === 0,
+        }, function (tab) {
+            popup._injectDomain(tab.id);
         });
     }
 
     if (event.button === 0) {
         window.close();
     }
+};
+
+popup._injectDomain = function (tabId) {
+    let message = {
+        'topic': 'injection',
+        'value': tabId,
+        'url': popup._targetTab.url
+    };
+
+    chrome.runtime.sendMessage(message);
 };
 
 popup._onOptionsButtonClicked = function () {
@@ -526,6 +553,17 @@ popup._onStatisticsButtonClicked = function () {
     }
 };
 
+popup._onLoggingButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+        chrome.tabs.create({
+            'url': Links.LOGGING,
+            'active': event.button === 0,
+        });
+    }
+    if (event.button === 0) {
+        window.close();
+    }
+};
 
 /**
  * Initializations
@@ -533,5 +571,6 @@ popup._onStatisticsButtonClicked = function () {
 
 popup.negateHtmlFilterList = false;
 popup._statisticsStatus = false;
+popup._loggingStatus = false;
 
 document.addEventListener('DOMContentLoaded', popup._onDocumentLoaded);

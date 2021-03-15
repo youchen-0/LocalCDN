@@ -31,27 +31,28 @@ var stateManager = {};
  */
 
 stateManager.registerInjection = function (tabIdentifier, injection) {
-    let injectionIdentifier, registeredTab, injectionCount;
+    let injectionIdentifier, registeredTab, injectionCount, missingCount;
 
     injectionIdentifier = injection.source + injection.path + injection.version;
     registeredTab = stateManager.tabs[tabIdentifier];
     registeredTab.injections[injectionIdentifier] = injection;
+
     injectionCount = Object.keys(registeredTab.injections).length || 0;
+    missingCount = registeredTab.missing || 0;
 
     if (injectionCount > 0) {
         chrome.browserAction.setTitle({
             'tabId': tabIdentifier,
             'title': `LocalCDN (${injectionCount})`
         });
-
-        if (stateManager.showIconBadge === true) {
-            wrappers.setBadgeText({
-                'tabId': tabIdentifier,
-                'text': injectionCount.toString()
-            });
+    }
+    if (stateManager.showIconBadge === true) {
+        if (missingCount > 0 && stateManager.changeBadgeColorMissingResources) {
+            wrappers.setBadgeMissing(tabIdentifier, injectionCount);
+        } else {
+            wrappers.defaultBadge(tabIdentifier, injectionCount);
         }
     }
-
     if (isNaN(storageManager.amountInjected)) {
         storageManager.type.get(Setting.AMOUNT_INJECTED, function (items) {
             storageManager.amountInjected = items.amountInjected;
@@ -127,7 +128,8 @@ stateManager._createTab = function (tab) {
     tabIdentifier = tab.id;
 
     stateManager.tabs[tabIdentifier] = {
-        'injections': {}
+        'injections': {},
+        'missing': 0
     };
 
     requestFilters = {
@@ -147,7 +149,6 @@ stateManager._removeTab = function (tabIdentifier) {
 
 stateManager._updateTab = function (details) {
     let tabDomain, domainIsAllowlisted, frameIdentifier, tabIdentifier;
-
     tabDomain = helpers.extractDomainFromUrl(details.url, true);
     domainIsAllowlisted = stateManager._domainIsListed(tabDomain);
     frameIdentifier = details.frameId;
@@ -176,6 +177,7 @@ stateManager._updateTab = function (details) {
 
     if (stateManager.tabs[tabIdentifier]) {
         stateManager.tabs[tabIdentifier].injections = {};
+        stateManager.tabs[tabIdentifier].missing = 0;
     }
 };
 
@@ -200,6 +202,10 @@ stateManager._handleStorageChanged = function (changes) {
         stateManager.internalStatistics = changes.internalStatistics.newValue;
     } else if (Setting.INTERNAL_STATISTICS_DATA in changes) {
         stats.data = changes.internalStatisticsData.newValue;
+    } else if (Setting.HIDE_DONATION_BUTTON in changes) {
+        stateManager.hideDonationButton = changes.hideDonationButton.newValue;
+    } else if (Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES in changes) {
+        stateManager.changeBadgeColorMissingResources = changes.changeBadgeColorMissingResources.newValue;
     }
 };
 
@@ -248,6 +254,8 @@ stateManager.getInvertOption = false;
 stateManager.validHosts = [];
 stateManager.selectedIcon = 'Default';
 stateManager.internalStatistics = false;
+stateManager.hideDonationButton = false;
+stateManager.changeBadgeColorMissingResources = false;
 
 for (let mapping in mappings.cdn) {
     let supportedHost = Address.ANY_PROTOCOL + mapping + Address.ANY_PATH;
@@ -258,7 +266,11 @@ chrome.tabs.query({}, function (tabs) {
     tabs.forEach(stateManager._createTab);
 });
 
-storageManager.type.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], function (items) {
+storageManager.type.get([
+    Setting.SHOW_ICON_BADGE,
+    Setting.SELECTED_ICON,
+    Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES
+], function (items) {
     if (items.showIconBadge === undefined) {
         items.showIconBadge = true;
     }
@@ -267,6 +279,7 @@ storageManager.type.get([Setting.SHOW_ICON_BADGE, Setting.SELECTED_ICON], functi
     }
     stateManager.showIconBadge = items.showIconBadge;
     stateManager.selectedIcon = items.selectedIcon;
+    stateManager.changeBadgeColorMissingResources = items.changeBadgeColorMissingResources;
 });
 
 chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {

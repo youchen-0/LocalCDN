@@ -389,7 +389,7 @@ body[dir="rtl"] .input-text {
 }
 
 .option-links {
-    list-style-type: disclosure-closed;
+    list-style-type: none;
     margin-top: 0;
     padding-top: 2rem;
 }

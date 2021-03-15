@@ -73,11 +73,11 @@
     },
     "loggingTitle": {
         "message": "Включить логирование в консоли браузера",
-        "description": "Enable logging in browser console"
+        "description": "Enable logging"
     },
     "loggingDescription": {
         "message": "Открыть консоль браузера ( CTRL + SHIFT + J ) для просмотра пропущенных ресурсов.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Эта функция ломает отображение сайтов. Не включайте её, если не готовы вручную править белый список.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Эта функция в настоящее время находится на экспериментальной стадии. Данные не передаются. Все это локально на вашем устройстве.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Статистика",
@@ -246,5 +246,21 @@
     "websiteBroken": {
         "message": "Сайт \"сломан\"?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "",
+        "description": "Change the badge color if resources are missing."
     }
 }

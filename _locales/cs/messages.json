@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Chrání před sledováním skrze centrálně doručovaný obsah.",
+        "message": "Chrání před sledováním skrze centrálně doručovaný obsah pomocí přesměrování na lokální zdroje.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Zadejte domény pro jejich vynechání z kontroly. Jednotlivé domény oddělujte pomocí středníků (;).",
+        "message": "Zadejte domény pro jejich vynechání z kontroly. Jedna doména na řádek.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -56,35 +56,35 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generujte sady pravidel pro uBlock nebo uMatrix",
+        "message": "Generujte sady pravidel pro váš adblocker",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "V případě, že používáte adblocker, si zde můžete vygenerovat pravidla. Tato pravidla musíte přidat do vašeho adblockeru manuálně.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Poslední aktualizace:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Kopírovat",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
-        "description": "Enable logging in browser console"
+        "message": "Povolit protokolování",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Protokol můžete otevřít pomocí ikony v menu. Protokol bude vymazán, pokud zavřete prohlížeč nebo protokolování vypnete.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Zakázat",
         "description": "Disable"
     },
     "labelManipulateDOM": {
@@ -92,11 +92,11 @@
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Darovat",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Invertovat HTML filtr",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -120,7 +120,7 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Zablokovat Google Fonts",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
@@ -128,51 +128,51 @@
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Vyberte si ikonu pro toto rozšíření",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Interní statistiky",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "message": "Tato funkce je momentálně v experimentální fázi. Žádný přenos dat. Vše je lokálně na vašem zařízení.",
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Statistiky",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Dnes",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Minulý týden",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Minulý měsíc",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Minulý rok",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Smazat",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Průměr (Nahrazení za den)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Nahrazené frameworky",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Jste si jistý, že chcete smazat všechny statistiky?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
@@ -180,71 +180,87 @@
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Základní",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Pokročilý",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Ostatní",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Typ uložení",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokální",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Synchronizovat",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importovat/Exportovat",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Zazálohovat do souboru",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Obnovit ze souboru",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Import úspěšný",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Import selhal",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Upozornění po aktualizaci",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Nikdy (Tiché aktualizace)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Jen pokud jsou nové CDN a pravidla",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Vždy",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Stránka nefunguje správně?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Skrýt tlačítko pro přispění",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "Beta",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "",
+        "description": "Change the badge color if resources are missing."
     }
 }

@@ -16,7 +16,7 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Προβολή του αριθμού των εμβόλιμων πόρων στο εικονίδιο του πρόσθετου.",
+        "message": "Προβολή του αριθμού των εμβόλιμων πόρων στο εικονίδιο της επεκτάσεως.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Ενεργοποίηση σύνδεσης στην κονσόλα προγράμματος περιήγησης",
-        "description": "Enable logging in browser console"
+        "message": "Ενεργοποίηση καταγραφής",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Άνοιγμα «Κονσόλας Προγράμματος Περιήγησης» ( CTRL + SHIFT + J ) για εμφάνιση ανύπαρκτων πόρων .",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Μπορείτε να ανοίξετε το αρχείο καταγραφής με το εικονίδιο στο μενού. Το αρχείο καταγραφής θα διαγραφεί όταν κλείσετε το πρόγραμμα περιήγησης ή απενεργοποιήσετε την καταγραφή.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Αυτή η λειτουργία προκαλεί δυσλειτουργίες σε ιστοσελίδες. Να μην ενεργοποιηθεί, εκτός αν προτίθεστε να προσθέσετε, χειροκίνητα, στον κατάλογο επιτρεπόμενων όποιους τομείς επηρεάζονται.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Αυτή η λειτουργία βρίσκεται προς το παρόν σε πειραματικό στάδιο. Δε γίνεται αποστολή δεδομένων. Είναι όλα τοπικά στη συσκευή σας.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Στατιστικά στοιχεία",
@@ -244,7 +244,23 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "Μήπως δε λειτουργεί σωστά ο ιστότοπος;",
+        "message": "Δυσλειτουργεί ο ιστότοπος;",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Απόκρυψη επιλογής «Συνεισφέρετε»",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "",
+        "description": "Change the badge color if resources are missing."
     }
 }

@@ -41,8 +41,9 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         };
     }
 
-    targetDetails = requestAnalyzer.getLocalTarget(requestDetails);
+    targetDetails = requestAnalyzer.getLocalTarget(requestDetails, tab.url);
     targetPath = targetDetails.path;
+
 
     if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
         let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
@@ -58,8 +59,12 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         }
     }
 
+    if (targetDetails === false) {
+        ++stateManager.tabs[tabIdentifier].missing;
+    }
+
     if (!targetDetails) {
-        return interceptor._handleMissingCandidate(requestDetails.url);
+        return interceptor._handleMissingCandidate(requestDetails.url, tabIdentifier);
     }
 
     stateManager.requests[requestDetails.requestId] = {
@@ -76,18 +81,24 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
  * Private Methods
  */
 
-interceptor._handleMissingCandidate = function (requestUrl, preserveUrl) {
-    let requestUrlSegments;
+interceptor._handleMissingCandidate = function (requestUrl, tabIdentifier) {
+    let requestUrlSegments, injectionCount, missingCount;
+
+    if (stateManager.showIconBadge === true) {
+        injectionCount = Object.keys(stateManager.tabs[tabIdentifier].injections).length || 0;
+        if (stateManager.changeBadgeColorMissingResources === true) {
+            missingCount = stateManager.tabs[tabIdentifier].missing || 0;
+            if (missingCount > 0 && injectionCount === 0) {
+                wrappers.setBadgeMissing(tabIdentifier, injectionCount);
+            }
+        } else {
+            wrappers.defaultBadge(tabIdentifier, injectionCount);
+        }
+    }
 
     if (interceptor.blockMissing === true) {
         return {
             'cancel': true
-        };
-    }
-
-    if (preserveUrl === true) {
-        return {
-            'cancel': false
         };
     }
 

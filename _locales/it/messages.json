@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Inserisci i domini per cui disabilitare LocalCDN. Separa le differenti voci fra loro con un punto e virgola (;).",
+        "message": "Inserisci i domini per cui disabilitare LocalCDN. Una sola voce per riga.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Mostra i log nella console del browser",
-        "description": "Enable logging in browser console"
+        "message": "Abilita il logging",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Apri la \"Console del browser\" ( CTRL + SHIFT + J ) per mostrare le risorse mancanti.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Puoi aprire il log con l'icona nel menu. Il log verrà cancellato una volta chiuso il browser o disabilitato il logging.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Questa funzione rompe i siti web. Non lasciarla abilitata, a meno che tu non sia pronto a mettere manualmente nella allowlist i domini interessati.",
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Inserisci i domini che verranno considerati o ignorati dal filtro HTML. Separa le differenti voci fra loro con un punto e virgola (;).",
+        "message": "Inserisci i domini che verranno considerati o ignorati dal filtro HTML. Una sola voce per riga.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Questa funzione è attualmente in stato sperimentale. Nessun dato viene trasmesso: è tutto in locale sul tuo dispositivo.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistiche",
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "A questi domini è permesso caricare i font di Google. Separa le differenti voci fra loro con un punto e virgola (;).",
+        "message": "A questi domini è permesso caricare i font di Google. Una sola voce per riga.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -244,7 +244,23 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Il sito web non funziona?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Nascondi il pulsante delle donazioni",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "",
+        "description": "Change the badge color if resources are missing."
     }
 }

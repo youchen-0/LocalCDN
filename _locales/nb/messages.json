@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Slå på logging i nettleserkonsoll",
-        "description": "Enable logging in browser console"
+        "message": "Slå på logging",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Åpne \"Nettleserkonsoll\" ( CTRL + SHIFT + J ) for å vise manglende ressurser.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Du kan åpne loggen med ikonet i menyen. Loggen blir slettet når du lukker nettleseren eller slår av logging.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Denne funksjonen kan forårsake feil på noen nettsteder. Ikke la den være slått på, med mindre du er forberedt på å manuelt sette berørte domener på tillatelseslisten.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Denne funksjonen er for tiden eksperimentell. Ingen dataoverføring. Alt er lokalt på din enhet.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistikk",
@@ -244,7 +244,23 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "Nettsted defekt?",
+        "message": "Nettside defekt?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Skjul donasjonsknapp",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "Beta",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "Indiker manglende ressurser på ikonet",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "Endre farge på tellermerke hvis ressurser mangler.",
+        "description": "Change the badge color if resources are missing."
     }
 }

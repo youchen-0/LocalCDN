@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Aktifkan pencatatan log di dalam konsol peramban",
-        "description": "Enable logging in browser console"
+        "message": "Aktifkan pencatatan log",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Buka \"Konsol Peramban\" ( CTRL + SHIFT + J ) untuk menampilkan sumber daya yang hilang.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Anda bisa membuka log dengan tombol di dalam menu. Log akan dihapus setelah Anda menutup peramban atau menonaktifkannya.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Fitur ini akan membuat situs web tidak bekerja dengan benar. Jangan membiarkannya aktif, kecuali jika Anda siap menambahkan secara manual semua domain yang terdampak ke dalam daftar putih.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Fungsi ini masih dalam tahap eksperimental. Tidak ada data yang dikirim. Semuanya lokal pada perangkat Anda.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistik",
@@ -246,5 +246,21 @@
     "websiteBroken": {
         "message": "Situs web tidak bekerja?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Sembunyikan tombol donasi",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "",
+        "description": "Change the badge color if resources are missing."
     }
 }

@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Tarayıcı konsolunda günlük kaydını etkinleştir",
-        "description": "Enable logging in browser console"
+        "message": "Günlük kaydını etkinleştir",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Eksik kaynakları göstermek için \"Tarayıcı Konsolunu\" (CTRL + SHIFT + J) açın.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Günlüğü menüdeki simgesi ile açabilirsiniz. Tarayıcıyı kapattığınızda veya günlük kaydını devre dışı bıraktığınızda günlük silinecektir.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Bu özellik web sitelerini bozar. Etkilenen alan adlarını elle izin listesine eklemeye hazır değilseniz, etkinleştirilmiş olarak bırakmayın.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Bu işlev şu anda deneysel bir aşamadadır. Veri aktarımı yok. Hepsi aygıtınızda yereldir.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "İstatistikler",
@@ -246,5 +246,21 @@
     "websiteBroken": {
         "message": "Web sitesi bozuk mu?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Bağış düğmesini gizle",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "Beta",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "Simgede eksik kaynakları belirt",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "Kaynaklar eksikse rozet rengini değiştir.",
+        "description": "Change the badge color if resources are missing."
     }
 }

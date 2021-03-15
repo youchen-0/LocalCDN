@@ -97,6 +97,25 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
     if (topic === 'deleteStatistic') {
         storageManager.statistics = {};
     }
+
+    if (topic === 'injection') {
+
+        chrome.tabs.executeScript(value, {
+            'code': `window.addEventListener('load', () => {
+                document.getElementById('domain').value = '${message.url}';
+            });`,
+            'runAt': 'document_start'
+        });
+    }
+
+    if (topic === 'logs:get') {
+        sendResponse({'logs': log.data});
+        return MessageResponse.SYNCHRONOUS;
+    }
+
+    if (topic === 'logs:delete') {
+        log.data = [];
+    }
 };
 
 

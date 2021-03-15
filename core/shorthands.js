@@ -131,14 +131,6 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/font-awesome/${lastVersion}/css/font-awesome.min.css`,
             'bundle': ''
         };
-    } else if ((channelHost + channelPath) === 'cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js') {
-        return {
-            'source': channelHost,
-            'versionDelivered': '2.0.0-beta.2.4',
-            'versionRequested': '2.0.0-beta.2.4',
-            'path': 'resources/owl-carousel/2.0.0-beta.2.4/owl.carousel.min.jsm',
-            'bundle': ''
-        };
     } else if ((channelHost + channelPath).startsWith('cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/')) {
         if (channelPath.endsWith('js')) {
             channelPath += 'm';
@@ -166,12 +158,6 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'source': channelHost,
             'path': `resources/twitter-bootstrap/fonts/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Bootstrap (Fonts)'
-        };
-    } else if (channelHost + channelPath === 'cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js') {
-        return {
-            'source': channelHost,
-            'path': 'resources/js-cookie/latest/js.cookie.min.jsm',
-            'bundle': 'JSCookies'
         };
     } else {
         return false;

@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Enable logging in browser console",
-        "description": "Enable logging in browser console"
+        "message": "Enable logging",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "This function is currently in an experimental stage. No data transmission. It’s all local on your device.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Statistics",
@@ -246,5 +246,21 @@
     "websiteBroken": {
         "message": "Website broken?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Hide donation button",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "Beta",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "Indicate missing resources on the icon",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "Change the badge color if resources are missing.",
+        "description": "Change the badge color if resources are missing."
     }
 }

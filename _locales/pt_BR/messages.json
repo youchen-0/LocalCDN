@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Habilitar logging no console do browser",
-        "description": "Enable logging in browser console"
+        "message": "Habilitar registro",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Abra \"Browser Console\" ( CTRL + SHIFT + J ) para mostrar recursos faltantes.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "Você poder abrir o registro com o ícone no menu. O mesmo será excluído ao fechar o navegador ou quando desabilitar o registro.",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "Esse recurso quebra sites. Não deixe habilitado, a não ser que você esteja preparado para permitir manualmente os sites afetados.",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "Esta função está atualmente em uma fase experimental. Não há transmissão de dados. É tudo local em seu dispositivo.",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "Estatísticas",
@@ -246,5 +246,21 @@
     "websiteBroken": {
         "message": "Site quebrado?",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "Ocultar botão de doação",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "Beta",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "Indica os recursos ausentes no ícone",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "Altera a cor do contador se houver recursos ausentes.",
+        "description": "Change the badge color if resources are missing."
     }
 }

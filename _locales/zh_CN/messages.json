@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "通过重定向到本地资源，保护您免于 CDN (内容分发网络)的跟踪。",
+        "message": "将请求重定向到本地资源，保护你免于 CDN（内容分发网络）的跟踪。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "自安装以来本地 CDN 资源的注入数量。",
+        "message": "自安装以来本地 CDN 资源的注入次数。",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -32,7 +32,7 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "防止误发被屏蔽的请求到CDN。",
+        "message": "防止误发被屏蔽的请求到 CDN。",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
@@ -60,7 +60,7 @@
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "如果你正在使用一个广告拦截器，你可以在这里生成规则，但必须手动添加到广告拦截器中。",
+        "message": "如果你正在使用广告拦截器，你可以在这里生成规则。你需要手动把规则添加到广告拦截器中。",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -72,15 +72,15 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "在浏览器控制台中启用日志记录",
-        "description": "Enable logging in browser console"
+        "message": "启用日志记录",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "打开“浏览器控制台” ( CTRL + SHIFT + J ) 以展示缺失的资源.",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "你可以使用菜单中的图标打开日志。 关闭浏览器或禁用日志记录后，日志将被删除。",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "这个功能会破坏网站功能。除非您准备手动将受影响的域名添加到允许列表中，否则请勿开启。",
+        "message": "这个功能会破坏网站功能。除非你准备手动将受影响的域名添加到允许列表中，否则请勿开启。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "此功能当前正处于实验阶段。数据全部存储在本地，不会外传。",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "统计数据",
@@ -172,7 +172,7 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "您确定要删除所有的统计数据吗？",
+        "message": "确定要删除所有的统计数据吗？",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
@@ -220,7 +220,7 @@
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "成功导入",
+        "message": "导入成功",
         "description": "Import successful"
     },
     "dialogImportFailed": {
@@ -246,5 +246,21 @@
     "websiteBroken": {
         "message": "网站显示不正常？",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "隐藏捐赠按钮",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "测试版",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "在图标上标示缺失的资源",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "如果资源缺失，改变徽章颜色。",
+        "description": "Change the badge color if resources are missing."
     }
 }

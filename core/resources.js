@@ -157,20 +157,12 @@ var resources = {
     },
     // Angular Stripe Checkout [Deprecated]
     'angularStripeCheckout': {
-        'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.jsm',
+        'path': 'resources/angular-stripe-checkout/{version}/angular-stripe-checkout.min.jsm',
         'type': 'application/javascript'
     },
-    // Angular Translate
+    // Angular Translate (Bundle)
     'angularTranslate': {
-        'path': 'resources/angular-translate/{version}/angular-translate.min.jsm',
-        'type': 'application/javascript'
-    },
-    'angularTranslateInterpolationMessageformat': {
-        'path': 'resources/angular-translate/{version}/angular-translate-interpolation-messageformat.min.jsm',
-        'type': 'application/javascript'
-    },
-    'angularTranslateLoaderStaticFiles': {
-        'path': 'resources/angular-translate/{version}/angular-translate-loader-static-files.min.jsm',
+        'path': 'resources/angular-translate/{version}/',
         'type': 'application/javascript'
     },
     // Animate CSS
@@ -300,6 +292,11 @@ var resources = {
     },
     'bootstrapVueCSS': {
         'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css',
+        'type': 'text/css'
+    },
+    // Bulma
+    'bulma': {
+        'path': 'resources/bulma/{version}/css/bulma.min.css',
         'type': 'text/css'
     },
     // Chart.js
@@ -718,10 +715,6 @@ var resources = {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm',
         'type': 'application/javascript'
     },
-    'mootoolsYui': {
-        'path': 'resources/mootools/{version}/mootools-yui-compressed.jsm',
-        'type': 'application/javascript'
-    },
     // noUiSlider
     'noUiSlider': {
         'path': 'resources/noUiSlider/{version}/nouislider.min.jsm',
@@ -762,6 +755,10 @@ var resources = {
     'owlCarouselCSScarousel': {
         'path': 'resources/owl-carousel/{version}/owl.carousel.min.css',
         'type': 'text/css'
+    },
+    'owlCarousel2Bundle': {
+        'path': 'resources/OwlCarousel2/{version}/',
+        'type': 'application/javascript'
     },
     // P2P Media Loader Core
     'p2pMediaLoaderCore': {
@@ -826,7 +823,7 @@ var resources = {
     },
     // Prototype [Deprecated]
     'prototypeJS': {
-        'path': 'resources/prototype/{version}/prototype.jsm',
+        'path': 'resources/prototype/{version}/prototype.min.jsm',
         'type': 'application/javascript'
     },
     // Raven.js
@@ -1041,7 +1038,7 @@ var resources = {
     },
     // WebComponents.js [Deprecated]
     'webcomponentsJS': {
-        'path': 'resources/webcomponentsjs/{version}/webcomponents-loader.jsm',
+        'path': 'resources/webcomponentsjs/{version}/webcomponents-loader.min.jsm',
         'type': 'application/javascript'
     },
     // Web Font Loader

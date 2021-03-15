@@ -45,6 +45,10 @@ targets.determineBundle = function (path) {
         val = 'Select2';
     } else if (path.startsWith('/gsap/')) {
         val = 'GSAP';
+    } else if (path.startsWith('/angular-translate/')) {
+        val = 'angular-translate';
+    } else if (path.startsWith('/OwlCarousel2/')) {
+        val = 'Owl Carousel 2';
     } else if (Regex.FONT_AWESOME_FONTS_ONLY.test(path)) {
         val = 'Font Awesome (Fonts)';
     } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(path)) {
@@ -64,7 +68,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/algoliasearch/3.')) {
         return '3.35.1';
     } else if (type.startsWith('/algoliasearch/4.')) {
-        return '4.8.5';
+        return '4.8.6';
     } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
@@ -76,7 +80,7 @@ targets.setLastVersion = function (type, version) {
         else if (helpers.compareVersion('1.4.14', version)) return '1.4.14'; // > 1.3.20 to <= 1.4.14
         else if (helpers.compareVersion('1.5.11', version)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
         else if (helpers.compareVersion('1.6.10', version)) return '1.6.10'; // > 1.5.11 to <= 1.6.10
-        else return '1.7.9'; // >= 1.6.11
+        else return '1.8.2'; // >= 1.6.11
     } else if (type.startsWith('/angularjs-slider/6.')) {
         return '6.7.0';
     } else if (type.startsWith('/angularjs-slider/7.')) {
@@ -121,11 +125,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular-material/0.')) {
         return '1.2.1';
     } else if (type.startsWith('/angular-translate/2.')) {
-        return '2.7.2';
-    } else if (type.startsWith('/angular-translate-loader-static-files/2.')) {
-        return '2.7.2';
-    } else if (type.startsWith('/angular-translate-interpolation-messageformat/2.')) {
-        return '2.7.2';
+        return '2.18.4';
     } else if (type.startsWith('/axios/0.')) {
         return '0.21.1';
     } else if (type.startsWith('/babel-polyfill/')) {
@@ -169,6 +169,8 @@ targets.setLastVersion = function (type, version) {
         return '2.21.2';
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
+    } else if (type.startsWith('/bulma/0.')) {
+        return '0.9.2';
     } else if (type.startsWith('/Chart.js/2.')) {
         return '2.9.4';
     } else if (type.startsWith('/chosen/1.')) {
@@ -176,7 +178,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/clipboard.js/1.')) {
         return '1.7.1';
     } else if (type.startsWith('/clipboard.js/2.')) {
-        return '2.0.6';
+        return '2.0.8';
     } else if (type.startsWith('/cookieconsent2/3.')) {
         return '3.1.1';
     } else if (type.startsWith('/d3/3.')) {
@@ -186,7 +188,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/d3/5.')) {
         return '5.16.0';
     } else if (type.startsWith('/d3/6.')) {
-        return '6.5.0';
+        return '6.6.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
     } else if (type.startsWith('/dayjs/1.')) {
@@ -200,19 +202,20 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/drawer/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/element-ui/2.')) {
-        return '2.15.0';
+        return '2.15.1';
     } else if (type.startsWith('/ember.js/1.')) {
         return '1.13.13';
     } else if (type.startsWith('/ember.js/2.')) {
         return '2.18.2';
     } else if (type.startsWith('/ember.js/3.')) {
-        return '3.25.1';
+        return '3.25.3';
     } else if (type.startsWith('/ethjs')) {
         return '0.3.4';
     } else if (type.startsWith('/ext-core/3.')) {
         return '3.1.0';
     } else if (type.startsWith('findify')) {
-        return '6.9.15';
+        if (helpers.compareVersion('6.9.15', version)) return '6.9.15'; // <= 6.9.15
+        else return '6.17.0';
     } else if (type.startsWith('/fancybox/2.')) {
         return '2.1.5';
     } else if (type.startsWith('/fancybox/3.')) {
@@ -248,7 +251,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
-        return '4.14.2';
+        return '4.16.1';
     } else if (type.startsWith('/iScroll/5.')) {
         return '5.2.0';
     } else if (type.startsWith('/jets/0.')) {
@@ -262,7 +265,9 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery/2.')) {
         return '2.2.4';
     } else if (type.startsWith('/jquery/3.') || type.startsWith('/jquery/latest')) {
-        return '3.5.1';
+        if (helpers.compareVersion('3.2.1', version)) return '3.2.1'; // <= v3.2.1
+        else if (helpers.compareVersion('3.5.1', version)) return '3.5.1'; // <= v3.5.1
+        else return '3.6.0';
     } else if (type.startsWith('/jquery.devbridge-autocomplete/1.')) {
         return '1.4.11';
     } else if (type.startsWith('/jqueryui/1.')) {
@@ -360,12 +365,13 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/moment.js/2.')) {
         return '2.29.1';
     } else if (type.startsWith('/mootools/1.')) {
-        if (helpers.compareVersion('1.4.5', version)) return '1.4.5'; // <= v1.4.5
-        else return '1.6.0'; // > 1.4.5
+        return '1.6.0';
     } else if (type.startsWith('/object-assign@4.')) {
         return '4.1.1';
     } else if (type.startsWith('/oclazyload/1.')) {
         return '1.1.0';
+    } else if (type.startsWith('/OwlCarousel2/2.')) {
+        return '2.3.4';
     } else if (type.startsWith('/owl-carousel/2.')) {
         return '2.3.4';
     } else if (type.startsWith('/owl-carousel/1.')) {
@@ -373,7 +379,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/p2p-media-loader-core') || type.startsWith('/p2p-media-loader-hlsjs')) {
         return '0.6.2';
     } else if (type.startsWith('/p5.js/1.')) {
-        return '1.2.0';
+        return '1.3.0';
     } else if (type.startsWith('/p5.js/0.')) {
         return '0.10.2';
     } else if (type.startsWith('/page.js/1.')) {
@@ -385,13 +391,13 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/popper.js/1.')) {
         return '1.16.1';
     } else if (type.startsWith('/popper.js/2.')) {
-        return '2.8.0';
+        return '2.9.1';
     } else if (type.startsWith('/prop-types/15.')) {
         return '15.7.2';
     } else if (type.startsWith('/protonet-jquery.inview/1.')) {
         return '1.1.2';
     } else if (type.startsWith('/prototype/1.')) {
-        return '1.7.3.0';
+        return '1.7.3';
     } else if (type.startsWith('/raven.js/3.')) {
         return '3.27.2';
     } else if (type.startsWith('/react/16.')) {
@@ -433,7 +439,9 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.4.0';
     } else if (type.startsWith('/socket.io/3.')) {
-        return '3.1.1';
+        return '3.1.2';
+    } else if (type.startsWith('/socket.io/4.')) {
+        return '4.0.0';
     } else if (type.startsWith('/spin.js/2.')) {
         return '2.3.2';
     } else if (type.startsWith('/spin.js/3.')) {
@@ -455,7 +463,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/Swiper/5.')) {
         return '5.4.5';
     } else if (type.startsWith('/Swiper/6.') || type.startsWith('/Swiper/')) {
-        return '6.4.10';
+        return '6.4.15';
     } else if (type.startsWith('/tether/1.')) {
         return '1.4.7';
     } else if (type.startsWith('/tooltipster/3.')) {
@@ -481,11 +489,13 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/vue/2.')) {
         return '2.6.12';
     } else if (type.startsWith('/vue/3.')) {
-        return '3.0.5';
+        return '3.0.6';
     } else if (type.startsWith('/vue-i18n/8.')) {
-        return '8.22.4';
+        return '8.24.1';
+    } else if (type.startsWith('/vue-i18n/9.')) {
+        return '9.0.0';
     } else if (type.startsWith('/vue-resource/1.')) {
-        return '1.5.1';
+        return '1.5.2';
     } else if (type.startsWith('/waypoints/4.')) {
         return '4.0.1';
     } else if (type.startsWith('/webfont')) {
@@ -508,6 +518,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bulma.min.css': 'Bulma',
     'hogan.min.jsm': 'hogan.js',
     'highlight.min.jsm': 'highlight.js (Bundle)',
     'jquery.cookie.min.jsm': 'jquery-cookie',
@@ -575,9 +586,6 @@ const ListOfFiles = {
     'shortcuts/infinite.min.jsm': 'Waypoints (Bundle)',
     'shortcuts/inview.min.jsm': 'Waypoints (Bundle)',
     'shortcuts/sticky.min.jsm': 'Waypoints (Bundle)',
-    'angular-translate.min.jsm': 'Angular Translate',
-    'angular-translate-interpolation-messageformat.min.jsm': 'Angular Translate Interpolation Messageformat',
-    'angular-translate-loader-static-files.min.jsm': 'Angular Translate Load Static Files',
     'anchor.min.jsm': 'AnchorJS',
     'jquery.easing.min.jsm': 'jQuery Easing Plugin',
     'baguetteBox.min.jsm': 'baguetteBox.js (JS)',
@@ -650,7 +658,7 @@ const ListOfFiles = {
     'angular-resource.min.jsm': 'AngularJS Resource',
     'angular-route.min.jsm': 'AngularJS Route',
     'angular-sanitize.min.jsm': 'AngularJS Sanitize',
-    'angular-stripe-checkout.jsm': 'Angular Stripe Checkout',
+    'angular-stripe-checkout.min.jsm': 'Angular Stripe Checkout',
     'angular-touch.min.jsm': 'AngularJS Touch',
     'angular-ui-router.min.jsm': 'Angular UI Router',
     'angular.min.jsm': 'Angular (JS)',
@@ -712,7 +720,7 @@ const ListOfFiles = {
     'plyr.min.jsm': 'plyr (JS)',
     'plyr.svg': 'plyr (SVG)',
     'popper.min.jsm': 'Popper',
-    'prototype.jsm': 'Prototype',
+    'prototype.min.jsm': 'Prototype',
     'raven.min.jsm': 'Raven.js',
     'react-dom.production.min.jsm': 'ReactDOM',
     'react.production.min.jsm': 'React',
@@ -742,7 +750,7 @@ const ListOfFiles = {
     'underscore-min.jsm': 'Underscore.js',
     'urlize.jsm': 'urlize',
     'vue.min.jsm': 'Vue.js',
-    'webcomponents-loader.jsm': 'WebComponents Loader (JS)',
+    'webcomponents-loader.min.jsm': 'WebComponents Loader (JS)',
     'webfontloader.jsm': 'Web Font Loader',
     'wow.min.jsm': 'WOW'
 };

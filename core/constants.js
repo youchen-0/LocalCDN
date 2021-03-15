@@ -77,10 +77,13 @@ const Setting = {
     'SELECTED_ICON': 'selectedIcon',
     'INTERNAL_STATISTICS': 'internalStatistics',
     'INTERNAL_STATISTICS_DATA': 'internalStatisticsData',
+    'DEFAULT_RANGE_STATISTIC': 'defaultRangeStatistic',
     'ALLOWED_DOMAINS_GOOGLE_FONTS': 'allowedDomainsGoogleFonts',
     'STORAGE_TYPE': 'storageType',
     'BADGE_COLOR': 'badgeColor',
-    'BADGE_TEXT_COLOR': 'badgeTextColor'
+    'BADGE_TEXT_COLOR': 'badgeTextColor',
+    'HIDE_DONATION_BUTTON': 'hideDonationButton',
+    'CHANGE_BADGE_COLOR_MISSING_RESOURCES': 'changeBadgeColorMissingResources',
 };
 
 const SettingDefaults = {
@@ -95,6 +98,7 @@ const SettingDefaults = {
     [Setting.UPDATE_NOTIFICATION]: 0,
     [Setting.INTERNAL_STATISTICS]: false,
     [Setting.INTERNAL_STATISTICS_DATA]: {},
+    [Setting.DEFAULT_RANGE_STATISTIC]: 'week',
     [Setting.LAST_MAPPING_UPDATE]: '2020-01-01',
     [Setting.NEGATE_HTML_FILTER_LIST]: false,
     [Setting.SELECTED_ICON]: 'Default',
@@ -104,7 +108,9 @@ const SettingDefaults = {
     [Setting.ALLOWLISTED_DOMAINS]: {},
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
     [Setting.BADGE_COLOR]: '#4A826C',
-    [Setting.BADGE_TEXT_COLOR]: '#FFFFFF'
+    [Setting.BADGE_TEXT_COLOR]: '#FFFFFF',
+    [Setting.HIDE_DONATION_BUTTON]: false,
+    [Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES]: false,
 };
 
 const WebRequest = {
@@ -214,8 +220,9 @@ const Links = {
     'FAQ_HTML_FILTER': chrome.extension.getURL('pages/help/help.html#html-filter'),
     'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html'),
     'LOCALCDN_TEST': 'https://www.localcdn.org/test',
-    'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check?domain=',
+    'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check',
     'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/localcdn/',
+    'LOGGING': chrome.extension.getURL('pages/logging/logging.html'),
 };
 
 const CDNs = {

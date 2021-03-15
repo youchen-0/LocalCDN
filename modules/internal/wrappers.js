@@ -62,6 +62,36 @@ wrappers.setIcon = function (details, type) {
     }
 };
 
+wrappers.setBadgeMissing = function (tabIdentifier, counter) {
+    chrome.browserAction.setBadgeText({
+        'tabId': tabIdentifier,
+        'text': `${counter}`,
+    });
+    chrome.browserAction.setBadgeTextColor({
+        'tabId': tabIdentifier,
+        'color': 'black',
+    });
+    chrome.browserAction.setBadgeBackgroundColor({
+        'tabId': tabIdentifier,
+        'color': 'yellow',
+    });
+};
+
+wrappers.defaultBadge = function (tabIdentifier, counter) {
+    chrome.browserAction.setBadgeText({
+        'tabId': tabIdentifier,
+        'text': `${counter}`,
+    });
+    chrome.browserAction.setBadgeTextColor({
+        'tabId': tabIdentifier,
+        'color': wrappers.textColor
+    });
+    chrome.browserAction.setBadgeBackgroundColor({
+        'tabId': tabIdentifier,
+        'color': wrappers.backgroundColor
+    });
+};
+
 storageManager.type.get([Setting.BADGE_COLOR, Setting.BADGE_TEXT_COLOR], function (items) {
     wrappers.textColor = items.badgeTextColor || '#FFFFFF';
     wrappers.backgroundColor = items.badgeColor || '#4A826C';

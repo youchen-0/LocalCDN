@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "CDNから配信されるリソースをローカルリソースへリダイレクトしトラッキングからあなたを守ります。",
+        "message": "CDNから配信されるリソースをローカルリソースへリダイレクトし、トラッキングからあなたを守ります。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "インストール以来にローカルのCDNリソースを使用した合計回数です。",
+        "message": "インストールしてからローカルのCDNリソースが使用された合計回数です。",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -72,12 +72,12 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "ブラウザコンソール内のログを有効にする",
-        "description": "Enable logging in browser console"
+        "message": "ログを有効にする",
+        "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "ブラウザコンソール (CTRL + SHIFT + J) を開いて、不足しているリソースが表示できるようになります。",
-        "description": "Open \"Browser Console\" ( CTRL + SHIFT + J ) to show missing resources."
+        "message": "ログはメニュー内のアイコンから表示できます。ブラウザを閉じるかログを無効にするとログは削除されます。",
+        "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
         "message": "この機能はウェブサイトの機能を妨げる場合があります。影響を受けたサイトのドメインをその都度この許可リストに追加できない限りは、この機能を有効化したままにしないでください。",
@@ -137,7 +137,7 @@
     },
     "internalStatisticsDescription": {
         "message": "この機能は現在実験段階です。データは外部に転送されず、全てローカル上で処理されます。",
-        "description": "This function is currently in an experimental stage. No data transmission. It’s all local on your device."
+        "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
         "message": "統計",
@@ -246,5 +246,21 @@
     "websiteBroken": {
         "message": "ウェブサイトが機能していませんか？",
         "description": "Website broken?"
+    },
+    "hideDonationButton": {
+        "message": "寄付ボタンを隠す",
+        "description": "Hide donation button"
+    },
+    "betaLabel": {
+        "message": "ベータ",
+        "description": "beta"
+    },
+    "changeBadgeColorMissingResourcesTitle": {
+        "message": "リソースの不足をアイコンに表示する",
+        "description": "Indicate missing resources on the icon"
+    },
+    "changeBadgeColorMissingResourcesDescription": {
+        "message": "不足しているリソースがある場合にバッジの色を変化させます。",
+        "description": "Change the badge color if resources are missing."
     }
 }
