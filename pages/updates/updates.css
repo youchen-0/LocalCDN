@@ -6,7 +6,8 @@
     font-weight: bold;
 }
 
-ul {
+.subtle-hint > ul,
+#history-release-notes > ul {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
 }
