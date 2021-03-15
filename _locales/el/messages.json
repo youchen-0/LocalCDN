@@ -252,15 +252,15 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Υπόδειξη ανύπαρκτων πόρων στο εικονίδιο",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Αλλαγή χρώματος του σήματος σε περίπτωση ανύπαρκτων πόρων.",
         "description": "Change the badge color if resources are missing."
     }
 }
