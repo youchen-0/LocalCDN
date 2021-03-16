@@ -44,11 +44,11 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Desativar o LocalCDN para esse domínios:",
+        "message": "Desativar o LocalCDN para esses domínios:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Digite os domínios para desabilitar o LocalCDN neles. Uma entrada por linha.",
+        "message": "Insira os sites que deseja que o LocalCDN seja desativado. Uma entrada por linha.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -124,7 +124,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Se pedidos para recursos faltantes são permitidos, conexões para \"fonts.googleapis.com\" não são bloqueadas. Habilite essa opção para bloquear esses pedidos.",
+        "message": "Se as solicitações de recursos ausentes forem permitidas, as conexões com \"fonts.googleapis.com\" não serão bloqueadas. Ative esta opção para bloquear essas solicitações.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -256,7 +256,7 @@
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "Indica os recursos ausentes no ícone",
+        "message": "Indicar os recursos ausentes no ícone",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
