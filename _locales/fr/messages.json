@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Activer la journalisation dans la console du navigateur",
+        "message": "Activer la journalisation",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Ouvrez la « Console du navigateur » ( CTRL + ALT + J ) pour afficher les ressources manquantes.",
+        "message": "Vous pouvez ouvrir le journal avec l'icône dans le menu. Le journal sera supprimé lorsque vous fermez le navigateur ou que vous désactivez la journalisation.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
