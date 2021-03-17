@@ -262,6 +262,10 @@ targets.setLastVersion = function (type, version) {
         return '10.6.0';
     } else if (type.startsWith('/highlight.js/9.')) {
         return '9.18.3';
+    } else if (type.startsWith('/highlight.js/8.')) {
+        return '9.18.3';
+    } else if (type.startsWith('/highlight.js/7.')) {
+        return '9.18.3';
     } else if (type.startsWith('/history/4.')) {
         return '4.10.1';
     } else if (type.startsWith('/history/5.')) {

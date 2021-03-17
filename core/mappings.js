@@ -633,6 +633,7 @@ mappings.cdn = {
             'backbone/{version}/backbone-min.': resources.backbone,
             'dojo/{version}/dojo/dojo.': resources.dojo,
             'ext-core/{version}/ext-core.': resources.extCore,
+            'highlightjs/{version}/': resources.highlightJS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery-ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery-ui/{version}/jquery-ui.min.js': resources.jQueryUI,
