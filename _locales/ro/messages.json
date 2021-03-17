@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "Te protejează împotriva urmăririi prin CDN-uri (Content Delivery Networks) prin redirecționarea către resurse locale.",
+        "message": "Te protejează împotriva urmăririi de către CDN-uri (Content Delivery Networks) prin redirecționarea către resurse locale stocate pe dispozitiv.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Cantitatea de resurse locale injectate de Rețelele care Livrează Conținut din momentul instalării.",
+        "message": "Numărul de resurse injectate de CDN-ul local de la momentul instalării extensiei.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -12,19 +12,19 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Afișează numărul de dependențe înlocuite pe iconiță",
+        "message": "Afișează numărul de injecții de resurse pe iconiță",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Afișează numărul de resurse înlocuite pe iconița extensiei.",
+        "message": "Afișează numărul de resurse injectate pe iconița extensiei.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Blochează cererile pentru resursele care lipsesc",
+        "message": "Blochează cererile pentru resursele care nu sunt disponibile local",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Anulează cererile interceptate dacă resursa solicitată nu este disponibilă local.",
+        "message": "Anulează cererea de interceptare dacă resursa solicitată nu este disponibilă local pe dispozitiv.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
@@ -32,23 +32,23 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "Previne scurgerea request-uri nepermise către rețele de livrare.",
+        "message": "Nu permite ca cereri refuzate să ajungă la terțe CDN-uri.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Scoate metadatele din requesturi permise",
+        "message": "Scoate metadatele din cererile permise",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "Șterge date sensibile din requesturi permise pentru îmbunătățirea confidențialității.",
+        "message": "Șterge date sensibile din cererile permise pentru îmbunătățirea confidențialității.",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Exclude domeniile următoare de la inspecții:",
+        "message": "Dezactivează LocalCDN pentru următoarele domenii:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Introduceți domeniile dorite în lista albă. Separați intrările multiple între ele prin punct și virgulă (;).",
+        "message": "Introduceți domeniile în care nu doriți ca LocalCDN să fie activ. Introduceți nu mai mult de un domeniu per rând.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -56,47 +56,47 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Generați seturi de reguli pentru uBlock sau uMatrix",
+        "message": "Generați reguli pentru adblocker-ul pe care îl aveți instalat",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "În cazul în care aveți un adblocker instalat puteți genera reguli pentru el de aici. Nu uitați că trebuie să adăugați aceste reguli manual în adblocker-ul respectiv.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Ultima actualizare:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Copiați",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Activează jurnalul",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Puteți deschide jurnalul cu ajutorul pictogramei din meniu. Intrarea din jurnalul va fi ștearsă atunci când închideți browserul sau când dezactivați înregistrarea.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Această caracteristică poate afecta (break) afișarea site-urile web. Nu o lăsați activată decât dacă sunteți de acord să mutați manual domeniile ce vor fi afectate în lista de domenii permise.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Dezactivați",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filtrați codul sursă HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Donați",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Inversează filtru HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -104,163 +104,163 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Această funcție poate afecta afișarea site-urilor. Vă rog să aveți în vedere informațiile din pagina Wiki a extensiei.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Nu aplica filtre HTML pentru aceste domenii:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Introduceți domeniile care urmează să fie modificate sau ignorate de filtrul HTML. Scrieți un singur domeniu per rând.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Utilizați filtru HTML pentru aceste domenii:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Blocați fonturile Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Chiar dacă sunt permise substituirea resurselor conexiunea către \"fonts.googleapis.com\" nu este blocată. Activați această opțiune pentru a bloca cererea.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Alegeți o pictogramă pentru această extensie",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Statistici interne",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Această funcție este momentan experimentală. Datele nu sunt transmise către un server. Totul rămâne pe dispozitivul dumneavoastră.",
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Statistici",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Astăzi",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Săptămâna trecută",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Luna trecută",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Anul trecut",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Ștergeți",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Media (Înlocuiri pe zi)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Framework-uri înlocuite",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Sunteți sigur că vreți să ștergeți aceste statistici?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "",
+        "message": "Acestor domenii le este permis să utilizeze fonturi Google. Introduceți nu mai mult de un domeniu per rând.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Setări standard",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Avansate",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Alte setări",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Tipuri de stocare",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Locală",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sincronizată",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Import/Export",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Creați un fișier back-up",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Restaurați folosind un fișier din dispozitiv",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Import reușit",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Import eșuat",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Arată-mi o notificare după orice actualizare",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Niciodată (actualizări silențioase)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Afișează doar dacă au fost introduse noi reguli sau CDN-uri",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Întotdeauna",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Site-ul nu arată cum trebuie?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Ascunde butonul de donații",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Ilustrează pe pictogramă dacă sunt resurse lipsă",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Schimbați culoarea insignei dacă lipsesc resurse.",
         "description": "Change the badge color if resources are missing."
     }
 }
