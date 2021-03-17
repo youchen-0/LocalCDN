@@ -51,47 +51,47 @@ var resources = {
         'type': 'application/javascript'
     },
     'angularAnimate': {
-        'path': 'resources/angular.js/{version}/angular-animate.min.jsm',
+        'path': 'resources/angular-animate/{version}/angular-animate.min.jsm',
         'type': 'application/javascript'
     },
     'angularAria': {
-        'path': 'resources/angular.js/{version}/angular-aria.min.jsm',
+        'path': 'resources/angular-aria/{version}/angular-aria.min.jsm',
         'type': 'application/javascript'
     },
     'angularCookies': {
-        'path': 'resources/angular.js/{version}/angular-cookies.min.jsm',
+        'path': 'resources/angular-cookies/{version}/angular-cookies.min.jsm',
         'type': 'application/javascript'
     },
     'angularLoader': {
-        'path': 'resources/angular.js/{version}/angular-loader.min.jsm',
+        'path': 'resources/angular-loader/{version}/angular-loader.min.jsm',
         'type': 'application/javascript'
     },
     'angularMessageFormat': {
-        'path': 'resources/angular.js/{version}/angular-message-format.min.jsm',
+        'path': 'resources/angular-message-format/{version}/angular-message-format.min.jsm',
         'type': 'application/javascript'
     },
     'angularMessages': {
-        'path': 'resources/angular.js/{version}/angular-messages.min.jsm',
+        'path': 'resources/angular-messages/{version}/angular-messages.min.jsm',
         'type': 'application/javascript'
     },
     'angularParseExt': {
-        'path': 'resources/angular.js/{version}/angular-parse-ext.min.jsm',
+        'path': 'resources/angular-parse-ext/{version}/angular-parse-ext.min.jsm',
         'type': 'application/javascript'
     },
     'angularResource': {
-        'path': 'resources/angular.js/{version}/angular-resource.min.jsm',
+        'path': 'resources/angular-resource/{version}/angular-resource.min.jsm',
         'type': 'application/javascript'
     },
     'angularRoute': {
-        'path': 'resources/angular.js/{version}/angular-route.min.jsm',
+        'path': 'resources/angular-route/{version}/angular-route.min.jsm',
         'type': 'application/javascript'
     },
     'angularSanitize': {
-        'path': 'resources/angular.js/{version}/angular-sanitize.min.jsm',
+        'path': 'resources/angular-sanitize/{version}/angular-sanitize.min.jsm',
         'type': 'application/javascript'
     },
     'angularTouch': {
-        'path': 'resources/angular.js/{version}/angular-touch.min.jsm',
+        'path': 'resources/angular-touch/{version}/angular-touch.min.jsm',
         'type': 'application/javascript'
     },
     // angularMaterialDesign
