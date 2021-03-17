@@ -53,6 +53,8 @@ targets.determineBundle = function (path) {
         val = 'Font Awesome (Fonts)';
     } else if (Regex.BOOTSTRAP_FONTS_ONLY.test(path)) {
         val = 'Bootstrap (Fonts)';
+    } else if (path.startsWith('/jquery.cycle2/')) {
+        val = 'Cycle2';
     }
 
     return val === '' ? val : `${val} (Bundle)`;
@@ -329,6 +331,8 @@ targets.setLastVersion = function (type, version) {
         return '1.8.0';
     } else if (type.startsWith('/jeditable.js/2.')) {
         return '2.0.18';
+    } else if (type.startsWith('/jquery.cycle2/2.')) {
+        return '2.1.6';
     } else if (type.startsWith('/jquery.scrollbar/0.')) {
         return '0.2.11';
     } else if (type.startsWith('/jquery-validation-unobtrusive/3.')) {

@@ -159,6 +159,17 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/twitter-bootstrap/fonts/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Bootstrap (Fonts)'
         };
+    } else if (/cdnjs\.cloudflare\.com\/ajax\/libs\/jquery\.cycle2\/[\d.]+\//.test(channelHost + channelPath + searchString)) {
+        if (channelPath.endsWith('js')) {
+            channelPath += 'm';
+        }
+        return {
+            'source': channelHost,
+            'versionRequested': '2.1.6',
+            'versionDelivered': '2.1.6',
+            'path': `resources/jquery.cycle2/2.1.6/${helpers.extractFilenameFromPath(channelPath)}`,
+            'bundle': 'Cycle2 (Bundle)'
+        };
     } else {
         return false;
     }
