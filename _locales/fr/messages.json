@@ -248,19 +248,19 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Masquer le bouton de donation",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Bêta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Indiquez les ressources manquantes sur l'icône",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Changez la couleur du badge si les ressources sont manquantes.",
         "description": "Change the badge color if resources are missing."
     }
 }
