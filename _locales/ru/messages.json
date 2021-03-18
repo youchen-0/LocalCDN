@@ -244,11 +244,11 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "Сайт \"сломан\"?",
+        "message": "Сайт «сломан»?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Скрыть кнопку пожертвования",
         "description": "Hide donation button"
     },
     "betaLabel": {
