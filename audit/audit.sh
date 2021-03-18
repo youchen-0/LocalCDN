@@ -187,6 +187,73 @@ function pre_check() {
 
 
 # =============================================================================
+# SPECIAL CASES (E.G. BUNDLES)
+# =============================================================================
+declare -A arr_gsap
+arr_gsap[AttrPlugin.min.js]="plugins/AttrPlugin.min.js"
+arr_gsap[BezierPlugin.min.js]="plugins/BezierPlugin.min.js"
+arr_gsap[CSSPlugin.min.js]="plugins/CSSPlugin.min.js"
+arr_gsap[CSSRulePlugin.min.js]="plugins/CSSRulePlugin.min.js"
+arr_gsap[ColorPropsPlugin.min.js]="plugins/ColorPropsPlugin.min.js"
+arr_gsap[DirectionalRotationPlugin.min.js]="plugins/DirectionalRotationPlugin.min.js"
+arr_gsap[EaselPlugin.min.js]="plugins/EaselPlugin.min.js"
+arr_gsap[EndArrayPlugin.min.js]="plugins/EndArrayPlugin.min.js"
+arr_gsap[ModelifiersPlugin.min.js]="plugins/ModelifiersPlugin.min.js"
+arr_gsap[PixiPlugin.min.js]="plugins/PixiPlugin.min.js"
+arr_gsap[RaphaelPlugin.min.js]="plugins/RaphaelPlugin.min.js"
+arr_gsap[RoundPropsPlugin.min.js]="plugins/RoundPropsPlugin.min.js"
+arr_gsap[ScrollToPlugin.min.js]="plugins/ScrollToPlugin.min.js"
+arr_gsap[TextPlugin.min.js]="plugins/TextPlugin.min.js"
+arr_gsap[EasePack.min.js]="easing/EasePack.min.js"
+arr_gsap[Draggable.min.js]="utils/Draggable.min.js"
+arr_gsap[ModifiersPlugin.min.js]="plugins/ModifiersPlugin.min.js"
+
+declare -A arr_cycle
+arr_cycle[jquery.cycle2.min.js]="jquery.cycle2.min.js"
+arr_cycle[jquery.cycle2.autoheight.min.js]="jquery.cycle2.autoheight.min.js"
+arr_cycle[jquery.cycle2.caption.min.js]="jquery.cycle2.caption.min.js"
+arr_cycle[jquery.cycle2.caption2.min.js]="jquery.cycle2.caption2.min.js"
+arr_cycle[jquery.cycle2.carousel.min.js]="jquery.cycle2.carousel.min.js"
+arr_cycle[jquery.cycle2.center.min.js]="jquery.cycle2.center.min.js"
+arr_cycle[jquery.cycle2.command.min.js]="jquery.cycle2.command.min.js"
+arr_cycle[jquery.cycle2.core.min.js]="jquery.cycle2.core.min.js"
+arr_cycle[jquery.cycle2.flip.min.js]="jquery.cycle2.flip.min.js"
+arr_cycle[jquery.cycle2.hash.min.js]="jquery.cycle2.hash.min.js"
+arr_cycle[jquery.cycle2.ie-fade.min.js]="jquery.cycle2.ie-fade.min.js"
+arr_cycle[jquery.cycle2.loader.min.js]="jquery.cycle2.loader.min.js"
+arr_cycle[jquery.cycle2.lookahead.min.js]="jquery.cycle2.lookahead.min.js"
+arr_cycle[jquery.cycle2.pager.min.js]="jquery.cycle2.pager.min.js"
+arr_cycle[jquery.cycle2.prevnext.min.js]="jquery.cycle2.prevnext.min.js"
+arr_cycle[jquery.cycle2.progressive.min.js]="jquery.cycle2.progressive.min.js"
+arr_cycle[jquery.cycle2.scrollVert.min.js]="jquery.cycle2.scrollVert.min.js"
+arr_cycle[jquery.cycle2.shuffle.min.js]="jquery.cycle2.shuffle.min.js"
+arr_cycle[jquery.cycle2.swipe.min.js]="jquery.cycle2.swipe.min.js"
+arr_cycle[jquery.cycle2.tile.min.js]="jquery.cycle2.tile.min.js"
+arr_cycle[jquery.cycle2.tmpl.min.js]="jquery.cycle2.tmpl.min.js"
+arr_cycle[jquery.cycle2.video.min.js]="jquery.cycle2.video.min.js"
+arr_cycle[jquery.cycle2.autoheight.min.js]="core/jquery.cycle2.autoheight.min.js"
+arr_cycle[jquery.cycle2.caption.min.js]="core/jquery.cycle2.caption.min.js"
+arr_cycle[jquery.cycle2.command.min.js]="core/jquery.cycle2.command.min.js"
+arr_cycle[jquery.cycle2.core.min.js]="core/jquery.cycle2.core.min.js"
+arr_cycle[jquery.cycle2.hash.min.js]="core/jquery.cycle2.hash.min.js"
+arr_cycle[jquery.cycle2.loader.min.js]="core/jquery.cycle2.loader.min.js"
+arr_cycle[jquery.cycle2.pager.min.js]="core/jquery.cycle2.pager.min.js"
+arr_cycle[jquery.cycle2.prevnext.min.js]="core/jquery.cycle2.prevnext.min.js"
+arr_cycle[jquery.cycle2.progressive.min.js]="core/jquery.cycle2.progressive.min.js"
+arr_cycle[jquery.cycle2.tmpl.min.js]="core/jquery.cycle2.tmpl.min.js"
+arr_cycle[jquery.cycle2.caption2.min.js]="plugin/jquery.cycle2.caption2.min.js"
+arr_cycle[jquery.cycle2.carousel.min.js]="plugin/jquery.cycle2.carousel.min.js"
+arr_cycle[jquery.cycle2.center.min.js]="plugin/jquery.cycle2.center.min.js"
+arr_cycle[jquery.cycle2.flip.min.js]="plugin/jquery.cycle2.flip.min.js"
+arr_cycle[jquery.cycle2.ie-fade.min.js]="plugin/jquery.cycle2.ie-fade.min.js"
+arr_cycle[jquery.cycle2.scrollVert.min.js]="plugin/jquery.cycle2.scrollVert.min.js"
+arr_cycle[jquery.cycle2.shuffle.min.js]="plugin/jquery.cycle2.shuffle.min.js"
+arr_cycle[jquery.cycle2.swipe.min.js]="plugin/jquery.cycle2.swipe.min.js"
+arr_cycle[jquery.cycle2.tile.min.js]="plugin/jquery.cycle2.tile.min.js"
+arr_cycle[jquery.cycle2.video.min.js]="plugin/jquery.cycle2.video.min.js"
+
+
+# =============================================================================
 # CHECK RESOURCE
 # =============================================================================
 function check_resource() {
@@ -241,7 +308,7 @@ function check_resource() {
         echo -e "${YELLOW}STATUS:      NO CONNECTION $url${NOCOLOR}"
         FILES_NO_CONNECTION="${YELLOW}No connection: $path --> $url${NOCOLOR}\n$FILES_NO_CONNECTION"
         ((COUNTER_CONNECT_FAILED++))
-        return 0;
+        return 0
     fi
 
     # Calculate hash value
@@ -337,42 +404,10 @@ function create_url() {
         fi
     elif [ "$folder" = "gsap" ]; then
         if [ "$version" = "1.20.5" ] || [ "$version" = "2.1.3" ]; then
-            if [ "$jfile" = "AttrPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/AttrPlugin.min.js"
-            elif [ "$jfile" = "BezierPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/BezierPlugin.min.js"
-            elif [ "$jfile" = "CSSPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/CSSPlugin.min.js"
-            elif [ "$jfile" = "CSSRulePlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/CSSRulePlugin.min.js"
-            elif [ "$jfile" = "ColorPropsPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/ColorPropsPlugin.min.js"
-            elif [ "$jfile" = "DirectionalRotationPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/DirectionalRotationPlugin.min.js"
-            elif [ "$jfile" = "EaselPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/EaselPlugin.min.js"
-            elif [ "$jfile" = "EndArrayPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/EndArrayPlugin.min.js"
-            elif [ "$jfile" = "ModelifiersPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/ModelifiersPlugin.min.js"
-            elif [ "$jfile" = "PixiPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/PixiPlugin.min.js"
-            elif [ "$jfile" = "RaphaelPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/RaphaelPlugin.min.js"
-            elif [ "$jfile" = "RoundPropsPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/RoundPropsPlugin.min.js"
-            elif [ "$jfile" = "ScrollToPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/ScrollToPlugin.min.js"
-            elif [ "$jfile" = "TextPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/TextPlugin.min.js"
-            elif [ "$jfile" = "EasePack.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/easing/EasePack.min.js"
-            elif [ "$jfile" = "Draggable.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/utils/Draggable.min.js"
-            elif [ "$jfile" = "ModifiersPlugin.min.js" ]; then
-                url="$CLOUDFLARE/$folder/$version/plugins/ModifiersPlugin.min.js"
+            if [ "${arr_gsap[$jfile]}" != "" ]; then
+                url="$CLOUDFLARE/$folder/$version/${arr_gsap[$subfile]}"
             else
-                url="$CLOUDFLARE/$folder/$version/$jfile"
+                url="$CLOUDFLARE/$folder/$version/$subfile"
             fi
         else
             url="$CLOUDFLARE/$folder/$version/$jfile"
@@ -514,6 +549,10 @@ function create_url() {
         url="$GITHUB/pagekit/vue-resource/$version/dist/vue-resource.min.js"
     elif [ "$path" = "../resources/webfont/fa-loader.js" ]; then
         url="https://use.fontawesome.com/a1f20be65b.js"
+    elif [ "$folder" = "jquery.cycle2" ]; then
+        if [ "${arr_cycle[$subfile]}" != "" ]; then
+            url="$CLOUDFLARE/$folder/$version/${arr_cycle[$subfile]}"
+        fi
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
@@ -532,7 +571,7 @@ function create_url() {
 pre_check
 
 # Handle arguments
-while getopts dfhlrt:: opt; do
+while getopts d:fhlrt opt; do
    case $opt in
        d) CHECK="$OPTARG";;
        f) CREATE_THIRD_PARTY_FILE=true;;
