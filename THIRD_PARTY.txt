@@ -888,7 +888,7 @@ https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js
 https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js
 https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js
 https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js
-https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js
+https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js
 https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css
 https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js
 https://cdnjs.cloudflare.com/ajax/libs/oclazyload/1.1.0/ocLazyLoad.min.js
