@@ -252,15 +252,15 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Na ikoni naznači nedostajuće resurse",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Promijeni boju značke ako resursi nedostaju.",
         "description": "Change the badge color if resources are missing."
     }
 }
