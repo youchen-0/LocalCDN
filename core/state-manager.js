@@ -206,6 +206,8 @@ stateManager._handleStorageChanged = function (changes) {
         stateManager.hideDonationButton = changes.hideDonationButton.newValue;
     } else if (Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES in changes) {
         stateManager.changeBadgeColorMissingResources = changes.changeBadgeColorMissingResources.newValue;
+    } else if (Setting.LOGGING in changes) {
+        stateManager.logging = changes.enableLogging.newValue;
     }
 };
 
@@ -256,6 +258,7 @@ stateManager.selectedIcon = 'Default';
 stateManager.internalStatistics = false;
 stateManager.hideDonationButton = false;
 stateManager.changeBadgeColorMissingResources = false;
+stateManager.logging = false;
 
 for (let mapping in mappings.cdn) {
     let supportedHost = Address.ANY_PROTOCOL + mapping + Address.ANY_PATH;
@@ -268,8 +271,13 @@ chrome.tabs.query({}, function (tabs) {
 
 storageManager.type.get([
     Setting.SHOW_ICON_BADGE,
+    Setting.NEGATE_HTML_FILTER_LIST,
     Setting.SELECTED_ICON,
-    Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES
+    Setting.INTERNAL_STATISTICS,
+    Setting.HIDE_DONATION_BUTTON,
+    Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES,
+    Setting.LOGGING,
+    Setting.AMOUNT_INJECTED
 ], function (items) {
     if (items.showIconBadge === undefined) {
         items.showIconBadge = true;
@@ -278,8 +286,13 @@ storageManager.type.get([
         stateManager.selectedIcon = 'Default';
     }
     stateManager.showIconBadge = items.showIconBadge;
+    stateManager.getInvertOption = items.negateHtmlFilterList;
     stateManager.selectedIcon = items.selectedIcon;
+    stateManager.internalStatistics = items.internalStatistics;
+    stateManager.hideDonationButton = items.hideDonationButton;
     stateManager.changeBadgeColorMissingResources = items.changeBadgeColorMissingResources;
+    stateManager.logging = items.enableLogging;
+    stateManager.amountInjected = items.amountInjected;
 });
 
 chrome.storage.local.get([Setting.INTERNAL_STATISTICS], function (items) {

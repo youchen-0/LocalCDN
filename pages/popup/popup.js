@@ -26,6 +26,14 @@
 var popup = {};
 
 
+const PopupLinks = {
+    'statistics': Links.STATISTICS,
+    'translation': Links.WEBLATE,
+    'logging': Links.LOGGING,
+    'faq-html-filter': Links.FAQ_HTML_FILTER,
+    'donate': Links.DONATE,
+};
+
 /**
  * Private Methods
  */
@@ -70,17 +78,17 @@ popup._renderNonContextualContents = function () {
 
     testingUtilityLinkElement.addEventListener('mouseup', popup._onTestingUtilityLinkClicked);
     optionsButtonElement.addEventListener('mouseup', popup._onOptionsButtonClicked);
-    donationButtonElement.addEventListener('mouseup', popup._onDonationButtonClicked);
-    infoButtonLabel.addEventListener('mouseup', popup._onInfoButtonClicked);
+    donationButtonElement.addEventListener('mouseup', popup._onButtonClicked);
+    infoButtonLabel.addEventListener('mouseup', popup._onButtonClicked);
 
     if (popup._statisticsStatus) {
         document.getElementById('statistics-button').style.display = 'block';
-        document.getElementById('statistics-button').addEventListener('mouseup', popup._onStatisticsButtonClicked);
+        document.getElementById('statistics-button').addEventListener('mouseup', popup._onButtonClicked);
     }
 
     if (popup._loggingStatus) {
         document.getElementById('logging-button').style.display = 'block';
-        document.getElementById('logging-button').addEventListener('mouseup', popup._onLoggingButtonClicked);
+        document.getElementById('logging-button').addEventListener('mouseup', popup._onButtonClicked);
     }
 
     if (!popup.hideDonationButton) {
@@ -246,38 +254,26 @@ popup._determineResourceInjections = function () {
 
 popup._determineTargetTab = function () {
     return new Promise((resolve) => {
-        chrome.tabs.query({'active': true, 'currentWindow': true}, function (tabs) {
-            popup._targetTab = tabs[0];
-            popup._domain = helpers.extractDomainFromUrl(tabs[0].url, true);
-
+        helpers.determineActiveTab().then((activeTab) => {
+            popup._targetTab = activeTab;
+            popup._domain = helpers.extractDomainFromUrl(activeTab.url, true);
             resolve();
         });
     });
 };
 
-popup._readLocalStorage = function () {
+popup._getData = function () {
     return new Promise((resolve) => {
-        chrome.storage.local.get([
-            Setting.AMOUNT_INJECTED,
-            Setting.INTERNAL_STATISTICS
-        ], function (items) {
-            popup._amountInjected = items.amountInjected || 0;
-            popup._statisticsStatus = items.internalStatistics || false;
-            resolve();
-        });
-    });
-};
+        let message = {
+            'topic': 'popup:get-data'
+        };
 
-popup._readStorage = function () {
-    return new Promise((resolve) => {
-        storageManager.type.get([
-            Setting.NEGATE_HTML_FILTER_LIST,
-            Setting.LOGGING,
-            Setting.HIDE_DONATION_BUTTON
-        ], function (items) {
-            popup.negateHtmlFilterList = items.negateHtmlFilterList;
-            popup._loggingStatus = items.enableLogging;
-            popup.hideDonationButton = items.hideDonationButton;
+        chrome.runtime.sendMessage(message, function (items) {
+            popup._amountInjected = items.data.amountInjected;
+            popup._statisticsStatus = items.data.internalStatistics;
+            popup.negateHtmlFilterList = items.data.negateHtmlFilterList;
+            popup._loggingStatus = items.data.loggingStatus;
+            popup.hideDonationButton = items.data.hideDonationButton;
             resolve();
         });
     });
@@ -423,12 +419,11 @@ popup._renderLocaleNotice = function () {
 
     localeNoticeElement = document.getElementById('popup-incomplete-translation');
     localeNoticeElement.setAttribute('class', 'notice notice-default');
-    localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
+    localeNoticeElement.addEventListener('mouseup', popup._onButtonClicked);
 
     nameTextNode = document.createTextNode('Translation is incomplete. You want to help on Weblate?');
 
     localeNoticeElement.appendChild(nameTextNode);
-    localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
 };
 
 
@@ -446,9 +441,7 @@ popup._onDocumentLoaded = function () {
     popup._version = manifest.version;
     popup._scriptDirection = helpers.determineScriptDirection(language);
 
-    popup._readLocalStorage()
-        .then(popup._readStorage)
-        .then(popup._renderContents);
+    popup._getData().then(popup._renderContents);
 };
 
 popup._onTestingUtilityLinkClicked = function (event) {
@@ -468,7 +461,7 @@ popup._onTestingUtilityLinkClicked = function (event) {
 
 popup._injectDomain = function (tabId) {
     let message = {
-        'topic': 'injection',
+        'topic': 'tab:inject',
         'value': tabId,
         'url': popup._targetTab.url
     };
@@ -479,19 +472,6 @@ popup._injectDomain = function (tabId) {
 popup._onOptionsButtonClicked = function () {
     chrome.runtime.openOptionsPage();
     return window.close();
-};
-
-popup._onDonationButtonClicked = function () {
-    if (event.button === 0 || event.button === 1) {
-        chrome.tabs.create({
-            'url': Links.DONATE,
-            'active': event.button === 0,
-        });
-    }
-
-    if (event.button === 0) {
-        window.close();
-    }
 };
 
 popup._onToggled = function () {
@@ -506,8 +486,12 @@ popup._onToggled = function () {
 popup._close = function () {
     chrome.runtime.getPlatformInfo(function (information) {
         if (information.os === chrome.runtime.PlatformOs.ANDROID) {
-            chrome.tabs.getCurrent(function (tab) {
-                chrome.tabs.remove(tab.id);
+            chrome.tabs.getCurrent(function (activeTab) {
+                if (activeTab) {
+                    chrome.tabs.remove(activeTab.id);
+                } else {
+                    window.close();
+                }
             });
         } else {
             window.close();
@@ -515,48 +499,11 @@ popup._close = function () {
     });
 };
 
-popup._onInfoButtonClicked = function () {
+popup._onButtonClicked = function ({target}) {
+    let data = target.getAttribute('data-link');
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            'url': Links.FAQ_HTML_FILTER,
-            'active': event.button === 0,
-        });
-    }
-
-    if (event.button === 0) {
-        window.close();
-    }
-};
-
-popup._onIncompleteTranslation = function () {
-    if (event.button === 0 || event.button === 1) {
-        chrome.tabs.create({
-            'url': Links.WEBLATE,
-            'active': event.button === 0,
-        });
-    }
-
-    if (event.button === 0) {
-        window.close();
-    }
-};
-
-popup._onStatisticsButtonClicked = function () {
-    if (event.button === 0 || event.button === 1) {
-        chrome.tabs.create({
-            'url': Links.STATISTICS,
-            'active': event.button === 0,
-        });
-    }
-    if (event.button === 0) {
-        window.close();
-    }
-};
-
-popup._onLoggingButtonClicked = function () {
-    if (event.button === 0 || event.button === 1) {
-        chrome.tabs.create({
-            'url': Links.LOGGING,
+            'url': PopupLinks[data],
             'active': event.button === 0,
         });
     }

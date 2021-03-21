@@ -32,89 +32,79 @@ var messenger = {};
 
 messenger._handleMessageReceived = function (message, sender, sendResponse) {
 
-    let topic, value;
+    let topic, value, popup;
 
     topic = message.topic;
     value = message.value;
+    popup = {};
 
-    if (topic === 'tab:fetch-injections') {
+    switch (topic) {
 
-        sendResponse({'value': stateManager.tabs[value].injections});
-        return MessageResponse.SYNCHRONOUS;
-    }
+        case 'tab:fetch-injections':
+            sendResponse({'value': stateManager.tabs[value].injections});
+            return MessageResponse.SYNCHRONOUS;
 
-    if (topic === 'domain:fetch-is-allowlisted') {
-        let allowlistRecord = helpers.checkAllowlisted(value);
-        sendResponse({'value': Boolean(allowlistRecord)});
+        case 'tab:inject':
+            chrome.tabs.executeScript(value, {
+                'code': `window.addEventListener('load', () => {
+                    document.getElementById('domain').value = '${message.url}';
+                });`,
+                'runAt': 'document_start'
+            });
+            break;
 
-        return MessageResponse.SYNCHRONOUS;
-    }
+        case 'domain:fetch-is-allowlisted':
+            sendResponse({'value': Boolean(helpers.checkAllowlisted(value))});
+            return MessageResponse.SYNCHRONOUS;
 
-    if (topic === 'allowlist:add-domain') {
+        case 'domain:fetch-is-manipulateDOM':
+            sendResponse({'value': Boolean(requestAnalyzer.domainsManipulateDOM[value])});
+            return MessageResponse.SYNCHRONOUS;
 
-        stateManager.addDomainToAllowlist(value).then(function () {
-            sendResponse({'value': true});
-        });
+        case 'allowlist:add-domain':
+            stateManager.addDomainToAllowlist(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
 
-        return MessageResponse.ASYNCHRONOUS;
-    }
+        case 'allowlist:remove-domain':
+            stateManager.removeDomainFromAllowlist(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
 
-    if (topic === 'allowlist:remove-domain') {
+        case 'manipulateDOM:add-domain':
+            stateManager.addDomainToManipulateDOMlist(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
 
-        stateManager.removeDomainFromAllowlist(value).then(function () {
-            sendResponse({'value': true});
-        });
+        case 'manipulateDOM:remove-domain':
+            stateManager.removeDomainFromManipulateDOMlist(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
 
-        return MessageResponse.ASYNCHRONOUS;
-    }
+        case 'statistic:delete':
+            storageManager.statistics = {};
+            break;
 
-    if (topic === 'domain:fetch-is-manipulateDOM') {
+        case 'logs:get':
+            sendResponse({'logs': log.data});
+            return MessageResponse.SYNCHRONOUS;
 
-        let manipulateDOMRecord = requestAnalyzer.domainsManipulateDOM[value];
-        sendResponse({'value': Boolean(manipulateDOMRecord)});
+        case 'logs:delete':
+            log.data = [];
+            break;
 
-        return MessageResponse.SYNCHRONOUS;
-    }
-
-    if (topic === 'manipulateDOM:add-domain') {
-
-        stateManager.addDomainToManipulateDOMlist(value).then(function () {
-            sendResponse({'value': true});
-        });
-
-        return MessageResponse.ASYNCHRONOUS;
-    }
-
-    if (topic === 'manipulateDOM:remove-domain') {
-
-        stateManager.removeDomainFromManipulateDOMlist(value).then(function () {
-            sendResponse({'value': true});
-        });
-
-        return MessageResponse.ASYNCHRONOUS;
-    }
-
-    if (topic === 'deleteStatistic') {
-        storageManager.statistics = {};
-    }
-
-    if (topic === 'injection') {
-
-        chrome.tabs.executeScript(value, {
-            'code': `window.addEventListener('load', () => {
-                document.getElementById('domain').value = '${message.url}';
-            });`,
-            'runAt': 'document_start'
-        });
-    }
-
-    if (topic === 'logs:get') {
-        sendResponse({'logs': log.data});
-        return MessageResponse.SYNCHRONOUS;
-    }
-
-    if (topic === 'logs:delete') {
-        log.data = [];
+        case 'popup:get-data':
+            popup.amountInjected = storageManager.amountInjected;
+            popup.internalStatistics = stateManager.internalStatistics;
+            popup.negateHtmlFilterList = stateManager.getInvertOption;
+            popup.loggingStatus = stateManager.logging;
+            popup.hideDonationButton = stateManager.hideDonationButton;
+            sendResponse({'data': popup});
+            return MessageResponse.ASYNCHRONOUS;
     }
 };
 

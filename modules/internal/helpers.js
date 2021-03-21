@@ -187,6 +187,28 @@ helpers.determineScriptDirection = function (language) {
     return scriptDirection;
 };
 
+helpers.determineActiveTab = function () {
+    return new Promise((resolve) => {
+        let opt = {
+            'active': true,
+            'currentWindow': true
+        };
+
+        chrome.tabs.query(opt, function (tabs) {
+            if (tabs[0]) {
+                resolve(tabs[0]);
+            } else {
+                opt = {'active': true};
+
+                chrome.tabs.query(opt, function (tabs) {
+                    resolve(tabs[0]);
+                });
+            }
+        });
+    });
+};
+
+
 helpers.formatNumber = function (number) {
     if (typeof number === 'number') {
         return number.toLocaleString();

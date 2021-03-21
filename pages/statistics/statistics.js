@@ -31,9 +31,10 @@ statistics._onDocumentLoaded = function () {
     helpers.insertI18nTitlesIntoDocument(document);
 
     chrome.storage.local.get([Setting.DEFAULT_RANGE_STATISTIC], function (items) {
-        document.getElementById('date-range').value = items.defaultRangeStatistic;
-        statistics._dateUnit = items.defaultRangeStatistic;
-        statistics._setDateRange(items.defaultRangeStatistic);
+        statistics._dateUnit = items.defaultRangeStatistic || 'week';
+        document.getElementById('date-range').value = statistics._dateUnit;
+
+        statistics._setDateRange();
         statistics._registerListener();
         statistics._getStatistics().then(statistics._renderContents);
     });
@@ -243,7 +244,7 @@ statistics._deleteStatistic = function () {
         chrome.storage.local.set({
             [Setting.INTERNAL_STATISTICS_DATA]: {}
         });
-        chrome.runtime.sendMessage({'topic': 'deleteStatistic'});
+        chrome.runtime.sendMessage({'topic': 'statistic:delete'});
     }
 };
 
