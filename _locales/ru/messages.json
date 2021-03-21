@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Включить логирование в консоли браузера",
+        "message": "Включить журнал",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Открыть консоль браузера ( CTRL + SHIFT + J ) для просмотра пропущенных ресурсов.",
+        "message": "Для просмотра журнала нажмите иконку в меню. Журнал будет очищен при закрытии браузера или при отключении.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -252,7 +252,7 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Бета-версия",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
