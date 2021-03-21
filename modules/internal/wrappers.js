@@ -67,14 +67,21 @@ wrappers.setBadgeMissing = function (tabIdentifier, counter) {
         'tabId': tabIdentifier,
         'text': `${counter}`,
     });
-    chrome.browserAction.setBadgeTextColor({
-        'tabId': tabIdentifier,
-        'color': 'black',
-    });
-    chrome.browserAction.setBadgeBackgroundColor({
-        'tabId': tabIdentifier,
-        'color': 'yellow',
-    });
+    if (BrowserType.FIREFOX) {
+        chrome.browserAction.setBadgeTextColor({
+            'tabId': tabIdentifier,
+            'color': 'black',
+        });
+        chrome.browserAction.setBadgeBackgroundColor({
+            'tabId': tabIdentifier,
+            'color': 'yellow',
+        });
+    } else {
+        chrome.browserAction.setBadgeBackgroundColor({
+            'tabId': tabIdentifier,
+            'color': 'red',
+        });
+    }
 };
 
 wrappers.defaultBadge = function (tabIdentifier, counter) {
@@ -82,10 +89,12 @@ wrappers.defaultBadge = function (tabIdentifier, counter) {
         'tabId': tabIdentifier,
         'text': `${counter}`,
     });
-    chrome.browserAction.setBadgeTextColor({
-        'tabId': tabIdentifier,
-        'color': wrappers.textColor
-    });
+    if (BrowserType.FIREFOX) {
+        chrome.browserAction.setBadgeTextColor({
+            'tabId': tabIdentifier,
+            'color': wrappers.textColor
+        });
+    }
     chrome.browserAction.setBadgeBackgroundColor({
         'tabId': tabIdentifier,
         'color': wrappers.backgroundColor
