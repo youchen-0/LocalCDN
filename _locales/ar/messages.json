@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "يحميك من التتبع المرتبط بالوصول للمحتوى \"مجاني\"، مركزية.",
+        "message": "يحميك من التتبع المرتبط بالوصول للمحتوي بواسطة CDN عن طريق تحويلها للمصادر المحلية.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -104,7 +104,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "من الممكن ان توجد مشاكل فى بعض المواقع . المزيد من المعلومات علي صفحة wiki",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
