@@ -252,11 +252,11 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Wskaż brakujące zasoby na ikonie",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
