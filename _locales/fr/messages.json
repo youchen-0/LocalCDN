@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Vous protège du pistage par les CDN (Content Delivery Networks - Réseau de Diffusion de Contenu) en redirigeant les requêtes vers des ressources locales.",
+        "message": "Vous protégez du pistage par les CDN (Content Delivery Networks - Réseau de Diffusion de Contenu) en redirigeant les requêtes vers des ressources locales.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -104,7 +104,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Cette fonction peut casser des sites web. Veuillez vous renseigner sur la page Wiki.",
+        "message": "Cette fonction peut casser des sites web. Veuillez vous renseigner sur le page Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -204,7 +204,7 @@
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Synchronisation",
+        "message": "Synchronization",
         "description": "Sync"
     },
     "headerImportExport": {
