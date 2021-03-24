@@ -260,7 +260,7 @@
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "Change the badge color if resources are missing.",
+        "message": "Change the badge colour if resources are missing.",
         "description": "Change the badge color if resources are missing."
     }
 }
