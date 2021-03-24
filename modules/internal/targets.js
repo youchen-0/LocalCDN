@@ -522,7 +522,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/vue/3.')) {
         return '3.0.6';
     } else if (type.startsWith('/vue-i18n/8.')) {
-        return '8.24.1';
+        return '8.24.2';
     } else if (type.startsWith('/vue-i18n/9.')) {
         return '9.0.0';
     } else if (type.startsWith('/vue-resource/1.')) {
