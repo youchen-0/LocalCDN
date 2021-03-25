@@ -4,7 +4,7 @@
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "설치한 이후로 차단된 로컬 콘텐츠 딜리버리 네트워크(CDN) 리소스의 개수.",
+        "message": "설치한 이후 로컬 리소스로 대체된 콘텐츠 딜리버리 네트워크(CDN) 리소스의 개수.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -12,15 +12,15 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "차단한 횟수를 아이콘에 표시",
+        "message": "대체된 횟수를 아이콘에 표시",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "로컬 리소스로 대체한 요청 수를 확장 기능 아이콘에 표시합니다.",
+        "message": "로컬 리소스로 대체한 요청의 개수를 확장 기능 아이콘에 표시합니다.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "존재하지 않는 리소스에 대한 요청을 차단합니다",
+        "message": "존재하지 않는 리소스에 대한 요청 차단",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -204,7 +204,7 @@
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sync",
         "description": "Sync"
     },
     "headerImportExport": {
