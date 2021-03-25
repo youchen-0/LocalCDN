@@ -792,7 +792,7 @@ https://cdnjs.cloudflare.com/ajax/libs/history/5.0.0/history.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.14.17/hls.min.js
 https://cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js
 https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/3.7.0/instantsearch.production.min.js
-https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.16.1/instantsearch.production.min.js
+https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.18.0/instantsearch.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jeditable.js/1.8.0/jquery.jeditable.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jeditable.js/2.0.18/jquery.jeditable.min.js
