@@ -213,7 +213,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/d3/5.')) {
         return '5.16.0';
     } else if (type.startsWith('/d3/6.')) {
-        return '6.6.0';
+        return '6.6.1';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
     } else if (type.startsWith('/dayjs/1.')) {
