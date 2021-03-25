@@ -301,6 +301,7 @@ targets.setLastVersion = function (type, version) {
         return '1.4.11';
     } else if (type.startsWith('/jqueryui/1.')) {
         if (helpers.compareVersion('1.8.24', version)) return '1.8.24'; // <= v1.8.24
+        if (helpers.compareVersion('1.10.0', version)) return '1.10.0'; // > v1.8.24 to <= v1.10.0
         else return '1.12.1'; // >= 1.8.19
     } else if (type.startsWith('/jquery.blockUI/2.')) {
         return '2.70';
