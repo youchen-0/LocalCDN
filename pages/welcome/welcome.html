@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>LocalCDN says Hello - fork from Decentraleyes</title>
+        <title>Hello | LocalCDN</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="../style.css">
-        <link rel="stylesheet" type="text/css" href="../base.css">
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="../base.css">
+        <link rel="stylesheet" type="text/css" href="welcome.css">
     </head>
     <body>
         <img src="../images/logo.svg" alt="LocalCDN" class="logo"/>
@@ -16,24 +17,22 @@
             <div class="notice">
                 <div class="subtle-hint">
                     <div class="topic-label">What is LocalCDN?</div>
-                    <p>LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use one of our <a href="https://www.localcdn.org/test/" rel="nofollow noopener noreferrer">testing utilities</a> to find out if you are properly protected. For a good start there is a short <a href="https://www.localcdn.org/tutorial" rel="nofollow noopener noreferrer">tutorial</a> and our <a href="https://codeberg.org/nobody/LocalCDN/wiki" rel="nofollow noopener noreferrer">Wiki pages</a>. LocalCDN supports more than 100 Libraries and 26 CDNs! Here is a very small selection of the advantages of LocalCDN:</p>
-                    <ul>
-                        <li>jQuery up to 3.5.1</li>
-                        <li>Bootstrap CSS (Delivered by StackPath, NetDNA and MaxCDN)</li>
-                        <li>Bootstrap JavaScript (Delivered by StackPath, NetDNA and MaxCDN)</li>
-                        <li>AngularJS, AngularJS-Animate, AngularJS-Sanitize, AngularJS-Cookies and AngularJS-Touch</li>
-                        <li>Generator to create rules for your adblocker</li>
-                    </ul>
+                    <p>LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported resources locally, and injects them into the environment. All of this happens automatically, so no prior configuration is required. Feel free to use one of our <a href="https://www.localcdn.org/test/" rel="nofollow noopener noreferrer">testing utilities</a> to find out if you are properly protected. For a good start there is a short <a href="https://www.localcdn.org/tutorial" rel="nofollow noopener noreferrer">tutorial</a> and our <a href="https://codeberg.org/nobody/LocalCDN/wiki" rel="nofollow noopener noreferrer">Wiki pages</a>. LocalCDN supports more than 100 Libraries and 26 CDNs!</p>
                     <a id="donate" class="no-icon" href="../donate/donate.html">If you like LocalCDN, I would be happy about a small donation.</a>
                 </div>
             </div>
             <div class="notice">
-                <div class="subtle-hint"><div class="topic-label color-purple">
-                    <img src="../images/we-need-you.png" alt="Uncle Sam need you" class="uncle-sam"/>
-                    <p class="we-need-you-title">WE NEED YOU</p>
-                    <p class="we-need-you-declaration">The whole Internet is full of different frameworks and CDNs that negatively affect your privacy. If you find a website that embeds another unsupported version of a framework, please report that website.</p>
-                    <p class="we-need-you-declaration">On behalf of everyone: Thank you!</p>
-                </div></div>
+                <div class="subtle-hint">
+                    <div class="topic-label">Default settings</div>
+                    <p>Please check the default settings of LocalCDN and change them if you want.<p>
+                    <ul>
+                        <li><strong>Block requests for missing resources:</strong> If a website requests an external resource that LocalCDN cannot deliver, this resource will be loaded from a CDN. For maximum privacy, you can disable this in the settings.</li>
+                        <li><strong>Google fonts are blocked by default:</strong> If you want to load these external fonts from Google for all websites or only for certain websites, you can also change this in the settings.</li>
+                    </ul>
+                    <form action="../options/options.html">
+                        <input type="submit" value="Open settings" />
+                    </form>
+                </div>
             </div>
             <div class="btn-panel">
                 <a class="btn btn-gitlab" href="https://codeberg.org/nobody/LocalCDN" target="_blank" rel="noopener noreferrer"><span class="btn-text">Source Code @Codeberg</span></a>
