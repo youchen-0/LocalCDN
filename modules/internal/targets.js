@@ -354,7 +354,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/lazysizes/4.')) {
         return '4.1.8';
     } else if (type.startsWith('/lazysizes/5.')) {
-        return '5.3.0';
+        return '5.3.1';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
         return '1.9.4';
     } else if (type.startsWith('/libsodium-wrappers/0.')) {
