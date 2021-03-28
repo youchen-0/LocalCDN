@@ -20,7 +20,7 @@
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Μπλοκάρισμα αιτήσεων για ανύπαρκτους πόρους",
+        "message": "Αποκλεισμός αιτήσεων για ανύπαρκτους πόρους",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -52,7 +52,7 @@
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
-        "message": "Για προχωρημένους",
+        "message": "Για προχωρημενους",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
@@ -104,7 +104,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Αυτή η λειτουργία μπορεί να προκαλέσει δυσλειτουργία σε ιστοσελίδες. Παρακαλώ σημειώστε τις πληροφορίες στην σελίδα Wiki.",
+        "message": "Αυτή η λειτουργία μπορεί να προκαλέσει δυσλειτουργία σε ιστοσελίδες. Παρακαλώ σημειώστε τις πληροφορίες στη σελίδα Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -120,11 +120,11 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "Μπλοκάρισμα γραμματοσειρών της Google",
+        "message": "Αποκλεισμός γραμματοσειρών της Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Εάν επιτρέπονται τα αιτήματα για ανύπαρκτους πόρους, οι συνδέσεις στο «fonts.googleapis.com» δεν μπλοκάρονται. Ενεργοποίηση αυτής της επιλογής για μπλοκάρισμα των αιτημάτων.",
+        "message": "Εάν τα αιτήματα για ανύπαρκτους πόρους επιτρέπονται, οι συνδέσεις στο «fonts.googleapis.com» δεν αποκλείονται. Ενεργοποίηση αυτής της επιλογής για αποκλεισμό των αιτημάτων.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -248,19 +248,19 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "Απόκρυψη επιλογής «Συνεισφέρετε»",
+        "message": "Απόκρυψη επιλογής «Δωρεά»",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Υπόδειξη ανύπαρκτων πόρων στο εικονίδιο",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Αλλαγή χρώματος του σήματος σε περίπτωση ανύπαρκτων πόρων.",
         "description": "Change the badge color if resources are missing."
     }
 }

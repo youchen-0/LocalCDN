@@ -86,7 +86,7 @@ main._showReleaseNotes = function (details) {
             if (details.temporary !== true) {
                 chrome.tabs.create({
                     'url': chrome.extension.getURL('pages/welcome/welcome.html'),
-                    'active': false
+                    'active': true
                 });
             }
         });

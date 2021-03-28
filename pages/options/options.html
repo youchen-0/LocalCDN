@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LocalCDN Options</title>
+        <title>Options | LocalCDN</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="../../modules/internal/color-picker/color-picker.css">
-
         <link rel="stylesheet" type="text/css" href="options.css">
         <link rel="stylesheet" type="text/css" href="../base.css">
     </head>
@@ -176,7 +177,7 @@
                 <section class="option">
                     <div id="html-filter-domains-title-exclude" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleExclude">Do not apply HTML filter to these domains:</div>
                     <div id="html-filter-domains-title-include" class="title-option without-checkbox" data-i18n-content="htmlFilterDomainsTitleInclude">Apply HTML filter to these domains:</div>
-                    <textarea rows="7" id="domainsManipulateDOM" class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text"></textarea>
+                    <textarea rows="7" id="tf-domains-manipulate-dom" class="input-text without-checkbox" data-option="domainsManipulateDOM" type="text"></textarea>
                     <div class="description-option without-checkbox" data-i18n-content="htmlFilterDomainsDescription">Enter the domains to be handled or ignored by the HTML filter. One domain per line.</div>
                 </section>
                 <section class="option">
@@ -208,19 +209,19 @@
                     </div>
                     <div class="ruleset-generator">
                         <label class="b-contain" for="generate-ublock-rules">uBlock
-                            <input id="generate-ublock-rules" name="rule-sets" data-ruleset="uBlock" type="radio" value="uBlock">
+                            <input id="generate-ublock-rules" name="rule-sets" data-ruleset="uBlock" type="radio" value="uBlock" autocomplete="off">
                             <div class="b-input"></div>
                         </label>
                     </div>
                     <div class="ruleset-generator">
                         <label class="b-contain" for="generate-umatrix-rules">uMatrix
-                            <input id="generate-umatrix-rules" name="rule-sets" data-ruleset="uMatrix" type="radio" value="uMatrix">
+                            <input id="generate-umatrix-rules" name="rule-sets" data-ruleset="uMatrix" type="radio" value="uMatrix" autocomplete="off">
                             <div class="b-input"></div>
                         </label>
                     </div>
                     <div class="ruleset-generator">
                         <label class="b-contain" for="generate-adguard-rules">AdGuard
-                            <input id="generate-adguard-rules" name="rule-sets" data-ruleset="AdGuard" type="radio" value="AdGuard">
+                            <input id="generate-adguard-rules" name="rule-sets" data-ruleset="AdGuard" type="radio" value="AdGuard" autocomplete="off">
                             <div class="b-input"></div>
                         </label>
                     </div>
