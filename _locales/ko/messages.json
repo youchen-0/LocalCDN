@@ -204,7 +204,7 @@
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Sync",
+        "message": "동기화",
         "description": "Sync"
     },
     "headerImportExport": {
