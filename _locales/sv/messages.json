@@ -72,7 +72,7 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Slå på loggning i webbläsarkonsollen",
+        "message": "Slå på loggning",
         "description": "Enable logging"
     },
     "loggingDescription": {
@@ -144,23 +144,23 @@
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Idag",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Förra veckan",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Förra månaden",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Förra året",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Radera",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
@@ -192,11 +192,11 @@
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Info",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Lagrings typ",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
@@ -204,11 +204,11 @@
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Sync",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Importera/Exportera",
         "description": "Import/Export"
     },
     "labelExportData": {
