@@ -31,7 +31,7 @@ var interceptor = {};
  */
 
 interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
-    let validCandidate, targetDetails, targetPath;
+    let validCandidate, targetDetails, targetPath, targetDetailURL;
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
 
@@ -59,7 +59,9 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         }
     }
 
-    if (targetDetails === false) {
+    targetDetailURL = helpers.extractDomainFromUrl(requestDetails.url, true);
+
+    if (targetDetails === false && !IgnoredHost[targetDetailURL]) {
         ++stateManager.tabs[tabIdentifier].missing;
     }
 
