@@ -14,90 +14,91 @@
     </head>
     <body>
         <img src="../images/logo.svg" alt="LocalCDN" class="logo"/>
-        <div class="container">
-            <h1>Help</h1>
-            <div class="notice">
-                <div class="index">
-                    <ul>
-                        <li><a class="no-icon" href="#introduction">Introduction</a></li>
-                        <li><a class="no-icon" href="#html-filter">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"?</a></li>
-                        <li><a class="no-icon" href="#rule-generator">Rule generator</a></li>
-                        <li><a class="no-icon" href="#websites-issues">Some websites look strange or are not easy to use</a></li>
-                        <li><a class="no-icon" href="#google-fonts">Why is there a "Block Google Fonts" option?</a></li>
-                        <li><a class="no-icon" href="#statistics">What about the statistics? Is anything transferred to any servers?</a></li>
-                        <li><a class="no-icon" href="#sync">What will be synchronized when I select "sync" as storage type?</a></li>
-                    </ul>
-                </div>
+        <h1>Help</h1>
+        <div class="notice">
+            <div class="index">
+                <ul>
+                    <li><a class="no-icon" href="#introduction">Introduction</a></li>
+                    <li><a class="no-icon" href="#html-filter">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"?</a></li>
+                    <li><a class="no-icon" href="#rule-generator">Rule generator</a></li>
+                    <li><a class="no-icon" href="#websites-issues">Some websites look strange or are not easy to use</a></li>
+                    <li><a class="no-icon" href="#google-fonts">Why is there a "Block Google Fonts" option?</a></li>
+                    <li><a class="no-icon" href="#statistics">What about the statistics? Is anything transferred to any servers?</a></li>
+                    <li><a class="no-icon" href="#sync">What will be synchronized when I select "sync" as storage type?</a></li>
+                    <li><a class="no-icon" href="#non-firefox">Non-Firefox Browser</a></li>
+                </ul>
             </div>
-            <div id="introduction" class="notice">
-                <div class="subtle-hint"><div class="topic-label">Introduction</div>
-                    <p>LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following <a href="https://www.localcdn.org/test" rel="nofollow noopener noreferrer">testing utility</a> to find out if you are properly protected. For more information read the <a href="https://www.localcdn.org/tutorial" rel="nofollow noopener noreferrer">tutorial</a> or our <a href="https://codeberg.org/nobody/LocalCDN/wiki" target="_blank" rel="nofollow noopener noreferrer">Wiki pages</a>.</p>
-                </div>
-            </div>
-            <div id="html-filter" class="notice">
-                <div class="subtle-hint"><div class="topic-label">What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</div>
-                    <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these options.</p>
-                    <p><em>Why is it necessary to remove crossorigin and integrity attributes?</em></p>
-                    <p>The crossorigin attribute prevents the replacement because the source is no longer <code><strong>cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js</strong></code> but <code><strong>moz-extension://UUID/resources/jquery/1.12.4</strong></code>. crossorigin forces the browser to ignore other sources.</p>
-                    <p>To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won't include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different.</p>
-                    <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
-                </div>
-            </div>
-            <div id="rule-generator" class="notice">
-                <div class="subtle-hint"><div class="topic-label">Rule generator</div>
-                    <p>If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections.</p>
-                    <p>If you do not want to add these rules, you must allow each CDN connection individually for each website.</p>
-                    <p>
-                        <u><strong>Only uBlock Origin:</strong></u> <br>
-                        These rules are only relevant in "medium" or "hard" mode, because it blocks all 3rd-party resources. They are not necessary in "default", "easy" or "very-easy" mode. For more information, please visit the uBlock Origin Wiki.
-                    </p>
-                    <table>
-                        <caption>Contact Information</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Icon</th>
-                                <th scope="col">Mode</th>
-                                <th scope="col">Rules useful</th>
-                                <th scope="col">uBlock Wiki</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="ublock-easy.png" alt="Default"></a></td>
-                                <td>Default/Easy</td>
-                                <td>No</td>
-                                <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode#very-easy-mode-details-" rel="nofollow">Link (github.com)</a></td>
-                            </tr>
-                            <tr>
-                                <td><img src="ublock-medium.png" alt="Medium"></a></td>
-                                <td>Medium</td>
-                                <td>Yes</td>
-                                <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode" rel="nofollow">Link (github.com)</a></td>
-                            </tr>
-                            <tr>
-                                <td><img src="ublock-hard.png" alt="Hard"></a></td>
-                                <td>Hard</td>
-                                <td>Yes</td>
-                                <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode" rel="nofollow">Link (github.com)</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div id="websites-issues" class="notice">
-                <div class="subtle-hint"><div class="topic-label">Some websites look strange or are not easy to use</div>
-                    <p>There are two possible reasons: Either a framework/library is required that LocalCDN doesn't (yet) deliver or an SOP.</p><p>A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN.</p>
-                    <p>If the layout of a website is incorrect or cannot be used, then it is usually due to this policy, even though the add-on works flawlessly. Unfortunately there is no solution for this at the moment.</p>
-                </div>
-            </div>
-            <div id="google-fonts" class="notice">
-                <div class="subtle-hint"><div class="topic-label">Why is there a "Block Google Fonts" option?</div>
-                    <p>LocalCDN can replace "Google Material Icons". To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains "Google Material Icons", the resource will be replaced. If you uncheck the "Block requests for missing content" option, non-existent resources will be allowed to pass and "Google Fonts" will be loaded, because "Google Material Icons" and "Google Fonts" use the same domain. If you don't want this, you can block "Google Fonts" on LocalCDN.</p>
-                </div>
-            </div>
-            <div id="statistics" class="notice">
-                <div class="subtle-hint"><div class="topic-label">What about the statistics? Is anything transferred to any servers?</div>
-                    <p>Don't panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That's all. I've an example here:</p>
+        </div>
+        <div id="introduction" class="notice">
+            <h2>Introduction</h2>
+            <p>LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following <a href="https://www.localcdn.org/test" rel="nofollow noopener noreferrer">testing utility</a> to find out if you are properly protected. For more information read the <a href="https://www.localcdn.org/tutorial" rel="nofollow noopener noreferrer">tutorial</a> or our <a href="https://codeberg.org/nobody/LocalCDN/wiki" target="_blank" rel="nofollow noopener noreferrer">Wiki pages</a>.</p>
+        </div>
+        <div id="html-filter" class="notice">
+            <h2>What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</h2>
+            <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red).</p>
+            <p>
+                The HTML filter turns this line (blue and red)<br/>
+                <code><span class="code-blue">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"</span> <span class="code-red">integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"</span><span class="code-blue">>&lt;/script></span></code><br/>
+                into this one (only blue)<br/>
+                <code><span class="code-blue">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script></span></code><br/>
+            </p>
+            <p><em>Why is it necessary to remove crossorigin and integrity attributes?</em></p>
+            <p>The crossorigin attribute prevents the replacement because the source is no longer <code><strong>cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js</strong></code> but <code><strong>moz-extension://UUID/resources/jquery/1.12.4</strong></code>. crossorigin forces the browser to ignore other sources.</p>
+            <p>To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won't include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different.</p>
+            <p>Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly.</p>
+        </div>
+        <div id="rule-generator" class="notice">
+            <h2>Rule generator</h2>
+            <p>If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections.</p>
+            <p>If you do not want to add these rules, you must allow each CDN connection individually for each website.</p>
+            <p>
+                <u><strong>Only uBlock Origin:</strong></u> <br>
+                These rules are only relevant in "medium" or "hard" mode, because it blocks all 3rd-party resources. They are not necessary in "default", "easy" or "very-easy" mode. For more information, please visit the uBlock Origin Wiki.
+            </p>
+            <table>
+                <caption>Contact Information</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Icon</th>
+                        <th scope="col">Mode</th>
+                        <th scope="col">Rules useful</th>
+                        <th scope="col">uBlock Wiki</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="ublock-easy.png" alt="Default"></a></td>
+                        <td>Default/Easy</td>
+                        <td>No</td>
+                        <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode#very-easy-mode-details-" rel="nofollow">Link (github.com)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="ublock-medium.png" alt="Medium"></a></td>
+                        <td>Medium</td>
+                        <td>Yes</td>
+                        <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode" rel="nofollow">Link (github.com)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="ublock-hard.png" alt="Hard"></a></td>
+                        <td>Hard</td>
+                        <td>Yes</td>
+                        <td><a href="https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode" rel="nofollow">Link (github.com)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="websites-issues" class="notice">
+            <h2>Some websites look strange or are not easy to use</h2>
+            <p>There are two possible reasons: Either a framework/library is required that LocalCDN doesn't (yet) deliver or an SOP.</p><p>A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN.</p>
+            <p>If the layout of a website is incorrect or cannot be used, then it is usually due to this policy, even though the add-on works flawlessly. Unfortunately there is no solution for this at the moment.</p>
+        </div>
+        <div id="google-fonts" class="notice">
+            <h2>Why is there a "Block Google Fonts" option?</h2>
+            <p>LocalCDN can replace "Google Material Icons". To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains "Google Material Icons", the resource will be replaced. If you uncheck the "Block requests for missing content" option, non-existent resources will be allowed to pass and "Google Fonts" will be loaded, because "Google Material Icons" and "Google Fonts" use the same domain. If you don't want this, you can block "Google Fonts" on LocalCDN.</p>
+        </div>
+        <div id="statistics" class="notice">
+            <h2>What about the statistics? Is anything transferred to any servers?</h2>
+            <p>Don't panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That's all. I've an example here:</p>
 <pre>
 "2020-08-10": {
     "frameworks": {
@@ -108,41 +109,47 @@
     }
 }
 </pre>
-                    <p>The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested.</p>
-                    <p><em>How do I know that's true?</em></p>
-                    <p>The extension storage can be viewed directly with the Firefox browser. Open the URL "about:debugging", switch to "Storage" and select "Extension Storage". Under the key "internalStatisticsData" you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in <a href="https://www.localcdn.org/view-extension-storage.mp4">this video</a>.</p>
-                </div>
-            </div>
-            <div id="sync" class="notice">
-                <div class="subtle-hint"><div class="topic-label">What will be synchronized when I select "sync" as storage type?</div>
-                <p>Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices.</p>
-                <p>If you don't have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected.</p>
-                <p>Things that are never synchronized:</p>
-                <ul>
-                    <li>Amount injected <em>(Numbers of injections)</em></li>
-                    <li>Internal statistics <em>(Yes, No)</em></li>
-                    <li>Internal statistics <em>(Data)</em></li>
-                </ul>
-                <p>Settings that will be synchronized:</p>
-                <ul>
-                    <li>Display injection counts on icon <em>(Yes, No)</em></li>
-                    <li>Notification after an update <em>(Never, New CDNs/Rules, Always)</em></li>
-                    <li>Disable link prefetching <em>(Yes, No)</em></li>
-                    <li>Strip metadata from allowed requests <em>(Yes, No)</em></li>
-                    <li>Deactivate LocalCDN for these domains <em>(Yes, No, URLs)</em></li>
-                    <li>Block requests for missing resources <em>(Yes, No)</em></li>
-                    <li>Block Google Fonts <em>(Yes, No, URLs)</em></li>
-                    <li>Enable logging in browser console <em>(Yes, No)</em></li>
-                    <li>Apply HTML filter for these domains <em>(Yes, No, URLs)</em></li>
-                    <li>Invert HTML filter <em>(Yes, No)</em></li>
-                    <li>Choose an icon for this extension <em>(Default, Light, Blue/Grey)</em></li>
-                </ul>
-                <p>More information about Firefox Sync:</p>
-                <ul>
-                    <li><a href="https://en.wikipedia.org/wiki/Firefox_Sync">Wikipedia - Firefox Sync</a></li>
-                    <li><a href="https://support.mozilla.org/en-US/products/firefox/sync">support.mozilla.org</a></li>
-                </ul>
-            </div>
+            <p>The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested.</p>
+            <p><em>How do I know that's true?</em></p>
+            <p>The extension storage can be viewed directly with the Firefox browser. Open the URL "about:debugging", switch to "Storage" and select "Extension Storage". Under the key "internalStatisticsData" you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in <a href="https://www.localcdn.org/view-extension-storage.mp4">this video</a>.</p>
+        </div>
+        <div id="sync" class="notice">
+            <h3>What will be synchronized when I select "sync" as storage type?</h3>
+            <p>Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices.</p>
+            <p>If you don't have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected.</p>
+            <p>Things that are never synchronized:</p>
+            <ul>
+                <li>Amount injected <em>(Numbers of injections)</em></li>
+                <li>Internal statistics <em>(Yes, No)</em></li>
+                <li>Internal statistics <em>(Data)</em></li>
+            </ul>
+            <p>Settings that will be synchronized:</p>
+            <ul>
+                <li>Display injection counts on icon <em>(Yes, No)</em></li>
+                <li>Notification after an update <em>(Never, New CDNs/Rules, Always)</em></li>
+                <li>Disable link prefetching <em>(Yes, No)</em></li>
+                <li>Strip metadata from allowed requests <em>(Yes, No)</em></li>
+                <li>Deactivate LocalCDN for domains <em>(Yes, No, URLs)</em></li>
+                <li>Block requests for missing resources <em>(Yes, No)</em></li>
+                <li>Block Google Fonts <em>(Yes, No, URLs)</em></li>
+                <li>Enable logging<em>(Yes, No)</em></li>
+                <li>Apply HTML filter for these domains <em>(Yes, No, URLs)</em></li>
+                <li>Invert HTML filter <em>(Yes, No)</em></li>
+                <li>Choose an icon for this extension <em>(Default, Light, Blue/Grey)</em></li>
+            </ul>
+            <p>More information about Firefox Sync:</p>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Firefox_Sync">Wikipedia - Firefox Sync</a></li>
+                <li><a href="https://support.mozilla.org/en-US/products/firefox/sync">support.mozilla.org</a></li>
+            </ul>
+        </div>
+        <div id="non-firefox" class="notice">
+            <h2>Non-Firefox Browser</h2>
+            <p>The following things are supported only by Firefox:</p>
+            <ul>
+                <li>Fonts of "Font Awesome" and "Google Material Icons"</li>
+                <li><a href="#html-filter">HTML-Filter</a></li>
+            </ul>
         </div>
     </body>
 </html>

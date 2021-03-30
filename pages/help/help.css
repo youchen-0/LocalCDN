@@ -2,3 +2,17 @@ table {
     border-collapse: separate;
     border-spacing: 3em 1em;
 }
+
+.code-red {
+    color: red;
+}
+
+.code-blue {
+    color: blue;
+}
+
+@media (prefers-color-scheme: dark) {
+    .code-blue {
+        color: #8484ff;
+    }
+}

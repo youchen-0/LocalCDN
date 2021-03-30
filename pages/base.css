@@ -231,6 +231,25 @@ textarea {
     visibility: hidden;
 }
 
+#chromium-banner {
+    background-color: red;
+    color: white !important;
+    display: none;
+    font-weight: bold;
+    padding: 0.8em;
+    text-align: center;
+}
+
+#chromium-banner > a {
+    color: white;
+    padding-right: 0;
+}
+
+#chromium-banner > a:hover {
+    color: white;
+    filter: none;
+}
+
 @media (prefers-color-scheme: dark) {
     a {
         background: url('../../icons/link-light.svg') no-repeat right center;

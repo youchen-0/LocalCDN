@@ -44,8 +44,8 @@ optionsInfo._renderCdnFrameworkSection = function () {
         optionsInfo._listOfFrameworks[path[1]] = true;
     });
 
-    if (BrowserType.CHROMIUM) {
-        // Chromium based browser does not support Google Material Icons and Font Awesome
+    if (!BrowserType.FIREFOX) {
+        // Non-Firefox browser does not support Google Material Icons and Font Awesome
         document.getElementById('unsupported-frameworks').style.display = 'block';
         unsupportedFrameworks = 2;
     }
