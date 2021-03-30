@@ -199,8 +199,8 @@ const IconType = {
 };
 
 const Regex = {
-    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/icon\?family=(?!.*Material\+Icons.*).*/,
-    'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/(icon|css)\?family=.*Material\+Icons/,
+    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/.*\?family=(?!.*Material\+Icons.*).*/,
+    'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/.*\?family=.*Material\+Icons/,
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
