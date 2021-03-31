@@ -293,11 +293,11 @@ function check_resource() {
 
     # Use Tor Proxy if set
     if [ "$USE_TOR" = true ]; then
-        if ! torsocks wget -qO ./tmp "$url"; then
+        if ! torsocks wget -t 3 -qO ./tmp "$url"; then
             error=true
         fi
     else
-        if ! wget -qO ./tmp "$url"; then
+        if ! wget -t 3 -qO ./tmp "$url"; then
             error=true
         fi
     fi
@@ -553,6 +553,9 @@ function create_url() {
         if [ "${arr_cycle[$subfile]}" != "" ]; then
             url="$CLOUDFLARE/$folder/$version/${arr_cycle[$subfile]}"
         fi
+    elif [ "$folder" = "semantic-ui" ]; then
+        relativpath=$(echo -e "$path" | awk -F"../$folder/$version" '{print $NF}')
+        url="$CLOUDFLARE/$folder/$version/$relativpath"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
