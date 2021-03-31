@@ -55,6 +55,8 @@ targets.determineBundle = function (path) {
         val = 'Bootstrap (Fonts)';
     } else if (path.startsWith('/jquery.cycle2/')) {
         val = 'Cycle2';
+    } else if (path.startsWith('/semantic-ui/')) {
+        val = 'Semantic UI';
     }
 
     return val === '' ? val : `${val} (Bundle)`;
@@ -460,6 +462,8 @@ targets.setLastVersion = function (type, version) {
         return '1.9.0';
     } else if (type.startsWith('/select2/4.')) {
         return '4.0.13';
+    } else if (type.startsWith('/semantic-ui/2.')) {
+        return '2.4.1';
     } else if (type.startsWith('/showdown/1.')) {
         return '1.9.1';
     } else if (type.startsWith('/showdown/0.')) {

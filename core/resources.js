@@ -903,6 +903,11 @@ var resources = {
         'path': 'resources/select2/{version}/',
         'type': 'application/javascript'
     },
+    // Semantic-UI (Bundle)
+    'semanticUi': {
+        'path': 'resources/semantic-ui/{version}/',
+        'type': 'application/javascript'
+    },
     // showdown [Deprecated?]
     'showdown': {
         'path': 'resources/showdown/{version}/showdown.min.jsm',

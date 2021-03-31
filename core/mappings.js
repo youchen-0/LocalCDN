@@ -374,6 +374,7 @@ mappings.cdn = {
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'select2/{version}/': resources.select2,
+            'semantic-ui/{version}/': resources.semanticUi,
             'showdown/{version}/showdown.': resources.showdown,
             'showdown/{version}/Showdown.': resources.showdown,
             'slick-carousel/{version}/slick.min.css': resources.slickCarouselCSS,
