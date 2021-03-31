@@ -144,6 +144,8 @@ targets.setLastVersion = function (type, version) {
         return '3.7.2';
     } else if (type.startsWith('/animate.css/4.')) {
         return '4.1.1';
+    } else if (type.startsWith('/animejs/3.')) {
+        return '3.2.1';
     } else if (type.startsWith('/autocomplete.js/')) {
         return '0.38.0';
     } else if (type.startsWith('/angular-material/1.')) {
@@ -560,6 +562,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'anime.min.jsm': 'animejs',
     'lightcase.min.jsm': 'lightcase (JS)',
     'lightcase.min.css': 'lightcase (CSS)',
     'jasny-bootstrap.min.css': 'Jasny Bootstrap (JS)',

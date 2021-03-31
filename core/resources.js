@@ -170,6 +170,11 @@ var resources = {
         'path': 'resources/animate.css/{version}/animate.min.css',
         'type': 'text/css'
     },
+    // animejs
+    'animejs': {
+        'path': 'resources/animejs/{version}/anime.min.jsm',
+        'type': 'application/javascript'
+    },
     // autocomplete.js
     'autocompleteJS': {
         'path': 'resources/autocomplete.js/{version}/autocomplete.min.jsm',

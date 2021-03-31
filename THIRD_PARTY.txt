@@ -108,6 +108,7 @@ https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js
 https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css
 https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
+https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
 https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.min.js
 https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js
 https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js
