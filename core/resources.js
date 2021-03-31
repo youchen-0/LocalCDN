@@ -630,6 +630,15 @@ var resources = {
         'path': 'resources/libsodium-wrappers/{version}/sodium.min.jsm',
         'type': 'application/javascript'
     },
+    // lightcase
+    'lightcaseJS': {
+        'path': 'resources/lightcase/{version}/js/lightcase.min.jsm',
+        'type': 'application/javascript'
+    },
+    'lightcaseCSS': {
+        'path': 'resources/lightcase/{version}/css/lightcase.min.css',
+        'type': 'text/css'
+    },
     // lightGallery
     'lightGalleryJS': {
         'path': 'resources/lightgallery/{version}/js/lightgallery-all.min.jsm',

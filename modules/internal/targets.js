@@ -365,6 +365,8 @@ targets.setLastVersion = function (type, version) {
         return '1.9.4';
     } else if (type.startsWith('/libsodium-wrappers/0.')) {
         return '0.5.4';
+    } else if (type.startsWith('/lightcase/2.')) {
+        return '2.5.0';
     } else if (type.startsWith('/lightgallery/1.')) {
         return '1.10.0';
     } else if (type.startsWith('/noUiSlider/14.')) {
@@ -558,6 +560,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'lightcase.min.jsm': 'lightcase (JS)',
+    'lightcase.min.css': 'lightcase (CSS)',
     'jasny-bootstrap.min.css': 'Jasny Bootstrap (JS)',
     'jasny-bootstrap.min.jsm': 'Jasny Bootstrap (CSS)',
     'bulma.min.css': 'Bulma',

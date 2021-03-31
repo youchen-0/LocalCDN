@@ -869,6 +869,9 @@ https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.1/lazysizes.min.js
 https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.4/libphonenumber-js.min.js
 https://cdnjs.cloudflare.com/ajax/libs/libsodium-wrappers/0.5.4/sodium.min.js
+https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/css/lightcase.min.css
+https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/fonts/lightcase.woff
+https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/js/lightcase.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/fonts/lg.woff
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js

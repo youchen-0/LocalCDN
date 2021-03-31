@@ -315,6 +315,8 @@ mappings.cdn = {
             'lazysizes/{version}/lazysizes.min.js': resources.lazysizes,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
             'libsodium-wrappers/{version}/sodium.min.js': resources.libsodiumJS,
+            'lightcase/{version}/js/lightcase.': resources.lightcaseJS,
+            'lightcase/{version}/css/lightcase.': resources.lightcaseCSS,
             'lightgallery/{version}/js/lightgallery.': resources.lightGalleryJS,
             'lightgallery/{version}/css/lightgallery.': resources.lightGalleryCSS,
             'lodash.js/{version}/lodash.': resources.lodashJS,
