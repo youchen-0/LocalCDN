@@ -562,6 +562,7 @@ mappings.cdn = {
             'bootstrap/{version}/js/bootstrap.': resources.bootstrapJS,
             'dojo/{version}/dojo.': resources.dojo,
             'emberjs/{version}/ember.': resources.ember,
+            'fontawesome/{version}/css/font-awesome.min.css': resources.fontawesome,
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.js': resources.fancyBoxJS,
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.min.js': resources.fancyBoxJS,
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.css': resources.fancyBoxCSS,
