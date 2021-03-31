@@ -281,6 +281,8 @@ mappings.cdn = {
             'hogan.js/{version}/hogan.': resources.hoganJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'iScroll/{version}/iscroll.min.js': resources.iScroll,
+            'jasny-bootstrap/{version}/css/jasny-bootstrap.': resources.jasnyBootstrapCSS,
+            'jasny-bootstrap/{version}/js/jasny-bootstrap.': resources.jasnyBootstrapJS,
             'jeditable.js/{version}/jquery.jeditable.min.js': resources.jeditableJS,
             'jeditable.js/{version}/jeditable.min.js': resources.jeditableJS,
             'jets/{version}/jets.': resources.jetsJS,

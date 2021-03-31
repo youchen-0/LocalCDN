@@ -473,6 +473,15 @@ var resources = {
         'path': 'resources/iScroll/{version}/iscroll.min.jsm',
         'type': 'application/javascript'
     },
+    // jasny-bootstrap
+    'jasnyBootstrapJS': {
+        'path': 'resources/jasny-bootstrap/{version}/js/jasny-bootstrap.min.jsm',
+        'type': 'application/javascript'
+    },
+    'jasnyBootstrapCSS': {
+        'path': 'resources/jasny-bootstrap/{version}/css/jasny-bootstrap.min.css',
+        'type': 'text/css'
+    },
     // jeditableJS
     'jeditableJS': {
         'path': 'resources/jeditable.js/{version}/jquery.jeditable.min.jsm',

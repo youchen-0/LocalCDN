@@ -347,6 +347,10 @@ targets.setLastVersion = function (type, version) {
         return '1.4.5';
     } else if (type.startsWith('/nvd3/1.')) {
         return '1.8.6';
+    } else if (type.startsWith('/jasny-bootstrap/4.')) {
+        return '4.0.0';
+    } else if (type.startsWith('/jasny-bootstrap/3.')) {
+        return '3.1.3';
     } else if (type.startsWith('/js-cookie/2.')) {
         return '2.2.1';
     } else if (type.startsWith('/knockout/3.')) {
@@ -550,6 +554,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jasny-bootstrap.min.css': 'Jasny Bootstrap (JS)',
+    'jasny-bootstrap.min.jsm': 'Jasny Bootstrap (CSS)',
     'bulma.min.css': 'Bulma',
     'hogan.min.jsm': 'hogan.js',
     'highlight.min.jsm': 'highlight.js (Bundle)',
