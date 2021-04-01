@@ -71,6 +71,7 @@ optionsAdvanced.init = function (opt) {
     blockGoogleFonts = options.getOptionElement(Setting.BLOCK_GOOGLE_FONTS);
     blockGoogleFonts.addEventListener('change', options.onOptionChanged);
     blockGoogleFonts.checked = opt[Setting.BLOCK_GOOGLE_FONTS];
+    optionsAdvanced.preSelectBlockGoogleFonts(blockGoogleFonts.checked);
 
     allowedDomainsGoogleFonts = options.getOptionElement(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS);
     allowedDomainsGoogleFonts.addEventListener('keyup', options.onOptionChanged);
