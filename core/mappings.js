@@ -128,6 +128,7 @@ mappings.cdn = {
             'animejs/{version}/anime.': resources.animejs,
             'axios/{version}/axios.': resources.axios,
             'babel-polyfill/{version}/polyfill.': resources.babelPolyfill,
+            'babel-standalone/{version}/babel.': resources.babelStandalone,
             'backbone.js/{version}/backbone.': resources.backbone,
             'backbone.js/{version}/backbone-min.': resources.backbone,
             'baguettebox.js/{version}/baguetteBox.js': resources.baguetteBoxJS,

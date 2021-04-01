@@ -158,6 +158,8 @@ targets.setLastVersion = function (type, version) {
         return '0.21.1';
     } else if (type.startsWith('/babel-polyfill/')) {
         return '7.12.1';
+    } else if (type.startsWith('/babel-standalone/')) {
+        return '6.26.0';
     } else if (type.startsWith('/backbone.js/0.')) {
         return '0.9.10';
     } else if (type.startsWith('/backbone.js/1.')) {
@@ -562,6 +564,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'babel.min.jsm': 'Babel standalone',
     'anime.min.jsm': 'animejs',
     'lightcase.min.jsm': 'lightcase (JS)',
     'lightcase.min.css': 'lightcase (CSS)',
