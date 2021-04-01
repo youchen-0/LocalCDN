@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Skyddar dig mot att spåras av \"gratis\" centraliserad innehållsleverans.",
+        "message": "Skyddar dig mot att spåras av CDNs (Innehållsleveransnätverk) genom vidarebefordring till lokala resurser.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Ange domäner för vitlistning. Separera flera domänposter med semikolon (;).",
+        "message": "Ange domäner för vitlistning. En per linje.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -128,11 +128,11 @@
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Välj en icon för detta tillägg",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Intern statistik",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
@@ -140,7 +140,7 @@
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Statistik",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
@@ -172,7 +172,7 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Är du säker på att du vill radera all statistik?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
@@ -184,11 +184,11 @@
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Avancerat",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Annat",
         "description": "Other"
     },
     "btnInfo": {
@@ -200,7 +200,7 @@
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Lokal",
         "description": "Local"
     },
     "labelStorageTypeSync": {
@@ -212,55 +212,55 @@
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Säkerhetskopiera till fil",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Återställ från fil",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Import lyckades",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Import mislyckad",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Notifiera efter en uppdatering",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Aldrig (Tysta Uppdateringar)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Bara om nya CDNs och regler",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Alltid",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Websida trasig?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Dölj donation knapp",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Indikera saknade resurser på ikonen",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Ändra färg om resurser saknas.",
         "description": "Change the badge color if resources are missing."
     }
 }
