@@ -251,6 +251,8 @@ targets.setLastVersion = function (type, version) {
         return '2.1.5';
     } else if (type.startsWith('/fancybox/3.')) {
         return '3.5.7';
+    } else if (type.startsWith('/feather-icons/4.')) {
+        return '4.28.0';
     } else if (type.startsWith('/flv.js/')) {
         return '1.5.0';
     } else if (type.startsWith('/font-awesome/3.')) {
@@ -564,6 +566,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'feather.min.jsm': 'Feather Icons',
     'babel.min.jsm': 'Babel standalone',
     'anime.min.jsm': 'animejs',
     'lightcase.min.jsm': 'lightcase (JS)',

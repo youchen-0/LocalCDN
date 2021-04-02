@@ -413,6 +413,11 @@ var resources = {
         'path': 'resources/fancybox/{version}/jquery.fancybox.min.jsm',
         'type': 'application/javascript'
     },
+    // Feather
+    'feather': {
+        'path': 'resources/feather-icons/{version}/feather.min.jsm',
+        'type': 'application/javascript'
+    },
     // Finify bundle
     'findifyBundle': {
         'path': 'resources/findify-bundle/{version}/',
