@@ -923,7 +923,7 @@ https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js
 https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.4/plyr.min.css
 https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.4/plyr.min.js
 https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js
-https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js
+https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js
 https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.7.2/prop-types.min.js
 https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js
 https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.3/prototype.min.js
