@@ -214,6 +214,11 @@ var resources = {
         'path': 'resources/blazy/{version}/blazy.min.jsm',
         'type': 'application/javascript'
     },
+    // bluebird
+    'bluebird': {
+        'path': 'resources/bluebird/{version}/bluebird.min.jsm',
+        'type': 'application/javascript'
+    },
     // BootboxJS
     'bootbox': {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm',

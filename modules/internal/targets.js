@@ -168,6 +168,8 @@ targets.setLastVersion = function (type, version) {
         return '1.11.1';
     } else if (type.startsWith('/blazy/1.')) {
         return '1.8.2';
+    } else if (type.startsWith('/bluebird/3.')) {
+        return '3.7.2';
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
@@ -566,6 +568,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bluebird.min.jsm': 'bluebird',
     'feather.min.jsm': 'Feather Icons',
     'babel.min.jsm': 'Babel standalone',
     'anime.min.jsm': 'animejs',
