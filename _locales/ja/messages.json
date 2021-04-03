@@ -24,7 +24,7 @@
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "必要なリソースがローカルで利用できない場合、リクエストを取り消します。",
+        "message": "要求されたリソースがローカルで利用できない場合、リクエストを取り消します。",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
@@ -40,7 +40,7 @@
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "プライバシー向上のために、許可されたCDNリクエストから機密データを取り除きます。",
+        "message": "許可されたCDNリクエストから機密データを取り除き、プライバシーを向上させます。",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
@@ -80,7 +80,7 @@
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "この機能はウェブサイトの機能を妨げる場合があります。影響を受けたサイトのドメインをその都度この許可リストに追加できない限りは、この機能を有効化したままにしないでください。",
+        "message": "この機能はウェブサイトの機能を妨げる場合があります。影響を受けたサイトのドメインをその都度許可リストに追加できない限りは、この機能を有効化したままにしないでください。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -100,7 +100,7 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "このオプションを有効にするとHTMLフィルターは常時適用されますが、リスト内のドメインでは無効になります。このオプションが無効の場合は、HTMLフィルターはリスト内のドメインでのみ適用される用になります。",
+        "message": "HTMLフィルターを常時適用させるにはこのオプションを有効にしてください。リスト内のドメインではフィルターが適用されなくなります。このオプションを無効にすると、HTMLフィルターはリスト内のドメインでのみ適用されるようになります。",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -136,7 +136,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "この機能は現在実験段階です。データは外部に転送されず、全てローカル上で処理されます。",
+        "message": "この機能は現在実験段階です。全ての処理はローカル上で行われ、データが外部に送信されることもありません。",
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -260,7 +260,7 @@
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "不足しているリソースがある場合にバッジの色を変化させます。",
+        "message": "不足しているリソースがある場合、バッジの色を変化させます。",
         "description": "Change the badge color if resources are missing."
     }
 }
