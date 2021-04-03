@@ -76,7 +76,7 @@
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Öppna \"Webbläsarkonsol\" ( CTRL + SKIFT + J ) för att visa saknade resurser.",
+        "message": "Du kan öppna loggen med iconen i menyn. Loggen blir raderad när du stänger webläsaren eller stänger av loggning.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -168,7 +168,7 @@
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Utbytta ramverk",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
@@ -180,7 +180,7 @@
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Allmänt",
         "description": "Basic"
     },
     "btnAdvanced": {
@@ -204,7 +204,7 @@
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Sync",
+        "message": "Synk",
         "description": "Sync"
     },
     "headerImportExport": {
