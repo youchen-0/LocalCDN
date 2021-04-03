@@ -556,6 +556,8 @@ function create_url() {
     elif [ "$folder" = "semantic-ui" ]; then
         relativpath=$(echo -e "$path" | awk -F"../$folder/$version" '{print $NF}')
         url="$CLOUDFLARE/$folder/$version/$relativpath"
+    elif [ "$folder" = "Chart.js" ] && [ "$version" != "2.9.4" ]; then
+        url="$CLOUDFLARE/$folder/$version/chart.min.js"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
