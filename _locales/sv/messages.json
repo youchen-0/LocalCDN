@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Skriv in domänerna som ska hanteras eller ignoreras av HTML filtret. Ett inlägg per rad.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -124,7 +124,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Om förfrågningar när resurs saknas är tillåtna, blir anlutningar till \"fonts.googleapis.com\" ej blockerade. Slå på denna inställning för att blockera dessa förfrågningar.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -136,7 +136,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Denna funktion är nuvarande experimentell. Ingen data skickas. Allt är lokalt på din enhet.",
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -164,7 +164,7 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Genomsnitt (Insatta per dag)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "",
+        "message": "Dessa domäner är tillåtna att ladda Google Fonts. Ett inlägg per rad.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
