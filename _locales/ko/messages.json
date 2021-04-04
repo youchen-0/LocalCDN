@@ -12,19 +12,19 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "대체된 횟수를 아이콘에 표시",
+        "message": "대체한 리소스의 개수를 아이콘에 표시",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "로컬 리소스로 대체한 요청의 개수를 확장 기능 아이콘에 표시합니다.",
+        "message": "대체한 리소스의 개수를 확장 기능 아이콘에 표시합니다.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "존재하지 않는 리소스에 대한 요청 차단",
+        "message": "누락된 리소스에 대한 요청 차단",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "필요한 리소스를 로컬에서 사용할 수 없는 경우 차단된 요청을 취소합니다.",
+        "message": "로컬에 존재하지 않는 리소스를 필요로 하는 요청을 차단합니다.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
@@ -36,7 +36,7 @@
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "허용된 요청에서 메타데이터를 제거",
+        "message": "허가된 요청에서 메타데이터를 제거",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "다음 도메인에 대해 LocalCDN 비활성화:",
+        "message": "다음 도메인에서 LocalCDN 비활성화:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
@@ -76,11 +76,11 @@
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "메뉴 아이콘에서 로그를 열 수 있습니다. 브라우저를 닫거나 로깅을 비활성화하면 로그는 삭제됩니다.",
+        "message": "메뉴 아이콘에서 로그를 열 수 있습니다. 로그는 브라우저를 닫거나 로깅을 비활성화하면 삭제됩니다.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "이 기능은 웹사이트를 망가뜨립니다. 영향을 받는 도메인을 직접 얼로우리스트에 추가할 준비가 되지 않았을 경우 이 기능을 활성화하지 마십시오.",
+        "message": "이 기능은 웹사이트를 망가뜨립니다. 영향을 받는 도메인을 직접 얼로우리스트에 추가할 준비가 되지 않은 경우, 이 기능을 활성화하지 마십시오.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -100,7 +100,7 @@
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "이 옵션을 활성화하면 HTML 필터가 항상 적용됩니다. 이 경우 위 목록의 도메인은 무시됩니다. 이 옵션이 비활성화된 경우, HTML 필터는 위 목록의 도메인에만 적용됩니다.",
+        "message": "이 옵션을 활성화하면 항상 HTML 필터가 적용됩니다. 이 경우 위 목록의 도메인은 무시됩니다. 이 옵션을 비활성화하면 위 목록의 도메인에만 HTML 필터가 적용됩니다.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -124,7 +124,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "누락된 리소스에 대한 요청을 허용하는 경우, \"fonts.googleapis.com\"에 대한 연결은 차단되지 않습니다. 이러한 요청을 차단하려면 이 옵션을 활성화하세요.",
+        "message": "누락된 리소스에 대한 요청을 허용하는 경우, \"fonts.googleapis.com\"에 대한 연결이 차단되지 않습니다. 이러한 요청을 차단하려면 이 옵션을 활성화하세요.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -136,7 +136,7 @@
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "이 기능은 현재 실험적인 단계에 있습니다. 데이터는 전송되지 않습니다. 이 기기 안에서만 이루어집니다.",
+        "message": "이 기능은 현재 실험적인 단계에 있습니다. 데이터는 전송되지 않습니다. 이 기기 안에서만 처리됩니다.",
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
@@ -256,11 +256,11 @@
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "아이콘에 누락된 리소스 표시하기",
+        "message": "리소스가 누락되었음을 아이콘에 표시",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "리소스가 누락되었을 경우 뱃지 색상 바꾸기.",
+        "message": "리소스가 누락되었을 경우 뱃지 색상을 바꿉니다.",
         "description": "Change the badge color if resources are missing."
     }
 }
