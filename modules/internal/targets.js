@@ -174,6 +174,8 @@ targets.setLastVersion = function (type, version) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
         return '5.5.2';
+    } else if (type.startsWith('/twitter-bootstrap/2.')) {
+        return '2.3.2';
     } else if (type.startsWith('/twitter-bootstrap/3.')) {
         if (helpers.compareVersion('3.0.0', version)) return '3.0.0'; // <= 3.0.0
         else if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7

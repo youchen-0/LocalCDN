@@ -73,6 +73,7 @@
 readonly CLOUDFLARE="https://cdnjs.cloudflare.com/ajax/libs"
 readonly CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
 readonly JSDELIVR="https://cdn.jsdelivr.net"
+readonly NETDNA_BOOTSTRAPCDN="https://netdna.bootstrapcdn.com"
 readonly GITHUB="https://raw.githubusercontent.com"
 
 
@@ -494,13 +495,17 @@ function create_url() {
         else
             url="$CLOUDFLARE/$folder/$version/$jfile"
         fi
-    elif [ "$folder" = "twitter-bootstrap" ]; then
+    elif [ "$folder" = "twitter-bootstrap" ] && [ "$version" != "2.3.2" ]; then
         if [[ "$subfile" =~ \.css$ ]]; then
             url="$CLOUDFLARE/$folder/$version/css/$subfile"
         elif [[ "$subfile" =~ \.js$ ]]; then
             url="$CLOUDFLARE/$folder/$version/js/$subfile"
         elif [ "$subfile" = "glyphicons-halflings-regular.woff2" ]; then
             url="$CLOUDFLARE/twitter-bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2"
+        fi
+    elif [ "$folder" = "twitter-bootstrap" ] && [ "$version" = "2.3.2" ]; then
+        if [[ "$subfile" =~ \.css$ ]]; then
+            url="$NETDNA_BOOTSTRAPCDN/$folder/$version/css/bootstrap-combined.no-icons.min.css"
         fi
     elif [ "$folder" = "webcomponentsjs" ]; then
         url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"

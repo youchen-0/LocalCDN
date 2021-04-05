@@ -914,6 +914,10 @@ mappings.cdn = {
         },
         '/font-awesome/': {
             '{version}/css/font-awesome.': resources.fontawesome
+        },
+        '/twitter-bootstrap/': {
+            '{version}/css/bootstrap.': resources.bootstrapCSS,
+            '{version}/css/bootstrap-combined.': resources.bootstrapCSS
         }
     },
     // Font Awesome CDN
