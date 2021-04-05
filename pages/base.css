@@ -232,22 +232,14 @@ textarea {
 }
 
 #chromium-banner {
-    background-color: red;
-    color: white !important;
+    background-color: #ffcccc;
+    border: 1px solid red;
+    border-radius: 3px;
     display: none;
     font-weight: bold;
+    margin-top: 20px;
     padding: 0.8em;
     text-align: center;
-}
-
-#chromium-banner > a {
-    color: white;
-    padding-right: 0;
-}
-
-#chromium-banner > a:hover {
-    color: white;
-    filter: none;
 }
 
 @media (prefers-color-scheme: dark) {
