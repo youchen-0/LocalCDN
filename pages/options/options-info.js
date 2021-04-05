@@ -64,11 +64,6 @@ optionsInfo._renderCdnFrameworkSection = function () {
 optionsInfo._renderLinkSection = function () {
     /* eslint-disable brace-style*/
     document.getElementById('btn-info-tab').addEventListener('click', options._changeTab);
-    document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
-    document.getElementById('link-changelog').addEventListener('click', function () { options._onLinkClick(Links.CHANGELOG); });
-    document.getElementById('link-donate').addEventListener('click', function () { options._onLinkClick(Links.DONATE); });
-    document.getElementById('link-faq').addEventListener('click', function () { options._onLinkClick(Links.FAQ); });
-    document.getElementById('link-statistic').addEventListener('click', function () { options._onLinkClick(Links.STATISTICS); });
     /* eslint-enable brace-style*/
 };
 
