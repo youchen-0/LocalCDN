@@ -30,6 +30,7 @@ welcome._onDocumentLoaded = function () {
     if (!BrowserType.FIREFOX) {
         document.getElementById('chromium-banner').style.display = 'block';
     }
+    document.getElementById('open-settings').addEventListener('mouseup', function () { chrome.runtime.openOptionsPage(); });
 };
 
 document.addEventListener('DOMContentLoaded', welcome._onDocumentLoaded);
