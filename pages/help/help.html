@@ -25,7 +25,7 @@
                     <li><a class="no-icon" href="#google-fonts">Why is there a "Block Google Fonts" option?</a></li>
                     <li><a class="no-icon" href="#statistics">What about the statistics? Is anything transferred to any servers?</a></li>
                     <li><a class="no-icon" href="#sync">What will be synchronized when I select "sync" as storage type?</a></li>
-                    <li><a class="no-icon" href="#non-firefox">Non-Firefox Browser</a></li>
+                    <li><a class="no-icon" href="#browser-compatibility">Browser compatibility</a></li>
                 </ul>
             </div>
         </div>
@@ -37,10 +37,10 @@
             <h2>What is "<span data-i18n-content="labelManipulateDOM">HTML filter</span>"? (Firefox only)</h2>
             <p>In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red).</p>
             <p>
-                The HTML filter turns this line (blue and red)<br/>
-                <code><span class="code-blue">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"</span> <span class="code-red">integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"</span><span class="code-blue">>&lt;/script></span></code><br/>
-                into this one (only blue)<br/>
-                <code><span class="code-blue">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script></span></code><br/>
+                The HTML filter removes the red characters from this example:<br/>
+                <code><span class="code-blue">&lt;script&nbsp;src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"</span>&nbsp;<span class="code-red">integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="&nbsp;crossorigin="anonymous"</span><span class="code-blue">>&lt;/script></span></code><br/><br/>
+                The result then looks like this:<br/>
+                <code><span class="code-blue">&lt;script&nbsp;src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script></span></code><br/><br/><br/>
             </p>
             <p><em>Why is it necessary to remove crossorigin and integrity attributes?</em></p>
             <p>The crossorigin attribute prevents the replacement because the source is no longer <code><strong>cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js</strong></code> but <code><strong>moz-extension://UUID/resources/jquery/1.12.4</strong></code>. crossorigin forces the browser to ignore other sources.</p>
@@ -55,7 +55,7 @@
                 <u><strong>Only uBlock Origin:</strong></u> <br>
                 These rules are only relevant in "medium" or "hard" mode, because it blocks all 3rd-party resources. They are not necessary in "default", "easy" or "very-easy" mode. For more information, please visit the uBlock Origin Wiki.
             </p>
-            <table>
+            <table class="table-ublock">
                 <caption>Contact Information</caption>
                 <thead>
                     <tr>
@@ -143,13 +143,72 @@
                 <li><a href="https://support.mozilla.org/en-US/products/firefox/sync">support.mozilla.org</a></li>
             </ul>
         </div>
-        <div id="non-firefox" class="notice">
-            <h2>Non-Firefox Browser</h2>
-            <p>The following things are supported only by Firefox:</p>
-            <ul>
-                <li>Fonts of "Font Awesome" and "Google Material Icons"</li>
-                <li><a href="#html-filter">HTML-Filter</a></li>
-            </ul>
+        <div id="browser-compatibility" class="notice">
+            <h2>Browser compatibility</h2>
+            <table class="table-browser-compatibility">
+                <thead>
+                    <tr class="browser-compatibility">
+                       <th></th>
+                       <th class="browser-compatibility-chrome"><span class="bc-head-txt-label bc-head-icon-chrome">Chrome*</span></th>
+                       <th class="browser-compatibility-firefox"><span class="bc-head-txt-label bc-head-icon-firefox">Firefox</span></th>
+                       <th class="browser-compatibility-chrome_android"><span class="bc-head-txt-label bc-head-icon-chrome_android">Chrome* Android</span></th>
+                       <th class="browser-compatibility-firefox_android"><span class="bc-head-txt-label bc-head-icon-firefox_android">Firefox for Android</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#html-filter">HTML filter</a></td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Replace "Font Awesome"</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Replace "Google Material Icons"</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Replace Fonts of "Bootstrap"</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Replace other resources</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Upgrade all resources</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                        <td class="browser-compatibility-support-yes">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Replace "Google Fonts"</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                        <td class="browser-compatibility-support-no">No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>*) Chrome = All Chromium based Browser (Edge, Opera, ...)</p>
+            <p>This is not a limitation of LocalCDN, but missing API support of Chromium based browsers.</p>
         </div>
     </body>
 </html>
