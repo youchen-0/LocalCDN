@@ -2,27 +2,41 @@
 
 The following is a set of guidelines for contributing to LocalCDN.
 
-Pull requests are very welcome. Feel free to suggest changes to this or any other document in a pull request as well.
+Pull requests via codeberg are the best way to contribute, and are always welcome. Pull requests are an easy way to add frameworks and update resources.  Feel free to suggest changes to this or any other document in a pull request as well.
 
+Please note the two-branch structure of this extension.  The "develop" branch is where the next release is being produced, while "main" holds the current release.  Target all pull requests to the develop branch.
 
 ## Content
 * [Guidelines](#guidelines)
 * [Add new resources](#add-new-resources)
-  * [Add bundled resources](#add-bundled-resources)
   * [Add simple resources](#add-simple-resources)
+  * [Add bundled resources](#add-bundled-resources)
   * [Special cases](#special-cases)
+* [Add new mapping](#add-new-mapping)
 * [Update Resource](#update-resource)
 * [New CDNs](#new-cdns)
   * [CDN as a mirror](#cdn-as-a-mirror)
   * [CDN](#add-new-cdn)
 * [Testing](#testing)
+  * [Firefox](#firefox)
+  * [Chrome](#chrome)
+* [Translating](#translating)
 
 ## Guidelines
+
+The following are guidelines for making changes.
+
+### What frameworks and files to use
 
 * If possible please always use the minified version (`*.min.js` or `*.min.css`)
 * File extension of the JavaScript resources must be changed from `*.min.js` to `*.min.jsm`
 * For fonts only `*.woff` and `*.woff2` are necessary
-* Follow the CDN structure (Primary CDN: `cdnjs.cloudflare.com`)
+* Do not bundle large frameworks, as extensions can only be up to a limited size
+* Please do not add beta or any other test or pre-release. This is not allowed by Mozilla.
+
+### File placement
+
+Follow the CDN structure (Primary CDN: `cdnjs.cloudflare.com`)
 
   ```
   [name]/[version]/[subdirectory]/[filename]
@@ -48,17 +62,89 @@ Pull requests are very welcome. Feel free to suggest changes to this or any othe
   /resources/                            jquery/3.6.0/jquery.min.jsm
   ```
 
-* Style guide
+### Style guide
 
   Code formatting is mostly a matter of faith. Your code will probably work anyway, but readable code is very valuable. Regardless of what formatting is used, it is important that this is identical throughout the project. Therefore, please use the files located in the root directory for ESLint.
 
-* Please do not add beta or any other test or pre-release. This is not allowed by Mozilla.
-
-## Add new resources
+## Adding new resources
 
 ### Difference between 'Simple' and 'Bundle'
 
-If you want to add multiple files (more than 1x JavaScript and 1x Stylesheet), then integrate it as a bundle. This is easier than specifying all the files individually.
+If you want to add multiple related files (more than 1x JavaScript and 1x Stylesheet), then integrate it as a bundle. This is easier than specifying all the files individually.
+
+#### Add simple resources
+
+> Example: `hls.js`
+>
+> Link: `https://cdnjs.com/libraries/hls.js/0.14.17`
+>
+> CDN: `https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.14.17/hls.min.js`
+
+
+##### 1. Download file (and rename if necessary) to: `/resources/hls.js/0.14.17/hls.min.jsm`
+
+Please note the file extensions. Only JavaScript files must be renamed to `*.jsm`. There is no need to rename `*.css`, `*.woff` and `*.woff2` files.
+
+##### 2. Create resource in [`/core/resources.js`](https://codeberg.org/nobody/LocalCDN/src/commit/ad79ed13d5fee5e4892084d05d7a68e9d7c9f1aa/core/resources.js#L381-L384)
+
+:warning: `{version}` is a placeholder and will be filled automatically by LocalCDN.
+
+```javascript
+var resources = {
+   [...]
+   // hls.js
+   'hlsJS': {
+      'path': 'resources/hls.js/{version}/hls.min.jsm'
+   },
+   [...]
+};
+```
+
+##### 3. Specify name in [`/modules/internal/targets.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/modules/internal/targets.js#L717)
+
+```javascript
+const ListOfFiles = {
+   [...]
+   'hls.min.jsm': 'hls.js',
+   [...]
+};
+```
+
+##### 4. Specify version in [`/modules/internal/targets.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/modules/internal/targets.js#L276-L277)
+
+```javascript
+targets.setLastVersion = function (type, version) {
+   [...]
+   } else if (type.startsWith('/hls.js/')) {
+      return '0.14.17';
+   }
+   [...]
+};
+```
+
+##### 5. Create mapping in [`/core/mappings.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/core/mappings.js#L489)
+
+:warning: `{version}` is a placeholder and will be filled automatically by LocalCDN.
+
+```javascript
+mappings.cdn = {
+   [...]
+   // jsDelivr (Cloudflare)
+   'cdn.jsdelivr.net': {
+      '/npm/': {
+         [...]
+         'hls.js@{version}': resources.hlsJS,
+         [...]
+      }
+   }
+   [...]
+};
+```
+
+##### 6. Run [`/audit/audit.sh`](https://codeberg.org/nobody/LocalCDN/src/branch/main/audit) (modify if necessary)
+```
+bash ./audit.sh -trd hls.js
+```
 
 #### Add bundled resources
 
@@ -135,80 +221,6 @@ mappings.cdn = {
 bash ./audit.sh -trd highlight.js
 ```
 
-#### Add simple resources
-
-> Example: `hls.js`
->
-> Link: `https://cdnjs.com/libraries/hls.js/0.14.17`
->
-> CDN: `https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.14.17/hls.min.js`
-
-
-##### 1. Download file (and rename if necessary) to: `/resources/hls.js/0.14.17/hls.min.jsm`
-
-Please note the file extensions. Only JavaScript files must be renamed to `*.jsm`. There is no need to rename `*.css`, `*.woff` and `*.woff2` files.
-
-##### 2. Create resource in [`/core/resources.js`](https://codeberg.org/nobody/LocalCDN/src/commit/ad79ed13d5fee5e4892084d05d7a68e9d7c9f1aa/core/resources.js#L381-L384)
-
-:warning: `{version}` is a placeholder and will be filled automatically by LocalCDN.
-
-```javascript
-var resources = {
-   [...]
-   // hls.js
-   'hlsJS': {
-      'path': 'resources/hls.js/{version}/hls.min.jsm'
-   },
-   [...]
-};
-```
-
-##### 3. Specify name in [`/modules/internal/targets.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/modules/internal/targets.js#L717)
-
-```javascript
-const ListOfFiles = {
-   [...]
-   'hls.min.jsm': 'hls.js',
-   [...]
-};
-```
-
-##### 4. Specify version in [`/modules/internal/targets.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/modules/internal/targets.js#L276-L277)
-
-```javascript
-targets.setLastVersion = function (type, version) {
-   [...]
-   } else if (type.startsWith('/hls.js/')) {
-      return '0.14.17';
-   }
-   [...]
-};
-```
-
-##### 5. Create mapping in [`/core/mappings.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/core/mappings.js#L489)
-
-:warning: `{version}` is a placeholder and will be filled automatically by LocalCDN.
-
-```javascript
-mappings.cdn = {
-   [...]
-   // jsDelivr (Cloudflare)
-   'cdn.jsdelivr.net': {
-      '/npm/': {
-         [...]
-         'hls.js@{version}': resources.hlsJS,
-         [...]
-      }
-   }
-   [...]
-};
-```
-
-##### 6. Run [`/audit/audit.sh`](https://codeberg.org/nobody/LocalCDN/src/branch/main/audit) (modify if necessary)
-```
-bash ./audit.sh -trd hls.js
-```
-
 #### Special cases
 
 Sometimes it's necessary to define the mapping in [`/core/shorthands.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/core/shorthands.js). Mostly I do this when regular expressions are necessary.
@@ -242,6 +254,31 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
 
 * Bulma v0.9.2 https://codeberg.org/nobody/LocalCDN/commit/0e91652ae3cd6c2bd046301d3df047817e438a3b
 * GSAP (Bundle) https://codeberg.org/nobody/LocalCDN/commit/c47b926d30b8c186e064624c69b8796b804c6b6f
+
+## Add new mapping
+
+Sometimes it is needed to add another mapping for an existing resource.  This happens when you find another CDN serving a resource, or the same CDN serving it in a different place. This is just a special case of adding a new resource: instead of doing all the steps listed, just do step five.
+
+The example below uses Bluebird.js, and is taken from commit 949406a41e
+
+##### Create mapping in [`/core/mappings.js`](https://codeberg.org/nobody/LocalCDN/src/commit/d2506369ab5e7cf24633899a8887b1ae48840d75/core/mappings.js#L280)
+
+:warning: `{version}` is a placeholder and will be filled automatically by LocalCDN.
+
+```javascript
+mappings.cdn = {
+   [...]
+    // jsDelivr (Cloudflare)
+    'cdn.jsdelivr.net': {
+        '/npm/': {
+            [...]
+            'bluebird/{version}/bluebird.': resources.bluebird,
+            [...]
+      }
+   }
+   [...]
+};
+```
 
 ## Update Resource
 
@@ -339,16 +376,40 @@ The complete URL for this resource is `cdn.example.com/libs/jquery/3.6.0/jquery.
 
 ## Testing
 
-The easiest way to test your resource or CDN is to include the extension as a temporary extension. Please use a different user profile (`about:profiles`) for this, because your previous settings will be deleted when you remove the temporary extension.
+New contributions should be tested, to ensure that they actually work as intended.  Further, investigating what is blocked and what is not, to determine future contributions, is best done through this technique.
+
+For either browser, first download the code (either via a `git clone` command or through the 'download' button on codeberg), and save it to a local folder.
+
+### Firefox
+
+The easiest way to test your resource or CDN is to include the extension as a temporary extension. Please use a different user profile (`about:profiles`) for this, because your previous settings will be deleted when you remove the temporary extension.  Note that `about:profiles` and friends are literal URL's that should be entered into the address bar.
 
 * start Firefox and create a new profile with `about:profiles`
 * start the new Firefox profile and open `about:debugging`
 * click `This Firefox` and `Load Temporary Add-on...`
-* select `manifest.json`
+* select `manifest.json` from the folder where you saved the extension
 
 After that open the website that needs this resource and check the network connections with the key F12 or via the menu:
-* Web Developer
-* Web Developer Tools
-* Network
+1. Web Developer sub-menu
+2. Web Developer Tools
+3. Network Tab
+
+If there are no requests to the CDN, then LocalCDN is working correctly.
 
 You can also call the original address of the resource directly, e.g. `https://code.jquery.com/jquery-2.2.4.js`. If everything is configured correctly, the browser will redirect you. An address like this should be in the address bar: `moz-extension://UUID/resources/jquery/2.2.4/jquery.min.jsm` (The UUID is a unique ID, see [Extensions and the add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/))
+
+### Chrome
+
+The Chrome testing process is slightly distinct from that of Firefox.
+
+* Start chrome, and create a new profile by clicking on the user icon in the top right corner.
+* Navigate to `chrome://extensions`
+* Enable the Developer Mode in the top right of the page
+* Select 'load unpacked'
+* Select the folder with the downloaded extension
+
+After that, open the Web Developer menu by right clicking and selecting "Inspect Element", or by pressing control-shift-I.  The other steps are identical to Firefox's.
+
+## Translating
+
+LocalCDN is being translated into many languages.  If you would like to help with this effort, please do so via Weblate.  The project for this extension is located [here](https://hosted.weblate.org/projects/localcdn/localcdn/).  Please use Weblate and do not submit direct pull requests whenever possible.
