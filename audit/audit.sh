@@ -479,7 +479,7 @@ function create_url() {
         fi
     elif [ "$folder" = "slider-pro" ]; then
         url="$CLOUDFLARE/$folder/$version/js/$jfile"
-    elif [ "$folder" = "Swiper" ] && [ "$version" = "6.4.15" ]; then
+    elif [ "$folder" = "Swiper" ] && [ "$version" != "3.4.2" ] && [ "$version" != "4.5.1" ] && [ "$version" != "5.4.5" ]; then
         if [[ "$path" =~ .*swiper\.min\.css$ ]]; then
             url="$CLOUDFLARE/$folder/$version/swiper-bundle.min.css"
         elif [[ "$path" =~ .*swiper\.min\.js$ ]]; then
