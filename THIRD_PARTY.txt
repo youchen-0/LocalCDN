@@ -88,7 +88,11 @@ https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.1/angular-material.m
 https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.1/angular-material.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-message-format/1.8.2/angular-message-format.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.8.2/angular-messages.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular-parse-ext/1.8.2/angular-parse-ext.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.8.2/angular-resource.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.8.2/angular-touch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.4/angular-translate-handler-log/angular-translate-handler-log.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.4/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.4/angular-translate-loader-partial/angular-translate-loader-partial.min.js
