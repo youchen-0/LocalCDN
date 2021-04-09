@@ -511,6 +511,13 @@ var resources = {
     'lazysizes': {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm'
     },
+    // leaflet
+    'leafletJS':{
+    	'path': 'resources/leaflet/{version}/leaflet.jsm'
+    },
+    'leafletCSS':{
+    	'path': 'resources/leaflet/{version}/leaflet.css'
+    },
     // libphonenumber-js
     'libphonenumber': {
         'path': 'resources/libphonenumber-js/{version}/libphonenumber-js.min.jsm'
