@@ -509,7 +509,7 @@ function create_url() {
         fi
     elif [ "$folder" = "webcomponentsjs" ]; then
         url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"
-    elif [ "$folder" = "vue-i18n" ] && [ "$version" != "8.24.2" ]; then
+    elif [ "$folder" = "vue-i18n" ] && [[ "$version" != 8* ]]; then
         url="$CLOUDFLARE/$folder/$version/vue-i18n.cjs.min.js"
     elif [ "$path" = "../resources/twitter-bootstrap/fonts/glyphicons-halflings-regular.woff2" ]; then
         url="$CLOUDFLARE/twitter-bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2"
