@@ -35,8 +35,6 @@ targets.determineBundle = function (path) {
         val = 'Bootstrap Datepicker';
     } else if (path.startsWith('/jquery.lazy/')) {
         val = 'jQuery Lazy';
-    } else if (path.startsWith('/leaflet/')) {
-        val = 'leaflet';
     } else if (path.startsWith('/waypoints/')) {
         val = 'Waypoints';
     } else if (path.startsWith('/highlight.js/')) {
