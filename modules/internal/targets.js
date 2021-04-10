@@ -135,7 +135,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular-ui-utils/0.')) {
         return '0.1.1';
     } else if (type.startsWith('/angular-ui-select/0.')) {
-        return '0.20.0';
+        return '0.19.8';
     } else if (type.startsWith('/angular-sanitize/1.')) {
         return '1.7.9';
     } else if (type.startsWith('/angucomplete-alt/3.')) {
