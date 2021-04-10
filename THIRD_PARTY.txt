@@ -1106,8 +1106,8 @@ https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js
-https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.4/swiper-bundle.min.css
-https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.4/swiper-bundle.min.js
+https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.6/swiper-bundle.min.css
+https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.6/swiper-bundle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js
 https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css
 https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js
