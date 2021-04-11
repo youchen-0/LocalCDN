@@ -213,16 +213,16 @@ const Regex = {
 const Links = {
     'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-7-a-website-looks-weird-or-cannot-be-used-if-i-deactivate-localcdn-everything-works-what-is-the-problem',
     'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-6-why-do-i-need-this-rule-generator-i-use-an-adblocker-and-want-to-import-these-rules-how-does-it-work',
-    'WELCOME': chrome.extension.getURL('pages/welcome/welcome.html'),
-    'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
-    'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
-    'FAQ': chrome.extension.getURL('pages/help/help.html'),
-    'FAQ_HTML_FILTER': chrome.extension.getURL('pages/help/help.html#html-filter'),
-    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html'),
+    'WELCOME': chrome.runtime.getURL('pages/welcome/welcome.html'),
+    'DONATE': chrome.runtime.getURL('pages/donate/donate.html'),
+    'CHANGELOG': chrome.runtime.getURL('pages/updates/updates.html'),
+    'FAQ': chrome.runtime.getURL('pages/help/help.html'),
+    'FAQ_HTML_FILTER': chrome.runtime.getURL('pages/help/help.html#html-filter'),
+    'STATISTICS': chrome.runtime.getURL('pages/statistics/statistics.html'),
     'LOCALCDN_TEST': 'https://www.localcdn.org/test',
     'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check',
     'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/localcdn/',
-    'LOGGING': chrome.extension.getURL('pages/logging/logging.html'),
+    'LOGGING': chrome.runtime.getURL('pages/logging/logging.html'),
 };
 
 const CDNs = {

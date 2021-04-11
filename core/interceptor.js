@@ -74,7 +74,7 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     };
 
     return {
-        'redirectUrl': chrome.extension.getURL(targetPath + fileGuard.secret)
+        'redirectUrl': chrome.runtime.getURL(targetPath + fileGuard.secret)
     };
 };
 
