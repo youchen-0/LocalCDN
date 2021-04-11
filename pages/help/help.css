@@ -20,6 +20,11 @@ code {
     color: blue;
 }
 
+.statistic-demo > code {
+    line-height: 0;
+    white-space: pre;
+}
+
 .table-browser-compatibility {
     border-collapse: collapse;
     max-width: 500px;

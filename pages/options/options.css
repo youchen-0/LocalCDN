@@ -50,11 +50,6 @@ body {
     color: #fff;
 }
 
-#notice-locale {
-    background-color: #ffa500;
-    color: white;
-}
-
 .without-checkbox {
     margin: 0 !important;
     padding: 0 !important;
