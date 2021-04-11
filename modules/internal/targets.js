@@ -373,6 +373,10 @@ targets.setLastVersion = function (type, version) {
         return '4.1.8';
     } else if (type.startsWith('/lazysizes/5.')) {
         return '5.3.1';
+    } else if (type.startsWith('/leaflet/0.')) {
+    	return '0.7.7';
+    } else if (type.startsWith('/leaflet/1.')) {
+    	return '1.7.1';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
         return '1.9.4';
     } else if (type.startsWith('/libsodium-wrappers/0.')) {
@@ -572,6 +576,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'leaflet.jsm' : 'leaflet (JS)',
+    'leaflet.css' : 'leaflet (CSS)',
     'bluebird.min.jsm': 'bluebird',
     'feather.min.jsm': 'Feather Icons',
     'babel.min.jsm': 'Babel standalone',
