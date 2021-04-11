@@ -1,5 +1,5 @@
 _locales
 icons
 modules/noto-sans/*
-modules/color-picker/*
+modules/internal/color-picker/*
 resources

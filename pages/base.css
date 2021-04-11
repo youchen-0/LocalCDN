@@ -1,3 +1,7 @@
+h2 {
+    color: #5a8f79;
+}
+
 a {
     background: url('../../icons/link-dark.svg') no-repeat right center;
     background-size: 10px 10px;
@@ -225,6 +229,17 @@ textarea {
 
 .b-contain:first-child .b-input::before {
     visibility: hidden;
+}
+
+#chromium-banner {
+    background-color: #ffcccc;
+    border: 1px solid red;
+    border-radius: 3px;
+    display: none;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 0.8em;
+    text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {

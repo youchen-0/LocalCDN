@@ -44,8 +44,8 @@ optionsInfo._renderCdnFrameworkSection = function () {
         optionsInfo._listOfFrameworks[path[1]] = true;
     });
 
-    if (BrowserType.CHROMIUM) {
-        // Chromium based browser does not support Google Material Icons and Font Awesome
+    if (!BrowserType.FIREFOX) {
+        // Non-Firefox browser does not support Google Material Icons and Font Awesome
         document.getElementById('unsupported-frameworks').style.display = 'block';
         unsupportedFrameworks = 2;
     }
@@ -64,11 +64,6 @@ optionsInfo._renderCdnFrameworkSection = function () {
 optionsInfo._renderLinkSection = function () {
     /* eslint-disable brace-style*/
     document.getElementById('btn-info-tab').addEventListener('click', options._changeTab);
-    document.getElementById('link-welcome-page').addEventListener('click', function () { options._onLinkClick(Links.WELCOME); });
-    document.getElementById('link-changelog').addEventListener('click', function () { options._onLinkClick(Links.CHANGELOG); });
-    document.getElementById('link-donate').addEventListener('click', function () { options._onLinkClick(Links.DONATE); });
-    document.getElementById('link-faq').addEventListener('click', function () { options._onLinkClick(Links.FAQ); });
-    document.getElementById('link-statistic').addEventListener('click', function () { options._onLinkClick(Links.STATISTICS); });
     /* eslint-enable brace-style*/
 };
 

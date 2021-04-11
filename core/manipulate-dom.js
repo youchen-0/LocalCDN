@@ -91,7 +91,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                             charsetMatch = htmlHead.match(/<meta\s+charset=["']?([^>"'\/]+)["'>\/]/i);
                             if (charsetMatch === null) {
                                 // eslint-disable-next-line no-useless-escape
-                                charsetMatch = htmlHead.match(/<meta.*charset=["']?([^>"'\/]+)["'].*[>\/]/i);
+                                charsetMatch = htmlHead.match(/<meta.*charset=["']?([^>"'\/]+)["'].*[>\/]/i) || 'utf8';
                             }
 
                             if (EncodingTypes[charsetMatch[1].toLowerCase()] !== undefined) {

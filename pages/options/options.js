@@ -42,6 +42,10 @@ options._renderContents = function () {
         options._renderLocaleNotice();
     }
 
+    if (!BrowserType.FIREFOX) {
+        document.getElementById('chromium-banner').style.display = 'block';
+    }
+
     document.getElementById('label-version').textContent = chrome.runtime.getManifest().version;
 };
 

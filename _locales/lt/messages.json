@@ -252,15 +252,15 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Rodyti trūkstamus resursus (išteklius) ant piktogramos",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Pakeisti piktogramos skaičiuko spalvą, jei resursų (išteklių) nėra.",
         "description": "Change the badge color if resources are missing."
     }
 }

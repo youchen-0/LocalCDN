@@ -4,7 +4,7 @@
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Počet lokální uložených zdrojů vložených od instalace.",
+        "message": "Počet lokálně uložených zdrojů vložených od instalace.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -80,7 +80,7 @@
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Tato funkce poškozuje stránky. Nenechávejte zapnuté, pokud nejste připraveni vlastnoručně přidat poškozené stránky do povoleného seznamu.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -88,7 +88,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Filtrovat zdrojový kód HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -108,7 +108,7 @@
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Nepoužívat HTML filtr na těchto stránkách:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
@@ -116,7 +116,7 @@
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Použít HTML filtr na tyto stránky:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {

@@ -204,7 +204,7 @@
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Sync",
+        "message": "Synchronisierung",
         "description": "Sync"
     },
     "headerImportExport": {

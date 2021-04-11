@@ -26,14 +26,6 @@
 var popup = {};
 
 
-const PopupLinks = {
-    'statistics': Links.STATISTICS,
-    'translation': Links.WEBLATE,
-    'logging': Links.LOGGING,
-    'faq-html-filter': Links.FAQ_HTML_FILTER,
-    'donate': Links.DONATE,
-};
-
 /**
  * Private Methods
  */
@@ -78,17 +70,17 @@ popup._renderNonContextualContents = function () {
 
     testingUtilityLinkElement.addEventListener('mouseup', popup._onTestingUtilityLinkClicked);
     optionsButtonElement.addEventListener('mouseup', popup._onOptionsButtonClicked);
-    donationButtonElement.addEventListener('mouseup', popup._onButtonClicked);
-    infoButtonLabel.addEventListener('mouseup', popup._onButtonClicked);
+    donationButtonElement.addEventListener('mouseup', popup._onDonationButtonClicked);
+    infoButtonLabel.addEventListener('mouseup', popup._onInfoButtonClicked);
 
     if (popup._statisticsStatus) {
         document.getElementById('statistics-button').style.display = 'block';
-        document.getElementById('statistics-button').addEventListener('mouseup', popup._onButtonClicked);
+        document.getElementById('statistics-button').addEventListener('mouseup', popup._onStatisticsButtonClicked);
     }
 
     if (popup._loggingStatus) {
         document.getElementById('logging-button').style.display = 'block';
-        document.getElementById('logging-button').addEventListener('mouseup', popup._onButtonClicked);
+        document.getElementById('logging-button').addEventListener('mouseup', popup._onLoggingButtonClicked);
     }
 
     if (!popup.hideDonationButton) {
@@ -419,7 +411,7 @@ popup._renderLocaleNotice = function () {
 
     localeNoticeElement = document.getElementById('popup-incomplete-translation');
     localeNoticeElement.setAttribute('class', 'notice notice-default');
-    localeNoticeElement.addEventListener('mouseup', popup._onButtonClicked);
+    localeNoticeElement.addEventListener('mouseup', popup._onIncompleteTranslation);
 
     nameTextNode = document.createTextNode('Translation is incomplete. You want to help on Weblate?');
 
@@ -454,6 +446,57 @@ popup._onTestingUtilityLinkClicked = function (event) {
         });
     }
 
+    if (event.button === 0) {
+        window.close();
+    }
+};
+
+popup._onDonationButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+        chrome.tabs.create({
+            'url': Links.DONATE,
+            'active': event.button === 0,
+        });
+    }
+
+    if (event.button === 0) {
+        window.close();
+    }
+};
+
+popup._onInfoButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+        chrome.tabs.create({
+            'url': Links.FAQ_HTML_FILTER,
+            'active': event.button === 0,
+        });
+    }
+
+    if (event.button === 0) {
+        window.close();
+    }
+};
+
+popup._onIncompleteTranslation = function () {
+    if (event.button === 0 || event.button === 1) {
+        chrome.tabs.create({
+            'url': Links.WEBLATE,
+            'active': event.button === 0,
+        });
+    }
+
+    if (event.button === 0) {
+        window.close();
+    }
+};
+
+popup._onStatisticsButtonClicked = function () {
+    if (event.button === 0 || event.button === 1) {
+        chrome.tabs.create({
+            'url': Links.STATISTICS,
+            'active': event.button === 0,
+        });
+    }
     if (event.button === 0) {
         window.close();
     }
@@ -499,11 +542,10 @@ popup._close = function () {
     });
 };
 
-popup._onButtonClicked = function ({target}) {
-    let data = target.getAttribute('data-link');
+popup._onLoggingButtonClicked = function () {
     if (event.button === 0 || event.button === 1) {
         chrome.tabs.create({
-            'url': PopupLinks[data],
+            'url': Links.LOGGING,
             'active': event.button === 0,
         });
     }

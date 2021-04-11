@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "在以下域名中暂停 LocalCDN：",
+        "message": "对以下域名禁用 LocalCDN：",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
@@ -72,15 +72,15 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "启用日志记录",
+        "message": "记录日志",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "你可以使用菜单中的图标打开日志。 关闭浏览器或禁用日志记录后，日志将被删除。",
+        "message": "你可以使用菜单中的图标打开日志。 关闭浏览器或禁用记录日志后，日志将被删除。",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "这个功能会破坏网站功能。除非你准备手动将受影响的域名添加到允许列表中，否则请勿开启。",
+        "message": "此特性会破坏网站功能。除非你准备手动将受影响的域名添加到允许列表中，否则请勿开启。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -88,7 +88,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "过滤 HTML 源码",
+        "message": "过滤 HTML 源代码",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -164,15 +164,15 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "平均（每天的替换）",
+        "message": "平均（每天的替换次数）",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "已替换框架",
+        "message": "已替换的框架",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "确定要删除所有的统计数据吗？",
+        "message": "你确定要删除所有的统计数据吗？",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
@@ -228,11 +228,11 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "更新后进行通知",
+        "message": "更新后显示通知",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "从不 （静默更新）",
+        "message": "从不（静默更新）",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
@@ -260,7 +260,7 @@
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "如果资源缺失，改变徽章颜色。",
+        "message": "如果资源缺失，改变图标颜色。",
         "description": "Change the badge color if resources are missing."
     }
 }

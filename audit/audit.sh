@@ -73,6 +73,7 @@
 readonly CLOUDFLARE="https://cdnjs.cloudflare.com/ajax/libs"
 readonly CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
 readonly JSDELIVR="https://cdn.jsdelivr.net"
+readonly NETDNA_BOOTSTRAPCDN="https://netdna.bootstrapcdn.com"
 readonly GITHUB="https://raw.githubusercontent.com"
 
 
@@ -293,11 +294,11 @@ function check_resource() {
 
     # Use Tor Proxy if set
     if [ "$USE_TOR" = true ]; then
-        if ! torsocks wget -qO ./tmp "$url"; then
+        if ! torsocks wget -t 3 -qO ./tmp "$url"; then
             error=true
         fi
     else
-        if ! wget -qO ./tmp "$url"; then
+        if ! wget -t 3 -qO ./tmp "$url"; then
             error=true
         fi
     fi
@@ -478,7 +479,7 @@ function create_url() {
         fi
     elif [ "$folder" = "slider-pro" ]; then
         url="$CLOUDFLARE/$folder/$version/js/$jfile"
-    elif [ "$folder" = "Swiper" ] && [ "$version" = "6.4.15" ]; then
+    elif [ "$folder" = "Swiper" ] && [ "$version" != "3.4.2" ] && [ "$version" != "4.5.1" ] && [ "$version" != "5.4.5" ]; then
         if [[ "$path" =~ .*swiper\.min\.css$ ]]; then
             url="$CLOUDFLARE/$folder/$version/swiper-bundle.min.css"
         elif [[ "$path" =~ .*swiper\.min\.js$ ]]; then
@@ -494,7 +495,7 @@ function create_url() {
         else
             url="$CLOUDFLARE/$folder/$version/$jfile"
         fi
-    elif [ "$folder" = "twitter-bootstrap" ]; then
+    elif [ "$folder" = "twitter-bootstrap" ] && [ "$version" != "2.3.2" ]; then
         if [[ "$subfile" =~ \.css$ ]]; then
             url="$CLOUDFLARE/$folder/$version/css/$subfile"
         elif [[ "$subfile" =~ \.js$ ]]; then
@@ -502,9 +503,13 @@ function create_url() {
         elif [ "$subfile" = "glyphicons-halflings-regular.woff2" ]; then
             url="$CLOUDFLARE/twitter-bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2"
         fi
+    elif [ "$folder" = "twitter-bootstrap" ] && [ "$version" = "2.3.2" ]; then
+        if [[ "$subfile" =~ \.css$ ]]; then
+            url="$NETDNA_BOOTSTRAPCDN/$folder/$version/css/bootstrap-combined.no-icons.min.css"
+        fi
     elif [ "$folder" = "webcomponentsjs" ]; then
         url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"
-    elif [ "$folder" = "vue-i18n" ] && [ "$version" = "9.0.0" ]; then
+    elif [ "$folder" = "vue-i18n" ] && [[ "$version" != 8* ]]; then
         url="$CLOUDFLARE/$folder/$version/vue-i18n.cjs.min.js"
     elif [ "$path" = "../resources/twitter-bootstrap/fonts/glyphicons-halflings-regular.woff2" ]; then
         url="$CLOUDFLARE/twitter-bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2"
@@ -553,6 +558,13 @@ function create_url() {
         if [ "${arr_cycle[$subfile]}" != "" ]; then
             url="$CLOUDFLARE/$folder/$version/${arr_cycle[$subfile]}"
         fi
+    elif [ "$folder" = "semantic-ui" ]; then
+        relativpath=$(echo -e "$path" | awk -F"../$folder/$version" '{print $NF}')
+        url="$CLOUDFLARE/$folder/$version/$relativpath"
+    elif [ "$folder" = "Chart.js" ] && [ "$version" != "2.9.4" ]; then
+        url="$CLOUDFLARE/$folder/$version/chart.min.js"
+    elif [ "$folder" = "angular-ui-select" ] && [ "$version" = "0.19.8" ]; then
+        url="$JSDELIVR/npm/ui-select@$version/dist/select.min.js"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

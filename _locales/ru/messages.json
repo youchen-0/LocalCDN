@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Генерация наборов правил для вашего рекламного блокатора",
+        "message": "Сгенерировать правила для установленного блокировщика рекламы",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Если вы используете рекламный блокиратор, вы можете сгенерировать правила здесь и потом добавить их вручную в ваш рекламный блокиратор.",
+        "message": "Если вы используете блокировщик рекламы, вы можете сгенерировать правила здесь и позднее перенести их вручную.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -80,7 +80,7 @@
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "Эта функция ломает отображение сайтов. Не включайте её, если не готовы вручную править белый список.",
+        "message": "Эта функция «ломает» отображение сайтов. Не включайте её, если не готовы вручную править белый список.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -92,7 +92,7 @@
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "Донат",
+        "message": "Пожертвования",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
@@ -104,7 +104,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "Эта функция может сломать веб-сайты. Обратите внимание на информацию на странице Wiki.",
+        "message": "Эта функция может «сломать» отображение веб-сайтов. Обратите внимание на информацию в Wiki-документации.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -124,11 +124,11 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "Если запросы на отсутствующие ресурсы разрешены, подключения к fonts.googleapis.com не блокируются. Включите эту опцию, чтобы заблокировать эти запросы.",
+        "message": "Если запросы на отсутствующие ресурсы разрешены, подключения к fonts.googleapis.com не блокируются. Включите эту опцию, чтобы их заблокировать.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "Выберите значок для этого расширения",
+        "message": "Выберите иконку для этого расширения",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
@@ -200,11 +200,11 @@
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "Локальный",
+        "message": "Локальное",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "Синхронизировать",
+        "message": "Синхронизированное",
         "description": "Sync"
     },
     "headerImportExport": {
@@ -256,11 +256,11 @@
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Отображать отсутствующие ресурсы на иконке расширения",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Сменить цвет значка если ресурсы отсутствуют.",
         "description": "Change the badge color if resources are missing."
     }
 }
