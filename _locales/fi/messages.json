@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Lisää verkkotunnus jottei sitä korvata. Erota rivit puolipisteellä (;).",
+        "message": "Syötä verkkotunnukset, joilta haluat poistaa LocalCDN:n käytöstä. Yksi verkkotunnus per rivi.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Ota lokitus käyttöön selaimessa",
+        "message": "Ota lokitus käyttöön",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Avaa \"Selain konsoli\" ( CTRL + SHIFT + J ) näyttääksesi puuttuvat resurssit.",
+        "message": "Voit avata lokin valikosta löytyvällä kuvakkeella. Loki poistetaan kun suljet selaimen tai otat lokituksen pois käytöstä.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -96,11 +96,11 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Käännä HTML-Suodatin",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Ota tämä asetus käyttöön, jos haluat aina käyttää HTML-suodatinta. Listan verkkotunnukset jätetään huomioimatta. Jos tämä valinta on pois päältä, HTML-Suodatin on vain käytössä listan verkkotunnuksiin.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -108,15 +108,15 @@
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Älä käytä HTML-suodatinta näille verkkotunnuksille:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Anna verkkotunnukset, joita HTML-suodatin käsittelee tai jättää huomiotta. Yksi verkkotunnus per rivi.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Aseta HTML-Suodatin näille verkkotunnuksille:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
@@ -124,7 +124,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Jos puuttuvien resurssien pyytäminen sallitaan, yhteyksiä \"fonts.googleapis.com\" -palveluun ei estetä. Ota tämä vaihtoehto käyttöön, jos haluat estää nämä pyynnöt.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -164,103 +164,103 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Keskiarvo (Korvaavia päivässä)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Korvatut puitteet",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Oletko varma että haluat poistaa tilastot?",
+        "message": "Oletko varma että haluat poistaa kaikki tilastot?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "",
+        "message": "Nämä verkkotunnukset saavat ladata Google Fonts:eja. Yksi verkkotunnus per rivi.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Perus",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Kehittynyt",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Muu",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Tiedot",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Tallenustyyppi",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Paikallinen",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Synkronoi",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Tuonti/Vienti",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Varmuuskopio tiedostoon",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Palauta tiedostosta",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Tuonti onnistui",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Tuonti epäonnistui",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Ilmoitus päivityksen jälkeen",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Ei koskaan (Hiljaiset Päivitykset)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Vain jos uusia CDN:ia ja sääntöjä",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Aina",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Verkkosivu rikki?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Piiloita lahjoitus nappi",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Ilmoita puuttuvia resursseja kuvakkessa",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Vaihda merkin väri jos resursseja puuttuu.",
         "description": "Change the badge color if resources are missing."
     }
 }
