@@ -264,75 +264,75 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Ajuda",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introdução",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "O que é »filtro HTML«?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Gerador de regras",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Alguns sites parecem estranhos ou não são fáceis de usar",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Por que há uma opção de »Bloquear Google Fonts«?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "E sobre as estatísticas? Algo está sendo transferido para algum servidor?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "O que será sincronizado quando eu selecionar »sincronizar« como o tipo de armazenamento?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Compatibilidade do navegador",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN é uma extensão de navegador da web que emula Redes de Distribuição de Conteúdo que melhora a sua privacidade online, interceptando o tráfego, buscando frameworks/livrarias localmente e injetando-os no site. Sinta-se à vontade para usar o seguinte utilitário de teste para ver se está devidamente protegido. Para mais informações, leia o tutorial ou nossas páginas na Wiki.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Utilitário de teste",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Tutorial",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wikipedia",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "Na maioria dos casos, o LocalCDN pode facilmente substituir frameworks incorporados e melhorar a privacidade. Em alguns casos, o site tentará impedir isso definindo certas opções no código-fonte HTML. O LocalCDN lê o código-fonte HTML antes de ser exibido no navegador e remove essas partes (vermelho).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "O filtro HTML remove os caracteres em vermelho deste exemplo:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "O resultado será assim:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "Por que é necessário remover os atributos de origem cruzada e integridade?",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "O atributo de origem cruzada impede a substituição porque o alvo não corresponde ao alvo solicitado.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
