@@ -44,7 +44,7 @@ helpers.insertI18nContentIntoDocument = function (document) {
             if (i18nElement.type === 'button') {
                 i18nElement.value = chrome.i18n.getMessage(i18nMessageName);
             } else {
-                i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+                i18nElement.textContent = chrome.i18n.getMessage(i18nMessageName);
             }
             i18nElement.setAttribute('dir', scriptDirection);
         } else {
