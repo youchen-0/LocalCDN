@@ -328,7 +328,7 @@
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "なぜcrossoriginやintegrity属性を削除する必要があるのですか？",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
