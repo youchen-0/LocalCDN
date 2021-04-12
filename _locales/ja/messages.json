@@ -264,39 +264,39 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "ヘルプ",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "はじめに",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "»HTMLフィルター« とは何ですか？",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "ルール生成器",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "見た目が変だったり、使い勝手が悪いサイトがある",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "»Google Fontsをブロックする« オプションは何のためにあるのですか？",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "統計情報はどうなっているのですか？サーバーに何か送信されることはありますか？",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "ストレージタイプに »同期« を選択した場合は何が同期されますか？",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "ブラウザ互換性",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
