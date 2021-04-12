@@ -316,19 +316,19 @@
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "ほとんどの場合、LocalCDNは問題なくフレームワークを差し替えてプライバシーを向上させることができます。しかし、場合によってはウェブサイトがHTMLソースコードに特定のオプションを設定することで、これを防ごうとすることがあります。LocalCDNはブラウザに表示される前のHTMLソースコードを解読し、そうした部分(赤色)を削除することができます。",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "例えばHTMLフィルターは次のような赤色の文字列を削除します:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "するとこのようになります:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "なぜcrossoriginやintegrity属性を削除する必要があるのですか？",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
