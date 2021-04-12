@@ -300,19 +300,19 @@
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDNは、コンテンツデリバリーネットワーク(CDN)をエミュレートして、あなたのオンラインプライバシーを向上させるブラウザ拡張機能です。CDNへの接続を遮断し、対応するライブラリをローカルから読み込み、ウェブサイトに挿入します。以下のテストツールで、実際にCDNへの接続から保護されているか確認できます。詳しい情報はチュートリアルおよびWikiページをご確認ください。",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "テストツール",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "チュートリアル",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wikiページ",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
