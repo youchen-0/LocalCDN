@@ -576,6 +576,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'font-awesome': 'Font Awesome',
     'leaflet.jsm': 'leaflet (JS)',
     'leaflet.css': 'leaflet (CSS)',
     'bluebird.min.jsm': 'bluebird',

@@ -151,7 +151,7 @@ helpers.extractFilenameFromPath = function (path) {
     pathSegments = path.split('/');
     filename = pathSegments[pathSegments.length - 1];
 
-    return filename;
+    return filename === '' ? pathSegments[1] : filename;
 };
 
 helpers.generateRandomHexString = function (length) {
