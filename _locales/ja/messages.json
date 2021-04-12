@@ -4,7 +4,7 @@
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "インストールしてからローカルリソースに置き換えられたCDNリソースの合計数です。",
+        "message": "インストールしてからCDNリソースがローカルリソースに差し替えられた合計回数です。",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -164,7 +164,7 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "平均 (1日あたりの置き換え回数)",
+        "message": "平均 (1日あたりの差し替え回数)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
@@ -276,7 +276,7 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "ルール生成器",
+        "message": "ルールジェネレーター",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
@@ -332,143 +332,143 @@
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "crossorigin属性があると、宛先が要求されたものと一致しないため、差し替えを妨げてしまいます。",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "ディスク容量を節約しながらもより多くのフレームワークを配信するため、LocalCDNではフレームワークをアップグレードしています。整合性タグとは、ファイルのハッシュ値のことです。これのチェックが失敗すると、ブラウザはフレームワークを使用してくれません。例えばjQuery 1.10.1とjQuery 1.12.4はハッシュ値が異なるため、整合性チェックは失敗します。",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "また、残念ながら特殊文字が正しく表示されないことがあります。その場合、設定を再度無効にすることでウムラウトなども正しく表示させることができます。",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "LocalCDNが対応している全てのCDN接続を自動的にLocalCDNへリダイレクトしたい場合は、これらのルールを広告ブロッカーに設定することでリダイレクトを許可することができます。これらのルールを使用しない場合は、それぞれのウェブサイトで個別にCDN接続を許可する必要があります。",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "uBlock Originの場合のみ:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "これらのルールは »ミディアム« もしくは »ハード« モードでのみ効果があります。それは、これらのモードではサードパーティリソースが全てブロックされるためです。»デフォルト«、»イージー«、»ベリーイージー« モードではこのルールを設定しても意味はありません。詳しくはuBlock OriginのWikiページをご覧ください。",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "アイコン",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "モード",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "ルールの有用性",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "デフォルト/イージー",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "ミディアム",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "ハード",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "原因は2つ考えられます: LocalCDNが(まだ)提供していないフレームワーク/ライブラリが含まれているからか、もしくはSOPを必要としているからです。SOP(Same Origin Policy)とは、データをブラウザが読み込んでも良いかどうかを決定するセキュリティメカニズムのことです。これにより、悪意のあるファイルを分離し、あり得る攻撃のベクトルを減らすことができます。このポリシーは、LocalCDNが外部のフレームワークを読み込むことを妨げてしまいます。残念ながら、現時点ではこの問題に対する解決策はありません。",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "LocalCDNは »Google Material Icons« の差し替えに対応しています。そうした接続をキャッチするには、お使いの広告ブロッカー(uBlock Origin、uMatrix、AdGuardなど)でリクエストを許可する必要があります。LocalCDNはこれらへのリクエストを傍受し、クエリに »Google Material Icons« が含まれていればリソースを差し替えます。»不足しているリソースへのリクエストをブロックする« オプションを無効にすると、»Google Material Icons« と »Google Fonts« は同じドメインを使用しているため、存在しないリソースの読み込みが許可され »Google Fonts« が読み込まれてしまいます。これを望まない場合は、LocalCDN側で »Google Fonts« をブロックすることができます。",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "心配ご無用、データが送信されることはありません。それは私のすべての原則に反します。統計情報(JSON形式)には次の情報が含まれています: 日付、CDN+使用回数、フレームワーク+使用回数、たったそれだけです。以下がその例です:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "これらの統計情報にはブラウザ、OS、リクエストしたウェブサイト、IPアドレスなどの情報は一切含まれていません。含まれるのは日付、CDN+使用回数、フレームワーク+使用回数だけです。どのフレームワークがどのくらいの頻度でLocalCDNに差し替えられたのか、どのCDNにリクエストされたのかを確認することができます。",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "それはどうしたら知り得ますか？",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "拡張機能のストレージはFirefoxから直接閲覧できます。URL »about:debugging« を開き、»ストレージ« に切り替えて »拡張機能ストレージ« を選択します。すると »internalStatisticsData« というキーから収集されたデータを閲覧することができます。コピーしてJSON PrettyPrinterに入力すれば見やすくなるでしょう。最初と最後のクォーテーションマークとそれに対するキーは削除しなければならないことに注意してください。以下の動画を観ればわかりやすいでしょう。",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "ストレージタイプに »同期« を選択した場合は何が同期されますか？",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "設定の同期は、デバイス上でFirefoxアカウントにログインしていて、なおかつ設定でアドオン設定の同期を許可している場合のみ動作します。また、同期サーバーをご自身で管理している場合でも動作します。これにより、LocalCDNのほとんどの設定がすべてのデバイス間で同期されるようになります。",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "同期アカウントを所持していない場合は、何も同期されることはありません。その場合はストレージタイプを選択しても効果はありません。",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "決して同期されない情報:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "差し替え回数",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "はい",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "いいえ",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "データ",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "同期される情報:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "デフォルト、ライト、ブルー/グレー",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Firefox Syncに関する情報:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "ブラウザ互換性",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "次の差し替え",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "その他のリソースの差し替え",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "全てのリソースのアップグレード",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "全てのChromiumベースブラウザ",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "これはLocalCDNによるものではなく、Chromiumベースブラウザが必要なAPIに対応していないためです。",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     }
 }
