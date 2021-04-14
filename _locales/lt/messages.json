@@ -264,39 +264,39 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Pagalba",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Pristatymas",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Kas yra »HTML filtras«?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Taisyklių generatorius",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Kai kurios interneto svetainės atrodo keistai arba nėra lengvos naudoti",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Kodėl yra »Blokuoti Google šriftus« pasirinkimas?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Kas apie statistika? Ar kažkas yra perduodama į bet kokius serverius?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Kas bus sinchronizuota kai aš pasirinksiu »sinchronizacija« kaip saugyklos tipa?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Interneto naršyklių palaikomumas",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -304,15 +304,15 @@
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Testavimo įrankis",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Pamokymas",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wiki puslapiai",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -320,11 +320,11 @@
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "HTML filtras pašalina raudonas raides iš šito pavyzdžio:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Rezultatas atrodys taip:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
