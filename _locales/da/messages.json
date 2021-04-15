@@ -224,7 +224,7 @@
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "Inport fejlede",
+        "message": "Import fejlede",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
@@ -264,7 +264,7 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Hjælp",
         "description": "Help"
     },
     "helpIntroductionTitle": {
