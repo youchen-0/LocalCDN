@@ -264,23 +264,23 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Nápověda",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Úvod",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Co je »HTML filtr«?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Generátor pravidel",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Některé webové stránky vypadají podivně nebo nejsou snadno použitelné",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
@@ -288,7 +288,7 @@
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Jak je to se statistikami? Je něco přeneseno na jakékoliv servery?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Kompatibilita prohlížečů",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -304,15 +304,15 @@
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Testovací nástroj",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Tutoriál",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wiki stránky",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -320,11 +320,11 @@
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "HTML filtr odstraní červené znaky z tohoto příkladu:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Výsledek poté vypadá takto:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
@@ -340,7 +340,7 @@
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "Bohužel se někdy stane, že jsou poté špatně zobrazeny speciální znaky. V tom případě můžete nastavení znovu deaktivovat, aby se přehlásky zobrazovaly správně.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
@@ -348,7 +348,7 @@
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Pouze uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
@@ -356,11 +356,11 @@
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Ikona",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Mód",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
@@ -372,7 +372,7 @@
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Střední",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
@@ -396,7 +396,7 @@
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Jak mohu vědět, že je to pravda?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
@@ -424,19 +424,19 @@
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Ano",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Ne",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Data",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Nastavení, která budou synchronizována:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
@@ -444,15 +444,15 @@
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Více informací o Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Kompatibilita prohlížečů",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Nahradit",
         "description": "Replace"
     },
     "helpReplaceOther": {
