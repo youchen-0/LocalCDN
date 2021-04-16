@@ -168,7 +168,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/twitter-bootstrap/fonts/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Bootstrap (Fonts)'
         };
-    } else if (/cdnjs\.cloudflare\.com\/ajax\/libs\/jquery\.cycle2\/[\d.]+\//.test(channelHost + channelPath + searchString)) {
+    } else if (/cdnjs\.cloudflare\.com\/ajax\/libs\/jquery\.cycle2\/[\d.]+\//.test(CompleteURL)) {
         if (channelPath.endsWith('js')) {
             channelPath += 'm';
         }
