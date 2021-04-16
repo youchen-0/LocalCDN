@@ -793,6 +793,7 @@ const ListOfFiles = {
     'plyr.svg': 'plyr (SVG)',
     'popper.min.jsm': 'Popper',
     'prototype.min.jsm': 'Prototype',
+    'prototype.jsm': 'Prototype',
     'raven.min.jsm': 'Raven.js',
     'react-dom.production.min.jsm': 'ReactDOM',
     'react.production.min.jsm': 'React',
