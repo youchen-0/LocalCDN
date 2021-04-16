@@ -57,8 +57,7 @@
   "web_accessible_resources": [
     "resources/*"
   ],
-  
-  // Require that all types of content should be packaged with the extension
-  "content_security_policy": "default-src 'self'"
+
+  "content_security_policy": "default-src 'self'; img-src 'self' data:"
 
 }
