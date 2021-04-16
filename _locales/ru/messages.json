@@ -24,7 +24,7 @@
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "Отменить перехваченный запрос, если требуемый ресурс не доступен локально (может «ломать» сайты).",
+        "message": "Отменить перехваченный запрос, если требуемый ресурс не доступен локально (может «cломать» сайты).",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
