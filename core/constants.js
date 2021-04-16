@@ -199,8 +199,8 @@ const IconType = {
 };
 
 const Regex = {
-    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/.*(?!.*Material\+Icons.*).*/,
-    'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/.*\?family=.*Material\+Icons/,
+    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/(?!.*(Material\+Icons|materialicons).*).*/,
+    'GOOGLE_MATERIAL_ICONS': /fonts\.(googleapis|gstatic)\.com\/.*\?family=.*Material\+Icons/,
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
@@ -208,6 +208,10 @@ const Regex = {
     'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/,
     'FONT_AWESOME_FONTS_ONLY': /\/font-?awesome\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//,
     'BOOTSTRAP_FONTS_ONLY': /\/bootstrap\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//
+};
+
+const MaterialIcons = {
+    'DEFAULT': 'flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2'
 };
 
 const Links = {
@@ -249,7 +253,8 @@ const CDNs = {
     'akamai-webcdn.kgstatic.net': 'Akamai WebCDN',
     'netdna.bootstrapcdn.com': 'NetDNA',
     'pagecdn.io': 'PageCDN',
-    'fonts.googleapis.com': 'Google Fonts',
+    'fonts.googleapis.com': 'Google',
+    'fonts.gstatic.com': 'Google',
     'gitcdn.github.io': 'GitHub',
     'cdn.bootcdn.net': 'BootCDN #2',
     'vjs.zencdn.net': 'Video.js CDN',

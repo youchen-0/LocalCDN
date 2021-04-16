@@ -273,6 +273,8 @@ targets.setLastVersion = function (type, version) {
         return '3.5.1';
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
+    } else if (type.startsWith('/google-material-design-icons/')) {
+        return 'v85';
     } else if (type.startsWith('/highlight.js/10.')) {
         return '10.7.2';
     } else if (type.startsWith('/highlight.js/9.')) {
@@ -576,6 +578,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'MaterialIcons.woff2': 'Google Material Icons',
     'font-awesome': 'Font Awesome',
     'leaflet.jsm': 'leaflet (JS)',
     'leaflet.css': 'leaflet (CSS)',
