@@ -305,28 +305,9 @@ options._changeTab = function ({target}) {
 
 
 /**
- *  Updates the domain lists if the options page has no focus.
- *  document.hasFocus() prevents problems with keyboard input.
- */
-options._updatesDomainLists = function (changes) {
-    let changedItems = Object.keys(changes);
-
-    if (!document.hasFocus()) {
-        if (changedItems[0] === 'allowlistedDomains') {
-            document.getElementById('tf-domains-allowlist').value = options._serializeAllowlistedDomains(changes['allowlistedDomains'].newValue);
-        } else if (changedItems[0] === 'domainsManipulateDOM') {
-            document.getElementById('tf-domains-manipulate-dom').value = options._serializeAllowlistedDomains(changes['domainsManipulateDOM'].newValue);
-        }
-    }
-};
-
-
-/**
  * Initializations
  */
 
 options._storageType = 'local';
 
 document.addEventListener('DOMContentLoaded', options._onDocumentLoaded);
-
-chrome.storage.onChanged.addListener(options._updatesDomainLists);
