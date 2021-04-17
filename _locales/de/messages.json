@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Schützt Sie vor der Nachverfolgung durch CDNs (Content Delivery Networks), indem es auf lokale Ressourcen umleitet.",
+        "message": "Schützt dich vor der Nachverfolgung durch CDNs (Content Delivery Networks), indem es auf lokale Ressourcen umleitet.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -76,7 +76,7 @@
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Sie können das Protokoll über das Symbol im Menü öffnen. Das Protokoll wird gelöscht, wenn Sie den Browser schließen oder die Protokollierung deaktivieren.",
+        "message": "Du kannst das Protokoll über das Symbol im Menü öffnen. Das Protokoll wird gelöscht, wenn du den Browser schließt oder die Protokollierung deaktivierst.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -300,7 +300,7 @@
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "LocalCDN ist eine Webbrowser-Erweiterung, welche Content Delivery Networks emuliert, um Ihre Online-Privatsphäre zu verbessern. Sie fängt den Verkehr ab, findet lokal unterstützte Frameworks/Bibliotheken und injiziert sie in die Website. Sie können das folgende Testprogramm verwenden, um herauszufinden, ob Sie richtig geschützt sind. Für weitere Informationen lesen Sie das Tutorial oder unsere Wiki-Seiten.",
+        "message": "LocalCDN ist eine Webbrowser-Erweiterung, welche Content Delivery Networks emuliert, um deine Online-Privatsphäre zu verbessern. Sie fängt den Verkehr ab, findet lokal unterstützte Frameworks/Bibliotheken und injiziert sie in die Website. Du kannst das folgende Testprogramm verwenden, um herauszufinden, ob du richtig geschützt bist. Für weitere Informationen lies das Tutorial oder unsere Wiki-Seiten.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
@@ -340,7 +340,7 @@
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "Leider kommt es manchmal vor, dass Sonderzeichen dann falsch angezeigt werden. In diesem Fall können Sie die Einstellung wieder deaktivieren, um die Umlaute korrekt anzuzeigen.",
+        "message": "Leider kommt es manchmal vor, dass Sonderzeichen dann falsch angezeigt werden. In diesem Fall kannst du die Einstellung wieder deaktivieren, um die Umlaute korrekt anzuzeigen.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
@@ -408,15 +408,15 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "Die Synchronisierung funktioniert nur, wenn Sie mit einem Firefox-Konto auf dem Gerät angemeldet sind und in den Einstellungen die Synchronisierung von Add-ons erlaubt haben. Ein separater Sync-Server unter Ihrer Kontrolle wird ebenfalls funktionieren. Dieser wird die meisten Einstellungen von LocalCDN über alle Geräte hinweg synchronisieren.",
+        "message": "Die Synchronisierung funktioniert nur, wenn du mit einem Firefox-Konto auf dem Gerät angemeldet bist und in den Einstellungen die Synchronisierung von Add-ons erlaubt hast. Ein separater Sync-Server unter eigener Kontrolle funktioniert ebenfalls. Dieser wird die meisten Einstellungen von LocalCDN über alle Geräte hinweg synchronisieren.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "Wenn Sie kein Synchronisationskonto haben, wird nichts synchronisiert. In diesem Fall macht es keinen Unterschied, welche Art von Speicher du auswählen wirst.",
+        "message": "Wenn du kein Synchronisationskonto hast, wird nichts synchronisiert. In diesem Fall macht es keinen Unterschied, welche Art von Speicher du auswählen wirst.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "Dinge die nie synchronisiert werden:",
+        "message": "Dinge, die nie synchronisiert werden:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
