@@ -348,7 +348,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jeditable.js/1.')) {
         return '1.8.0';
     } else if (type.startsWith('/jeditable.js/2.')) {
-        return '2.0.18';
+        return '2.0.19';
     } else if (type.startsWith('/jquery.cycle2/2.')) {
         return '2.1.6';
     } else if (type.startsWith('/jquery.scrollbar/0.')) {
