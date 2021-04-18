@@ -3,8 +3,6 @@ https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-lo
 https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.5/js/ajax-bootstrap-select.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.8.6/algoliasearch.umd.min.js
-https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js
-https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.0/anchor.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angucomplete-alt/3.0.0/angucomplete-alt.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-aria/1.8.2/angular-aria.min.js
@@ -1151,6 +1149,8 @@ https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js
 https://cdnjs.cloudflare.com/ajax/libs/zumper-angular-payments/1.0.7/angular-payments.js
 https://cdn.jsdelivr.net/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js
 https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+https://cdn.jsdelivr.net/npm/anchor-js@3.2.2/anchor.min.js
+https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js
 https://cdn.jsdelivr.net/npm/angular-stripe-checkout@5.1.0/angular-stripe-checkout.min.js
 https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js
 https://cdn.jsdelivr.net/npm/ethjs@0.3.4/dist/ethjs.min.js

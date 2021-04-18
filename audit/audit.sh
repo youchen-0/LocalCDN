@@ -571,6 +571,8 @@ function create_url() {
         elif [ "$jfile" = "plyr.min.css" ]; then
             url="$JSDELIVR/npm/plyr@$version/dist/plyr.css"
         fi
+    elif [ "$folder" = "anchor-js" ]; then
+        url="$JSDELIVR/npm/anchor-js@$version/$subfile"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
