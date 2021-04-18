@@ -96,6 +96,7 @@ USE_TOR=false
 CHECK="ALL"
 REPLACE=false
 CREATE_THIRD_PARTY_FILE=false
+ONLY_THIRD_PARTY=false
 
 
 # =============================================================================
@@ -129,6 +130,7 @@ function help() {
     echo -e "  -l       List all resources"
     echo -e "  -d       Check only ONE resource, e.g. jquery"
     echo -e "           'bash audit.sh -d jquery'"
+    echo -e "  -u       Generate URLs only and create THIRD_PARTY.txt"
     exit 0
 }
 
@@ -287,6 +289,11 @@ function check_resource() {
 
     # Get URL of CDN
     create_url
+
+    if [ "$ONLY_THIRD_PARTY" = true ]; then
+        third_party+=("${url}")
+        return 0
+    fi
 
     # Random sleep if the CDN rejects connections (DoS)
     # sleep 0.1s - 0.9s per request
@@ -591,7 +598,7 @@ function create_url() {
 pre_check
 
 # Handle arguments
-while getopts d:fhlrt opt; do
+while getopts d:fhlrtu opt; do
    case $opt in
        d) CHECK="$OPTARG";;
        f) CREATE_THIRD_PARTY_FILE=true;;
@@ -599,6 +606,7 @@ while getopts d:fhlrt opt; do
        l) list_resources;;
        r) REPLACE=true;;
        t) USE_TOR=true;;
+       u) ONLY_THIRD_PARTY=true && CREATE_THIRD_PARTY_FILE=true;;
        ?) help;;
    esac
 done
