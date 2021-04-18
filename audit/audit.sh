@@ -562,7 +562,7 @@ function create_url() {
         relativpath=$(echo -e "$path" | awk -F"../$folder/$version" '{print $NF}')
         url="$CLOUDFLARE/$folder/$version/$relativpath"
     elif [ "$folder" = "Chart.js" ] && [ "$version" != "2.9.4" ]; then
-        url="$CLOUDFLARE/$folder/$version/chart.min.js"
+        url="$JSDELIVR/npm/chart.js@$version/dist/chart.min.js"
     elif [ "$folder" = "angular-ui-select" ] && [ "$version" = "0.19.8" ]; then
         url="$JSDELIVR/npm/ui-select@$version/dist/select.min.js"
     elif [ "$folder" = "plyr" ]; then
