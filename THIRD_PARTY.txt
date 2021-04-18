@@ -1104,8 +1104,6 @@ https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js
-https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.6/swiper-bundle.min.css
-https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.6/swiper-bundle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js
 https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css
 https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js
@@ -1181,6 +1179,8 @@ https://cdn.jsdelivr.net/npm/plyr@3.6.5/dist/plyr.css
 https://cdn.jsdelivr.net/npm/plyr@3.6.5/dist/plyr.min.js
 https://cdn.jsdelivr.net/npm/raven-js@3.27.2/dist/raven.min.js
 https://cdn.jsdelivr.net/npm/react-lifecycles-compat@3.0.4/react-lifecycles-compat.min.js
+https://cdn.jsdelivr.net/npm/swiper@6.5.7/swiper-bundle.min.css
+https://cdn.jsdelivr.net/npm/swiper@6.5.7/swiper-bundle.min.js
 https://cdn.jsdelivr.net/npm/ui-select@0.19.8/dist/select.min.js
 https://cdn.jsdelivr.net/npm/urlize.js/urlize.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.css

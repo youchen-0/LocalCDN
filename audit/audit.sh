@@ -481,9 +481,9 @@ function create_url() {
         url="$CLOUDFLARE/$folder/$version/js/$jfile"
     elif [ "$folder" = "Swiper" ] && [ "$version" != "3.4.2" ] && [ "$version" != "4.5.1" ] && [ "$version" != "5.4.5" ]; then
         if [[ "$path" =~ .*swiper\.min\.css$ ]]; then
-            url="$CLOUDFLARE/$folder/$version/swiper-bundle.min.css"
+            url="$JSDELIVR/npm/swiper@$version/swiper-bundle.min.css"
         elif [[ "$path" =~ .*swiper\.min\.js$ ]]; then
-            url="$CLOUDFLARE/$folder/$version/swiper-bundle.min.js"
+            url="$JSDELIVR/npm/swiper@$version/swiper-bundle.min.js"
         fi
     elif [ "$folder" = "tooltipster" ] && [ "$version" = "4.2.8" ]; then
         url="$CLOUDFLARE/$folder/$version/js/tooltipster.bundle.min.js"
