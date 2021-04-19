@@ -160,7 +160,7 @@
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Видалити",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
@@ -188,7 +188,7 @@
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Інше",
         "description": "Other"
     },
     "btnInfo": {
