@@ -264,7 +264,7 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Hjälp",
         "description": "Help"
     },
     "helpIntroductionTitle": {
@@ -312,7 +312,7 @@
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wiki sidor",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -348,7 +348,7 @@
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Endast uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
@@ -356,7 +356,7 @@
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Ikon",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
@@ -424,11 +424,11 @@
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Ja",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Nej",
         "description": "No"
     },
     "helpData": {
