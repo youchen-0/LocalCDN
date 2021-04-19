@@ -1175,8 +1175,8 @@ https://cdn.jsdelivr.net/npm/@findify/bundle@6.9.15/dist/vendors~sentry.js
 https://cdn.jsdelivr.net/npm/object-assign@4.1.1/index.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-core@0.6.2/build/p2p-media-loader-core.min.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@0.6.2/build/p2p-media-loader-hlsjs.min.js
-https://cdn.jsdelivr.net/npm/plyr@3.6.5/dist/plyr.css
-https://cdn.jsdelivr.net/npm/plyr@3.6.5/dist/plyr.min.js
+https://cdn.jsdelivr.net/npm/plyr@3.6.6/dist/plyr.css
+https://cdn.jsdelivr.net/npm/plyr@3.6.6/dist/plyr.min.js
 https://cdn.jsdelivr.net/npm/raven-js@3.27.2/dist/raven.min.js
 https://cdn.jsdelivr.net/npm/react-lifecycles-compat@3.0.4/react-lifecycles-compat.min.js
 https://cdn.jsdelivr.net/npm/swiper@6.5.7/swiper-bundle.min.css
