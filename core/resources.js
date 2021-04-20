@@ -33,13 +33,6 @@ var resources = {
     'algoliaSearch': {
         'path': 'resources/algoliasearch/{version}/algoliasearch.min.jsm'
     },
-    // Aliplayer
-    'aliplayerJS': {
-        'path': 'resources/aliplayer/{version}/aliplayer-min.jsm'
-    },
-    'aliplayerCSS': {
-        'path': 'resources/aliplayer/{version}/aliplayer-min.css'
-    },
     // AnchorJS
     'anchorJS': {
         'path': 'resources/anchor-js/{version}/anchor.min.jsm'

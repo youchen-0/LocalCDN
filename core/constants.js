@@ -230,7 +230,6 @@ const Links = {
 };
 
 const CDNs = {
-    'g.alicdn.com': 'AliCDN',
     'ajax.googleapis.com': 'Google Hosted Libraries',
     'ajax.aspnetcdn.com': 'Microsoft Ajax CDN',
     'ajax.microsoft.com': 'Microsoft Ajax CDN [Deprecated]',

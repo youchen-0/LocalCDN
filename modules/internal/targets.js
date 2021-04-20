@@ -73,8 +73,6 @@ targets.setLastVersion = function (type, version) {
         return '3.35.1';
     } else if (type.startsWith('/algoliasearch/4.')) {
         return '4.8.6';
-    } else if (type.startsWith('/aliplayer/2.')) {
-        return '2.9.3';
     } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
@@ -580,8 +578,6 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
-    'aliplayer-min.css': 'Aliplayer (CSS)',
-    'aliplayer-min.jsm': 'Aliplayer (JS)',
     'MaterialIcons.woff2': 'Google Material Icons',
     'font-awesome': 'Font Awesome',
     'leaflet.jsm': 'leaflet (JS)',
