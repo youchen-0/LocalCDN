@@ -1,22 +1,22 @@
 {
     "extensionDescription": {
-        "message": "",
+        "message": "Захищає вас від стеження крізь МДВ (Мережа доставки вмісту), направляючи на локальні ресурси.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "",
+        "message": "Кількість ін'єкцій ресурсів Мереж доставки вмісту з часу встановлення.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "",
+        "message": "Налаштування",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "",
+        "message": "Показувати кількість ін'єкцій на іконці",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "",
+        "message": "Показати кількість ін'єкцій ресурсів на іконці розширення.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -28,7 +28,7 @@
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "",
+        "message": "Вимкнути передзавантаження посилань",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "",
+        "message": "Вимкнути LocalCDN для цих доменів:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
@@ -52,11 +52,11 @@
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
-        "message": "",
+        "message": "Розширені",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "",
+        "message": "Згенерувати правила для вашого блокувальника реклами",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
@@ -64,11 +64,11 @@
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Востаннє оновлено:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Скопіювати",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
@@ -84,19 +84,19 @@
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Вимкнути",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Фільтрувати сирцевий код HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Пожертвувати",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Інвертувати HTML фільтр",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -116,11 +116,11 @@
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Увімкнути HTML фільтр для наступних доменів:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Блокувати Google Шрифти",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
@@ -128,11 +128,11 @@
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Вибрати іконку для розширення",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Внутрішня статистика",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
@@ -140,23 +140,23 @@
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Статистика",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Сьогодні",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Останнього тижня",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Останнього місяця",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Останнього року",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
@@ -164,15 +164,15 @@
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "В середньому (замінено в день)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Замінені фреймворки",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Ви впевнені, що хочете видалити всю статистику?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
@@ -180,11 +180,11 @@
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Базові",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Розширені",
         "description": "Advanced"
     },
     "btnOther": {
@@ -192,23 +192,23 @@
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Інфо",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Тип сховища",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Локальне",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Синхронізувати",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Ввантажити/Вивантажити",
         "description": "Import/Export"
     },
     "labelExportData": {
@@ -220,39 +220,39 @@
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Ввантаження успішне",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Ввантаження не вдалося",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Сповіщення після оновлення",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Ніколи (тихі оновлення)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Тільки якщо нові МДВи та правила",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Завжди",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Веб-сайт зламаний?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Сховати кнопку пожертвування",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Бета",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
@@ -264,23 +264,23 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Допомога",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Вступ",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Що таке \"HTML фільтр\"?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Генератор правил",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Деякі веб-сайти виглядають дивно та складні в використанні",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
@@ -288,11 +288,11 @@
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Що з статистикою? Чи вона надсилається на якісь сервери?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Що буде синхронізовано, коли я натисну \"синхронізувати\"?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
@@ -304,7 +304,7 @@
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Тестувальний інструмент",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
@@ -312,7 +312,7 @@
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Вікі сторінки",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -324,7 +324,7 @@
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Результат виглядає так:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
@@ -348,7 +348,7 @@
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Тільки uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
@@ -356,11 +356,11 @@
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Іконка",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Режим",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
@@ -368,15 +368,15 @@
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "Типовий/Простий",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Середній",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "Складний",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
@@ -396,7 +396,7 @@
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Як я можу бути певним, що це правда?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
@@ -416,35 +416,35 @@
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Речі, які ніколи не синхронізуються:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Кількість ін'єкцій",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Так",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Ні",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Інформація",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Налаштування, що синхронізовуватимуться:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Типовий, Світлий, Блакитний/Сірий",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Більше інформації про Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
@@ -452,15 +452,15 @@
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Замінити",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Замінити інші ресурси",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Оновити інші ресурси",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
