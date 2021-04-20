@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Захищає вас від стеження крізь МДВ (Мережа доставки вмісту), направляючи на локальні ресурси.",
+        "message": "Захищає вас від стеження крізь CDN (Мережа доставки вмісту), направляючи на локальні ресурси.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -284,7 +284,7 @@
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Чому існує опція «Блокувати шрифти Google»?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
