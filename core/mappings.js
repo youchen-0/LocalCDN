@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-02-10';
+mappings.lastMappingUpdate = '2021-04-20';
 
 mappings.cdn = {
 
@@ -982,6 +982,13 @@ mappings.cdn = {
     'cdn.ravenjs.com': {
         '/': {
             '{version}/raven.': resources.ravenJS
+        }
+    },
+    // alicdn
+    'g.alicdn.com': {
+        '/': {
+            'de/prismplayer/{version}/aliplayer-min.js': resources.aliplayerJS,
+            'de/prismplayer/{version}/skins/default/aliplayer-min.css': resources.aliplayerCSS
         }
     }
 };

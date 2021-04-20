@@ -75,6 +75,7 @@ readonly CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
 readonly JSDELIVR="https://cdn.jsdelivr.net"
 readonly NETDNA_BOOTSTRAPCDN="https://netdna.bootstrapcdn.com"
 readonly GITHUB="https://raw.githubusercontent.com"
+readonly ALICDN="https://g.alicdn.com"
 
 
 # =============================================================================
@@ -580,6 +581,12 @@ function create_url() {
         fi
     elif [ "$folder" = "anchor-js" ]; then
         url="$JSDELIVR/npm/anchor-js@$version/$subfile"
+    elif [ "$folder" = "aliplayer" ]; then
+        if [ "$jfile" = "aliplayer-min.js" ]; then
+            url="$ALICDN/de/prismplayer/$version/aliplayer-min.js"
+        elif [ "$jfile" = "aliplayer-min.css" ]; then
+            url="$ALICDN/de/prismplayer/$version/skins/default/aliplayer-min.css"
+        fi
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
