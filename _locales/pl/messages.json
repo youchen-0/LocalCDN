@@ -264,15 +264,15 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Pomoc",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Wprowadzenie",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Co to jest »filtr HTML«?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
@@ -280,7 +280,7 @@
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Niektóre strony dziwnie wyglądają lub są trudne w użyciu",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
