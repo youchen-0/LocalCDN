@@ -795,7 +795,7 @@ https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/zenburn.min.cs
 https://cdnjs.cloudflare.com/ajax/libs/history/4.10.1/history.min.js
 https://cdnjs.cloudflare.com/ajax/libs/history/5.0.0/history.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.14.17/hls.min.js
-https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.0.1/hls.min.js
+https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.0.2/hls.min.js
 https://cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js
 https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/3.7.0/instantsearch.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.21.0/instantsearch.production.min.js
