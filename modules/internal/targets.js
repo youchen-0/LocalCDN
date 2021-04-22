@@ -533,7 +533,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/toastr.js/2.')) {
         return '2.1.4';
     } else if (type.startsWith('/underscore.js/1.')) {
-        return '1.12.0';
+        return '1.13.1';
     } else if (type.startsWith('/urlive/1.')) {
         return '1.1.1';
     } else if (type.startsWith('/vanilla-lazyload')) {
