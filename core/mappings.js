@@ -963,7 +963,8 @@ mappings.cdn = {
     'vjs.zencdn.net': {
         '/': {
             '{version}/video-js.min.css': resources.videoJScss,
-            '{version}/video.min.js': resources.videoJS
+            '{version}/video.min.js': resources.videoJS,
+            '{version}/video.js': resources.videoJS
         }
     },
     // Plyr CDN
