@@ -271,7 +271,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/gsap/2.')) {
         return '2.1.3';
     } else if (type.startsWith('/gsap/3.')) {
-        return '3.5.1';
+        return '3.6.1';
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
     } else if (type.startsWith('/google-material-design-icons/')) {
