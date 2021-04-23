@@ -276,7 +276,7 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Generator reguł",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
@@ -284,35 +284,35 @@
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Dlaczego znajduje się tutaj opcja »Blokuj czcionki Google«?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Co ze statystykami? Czy coś jest przesyłane na czyjeś serwery?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Co zostanie zsynchronizowane po wybraniu opcji »synchronizuj« jako typ pamięci?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Zgodność z przeglądarkami",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN to rozszerzenie do przeglądarki internetowej, które emuluje Content Delivery Networks, aby poprawić prywatność online. Przechwytuje ono ruch, wyszukuje lokalnie obsługiwane frameworki/biblioteki i wstrzykuje je w stronę internetową. Zachęcamy do skorzystania z poniższego narzędzia testowego, aby sprawdzić, czy jesteś odpowiednio chroniony. Aby uzyskać więcej informacji przeczytaj samouczek lub strony w Wiki.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Narzędzie testowania",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Samouczek",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Strony Wiki",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
