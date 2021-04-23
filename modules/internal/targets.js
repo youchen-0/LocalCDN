@@ -375,7 +375,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/lazysizes/4.')) {
         return '4.1.8';
     } else if (type.startsWith('/lazysizes/5.')) {
-        return '5.3.1';
+        return '5.3.2';
     } else if (type.startsWith('/leaflet/0.')) {
         return '0.7.7';
     } else if (type.startsWith('/leaflet/1.')) {
