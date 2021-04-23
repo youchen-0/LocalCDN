@@ -108,6 +108,7 @@ https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.6/ui-bootstrap.m
 https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.6/ui-bootstrap-tpls.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.3/angular-ui-router.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js
 https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css
 https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
