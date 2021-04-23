@@ -279,11 +279,11 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/highlight.js/10.')) {
         return '10.7.2';
     } else if (type.startsWith('/highlight.js/9.')) {
-        return '9.18.3';
+        return '9.18.5';
     } else if (type.startsWith('/highlight.js/8.')) {
-        return '9.18.3';
+        return '9.18.5';
     } else if (type.startsWith('/highlight.js/7.')) {
-        return '9.18.3';
+        return '9.18.5';
     } else if (type.startsWith('/history/4.')) {
         return '4.10.1';
     } else if (type.startsWith('/history/5.')) {
