@@ -308,9 +308,8 @@ https://cdnjs.cloudflare.com/ajax/libs/ember.js/1.13.13/ember.debug.js
 https://cdnjs.cloudflare.com/ajax/libs/ember.js/2.18.2/ember.debug.js
 https://cdnjs.cloudflare.com/ajax/libs/ember.js/3.26.1/ember.debug.js
 https://cdnjs.cloudflare.com/ajax/libs/ext-core/3.1.0/ext-core.js
-https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js
-https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css
-https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js
+https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/css/jquery.fancybox.min.css
+https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js
 https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
 https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
 https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js

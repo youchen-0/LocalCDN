@@ -580,6 +580,12 @@ function create_url() {
         fi
     elif [ "$folder" = "anchor-js" ]; then
         url="$JSDELIVR/npm/anchor-js@$version/$subfile"
+    elif [ "$folder" = "fancybox" ] && [ "$version" = "2.1.7" ]; then
+        if [[ $file =~ .*\.css$ ]]; then
+            url="$CLOUDFLARE/$folder/$version/css/$file"
+        else
+            url="$CLOUDFLARE/$folder/$version/js/$jfile"
+        fi
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

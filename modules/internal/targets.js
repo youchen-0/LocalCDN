@@ -253,7 +253,7 @@ targets.setLastVersion = function (type, version) {
         if (helpers.compareVersion('6.9.15', version)) return '6.9.15'; // <= 6.9.15
         else return '6.17.0';
     } else if (type.startsWith('/fancybox/2.')) {
-        return '2.1.5';
+        return '2.1.7';
     } else if (type.startsWith('/fancybox/3.')) {
         return '3.5.7';
     } else if (type.startsWith('/feather-icons/4.')) {
