@@ -246,7 +246,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/ember.js/3.')) {
         return '3.26.1';
     } else if (type.startsWith('/ethjs')) {
-        return '0.3.4';
+        return '0.4.0';
     } else if (type.startsWith('/ext-core/3.')) {
         return '3.1.0';
     } else if (type.startsWith('findify')) {
