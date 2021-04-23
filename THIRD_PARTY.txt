@@ -246,7 +246,7 @@ https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js
 https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js
 https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css
 https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.js
-https://cdnjs.cloudflare.com/ajax/libs/dojo/1.16.3/dojo.min.js
+https://cdnjs.cloudflare.com/ajax/libs/dojo/1.16.4/dojo.min.js
 https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css
 https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js
 https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.15.1/index.min.js

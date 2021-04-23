@@ -532,8 +532,8 @@ function create_url() {
         url="$CLOUDFLARE/history/5.0.0/history.production.min.js"
     elif [ "$folder" = "ember.js" ] && [ "$version" = "3.24.2" ] && [ "$jfile" = "ember.min.js" ]; then
         url="$CLOUDFLARE/ember.js/3.24.2/ember.debug.js"
-    elif [ "$folder" = "dojo" ] && [ "$version" = "1.16.3" ]; then
-        url="$CLOUDFLARE/dojo/1.16.3/dojo.min.js"
+    elif [ "$folder" = "dojo" ]; then
+        url="$CLOUDFLARE/dojo/$version/dojo.min.js"
     elif [ "$folder" = "material-design-icons" ]; then
         url="$GITHUB/Templarian/MaterialDesign-Webfont/v$version/$jfile/$subfile"
     elif [ "$folder" = "algoliasearch" ]; then
