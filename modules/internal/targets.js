@@ -128,7 +128,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular-ui-bootstrap/')) {
         if (helpers.compareVersion('0.10.0', version)) return '0.10.0'; // <= v0.10.0
         else if (helpers.compareVersion('0.14.3', version)) return '0.14.3'; // > 0.10.0 <= v0.14.3
-        return '1.3.3'; // > v0.14.0
+        else if (helpers.compareVersion('0.14.4', version)) return '1.3.3'; // > 0.14.3 <= v1.3.3
+        return '2.5.6';
     } else if (type.startsWith('/angular-ui-router/')) {
         if (helpers.compareVersion('0.4.3', version)) return '0.4.3'; // <= 0.4.3
         else return '1.0.29'; // > 0.4.3
