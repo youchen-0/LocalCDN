@@ -381,7 +381,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/leaflet/1.')) {
         return '1.7.1';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
-        return '1.9.4';
+        return '1.9.16';
     } else if (type.startsWith('/libsodium-wrappers/0.')) {
         return '0.5.4';
     } else if (type.startsWith('/lightcase/2.')) {
