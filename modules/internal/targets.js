@@ -355,7 +355,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery.scrollbar/0.')) {
         return '0.2.11';
     } else if (type.startsWith('/jquery-validation-unobtrusive/3.')) {
-        return '3.2.11';
+        return '3.2.12';
     } else if (type.startsWith('/jquery.tablesorter/2.')) {
         return '2.31.3';
     } else if (type.startsWith('/jquery-modal/0.')) {
