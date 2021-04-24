@@ -502,7 +502,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.4.0';
     } else if (type.startsWith('/socket.io/3.')) {
-        return '3.1.2';
+        return '3.1.3';
     } else if (type.startsWith('/socket.io/4.')) {
         return '4.0.1';
     } else if (type.startsWith('/spin.js/2.')) {
