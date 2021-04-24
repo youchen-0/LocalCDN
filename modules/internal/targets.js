@@ -581,6 +581,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'appboy.min.jsm': 'Appboy/Braze Web SDK',
     'MaterialIcons.woff2': 'Google Material Icons',
     'font-awesome': 'Font Awesome',
     'leaflet.jsm': 'leaflet (JS)',
