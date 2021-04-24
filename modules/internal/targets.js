@@ -516,7 +516,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/stickyfill/2.')) {
         return '2.1.0';
     } else if (type.startsWith('/store.js/2.')) {
-        return '2.0.4';
+        return '2.0.12';
     } else if (type.startsWith('/swfobject/2.')) {
         return '2.2';
     } else if (type.startsWith('/Swiper/3.')) {
