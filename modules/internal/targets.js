@@ -494,7 +494,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/simplemde/')) {
         return '1.11.2';
     } else if (type.startsWith('/slick-carousel/1.')) {
-        return '1.8.1';
+        return '1.9.0';
     } else if (type.startsWith('/slick-lightbox/0.')) {
         return '0.2.12';
     } else if (type.startsWith('/slider-pro/1.')) {

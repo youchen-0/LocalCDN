@@ -1084,9 +1084,9 @@ https://cdnjs.cloudflare.com/ajax/libs/showdown/0.5.1/showdown.min.js
 https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js
 https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css
 https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js
-https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css
-https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js
-https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css
+https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css
+https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js
+https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css
 https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css
 https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js
 https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.5.0/js/jquery.sliderPro.min.js
