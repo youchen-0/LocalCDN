@@ -556,7 +556,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/vue-i18n/8.')) {
         return '8.24.3';
     } else if (type.startsWith('/vue-i18n/9.')) {
-        return '9.1.3';
+        return '9.1.6';
     } else if (type.startsWith('/vue-resource/1.')) {
         return '1.5.2';
     } else if (type.startsWith('/waypoints/4.')) {
