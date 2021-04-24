@@ -403,7 +403,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/markdown-it/')) {
         return '12.0.6';
     } else if (type.startsWith('/mdbootstrap/4.')) {
-        return '4.18.0';
+        return '4.19.1';
     } else if (type.startsWith('/material-design-icons/2.')) {
         return '2.8.94';
     } else if (type.startsWith('/material-design-icons/3.')) {

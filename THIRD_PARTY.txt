@@ -899,8 +899,8 @@ https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.cs
 https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js
 https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css
 https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js
-https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css
-https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js
+https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css
+https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js
 https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css
 https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css
