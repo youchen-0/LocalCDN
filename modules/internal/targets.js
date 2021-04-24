@@ -462,7 +462,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/raven.js/3.')) {
         return '3.27.2';
     } else if (type.startsWith('/react/16.')) {
-        return '16.13.1';
+        return '16.14.0';
     } else if (type.startsWith('/react/17.')) {
         return '17.0.2';
     } else if (type.startsWith('/react-dom/16.')) {
