@@ -142,6 +142,10 @@ var resources = {
     'animejs': {
         'path': 'resources/animejs/{version}/anime.min.jsm'
     },
+    // Appboy/Braze Web SDK
+    'appboyWebSdk': {
+        'path': 'resources/appboy-web-sdk/{version}/appboy.min.jsm'
+    },
     // autocomplete.js
     'autocompleteJS': {
         'path': 'resources/autocomplete.js/{version}/autocomplete.min.jsm'

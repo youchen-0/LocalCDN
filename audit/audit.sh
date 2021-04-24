@@ -586,6 +586,8 @@ function create_url() {
         else
             url="$CLOUDFLARE/$folder/$version/js/$jfile"
         fi
+    elif [ "$folder" = "appboy-web-sdk" ]; then
+        url="$JSDELIVR/npm/appboy-web-sdk@$version/$subfile"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

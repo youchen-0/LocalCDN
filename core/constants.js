@@ -260,7 +260,8 @@ const CDNs = {
     'vjs.zencdn.net': 'Video.js CDN',
     'cdn.plyr.io': 'Plyr CDN',
     'cdn.materialdesignicons.com': 'MaterialDesign',
-    'cdn.ravenjs.com': 'Raven.js'
+    'cdn.ravenjs.com': 'Raven.js',
+    'js.appboycdn.com': 'Appboy CDN',
 };
 
 const IgnoredHost = {

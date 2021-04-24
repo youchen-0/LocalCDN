@@ -153,6 +153,8 @@ targets.setLastVersion = function (type, version) {
         return '1.2.2';
     } else if (type.startsWith('/angular-translate/2.')) {
         return '2.18.4';
+    } else if (type.startsWith('/appboy-web-sdk/3.')) {
+        return '3.2.0';
     } else if (type.startsWith('/axios/0.')) {
         return '0.21.1';
     } else if (type.startsWith('/babel-polyfill/')) {
