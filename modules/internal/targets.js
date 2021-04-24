@@ -468,7 +468,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/react-dom/16.')) {
         return '16.14.0';
     } else if (type.startsWith('/react-dom/17.')) {
-        return '17.0.1';
+        return '17.0.2';
     } else if (type.startsWith('/react-redux/7.')) {
         return '7.2.3';
     } else if (type.startsWith('/react-router/5.')) {
