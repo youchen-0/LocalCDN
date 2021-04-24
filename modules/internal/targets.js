@@ -393,7 +393,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/noUiSlider/14.')) {
         return '14.7.0';
     } else if (type.startsWith('/lodash.js/4.')) {
-        return '4.17.20';
+        return '4.17.21';
     } else if (type.startsWith('/lodash.js/3.')) {
         return '3.10.1';
     } else if (type.startsWith('/lozad')) {

@@ -888,7 +888,7 @@ https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/fonts/lg.woff
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js
-https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js
+https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js
 https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js
 https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css
