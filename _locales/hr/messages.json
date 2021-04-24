@@ -264,11 +264,11 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Pomoć",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Uvod",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -276,11 +276,11 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Generator pravila",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Neke web-stranice izgledaju čudno ili se ne mogu jednostavno koristiti",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
