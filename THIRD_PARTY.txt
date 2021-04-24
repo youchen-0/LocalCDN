@@ -934,8 +934,8 @@ https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.invie
 https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.3/prototype.min.js
 https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js
-https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.1/umd/react-dom.production.min.js
+https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.3/react-redux.min.js
 https://cdnjs.cloudflare.com/ajax/libs/react-router/5.2.0/react-router.min.js
 https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js
