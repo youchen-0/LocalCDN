@@ -142,6 +142,10 @@ var resources = {
     'animejs': {
         'path': 'resources/animejs/{version}/anime.min.jsm'
     },
+    // Appboy/Braze Web SDK
+    'appboyWebSdk': {
+        'path': 'resources/appboy-web-sdk/{version}/appboy.min.jsm'
+    },
     // autocomplete.js
     'autocompleteJS': {
         'path': 'resources/autocomplete.js/{version}/autocomplete.min.jsm'
@@ -512,11 +516,11 @@ var resources = {
         'path': 'resources/lazysizes/{version}/lazysizes.min.jsm'
     },
     // leaflet
-    'leafletJS':{
-    	'path': 'resources/leaflet/{version}/leaflet.jsm'
+    'leafletJS': {
+        'path': 'resources/leaflet/{version}/leaflet.jsm'
     },
-    'leafletCSS':{
-    	'path': 'resources/leaflet/{version}/leaflet.css'
+    'leafletCSS': {
+        'path': 'resources/leaflet/{version}/leaflet.css'
     },
     // libphonenumber-js
     'libphonenumber': {

@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-02-10';
+mappings.lastMappingUpdate = '2021-04-24';
 
 mappings.cdn = {
 
@@ -454,6 +454,7 @@ mappings.cdn = {
             'angular-stripe-checkout@{version}/angular-stripe-checkout.js': resources.angularStripeCheckout,
             'animate.css@{version}/animate.min.css': resources.animateCSS,
             'animejs@{version}/lib/anime.': resources.animejs,
+            'appboy-web-sdk@{version}/appboy.min.js': resources.appboyWebSdk,
             'autocomplete.js@{version}/dist/autocomplete.': resources.autocompleteJS,
             'axios@{version}/dist/axios.': resources.axios,
             'backbone@{version}/backbone.': resources.backbone,
@@ -963,7 +964,8 @@ mappings.cdn = {
     'vjs.zencdn.net': {
         '/': {
             '{version}/video-js.min.css': resources.videoJScss,
-            '{version}/video.min.js': resources.videoJS
+            '{version}/video.min.js': resources.videoJS,
+            '{version}/video.js': resources.videoJS
         }
     },
     // Plyr CDN
@@ -982,6 +984,12 @@ mappings.cdn = {
     'cdn.ravenjs.com': {
         '/': {
             '{version}/raven.': resources.ravenJS
+        }
+    },
+    // appboy-web-sdk (Braze Web SDK, https://codeberg.org/nobody/LocalCDN/issues/403)
+    'js.appboycdn.com': {
+        '/': {
+            'web-sdk/{version}/appboy.': resources.appboyWebSdk
         }
     }
 };

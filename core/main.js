@@ -85,7 +85,7 @@ main._showReleaseNotes = function (details) {
         }, function () {
             if (details.temporary !== true) {
                 chrome.tabs.create({
-                    'url': chrome.extension.getURL('pages/welcome/welcome.html'),
+                    'url': chrome.runtime.getURL('pages/welcome/welcome.html'),
                     'active': true
                 });
             }
@@ -111,7 +111,7 @@ main._showReleaseNotes = function (details) {
 
             if ((mappingUpdate && items.updateNotification === 1) || items.updateNotification === 2) {
                 chrome.tabs.create({
-                    'url': chrome.extension.getURL(`pages/updates/updates.html?mappingupdate=${mappingUpdate}`),
+                    'url': chrome.runtime.getURL(`pages/updates/updates.html?mappingupdate=${mappingUpdate}`),
                     'active': false
                 });
             } else {

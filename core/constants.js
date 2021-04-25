@@ -199,30 +199,34 @@ const IconType = {
 };
 
 const Regex = {
-    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/.*(?!.*Material\+Icons.*).*/,
-    'GOOGLE_MATERIAL_ICONS': /fonts\.googleapis\.com\/.*\?family=.*Material\+Icons/,
+    'GOOGLE_FONTS': /fonts\.(googleapis|gstatic)\.com\/(?!.*(Material\+Icons|materialicons).*).*/,
+    'GOOGLE_MATERIAL_ICONS': /fonts\.(googleapis|gstatic)\.com\/.*\?family=.*Material\+Icons/,
     'JSDELIVR_COMBINE': /cdn\.jsdelivr\.net.*\/combine.*jquery.*hogan.*algoliasearch.*autocomplete.*/,
     'BOOTSTRAP_DATEPICKER_3': /\/bootstrap-datepicker3.*\.css/,
     'BOOTSTRAP_DATEPICKER': /\/bootstrap-datepicker.*\.css/,
     'FONT_AWESOME': /use\.fontawesome\.com\/fa-loader\.css/,
     'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/,
-    'FONT_AWESOME_FONTS_ONLY': /\/fontawesome\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//,
+    'FONT_AWESOME_FONTS_ONLY': /\/font-?awesome\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//,
     'BOOTSTRAP_FONTS_ONLY': /\/bootstrap\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//
+};
+
+const MaterialIcons = {
+    'DEFAULT': 'flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2'
 };
 
 const Links = {
     'CODEBERG_HTML_FILTER': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-7-a-website-looks-weird-or-cannot-be-used-if-i-deactivate-localcdn-everything-works-what-is-the-problem',
     'CODEBERG_RULESET': 'https://codeberg.org/nobody/LocalCDN/wiki/Home#user-content-6-why-do-i-need-this-rule-generator-i-use-an-adblocker-and-want-to-import-these-rules-how-does-it-work',
-    'WELCOME': chrome.extension.getURL('pages/welcome/welcome.html'),
-    'DONATE': chrome.extension.getURL('pages/donate/donate.html'),
-    'CHANGELOG': chrome.extension.getURL('pages/updates/updates.html'),
-    'FAQ': chrome.extension.getURL('pages/help/help.html'),
-    'FAQ_HTML_FILTER': chrome.extension.getURL('pages/help/help.html#html-filter'),
-    'STATISTICS': chrome.extension.getURL('pages/statistics/statistics.html'),
+    'WELCOME': chrome.runtime.getURL('pages/welcome/welcome.html'),
+    'DONATE': chrome.runtime.getURL('pages/donate/donate.html'),
+    'CHANGELOG': chrome.runtime.getURL('pages/updates/updates.html'),
+    'FAQ': chrome.runtime.getURL('pages/help/help.html'),
+    'FAQ_HTML_FILTER': chrome.runtime.getURL('pages/help/help.html#html-filter'),
+    'STATISTICS': chrome.runtime.getURL('pages/statistics/statistics.html'),
     'LOCALCDN_TEST': 'https://www.localcdn.org/test',
     'LOCALCDN_TEST_WEBSITE': 'https://www.localcdn.org/test/check',
     'WEBLATE': 'https://hosted.weblate.org/projects/localcdn/localcdn/',
-    'LOGGING': chrome.extension.getURL('pages/logging/logging.html'),
+    'LOGGING': chrome.runtime.getURL('pages/logging/logging.html'),
 };
 
 const CDNs = {
@@ -249,13 +253,15 @@ const CDNs = {
     'akamai-webcdn.kgstatic.net': 'Akamai WebCDN',
     'netdna.bootstrapcdn.com': 'NetDNA',
     'pagecdn.io': 'PageCDN',
-    'fonts.googleapis.com': 'Google Fonts',
+    'fonts.googleapis.com': 'Google',
+    'fonts.gstatic.com': 'Google',
     'gitcdn.github.io': 'GitHub',
     'cdn.bootcdn.net': 'BootCDN #2',
     'vjs.zencdn.net': 'Video.js CDN',
     'cdn.plyr.io': 'Plyr CDN',
     'cdn.materialdesignicons.com': 'MaterialDesign',
-    'cdn.ravenjs.com': 'Raven.js'
+    'cdn.ravenjs.com': 'Raven.js',
+    'js.appboycdn.com': 'Appboy CDN',
 };
 
 const IgnoredHost = {

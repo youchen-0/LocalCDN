@@ -2,6 +2,11 @@ h2 {
     color: #5a8f79;
 }
 
+h3 {
+	margin: 28px 0 0 0;
+	text-decoration: underline;
+}
+
 a {
     background: url('../../icons/link-dark.svg') no-repeat right center;
     background-size: 10px 10px;
@@ -240,6 +245,15 @@ textarea {
     margin-top: 20px;
     padding: 0.8em;
     text-align: center;
+}
+
+#notice-locale {
+    background-color: #ffa500;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: white;
+    margin-top: 25px;
+    padding: 14px 16px;
 }
 
 @media (prefers-color-scheme: dark) {

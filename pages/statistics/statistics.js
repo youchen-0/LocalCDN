@@ -207,13 +207,19 @@ statistics._displayNameOfFramework = function (str, type) {
                 filename = 'Google Charts';
             } else if (str === 'resources/fontawesome/5.15.1/css/v4-shims.css') {
                 filename = 'Font Awesome (Shim)';
+            } else if (str === 'resources/bootstrap/fonts/') {
+                filename = 'Bootstrap (Fonts)';
+            } else {
+                console.warn(`[LocalCDN] Missing path: ${str}`);
             }
         }
+
         version = str.match(Resource.VERSION_EXPRESSION);
         if (version !== null && version.length > 0) {
             version = version[0] === 'latest' ? version[0] : `v${version[0]}`;
         } else {
             version = '';
+            console.log(`[LocalCDN] Missing version: ${str}`);
         }
 
         lbName.appendChild(document.createTextNode(filename));
@@ -221,6 +227,7 @@ statistics._displayNameOfFramework = function (str, type) {
         lbVersion.classList.add('version');
         line.appendChild(lbName);
         line.appendChild(lbVersion);
+
         return line;
     }
     // If type is CDN

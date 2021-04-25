@@ -44,7 +44,7 @@ helpers.insertI18nContentIntoDocument = function (document) {
             if (i18nElement.type === 'button') {
                 i18nElement.value = chrome.i18n.getMessage(i18nMessageName);
             } else {
-                i18nElement.innerText = chrome.i18n.getMessage(i18nMessageName);
+                i18nElement.textContent = chrome.i18n.getMessage(i18nMessageName);
             }
             i18nElement.setAttribute('dir', scriptDirection);
         } else {
@@ -78,7 +78,7 @@ helpers.languageIsFullySupported = function (language) {
         'ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'en_CA', 'en_US', 'eo', 'es', 'et', 'fi',
         'fr', 'he', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'kn', 'ko', 'lb', 'lt',
         'nb_NO', 'nl', 'pl', 'pt', 'pt_BR', 'pt_PT', 'ro', 'ru', 'sk', 'si', 'sr', 'sv', 'tl',
-        'tr', 'zh_Hans', 'zh_Hant'
+        'tr', 'uk', 'zh_Hans', 'zh_Hant'
     ];
 
     for (let supportedLanguage of supportedLanguages) {
@@ -151,7 +151,7 @@ helpers.extractFilenameFromPath = function (path) {
     pathSegments = path.split('/');
     filename = pathSegments[pathSegments.length - 1];
 
-    return filename;
+    return filename === '' ? pathSegments[1] : filename;
 };
 
 helpers.generateRandomHexString = function (length) {

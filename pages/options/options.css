@@ -50,11 +50,6 @@ body {
     color: #fff;
 }
 
-#notice-locale {
-    background-color: #ffa500;
-    color: white;
-}
-
 .without-checkbox {
     margin: 0 !important;
     padding: 0 !important;
@@ -356,7 +351,7 @@ div[class="color-picker:a"] {
     margin-top: 1em;
 }
 
-#tf-domains-allowlist-google-fonts {
+#allowedDomainsGoogleFonts {
     box-sizing: border-box;
     margin-top: 0 !important;
     width: 100%;

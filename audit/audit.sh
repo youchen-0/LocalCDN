@@ -96,6 +96,7 @@ USE_TOR=false
 CHECK="ALL"
 REPLACE=false
 CREATE_THIRD_PARTY_FILE=false
+ONLY_THIRD_PARTY=false
 
 
 # =============================================================================
@@ -129,6 +130,7 @@ function help() {
     echo -e "  -l       List all resources"
     echo -e "  -d       Check only ONE resource, e.g. jquery"
     echo -e "           'bash audit.sh -d jquery'"
+    echo -e "  -u       Generate URLs only and create THIRD_PARTY.txt"
     exit 0
 }
 
@@ -287,6 +289,11 @@ function check_resource() {
 
     # Get URL of CDN
     create_url
+
+    if [ "$ONLY_THIRD_PARTY" = true ]; then
+        third_party+=("${url}")
+        return 0
+    fi
 
     # Random sleep if the CDN rejects connections (DoS)
     # sleep 0.1s - 0.9s per request
@@ -481,13 +488,13 @@ function create_url() {
         url="$CLOUDFLARE/$folder/$version/js/$jfile"
     elif [ "$folder" = "Swiper" ] && [ "$version" != "3.4.2" ] && [ "$version" != "4.5.1" ] && [ "$version" != "5.4.5" ]; then
         if [[ "$path" =~ .*swiper\.min\.css$ ]]; then
-            url="$CLOUDFLARE/$folder/$version/swiper-bundle.min.css"
+            url="$JSDELIVR/npm/swiper@$version/swiper-bundle.min.css"
         elif [[ "$path" =~ .*swiper\.min\.js$ ]]; then
-            url="$CLOUDFLARE/$folder/$version/swiper-bundle.min.js"
+            url="$JSDELIVR/npm/swiper@$version/swiper-bundle.min.js"
         fi
     elif [ "$folder" = "tooltipster" ] && [ "$version" = "4.2.8" ]; then
         url="$CLOUDFLARE/$folder/$version/js/tooltipster.bundle.min.js"
-    elif [ "$folder" = "vue" ] && [ "$version" = "3.0.6" ]; then
+    elif [ "$folder" = "vue" ] && [ "$version" != "1.0.28" ] && [ "$version" != "2.6.12" ]; then
         url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
     elif [ "$folder" = "waypoints" ]; then
         if [ "$jfile" = "infinite.min.js" ] || [ "$jfile" = "inview.min.js" ] || [ "$jfile" = "sticky.min.js" ]; then
@@ -525,8 +532,8 @@ function create_url() {
         url="$CLOUDFLARE/history/5.0.0/history.production.min.js"
     elif [ "$folder" = "ember.js" ] && [ "$version" = "3.24.2" ] && [ "$jfile" = "ember.min.js" ]; then
         url="$CLOUDFLARE/ember.js/3.24.2/ember.debug.js"
-    elif [ "$folder" = "dojo" ] && [ "$version" = "1.16.3" ]; then
-        url="$CLOUDFLARE/dojo/1.16.3/dojo.min.js"
+    elif [ "$folder" = "dojo" ]; then
+        url="$CLOUDFLARE/dojo/$version/dojo.min.js"
     elif [ "$folder" = "material-design-icons" ]; then
         url="$GITHUB/Templarian/MaterialDesign-Webfont/v$version/$jfile/$subfile"
     elif [ "$folder" = "algoliasearch" ]; then
@@ -562,9 +569,25 @@ function create_url() {
         relativpath=$(echo -e "$path" | awk -F"../$folder/$version" '{print $NF}')
         url="$CLOUDFLARE/$folder/$version/$relativpath"
     elif [ "$folder" = "Chart.js" ] && [ "$version" != "2.9.4" ]; then
-        url="$CLOUDFLARE/$folder/$version/chart.min.js"
+        url="$JSDELIVR/npm/chart.js@$version/dist/chart.min.js"
     elif [ "$folder" = "angular-ui-select" ] && [ "$version" = "0.19.8" ]; then
         url="$JSDELIVR/npm/ui-select@$version/dist/select.min.js"
+    elif [ "$folder" = "plyr" ]; then
+        if [ "$jfile" = "plyr.min.js" ]; then
+            url="$JSDELIVR/npm/plyr@$version/dist/plyr.min.js"
+        elif [ "$jfile" = "plyr.min.css" ]; then
+            url="$JSDELIVR/npm/plyr@$version/dist/plyr.css"
+        fi
+    elif [ "$folder" = "anchor-js" ]; then
+        url="$JSDELIVR/npm/anchor-js@$version/$subfile"
+    elif [ "$folder" = "fancybox" ] && [ "$version" = "2.1.7" ]; then
+        if [[ $file =~ .*\.css$ ]]; then
+            url="$CLOUDFLARE/$folder/$version/css/$file"
+        else
+            url="$CLOUDFLARE/$folder/$version/js/$jfile"
+        fi
+    elif [ "$folder" = "appboy-web-sdk" ]; then
+        url="$JSDELIVR/npm/appboy-web-sdk@$version/$subfile"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
@@ -583,7 +606,7 @@ function create_url() {
 pre_check
 
 # Handle arguments
-while getopts d:fhlrt opt; do
+while getopts d:fhlrtu opt; do
    case $opt in
        d) CHECK="$OPTARG";;
        f) CREATE_THIRD_PARTY_FILE=true;;
@@ -591,6 +614,7 @@ while getopts d:fhlrt opt; do
        l) list_resources;;
        r) REPLACE=true;;
        t) USE_TOR=true;;
+       u) ONLY_THIRD_PARTY=true && CREATE_THIRD_PARTY_FILE=true;;
        ?) help;;
    esac
 done

@@ -28,6 +28,7 @@ var shorthands = {};
 shorthands.specialFiles = function (channelHost, channelPath, searchString) {
 
     let lastVersion;
+    const CompleteURL = channelHost + channelPath + searchString;
 
     /**
      * NOTE:
@@ -54,12 +55,20 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm',
             'bundle': ''
         };
-    } else if (Regex.GOOGLE_MATERIAL_ICONS.test(channelHost + channelPath + searchString)) {
+    } else if (Regex.GOOGLE_MATERIAL_ICONS.test(CompleteURL)) {
         lastVersion = targets.setLastVersion('/google-material-design-icons/');
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
             'path': 'resources/google-material-design-icons/google-material-design-icons.css',
+            'bundle': ''
+        };
+    } else if (channelPath.endsWith(MaterialIcons.DEFAULT)) {
+        lastVersion = targets.setLastVersion('/google-material-design-icons/');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'path': `resources/google-material-design-icons/${lastVersion}/MaterialIcons.woff2`,
             'bundle': ''
         };
     } else if (Regex.BOOTSTRAP_DATEPICKER_3.test(channelPath)) {
@@ -159,7 +168,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/twitter-bootstrap/fonts/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Bootstrap (Fonts)'
         };
-    } else if (/cdnjs\.cloudflare\.com\/ajax\/libs\/jquery\.cycle2\/[\d.]+\//.test(channelHost + channelPath + searchString)) {
+    } else if (/cdnjs\.cloudflare\.com\/ajax\/libs\/jquery\.cycle2\/[\d.]+\//.test(CompleteURL)) {
         if (channelPath.endsWith('js')) {
             channelPath += 'm';
         }

@@ -21,6 +21,7 @@
         "BrowserType": true,
         "IconType": true,
         "Regex": true,
+        "MaterialIcons": true,
         "Links": true,
         "CDNs": true,
         "IgnoredHost": true,
