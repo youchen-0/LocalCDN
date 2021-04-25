@@ -59,7 +59,6 @@ optionsAdvanced.init = function (opt) {
 
     if (BrowserType.CHROMIUM) {
         document.getElementById('html-filter-div').style.display = 'none';
-        document.getElementById('block-google-fonts').style.display = 'none';
     }
 
     document.getElementById('last-mapping-update').textContent += ` ${mappings.lastMappingUpdate}`;
