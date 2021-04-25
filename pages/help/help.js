@@ -32,7 +32,9 @@ help._onDocumentLoaded = function () {
     help._languageSupported = helpers.languageIsFullySupported(language);
     help._scriptDirection = helpers.determineScriptDirection(language);
 
-    helpers.insertI18nContentIntoDocument(document);
+    if (!helpers.insertI18nContentIntoDocument(document)) {
+        document.getElementById('notice-locale').style.display = 'block';
+    }
 };
 
 

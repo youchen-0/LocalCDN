@@ -76,6 +76,10 @@ code {
     background-color: #ebf8e1;
 }
 
+#notice-locale {
+    display: none;
+}
+
 @media (prefers-color-scheme: dark) {
     .code-blue {
         color: #8484ff;
