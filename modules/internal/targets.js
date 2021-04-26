@@ -499,6 +499,8 @@ targets.setLastVersion = function (type, version) {
         return '0.2.12';
     } else if (type.startsWith('/slider-pro/1.')) {
         return '1.5.0';
+    } else if (type.startsWith('/snowplow/2.')) {
+        return '2.17.3';
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.4.0';
     } else if (type.startsWith('/socket.io/3.')) {
@@ -581,6 +583,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'sp.min.jsm': 'Snowplow',
     'appboy.min.jsm': 'Appboy/Braze Web SDK',
     'MaterialIcons.woff2': 'Google Material Icons',
     'font-awesome': 'Font Awesome',

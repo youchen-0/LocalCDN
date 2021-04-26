@@ -788,6 +788,10 @@ var resources = {
     'sliderProJS': {
         'path': 'resources/slider-pro/{version}/jquery.sliderPro.min.jsm'
     },
+    // Snowplow
+    'snowplow': {
+        'path': 'resources/snowplow/{version}/sp.min.jsm'
+    },
     // socket.io
     'socketIO': {
         'path': 'resources/socket.io/{version}/socket.io.min.jsm'

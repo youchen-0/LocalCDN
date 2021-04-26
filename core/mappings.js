@@ -596,6 +596,7 @@ mappings.cdn = {
             'simplemde/{version}/simplemde.min.js': resources.simplemdeJS,
             'simplemde/{version}/simplemde.css': resources.simplemdeCSS,
             'simplemde/{version}/simplemde.min.css': resources.simplemdeCSS,
+            'snowplow/{version}/sp.': resources.snowplow,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,
