@@ -252,6 +252,10 @@ var resources = {
     'bootstrapVueCSS': {
         'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css'
     },
+    // Bowser.js
+    'bowserJs': {
+    	'path': 'resources/bowser/{version}/bundled.min.jsm'
+    },
     // Bulma
     'bulma': {
         'path': 'resources/bulma/{version}/css/bulma.min.css'
