@@ -205,9 +205,8 @@ targets.setLastVersion = function (type, version) {
         return '2.21.2';
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
-    } else if (type.startsWith('/bowser/2.')) {
+    } else if (type.startsWith('/bowser/')) {
     	return '2.11.0'
-    }
     } else if (type.startsWith('/bulma/0.')) {
         return '0.9.2';
     } else if (type.startsWith('/Chart.js/2.')) {
