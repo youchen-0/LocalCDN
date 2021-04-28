@@ -206,6 +206,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
     } else if (type.startsWith('/bowser/')) {
+    	if (helpers.compareVersion(version, '1.9.4')) return '1.9.4';
     	return '2.11.0'
     } else if (type.startsWith('/bulma/0.')) {
         return '0.9.2';
