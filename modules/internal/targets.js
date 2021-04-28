@@ -206,7 +206,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
     } else if (type.startsWith('/bowser/')) {
-    	if (helpers.compareVersion('1.9.4', version)) return '1.9.4';
+	if (version != 'latest' && helpers.compareVersion('1.9.4', version)) return '1.9.4';
     	return '2.11.0'
     } else if (type.startsWith('/bulma/0.')) {
         return '0.9.2';
@@ -613,7 +613,7 @@ const ListOfFiles = {
     'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',
     'bootstrap-vue.min.jsm': 'BootstrapVue (JS)',
     'bootstrap-vue.min.css': 'BootstrapVue (CSS)',
-    'bowser.min.js': 'Bowser',	
+    'bowser.min.jsm': 'Bowser',	
     'mirage2.min.jsm': 'mirage2',
     'chosen.jquery.min.jsm': 'chosen',
     'nouislider.min.jsm': 'noUiSlider (JS)',
