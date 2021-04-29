@@ -441,7 +441,8 @@ mappings.cdn = {
         '/': {
             'jquery-{version}.': resources.jQuery,
             'ui/{version}/jquery-ui.': resources.jQueryUI,
-            'mobile/{version}/jquery.mobile': resources.jQueryMobile
+            'mobile/{version}/jquery.mobile': resources.jQueryMobile,
+            'jquery-migrate-{version}.': resources.jQueryMigrate
         }
     },
     // jsDelivr (Cloudflare)
