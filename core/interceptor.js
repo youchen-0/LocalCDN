@@ -158,9 +158,9 @@ interceptor.relatedSettings.push(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS);
 storageManager.type.get(interceptor.relatedSettings, function (items) {
     storageManager.amountInjected = items.amountInjected || 0;
     interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
-    interceptor.blockMissing = items.blockMissing || false;
-    interceptor.blockGoogleFonts = items.blockGoogleFonts || true;
     interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
+    interceptor.blockMissing = items.blockMissing === undefined ? false : items.blockMissing;
+    interceptor.blockGoogleFonts = items.blockGoogleFonts === undefined ? true : items.blockGoogleFonts;
 });
 
 
