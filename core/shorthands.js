@@ -115,7 +115,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/vue/${lastVersion}/vue.min.jsm`,
             'bundle': ''
         };
-    } else if ((channelHost + channelPath) === 'ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js') {
+    } else if (Regex.ROCKET_LOADER.test(CompleteURL)) {
         return {
             'source': channelHost,
             'versionRequested': 'latest',
