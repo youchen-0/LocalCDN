@@ -296,8 +296,8 @@ function check_resource() {
     fi
 
     # Random sleep if the CDN rejects connections (DoS)
-    # sleep 0.1s - 0.9s per request
-    # sleep 0.$(( (RANDOM % 10) + 1 ))s
+    # sleeps 0.1s - 0.9s per request
+    #sleep 0.$(( (RANDOM % 10) + 1 ))s
 
     # Use Tor Proxy if set
     if [ "$USE_TOR" = true ]; then
@@ -401,6 +401,12 @@ function create_url() {
             url="$CLOUDFLARE/$folder/$version/js/$jfile"
         else
             url="$CLOUDFLARE/$folder/$version/locales/$jfile"
+        fi
+    elif [ "$folder" = "bowser" ]; then
+        if [ "${version::1}" = "2" ]; then
+            url="$CLOUDFLARE/bowser/$version/bundled.min.js"
+        else
+            url="$CLOUDFLARE/bowser/$version/bowser.min.js"
         fi
     elif [ "$folder" = "select2" ]; then
         if [[ $subfile =~ (select2\.min\.js|select2\.full\.min\.js)$ ]]; then

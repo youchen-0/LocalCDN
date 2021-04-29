@@ -227,8 +227,8 @@ helpers.formatFilename = function (targetPath) {
 
 helpers.compareVersion = function (v1, v2) {
     /**
-     *  compareVersion( '1.5.7' , '1.5.8' ) is TRUE
-     *  compareVersion( '1.5.8' , '1.5.7' ) is FALSE
+     *  compareVersion( '1.5.7' , '1.5.8' ) is FALSE
+     *  compareVersion( '1.5.8' , '1.5.7' ) is TRUE
      *  compareVersion( '1.5.7' , '1.5.7' ) is TRUE
      */
     v1 = v1.split('.');
