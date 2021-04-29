@@ -254,7 +254,7 @@ var resources = {
     },
     // Bowser.js
     'bowserJS': {
-    	'path': 'resources/bowser/{version}/bowser.min.jsm'
+        'path': 'resources/bowser/{version}/bowser.min.jsm'
     },
     // Bulma
     'bulma': {

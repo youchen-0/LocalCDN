@@ -125,19 +125,18 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     });
 
     resourcePath = channelPath.replace(basePath, '');
-    
+
     // Evaluate first in case of version 'latest' and numerals in resource
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
-    
+
     // Handle weird version expressions
-    if(!versionNumber){
-    	if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
-	    versionNumber = channelPath.match(/\d/);
-	    resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
-	    versionNumber = [`${versionNumber}.0`];
-	}
-    }
-    else {
+    if (!versionNumber) {
+        if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
+            versionNumber = channelPath.match(/\d/);
+            resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
+            versionNumber = [`${versionNumber}.0`];
+        }
+    } else {
         resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
     }
 
@@ -149,7 +148,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
         }
         return shorthandResource;
     }
-    
+
     for (let resourceMold of Object.keys(resourceMappings)) {
         if (resourcePattern.startsWith(resourceMold)) {
             let targetPath, versionDelivered, versionRequested, bundle;

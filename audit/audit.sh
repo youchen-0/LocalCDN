@@ -403,10 +403,10 @@ function create_url() {
             url="$CLOUDFLARE/$folder/$version/locales/$jfile"
         fi
     elif [ "$folder" = "bowser" ]; then
-	if [ "${version::1}" = "2" ]; then
-    	    url="$CLOUDFLARE/bowser/$version/bundled.min.js"
-	else
-	    url="$CLOUDFLARE/bowser/$version/bowser.min.js"
+        if [ "${version::1}" = "2" ]; then
+            url="$CLOUDFLARE/bowser/$version/bundled.min.js"
+        else
+            url="$CLOUDFLARE/bowser/$version/bowser.min.js"
         fi
     elif [ "$folder" = "select2" ]; then
         if [[ $subfile =~ (select2\.min\.js|select2\.full\.min\.js)$ ]]; then
