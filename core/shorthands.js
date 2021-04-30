@@ -179,6 +179,15 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/jquery.cycle2/2.1.6/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Cycle2 (Bundle)'
         };
+    } else if (CompleteURL === 'cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js') {
+        lastVersion = targets.setLastVersion('/videojs-seek-buttons/');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'versionRequested': lastVersion,
+            'path': `resources/videojs-seek-buttons/${lastVersion}/videojs-seek-buttons.min.jsm`,
+            'bundle': 'videojs-seek-buttons'
+        };
     } else {
         return false;
     }
