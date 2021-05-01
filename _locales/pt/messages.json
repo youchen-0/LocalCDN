@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Protege contra monitorização através de entrega de conteúdo centralizado.",
+        "message": "Protege contra monitorização através de entrega de conteúdo centralizado redirecionando para recursos locais.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Introduza os domínios para desativar o LocalCDN. Separe várias entradas com ponto e vírgula (;).",
+        "message": "Introduza os domínios para desativar o LocalCDN. Uma entrada por linha. Separe várias entradas com ponto e vírgula (;).",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
