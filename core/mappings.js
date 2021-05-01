@@ -463,6 +463,7 @@ mappings.cdn = {
             'backbone@{version}/backbone-min.': resources.backbone,
             'backbone@{version}/backbone.min.': resources.backbone,
             'bluebird/{version}/bluebird.': resources.bluebird,
+            'bluebird@{version}/js/browser/bluebird.': resources.bluebird,
             'bootstrap@{version}/dist/js/bootstrap.': resources.bootstrapJS,
             'bootstrap@{version}/dist/css/bootstrap.': resources.bootstrapCSS,
             'bootstrap-select@{version}/dist/js/bootstrap-select.': resources.bootstrapSelectJS,
