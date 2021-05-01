@@ -430,6 +430,8 @@ targets.setLastVersion = function (type, version) {
         return '2.29.1';
     } else if (type.startsWith('/mootools/1.')) {
         return '1.6.0';
+    } else if (type.startsWith('/ngx-bootstrap/6.')) {
+        return '6.2.0';
     } else if (type.startsWith('/object-assign@4.')) {
         return '4.1.1';
     } else if (type.startsWith('/oclazyload/1.')) {
@@ -586,6 +588,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bs-datepicker.css': 'Datepicker (ngx-bootstrap)',
     'sp.min.jsm': 'Snowplow',
     'appboy.min.jsm': 'Appboy/Braze Web SDK',
     'MaterialIcons.woff2': 'Google Material Icons',

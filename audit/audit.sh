@@ -594,6 +594,8 @@ function create_url() {
         fi
     elif [ "$folder" = "appboy-web-sdk" ]; then
         url="$JSDELIVR/npm/appboy-web-sdk@$version/$subfile"
+    elif [ "$folder" = "ngx-bootstrap" ]; then
+        url="$JSDELIVR/npm/ngx-bootstrap@$version/$file/$subfile"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

@@ -1178,6 +1178,7 @@ https://cdn.jsdelivr.net/npm/@findify/bundle@6.9.15/dist/styles.css
 https://cdn.jsdelivr.net/npm/@findify/bundle@6.9.15/dist/vendors~components~initializer.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@6.9.15/dist/vendors~initializer.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@6.9.15/dist/vendors~sentry.js
+https://cdn.jsdelivr.net/npm/ngx-bootstrap@6.2.0/datepicker/bs-datepicker.css
 https://cdn.jsdelivr.net/npm/object-assign@4.1.1/index.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-core@0.6.2/build/p2p-media-loader-core.min.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@0.6.2/build/p2p-media-loader-hlsjs.min.js

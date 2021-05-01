@@ -615,6 +615,10 @@ var resources = {
     'mootools': {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm'
     },
+    // ngx-bootstrap datepicker
+    'ngxBootstrapDatepicker': {
+        'path': 'resources/ngx-bootstrap/{version}/datepicker/bs-datepicker.css'
+    },
     // noUiSlider
     'noUiSlider': {
         'path': 'resources/noUiSlider/{version}/nouislider.min.jsm'

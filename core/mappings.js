@@ -525,6 +525,8 @@ mappings.cdn = {
             'moment@{version}/moment.min.': resources.moment,
             'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
             'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
+            'ngx-bootstrap/datepicker/bs-datepicker.css': resources.ngxBootstrapDatepicker,
+            'ngx-bootstrap@{version}/datepicker/bs-datepicker.css': resources.ngxBootstrapDatepicker,
             'react-redux@{version}/dist/react-redux.': resources.reactRedux,
             'react-router@{version}/umd/react-router.': resources.reactRouter,
             'react-side-effect@{version}/lib/index.umd.': resources.reactSideEffect,
