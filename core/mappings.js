@@ -838,6 +838,8 @@ mappings.cdn = {
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
+            'twitter-bootstrap/{version}/js/bootstrap.': resources.bootstrapJS,
+            'twitter-bootstrap/{version}/css/bootstrap.': resources.bootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'webfont/{version}/webfont.': resources.webfontloader,
