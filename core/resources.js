@@ -320,6 +320,10 @@ var resources = {
     'elementUI': {
         'path': 'resources/element-ui/{version}/'
     },
+    // embedly player
+    'embedlyPlayer': {
+        'path': 'resources/embedly-player/{version}/embedly-player.min.jsm'
+    },
     // Ember.js
     'ember': {
         'path': 'resources/ember.js/{version}/ember.min.jsm'

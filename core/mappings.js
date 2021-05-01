@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-04-24';
+mappings.lastMappingUpdate = '2021-05-01';
 
 mappings.cdn = {
 
@@ -997,6 +997,12 @@ mappings.cdn = {
     'js.appboycdn.com': {
         '/': {
             'web-sdk/{version}/appboy.': resources.appboyWebSdk
+        }
+    },
+    // embedly
+    'cdn.embed.ly': {
+        '/': {
+            'player-{version}.min.js': resources.embedlyPlayer
         }
     }
 };

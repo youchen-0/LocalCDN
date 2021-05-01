@@ -75,6 +75,7 @@ readonly CLOUDFLARE_AJAX="https://ajax.cloudflare.com/cdn-cgi/scripts"
 readonly JSDELIVR="https://cdn.jsdelivr.net"
 readonly NETDNA_BOOTSTRAPCDN="https://netdna.bootstrapcdn.com"
 readonly GITHUB="https://raw.githubusercontent.com"
+readonly EMBEDLY="https://cdn.embed.ly"
 
 
 # =============================================================================
@@ -596,6 +597,8 @@ function create_url() {
         url="$JSDELIVR/npm/appboy-web-sdk@$version/$subfile"
     elif [ "$folder" = "ngx-bootstrap" ]; then
         url="$JSDELIVR/npm/ngx-bootstrap@$version/$file/$subfile"
+    elif [ "$folder" = "embedly-player" ]; then
+        url="$EMBEDLY/player-$version.min.js"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

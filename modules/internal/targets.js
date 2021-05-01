@@ -244,6 +244,8 @@ targets.setLastVersion = function (type, version) {
         return '3.2.2';
     } else if (type.startsWith('/element-ui/2.')) {
         return '2.15.1';
+    } else if (type.startsWith('/embedly-player/0.')) {
+        return '0.1.0';
     } else if (type.startsWith('/ember.js/1.')) {
         return '1.13.13';
     } else if (type.startsWith('/ember.js/2.')) {
@@ -588,6 +590,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'embedly-player.min.jsm': 'embedly player',
     'bs-datepicker.css': 'Datepicker (ngx-bootstrap)',
     'sp.min.jsm': 'Snowplow',
     'appboy.min.jsm': 'Appboy/Braze Web SDK',

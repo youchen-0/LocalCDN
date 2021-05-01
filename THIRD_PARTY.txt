@@ -1,5 +1,6 @@
 https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js
 https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js
+https://cdn.embed.ly/player-0.1.0.min.js
 https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.5/js/ajax-bootstrap-select.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.9.0/algoliasearch.umd.min.js
