@@ -57,6 +57,8 @@ targets.determineBundle = function (path) {
         val = 'Cycle2';
     } else if (path.startsWith('/semantic-ui/')) {
         val = 'Semantic UI';
+    } else if (path.startsWith('/datatables/')) {
+        val = 'DataTables';
     }
 
     return val === '' ? val : `${val} (Bundle)`;
@@ -232,6 +234,8 @@ targets.setLastVersion = function (type, version) {
         return '6.7.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
+    } else if (type.startsWith('/datatables/1.')) {
+        return '1.10.24';
     } else if (type.startsWith('/dayjs/1.')) {
         return '1.10.4';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest')) {

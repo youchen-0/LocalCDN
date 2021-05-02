@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-05-01';
+mappings.lastMappingUpdate = '2021-05-02';
 
 mappings.cdn = {
 
@@ -1006,6 +1006,12 @@ mappings.cdn = {
     'cdn.embed.ly': {
         '/': {
             'player-{version}.min.js': resources.embedlyPlayer
+        }
+    },
+    // datatables
+    'cdn.datatables.net': {
+        '/': {
+            '{version}/': resources.datatables
         }
     }
 };

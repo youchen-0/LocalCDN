@@ -264,6 +264,7 @@ const CDNs = {
     'cdn.ravenjs.com': 'Raven.js',
     'js.appboycdn.com': 'Appboy CDN',
     'cdn.embed.ly': 'embedly',
+    'cdn.datatables.net': 'DataTables',
 };
 
 const IgnoredHost = {

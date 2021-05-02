@@ -290,6 +290,10 @@ var resources = {
     'd3legend': {
         'path': 'resources/d3-legend/{version}/d3-legend.min.jsm'
     },
+    // datatables
+    'datatables': {
+        'path': 'resources/datatables/{version}/'
+    },
     // dayjs
     'dayjs': {
         'path': 'resources/dayjs/{version}/dayjs.min.jsm'

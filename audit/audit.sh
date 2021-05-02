@@ -76,6 +76,7 @@ readonly JSDELIVR="https://cdn.jsdelivr.net"
 readonly NETDNA_BOOTSTRAPCDN="https://netdna.bootstrapcdn.com"
 readonly GITHUB="https://raw.githubusercontent.com"
 readonly EMBEDLY="https://cdn.embed.ly"
+readonly DATATABLES="https://cdn.datatables.net"
 
 
 # =============================================================================
@@ -255,6 +256,53 @@ arr_cycle[jquery.cycle2.shuffle.min.js]="plugin/jquery.cycle2.shuffle.min.js"
 arr_cycle[jquery.cycle2.swipe.min.js]="plugin/jquery.cycle2.swipe.min.js"
 arr_cycle[jquery.cycle2.tile.min.js]="plugin/jquery.cycle2.tile.min.js"
 arr_cycle[jquery.cycle2.video.min.js]="plugin/jquery.cycle2.video.min.js"
+
+# https://codeberg.org/nobody/LocalCDN/issues/432
+declare -A arr_datatables
+arr_datatables[jquery.dataTables.min.css]="1.10.24/css/jquery.dataTables.min.css"
+arr_datatables[jquery.dataTables.min.js]="1.10.24/js/jquery.dataTables.min.js"
+arr_datatables[dataTables.foundation.min.css]="1.10.24/css/dataTables.foundation.min.css"
+arr_datatables[dataTables.foundation.min.js]="1.10.24/js/dataTables.foundation.min.js"
+arr_datatables[dataTables.bootstrap.min.css]="1.10.24/css/dataTables.bootstrap.min.css"
+arr_datatables[dataTables.bootstrap.min.js]="1.10.24/js/dataTables.bootstrap.min.js"
+arr_datatables[dataTables.bootstrap4.min.css]="1.10.24/css/dataTables.bootstrap4.min.css"
+arr_datatables[dataTables.bootstrap4.min.js]="1.10.24/js/dataTables.bootstrap4.min.js"
+arr_datatables[dataTables.semanticui.min.css]="1.10.24/css/dataTables.semanticui.min.css"
+arr_datatables[dataTables.semanticui.min.js]="1.10.24/js/dataTables.semanticui.min.js"
+arr_datatables[dataTables.jqueryui.min.css]="1.10.24/css/dataTables.jqueryui.min.css"
+arr_datatables[dataTables.jqueryui.min.js]="1.10.24/js/dataTables.jqueryui.min.js"
+arr_datatables[autoFill.dataTables.min.css]="autofill/2.3.6/css/autoFill.dataTables.min.css"
+arr_datatables[dataTables.autoFill.min.js]="autofill/2.3.6/js/dataTables.autoFill.min.js"
+arr_datatables[buttons.dataTables.min.css]="buttons/1.7.0/css/buttons.dataTables.min.css"
+arr_datatables[dataTables.buttons.min.js]="buttons/1.7.0/js/dataTables.buttons.min.js"
+arr_datatables[buttons.colVis.min.js]="buttons/1.7.0/js/buttons.colVis.min.js"
+arr_datatables[buttons.flash.min.js]="buttons/1.7.0/js/buttons.flash.min.js"
+arr_datatables[buttons.html5.min.js]="buttons/1.7.0/js/buttons.html5.min.js"
+arr_datatables[buttons.print.min.js]="buttons/1.7.0/js/buttons.print.min.js"
+arr_datatables[colReorder.dataTables.min.css]="colreorder/1.5.3/css/colReorder.dataTables.min.css"
+arr_datatables[dataTables.colReorder.min.js]="colreorder/1.5.3/js/dataTables.colReorder.min.js"
+arr_datatables[dataTables.dateTime.min.css]="datetime/1.0.3/css/dataTables.dateTime.min.css"
+arr_datatables[dataTables.dateTime.min.js]="datetime/1.0.3/js/dataTables.dateTime.min.js"
+arr_datatables[fixedColumns.dataTables.min.css]="fixedcolumns/3.3.2/css/fixedColumns.dataTables.min.css"
+arr_datatables[dataTables.fixedColumns.min.js]="fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"
+arr_datatables[fixedHeader.dataTables.min.css]="fixedheader/3.1.8/css/fixedHeader.dataTables.min.css"
+arr_datatables[dataTables.fixedHeader.min.js]="fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"
+arr_datatables[keyTable.dataTables.min.css]="keytable/2.6.1/css/keyTable.dataTables.min.css"
+arr_datatables[dataTables.keyTable.min.js]="keytable/2.6.1/js/dataTables.keyTable.min.js"
+arr_datatables[responsive.dataTables.min.css]="responsive/2.2.7/css/responsive.dataTables.min.css"
+arr_datatables[dataTables.responsive.min.js]="responsive/2.2.7/js/dataTables.responsive.min.js"
+arr_datatables[rowGroup.dataTables.min.css]="rowgroup/1.1.2/css/rowGroup.dataTables.min.css"
+arr_datatables[dataTables.rowGroup.min.js]="rowgroup/1.1.2/js/dataTables.rowGroup.min.js"
+arr_datatables[rowReorder.dataTables.min.css]="rowreorder/1.2.7/css/rowReorder.dataTables.min.css"
+arr_datatables[dataTables.rowReorder.min.js]="rowreorder/1.2.7/js/dataTables.rowReorder.min.js"
+arr_datatables[scroller.dataTables.min.css]="scroller/2.0.3/css/scroller.dataTables.min.css"
+arr_datatables[dataTables.scroller.min.js]="scroller/2.0.3/js/dataTables.scroller.min.js"
+arr_datatables[searchBuilder.dataTables.min.css]="searchbuilder/1.0.1/css/searchBuilder.dataTables.min.css"
+arr_datatables[dataTables.searchBuilder.min.js]="searchbuilder/1.0.1/js/dataTables.searchBuilder.min.js"
+arr_datatables[searchPanes.dataTables.min.css]="searchpanes/1.2.2/css/searchPanes.dataTables.min.css"
+arr_datatables[dataTables.searchPanes.min.js]="searchpanes/1.2.2/js/dataTables.searchPanes.min.js"
+arr_datatables[select.dataTables.min.css]="select/1.3.3/css/select.dataTables.min.css"
+arr_datatables[dataTables.select.min.js]="select/1.3.3/js/dataTables.select.min.js"
 
 
 # =============================================================================
@@ -599,6 +647,10 @@ function create_url() {
         url="$JSDELIVR/npm/ngx-bootstrap@$version/$file/$subfile"
     elif [ "$folder" = "embedly-player" ]; then
         url="$EMBEDLY/player-$version.min.js"
+    elif [ "$folder" = "datatables" ]; then
+        if [ "${arr_datatables[$subfile]}" != "" ]; then
+            url="$DATATABLES/${arr_datatables[$subfile]}"
+        fi
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
