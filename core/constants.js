@@ -263,6 +263,7 @@ const CDNs = {
     'cdn.materialdesignicons.com': 'MaterialDesign',
     'cdn.ravenjs.com': 'Raven.js',
     'js.appboycdn.com': 'Appboy CDN',
+    'cdn.embed.ly': 'embedly',
 };
 
 const IgnoredHost = {
