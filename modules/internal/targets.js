@@ -539,7 +539,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/Swiper/5.')) {
         return '5.4.5';
     } else if (type.startsWith('/Swiper/6.') || type.startsWith('/Swiper/')) {
-        return '6.5.8';
+        return '6.5.9';
     } else if (type.startsWith('/tether/1.')) {
         return '1.4.7';
     } else if (type.startsWith('/tooltipster/3.')) {
