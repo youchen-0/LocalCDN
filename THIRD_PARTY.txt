@@ -1,7 +1,13 @@
 https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js
 https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js
+https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css
+https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap.min.css
+https://cdn.datatables.net/1.10.24/css/dataTables.foundation.min.css
 https://cdn.datatables.net/1.10.24/css/dataTables.semanticui.min.css
 https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css
+https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js
+https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap.min.js
+https://cdn.datatables.net/1.10.24/js/dataTables.foundation.min.js
 https://cdn.datatables.net/1.10.24/js/dataTables.semanticui.min.js
 https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js
 https://cdn.datatables.net/autofill/2.3.6/css/autoFill.dataTables.min.css
