@@ -920,6 +920,7 @@ https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpa
 https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js
+https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/leaflet.markercluster.js
 https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css
 https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js
 https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css
