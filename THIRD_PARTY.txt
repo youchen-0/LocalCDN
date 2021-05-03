@@ -1246,5 +1246,6 @@ https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v4.9.95/css/
 https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v4.9.95/fonts/materialdesignicons-webfont.woff2
 https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v5.8.55/css/materialdesignicons.min.css
 https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/v5.8.55/fonts/materialdesignicons-webfont.woff2
+https://unpkg.com/algoliasearch@4.9.1/dist/algoliasearch.umd.js
 https://unpkg.com/react-side-effect@2.1.1/lib/index.umd.min.js
 https://use.fontawesome.com/a1f20be65b.js
