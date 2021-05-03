@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
+        "message": "透過重定向至本地資源來保護您不受內容傳遞網路（CDN）的追蹤。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "輸入網域即可在該處停用 LocalCDN。使用分號（;）分隔多個網域。",
+        "message": "輸入網域即可在該處停用 LocalCDN。每行一個條目。",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "在瀏覽器控制台中啟用日誌記錄",
+        "message": "啟用日誌記錄",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "打開「瀏覽器主控台」以顯示缺少的資源。",
+        "message": "你可以在菜單中打開日誌紀錄。紀錄將會在你關閉瀏覽器或停用日誌紀錄後清除。",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "輸入 HTML 過濾器要處理或忽略的網域。使用分號（;）分隔多個項目。",
+        "message": "輸入 HTML 過濾器要處理或忽略的網域。每行一個條目。",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -172,11 +172,11 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "您確定要刪除統計數據嗎？",
+        "message": "您確定要刪除所有統計數據嗎？",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "這些網域獲准載入 Google Fonts。以分號（;）分隔每條記錄。",
+        "message": "這些網域獲准載入 Google Fonts。每行一個條目。",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -236,23 +236,23 @@
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "僅限新的 CDN 和規則",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "總是",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "網站壞掉了?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "隱藏捐款按鈕",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "測試",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
