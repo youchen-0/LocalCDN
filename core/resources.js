@@ -534,6 +534,10 @@ var resources = {
     'leafletCSS': {
         'path': 'resources/leaflet/{version}/leaflet.css'
     },
+    // Leaflet.EasyButton
+    'leafletEasyButton': {
+        'path': 'resources/Leaflet.EasyButton/{version}/easy-button.min.jsm'
+    },
     // Leaflet.FeatureGroup.SubGroup
     'leafletFeatureGroupSubGroup': {
         'path': 'resources/leaflet.featuregroup.subgroup/{version}/leaflet.featuregroup.subgroup.jsm'

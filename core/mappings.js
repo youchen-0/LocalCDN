@@ -518,6 +518,8 @@ mappings.cdn = {
             'jquery-validation@{version}/dist/jquery.validate.': resources.jqueryValidationPlugin,
             'leaflet@{version}/dist/leaflet.js': resources.leafletJS,
             'leaflet@{version}/dist/leaflet.css': resources.leafletCSS,
+            'leaflet-easybutton@{version}/src/easy-button.js': resources.leafletEasyButton,
+            'leaflet-easybutton@{version}/src/easy-button.min.js': resources.leafletEasyButton,
             'leaflet.featuregroup.subgroup@{version}/dist/leaflet.featuregroup.subgroup.': resources.leafletFeatureGroupSubGroup,
             'lodash@{version}/lodash.min.js': resources.lodashJS,
             'lozad': resources.lozad,
