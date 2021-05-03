@@ -399,6 +399,8 @@ targets.setLastVersion = function (type, version) {
         return '2.5.0';
     } else if (type.startsWith('/lightgallery/1.')) {
         return '1.10.0';
+    } else if (type.startsWith('/noUiSlider/15.')) {
+        return '15.0.0';
     } else if (type.startsWith('/noUiSlider/14.')) {
         return '14.7.0';
     } else if (type.startsWith('/lodash.js/4.')) {
