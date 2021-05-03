@@ -122,6 +122,7 @@ const WebRequest = {
 
 const WebRequestType = {
     'MAIN_FRAME': 'main_frame',
+    'SUB_FRAME': 'sub_frame',
     'XHR': 'xmlhttprequest'
 };
 

@@ -148,6 +148,6 @@ let cdnDomainsRE = new RegExp(`//(${Object.keys(mappings.cdn).map((m) => m.repla
 
 chrome.webRequest.onHeadersReceived.addListener(
     manipulateDOM._removeCrossOriginAndIntegrityAttr,
-    {'types': [WebRequestType.MAIN_FRAME], 'urls': [Address.ANY]},
+    {'types': [WebRequestType.MAIN_FRAME, WebRequestType.SUB_FRAME], 'urls': [Address.ANY]},
     [WebRequest.BLOCKING, WebRequest.RESPONSE_HEADERS]
 );
