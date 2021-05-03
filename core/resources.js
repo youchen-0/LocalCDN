@@ -534,6 +534,10 @@ var resources = {
     'leafletCSS': {
         'path': 'resources/leaflet/{version}/leaflet.css'
     },
+    // Leaflet.FeatureGroup.SubGroup
+    'leafletFeatureGroupSubGroup': {
+        'path': 'resources/leaflet.featuregroup.subgroup/{version}/leaflet.featuregroup.subgroup.jsm'
+    },
     // leaflet.markercluster
     'leafletMarkercluster': {
         'path': 'resources/leaflet.markercluster/{version}/leaflet.markercluster.jsm'

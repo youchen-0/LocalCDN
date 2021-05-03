@@ -518,6 +518,7 @@ mappings.cdn = {
             'jquery-validation@{version}/dist/jquery.validate.': resources.jqueryValidationPlugin,
             'leaflet@{version}/dist/leaflet.js': resources.leafletJS,
             'leaflet@{version}/dist/leaflet.css': resources.leafletCSS,
+            'leaflet.featuregroup.subgroup@{version}/dist/leaflet.featuregroup.subgroup.': resources.leafletFeatureGroupSubGroup,
             'lodash@{version}/lodash.min.js': resources.lodashJS,
             'lozad': resources.lozad,
             'npm-modernizr@{version}/modernizr.': resources.modernizr,
