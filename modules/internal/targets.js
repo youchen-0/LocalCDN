@@ -391,6 +391,8 @@ targets.setLastVersion = function (type, version) {
         return '0.7.7';
     } else if (type.startsWith('/leaflet/1.')) {
         return '1.7.1';
+    } else if (type.startsWith('/leaflet.markercluster/1.')) {
+        return '1.5.0';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
         return '1.9.16';
     } else if (type.startsWith('/libsodium-wrappers/0.')) {
@@ -596,6 +598,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'leaflet.markercluster.jsm': 'leaflet.markercluster',
     'embedly-player.min.jsm': 'embedly player',
     'bs-datepicker.css': 'Datepicker (ngx-bootstrap)',
     'sp.min.jsm': 'Snowplow',

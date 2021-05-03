@@ -534,6 +534,10 @@ var resources = {
     'leafletCSS': {
         'path': 'resources/leaflet/{version}/leaflet.css'
     },
+    // leaflet.markercluster
+    'leafletMarkercluster': {
+        'path': 'resources/leaflet.markercluster/{version}/leaflet.markercluster.jsm'
+    },
     // libphonenumber-js
     'libphonenumber': {
         'path': 'resources/libphonenumber-js/{version}/libphonenumber-js.min.jsm'
