@@ -232,7 +232,7 @@
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "絕不 (靜默更新)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
