@@ -26,6 +26,7 @@
         "CDNs": true,
         "IgnoredHost": true,
         "EncodingTypes": true,
+        "ExtraInfoSpec": true,
 
         "fileGuard": true,
         "files": true,

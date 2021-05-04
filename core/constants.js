@@ -117,7 +117,8 @@ const WebRequest = {
     'GET': 'GET',
     'BLOCKING': 'blocking',
     'HEADERS': 'requestHeaders',
-    'RESPONSE_HEADERS': 'responseHeaders'
+    'RESPONSE_HEADERS': 'responseHeaders',
+    'EXTRA_HEADERS': 'extraHeaders'
 };
 
 const WebRequestType = {

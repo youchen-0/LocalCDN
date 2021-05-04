@@ -22,25 +22,35 @@ var requestSanitizer = {};
 
 
 /**
+ * Preparation
+ * https://codeberg.org/nobody/LocalCDN/issues/442
+ */
+
+/* eslint-disable indent */
+const ExtraInfoSpec = BrowserType.FIREFOX
+                      ? [WebRequest.BLOCKING, WebRequest.HEADERS]
+                      : [WebRequest.BLOCKING, WebRequest.HEADERS, WebRequest.EXTRA_HEADERS];
+/* eslint-enable indent */
+
+
+/**
  * Public Methods
  */
 
 requestSanitizer.enable = function () {
-
     let onBeforeSendHeaders = chrome.webRequest.onBeforeSendHeaders;
 
     onBeforeSendHeaders.addListener(requestSanitizer._stripMetadata, {
         'urls': stateManager.validHosts
-    }, [WebRequest.BLOCKING, WebRequest.HEADERS]);
+    }, ExtraInfoSpec);
 };
 
 requestSanitizer.disable = function () {
-
     let onBeforeSendHeaders = chrome.webRequest.onBeforeSendHeaders;
 
     onBeforeSendHeaders.removeListener(requestSanitizer._stripMetadata, {
         'urls': stateManager.validHosts
-    }, [WebRequest.BLOCKING, WebRequest.HEADERS]);
+    }, ExtraInfoSpec);
 };
 
 
@@ -78,7 +88,6 @@ requestSanitizer._stripMetadata = function (requestDetails) {
  */
 
 storageManager.type.get({[Setting.STRIP_METADATA]: true}, function (items) {
-
     if (items === null || items.stripMetadata !== false) {
         requestSanitizer.enable();
     }
