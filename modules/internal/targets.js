@@ -185,6 +185,8 @@ targets.setLastVersion = function (type, version) {
         else return '3.4.1';
     } else if (type.startsWith('/twitter-bootstrap/4.')) {
         return '4.6.0';
+    } else if (type.startsWith('/twitter-bootstrap/5.')) {
+        return '5.0.0';
     } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
     } else if (type.startsWith('/bootstrap-daterangepicker/3.')) {
