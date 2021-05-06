@@ -139,9 +139,6 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     } else {
         resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
     }
-    if (resourcePattern === undefined) {
-        return false;
-    }
 
     shorthandResource = shorthands.specialFiles(channelHost, channelPath, destinationSearchString);
     if (shorthandResource) {
@@ -150,6 +147,10 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             log.append(initiator, channelHost + channelPath, shorthandResource.path, false);
         }
         return shorthandResource;
+    }
+
+    if (resourcePattern === undefined) {
+        return false;
     }
 
     for (let resourceMold of Object.keys(resourceMappings)) {
