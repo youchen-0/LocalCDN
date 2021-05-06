@@ -149,8 +149,10 @@ targets.setLastVersion = function (type, version) {
         return '4.1.1';
     } else if (type.startsWith('/animejs/3.')) {
         return '3.2.1';
-    } else if (type.startsWith('/autocomplete.js/')) {
+    } else if (type.startsWith('/autocomplete.js/0.')) {
         return '0.38.0';
+    } else if (type.startsWith('/autocomplete.js/1.')) {
+        return '1.0.0';
     } else if (type.startsWith('/angular-material/1.') || type.startsWith('/angular-material/0.')) {
         return '1.2.2';
     } else if (type.startsWith('/angular-translate/2.')) {
