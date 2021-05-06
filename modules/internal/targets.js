@@ -212,6 +212,8 @@ targets.setLastVersion = function (type, version) {
         return '2.11.0';
     } else if (type.startsWith('/bulma/0.')) {
         return '0.9.2';
+    } else if (type.startsWith('/bxslider/4.')) {
+        return '4.2.15';
     } else if (type.startsWith('/Chart.js/2.')) {
         return '2.9.4';
     } else if (type.startsWith('/Chart.js/3.')) {
@@ -602,6 +604,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.bxslider.min.jsm': 'bxslider (JS)',
+    'jquery.bxslider.min.css': 'bxslider (CSS)',
     'easy-button.min.jsm': 'Leaflet.EasyButton',
     'leaflet.featuregroup.subgroup.jsm': 'Leaflet.FeatureGroup.SubGroup',
     'leaflet.markercluster.jsm': 'leaflet.markercluster',

@@ -260,6 +260,13 @@ var resources = {
     'bulma': {
         'path': 'resources/bulma/{version}/css/bulma.min.css'
     },
+    // bxslider
+    'bxsliderJS': {
+        'path': 'resources/bxslider/{version}/jquery.bxslider.min.jsm'
+    },
+    'bxsliderCSS': {
+        'path': 'resources/bxslider/{version}/jquery.bxslider.min.css'
+    },
     // Chart.js
     'chartJs': {
         'path': 'resources/Chart.js/{version}/Chart.bundle.min.jsm'
