@@ -181,6 +181,10 @@ var resources = {
     'bluebird': {
         'path': 'resources/bluebird/{version}/bluebird.min.jsm'
     },
+    // bodymovin
+    'bodymovin': {
+        'path': 'resources/bodymovin/{version}/bodymovin.min.jsm'
+    },
     // BootboxJS
     'bootbox': {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm'

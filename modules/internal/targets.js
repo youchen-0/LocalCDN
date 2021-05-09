@@ -175,6 +175,10 @@ targets.setLastVersion = function (type, version) {
         return '1.8.2';
     } else if (type.startsWith('/bluebird/3.')) {
         return '3.7.2';
+    } else if (type.startsWith('/bodymovin/4.')) {
+        return '4.13.0';
+    } else if (type.startsWith('/bodymovin/5.')) {
+        return '5.7.8';
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
@@ -610,6 +614,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bodymovin.min.jsm': 'bodymovin/lottie',
     'jquery.bxslider.min.jsm': 'bxslider (JS)',
     'jquery.bxslider.min.css': 'bxslider (CSS)',
     'easy-button.min.jsm': 'Leaflet.EasyButton',
