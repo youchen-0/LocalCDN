@@ -264,211 +264,211 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Hjelp",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introduksjon",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Hva er »HTML-filter«?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Regel generator",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Noen nettsteder ser rare ut eller er ikke enkle å bruke",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Hvorfor er det alternativet »Blokkere Google Fonter«?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Hva med statistikken? Overføres noe til noen servere?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Hva blir synkronisert når jeg velger »sync« som lagringstype?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Nettleserkompatibilitet",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN er en nettleserutvidelse som etterligner Content Delivery Networks for å forbedre personvernet ditt på nettet. Den avlytter trafikk, finner støttede rammer/biblioteker lokalt, og injiserer dem inn på nettstedet. Bruk gjerne følgende testverktøy for å finne ut om du er riktig beskyttet. For mer informasjon, les opplæringen eller våre Wiki-sider.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Testverktøy",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Opplæringen",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wiki-sider",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "I de fleste tilfeller kan LocalCDN enkelt erstatte innebygde rammer og forbedrer personvernet. I noen tilfeller kan nettstedet prøve å forhindre dette ved å angi visse alternativer i HTML-kildekoden. LocalCDN leser HTML-kildekoden før den vises i nettleseren og fjerner denne delen (rød).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "HTML-filteret fjerner de røde tegnene fra dette eksemplet:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Resultatet ser da slik ut:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "Hvorfor er det nødvendig å fjerne attributter for opprinnelse og integritet?",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "Crossorigin-attributtet forhindrer erstatning fordi destinasjonen ikke samsvarer med den forespurte.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "For å spare diskplass og levere flere rammer, oppgraderer LocalCDN et rammeverk. En integritetsmerke er hash-verdien til en fil. Hvis sjekken mislykkes, vil nettleseren ikke inkludere et rammeverk. Integritetskontrollen vil mislykkes fordi hashverdiene for f.eks. jQuery 1.10.1 og jQuery 1.12.4 er forskjellige.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "Dessverre hender det noen ganger at spesialtegn da vises feil. I dette tilfellet kan du deaktivere innstillingen på nytt for å vise umlautene riktig.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "Hvis du vil omdirigere alle støttede CDN-tilkoblinger automatisk til LocalCDN, kan du legge til disse reglene i adblockeren din for å tillate disse omdirigeringene. Hvis du ikke vil legge til disse reglene, må du tillate hver CDN-forbindelse individuelt for hvert nettsted.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Bare uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "Disse reglene er bare relevante i \"medium\" eller \"hard\" modus, fordi det blokkerer alle tredjepartsressurser. De er ikke nødvendige i »standard«, »lett« eller »veldig lett« modus. For mer informasjon, besøk uBlock Origin Wiki.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Ikon",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Modus",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "Regler nyttige",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "Standard/Lett",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Medium",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "Vanskelig",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "Det er to mulige årsaker: Det kreves enten et rammeverk/bibliotek som LocalCDN ikke (ennå) leverer eller en SOP. En SOP (samme opprinnelsespolicy) er en sikkerhetsmekanisme som bestemmer hvilke data nettleseren har lov til å laste inn. Det hjelper å isolere ondsinnede dokumenter og dermed redusere mulige angrepsvektorer. Denne policyen forhindrer nettleseren fra å laste inn de eksterne rammene til LocalCDN. Dessverre er det ingen løsning på dette for øyeblikket.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "LocalCDN kan erstatte »Google Material Icons«. For å få forbindelsen må adblockeren din (f.eks. UBlock Origin, uMatrix eller AdGuard) tillate forespørselen. LocalCDN lytter på disse forespørslene, og hvis spørringen inneholder »Google Material Icons«, blir ressursen erstattet. Hvis du fjerner merket for alternativet »Blokker forespørsler om manglende innhold«, vil ikke-eksisterende ressurser få passere og »Google Fonts« lastes inn, fordi »Google Material Icons« og »Google Fonts« bruker samme domene. Hvis du ikke vil ha dette, kan du blokkere »Google Fonts« på LocalCDN.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "Ikke få panikk, ingenting vil bli overført. Det ville være i strid med alle prinsippene mine. Statistikken (JSON-format) inneholder følgende informasjon: Dato, CDN+teller og framework+teller. Det er alt. Jeg har et eksempel her:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "Statistikken inneholder ingen informasjon om nettleseren, operativsystemet, forespørsel om nettsted, IP-adresser eller annen informasjon. Bare date, CDN+teller og framework+teller. Den viser deg hvilke rammer som erstattes av LocalCDNs hvor ofte og hvilke CDNer som ble bedt om.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Hvordan vet jeg at det er sant?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "Utvidelseslageret kan vises direkte med Firefox-nettleseren. Åpne URL-en »om: feilsøking«, bytt til »Lagring« og velg »Utvidelseslagring«. Under nøkkelen »internalStatisticsData« finner du de innsamlede dataene. Bare kopier den og legg den i en JSON PrettyPrinter for å gjøre den mer lesbar. Vær oppmerksom på at du må fjerne det første og siste anførselstegnet og nøkkelen til det. Du bør kunne se dette tydelig i denne videoen.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "Hva blir synkronisert når jeg velger »sync« som lagringstype?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "Synkronisering fungerer bare hvis du er logget på med en Firefox-konto på enheten og har tillatt tillegg til å synkronisere i innstillingene. En egen synkroniseringsserver under din kontroll vil også fungere. Dette vil synkronisere de fleste innstillingene til LocalCDN på alle enheter.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "Hvis du ikke har en synkroniseringskonto, blir ingenting synkronisert. I så fall gjør det ingen forskjell hvilken type lagring du har valgt.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Ting som aldri blir synkronisert:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Antall injeksjoner",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Ja",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Nei",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Data",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Innstillinger som skal synkroniseres:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Standard, Lys, Blå/Grå",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Mer informasjon om Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Nettleserkompatibilitet",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Erstatt",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Bytt ut andre ressurser",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Oppgrader alle ressursene",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "Alle Chromium-baserte nettlesere",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Dette er ikke en begrensning av LocalCDN, men mangler API-støtte for Chromium-baserte nettlesere.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     }
 }
