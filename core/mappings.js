@@ -245,6 +245,8 @@ mappings.cdn = {
             'bootstrap-3-typeahead/{version}/bootstrap3-typeahead.': resources.bootstrap3Typeahead,
             'bowser/{version}/': resources.bowserJS,
             'bulma/{version}/css/bulma.': resources.bulma,
+            'bxslider/{version}/jquery.bxslider.min.js': resources.bxsliderJS,
+            'bxslider/{version}/jquery.bxslider.js': resources.bxsliderJS,
             'Chart.js/{version}/Chart.bundle.': resources.chartJs,
             'Chart.js/{version}/Chart.min.js': resources.chartJs,
             'Chart.js/{version}/Chart.js': resources.chartJs,
