@@ -188,6 +188,19 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/videojs-seek-buttons/${lastVersion}/videojs-seek-buttons.min.jsm`,
             'bundle': 'videojs-seek-buttons'
         };
+    } else if ((channelHost + channelPath).startsWith('cdn.jsdelivr.net/gh/johnroy-ui/up@master/materialize.')) {
+        if (channelPath.endsWith('js')) {
+            channelPath = 'js/materialize.min.js';
+        } else {
+            channelPath = 'css/materialize.min.css';
+        }
+        return {
+            'source': channelHost,
+            'versionDelivered': '1.0.0',
+            'versionRequested': '1.0.0',
+            'path': `resources/materialize/1.0.0/${channelPath}`,
+            'bundle': 'Materialize'
+        };
     } else {
         return false;
     }
