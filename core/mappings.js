@@ -604,6 +604,7 @@ mappings.cdn = {
             'gh/johnroy-ui/up@master/materialize.css': resources.materializeCSS,
             'gh/johnroy-ui/up@master/materialize.min.js': resources.materializeJS,
             'gh/johnroy-ui/up@master/materialize.js': resources.materializeJS,
+            'gh/johnroy-ui/up@master/jquery-{version}.min.js': resources.jQuery,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery.ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery.ui/{version}/jquery-ui.min.js': resources.jQueryUI,
