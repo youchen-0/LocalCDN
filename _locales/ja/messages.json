@@ -240,7 +240,7 @@
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "常に",
+        "message": "常にする",
         "description": "Always"
     },
     "websiteBroken": {
