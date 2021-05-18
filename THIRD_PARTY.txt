@@ -925,7 +925,6 @@ https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js
 https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css
 https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js
 https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.min.js
-https://cdnjs.cloudflare.com/ajax/libs/leaflet.featuregroup.subgroup/1.0.2/leaflet.featuregroup.subgroup.js
 https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/leaflet.markercluster.js
 https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.16/libphonenumber-js.min.js
 https://cdnjs.cloudflare.com/ajax/libs/libsodium-wrappers/0.5.4/sodium.min.js
@@ -1234,6 +1233,7 @@ https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.3/dist/recommendation.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.3/dist/search.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.3/dist/sentry.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.3/dist/styles.css
+https://cdn.jsdelivr.net/npm/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
 https://cdn.jsdelivr.net/npm/ngx-bootstrap@6.2.0/datepicker/bs-datepicker.css
 https://cdn.jsdelivr.net/npm/object-assign@4.1.1/index.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-core@0.6.2/build/p2p-media-loader-core.min.js

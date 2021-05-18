@@ -651,6 +651,8 @@ function create_url() {
         if [ "${arr_datatables[$subfile]}" != "" ]; then
             url="$DATATABLES/${arr_datatables[$subfile]}"
         fi
+    elif [ "$folder" = "leaflet.featuregroup.subgroup" ]; then
+        url="$JSDELIVR/npm/$folder@$version/dist/leaflet.featuregroup.subgroup.js"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
