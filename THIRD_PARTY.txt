@@ -277,6 +277,8 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bowser/2.11.0/bundled.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css
+https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css
+https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css
 https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
