@@ -183,16 +183,6 @@ targets.setLastVersion = function (type, version) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
         return '5.5.2';
-    } else if (type.startsWith('/twitter-bootstrap/2.')) {
-        return '2.3.2';
-    } else if (type.startsWith('/twitter-bootstrap/3.')) {
-        if (helpers.compareVersion('3.0.0', version)) return '3.0.0'; // <= 3.0.0
-        else if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
-        else return '3.4.1';
-    } else if (type.startsWith('/twitter-bootstrap/4.')) {
-        return '4.6.0';
-    } else if (type.startsWith('/twitter-bootstrap/5.')) {
-        return '5.0.0';
     } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
     } else if (type.startsWith('/bootstrap-daterangepicker/3.')) {
@@ -567,6 +557,16 @@ targets.setLastVersion = function (type, version) {
         return '4.2.8';
     } else if (type.startsWith('/toastr.js/2.')) {
         return '2.1.4';
+    } else if (type.startsWith('/twitter-bootstrap/2.')) {
+        return '2.3.2';
+    } else if (type.startsWith('/twitter-bootstrap/3.')) {
+        if (helpers.compareVersion('3.0.0', version)) return '3.0.0'; // <= 3.0.0
+        else if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
+        else return '3.4.1';
+    } else if (type.startsWith('/twitter-bootstrap/4.')) {
+        return '4.6.0';
+    } else if (type.startsWith('/twitter-bootstrap/5.')) {
+        return '5.0.0';
     } else if (type.startsWith('/underscore.js/1.')) {
         return '1.13.1';
     } else if (type.startsWith('/urlive/1.')) {
