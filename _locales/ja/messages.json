@@ -452,7 +452,7 @@
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "差し替え:",
+        "message": "リソースの差し替え",
         "description": "Replace"
     },
     "helpReplaceOther": {
