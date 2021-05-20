@@ -566,7 +566,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/twitter-bootstrap/4.')) {
         return '4.6.0';
     } else if (type.startsWith('/twitter-bootstrap/5.')) {
-        return '5.0.0';
+        return '5.0.1';
     } else if (type.startsWith('/underscore.js/1.')) {
         return '1.13.1';
     } else if (type.startsWith('/urlive/1.')) {
