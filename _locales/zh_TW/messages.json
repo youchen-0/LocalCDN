@@ -268,7 +268,7 @@
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "介紹",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -276,11 +276,11 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "規則生成器",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "某些網站看起來很奇怪或者不好用",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
@@ -308,11 +308,11 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "教學",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "維基頁面",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -324,7 +324,7 @@
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "結果看起來會是這樣：",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
