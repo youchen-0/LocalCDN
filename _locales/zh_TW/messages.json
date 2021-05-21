@@ -256,11 +256,11 @@
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "用圖示表明資源缺失",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "若資源缺失則改變圖章顏色",
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "瀏覽器相容性",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -304,7 +304,7 @@
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "測試工具",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
@@ -344,11 +344,11 @@
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "若想自動重定向所有可用的CDN連線至LocalCDN，你可以將這些規則添加至你的廣告攔截器以啟用重定向。若你不願添加這些規則，則必須為每個網站分別手動啟用CDN連線。",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "僅uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
@@ -372,7 +372,7 @@
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "中等",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
@@ -444,7 +444,7 @@
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "更多關於Firefox Sync的資訊:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
@@ -452,11 +452,11 @@
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "替換",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "替換其他資源",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
