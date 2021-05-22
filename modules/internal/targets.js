@@ -151,8 +151,6 @@ targets.setLastVersion = function (type, version) {
         return '3.2.1';
     } else if (type.startsWith('/autocomplete.js/0.')) {
         return '0.38.0';
-    } else if (type.startsWith('/autocomplete.js/1.')) {
-        return '1.0.0';
     } else if (type.startsWith('/angular-material/1.') || type.startsWith('/angular-material/0.')) {
         return '1.2.2';
     } else if (type.startsWith('/angular-translate/2.')) {
@@ -309,7 +307,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
-        return '4.22.0';
+        return '4.21.0';
     } else if (type.startsWith('/iScroll/5.')) {
         return '5.2.0';
     } else if (type.startsWith('/jets/0.')) {
@@ -406,8 +404,6 @@ targets.setLastVersion = function (type, version) {
         return '2.5.0';
     } else if (type.startsWith('/lightgallery/1.')) {
         return '1.10.0';
-    } else if (type.startsWith('/noUiSlider/15.')) {
-        return '15.0.0';
     } else if (type.startsWith('/noUiSlider/14.')) {
         return '14.7.0';
     } else if (type.startsWith('/lodash.js/4.')) {
@@ -436,7 +432,7 @@ targets.setLastVersion = function (type, version) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return '0.100.2';
     } else if (type.startsWith('/mdb-ui-kit/3.')) {
-        return '3.5.1';
+        return '3.5.0';
     } else if (type.startsWith('/Modaal/0.')) {
         return '0.4.4';
     } else if (type.startsWith('/modernizr/2.')) {
@@ -586,7 +582,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/vue/3.')) {
         return '3.0.11';
     } else if (type.startsWith('/vue-i18n/8.')) {
-        return '8.24.4';
+        return '8.24.3';
     } else if (type.startsWith('/vue-i18n/9.')) {
         return '9.1.6';
     } else if (type.startsWith('/vue-resource/1.')) {
@@ -598,9 +594,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/webrtc-adapter/6.')) {
         return '6.4.8';
     } else if (type.startsWith('/webrtc-adapter/7.')) {
-        return '7.7.1';
-    } else if (type.startsWith('/webrtc-adapter/8.')) {
-        return '8.0.0';
+        return '7.4.0';
     } else if (type.startsWith('/wow/1.')) {
         return '1.1.2';
     } else if (version === null) {
