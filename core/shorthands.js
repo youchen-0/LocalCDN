@@ -115,7 +115,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/vue/${lastVersion}/vue.min.jsm`,
             'bundle': ''
         };
-    } else if ((channelHost + channelPath) === 'ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js') {
+    } else if (Regex.ROCKET_LOADER.test(CompleteURL)) {
         return {
             'source': channelHost,
             'versionRequested': 'latest',
@@ -178,6 +178,28 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'versionDelivered': '2.1.6',
             'path': `resources/jquery.cycle2/2.1.6/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Cycle2 (Bundle)'
+        };
+    } else if (CompleteURL === 'cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js') {
+        lastVersion = targets.setLastVersion('/videojs-seek-buttons/');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'versionRequested': lastVersion,
+            'path': `resources/videojs-seek-buttons/${lastVersion}/videojs-seek-buttons.min.jsm`,
+            'bundle': 'videojs-seek-buttons'
+        };
+    } else if ((channelHost + channelPath).startsWith('cdn.jsdelivr.net/gh/johnroy-ui/up@master/materialize.')) {
+        if (channelPath.endsWith('js')) {
+            channelPath = 'js/materialize.min.js';
+        } else {
+            channelPath = 'css/materialize.min.css';
+        }
+        return {
+            'source': channelHost,
+            'versionDelivered': '1.0.0',
+            'versionRequested': '1.0.0',
+            'path': `resources/materialize/1.0.0/${channelPath}`,
+            'bundle': 'Materialize'
         };
     } else {
         return false;

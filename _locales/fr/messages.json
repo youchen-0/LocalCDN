@@ -264,11 +264,11 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Aide",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introduction",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {

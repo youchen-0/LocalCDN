@@ -117,11 +117,13 @@ const WebRequest = {
     'GET': 'GET',
     'BLOCKING': 'blocking',
     'HEADERS': 'requestHeaders',
-    'RESPONSE_HEADERS': 'responseHeaders'
+    'RESPONSE_HEADERS': 'responseHeaders',
+    'EXTRA_HEADERS': 'extraHeaders'
 };
 
 const WebRequestType = {
     'MAIN_FRAME': 'main_frame',
+    'SUB_FRAME': 'sub_frame',
     'XHR': 'xmlhttprequest'
 };
 
@@ -207,7 +209,8 @@ const Regex = {
     'FONT_AWESOME': /use\.fontawesome\.com\/fa-loader\.css/,
     'FONT_AWESOME_WITH_CODE': /use\.fontawesome\.com\/[a-z0-9]{10}\.(js|css)/,
     'FONT_AWESOME_FONTS_ONLY': /\/font-?awesome\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//,
-    'BOOTSTRAP_FONTS_ONLY': /\/bootstrap\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//
+    'BOOTSTRAP_FONTS_ONLY': /\/bootstrap\/(?:\d{1,2}\.){1,3}\d{1,2}\/fonts\//,
+    'ROCKET_LOADER': /ajax\.cloudflare\.com\/cdn-cgi\/scripts\/[\d\w]{8}\/cloudflare-static\/rocket-loader\.min\.js/
 };
 
 const MaterialIcons = {
@@ -262,6 +265,8 @@ const CDNs = {
     'cdn.materialdesignicons.com': 'MaterialDesign',
     'cdn.ravenjs.com': 'Raven.js',
     'js.appboycdn.com': 'Appboy CDN',
+    'cdn.embed.ly': 'embedly',
+    'cdn.datatables.net': 'DataTables',
 };
 
 const IgnoredHost = {

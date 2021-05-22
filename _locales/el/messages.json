@@ -64,7 +64,7 @@
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "Τελευταία ενημέρωση:",
+        "message": "Τελευταια ενημερωση:",
         "description": "Last update:"
     },
     "copyRuleSet": {
@@ -264,211 +264,211 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Βοήθεια",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Εισαγωγή",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Τι είναι το «φίλτρο HTML»;",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Γεννήτρια κανόνων",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Κάποιοι ιστότοποι μοιάζουν αλλόκοτοι ή είναι δύσχρηστοι",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Γιατί υπάρχει η επιλογή «Αποκλεισμός γραμματοσειρών της Google»;",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Τι ισχύει για τα στατιστικά; Μεταφέρεται τίποτα σε τυχόν διακομιστές;",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Τι θα συγχρονιστεί όταν επιλέξω «Συγχρονισμός» ως τύπο αποθήκευσης;",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Συμβατότητα περιηγητή",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "Το LocalCDN είναι μια επέκταση του προγράμματος περιήγησης, που προσομοιώνει Δίκτυα Διανομής Περιεχόμενου προκειμένου να βελτιώσει το διαδικτυακό σας απόρρητο. Αναχαιτίζει την κυκλοφορία, βρίσκει τοπικά υποστηριζόμενα πλαίσια/βιβλιοθήκες και τα εισάγει στον ιστότοπο. Μη διστάσετε να χρησιμοποιήσετε το ακόλουθο βοηθητικό πρόγραμμα δοκιμών για να διαπιστώσετε εαν είστε ορθώς προστατευμένοι. Για περισσότερες πληροφορίες, διαβάστε τις οδηγίες ή τις σελίδες Wiki.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Βοηθητικό πρόγραμμα δοκιμών",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Οδηγίες",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Σελίδες Wiki",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "Στις περισσότερες περιπτώσεις, το LocalCDN μπορεί να αντικαταστήσει εύκολα τα ενσωματωμένα πλαίσια και βελτιώνει την ιδιωτικότητα. Σε ορισμένες περιπτώσεις, ο ιστότοπος ενδέχεται να προσπαθήσει να το αποτρέψει αυτό, θέτοντας ορισμένες επιλογές στον πηγαίο κώδικα HTML. Το LocalCDN, διαβάζει τον πηγαίο κώδικα HTML, προτού αυτός εμφανιστεί στο πρόγραμμα περιήγησης, και αφαιρεί αυτά τα μέρη (με κόκκινο).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "Το φίλτρο HTML αφαιρεί τους κόκκινους χαρακτήρες από αυτό το παράδειγμα:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Έπειτα, το αποτέλεσμα μοιάζει κάπως έτσι:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "Γιατί είναι απαραίτητη η αφαίρεση των χαρακτηριστικών πολλαπλής προέλευσης (crossorigin) και ακεραιότητας (integrity);",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "Το χαρακτηριστικό πολλαπλής προέλευσης (crossorigin) αποτρέπει την αντικατάσταση, επειδή ο προορισμός δεν ταιριάζει με το ζητούμενο.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "Για εξοικονόμηση χώρου στον δίσκο και την παροχή περισσότερων πλαισίων, το LocalCDN αναβαθμίζει ένα πλαίσιο. Μία ετικέτα ακεραιότητας είναι η τιμή κατατεμαχισμού ενός αρχείου. Εάν ο έλεγχος αποτύχει, ο περιηγητής δε θα συμπεριλάβει κανένα πλαίσιο. Ο έλεγχος ακεραιότητας θα αποτύχει, διότι οι τιμές κατατεμαχισμού για το, π.χ., jQuery 1.10.1 και το jQuery 1.12.4 διαφέρουν.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "Δυστυχώς, ορισμένες φορές οι ειδικοί χαρακτήρες εμφανίζονται λανθασμένα. Σε αυτήν την περίπτωση, μπορείτε να απενεργοποιήσετε ξανά τη ρύθμιση, ώστε να εμφανίζονται σωστά τα διαλυτικά.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "Εάν επιθυμείτε να ανακατευθύνετε αυτόματα όλες τις υποστηριζόμενες συνδέσεις CDN στο LocalCDN, μπορείτε να προσθέσετε αυτούς τους κανόνες στο πρόγραμμα αποκλεισμού διαφημίσεων που χρησιμοποιείτε. Έτσι, θα επιτραπούν οι ανακατευθύνσεις. Εάν δεν επιθυμείτε να προσθέσετε τους κανόνες, θα χρειαστεί να επιτρέπετε κάθε σύνδεση CDN ξεχωριστά, για κάθε ιστότοπο.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Μόνο για το uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "Αυτοί οι κανόνες έχουν ισχύ μόνο στη «μέτρια» ή τη «δύσκολη» λειτουργία, επειδή αποκλείει όλους τους πόρους τρίτων. Δεν είναι απαραίτητα στην «προεπιλεγμένη», «εύκολη» ή «πολύ-εύκολη» λειτουργία. Για περισσότερες πληροφορίες, παρακαλώ επισκεφθείτε τη Wiki του uBlock Origin.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Εικονίδιο",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Μέθοδος",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "Χρήσιμοι κανόνες",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "Προεπιλογή/Εύκολο",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Μέτριο",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "Δύσκολο",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "Υπάρχουν δύο πιθανοί λόγοι: Είτε απαιτείται ένα πλαίσιο/βιβλιοθήκη που το LocalCDN δεν υποστηρίζει (ακόμα) ή μία SOP. Μία SOP (Πολιτική της Ιδίας Προέλευσης - Same Origin Policy) είναι ένας μηχανισμός ασφαλείας, που καθορίζει ποια δεδομένα επιτρέπεται να φορτώνει ο περιηγητής. Βοηθά στην απομόνωση κακόβουλων εγγράφων, μειώνοντας τους πιθανούς φορείς επίθεσης. Αυτή η πολιτική, εμποδίζει τον περιηγητή να φορτώσει τα εξωτερικά πλαίσια του LocalCDN. Δυστυχώς, δεν υπάρχει λύση τη δεδομένη στιγμή.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "Το LocalCDN μπορεί να αντικαταστήσει τα «Google Material Icons». Η επίτευξη της σύνδεσης θα χρειαστεί να επιτραπεί από το πρόγραμμα αποκλεισμού διαφημίσεων που χρησιμοποιείτε (π.χ. το uBlock Origin, το uMatrix ή το AdGuard). Το LocalCDN παρακολουθεί αυτές τις αιτήσεις κι αν το αίτημα περιέχει τα «Google Material Icons» ο πόρος θα αντικατασταθεί. Εάν αποεπιλέξετε την επιλογή «Αποκλεισμός αιτήσεων για ανύπαρκτους πόρους», θα επιτραπεί η είσοδος στους ανύπαρκτους πόρους και θα φορτωθούν οι «Γραμματοσειρές της Google». Αυτό θα συμβεί, επειδή τα «Google Material Icons» και οι «Γραμματοσειρές της Google» χρησιμοποιούν τον ίδιο τομέα. Εάν δεν επιθυμείτε κάτι τέτοιο, μπορείτε να αποκλείσετε τις «Γραμματοσειρές της Google» στο LocalCDN.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "Μην πανικοβάλλεστε, τίποτα δε θα μεταδοθεί. Θα ήταν ενάντια στις αρχές μου. Τα στατιστικά στοιχεία (σε μορφή JSON) περιέχουν τις ακόλουθες πληροφορίες: Ημερομηνία, CDN+μετρητής και πλαίσιο+μετρητής. Αυτά είναι όλα. Παραθέτω ένα παράδειγμα:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "Τα στατιστικά στοιχεία δεν περιέχουν καμία πληροφορία σχετικά με το πρόγραμμα περιήγησης, το λειτουργικό σύστημα, τον αιτών ιστότοπο, τις διευθύνσεις IP ή οποιαδήποτε άλλη πληροφορία. Μόνο ημερομηνία, CDN+μετρητή και πλαίσια+μετρητή. Σας δείχνει ποια πλαίσια αντικαθίστανται από το LocalCDN, πόσο συχνά και ποια CDN αιτήθηκαν.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Πώς γνωρίζω ότι αυτή είναι η αλήθεια;",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "Ο αποθηκευτικός χώρος της επεκτάσεως, μπορεί να προβληθεί απευθείας μέσω του προγράμματος περιήγησης Firefox. Ανοίξτε τη διεύθυνση URL «about:debugging», μεταβείτε στην ενότητα «Αποθήκευση» και επιλέξτε «Αποθήκευση επέκτασης». Κάτω από το κλειδί «internalStatisticsData» θα εντοπίσετε τα συλλεχθέντα δεδομένα. Απλά αντιγράψτε τα γραφόμενα και χρησιμοποιείστε ένα JSON PrettyPrinter για να τα κάνετε πιο ευανάγνωστα. Λάβετε υπ' όψιν ότι θα χρειαστεί να αφαιρέσετε το πρώτο και τελευταίο εισαγωγικό και το κλειδί του. Το ακόλουθο βίντεο θα σας βοηθήσει.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "Τι θα συγχρονιστεί όταν επιλέξω «Συγχρονισμός» ως τύπο αποθήκευσης;",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "Ο συγχρονισμός θα λειτουργήσει μόνο εάν είστε συνδεδεμένος στη συσκευή με λογαριασμό Firefox κι έχετε επιτρέψει τον συγχρονισμό των πρόσθετων, στις ρυθμίσεις. Επίσης, θα λειτουργήσει ένας ξεχωριστός διακομιστής συγχρονισμού υπό τον έλεγχό σας. Έτσι, θα συγχρονιστούν οι περισσότερες από τις ρυθμίσεις του LocalCDN σε όλες τις συσκευές.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "Εάν δεν έχετε λογαριασμό συγχρονισμού, δε θα συγχρονιστεί τίποτα. Σε αυτή την περίπτωση, δεν έχει καμία διαφορά τι είδους αποθηκευτικό χώρο έχετε επιλέξει.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Στοιχεία που δε συγχρονίζονται ποτέ:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Αριθμός εμβόλιμων πόρων",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Ναι",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Όχι",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Δεδομένα",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Ρυθμίσεις που θα συγχρονιστούν:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Προεπιλογή, Ανοιχτό, Μπλε/Γκρι",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Περισσότερες πληροφορίες για το Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Συμβατότητα περιηγητή",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Αντικατάσταση",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Αντικατάσταση άλλων πόρων",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Αναβάθμιση όλων των πόρων",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "Όλοι οι Περιηγητές που βασίζονται στο Chromium",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Αυτό δεν αποτελεί περιορισμό του LocalCDN, αλλά έλλειψη υποστήριξης API από τα προγράμματα περιήγησης που βασίζονται στο Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     }
 }

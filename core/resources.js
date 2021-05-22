@@ -181,6 +181,10 @@ var resources = {
     'bluebird': {
         'path': 'resources/bluebird/{version}/bluebird.min.jsm'
     },
+    // bodymovin
+    'bodymovin': {
+        'path': 'resources/bodymovin/{version}/bodymovin.min.jsm'
+    },
     // BootboxJS
     'bootbox': {
         'path': 'resources/bootbox.js/{version}/bootbox.min.jsm'
@@ -252,9 +256,20 @@ var resources = {
     'bootstrapVueCSS': {
         'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css'
     },
+    // Bowser.js
+    'bowserJS': {
+        'path': 'resources/bowser/{version}/bowser.min.jsm'
+    },
     // Bulma
     'bulma': {
         'path': 'resources/bulma/{version}/css/bulma.min.css'
+    },
+    // bxslider
+    'bxsliderJS': {
+        'path': 'resources/bxslider/{version}/jquery.bxslider.min.jsm'
+    },
+    'bxsliderCSS': {
+        'path': 'resources/bxslider/{version}/jquery.bxslider.min.css'
     },
     // Chart.js
     'chartJs': {
@@ -286,6 +301,10 @@ var resources = {
     'd3legend': {
         'path': 'resources/d3-legend/{version}/d3-legend.min.jsm'
     },
+    // datatables
+    'datatables': {
+        'path': 'resources/datatables/{version}/'
+    },
     // dayjs
     'dayjs': {
         'path': 'resources/dayjs/{version}/dayjs.min.jsm'
@@ -315,6 +334,10 @@ var resources = {
     // Element-UI (Bundle)
     'elementUI': {
         'path': 'resources/element-ui/{version}/'
+    },
+    // embedly player
+    'embedlyPlayer': {
+        'path': 'resources/embedly-player/{version}/embedly-player.min.jsm'
     },
     // Ember.js
     'ember': {
@@ -522,6 +545,18 @@ var resources = {
     'leafletCSS': {
         'path': 'resources/leaflet/{version}/leaflet.css'
     },
+    // Leaflet.EasyButton
+    'leafletEasyButton': {
+        'path': 'resources/Leaflet.EasyButton/{version}/easy-button.min.jsm'
+    },
+    // Leaflet.FeatureGroup.SubGroup
+    'leafletFeatureGroupSubGroup': {
+        'path': 'resources/leaflet.featuregroup.subgroup/{version}/leaflet.featuregroup.subgroup.jsm'
+    },
+    // leaflet.markercluster
+    'leafletMarkercluster': {
+        'path': 'resources/leaflet.markercluster/{version}/leaflet.markercluster.jsm'
+    },
     // libphonenumber-js
     'libphonenumber': {
         'path': 'resources/libphonenumber-js/{version}/libphonenumber-js.min.jsm'
@@ -610,6 +645,10 @@ var resources = {
     // MooTools [Deprecated]
     'mootools': {
         'path': 'resources/mootools/{version}/mootools-core.min.jsm'
+    },
+    // ngx-bootstrap datepicker
+    'ngxBootstrapDatepicker': {
+        'path': 'resources/ngx-bootstrap/{version}/datepicker/bs-datepicker.css'
     },
     // noUiSlider
     'noUiSlider': {
@@ -787,6 +826,10 @@ var resources = {
     // Slider Pro [Deprecated?]
     'sliderProJS': {
         'path': 'resources/slider-pro/{version}/jquery.sliderPro.min.jsm'
+    },
+    // Snowplow
+    'snowplow': {
+        'path': 'resources/snowplow/{version}/sp.min.jsm'
     },
     // socket.io
     'socketIO': {

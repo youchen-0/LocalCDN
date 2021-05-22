@@ -125,12 +125,18 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     });
 
     resourcePath = channelPath.replace(basePath, '');
-    if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
-        versionNumber = channelPath.match(/\d/);
-        resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
-        versionNumber = [`${versionNumber}.0`];
+
+    // Evaluate first in case of version 'latest' and numerals in resource
+    versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
+
+    // Handle weird version expressions
+    if (!versionNumber) {
+        if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
+            versionNumber = channelPath.match(/\d/);
+            resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
+            versionNumber = [`${versionNumber}.0`];
+        }
     } else {
-        versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
         resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
     }
 
@@ -143,10 +149,13 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
         return shorthandResource;
     }
 
+    if (resourcePattern === undefined) {
+        return false;
+    }
+
     for (let resourceMold of Object.keys(resourceMappings)) {
         if (resourcePattern.startsWith(resourceMold)) {
             let targetPath, versionDelivered, versionRequested, bundle;
-
             targetPath = resourceMappings[resourceMold].path;
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
             // Replace the requested version with the latest depending on major version

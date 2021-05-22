@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "保護您不受「免費」、中心化的內容傳遞網路（CDN）的追蹤。",
+        "message": "透過重定向至本地資源來保護您不受內容傳遞網路（CDN）的追蹤。",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "輸入網域即可在該處停用 LocalCDN。使用分號（;）分隔多個網域。",
+        "message": "輸入網域即可在該處停用 LocalCDN。每行一個條目。",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "在瀏覽器控制台中啟用日誌記錄",
+        "message": "啟用日誌記錄",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "打開「瀏覽器主控台」以顯示缺少的資源。",
+        "message": "你可以在菜單中打開日誌紀錄。紀錄將會在你關閉瀏覽器或停用日誌紀錄後清除。",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "輸入 HTML 過濾器要處理或忽略的網域。使用分號（;）分隔多個項目。",
+        "message": "輸入 HTML 過濾器要處理或忽略的網域。每行一個條目。",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -172,11 +172,11 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "您確定要刪除統計數據嗎？",
+        "message": "您確定要刪除所有統計數據嗎？",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "這些網域獲准載入 Google Fonts。以分號（;）分隔每條記錄。",
+        "message": "這些網域獲准載入 Google Fonts。每行一個條目。",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -232,35 +232,35 @@
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "絕不 (靜默更新)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "僅限新的 CDN 和規則",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "總是",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "網站壞掉了?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "隱藏捐款按鈕",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "測試",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "用圖示表明資源缺失",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "若資源缺失則改變圖章顏色",
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
@@ -268,7 +268,7 @@
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "介紹",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -276,11 +276,11 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "規則生成器",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "某些網站看起來很奇怪或者不好用",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "瀏覽器相容性",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -304,15 +304,15 @@
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "測試工具",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "教學",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "維基頁面",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -324,7 +324,7 @@
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "結果看起來會是這樣：",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
@@ -344,11 +344,11 @@
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "若想自動重定向所有可用的CDN連線至LocalCDN，你可以將這些規則添加至你的廣告攔截器以啟用重定向。若你不願添加這些規則，則必須為每個網站分別手動啟用CDN連線。",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "僅uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
@@ -372,7 +372,7 @@
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "中等",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
@@ -444,7 +444,7 @@
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "更多關於Firefox Sync的資訊:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
@@ -452,11 +452,11 @@
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "替換",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "替換其他資源",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {

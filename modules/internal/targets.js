@@ -57,6 +57,8 @@ targets.determineBundle = function (path) {
         val = 'Cycle2';
     } else if (path.startsWith('/semantic-ui/')) {
         val = 'Semantic UI';
+    } else if (path.startsWith('/datatables/')) {
+        val = 'DataTables';
     }
 
     return val === '' ? val : `${val} (Bundle)`;
@@ -72,7 +74,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/algoliasearch/3.')) {
         return '3.35.1';
     } else if (type.startsWith('/algoliasearch/4.')) {
-        return '4.9.0';
+        return '4.9.1';
     } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
@@ -147,7 +149,7 @@ targets.setLastVersion = function (type, version) {
         return '4.1.1';
     } else if (type.startsWith('/animejs/3.')) {
         return '3.2.1';
-    } else if (type.startsWith('/autocomplete.js/')) {
+    } else if (type.startsWith('/autocomplete.js/0.')) {
         return '0.38.0';
     } else if (type.startsWith('/angular-material/1.') || type.startsWith('/angular-material/0.')) {
         return '1.2.2';
@@ -171,18 +173,14 @@ targets.setLastVersion = function (type, version) {
         return '1.8.2';
     } else if (type.startsWith('/bluebird/3.')) {
         return '3.7.2';
+    } else if (type.startsWith('/bodymovin/4.')) {
+        return '4.13.0';
+    } else if (type.startsWith('/bodymovin/5.')) {
+        return '5.7.8';
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
         return '5.5.2';
-    } else if (type.startsWith('/twitter-bootstrap/2.')) {
-        return '2.3.2';
-    } else if (type.startsWith('/twitter-bootstrap/3.')) {
-        if (helpers.compareVersion('3.0.0', version)) return '3.0.0'; // <= 3.0.0
-        else if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
-        else return '3.4.1';
-    } else if (type.startsWith('/twitter-bootstrap/4.')) {
-        return '4.6.0';
     } else if (type.startsWith('/bootstrap-daterangepicker/2.')) {
         return '2.1.27';
     } else if (type.startsWith('/bootstrap-daterangepicker/3.')) {
@@ -205,12 +203,17 @@ targets.setLastVersion = function (type, version) {
         return '2.21.2';
     } else if (type.startsWith('/bootstrap-3-typeahead/4.')) {
         return '4.0.2';
+    } else if (type.startsWith('/bowser/')) {
+        if (version !== 'latest' && helpers.compareVersion('1.9.4', version)) return '1.9.4';
+        return '2.11.0';
     } else if (type.startsWith('/bulma/0.')) {
         return '0.9.2';
+    } else if (type.startsWith('/bxslider/4.')) {
+        return '4.2.15';
     } else if (type.startsWith('/Chart.js/2.')) {
         return '2.9.4';
     } else if (type.startsWith('/Chart.js/3.')) {
-        return '3.2.0';
+        return '3.2.1';
     } else if (type.startsWith('/chosen/1.')) {
         return '1.8.7';
     } else if (type.startsWith('/clipboard.js/1.')) {
@@ -229,6 +232,8 @@ targets.setLastVersion = function (type, version) {
         return '6.7.0';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
+    } else if (type.startsWith('/datatables/1.')) {
+        return '1.10.24';
     } else if (type.startsWith('/dayjs/1.')) {
         return '1.10.4';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest')) {
@@ -241,19 +246,22 @@ targets.setLastVersion = function (type, version) {
         return '3.2.2';
     } else if (type.startsWith('/element-ui/2.')) {
         return '2.15.1';
+    } else if (type.startsWith('/embedly-player/0.')) {
+        return '0.1.0';
     } else if (type.startsWith('/ember.js/1.')) {
         return '1.13.13';
     } else if (type.startsWith('/ember.js/2.')) {
         return '2.18.2';
     } else if (type.startsWith('/ember.js/3.')) {
-        return '3.26.1';
+        return '3.27.1';
     } else if (type.startsWith('/ethjs')) {
         return '0.4.0';
     } else if (type.startsWith('/ext-core/3.')) {
         return '3.1.0';
     } else if (type.startsWith('findify')) {
         if (helpers.compareVersion('6.9.15', version)) return '6.9.15'; // <= 6.9.15
-        else return '6.17.0';
+        else if (helpers.compareVersion('6.17.0', version)) return '6.17.0'; // > 6.9.15 to <= 6.17.0
+        else return '7.0.10';
     } else if (type.startsWith('/fancybox/2.')) {
         return '2.1.7';
     } else if (type.startsWith('/fancybox/3.')) {
@@ -277,7 +285,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
     } else if (type.startsWith('/google-material-design-icons/')) {
-        return 'v85';
+        return 'v87';
     } else if (type.startsWith('/highlight.js/10.')) {
         return '10.7.2';
     } else if (type.startsWith('/highlight.js/9.')) {
@@ -382,6 +390,12 @@ targets.setLastVersion = function (type, version) {
         return '0.7.7';
     } else if (type.startsWith('/leaflet/1.')) {
         return '1.7.1';
+    } else if (type.startsWith('/Leaflet.EasyButton/2.')) {
+        return '2.4.0';
+    } else if (type.startsWith('/leaflet.featuregroup.subgroup/1.')) {
+        return '1.0.2';
+    } else if (type.startsWith('/leaflet.markercluster/1.')) {
+        return '1.5.0';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
         return '1.9.16';
     } else if (type.startsWith('/libsodium-wrappers/0.')) {
@@ -427,6 +441,8 @@ targets.setLastVersion = function (type, version) {
         return '2.29.1';
     } else if (type.startsWith('/mootools/1.')) {
         return '1.6.0';
+    } else if (type.startsWith('/ngx-bootstrap/6.')) {
+        return '6.2.0';
     } else if (type.startsWith('/object-assign@4.')) {
         return '4.1.1';
     } else if (type.startsWith('/oclazyload/1.')) {
@@ -448,7 +464,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/paginationjs/2.')) {
         return '2.1.5';
     } else if (type.startsWith('/plyr/3.')) {
-        return '3.6.7';
+        return '3.6.8';
     } else if (type.startsWith('/popper.js/1.')) {
         return '1.16.1';
     } else if (type.startsWith('/popper.js/2.')) {
@@ -499,6 +515,8 @@ targets.setLastVersion = function (type, version) {
         return '0.2.12';
     } else if (type.startsWith('/slider-pro/1.')) {
         return '1.5.0';
+    } else if (type.startsWith('/snowplow/2.')) {
+        return '2.17.3';
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.4.0';
     } else if (type.startsWith('/socket.io/3.')) {
@@ -526,7 +544,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/Swiper/5.')) {
         return '5.4.5';
     } else if (type.startsWith('/Swiper/6.') || type.startsWith('/Swiper/')) {
-        return '6.5.8';
+        return '6.6.1';
     } else if (type.startsWith('/tether/1.')) {
         return '1.4.7';
     } else if (type.startsWith('/tooltipster/3.')) {
@@ -535,6 +553,16 @@ targets.setLastVersion = function (type, version) {
         return '4.2.8';
     } else if (type.startsWith('/toastr.js/2.')) {
         return '2.1.4';
+    } else if (type.startsWith('/twitter-bootstrap/2.')) {
+        return '2.3.2';
+    } else if (type.startsWith('/twitter-bootstrap/3.')) {
+        if (helpers.compareVersion('3.0.0', version)) return '3.0.0'; // <= 3.0.0
+        else if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
+        else return '3.4.1';
+    } else if (type.startsWith('/twitter-bootstrap/4.')) {
+        return '4.6.0';
+    } else if (type.startsWith('/twitter-bootstrap/5.')) {
+        return '5.0.1';
     } else if (type.startsWith('/underscore.js/1.')) {
         return '1.13.1';
     } else if (type.startsWith('/urlive/1.')) {
@@ -581,6 +609,15 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bodymovin.min.jsm': 'bodymovin/lottie',
+    'jquery.bxslider.min.jsm': 'bxslider (JS)',
+    'jquery.bxslider.min.css': 'bxslider (CSS)',
+    'easy-button.min.jsm': 'Leaflet.EasyButton',
+    'leaflet.featuregroup.subgroup.jsm': 'Leaflet.FeatureGroup.SubGroup',
+    'leaflet.markercluster.jsm': 'leaflet.markercluster',
+    'embedly-player.min.jsm': 'embedly player',
+    'bs-datepicker.css': 'Datepicker (ngx-bootstrap)',
+    'sp.min.jsm': 'Snowplow',
     'appboy.min.jsm': 'Appboy/Braze Web SDK',
     'MaterialIcons.woff2': 'Google Material Icons',
     'font-awesome': 'Font Awesome',
@@ -607,6 +644,7 @@ const ListOfFiles = {
     'ajax-bootstrap-select.min.jsm': 'Ajax Bootstrap Select',
     'bootstrap-vue.min.jsm': 'BootstrapVue (JS)',
     'bootstrap-vue.min.css': 'BootstrapVue (CSS)',
+    'bowser.min.jsm': 'Bowser',
     'mirage2.min.jsm': 'mirage2',
     'chosen.jquery.min.jsm': 'chosen',
     'nouislider.min.jsm': 'noUiSlider (JS)',

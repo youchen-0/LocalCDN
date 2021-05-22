@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-04-24';
+mappings.lastMappingUpdate = '2021-05-02';
 
 mappings.cdn = {
 
@@ -137,6 +137,8 @@ mappings.cdn = {
             'baguettebox.js/{version}/baguetteBox.min.css': resources.baguetteBoxCSS,
             'blazy/{version}/blazy.min.js': resources.blazy,
             'bluebird/{version}/bluebird.': resources.bluebird,
+            'bodymovin/{version}/bodymovin.js': resources.bodymovin,
+            'bodymovin/{version}/bodymovin.min.js': resources.bodymovin,
             'bootbox.js/{version}/bootbox.': resources.bootbox,
             'bootstrap-daterangepicker/{version}/daterangepicker.': resources.bootstrapDaterangepicker,
             'bootstrap-datepicker/{version}/js/bootstrap-datepicker.': resources.bootstrapDatepickerBundle,
@@ -241,7 +243,10 @@ mappings.cdn = {
             'bootstrap-vue/{version}/bootstrap-vue.min.css': resources.bootstrapVueCSS,
             'bootstrap-vue/{version}/bootstrap-vue.css': resources.bootstrapVueCSS,
             'bootstrap-3-typeahead/{version}/bootstrap3-typeahead.': resources.bootstrap3Typeahead,
+            'bowser/{version}/': resources.bowserJS,
             'bulma/{version}/css/bulma.': resources.bulma,
+            'bxslider/{version}/jquery.bxslider.min.js': resources.bxsliderJS,
+            'bxslider/{version}/jquery.bxslider.js': resources.bxsliderJS,
             'Chart.js/{version}/Chart.bundle.': resources.chartJs,
             'Chart.js/{version}/Chart.min.js': resources.chartJs,
             'Chart.js/{version}/Chart.js': resources.chartJs,
@@ -321,6 +326,7 @@ mappings.cdn = {
             'leaflet/{version}/leaflet.css': resources.leafletCSS,
             'leaflet/{version}/leaflet.min.js': resources.leafletJS,
             'leaflet/{version}/leaflet.min.css': resources.leafletCSS,
+            'leaflet.markercluster/{version}/leaflet.markercluster': resources.leafletMarkercluster,
             'libphonenumber-js/{version}/libphonenumber-js.': resources.libphonenumber,
             'libsodium-wrappers/{version}/sodium.min.js': resources.libsodiumJS,
             'lightcase/{version}/js/lightcase.': resources.lightcaseJS,
@@ -440,7 +446,8 @@ mappings.cdn = {
         '/': {
             'jquery-{version}.': resources.jQuery,
             'ui/{version}/jquery-ui.': resources.jQueryUI,
-            'mobile/{version}/jquery.mobile': resources.jQueryMobile
+            'mobile/{version}/jquery.mobile': resources.jQueryMobile,
+            'jquery-migrate-{version}.': resources.jQueryMigrate
         }
     },
     // jsDelivr (Cloudflare)
@@ -461,6 +468,7 @@ mappings.cdn = {
             'backbone@{version}/backbone-min.': resources.backbone,
             'backbone@{version}/backbone.min.': resources.backbone,
             'bluebird/{version}/bluebird.': resources.bluebird,
+            'bluebird@{version}/js/browser/bluebird.': resources.bluebird,
             'bootstrap@{version}/dist/js/bootstrap.': resources.bootstrapJS,
             'bootstrap@{version}/dist/css/bootstrap.': resources.bootstrapCSS,
             'bootstrap-select@{version}/dist/js/bootstrap-select.': resources.bootstrapSelectJS,
@@ -472,7 +480,12 @@ mappings.cdn = {
             'bootstrap-vue@{version}/dist/bootstrap-vue.css': resources.bootstrapVueCSS,
             'bootstrap-vue@{version}/dist/bootstrap-vue.min.js': resources.bootstrapVueJS,
             'bootstrap-vue@{version}/dist/bootstrap-vue.js': resources.bootstrapVueJS,
+            'bowser@{version}/': resources.bowserJS,
             'bulma@{version}/css/bulma.': resources.bulma,
+            'bxslider/{version}/jquery.bxslider.min.js': resources.bxsliderJS,
+            'bxslider/{version}/jquery.bxslider.js': resources.bxsliderJS,
+            'bxslider/{version}/jquery.bxslider.min.css': resources.bxsliderCSS,
+            'bxslider/{version}/jquery.bxslider.css': resources.bxsliderCSS,
             'chart.js@{version}': resources.chartJs,
             'clipboard@{version}/dist/clipboard.': resources.clipboardJS,
             'cookieconsent@{version}/build/cookieconsent.min.js': resources.cookieconsent2JS,
@@ -513,6 +526,9 @@ mappings.cdn = {
             'jquery-validation@{version}/dist/jquery.validate.': resources.jqueryValidationPlugin,
             'leaflet@{version}/dist/leaflet.js': resources.leafletJS,
             'leaflet@{version}/dist/leaflet.css': resources.leafletCSS,
+            'leaflet-easybutton@{version}/src/easy-button.js': resources.leafletEasyButton,
+            'leaflet-easybutton@{version}/src/easy-button.min.js': resources.leafletEasyButton,
+            'leaflet.featuregroup.subgroup@{version}/dist/leaflet.featuregroup.subgroup.': resources.leafletFeatureGroupSubGroup,
             'lodash@{version}/lodash.min.js': resources.lodashJS,
             'lozad': resources.lozad,
             'npm-modernizr@{version}/modernizr.': resources.modernizr,
@@ -522,6 +538,8 @@ mappings.cdn = {
             'moment@{version}/moment.min.': resources.moment,
             'mootools@{version}/lib/mootools-core-{version}-server.': resources.mootools,
             'mootools@{version}/lib/mootools-core-{version}-server.min.': resources.mootools,
+            'ngx-bootstrap/datepicker/bs-datepicker.css': resources.ngxBootstrapDatepicker,
+            'ngx-bootstrap@{version}/datepicker/bs-datepicker.css': resources.ngxBootstrapDatepicker,
             'react-redux@{version}/dist/react-redux.': resources.reactRedux,
             'react-router@{version}/umd/react-router.': resources.reactRouter,
             'react-side-effect@{version}/lib/index.umd.': resources.reactSideEffect,
@@ -582,6 +600,11 @@ mappings.cdn = {
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.css': resources.fancyBoxCSS,
             'gh/fancyapps/fancybox@{version}/dist/jquery.fancybox.min.css': resources.fancyBoxCSS,
             'gh/highlightjs/cdn-release@{version}/build/': resources.highlightJS,
+            'gh/johnroy-ui/up@master/materialize.min.css': resources.materializeCSS,
+            'gh/johnroy-ui/up@master/materialize.css': resources.materializeCSS,
+            'gh/johnroy-ui/up@master/materialize.min.js': resources.materializeJS,
+            'gh/johnroy-ui/up@master/materialize.js': resources.materializeJS,
+            'gh/johnroy-ui/up@master/jquery-{version}.min.js': resources.jQuery,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery.ui/{version}/jquery-ui.js': resources.jQueryUI,
             'jquery.ui/{version}/jquery-ui.min.js': resources.jQueryUI,
@@ -596,6 +619,7 @@ mappings.cdn = {
             'simplemde/{version}/simplemde.min.js': resources.simplemdeJS,
             'simplemde/{version}/simplemde.css': resources.simplemdeCSS,
             'simplemde/{version}/simplemde.min.css': resources.simplemdeCSS,
+            'snowplow/{version}/sp.': resources.snowplow,
             'swfobject/{version}/swfobject.': resources.swfobject,
             'underscorejs/{version}/underscore.': resources.underscore,
             'underscorejs/{version}/underscore-min.': resources.underscore,
@@ -831,6 +855,8 @@ mappings.cdn = {
             'prototype/{version}/prototype.': resources.prototypeJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'swfobject/{version}/swfobject.': resources.swfobject,
+            'twitter-bootstrap/{version}/js/bootstrap.': resources.bootstrapJS,
+            'twitter-bootstrap/{version}/css/bootstrap.': resources.bootstrapCSS,
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'webfont/{version}/webfont.': resources.webfontloader,
@@ -941,7 +967,6 @@ mappings.cdn = {
     // Cloudflare Rocket-Loader
     'ajax.cloudflare.com': {
         '/': {
-            'cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.': resources.cfRocketLoader,
             'cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.': resources.mirage2
         }
     },
@@ -964,6 +989,7 @@ mappings.cdn = {
     'vjs.zencdn.net': {
         '/': {
             '{version}/video-js.min.css': resources.videoJScss,
+            '{version}/video-js.css': resources.videoJScss,
             '{version}/video.min.js': resources.videoJS,
             '{version}/video.js': resources.videoJS
         }
@@ -990,6 +1016,18 @@ mappings.cdn = {
     'js.appboycdn.com': {
         '/': {
             'web-sdk/{version}/appboy.': resources.appboyWebSdk
+        }
+    },
+    // embedly
+    'cdn.embed.ly': {
+        '/': {
+            'player-{version}.min.js': resources.embedlyPlayer
+        }
+    },
+    // datatables
+    'cdn.datatables.net': {
+        '/': {
+            '{version}/': resources.datatables
         }
     }
 };
