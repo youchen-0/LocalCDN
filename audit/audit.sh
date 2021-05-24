@@ -561,7 +561,11 @@ function create_url() {
         if [[ "$subfile" =~ \.css$ ]]; then
             url="$CLOUDFLARE/$folder/$version/css/$subfile"
         elif [[ "$subfile" =~ \.js$ ]]; then
-            url="$CLOUDFLARE/$folder/$version/js/$subfile"
+            if [[ "$version" = 3* ]]; then
+                url="$CLOUDFLARE/$folder/$version/js/bootstrap.min.js"
+            else
+                url="$CLOUDFLARE/$folder/$version/js/bootstrap.bundle.min.js"
+            fi
         elif [ "$subfile" = "glyphicons-halflings-regular.woff2" ]; then
             url="$CLOUDFLARE/twitter-bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2"
         fi
