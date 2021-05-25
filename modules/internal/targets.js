@@ -258,7 +258,7 @@ targets.setLastVersion = function (type, version) {
         return '0.4.0';
     } else if (type.startsWith('/ext-core/3.')) {
         return '3.1.0';
-    } else if (type.startsWith('findify')) {
+    } else if (type.startsWith('/findify')) {
         if (helpers.compareVersion('6.9.15', version)) return '6.9.15'; // <= 6.9.15
         else if (helpers.compareVersion('6.17.0', version)) return '6.17.0'; // > 6.9.15 to <= 6.17.0
         else return '7.0.10';
