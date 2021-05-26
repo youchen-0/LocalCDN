@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-05-02';
+mappings.lastMappingUpdate = '2021-05-25';
 
 mappings.cdn = {
 
@@ -1029,6 +1029,11 @@ mappings.cdn = {
     'cdn.datatables.net': {
         '/': {
             '{version}/': resources.datatables
+        }
+    },
+    'mathjax.rstudio.com': {
+        '/': {
+            '{version}': resources.mathJax,
         }
     }
 };

@@ -268,6 +268,7 @@ const CDNs = {
     'js.appboycdn.com': 'Appboy CDN',
     'cdn.embed.ly': 'embedly',
     'cdn.datatables.net': 'DataTables',
+    'mathjax.rstudio.com': 'MathJax RStudio',
 };
 
 const IgnoredHost = {
