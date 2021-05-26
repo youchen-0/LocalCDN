@@ -587,6 +587,10 @@ var resources = {
     'lozad': {
         'path': 'resources/lozad.js/{version}/lozad.min.jsm'
     },
+    // MathJax
+    'mathJax': {
+        'path': 'resources/mathjax/{version}/'
+    },
     // magnific-popup.js [Deprecated]
     'magnificPopupJS': {
         'path': 'resources/magnific-popup.js/{version}/jquery.magnific-popup.min.jsm'

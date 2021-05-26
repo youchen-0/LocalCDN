@@ -659,6 +659,9 @@ function create_url() {
         url="$JSDELIVR/npm/$folder@$version/dist/leaflet.featuregroup.subgroup.js"
     elif [ "$folder" = "bodymovin" ] && [[ "$version" = 5* ]]; then
         url="$CLOUDFLARE/$folder/$version/lottie.min.js"
+    elif [ "$folder" = "mathjax" ]; then
+        url=$(echo "$path" | cut -d"/" -f3-)
+        url="$CLOUDFLARE/$url"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

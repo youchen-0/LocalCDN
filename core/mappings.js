@@ -343,6 +343,7 @@ mappings.cdn = {
             'MaterialDesign-Webfont/{version}/css/materialdesignicons.': resources.materialDesign,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,
+            'mathjax/{version}/': resources.mathJax,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
             'mdbootstrap/{version}/css/mdb.': resources.mdbootstrapCSS,
             'mdb-ui-kit/{version}/mdb.js': resources.mdbUiKitJS,

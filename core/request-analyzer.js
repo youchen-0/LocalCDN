@@ -166,16 +166,23 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             versionDelivered = versionDelivered.toString();
             targetPath = targetPath.replace(versionNumber, versionDelivered);
 
-            versionRequested = versionNumber === null ? 'latest' : versionNumber[0];
-
             if (versionNumber === null) {
                 versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
+                versionRequested = 'latest';
+            } else {
+                versionRequested = versionNumber[0];
             }
 
             // Get bundle name
             bundle = targets.determineBundle(targetPath);
             if (bundle !== '') {
                 filename = channelPath.split('/').pop();
+                if (bundle === 'MathJax (Bundle)' && filename !== 'MathJax.js') {
+                    filename = channelPath.replace(Resource.MATHJAX, '');
+                    if (!MathJaxFiles[filename]) {
+                        break;
+                    }
+                }
                 targetPath = (filename.endsWith('.js')) ? `${targetPath + filename}m` : targetPath + filename;
                 targetPath = helpers.formatFilename(targetPath);
             }

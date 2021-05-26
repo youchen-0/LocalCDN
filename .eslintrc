@@ -27,6 +27,7 @@
         "IgnoredHost": true,
         "EncodingTypes": true,
         "ExtraInfoSpec": true,
+        "MathJaxFiles": true,
 
         "fileGuard": true,
         "files": true,

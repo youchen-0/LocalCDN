@@ -59,6 +59,8 @@ targets.determineBundle = function (path) {
         val = 'Semantic UI';
     } else if (path.startsWith('/datatables/')) {
         val = 'DataTables';
+    } else if (path.startsWith('/mathjax/')) {
+        val = 'MathJax';
     }
 
     return val === '' ? val : `${val} (Bundle)`;
@@ -431,6 +433,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/materialize/0.')) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return '0.100.2';
+    } else if (type.startsWith('/mathjax/2.') || type.startsWith('/mathjax/latest')) {
+        return '2.7.5';
     } else if (type.startsWith('/mdb-ui-kit/3.')) {
         return '3.5.0';
     } else if (type.startsWith('/Modaal/0.')) {
