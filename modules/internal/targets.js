@@ -237,7 +237,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/datatables/1.')) {
         return '1.10.24';
     } else if (type.startsWith('/dayjs/1.')) {
-        return '1.10.4';
+        return '1.10.5';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest')) {
         return '3.0.3';
     } else if (type.startsWith('/docsearch.js/2.')) {
