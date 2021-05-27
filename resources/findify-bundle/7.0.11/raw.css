@@ -49,7 +49,8 @@
     --components-checkboxfacet-search-padding-bottom: 11px;
     --components-facet-padding: 25px;
     --components-facet-min-width: 200px;
-    --components-facet-horizontal-background: white;
+    --components-facet-horizontal-padding: 10px 25px;
+    --components-facet-horizontal-background: #f3f3f3;
     --components-facet-text-color: var(--color-black);
     --components-facet-text-font-family: var(--font-base);
     --components-facet-text-font-size: 1;
@@ -1334,6 +1335,7 @@
 
 .findify-components--facet__horizontal .findify-components--facet__title {
     background: var(--components-facet-horizontal-background);
+    padding: var(--components-facet-horizontal-padding);
 }
 
 .findify-components--facet__text {
@@ -1374,7 +1376,7 @@
 }
 
 .findify-components--facet__horizontal {
-    margin-right: 1px;
+    margin-right: 5px;
 }
 
 .findify-components--facet__horizontal.findify-components--facet__expanded {
@@ -2229,6 +2231,7 @@ body {
     background: white;
     height: 100%;
     width: 90vw;
+    max-height: 100vh;
 }
 
 .findify-layouts--autocomplete--sidebar__backdrop {
@@ -2310,6 +2313,7 @@ body {
     -webkit-transition: border-color .1s linear;
             transition: border-color .1s linear;
     outline: none;
+    font-size: 16px;
 }
 
 .findify-layouts--autocomplete--sidebar__header input:placeholder {
@@ -2328,6 +2332,7 @@ body {
 .findify-layouts--autocomplete--sidebar__content {
     overflow: hidden;
     overflow-y: auto;
+    max-height: calc(100vh - 50px);
 }
 
 .findify-layouts--autocomplete--sidebar__body-noscroll {
