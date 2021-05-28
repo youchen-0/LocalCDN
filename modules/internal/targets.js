@@ -287,7 +287,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/google-material-design-icons/')) {
         return '3.0.1';
     } else if (type.startsWith('/google-material-design-icons/')) {
-        return 'v87';
+        return 'v88';
     } else if (type.startsWith('/highlight.js/10.')) {
         return '10.7.2';
     } else if (type.startsWith('/highlight.js/9.')) {
