@@ -662,6 +662,8 @@ function create_url() {
     elif [ "$folder" = "mathjax" ]; then
         url=$(echo "$path" | cut -d"/" -f3-)
         url="$CLOUDFLARE/$url"
+    elif [ "$folder" = "vanilla-lazyload" ]; then
+        url="$JSDELIVR/npm/$folder@$version/dist/lazyload.min.js"
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

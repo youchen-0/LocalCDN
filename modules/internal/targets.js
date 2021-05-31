@@ -572,7 +572,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/urlive/1.')) {
         return '1.1.1';
     } else if (type.startsWith('/vanilla-lazyload')) {
-        return '17.3.1';
+        return '17.3.2';
     } else if (type.startsWith('/videojs-seek-buttons/')) {
         return '1.6.0';
     } else if (type.startsWith('/video.js/')) {
