@@ -215,7 +215,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/Chart.js/2.')) {
         return '2.9.4';
     } else if (type.startsWith('/Chart.js/3.')) {
-        return '3.3.1';
+        return '3.3.2';
     } else if (type.startsWith('/chosen/1.')) {
         return '1.8.7';
     } else if (type.startsWith('/clipboard.js/1.')) {
