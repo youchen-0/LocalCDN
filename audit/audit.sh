@@ -612,8 +612,6 @@ function create_url() {
         url="$CLOUDFLARE/$folder/$version/js/$subfile"
     elif [ "$folder" = "algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm" ]; then
         url="$JSDELIVR/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2"
-    elif [ "$subfile" = "videojs-seek-buttons.min.js" ]; then
-        url="$JSDELIVR/npm/videojs-seek-buttons/dist/videojs-seek-buttons.js"
     elif [ "$subfile" = "jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.js" ]; then
         url="$JSDELIVR/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js"
     elif [ "$folder" = "vue-resource" ]; then
