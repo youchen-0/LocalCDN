@@ -1292,6 +1292,8 @@ https://cdn.jsdelivr.net/npm/urlize.js/urlize.js
 https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.css
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.min.js
+https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.0/dist/videojs-seek-buttons.css
+https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.0/dist/videojs-seek-buttons.min.js
 https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2
 https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css
 https://raw.githubusercontent.com/jquery-validation/jquery-validation/1.19.3/dist/jquery.validate.min.js

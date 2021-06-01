@@ -573,8 +573,10 @@ targets.setLastVersion = function (type, version) {
         return '1.1.1';
     } else if (type.startsWith('/vanilla-lazyload')) {
         return '17.3.2';
-    } else if (type.startsWith('/videojs-seek-buttons/')) {
+    } else if (type.startsWith('/videojs-seek-buttons/1.')) {
         return '1.6.0';
+    } else if (type.startsWith('/videojs-seek-buttons/2.')) {
+        return '2.0.0';
     } else if (type.startsWith('/video.js/')) {
         if (helpers.compareVersion('5.20.5', version)) return '5.20.5'; // <= 5.20.5
         else if (helpers.compareVersion('6.13.0', version)) return '6.13.0'; // > 5.20.5 to <= 6.13.0
