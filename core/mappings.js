@@ -613,6 +613,7 @@ mappings.cdn = {
             'jquery.slick/{version}/slick.min.css': resources.slickCarouselCSS,
             'jquery.slick/{version}/slick.js': resources.slickCarouselJS,
             'jquery.slick/{version}/slick.min.js': resources.slickCarouselJS,
+            'jquery.validation/{version}/jquery.validate.': resources.jqueryValidationPlugin,
             'momentjs/{version}/moment.': resources.moment,
             'momentjs/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-': resources.mootools,
