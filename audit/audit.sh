@@ -666,6 +666,8 @@ function create_url() {
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "hls.js" ]; then
         url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
+    elif [ "$folder" = "instantsearch.js" ]; then
+        url="$JSDELIVR/npm/$folder@$version/dist/instantsearch.production.min.js"
     # --------------------------------------------------------------------------
     else
         if [ "$subfile" = "$jfile" ]; then
