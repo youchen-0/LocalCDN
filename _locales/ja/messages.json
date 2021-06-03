@@ -228,7 +228,7 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "アップデート後の通知",
+        "message": "アップデート完了後の通知",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
