@@ -670,6 +670,12 @@ function create_url() {
         url="$JSDELIVR/npm/$folder@$version/dist/instantsearch.production.min.js"
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
         url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
+    elif [ "$folder" = "video.js" ]; then
+        if [[ $file =~ .*\.css$ ]]; then
+            url="$JSDELIVR/npm/$folder@$version/dist/video-js.min.css"
+        else
+            url="$JSDELIVR/npm/$folder@$version/dist/video.min.js"
+        fi
     # --------------------------------------------------------------------------
     else
         if [ "$subfile" = "$jfile" ]; then
