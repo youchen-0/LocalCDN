@@ -301,7 +301,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/history/5.')) {
         return '5.0.0';
     } else if (type.startsWith('/hls.js/1.')) {
-        return '1.0.2';
+        return '1.0.5';
     } else if (type.startsWith('/hls.js/0.')) {
         return '0.14.17';
     } else if (type.startsWith('/hogan.js/')) {

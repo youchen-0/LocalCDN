@@ -662,6 +662,11 @@ function create_url() {
         url="$CLOUDFLARE/$url"
     elif [ "$folder" = "vanilla-lazyload" ]; then
         url="$JSDELIVR/npm/$folder@$version/dist/lazyload.min.js"
+    # --------------------------------------------------------------------------
+    # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
+    elif [ "$folder" = "hls.js" ]; then
+        url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
+    # --------------------------------------------------------------------------
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"
