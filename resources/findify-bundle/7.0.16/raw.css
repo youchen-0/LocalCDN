@@ -1538,9 +1538,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -1555,6 +1552,7 @@
 
 .findify-components-search--mobile-actions__button {
     width: 100%;
+    padding: 8px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1564,7 +1562,6 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    height: 32px;
     border: 1px solid var(--color-grey-2);
 }
 
@@ -1650,6 +1647,8 @@
 
 /*  imported from styles.css  */
 
+/*  imported from styles.css  */
+
 /* Swiper */
 
 .swiper-container {
@@ -1726,12 +1725,11 @@
 
 /* Component styles */
 
-.findify-layouts--recommendation--slider {
+.findify-components--swiper {
     position: relative;
 }
 
-.findify-layouts--recommendation--slider__prev,
-.findify-layouts--recommendation--slider__next {
+.findify-components--swiper__prev, .findify-components--swiper__next {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1753,14 +1751,14 @@
     color: var(--color-black);
 }
 
-.findify-layouts--recommendation--slider__prev {
+.findify-components--swiper__prev {
     left: 0;
     right: auto;
     outline: none;
     left: -30px;
 }
 
-.findify-layouts--recommendation--slider__next {
+.findify-components--swiper__next {
     right: 0;
     left: auto;
     outline: none;
