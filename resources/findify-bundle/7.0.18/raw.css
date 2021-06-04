@@ -47,7 +47,7 @@
     --components-cards-content-description-color: #b2b2b2;
     --components-cards-content-description-font-family: var(--font-base);
     --components-checkboxfacet-search-padding-bottom: 11px;
-    --components-facet-min-width: 200px;
+    --components-facet-min-width: 250px;
     --components-facet-vertical-title-padding: 25px;
     --components-facet-horizontal-title-padding: 10px 25px;
     --components-facet-vertical-body-padding: 0 25px 25px 25px;
@@ -725,6 +725,7 @@
     width: 100%;
     position: relative;
     max-width: 100vw;
+    margin-bottom: 10px;
 }
 
 .findify-components-search--desktop-facets__horizontal .findify-components-search--desktop-facets__container {
@@ -1829,11 +1830,12 @@
     cursor: text;
     -webkit-transition: border-color .1s linear;
             transition: border-color .1s linear;
-    border: 1px solid var(--color-grey-1);
+    border: 1px solid var(--color-grey-2);
+    background: white;
 }
 
 .findify-components--range-facet__input-wrap:focus-within {
-    border-color: var(--color-grey-2);
+    border-color: var(--color-grey-3);
 }
 
 .findify-components--range-facet__input {
