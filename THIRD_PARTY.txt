@@ -1212,8 +1212,6 @@ https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min
 https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js
 https://cdnjs.cloudflare.com/ajax/libs/urlive/1.1.1/jquery.urlive.min.js
-https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js
-https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js
 https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.11/vue.global.prod.js
 https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/8.24.3/vue-i18n.min.js
 https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/9.1.6/vue-i18n.cjs.min.js
@@ -1295,6 +1293,8 @@ https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-button
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.min.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.0/dist/videojs-seek-buttons.css
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.0/dist/videojs-seek-buttons.min.js
+https://cdn.jsdelivr.net/npm/vue@1.0.28/dist/vue.min.js
+https://cdn.jsdelivr.net/npm/vue@2.6.13/dist/vue.min.js
 https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2
 https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css
 https://raw.githubusercontent.com/jquery-validation/jquery-validation/1.19.3/dist/jquery.validate.min.js

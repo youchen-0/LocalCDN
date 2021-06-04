@@ -549,8 +549,8 @@ function create_url() {
         fi
     elif [ "$folder" = "tooltipster" ] && [ "$version" = "4.2.8" ]; then
         url="$CLOUDFLARE/$folder/$version/js/tooltipster.bundle.min.js"
-    elif [ "$folder" = "vue" ] && [ "$version" != "1.0.28" ] && [ "$version" != "2.6.12" ]; then
-        url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+    # elif [ "$folder" = "vue" ] && [ "$version" != "1.0.28" ] && [ "$version" != "2.6.12" ]; then
+    #     url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
     elif [ "$folder" = "waypoints" ]; then
         if [ "$jfile" = "infinite.min.js" ] || [ "$jfile" = "inview.min.js" ] || [ "$jfile" = "sticky.min.js" ]; then
             url="$CLOUDFLARE/$folder/$version/shortcuts/$jfile"
@@ -675,6 +675,12 @@ function create_url() {
             url="$JSDELIVR/npm/$folder@$version/dist/video-js.min.css"
         else
             url="$JSDELIVR/npm/$folder@$version/dist/video.min.js"
+        fi
+    elif [ "$folder" = "vue" ]; then
+        if [ "$version" != "1.0.28" ] && [ "$version" != "2.6.13" ]; then
+            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+        else
+            url="$JSDELIVR/npm/$folder@$version/dist/vue.min.js"
         fi
     # --------------------------------------------------------------------------
     else

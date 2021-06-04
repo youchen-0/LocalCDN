@@ -586,7 +586,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/vue/1.')) {
         return '1.0.28';
     } else if (type.startsWith('/vue/2.')) {
-        return '2.6.12';
+        return '2.6.13';
     } else if (type.startsWith('/vue/3.')) {
         return '3.0.11';
     } else if (type.startsWith('/vue-i18n/8.')) {
