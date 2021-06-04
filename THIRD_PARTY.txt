@@ -167,7 +167,7 @@ https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js
 https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.7.2/bluebird.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js
-https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js
+https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js
