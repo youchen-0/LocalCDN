@@ -96,7 +96,7 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "HTMLフィルターを反転",
+        "message": "HTMLフィルターを反転する",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
@@ -116,7 +116,7 @@
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "HTMLフィルターを適用させるドメイン：",
+        "message": "HTMLフィルターを適用させるドメイン:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
@@ -228,7 +228,7 @@
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "アップデート後の通知",
+        "message": "アップデート完了後の通知",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
