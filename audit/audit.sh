@@ -259,48 +259,48 @@ arr_cycle[jquery.cycle2.video.min.js]="plugin/jquery.cycle2.video.min.js"
 
 # https://codeberg.org/nobody/LocalCDN/issues/432
 declare -A arr_datatables
-arr_datatables[jquery.dataTables.min.css]="1.10.24/css/jquery.dataTables.min.css"
-arr_datatables[jquery.dataTables.min.js]="1.10.24/js/jquery.dataTables.min.js"
-arr_datatables[dataTables.foundation.min.css]="1.10.24/css/dataTables.foundation.min.css"
-arr_datatables[dataTables.foundation.min.js]="1.10.24/js/dataTables.foundation.min.js"
-arr_datatables[dataTables.bootstrap.min.css]="1.10.24/css/dataTables.bootstrap.min.css"
-arr_datatables[dataTables.bootstrap.min.js]="1.10.24/js/dataTables.bootstrap.min.js"
-arr_datatables[dataTables.bootstrap4.min.css]="1.10.24/css/dataTables.bootstrap4.min.css"
-arr_datatables[dataTables.bootstrap4.min.js]="1.10.24/js/dataTables.bootstrap4.min.js"
-arr_datatables[dataTables.semanticui.min.css]="1.10.24/css/dataTables.semanticui.min.css"
-arr_datatables[dataTables.semanticui.min.js]="1.10.24/js/dataTables.semanticui.min.js"
-arr_datatables[dataTables.jqueryui.min.css]="1.10.24/css/dataTables.jqueryui.min.css"
-arr_datatables[dataTables.jqueryui.min.js]="1.10.24/js/dataTables.jqueryui.min.js"
-arr_datatables[autoFill.dataTables.min.css]="autofill/2.3.6/css/autoFill.dataTables.min.css"
-arr_datatables[dataTables.autoFill.min.js]="autofill/2.3.6/js/dataTables.autoFill.min.js"
-arr_datatables[buttons.dataTables.min.css]="buttons/1.7.0/css/buttons.dataTables.min.css"
-arr_datatables[dataTables.buttons.min.js]="buttons/1.7.0/js/dataTables.buttons.min.js"
-arr_datatables[buttons.colVis.min.js]="buttons/1.7.0/js/buttons.colVis.min.js"
-arr_datatables[buttons.flash.min.js]="buttons/1.7.0/js/buttons.flash.min.js"
-arr_datatables[buttons.html5.min.js]="buttons/1.7.0/js/buttons.html5.min.js"
-arr_datatables[buttons.print.min.js]="buttons/1.7.0/js/buttons.print.min.js"
-arr_datatables[colReorder.dataTables.min.css]="colreorder/1.5.3/css/colReorder.dataTables.min.css"
-arr_datatables[dataTables.colReorder.min.js]="colreorder/1.5.3/js/dataTables.colReorder.min.js"
-arr_datatables[dataTables.dateTime.min.css]="datetime/1.0.3/css/dataTables.dateTime.min.css"
-arr_datatables[dataTables.dateTime.min.js]="datetime/1.0.3/js/dataTables.dateTime.min.js"
-arr_datatables[fixedColumns.dataTables.min.css]="fixedcolumns/3.3.2/css/fixedColumns.dataTables.min.css"
-arr_datatables[dataTables.fixedColumns.min.js]="fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"
-arr_datatables[fixedHeader.dataTables.min.css]="fixedheader/3.1.8/css/fixedHeader.dataTables.min.css"
-arr_datatables[dataTables.fixedHeader.min.js]="fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"
-arr_datatables[keyTable.dataTables.min.css]="keytable/2.6.1/css/keyTable.dataTables.min.css"
-arr_datatables[dataTables.keyTable.min.js]="keytable/2.6.1/js/dataTables.keyTable.min.js"
-arr_datatables[responsive.dataTables.min.css]="responsive/2.2.7/css/responsive.dataTables.min.css"
-arr_datatables[dataTables.responsive.min.js]="responsive/2.2.7/js/dataTables.responsive.min.js"
-arr_datatables[rowGroup.dataTables.min.css]="rowgroup/1.1.2/css/rowGroup.dataTables.min.css"
-arr_datatables[dataTables.rowGroup.min.js]="rowgroup/1.1.2/js/dataTables.rowGroup.min.js"
-arr_datatables[rowReorder.dataTables.min.css]="rowreorder/1.2.7/css/rowReorder.dataTables.min.css"
-arr_datatables[dataTables.rowReorder.min.js]="rowreorder/1.2.7/js/dataTables.rowReorder.min.js"
-arr_datatables[scroller.dataTables.min.css]="scroller/2.0.3/css/scroller.dataTables.min.css"
-arr_datatables[dataTables.scroller.min.js]="scroller/2.0.3/js/dataTables.scroller.min.js"
-arr_datatables[searchBuilder.dataTables.min.css]="searchbuilder/1.0.1/css/searchBuilder.dataTables.min.css"
-arr_datatables[dataTables.searchBuilder.min.js]="searchbuilder/1.0.1/js/dataTables.searchBuilder.min.js"
-arr_datatables[searchPanes.dataTables.min.css]="searchpanes/1.2.2/css/searchPanes.dataTables.min.css"
-arr_datatables[dataTables.searchPanes.min.js]="searchpanes/1.2.2/js/dataTables.searchPanes.min.js"
+arr_datatables[jquery.dataTables.min.css]="1.10.25/css/jquery.dataTables.min.css"
+arr_datatables[jquery.dataTables.min.js]="1.10.25/js/jquery.dataTables.min.js"
+arr_datatables[dataTables.foundation.min.css]="1.10.25/css/dataTables.foundation.min.css"
+arr_datatables[dataTables.foundation.min.js]="1.10.25/js/dataTables.foundation.min.js"
+arr_datatables[dataTables.bootstrap.min.css]="1.10.25/css/dataTables.bootstrap.min.css"
+arr_datatables[dataTables.bootstrap.min.js]="1.10.25/js/dataTables.bootstrap.min.js"
+arr_datatables[dataTables.bootstrap4.min.css]="1.10.25/css/dataTables.bootstrap4.min.css"
+arr_datatables[dataTables.bootstrap4.min.js]="1.10.25/js/dataTables.bootstrap4.min.js"
+arr_datatables[dataTables.semanticui.min.css]="1.10.25/css/dataTables.semanticui.min.css"
+arr_datatables[dataTables.semanticui.min.js]="1.10.25/js/dataTables.semanticui.min.js"
+arr_datatables[dataTables.jqueryui.min.css]="1.10.25/css/dataTables.jqueryui.min.css"
+arr_datatables[dataTables.jqueryui.min.js]="1.10.25/js/dataTables.jqueryui.min.js"
+arr_datatables[autoFill.dataTables.min.css]="autofill/2.3.7/css/autoFill.dataTables.min.css"
+arr_datatables[dataTables.autoFill.min.js]="autofill/2.3.7/js/dataTables.autoFill.min.js"
+arr_datatables[buttons.dataTables.min.css]="buttons/1.7.1/css/buttons.dataTables.min.css"
+arr_datatables[dataTables.buttons.min.js]="buttons/1.7.1/js/dataTables.buttons.min.js"
+arr_datatables[buttons.colVis.min.js]="buttons/1.7.1/js/buttons.colVis.min.js"
+arr_datatables[buttons.flash.min.js]="buttons/1.7.1/js/buttons.flash.min.js"
+arr_datatables[buttons.html5.min.js]="buttons/1.7.1/js/buttons.html5.min.js"
+arr_datatables[buttons.print.min.js]="buttons/1.7.1/js/buttons.print.min.js"
+arr_datatables[colReorder.dataTables.min.css]="colreorder/1.5.4/css/colReorder.dataTables.min.css"
+arr_datatables[dataTables.colReorder.min.js]="colreorder/1.5.4/js/dataTables.colReorder.min.js"
+arr_datatables[dataTables.dateTime.min.css]="datetime/1.1.0/css/dataTables.dateTime.min.css"
+arr_datatables[dataTables.dateTime.min.js]="datetime/1.1.0/js/dataTables.dateTime.min.js"
+arr_datatables[fixedColumns.dataTables.min.css]="fixedcolumns/3.3.3/css/fixedColumns.dataTables.min.css"
+arr_datatables[dataTables.fixedColumns.min.js]="fixedcolumns/3.3.3/js/dataTables.fixedColumns.min.js"
+arr_datatables[fixedHeader.dataTables.min.css]="fixedheader/3.1.9/css/fixedHeader.dataTables.min.css"
+arr_datatables[dataTables.fixedHeader.min.js]="fixedheader/3.1.9/js/dataTables.fixedHeader.min.js"
+arr_datatables[keyTable.dataTables.min.css]="keytable/2.6.2/css/keyTable.dataTables.min.css"
+arr_datatables[dataTables.keyTable.min.js]="keytable/2.6.2/js/dataTables.keyTable.min.js"
+arr_datatables[responsive.dataTables.min.css]="responsive/2.2.8/css/responsive.dataTables.min.css"
+arr_datatables[dataTables.responsive.min.js]="responsive/2.2.8/js/dataTables.responsive.min.js"
+arr_datatables[rowGroup.dataTables.min.css]="rowgroup/1.1.3/css/rowGroup.dataTables.min.css"
+arr_datatables[dataTables.rowGroup.min.js]="rowgroup/1.1.3/js/dataTables.rowGroup.min.js"
+arr_datatables[rowReorder.dataTables.min.css]="rowreorder/1.2.8/css/rowReorder.dataTables.min.css"
+arr_datatables[dataTables.rowReorder.min.js]="rowreorder/1.2.8/js/dataTables.rowReorder.min.js"
+arr_datatables[scroller.dataTables.min.css]="scroller/2.0.4/css/scroller.dataTables.min.css"
+arr_datatables[dataTables.scroller.min.js]="scroller/2.0.4/js/dataTables.scroller.min.js"
+arr_datatables[searchBuilder.dataTables.min.css]="searchbuilder/1.1.0/css/searchBuilder.dataTables.min.css"
+arr_datatables[dataTables.searchBuilder.min.js]="searchbuilder/1.1.0/js/dataTables.searchBuilder.min.js"
+arr_datatables[searchPanes.dataTables.min.css]="searchpanes/1.3.0/css/searchPanes.dataTables.min.css"
+arr_datatables[dataTables.searchPanes.min.js]="searchpanes/1.3.0/js/dataTables.searchPanes.min.js"
 arr_datatables[select.dataTables.min.css]="select/1.3.3/css/select.dataTables.min.css"
 arr_datatables[dataTables.select.min.js]="select/1.3.3/js/dataTables.select.min.js"
 
@@ -549,8 +549,8 @@ function create_url() {
         fi
     elif [ "$folder" = "tooltipster" ] && [ "$version" = "4.2.8" ]; then
         url="$CLOUDFLARE/$folder/$version/js/tooltipster.bundle.min.js"
-    elif [ "$folder" = "vue" ] && [ "$version" != "1.0.28" ] && [ "$version" != "2.6.12" ]; then
-        url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+    # elif [ "$folder" = "vue" ] && [ "$version" != "1.0.28" ] && [ "$version" != "2.6.12" ]; then
+    #     url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
     elif [ "$folder" = "waypoints" ]; then
         if [ "$jfile" = "infinite.min.js" ] || [ "$jfile" = "inview.min.js" ] || [ "$jfile" = "sticky.min.js" ]; then
             url="$CLOUDFLARE/$folder/$version/shortcuts/$jfile"
@@ -561,7 +561,11 @@ function create_url() {
         if [[ "$subfile" =~ \.css$ ]]; then
             url="$CLOUDFLARE/$folder/$version/css/$subfile"
         elif [[ "$subfile" =~ \.js$ ]]; then
-            url="$CLOUDFLARE/$folder/$version/js/$subfile"
+            if [[ "$version" = 3* ]]; then
+                url="$CLOUDFLARE/$folder/$version/js/bootstrap.min.js"
+            else
+                url="$CLOUDFLARE/$folder/$version/js/bootstrap.bundle.min.js"
+            fi
         elif [ "$subfile" = "glyphicons-halflings-regular.woff2" ]; then
             url="$CLOUDFLARE/twitter-bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2"
         fi
@@ -608,8 +612,6 @@ function create_url() {
         url="$CLOUDFLARE/$folder/$version/js/$subfile"
     elif [ "$folder" = "algoliasearch3.33.0_algoliasearchLite_algoliasearchHelper.jsm" ]; then
         url="$JSDELIVR/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2"
-    elif [ "$subfile" = "videojs-seek-buttons.min.js" ]; then
-        url="$JSDELIVR/npm/videojs-seek-buttons/dist/videojs-seek-buttons.js"
     elif [ "$subfile" = "jsdelivr-combine-jquery-hogan-algoliasearch-autocomplete.js" ]; then
         url="$JSDELIVR/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js"
     elif [ "$folder" = "vue-resource" ]; then
@@ -655,6 +657,32 @@ function create_url() {
         url="$JSDELIVR/npm/$folder@$version/dist/leaflet.featuregroup.subgroup.js"
     elif [ "$folder" = "bodymovin" ] && [[ "$version" = 5* ]]; then
         url="$CLOUDFLARE/$folder/$version/lottie.min.js"
+    elif [ "$folder" = "mathjax" ]; then
+        url=$(echo "$path" | cut -d"/" -f3-)
+        url="$CLOUDFLARE/$url"
+    elif [ "$folder" = "vanilla-lazyload" ]; then
+        url="$JSDELIVR/npm/$folder@$version/dist/lazyload.min.js"
+    # --------------------------------------------------------------------------
+    # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
+    elif [ "$folder" = "hls.js" ]; then
+        url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
+    elif [ "$folder" = "instantsearch.js" ]; then
+        url="$JSDELIVR/npm/$folder@$version/dist/instantsearch.production.min.js"
+    elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
+        url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
+    elif [ "$folder" = "video.js" ]; then
+        if [[ $file =~ .*\.css$ ]]; then
+            url="$JSDELIVR/npm/$folder@$version/dist/video-js.min.css"
+        else
+            url="$JSDELIVR/npm/$folder@$version/dist/video.min.js"
+        fi
+    elif [ "$folder" = "vue" ]; then
+        if [ "$version" != "1.0.28" ] && [ "$version" != "2.6.13" ]; then
+            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+        else
+            url="$JSDELIVR/npm/$folder@$version/dist/vue.min.js"
+        fi
+    # --------------------------------------------------------------------------
     else
         if [ "$subfile" = "$jfile" ]; then
             url="$CLOUDFLARE/$folder/$version/$subfile"

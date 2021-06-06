@@ -56,6 +56,7 @@ const Resource = {
     'MAPPING_EXPRESSION': /\.map$/i,
     'VERSION_EXPRESSION': /(?:\d{1,2}\.){1,3}\d{1,2}(?:-\d)?|latest/,
     'SINGLE_NUMBER_EXPRESSION': /^\D+\d\D+$/,
+    'MATHJAX': /\/\w.*(?:\d{1,2}\.){1,3}\d{1,2}(?:-\d)?\/|\/latest\//,
     'VERSION_PLACEHOLDER': '{version}'
 };
 
@@ -267,11 +268,60 @@ const CDNs = {
     'js.appboycdn.com': 'Appboy CDN',
     'cdn.embed.ly': 'embedly',
     'cdn.datatables.net': 'DataTables',
+    'mathjax.rstudio.com': 'MathJax RStudio',
 };
 
 const IgnoredHost = {
     'fonts.googleapis.com': true,
     'fonts.gstatic.com': true,
+};
+
+/**
+ * MathJax is a very large library with over 30,000 files.
+ * That is why it is better to specify each one here.
+ *
+ * https://codeberg.org/nobody/LocalCDN/issues/75
+ */
+const MathJaxFiles = {
+    'config/TeX-AMS_HTML-full.js': true,
+    'config/TeX-MML-AM_CHTML.js': true,
+    'extensions/TeX/begingroup.js': true,
+    'extensions/TeX/mhchem3/mhchem.js': true,
+    'extensions/MathMenu.js': true,
+    'extensions/MathZoom.js': true,
+    'jax/output/HTML-CSS/imageFonts.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/fontdata-extra.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/fontdata.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Latin1Supplement.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscSymbols.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/SuppMathOperators.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MathOperators.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Main.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/BoxDrawing.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/BBBold.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/LetterlikeSymbols.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/EnclosedAlphanum.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Dingbats.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/LatinExtendedA.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/CombDiacritMarks.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscTechnical.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Arrows.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/GeometricShapes.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/GeneralPunctuation.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/PUA.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/SpacingModLetters.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscMathSymbolsB.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/GreekAndCoptic.js': true,
+    'jax/output/HTML-CSS/autoload/multiline.js': true,
+    'jax/output/HTML-CSS/autoload/menclose.js': true,
+    'jax/output/HTML-CSS/jax.js': true,
+    'jax/output/HTML-CSS/config.js': true,
+    'jax/output/CommonHTML/fonts/TeX/fontdata.js': true,
+    'jax/output/CommonHTML/autoload/mtable.js': true,
+    'jax/output/CommonHTML/jax.js': true,
+    'jax/element/mml/optable/Latin1Supplement.js': true,
+    'jax/element/mml/optable/MathOperators.js': true,
+    'jax/element/mml/optable/BasicLatin.js': true,
 };
 
 // Supported charsets for TextDecoder()

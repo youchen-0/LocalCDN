@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-05-02';
+mappings.lastMappingUpdate = '2021-05-25';
 
 mappings.cdn = {
 
@@ -343,6 +343,7 @@ mappings.cdn = {
             'MaterialDesign-Webfont/{version}/css/materialdesignicons.': resources.materialDesign,
             'materialize/{version}/css/materialize.': resources.materializeCSS,
             'materialize/{version}/js/materialize.': resources.materializeJS,
+            'mathjax/{version}/': resources.mathJax,
             'mdbootstrap/{version}/js/mdb.': resources.mdbootstrapJS,
             'mdbootstrap/{version}/css/mdb.': resources.mdbootstrapCSS,
             'mdb-ui-kit/{version}/mdb.js': resources.mdbUiKitJS,
@@ -612,6 +613,7 @@ mappings.cdn = {
             'jquery.slick/{version}/slick.min.css': resources.slickCarouselCSS,
             'jquery.slick/{version}/slick.js': resources.slickCarouselJS,
             'jquery.slick/{version}/slick.min.js': resources.slickCarouselJS,
+            'jquery.validation/{version}/jquery.validate.': resources.jqueryValidationPlugin,
             'momentjs/{version}/moment.': resources.moment,
             'momentjs/{version}/moment.min.': resources.moment,
             'mootools/{version}/mootools-': resources.mootools,
@@ -1028,6 +1030,12 @@ mappings.cdn = {
     'cdn.datatables.net': {
         '/': {
             '{version}/': resources.datatables
+        }
+    },
+    // rstudio (MathJax)
+    'mathjax.rstudio.com': {
+        '/': {
+            '{version}': resources.mathJax,
         }
     }
 };
