@@ -1032,6 +1032,7 @@ mappings.cdn = {
             '{version}/': resources.datatables
         }
     },
+    // rstudio (MathJax)
     'mathjax.rstudio.com': {
         '/': {
             '{version}': resources.mathJax,
