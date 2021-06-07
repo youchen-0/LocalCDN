@@ -95,6 +95,7 @@ optionsAdvanced.init = function (opt) {
     document.getElementById('generate-ublock-rules').addEventListener('change', ruleGenerator.openRuleSet);
     document.getElementById('generate-umatrix-rules').addEventListener('change', ruleGenerator.openRuleSet);
     document.getElementById('generate-adguard-rules').addEventListener('change', ruleGenerator.openRuleSet);
+    document.getElementById('generate-noscript-rules').addEventListener('change', ruleGenerator.openRuleSet);
     document.getElementById('button-copy-rule-set').addEventListener('click', ruleGenerator.copyRuleSet);
     document.getElementById('negate-html-filter-list-warning').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_HTML_FILTER); });
     document.getElementById('ruleset-help').addEventListener('click', function () { options._onLinkClick(Links.CODEBERG_RULESET); });
