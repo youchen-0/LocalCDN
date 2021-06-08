@@ -1599,8 +1599,8 @@ https://cdn.jsdelivr.net/npm/video.js@7.12.3/dist/video-js.min.css
 https://cdn.jsdelivr.net/npm/video.js@7.12.3/dist/video.min.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.css
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.min.js
-https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.0/dist/videojs-seek-buttons.css
-https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.0/dist/videojs-seek-buttons.min.js
+https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.1/dist/videojs-seek-buttons.css
+https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.1/dist/videojs-seek-buttons.min.js
 https://cdn.jsdelivr.net/npm/vue@1.0.28/dist/vue.min.js
 https://cdn.jsdelivr.net/npm/vue@2.6.13/dist/vue.min.js
 https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2
