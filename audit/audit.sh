@@ -457,7 +457,7 @@ function create_url() {
         else
             url="$CLOUDFLARE/bowser/$version/bowser.min.js"
         fi
-    elif [ "$folder" = "select2" ]; then
+    elif [ "$folder" = "select2" ] && [ "$version" != "3.5.4" ]; then
         if [[ $subfile =~ (select2\.min\.js|select2\.full\.min\.js)$ ]]; then
             url="$CLOUDFLARE/$folder/$version/js/$subfile"
         elif [ "$subfile" = "select2.min.css" ]; then

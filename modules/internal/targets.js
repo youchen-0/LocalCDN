@@ -507,6 +507,8 @@ targets.setLastVersion = function (type, version) {
         return '1.7.1';
     } else if (type.startsWith('/scriptaculous/1.')) {
         return '1.9.0';
+    } else if (type.startsWith('/select2/3.')) {
+        return '3.5.4';
     } else if (type.startsWith('/select2/4.')) {
         return '4.0.13';
     } else if (type.startsWith('/semantic-ui/2.')) {
