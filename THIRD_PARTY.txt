@@ -1246,8 +1246,8 @@ https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/jax/output/HTML-CSS/jax.js
 https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js
 https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css
 https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js
-https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css
-https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js
+https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css
+https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css
 https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js
 https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js
