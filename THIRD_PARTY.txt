@@ -1588,7 +1588,7 @@ https://cdn.jsdelivr.net/npm/react-lifecycles-compat@3.0.4/react-lifecycles-comp
 https://cdn.jsdelivr.net/npm/swiper@6.7.0/swiper-bundle.min.css
 https://cdn.jsdelivr.net/npm/swiper@6.7.0/swiper-bundle.min.js
 https://cdn.jsdelivr.net/npm/urlize.js/urlize.js
-https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js
+https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js
 https://cdn.jsdelivr.net/npm/video.js@5.20.5/dist/video-js.min.css
 https://cdn.jsdelivr.net/npm/video.js@5.20.5/dist/video.min.js
 https://cdn.jsdelivr.net/npm/video.js@6.13.0/dist/video-js.min.css
