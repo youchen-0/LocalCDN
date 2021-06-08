@@ -401,7 +401,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/leaflet.markercluster/1.')) {
         return '1.5.0';
     } else if (type.startsWith('/libphonenumber-js/1.')) {
-        return '1.9.16';
+        return '1.9.19';
     } else if (type.startsWith('/libsodium-wrappers/0.')) {
         return '0.5.4';
     } else if (type.startsWith('/lightcase/2.')) {
