@@ -260,6 +260,8 @@ targets.setLastVersion = function (type, version) {
         return '0.4.0';
     } else if (type.startsWith('/ext-core/3.')) {
         return '3.1.0';
+    } else if (type.startsWith('/fastclick/1.')) {
+        return '1.0.6';
     } else if (type.startsWith('/findify')) {
         if (helpers.compareVersion('6.9.15', version)) return '6.9.15'; // <= 6.9.15
         else if (helpers.compareVersion('6.17.0', version)) return '6.17.0'; // > 6.9.15 to <= 6.17.0
@@ -621,6 +623,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'fastclick.min.jsm': 'FastClick',
     'bodymovin.min.jsm': 'bodymovin/lottie',
     'jquery.bxslider.min.jsm': 'bxslider (JS)',
     'jquery.bxslider.min.css': 'bxslider (CSS)',

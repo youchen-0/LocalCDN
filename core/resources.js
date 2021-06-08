@@ -361,6 +361,10 @@ var resources = {
     'fancyBoxJS': {
         'path': 'resources/fancybox/{version}/jquery.fancybox.min.jsm'
     },
+    // FastClick
+    'fastclick': {
+        'path': 'resources/fastclick/{version}/fastclick.min.jsm'
+    },
     // Feather
     'feather': {
         'path': 'resources/feather-icons/{version}/feather.min.jsm'

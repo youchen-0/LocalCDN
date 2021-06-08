@@ -281,6 +281,7 @@ mappings.cdn = {
             'fancybox/{version}/helpers/jquery.fancybox-media.js': resources.fancyBoxMediaJS,
             'fancybox/{version}/jquery.fancybox.min.css': resources.fancyBoxCSS,
             'fancybox/{version}/jquery.fancybox.css': resources.fancyBoxCSS,
+            'fastclick/{version}/fastclick.': resources.fastclick,
             'feather-icons/{version}/feather.': resources.feather,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome,
             'font-awesome/{version}/css/': resources.fontawesome5CSS,
