@@ -499,6 +499,10 @@ var resources = {
     'jQueryTablesorter': {
         'path': 'resources/jquery.tablesorter/{version}/jquery.tablesorter.min.jsm'
     },
+    // jQuery Tiny Pub/Sub
+    'jQueryTinyPubsub': {
+        'path': 'resources/jquery-tiny-pubsub/{version}/ba-tiny-pubsub.min.jsm'
+    },
     // jQuery Tooltipster
     'jQueryTooltipster': {
         'path': 'resources/tooltipster/{version}/js/jquery.tooltipster.min.jsm'

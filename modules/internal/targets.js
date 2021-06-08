@@ -374,6 +374,8 @@ targets.setLastVersion = function (type, version) {
         return '3.2.12';
     } else if (type.startsWith('/jquery.tablesorter/2.')) {
         return '2.31.3';
+    } else if (type.startsWith('/jquery-tiny-pubsub/0.')) {
+        return '0.7.0';
     } else if (type.startsWith('/jquery-modal/0.')) {
         return '0.9.2';
     } else if (type.startsWith('/mobile/1.')) {
@@ -623,6 +625,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'ba-tiny-pubsub.min.jsm': 'jQuery Tiny Pub/Sub',
     'fastclick.min.jsm': 'FastClick',
     'bodymovin.min.jsm': 'bodymovin/lottie',
     'jquery.bxslider.min.jsm': 'bxslider (JS)',
