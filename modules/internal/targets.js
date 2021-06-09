@@ -610,7 +610,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/webrtc-adapter/6.')) {
         return '6.4.8';
     } else if (type.startsWith('/webrtc-adapter/7.')) {
-        return '7.4.0';
+        return '7.7.1';
     } else if (type.startsWith('/wow/1.')) {
         return '1.1.2';
     } else if (version === null) {
