@@ -677,10 +677,10 @@ function create_url() {
             url="$JSDELIVR/npm/$folder@$version/dist/video.min.js"
         fi
     elif [ "$folder" = "vue" ]; then
-        if [ "$version" != "1.0.28" ] && [ "$version" != "2.6.13" ]; then
-            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
-        else
+        if [[ "$version" != 3* ]]; then
             url="$JSDELIVR/npm/$folder@$version/dist/vue.min.js"
+        else
+            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
         fi
     # --------------------------------------------------------------------------
     else
