@@ -1595,8 +1595,8 @@ https://cdn.jsdelivr.net/npm/video.js@5.20.5/dist/video-js.min.css
 https://cdn.jsdelivr.net/npm/video.js@5.20.5/dist/video.min.js
 https://cdn.jsdelivr.net/npm/video.js@6.13.0/dist/video-js.min.css
 https://cdn.jsdelivr.net/npm/video.js@6.13.0/dist/video.min.js
-https://cdn.jsdelivr.net/npm/video.js@7.12.3/dist/video-js.min.css
-https://cdn.jsdelivr.net/npm/video.js@7.12.3/dist/video.min.js
+https://cdn.jsdelivr.net/npm/video.js@7.12.4/dist/video-js.min.css
+https://cdn.jsdelivr.net/npm/video.js@7.12.4/dist/video.min.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.css
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.min.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@2.0.1/dist/videojs-seek-buttons.css
