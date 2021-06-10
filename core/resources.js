@@ -33,6 +33,10 @@ var resources = {
     'algoliaSearch': {
         'path': 'resources/algoliasearch/{version}/algoliasearch.min.jsm'
     },
+    // alpinejs
+    'alpinejs': {
+        'path': 'resources/alpinejs/{version}/alpine.jsm'
+    },
     // AnchorJS
     'anchorJS': {
         'path': 'resources/anchor-js/{version}/anchor.min.jsm'

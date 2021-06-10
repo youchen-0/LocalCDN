@@ -46,6 +46,7 @@ https://cdn.embed.ly/player-0.1.0.min.js
 https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.5/js/ajax-bootstrap-select.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.9.1/algoliasearch.umd.min.js
+https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js
 https://cdnjs.cloudflare.com/ajax/libs/angucomplete-alt/3.0.0/angucomplete-alt.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-aria/1.8.2/angular-aria.min.js
