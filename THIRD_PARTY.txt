@@ -1534,6 +1534,7 @@ https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.5.0/webcomponents-loade
 https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js
 https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.8/adapter.min.js
 https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.7.1/adapter.min.js
+https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/8.0.0/adapter.min.js
 https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js
 https://cdnjs.cloudflare.com/ajax/libs/zumper-angular-payments/1.0.7/angular-payments.js
 https://cdn.jsdelivr.net/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js
