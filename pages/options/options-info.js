@@ -27,9 +27,10 @@ var optionsInfo = {};
  */
 
 optionsInfo._renderCdnFrameworkSection = function () {
-    let unsupportedFrameworks, btnCDNs, btnFrameworks;
+    let unsupportedFrameworks, summarizedFrameworks, btnCDNs, btnFrameworks;
 
     unsupportedFrameworks = 0;
+    summarizedFrameworks = 12;
     optionsInfo._listOfFrameworks = {};
 
     btnCDNs = document.getElementById('cdn');
@@ -58,7 +59,7 @@ optionsInfo._renderCdnFrameworkSection = function () {
 
     // Reduce CDNs by 3, because loli.net includes = cdn.css.net, cdnjs.loli.net, ajax.loli.net, fonts.loli.net
     btnCDNs.value += Object.keys(mappings.cdn).length - 3;
-    btnFrameworks.value += Object.keys(optionsInfo._listOfFrameworks).length - unsupportedFrameworks;
+    btnFrameworks.value += Object.keys(optionsInfo._listOfFrameworks).length - unsupportedFrameworks - summarizedFrameworks;
 };
 
 optionsInfo._renderLinkSection = function () {
