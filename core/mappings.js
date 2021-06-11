@@ -963,6 +963,9 @@ mappings.cdn = {
     'use.fontawesome.com': {
         '/': {
             'releases/v{version}/css/all': resources.fontawesome5CSS,
+            'releases/v{version}/css/brands': resources.fontawesome5CSS,
+            'releases/v{version}/css/fontawesome': resources.fontawesome5CSS,
+            'releases/v{version}/css/solid': resources.fontawesome5CSS,
             'releases/v{version}/css/v4-shims': resources.fontawesome5CSSv4shims,
             'releases/v{version}/js/': resources.fontawesome5JS,
             'fa-loader.js': resources.webfontloaderFontawesomeJS,
