@@ -1581,7 +1581,7 @@ https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.19/dist/search.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.19/dist/sentry.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.19/dist/styles.css
 https://cdn.jsdelivr.net/npm/hls.js@0.14.17/dist/hls.min.js
-https://cdn.jsdelivr.net/npm/hls.js@1.0.5/dist/hls.min.js
+https://cdn.jsdelivr.net/npm/hls.js@1.0.7/dist/hls.min.js
 https://cdn.jsdelivr.net/npm/instantsearch.js@3.7.0/dist/instantsearch.production.min.js
 https://cdn.jsdelivr.net/npm/instantsearch.js@4.23.0/dist/instantsearch.production.min.js
 https://cdn.jsdelivr.net/npm/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
