@@ -322,6 +322,11 @@ const MathJaxFiles = {
     'jax/element/mml/optable/Latin1Supplement.js': true,
     'jax/element/mml/optable/MathOperators.js': true,
     'jax/element/mml/optable/BasicLatin.js': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff': true,
 };
 
 // Supported charsets for TextDecoder()
