@@ -1125,7 +1125,7 @@ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
-https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js
+https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.16/jquery.csv.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/core/jquery.cycle2.autoheight.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/core/jquery.cycle2.caption.min.js
 https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/core/jquery.cycle2.command.min.js
