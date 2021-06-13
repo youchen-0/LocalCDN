@@ -345,7 +345,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery-cookie/1.')) {
         return '1.4.1';
     } else if (type.startsWith('/jquery-csv/1.')) {
-        return '1.0.16';
+        return '1.0.21';
     } else if (type.startsWith('/jquery-easing/1.')) {
         return '1.4.1';
     } else if (type.startsWith('/jquery.lazyload/1.')) {
