@@ -549,8 +549,12 @@ function create_url() {
         fi
     elif [ "$folder" = "tooltipster" ] && [ "$version" = "4.2.8" ]; then
         url="$CLOUDFLARE/$folder/$version/js/tooltipster.bundle.min.js"
-    # elif [ "$folder" = "vue" ] && [ "$version" != "1.0.28" ] && [ "$version" != "2.6.12" ]; then
-    #     url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+    elif [ "$folder" = "vue" ]; then
+        if [[ "$version" != 3* ]]; then
+            url="$JSDELIVR/npm/$folder@$version/dist/vue.min.js"
+        else
+            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+        fi
     elif [ "$folder" = "waypoints" ]; then
         if [ "$jfile" = "infinite.min.js" ] || [ "$jfile" = "inview.min.js" ] || [ "$jfile" = "sticky.min.js" ]; then
             url="$CLOUDFLARE/$folder/$version/shortcuts/$jfile"
@@ -662,26 +666,16 @@ function create_url() {
         url="$CLOUDFLARE/$url"
     elif [ "$folder" = "vanilla-lazyload" ]; then
         url="$JSDELIVR/npm/$folder@$version/dist/lazyload.min.js"
+    elif [ "$folder" = "lightgallery" ] && [ "$version" != "1.10.0" ] && [ "$subfile" = "lightgallery.min.js" ];then
+        url="$CLOUDFLARE/$folder/$version/lightgallery.min.js"
+    elif [ "$folder" = "alpinejs" ] && [ "$version" != "2.8.2" ];then
+        url="$CLOUDFLARE/$folder/$version/cdn.min.js"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "hls.js" ]; then
         url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
-    elif [ "$folder" = "instantsearch.js" ]; then
-        url="$JSDELIVR/npm/$folder@$version/dist/instantsearch.production.min.js"
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
         url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
-    elif [ "$folder" = "video.js" ]; then
-        if [[ $file =~ .*\.css$ ]]; then
-            url="$JSDELIVR/npm/$folder@$version/dist/video-js.min.css"
-        else
-            url="$JSDELIVR/npm/$folder@$version/dist/video.min.js"
-        fi
-    elif [ "$folder" = "vue" ]; then
-        if [[ "$version" != 3* ]]; then
-            url="$JSDELIVR/npm/$folder@$version/dist/vue.min.js"
-        else
-            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
-        fi
     # --------------------------------------------------------------------------
     else
         if [ "$subfile" = "$jfile" ]; then
