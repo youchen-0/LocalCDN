@@ -414,6 +414,8 @@ targets.setLastVersion = function (type, version) {
         return '2.5.0';
     } else if (type.startsWith('/lightgallery/1.')) {
         return '1.10.0';
+    } else if (type.startsWith('/lightgallery/2.')) {
+        return '2.1.5';
     } else if (type.startsWith('/noUiSlider/15.')) {
         return '15.1.1';
     } else if (type.startsWith('/noUiSlider/14.')) {
