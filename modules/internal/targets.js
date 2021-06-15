@@ -169,8 +169,10 @@ targets.setLastVersion = function (type, version) {
         return '0.21.1';
     } else if (type.startsWith('/babel-polyfill/')) {
         return '7.12.1';
-    } else if (type.startsWith('/babel-standalone/')) {
+    } else if (type.startsWith('/babel-standalone/6.')) {
         return '6.26.0';
+    } else if (type.startsWith('/babel-standalone/7.')) {
+        return '7.14.6';
     } else if (type.startsWith('/backbone.js/0.')) {
         return '0.9.10';
     } else if (type.startsWith('/backbone.js/1.')) {
