@@ -77,6 +77,9 @@ readonly NETDNA_BOOTSTRAPCDN="https://netdna.bootstrapcdn.com"
 readonly GITHUB="https://raw.githubusercontent.com"
 readonly EMBEDLY="https://cdn.embed.ly"
 readonly DATATABLES="https://cdn.datatables.net"
+readonly FONTAWESOME="https://use.fontawesome.com"
+readonly UNPKG="https://unpkg.com"
+readonly FONTSGSTATIC="https://fonts.gstatic.com"
 
 
 # =============================================================================
@@ -414,7 +417,7 @@ function create_url() {
     elif [ "$folder" = "react-lifecycles-compat" ]; then
         url="$JSDELIVR/npm/react-lifecycles-compat@$version/react-lifecycles-compat.min.js"
     elif [ "$folder" = "react-side-effect" ]; then
-        url="https://unpkg.com/react-side-effect@$version/lib/index.umd.min.js"
+        url="$UNPKG/react-side-effect@$version/lib/index.umd.min.js"
     elif [ "$folder" = "p2p-media-loader-core" ]; then
         url="$JSDELIVR/npm/p2p-media-loader-core@$version/build/p2p-media-loader-core.min.js"
     elif [ "$folder" = "p2p-media-loader-hlsjs" ]; then
@@ -430,7 +433,7 @@ function create_url() {
     elif [ "$folder" = "rocket-loader" ]; then
         url="$CLOUDFLARE_AJAX/7089c43e/cloudflare-static/rocket-loader.min.js"
     elif [ "$folder" = "google-material-design-icons" ]; then
-        url="https://fonts.gstatic.com/s/materialicons/$version/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+        url="$FONTSGSTATIC/s/materialicons/$version/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
     elif [ "$folder" = "object-assign" ]; then
         url="$JSDELIVR/npm/object-assign@4.1.1/index.js"
     elif [ "$folder" = "mirage2" ]; then
@@ -621,7 +624,7 @@ function create_url() {
     elif [ "$folder" = "vue-resource" ]; then
         url="$GITHUB/pagekit/vue-resource/$version/dist/vue-resource.min.js"
     elif [ "$path" = "../resources/webfont/fa-loader.js" ]; then
-        url="https://use.fontawesome.com/a1f20be65b.js"
+        url="$FONTAWESOME/a1f20be65b.js"
     elif [ "$folder" = "jquery.cycle2" ]; then
         if [ "${arr_cycle[$subfile]}" != "" ]; then
             url="$CLOUDFLARE/$folder/$version/${arr_cycle[$subfile]}"
