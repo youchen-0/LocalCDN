@@ -1558,6 +1558,7 @@ https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js
 https://cdnjs.cloudflare.com/ajax/libs/zumper-angular-payments/1.0.7/angular-payments.js
 https://cdn.jsdelivr.net/combine/npm/jquery@2.2.4/dist/jquery.min.js,npm/hogan.js@3.0.2/dist/hogan-3.0.2.min.js,npm/algoliasearch@3.30.0/dist/algoliasearch.min.js,npm/autocomplete.js@0.31.0/dist/autocomplete.min.js
 https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2
+https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.1.0/dist/umd/index.production.min.js
 https://cdn.jsdelivr.net/npm/anchor-js@3.2.2/anchor.min.js
 https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js
 https://cdn.jsdelivr.net/npm/angular-stripe-checkout@5.1.0/angular-stripe-checkout.min.js

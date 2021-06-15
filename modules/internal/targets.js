@@ -157,6 +157,8 @@ targets.setLastVersion = function (type, version) {
         return '3.2.1';
     } else if (type.startsWith('/autocomplete.js/0.')) {
         return '0.38.0';
+    } else if (type.startsWith('/autocomplete.js/1.')) {
+        return '1.1.0';
     } else if (type.startsWith('/angular-material/1.') || type.startsWith('/angular-material/0.')) {
         return '1.2.2';
     } else if (type.startsWith('/angular-translate/2.')) {

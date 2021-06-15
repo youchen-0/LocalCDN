@@ -676,6 +676,8 @@ function create_url() {
         url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
         url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
+    elif [ "$folder" = "autocomplete.js" ] && [ "$version" != "0.38.0" ]; then
+        url="$JSDELIVR/npm/@algolia/autocomplete-js@$version/dist/umd/index.production.min.js"
     # --------------------------------------------------------------------------
     else
         if [ "$subfile" = "$jfile" ]; then
