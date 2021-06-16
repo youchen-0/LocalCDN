@@ -296,28 +296,28 @@ targets.setLastVersion = function (type, version) {
         return '2.1.3';
     } else if (type.startsWith('/gsap/3.')) {
         return '3.6.1';
-    } else if (type.startsWith('/google-material-design-icons/')) {
+    } else if (type.startsWith('/google-material-design-icons/3.')) {
         return '3.0.1';
     } else if (type.startsWith('/google-material-design-icons/')) {
         return 'v90';
-    } else if (type.startsWith('/highlight.js/11.')) {
-        return '11.0.1';
-    } else if (type.startsWith('/highlight.js/10.')) {
-        return '10.7.3';
-    } else if (type.startsWith('/highlight.js/9.')) {
+    } else if (type.startsWith('/highlight.js/7.')) {
         return '9.18.5';
     } else if (type.startsWith('/highlight.js/8.')) {
         return '9.18.5';
-    } else if (type.startsWith('/highlight.js/7.')) {
+    } else if (type.startsWith('/highlight.js/9.')) {
         return '9.18.5';
+    } else if (type.startsWith('/highlight.js/10.')) {
+        return '10.7.3';
+    } else if (type.startsWith('/highlight.js/11.')) {
+        return '11.0.1';
     } else if (type.startsWith('/history/4.')) {
         return '4.10.1';
     } else if (type.startsWith('/history/5.')) {
         return '5.0.0';
-    } else if (type.startsWith('/hls.js/1.')) {
-        return '1.0.7';
     } else if (type.startsWith('/hls.js/0.')) {
         return '0.14.17';
+    } else if (type.startsWith('/hls.js/1.')) {
+        return '1.0.7';
     } else if (type.startsWith('/hogan.js/')) {
         return '3.0.2';
     } else if (type.startsWith('/instantsearch.js/3.')) {
@@ -388,14 +388,10 @@ targets.setLastVersion = function (type, version) {
         return '0.7.0';
     } else if (type.startsWith('/jquery-modal/0.')) {
         return '0.9.2';
-    } else if (type.startsWith('/mobile/1.')) {
-        return '1.4.5';
-    } else if (type.startsWith('/nvd3/1.')) {
-        return '1.8.6';
-    } else if (type.startsWith('/jasny-bootstrap/4.')) {
-        return '4.0.0';
     } else if (type.startsWith('/jasny-bootstrap/3.')) {
         return '3.1.3';
+    } else if (type.startsWith('/jasny-bootstrap/4.')) {
+        return '4.0.0';
     } else if (type.startsWith('/js-cookie/2.')) {
         return '2.2.1';
     } else if (type.startsWith('/knockout/3.')) {
@@ -424,14 +420,10 @@ targets.setLastVersion = function (type, version) {
         return '1.10.0';
     } else if (type.startsWith('/lightgallery/2.')) {
         return '2.1.5';
-    } else if (type.startsWith('/noUiSlider/15.')) {
-        return '15.2.0';
-    } else if (type.startsWith('/noUiSlider/14.')) {
-        return '14.7.0';
-    } else if (type.startsWith('/lodash.js/4.')) {
-        return '4.17.21';
     } else if (type.startsWith('/lodash.js/3.')) {
         return '3.10.1';
+    } else if (type.startsWith('/lodash.js/4.')) {
+        return '4.17.21';
     } else if (type.startsWith('/lozad')) {
         return '1.16.0';
     } else if (type.startsWith('/magnific-popup.js/1.')) {
@@ -448,15 +440,17 @@ targets.setLastVersion = function (type, version) {
         return '4.9.95';
     } else if (type.startsWith('/material-design-icons/5.')) {
         return '5.8.55';
-    } else if (type.startsWith('/materialize/1.')) {
-        return '1.0.0';
     } else if (type.startsWith('/materialize/0.')) {
         if (helpers.compareVersion('0.97.8', version)) return '0.97.8'; // <= v0.97.8
         return '0.100.2';
+    } else if (type.startsWith('/materialize/1.')) {
+        return '1.0.0';
     } else if (type.startsWith('/mathjax/2.') || type.startsWith('/mathjax/latest')) {
         return '2.7.5';
     } else if (type.startsWith('/mdb-ui-kit/3.')) {
         return '3.8.0';
+    } else if (type.startsWith('/mobile/1.')) {
+        return '1.4.5';
     } else if (type.startsWith('/Modaal/0.')) {
         return '0.4.4';
     } else if (type.startsWith('/modernizr/2.')) {
@@ -467,22 +461,28 @@ targets.setLastVersion = function (type, version) {
         return '1.6.0';
     } else if (type.startsWith('/ngx-bootstrap/6.')) {
         return '6.2.0';
+    } else if (type.startsWith('/noUiSlider/14.')) {
+        return '14.7.0';
+    } else if (type.startsWith('/noUiSlider/15.')) {
+        return '15.2.0';
+    } else if (type.startsWith('/nvd3/1.')) {
+        return '1.8.6';
     } else if (type.startsWith('/object-assign@4.')) {
         return '4.1.1';
     } else if (type.startsWith('/oclazyload/1.')) {
         return '1.1.0';
     } else if (type.startsWith('/OwlCarousel2/2.')) {
         return '2.3.4';
-    } else if (type.startsWith('/owl-carousel/2.')) {
-        return '2.3.4';
     } else if (type.startsWith('/owl-carousel/1.')) {
         return '1.3.3';
+    } else if (type.startsWith('/owl-carousel/2.')) {
+        return '2.3.4';
     } else if (type.startsWith('/p2p-media-loader-core') || type.startsWith('/p2p-media-loader-hlsjs')) {
         return '0.6.2';
-    } else if (type.startsWith('/p5.js/1.')) {
-        return '1.3.1';
     } else if (type.startsWith('/p5.js/0.')) {
         return '0.10.2';
+    } else if (type.startsWith('/p5.js/1.')) {
+        return '1.3.1';
     } else if (type.startsWith('/page.js/1.')) {
         return '1.11.6';
     } else if (type.startsWith('/paginationjs/2.')) {
