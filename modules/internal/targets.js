@@ -80,7 +80,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/alpinejs/2.')) {
         return '2.8.2';
     } else if (type.startsWith('/alpinejs/3.')) {
-        return '3.0.5';
+        return '3.0.6';
     } else if (type.startsWith('/anchor-js/3.')) {
         return '3.2.2';
     } else if (type.startsWith('/anchor-js/4.')) {
