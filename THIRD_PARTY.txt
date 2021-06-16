@@ -1599,7 +1599,7 @@ https://cdn.jsdelivr.net/npm/hls.js@0.14.17/dist/hls.min.js
 https://cdn.jsdelivr.net/npm/hls.js@1.0.7/dist/hls.min.js
 https://cdn.jsdelivr.net/npm/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
 https://cdn.jsdelivr.net/npm/ngx-bootstrap@6.2.0/datepicker/bs-datepicker.css
-https://cdn.jsdelivr.net/npm/nouislider@15.1.1/dist/nouislider.min.js
+https://cdn.jsdelivr.net/npm/nouislider@15.2.0/dist/nouislider.min.js
 https://cdn.jsdelivr.net/npm/object-assign@4.1.1/index.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-core@0.6.2/build/p2p-media-loader-core.min.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@0.6.2/build/p2p-media-loader-hlsjs.min.js
