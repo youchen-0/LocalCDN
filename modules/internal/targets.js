@@ -540,7 +540,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/slick-lightbox/0.')) {
         return '0.2.12';
     } else if (type.startsWith('/slider-pro/1.')) {
-        return '1.5.0';
+        return '1.6.0';
     } else if (type.startsWith('/snowplow/2.')) {
         return '2.18.0';
     } else if (type.startsWith('/socket.io/2.')) {
