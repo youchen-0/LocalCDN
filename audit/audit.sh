@@ -77,6 +77,9 @@ readonly NETDNA_BOOTSTRAPCDN="https://netdna.bootstrapcdn.com"
 readonly GITHUB="https://raw.githubusercontent.com"
 readonly EMBEDLY="https://cdn.embed.ly"
 readonly DATATABLES="https://cdn.datatables.net"
+readonly FONTAWESOME="https://use.fontawesome.com"
+readonly UNPKG="https://unpkg.com"
+readonly FONTSGSTATIC="https://fonts.gstatic.com"
 
 
 # =============================================================================
@@ -414,7 +417,7 @@ function create_url() {
     elif [ "$folder" = "react-lifecycles-compat" ]; then
         url="$JSDELIVR/npm/react-lifecycles-compat@$version/react-lifecycles-compat.min.js"
     elif [ "$folder" = "react-side-effect" ]; then
-        url="https://unpkg.com/react-side-effect@$version/lib/index.umd.min.js"
+        url="$UNPKG/react-side-effect@$version/lib/index.umd.min.js"
     elif [ "$folder" = "p2p-media-loader-core" ]; then
         url="$JSDELIVR/npm/p2p-media-loader-core@$version/build/p2p-media-loader-core.min.js"
     elif [ "$folder" = "p2p-media-loader-hlsjs" ]; then
@@ -430,7 +433,7 @@ function create_url() {
     elif [ "$folder" = "rocket-loader" ]; then
         url="$CLOUDFLARE_AJAX/7089c43e/cloudflare-static/rocket-loader.min.js"
     elif [ "$folder" = "google-material-design-icons" ]; then
-        url="https://fonts.gstatic.com/s/materialicons/$version/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+        url="$FONTSGSTATIC/s/materialicons/$version/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
     elif [ "$folder" = "object-assign" ]; then
         url="$JSDELIVR/npm/object-assign@4.1.1/index.js"
     elif [ "$folder" = "mirage2" ]; then
@@ -457,7 +460,7 @@ function create_url() {
         else
             url="$CLOUDFLARE/bowser/$version/bowser.min.js"
         fi
-    elif [ "$folder" = "select2" ]; then
+    elif [ "$folder" = "select2" ] && [ "$version" != "3.5.4" ]; then
         if [[ $subfile =~ (select2\.min\.js|select2\.full\.min\.js)$ ]]; then
             url="$CLOUDFLARE/$folder/$version/js/$subfile"
         elif [ "$subfile" = "select2.min.css" ]; then
@@ -549,8 +552,12 @@ function create_url() {
         fi
     elif [ "$folder" = "tooltipster" ] && [ "$version" = "4.2.8" ]; then
         url="$CLOUDFLARE/$folder/$version/js/tooltipster.bundle.min.js"
-    # elif [ "$folder" = "vue" ] && [ "$version" != "1.0.28" ] && [ "$version" != "2.6.12" ]; then
-    #     url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+    elif [ "$folder" = "vue" ]; then
+        if [[ "$version" != 3* ]]; then
+            url="$JSDELIVR/npm/$folder@$version/dist/vue.min.js"
+        else
+            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
+        fi
     elif [ "$folder" = "waypoints" ]; then
         if [ "$jfile" = "infinite.min.js" ] || [ "$jfile" = "inview.min.js" ] || [ "$jfile" = "sticky.min.js" ]; then
             url="$CLOUDFLARE/$folder/$version/shortcuts/$jfile"
@@ -617,7 +624,7 @@ function create_url() {
     elif [ "$folder" = "vue-resource" ]; then
         url="$GITHUB/pagekit/vue-resource/$version/dist/vue-resource.min.js"
     elif [ "$path" = "../resources/webfont/fa-loader.js" ]; then
-        url="https://use.fontawesome.com/a1f20be65b.js"
+        url="$FONTAWESOME/a1f20be65b.js"
     elif [ "$folder" = "jquery.cycle2" ]; then
         if [ "${arr_cycle[$subfile]}" != "" ]; then
             url="$CLOUDFLARE/$folder/$version/${arr_cycle[$subfile]}"
@@ -662,26 +669,20 @@ function create_url() {
         url="$CLOUDFLARE/$url"
     elif [ "$folder" = "vanilla-lazyload" ]; then
         url="$JSDELIVR/npm/$folder@$version/dist/lazyload.min.js"
+    elif [ "$folder" = "lightgallery" ] && [ "$version" != "1.10.0" ] && [ "$subfile" = "lightgallery.min.js" ];then
+        url="$CLOUDFLARE/$folder/$version/lightgallery.min.js"
+    elif [ "$folder" = "alpinejs" ] && [ "$version" != "2.8.2" ];then
+        url="$CLOUDFLARE/$folder/$version/cdn.min.js"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "hls.js" ]; then
         url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
-    elif [ "$folder" = "instantsearch.js" ]; then
-        url="$JSDELIVR/npm/$folder@$version/dist/instantsearch.production.min.js"
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
         url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
-    elif [ "$folder" = "video.js" ]; then
-        if [[ $file =~ .*\.css$ ]]; then
-            url="$JSDELIVR/npm/$folder@$version/dist/video-js.min.css"
-        else
-            url="$JSDELIVR/npm/$folder@$version/dist/video.min.js"
-        fi
-    elif [ "$folder" = "vue" ]; then
-        if [ "$version" != "1.0.28" ] && [ "$version" != "2.6.13" ]; then
-            url="$CLOUDFLARE/$folder/$version/vue.global.prod.js"
-        else
-            url="$JSDELIVR/npm/$folder@$version/dist/vue.min.js"
-        fi
+    elif [ "$folder" = "autocomplete.js" ] && [ "$version" != "0.38.0" ]; then
+        url="$JSDELIVR/npm/@algolia/autocomplete-js@$version/dist/umd/index.production.min.js"
+    elif [ "$folder" = "babel-standalone" ] && [ "$version" != "6.26.0" ]; then
+        url="$JSDELIVR/npm/@babel/standalone@$version/babel.min.js"
     # --------------------------------------------------------------------------
     else
         if [ "$subfile" = "$jfile" ]; then

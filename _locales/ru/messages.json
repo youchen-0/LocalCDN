@@ -92,7 +92,7 @@
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "Пожертвования",
+        "message": "Пожертвовать",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "Скрыть кнопку пожертвования",
+        "message": "Скрыть кнопку «пожертвовать»",
         "description": "Hide donation button"
     },
     "betaLabel": {

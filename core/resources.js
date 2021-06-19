@@ -33,6 +33,10 @@ var resources = {
     'algoliaSearch': {
         'path': 'resources/algoliasearch/{version}/algoliasearch.min.jsm'
     },
+    // alpinejs
+    'alpinejs': {
+        'path': 'resources/alpinejs/{version}/alpine.jsm'
+    },
     // AnchorJS
     'anchorJS': {
         'path': 'resources/anchor-js/{version}/anchor.min.jsm'
@@ -361,6 +365,10 @@ var resources = {
     'fancyBoxJS': {
         'path': 'resources/fancybox/{version}/jquery.fancybox.min.jsm'
     },
+    // FastClick
+    'fastclick': {
+        'path': 'resources/fastclick/{version}/fastclick.min.jsm'
+    },
     // Feather
     'feather': {
         'path': 'resources/feather-icons/{version}/feather.min.jsm'
@@ -494,6 +502,10 @@ var resources = {
     // jQuery Tablesorter
     'jQueryTablesorter': {
         'path': 'resources/jquery.tablesorter/{version}/jquery.tablesorter.min.jsm'
+    },
+    // jQuery Tiny Pub/Sub
+    'jQueryTinyPubsub': {
+        'path': 'resources/jquery-tiny-pubsub/{version}/ba-tiny-pubsub.min.jsm'
     },
     // jQuery Tooltipster
     'jQueryTooltipster': {
