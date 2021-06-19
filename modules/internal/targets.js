@@ -217,7 +217,7 @@ targets.setLastVersion = function (type, version) {
         if (version !== 'latest' && helpers.compareVersion('1.9.4', version)) return '1.9.4';
         return '2.11.0';
     } else if (type.startsWith('/bulma/0.')) {
-        return '0.9.2';
+        return '0.9.3';
     } else if (type.startsWith('/bxslider/4.')) {
         return '4.2.15';
     } else if (type.startsWith('/Chart.js/2.')) {
