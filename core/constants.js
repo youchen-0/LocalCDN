@@ -285,6 +285,7 @@ const IgnoredHost = {
 const MathJaxFiles = {
     'config/TeX-AMS_HTML-full.js': true,
     'config/TeX-MML-AM_CHTML.js': true,
+    'config/TeX-AMS-MML_HTMLorMML.js': true,
     'extensions/TeX/begingroup.js': true,
     'extensions/TeX/mhchem3/mhchem.js': true,
     'extensions/MathMenu.js': true,
