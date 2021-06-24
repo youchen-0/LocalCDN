@@ -1608,8 +1608,8 @@ https://cdn.jsdelivr.net/npm/plyr@3.6.8/dist/plyr.css
 https://cdn.jsdelivr.net/npm/plyr@3.6.8/dist/plyr.min.js
 https://cdn.jsdelivr.net/npm/raven-js@3.27.2/dist/raven.min.js
 https://cdn.jsdelivr.net/npm/react-lifecycles-compat@3.0.4/react-lifecycles-compat.min.js
-https://cdn.jsdelivr.net/npm/swiper@6.7.0/swiper-bundle.min.css
-https://cdn.jsdelivr.net/npm/swiper@6.7.0/swiper-bundle.min.js
+https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper-bundle.min.css
+https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper-bundle.min.js
 https://cdn.jsdelivr.net/npm/urlize.js/urlize.js
 https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js
 https://cdn.jsdelivr.net/npm/videojs-seek-buttons@1.6.0/dist/videojs-seek-buttons.css
