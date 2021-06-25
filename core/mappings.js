@@ -432,6 +432,7 @@ mappings.cdn = {
             'vue/{version}/vue.min.js': resources.vueJs,
             'vue-i18n/{version}/vue-i18n.': resources.vueI18N,
             'vue-resource/{version}/vue-resource.': resources.vueResource,
+            'vuex/{version}/vuex.min.': resources.vuex,
             'waypoints/{version}/noframework.waypoints.': resources.jQueryWaypoints,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
             'waypoints/{version}/waypoints.debug.': resources.jQueryWaypoints,

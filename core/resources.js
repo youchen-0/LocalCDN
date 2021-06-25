@@ -923,6 +923,10 @@ var resources = {
     'vueResource': {
         'path': 'resources/vue-resource/{version}/vue-resource.min.jsm'
     },
+    // vuex
+    'vuex': {
+        'path': 'resources/vuex/{version}/vuex.min.jsm'
+    },
     // Waypoints (bundle) [Deprecated]
     'jQueryWaypoints': {
         'path': 'resources/waypoints/{version}/'

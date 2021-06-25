@@ -613,6 +613,10 @@ targets.setLastVersion = function (type, version) {
         return '9.1.6';
     } else if (type.startsWith('/vue-resource/1.')) {
         return '1.5.3';
+    } else if (type.startsWith('/vuex/3.')) {
+        return '3.6.2';
+    } else if (type.startsWith('/vuex/4.')) {
+        return '4.0.2';
     } else if (type.startsWith('/waypoints/4.')) {
         return '4.0.1';
     } else if (type.startsWith('/webfont')) {
@@ -637,6 +641,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'vuex.min.jsm': 'vuex',
     'alpine.jsm': 'alpinejs',
     'ba-tiny-pubsub.min.jsm': 'jQuery Tiny Pub/Sub',
     'fastclick.min.jsm': 'FastClick',
