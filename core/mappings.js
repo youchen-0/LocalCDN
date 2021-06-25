@@ -299,6 +299,7 @@ mappings.cdn = {
             'jets/{version}/jets.': resources.jetsJS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
+            'jquery-ajax-unobtrusive/{version}/jquery.unobtrusive-ajax.': resources.jqueryAjaxUnobtrusive,
             'jquery.devbridge-autocomplete/{version}/jquery.autocomplete.min.js': resources.jQueryAjaxAutoComplete,
             'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
             'jquery-csv/{version}/jquery.csv.min.js': resources.jQueryCSV,

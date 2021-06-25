@@ -456,6 +456,10 @@ var resources = {
     'jQueryBlockUI': {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm'
     },
+    // jquery-ajax-unobtrusive
+    'jqueryAjaxUnobtrusive': {
+        'path': 'resources/jquery-ajax-unobtrusive/{version}/jquery.unobtrusive-ajax.min.jsm'
+    },
     // jquery.cookie [Deprecated]
     'jqueryCookie': {
         'path': 'resources/jquery-cookie/{version}/jquery.cookie.min.jsm'
