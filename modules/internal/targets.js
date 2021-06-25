@@ -650,7 +650,7 @@ const ListOfFiles = {
     'simplebar.min.css': 'simplebar (CSS)',
     'simplebar.min.jsm': 'simplebar (JS)',
     'sticky.min.jsm': 'sticky-js',
-    'jquery-ajax-unobtrusive.min.jsm': 'jQuery Unobtrusive Ajax',
+    'jquery.unobtrusive-ajax.min.jsm': 'jQuery Unobtrusive Ajax',
     'vuex.min.jsm': 'vuex',
     'alpine.jsm': 'alpinejs',
     'ba-tiny-pubsub.min.jsm': 'jQuery Tiny Pub/Sub',
