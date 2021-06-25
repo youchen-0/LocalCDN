@@ -1492,6 +1492,8 @@ https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1//themes/github/assets/f
 https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1//themes/material/assets/fonts/icons.woff2
 https://cdnjs.cloudflare.com/ajax/libs/showdown/0.5.1/showdown.min.js
 https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js
+https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.4/simplebar.min.css
+https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.4/simplebar.min.js
 https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css
 https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js
 https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css

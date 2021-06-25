@@ -30,7 +30,7 @@ optionsInfo._renderCdnFrameworkSection = function () {
     let unsupportedFrameworks, summarizedFrameworks, btnCDNs, btnFrameworks;
 
     unsupportedFrameworks = 0;
-    summarizedFrameworks = 12;
+    summarizedFrameworks = 13;
     optionsInfo._listOfFrameworks = {};
 
     btnCDNs = document.getElementById('cdn');

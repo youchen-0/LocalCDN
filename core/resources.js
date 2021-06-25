@@ -819,6 +819,13 @@ var resources = {
     'showdown': {
         'path': 'resources/showdown/{version}/showdown.min.jsm'
     },
+    // simplebar
+    'simplebarJS': {
+        'path': 'resources/simplebar/{version}/simplebar.min.jsm'
+    },
+    'simplebarCSS': {
+        'path': 'resources/simplebar/{version}/simplebar.min.css'
+    },
     // simplemde [Deprecated]
     'simplemdeJS': {
         'path': 'resources/simplemde/{version}/simplemde.min.jsm'

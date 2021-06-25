@@ -533,6 +533,8 @@ targets.setLastVersion = function (type, version) {
         return '1.9.1';
     } else if (type.startsWith('/showdown/0.')) {
         return '0.5.1';
+    } else if (type.startsWith('/simplebar/')) {
+        return '5.3.4';
     } else if (type.startsWith('/simplemde/')) {
         return '1.11.2';
     } else if (type.startsWith('/slick-carousel/1.')) {
@@ -645,6 +647,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'simplebar.min.css': 'simplebar (CSS)',
+    'simplebar.min.jsm': 'simplebar (JS)',
     'sticky.min.jsm': 'sticky-js',
     'jquery-ajax-unobtrusive.min.jsm': 'jQuery Unobtrusive Ajax',
     'vuex.min.jsm': 'vuex',
