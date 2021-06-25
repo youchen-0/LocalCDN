@@ -409,6 +409,7 @@ mappings.cdn = {
             'slick-lightbox/{version}/slick-lightbox.css': resources.slickLightboxCSS,
             'slider-pro/{version}/js/jquery.sliderPro.': resources.sliderProJS,
             'spin.js/{version}/spin.min.js': resources.spinJS,
+            'sticky-js/{version}/sticky.min.js': resources.stickyJS,
             'stickyfill/{version}/stickyfill.': resources.stickyfill,
             'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,

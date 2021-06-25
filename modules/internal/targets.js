@@ -559,6 +559,8 @@ targets.setLastVersion = function (type, version) {
         return '1.1.4';
     } else if (type.startsWith('/stickyfill/2.')) {
         return '2.1.0';
+    } else if (type.startsWith('/sticky-js/')) {
+        return '1.3.0';
     } else if (type.startsWith('/store.js/2.')) {
         return '2.0.12';
     } else if (type.startsWith('/swfobject/2.')) {
@@ -643,6 +645,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'sticky.min.jsm': 'sticky-js',
     'jquery-ajax-unobtrusive.min.jsm': 'jQuery Unobtrusive Ajax',
     'vuex.min.jsm': 'vuex',
     'alpine.jsm': 'alpinejs',

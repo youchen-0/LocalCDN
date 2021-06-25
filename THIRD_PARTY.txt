@@ -1509,6 +1509,7 @@ https://cdnjs.cloudflare.com/ajax/libs/spin.js/3.1.0/spin.min.js
 https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.0/spin.min.js
 https://cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js
 https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js
+https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js
 https://cdnjs.cloudflare.com/ajax/libs/store.js/2.0.12/store.legacy.min.js
 https://cdnjs.cloudflare.com/ajax/libs/swfobject/2.2/swfobject.js
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css

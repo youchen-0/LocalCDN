@@ -859,6 +859,10 @@ var resources = {
     'spinJS': {
         'path': 'resources/spin.js/{version}/spin.min.jsm'
     },
+    // sticky-js
+    'stickyJS': {
+        'path': 'resources/sticky-js/{version}/sticky.min.jsm'
+    },
     // stickyfill [Deprecated]
     'stickyfill': {
         'path': 'resources/stickyfill/{version}/stickyfill.min.jsm'
