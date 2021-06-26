@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "",
+        "message": "Bields ye fae trackin throu CDNs (Content Delivery Netwirks) by redirectin tae local resoorces.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
