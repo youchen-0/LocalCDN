@@ -468,7 +468,7 @@
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Il ne s'agit pas d'une limitation de LocalCDN, mais du manque de support API des navigateurs basés sur Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     }
 }
