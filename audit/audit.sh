@@ -579,6 +579,8 @@ function create_url() {
     elif [ "$folder" = "twitter-bootstrap" ] && [ "$version" = "2.3.2" ]; then
         if [[ "$subfile" =~ \.css$ ]]; then
             url="$NETDNA_BOOTSTRAPCDN/$folder/$version/css/bootstrap-combined.no-icons.min.css"
+        else
+            url="$NETDNA_BOOTSTRAPCDN/$folder/$version/js/bootstrap.min.js"
         fi
     elif [ "$folder" = "webcomponentsjs" ]; then
         url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"
