@@ -288,187 +288,187 @@
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "А как насчет статистики? На какие-то сервера что-нибудь переносится?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Что будет синхронизироваться, если я выберу «синхронизировать» в качестве типа хранилища?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Совместимость с браузером",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN - это расширение веб-браузера, которое имитирует сети доставки контента, чтобы улучшить вашу конфиденциальность в Интернете. Он перехватывает трафик, находит поддерживаемые фреймворки / библиотеки локально и внедряет их на веб-сайт. Не стесняйтесь использовать следующую утилиту для тестирования, чтобы узнать, правильно ли вы защищены. Для получения дополнительной информации прочтите руководство или наши вики-страницы.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Утилита для тестирования",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Руководство",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Вики-страницы",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "В большинстве случаев LocalCDN может легко заменить встроенные фреймворки и улучшить конфиденциальность. В некоторых случаях веб-сайт может попытаться предотвратить это, установив определенные параметры в исходном коде HTML. LocalCDN считывает исходный код HTML перед его отображением в браузере и удаляет эту часть (красный).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "Фильтр HTML удаляет красные символы из этого примера:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Результат выглядит так:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "Почему необходимо удалять атрибуты перекрестного происхождения и целостности?",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "Атрибут crossorigin предотвращает замену, поскольку пункт назначения не совпадает с запрошенным.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "Чтобы сэкономить место на диске и предоставить больше фреймворков, LocalCDN обновляет фреймворк. Тег целостности - это хеш-значение файла. Если проверка не удалась, браузер не будет включать фреймворк. Проверка целостности завершится неудачно, потому что хеш-значения, например, jQuery 1.10.1 и jQuery 1.12.4 разные.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "К сожалению, иногда случается, что специальные символы затем отображаются некорректно. В этом случае вы можете снова деактивировать настройку, чтобы умляуты отображались правильно.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "Если вы хотите автоматически перенаправить все поддерживаемые соединения CDN на LocalCDN, вы можете добавить эти правила в свой блокировщик рекламы, чтобы разрешить эти перенаправления. Если вы не хотите добавлять эти правила, необходимо разрешить каждое подключение к CDN отдельно для каждого веб-сайта.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Только uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "Эти правила актуальны только в «среднем» или «жестком» режиме, поскольку он блокирует все сторонние ресурсы. Они не нужны в режимах »по умолчанию«, »простой« или »очень легкий«. Для получения дополнительной информации посетите вики uBlock Origin.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "изображение",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Режим",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "Правила полезны",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "По умолчанию / Легко",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Средний",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "Жесткий",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "Есть две возможные причины: требуется либо фреймворк / библиотека, которые LocalCDN (пока) не выполняет, либо СОП. SOP (политика одинакового происхождения) - это механизм безопасности, который определяет, какие данные разрешено загружать браузеру. Это помогает изолировать вредоносные документы и тем самым сократить возможные векторы атак. Эта политика запрещает браузеру загружать внешние фреймворки LocalCDN. К сожалению, на данный момент для этого нет решения.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "LocalCDN может заменить »Иконки материалов Google«. Чтобы поймать соединение, ваш блокировщик рекламы (например, uBlock Origin, uMatrix или AdGuard) должен разрешить запрос. LocalCDN прослушивает эти запросы, и если запрос содержит »Значки материалов Google«, ресурс будет заменен. Если вы уберете отметку с опции «Блокировать запросы на отсутствующий контент», несуществующие ресурсы будут разрешены, и будут загружены »Google Fonts«, потому что »Значки материалов Google« и »Шрифты Google« используют один и тот же домен. Если вы этого не хотите, вы можете заблокировать »Google Fonts« на LocalCDN.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "Не паникуйте, ничего не будет транслироваться. Это было бы против всех моих принципов. Статистика (формат JSON) содержит следующую информацию: дату, CDN + счетчик и фреймворк + счетчик. Это все. Вот пример:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "Статистика не содержит информации о браузере, операционной системе, запрашивающем веб-сайте, IP-адресах или какой-либо другой информации. Только дата, CDN + счетчик и фреймворк + счетчик. Он показывает вам, какие фреймворки заменяются LocalCDN, как часто и какие CDN запрашивались.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Откуда мне знать, что это правда?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "Хранилище расширений можно просмотреть непосредственно в браузере Firefox. Откройте URL-адрес »about: debugging«, переключитесь на »Хранилище« и выберите »Хранилище расширений«. Под ключом «internalStatisticsData» вы найдете собранные данные. Просто скопируйте его и поместите в JSON PrettyPrinter, чтобы сделать его более читабельным. Обратите внимание, что вы должны удалить первую и последнюю кавычки и ключ к ней. Вы должны ясно увидеть это на этом видео.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "Что будет синхронизироваться, если я выберу «синхронизировать» в качестве типа хранилища?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "Синхронизация будет работать только в том случае, если вы вошли в систему с учетной записью Firefox на устройстве и разрешили синхронизацию надстроек в настройках. Также будет работать отдельный сервер синхронизации под вашим контролем. Это синхронизирует большинство настроек LocalCDN на всех устройствах.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "Если у вас нет учетной записи синхронизации, ничего не будет синхронизироваться. В этом случае не имеет значения, какой тип хранилища вы выбрали.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Вещи, которые никогда не синхронизируются:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Количество инъекций",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "да",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Нет",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Данные",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Настройки, которые будут синхронизированы:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "По умолчанию, светлый, синий / серый",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Дополнительная информация о Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Совместимость с браузером",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Заменять",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Заменить другие ресурсы",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Обновите все ресурсы",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "Все браузеры на основе Chromium",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Это не ограничение LocalCDN, а отсутствие поддержки API браузеров на основе Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     }
 }
