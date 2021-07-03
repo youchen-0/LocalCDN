@@ -519,6 +519,10 @@ var resources = {
     'jQueryTooltipster': {
         'path': 'resources/tooltipster/{version}/js/jquery.tooltipster.min.jsm'
     },
+    // Unobtrusive scripting adapter for jQuery
+    'jqueryUJS': {
+        'path': 'resources/jquery-ujs/{version}/rails.min.jsm'
+    },
     // jQuery UI
     'jQueryUI': {
         'path': 'resources/jqueryui/{version}/jquery-ui.min.jsm'

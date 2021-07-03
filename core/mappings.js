@@ -322,6 +322,7 @@ mappings.cdn = {
             'jquery.scrollbar/{version}/jquery.scrollbar.js': resources.jQueryScrollbar,
             'jquery-tiny-pubsub/{version}/ba-tiny-pubsub.': resources.jQueryTinyPubsub,
             'jquery-validation-unobtrusive/{version}/jquery.validate.unobtrusive.': resources.jQueryValidationUnobtrusive,
+            'jquery-ujs/{version}/rails.': resources.jqueryUJS,
             'jScrollPane/{version}/script/jquery.jscrollpane.': resources.jScrollPane,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'knockout/{version}/knockout': resources.knockout,

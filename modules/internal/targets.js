@@ -388,6 +388,8 @@ targets.setLastVersion = function (type, version) {
         return '2.31.3';
     } else if (type.startsWith('/jquery-tiny-pubsub/0.')) {
         return '0.7.0';
+    } else if (type.startsWith('/jquery-ujs/1.')) {
+        return '1.2.3';
     } else if (type.startsWith('/jquery-modal/0.')) {
         return '0.9.2';
     } else if (type.startsWith('/jasny-bootstrap/3.')) {
@@ -649,6 +651,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'rails.min.jsm': 'jquery-ujs',
     'algolia-min.css': 'InstantSearch.css',
     'simplebar.min.css': 'simplebar (CSS)',
     'simplebar.min.jsm': 'simplebar (JS)',
