@@ -596,6 +596,7 @@ mappings.cdn = {
         },
         '/': {
             'algoliasearch/3/algoliasearch.': resources.algoliaSearch,
+            'algoliasearch/{version}/algoliasearchLite.min.js': resources.algoliaSearch,
             'angularjs/{version}/angular.': resources.angular,
             'autocomplete.js/0/autocomplete.': resources.autocompleteJS,
             'backbonejs/{version}/backbone.': resources.backbone,
