@@ -681,8 +681,6 @@ function create_url() {
         url="$JSDELIVR/npm/$folder@$version/themes/algolia-min.css"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
-    elif [ "$folder" = "hls.js" ]; then
-        url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
         url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
     elif [ "$folder" = "autocomplete.js" ] && [ "$version" != "0.38.0" ]; then
