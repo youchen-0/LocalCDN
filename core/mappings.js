@@ -528,6 +528,7 @@ mappings.cdn = {
             'history@{version}/umd/history.min.js': resources.history,
             'hls.js@{version}': resources.hlsJS,
             'instantsearch.js@{version}/dist/instantsearch.production.': resources.InstantSearchJS,
+            'instantsearch.js@{version}': resources.InstantSearchJS,
             'instantsearch.css@{version}': resources.InstantSearchCSS,
             'jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery@{version}/dist/jquery.min.': resources.jQuery,
