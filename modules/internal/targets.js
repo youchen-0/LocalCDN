@@ -318,6 +318,8 @@ targets.setLastVersion = function (type, version) {
         return '1.0.7';
     } else if (type.startsWith('/hogan.js/')) {
         return '3.0.2';
+    } else if (type.startsWith('/instantsearch.css/7.')) {
+        return '7.4.5';
     } else if (type.startsWith('/instantsearch.js/3.')) {
         return '3.7.0';
     } else if (type.startsWith('/instantsearch.js/4.')) {
@@ -647,6 +649,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'algolia-min.css': 'InstantSearch.css',
     'simplebar.min.css': 'simplebar (CSS)',
     'simplebar.min.jsm': 'simplebar (JS)',
     'sticky.min.jsm': 'sticky-js',

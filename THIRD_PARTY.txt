@@ -1604,6 +1604,7 @@ https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.23/dist/sentry.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@7.0.23/dist/styles.css
 https://cdn.jsdelivr.net/npm/hls.js@0.14.17/dist/hls.min.js
 https://cdn.jsdelivr.net/npm/hls.js@1.0.7/dist/hls.min.js
+https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/algolia-min.css
 https://cdn.jsdelivr.net/npm/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
 https://cdn.jsdelivr.net/npm/ngx-bootstrap@6.2.0/datepicker/bs-datepicker.css
 https://cdn.jsdelivr.net/npm/nouislider@15.2.0/dist/nouislider.min.js

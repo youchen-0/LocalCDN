@@ -677,6 +677,8 @@ function create_url() {
         url="$CLOUDFLARE/$folder/$version/cdn.min.js"
     elif [ "$folder" = "vuex" ] && [ "$version" != "3.6.2" ];then
         url="$CLOUDFLARE/$folder/$version/vuex.cjs.min.js"
+    elif [ "$folder" = "instantsearch.css" ]; then
+        url="$JSDELIVR/npm/$folder@$version/themes/algolia-min.css"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "hls.js" ]; then

@@ -425,6 +425,10 @@ var resources = {
     'InstantSearchJS': {
         'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm'
     },
+    // InstantSearch.css
+    'InstantSearchCSS': {
+        'path': 'resources/instantsearch.css/{version}/algolia-min.css'
+    },
     // iScroll [Deprecated]
     'iScroll': {
         'path': 'resources/iScroll/{version}/iscroll.min.jsm'
