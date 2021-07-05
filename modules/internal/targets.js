@@ -653,6 +653,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'script.min.jsm': 'script.js',
     'rails.min.jsm': 'jquery-ujs',
     'algolia-min.css': 'InstantSearch.css',
     'simplebar.min.css': 'simplebar (CSS)',
