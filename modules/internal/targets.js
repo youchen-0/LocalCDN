@@ -525,6 +525,8 @@ targets.setLastVersion = function (type, version) {
         return '4.1.0';
     } else if (type.startsWith('/rickshaw/1.')) {
         return '1.7.1';
+    } else if (type.startsWith('/script.js/2.')) {
+        return '2.5.9';
     } else if (type.startsWith('/scriptaculous/1.')) {
         return '1.9.0';
     } else if (type.startsWith('/select2/3.')) {

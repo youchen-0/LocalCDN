@@ -394,6 +394,7 @@ mappings.cdn = {
             'react-dom/{version}/umd/react-dom.production.min.js': resources.reactDOM,
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
+            'script.js/{version}/script.': resources.scriptJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'select2/{version}/': resources.select2,
             'semantic-ui/{version}/': resources.semanticUi,

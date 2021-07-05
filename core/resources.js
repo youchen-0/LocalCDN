@@ -811,6 +811,10 @@ var resources = {
     'cfRocketLoader': {
         'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm'
     },
+    // script.js [Deprecated]
+    'scriptJS': {
+        'path': 'resources/script.js/{version}/script.min.jsm'
+    },
     // Scriptaculous [Deprecated]
     'scriptaculous': {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm'
