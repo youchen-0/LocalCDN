@@ -134,6 +134,7 @@ https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.8.2/angular-messages.m
 https://cdnjs.cloudflare.com/ajax/libs/angular-parse-ext/1.8.2/angular-parse-ext.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.8.2/angular-resource.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.10/angular-sanitize.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.8.2/angular-touch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.4/angular-translate-handler-log/angular-translate-handler-log.min.js
