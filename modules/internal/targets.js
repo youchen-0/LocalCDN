@@ -225,6 +225,8 @@ targets.setLastVersion = function (type, version) {
         return '2.9.4';
     } else if (type.startsWith('/Chart.js/3.')) {
         return '3.4.1';
+    } else if (type.startsWith('/clappr/0.') || type.startsWith('/clappr/latest/')) {
+        return '0.4.5';
     } else if (type.startsWith('/chosen/1.')) {
         return '1.8.7';
     } else if (type.startsWith('/clipboard.js/1.')) {
@@ -654,6 +656,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'clappr.min.jsm': 'clappr',
     'script.min.jsm': 'script.js',
     'rails.min.jsm': 'jquery-ujs',
     'algolia-min.css': 'InstantSearch.css',

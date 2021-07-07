@@ -286,6 +286,10 @@ var resources = {
     'chosen': {
         'path': 'resources/chosen/{version}/chosen.jquery.min.jsm'
     },
+    // clappr
+    'clappr': {
+        'path': 'resources/clappr/{version}/clappr.min.jsm'
+    },
     // clipboard.js
     'clipboardJS': {
         'path': 'resources/clipboard.js/{version}/clipboard.min.jsm'
