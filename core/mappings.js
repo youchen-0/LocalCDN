@@ -438,6 +438,7 @@ mappings.cdn = {
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
+            'video.js/{version}/video.js': resources.videoJS,
             'vue/{version}/vue.min.js': resources.vueJs,
             'vue-i18n/{version}/vue-i18n.': resources.vueI18N,
             'vue-resource/{version}/vue-resource.': resources.vueResource,
