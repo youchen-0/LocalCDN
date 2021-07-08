@@ -1205,9 +1205,9 @@ https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/js/lightcase.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/fonts/lg.woff
 https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js
-https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.7/css/lightgallery.min.css
-https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.7/fonts/lg.woff
-https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.7/lightgallery.min.js
+https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/css/lightgallery.min.css
+https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/fonts/lg.woff
+https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/lightgallery.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js
 https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js
