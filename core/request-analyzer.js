@@ -221,11 +221,6 @@ requestAnalyzer._applyManipulateDOMDomains = function () {
         requestAnalyzer.domainsManipulateDOM = items.domainsManipulateDOM || {};
     });
 };
-requestAnalyzer._applyAllowedDomainsGoogleFonts = function () {
-    storageManager.type.get(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS, function (items) {
-        requestAnalyzer.domainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
-    });
-};
 
 
 /**
@@ -238,9 +233,6 @@ requestAnalyzer._applyAllowlistedDomains();
 requestAnalyzer.domainsManipulateDOM = {};
 requestAnalyzer._applyManipulateDOMDomains();
 
-requestAnalyzer.domainsGoogleFonts = {};
-requestAnalyzer._applyAllowedDomainsGoogleFonts();
-
 
 /**
  * Event Handlers
@@ -248,4 +240,3 @@ requestAnalyzer._applyAllowedDomainsGoogleFonts();
 
 chrome.storage.onChanged.addListener(requestAnalyzer._applyAllowlistedDomains);
 chrome.storage.onChanged.addListener(requestAnalyzer._applyManipulateDOMDomains);
-chrome.storage.onChanged.addListener(requestAnalyzer._applyAllowedDomainsGoogleFonts);

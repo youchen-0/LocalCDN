@@ -48,11 +48,11 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
         let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
         // Check if the website is allowed to load Google Fonts
-        if (interceptor.blockGoogleFonts === true && !requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
+        if (interceptor.blockGoogleFonts === true && !interceptor.allowedDomainsGoogleFonts[initiatorDomain]) {
             return {
                 'cancel': true
             };
-        } else if (interceptor.blockGoogleFonts === false || requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
+        } else if (interceptor.blockGoogleFonts === false || interceptor.allowedDomainsGoogleFonts[initiatorDomain]) {
             return {
                 'cancel': false
             };
