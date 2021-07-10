@@ -55,6 +55,7 @@ mappings.cdn = {
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
+            'jquerymobile/{version}/jquery.mobile.': resources.jQueryMobile,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'jqueryui/{version}/themes/base/minified/jquery-ui.min.css': resources.jQueryUiThemes,
