@@ -140,31 +140,6 @@ interceptor._handleStorageChanged = function (changes) {
 
 
 /**
- * Initializations
- */
-
-interceptor.xhrTestDomain = Address.LOCALCDN;
-interceptor.blockMissing = false;
-interceptor.blockGoogleFonts = true;
-interceptor.allowedDomainsGoogleFonts = {};
-
-interceptor.relatedSettings = [];
-
-interceptor.relatedSettings.push(Setting.AMOUNT_INJECTED);
-interceptor.relatedSettings.push(Setting.XHR_TEST_DOMAIN);
-interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
-interceptor.relatedSettings.push(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS);
-
-storageManager.type.get(interceptor.relatedSettings, function (items) {
-    storageManager.amountInjected = items.amountInjected || 0;
-    interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
-    interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
-    interceptor.blockMissing = items.blockMissing === undefined ? false : items.blockMissing;
-    interceptor.blockGoogleFonts = items.blockGoogleFonts === undefined ? true : items.blockGoogleFonts;
-});
-
-
-/**
  * Event Handlers
  */
 
