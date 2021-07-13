@@ -97,7 +97,10 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                             if (EncodingTypes[charsetMatch[1].toLowerCase()] !== undefined) {
                                 charset = charsetMatch[1];
                             } else {
-                                charset = 'UTF-8';
+                                // If charset is unclear, then use ASCII by default.
+                                // Other charsets are mostly tagged in the header or HTML source code.
+                                // https://codeberg.org/nobody/LocalCDN/issues/567
+                                charset = 'ASCII';
                             }
                         }
                         decoder = new TextDecoder(charset);
