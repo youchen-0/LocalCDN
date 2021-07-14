@@ -77,6 +77,7 @@ main._initializeSettings = function () {
         interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
         interceptor.blockMissing = items.blockMissing === undefined ? false : items.blockMissing;
         interceptor.blockGoogleFonts = items.blockGoogleFonts === undefined ? true : items.blockGoogleFonts;
+        requestAnalyzer.allowlistedDomains = items.allowlistedDomains || {};
 
         storageManager.type.set(items);
     });
