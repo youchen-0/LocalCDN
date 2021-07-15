@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-05-25';
+mappings.lastMappingUpdate = '2021-07-14';
 
 mappings.cdn = {
 
@@ -1060,6 +1060,12 @@ mappings.cdn = {
     'mathjax.rstudio.com': {
         '/': {
             '{version}': resources.mathJax,
+        }
+    },
+    // MathJax CDN
+    'cdn.mathjax.org': {
+        '/': {
+            'mathjax/{version}/': resources.mathJax,
         }
     }
 };
