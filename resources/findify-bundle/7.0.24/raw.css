@@ -346,7 +346,6 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
-    min-width: 200px;
     padding-bottom: 50px;
 }
 
@@ -751,6 +750,9 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
         flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .findify-components-search--desktop-facets__horizontal .findify-components-search--desktop-facets__header {
@@ -1034,6 +1036,12 @@
 .findify-components-search--desktop-actions__show-facets:hover *,
 .findify-components-search--desktop-actions__show-facets:focus * {
     color: var(--color-grey-4);
+}
+
+/*  imported from styles.css  */
+
+p.findify-layouts--recommendation--grid__title {
+    margin-bottom: 30px;
 }
 
 /*  imported from styles.css  */
@@ -1648,11 +1656,15 @@
 
 /*  imported from styles.css  */
 
+p.findify-layouts--recommendation--slider__title {
+    margin-bottom: 30px;
+}
+
 /*  imported from styles.css  */
 
 /* Swiper */
 
-.swiper-container {
+.findify-components--swiper .swiper-container {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -1663,14 +1675,14 @@
     z-index: 1;
 }
 
-.swiper-container-vertical > .swiper-wrapper {
+.findify-components--swiper .swiper-container-vertical > .swiper-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
 }
 
-.swiper-wrapper {
+.findify-components--swiper .swiper-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1689,18 +1701,19 @@
             box-sizing: content-box;
 }
 
-.swiper-container-android .swiper-slide, .swiper-wrapper {
+.findify-components--swiper .swiper-container-android .swiper-slide,
+.findify-components--swiper .swiper-wrapper {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
 }
 
-.swiper-container-free-mode > .swiper-wrapper {
+.findify-components--swiper .swiper-container-free-mode > .swiper-wrapper {
     -webkit-transition-timing-function: ease-out;
             transition-timing-function: ease-out;
     margin: 0 auto;
 }
 
-.swiper-slide {
+.findify-components--swiper .swiper-slide {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 100%;
@@ -1712,15 +1725,15 @@
             transition-property: transform, -webkit-transform;
 }
 
-.swiper-slide-invisible-blank {
+.findify-components--swiper .swiper-slide-invisible-blank {
     visibility: hidden;
 }
 
-.swiper-button-disabled {
+.findify-components--swiper .swiper-button-disabled {
     display: none !important;
 }
 
-.findify-recommendation {
+.findify-components--swiper .findify-recommendation {
     padding: 0 30px;
 }
 
