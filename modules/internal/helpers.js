@@ -136,6 +136,10 @@ helpers.getWildcard = function (initiatorDomain) {
 helpers.checkAllowlisted = function (domain) {
     let domainWithoutPrefix, wildcard, list;
 
+    if (domain === null) {
+        return false;
+    }
+
     if (domain.startsWith(Address.WWW_PREFIX)) {
         domainWithoutPrefix = domain.slice(Address.WWW_PREFIX.length);
     }
