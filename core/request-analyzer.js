@@ -180,7 +180,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
                 if (bundle === 'MathJax (Bundle)' && filename !== 'MathJax.js') {
                     filename = channelPath.replace(Resource.MATHJAX, '');
                     if (!MathJaxFiles[filename]) {
-                        console.warn(`[ LocalCDN ] Missing resource: ${targetPath}`);
+                        console.warn(`[ LocalCDN ] Missing resource: ${channelHost + channelPath}`);
                         log.append(initiator, channelHost + channelPath, '-', true);
                         break;
                     }
