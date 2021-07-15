@@ -455,7 +455,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/mathjax/2.') || type.startsWith('/mathjax/latest')) {
         return '2.7.5';
     } else if (type.startsWith('/mdb-ui-kit/3.')) {
-        return '3.8.1';
+        return '3.9.0';
     } else if (type.startsWith('/mobile/1.')) {
         return '1.4.5';
     } else if (type.startsWith('/Modaal/0.')) {
