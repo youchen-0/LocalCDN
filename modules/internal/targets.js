@@ -187,7 +187,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bodymovin/4.')) {
         return '4.13.0';
     } else if (type.startsWith('/bodymovin/5.')) {
-        return '5.7.11';
+        return '5.7.12';
     } else if (type.startsWith('/bootbox.js/4.')) {
         return '4.4.0';
     } else if (type.startsWith('/bootbox.js/5.')) {
