@@ -268,7 +268,7 @@
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introduksi",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -308,7 +308,7 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Tutorial",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
