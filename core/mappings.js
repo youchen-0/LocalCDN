@@ -362,6 +362,7 @@ mappings.cdn = {
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
+            'moment.js/{version}/moment-with-locales.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,
             'noUiSlider/{version}/nouislider.js': resources.noUiSlider,
             'noUiSlider/{version}/nouislider.min.js': resources.noUiSlider,
