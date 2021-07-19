@@ -286,7 +286,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/feather-icons/4.')) {
         return '4.28.0';
     } else if (type.startsWith('/flv.js/')) {
-        return '1.5.0';
+        return '1.6.0';
     } else if (type.startsWith('/font-awesome/3.')) {
         return '3.2.1';
     } else if (type.startsWith('/font-awesome/4.')) {
