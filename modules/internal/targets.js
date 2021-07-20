@@ -198,6 +198,8 @@ targets.setLastVersion = function (type, version) {
         return '3.1';
     } else if (type.startsWith('/bootstrap-datepicker/1.')) {
         return '1.9.0';
+    } else if (type.startsWith('/bootstrap-icons/1.')) {
+        return '1.5.0';
     } else if (type.startsWith('/bootstrap-multiselect/0.')) {
         return '0.9.16';
     } else if (type.startsWith('/bootstrap-slider/10.')) {
@@ -656,6 +658,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'bootstrap-icons.min.css': 'Bootstrap Icons',
     'clappr.min.jsm': 'clappr',
     'script.min.jsm': 'script.js',
     'rails.min.jsm': 'jquery-ujs',

@@ -211,6 +211,10 @@ var resources = {
     'bootstrapDatepickerBundle': {
         'path': 'resources/bootstrap-datepicker/{version}/'
     },
+    // Bootstrap Icons
+    'bootstrapIcons': {
+        'path': 'resources/bootstrap-icons/{version}/font/bootstrap-icons.min.css'
+    },
     // bootstrap-multiselect
     'bootstrapMultiselectJS': {
         'path': 'resources/bootstrap-multiselect/{version}/bootstrap-multiselect.min.jsm'

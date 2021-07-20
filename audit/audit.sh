@@ -679,6 +679,8 @@ function create_url() {
         url="$CLOUDFLARE/$folder/$version/vuex.cjs.min.js"
     elif [ "$folder" = "instantsearch.css" ]; then
         url="$JSDELIVR/npm/$folder@$version/themes/algolia-min.css"
+    elif [ "$folder" = "bootstrap-icons" ] && [ "$subfile" = "bootstrap-icons.woff" ]; then
+        url="$CLOUDFLARE/$folder/$version/font/fonts/$subfile"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
