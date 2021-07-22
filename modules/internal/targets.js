@@ -470,6 +470,8 @@ targets.setLastVersion = function (type, version) {
         return '1.6.0';
     } else if (type.startsWith('/ngx-bootstrap/6.')) {
         return '6.2.0';
+    } else if (type.startsWith('/ngx-bootstrap/7.')) {
+        return '7.0.0';
     } else if (type.startsWith('/noUiSlider/14.')) {
         return '14.7.0';
     } else if (type.startsWith('/noUiSlider/15.')) {
