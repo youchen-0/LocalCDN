@@ -48,11 +48,11 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
         let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
         // Check if the website is allowed to load Google Fonts
-        if (interceptor.blockGoogleFonts === true && !requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
+        if (interceptor.blockGoogleFonts === true && !interceptor.allowedDomainsGoogleFonts[initiatorDomain]) {
             return {
                 'cancel': true
             };
-        } else if (interceptor.blockGoogleFonts === false || requestAnalyzer.domainsGoogleFonts[initiatorDomain]) {
+        } else if (interceptor.blockGoogleFonts === false || interceptor.allowedDomainsGoogleFonts[initiatorDomain]) {
             return {
                 'cancel': false
             };
@@ -137,31 +137,6 @@ interceptor._handleStorageChanged = function (changes) {
         interceptor.allowedDomainsGoogleFonts = changes.allowedDomainsGoogleFonts.newValue;
     }
 };
-
-
-/**
- * Initializations
- */
-
-interceptor.xhrTestDomain = Address.LOCALCDN;
-interceptor.blockMissing = false;
-interceptor.blockGoogleFonts = true;
-interceptor.allowedDomainsGoogleFonts = {};
-
-interceptor.relatedSettings = [];
-
-interceptor.relatedSettings.push(Setting.AMOUNT_INJECTED);
-interceptor.relatedSettings.push(Setting.XHR_TEST_DOMAIN);
-interceptor.relatedSettings.push(Setting.BLOCK_MISSING);
-interceptor.relatedSettings.push(Setting.ALLOWED_DOMAINS_GOOGLE_FONTS);
-
-storageManager.type.get(interceptor.relatedSettings, function (items) {
-    storageManager.amountInjected = items.amountInjected || 0;
-    interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
-    interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
-    interceptor.blockMissing = items.blockMissing === undefined ? false : items.blockMissing;
-    interceptor.blockGoogleFonts = items.blockGoogleFonts === undefined ? true : items.blockGoogleFonts;
-});
 
 
 /**

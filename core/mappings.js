@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-05-25';
+mappings.lastMappingUpdate = '2021-07-14';
 
 mappings.cdn = {
 
@@ -55,6 +55,7 @@ mappings.cdn = {
             'ext-core/{version}/ext-core.': resources.extCore,
             'ext-core/{version}/ext-core-debug.': resources.extCore,
             'jquery/{version}/jquery.': resources.jQuery,
+            'jquerymobile/{version}/jquery.mobile.': resources.jQueryMobile,
             'jqueryui/{version}/jquery-ui.js': resources.jQueryUI,
             'jqueryui/{version}/jquery-ui.min.js': resources.jQueryUI,
             'jqueryui/{version}/themes/base/minified/jquery-ui.min.css': resources.jQueryUiThemes,
@@ -229,6 +230,8 @@ mappings.cdn = {
             'bootstrap-datepicker/{version}/locales/bootstrap-datepicker.zh-CN.': resources.bootstrapDatepickerBundle,
             'bootstrap-datepicker/{version}/locales/bootstrap-datepicker.zh-TW.': resources.bootstrapDatepickerBundle,
             'bootstrap-datepicker/{version}/css/datepicker.': resources.bootstrapDatepickerBundle,
+            'bootstrap-icons/{version}/font/bootstrap-icons.css': resources.bootstrapIcons,
+            'bootstrap-icons/{version}/font/bootstrap-icons.min.css': resources.bootstrapIcons,
             'bootstrap-multiselect/{version}/js/bootstrap-multiselect.': resources.bootstrapMultiselectJS,
             'bootstrap-select/{version}/css/bootstrap-select.': resources.bootstrapSelectCSS,
             'bootstrap-select/{version}/js/bootstrap-select.': resources.bootstrapSelectJS,
@@ -254,6 +257,7 @@ mappings.cdn = {
             'Chart.js/{version}/Chart.css': resources.chartJsCSS,
             'Chart.js/{version}/Chart.min.css': resources.chartJsCSS,
             'chosen/{version}/chosen.jquery.min.js': resources.chosen,
+            'clappr/{version}/clappr.': resources.clappr,
             'clipboard.js/{version}/clipboard.min.js': resources.clipboardJS,
             'cookieconsent/{version}/cookieconsent.min.js': resources.cookieconsent2JS,
             'cookieconsent/{version}/cookieconsent.js': resources.cookieconsent2JS,
@@ -299,6 +303,7 @@ mappings.cdn = {
             'jets/{version}/jets.': resources.jetsJS,
             'jquery/{version}/jquery.': resources.jQuery,
             'jquery/{version}/jquery.min.': resources.jQuery,
+            'jquery-ajax-unobtrusive/{version}/jquery.unobtrusive-ajax.': resources.jqueryAjaxUnobtrusive,
             'jquery.devbridge-autocomplete/{version}/jquery.autocomplete.min.js': resources.jQueryAjaxAutoComplete,
             'jquery.blockUI/{version}/jquery.blockUI.min.js': resources.jQueryBlockUI,
             'jquery-csv/{version}/jquery.csv.min.js': resources.jQueryCSV,
@@ -321,6 +326,7 @@ mappings.cdn = {
             'jquery.scrollbar/{version}/jquery.scrollbar.js': resources.jQueryScrollbar,
             'jquery-tiny-pubsub/{version}/ba-tiny-pubsub.': resources.jQueryTinyPubsub,
             'jquery-validation-unobtrusive/{version}/jquery.validate.unobtrusive.': resources.jQueryValidationUnobtrusive,
+            'jquery-ujs/{version}/rails.': resources.jqueryUJS,
             'jScrollPane/{version}/script/jquery.jscrollpane.': resources.jScrollPane,
             'js-cookie/{version}/js.cookie.min.js': resources.jscookie,
             'knockout/{version}/knockout': resources.knockout,
@@ -358,6 +364,7 @@ mappings.cdn = {
             'modernizr/{version}/modernizr.': resources.modernizr,
             'moment.js/{version}/moment.': resources.moment,
             'moment.js/{version}/moment.min.': resources.moment,
+            'moment.js/{version}/moment-with-locales.': resources.moment,
             'mootools/{version}/mootools-core': resources.mootools,
             'noUiSlider/{version}/nouislider.js': resources.noUiSlider,
             'noUiSlider/{version}/nouislider.min.js': resources.noUiSlider,
@@ -392,11 +399,16 @@ mappings.cdn = {
             'react-dom/{version}/umd/react-dom.production.min.js': resources.reactDOM,
             'rickshaw/{version}/rickshaw.min.css': resources.rickshawCSS,
             'rickshaw/{version}/rickshaw.min.js': resources.rickshawJS,
+            'script.js/{version}/script.': resources.scriptJS,
             'scriptaculous/{version}/scriptaculous.': resources.scriptaculous,
             'select2/{version}/': resources.select2,
             'semantic-ui/{version}/': resources.semanticUi,
             'showdown/{version}/showdown.': resources.showdown,
             'showdown/{version}/Showdown.': resources.showdown,
+            'simplebar/{version}/simplebar.min.css': resources.simplebarCSS,
+            'simplebar/{version}/simplebar.css': resources.simplebarCSS,
+            'simplebar/{version}/simplebar.min.js': resources.simplebarJS,
+            'simplebar/{version}/simplebar.js': resources.simplebarJS,
             'slick-carousel/{version}/slick.min.css': resources.slickCarouselCSS,
             'slick-carousel/{version}/slick.css': resources.slickCarouselCSS,
             'slick-carousel/{version}/slick.min.js': resources.slickCarouselJS,
@@ -408,6 +420,7 @@ mappings.cdn = {
             'slick-lightbox/{version}/slick-lightbox.css': resources.slickLightboxCSS,
             'slider-pro/{version}/js/jquery.sliderPro.': resources.sliderProJS,
             'spin.js/{version}/spin.min.js': resources.spinJS,
+            'sticky-js/{version}/sticky.min.js': resources.stickyJS,
             'stickyfill/{version}/stickyfill.': resources.stickyfill,
             'socket.io/{version}/socket.io.': resources.socketIO,
             'swfobject/{version}/swfobject.': resources.swfobject,
@@ -429,9 +442,11 @@ mappings.cdn = {
             'underscore.js/{version}/underscore.': resources.underscore,
             'underscore.js/{version}/underscore-min.': resources.underscore,
             'urlive/{version}/jquery.urlive.': resources.jqueryURLive,
+            'video.js/{version}/video.js': resources.videoJS,
             'vue/{version}/vue.min.js': resources.vueJs,
             'vue-i18n/{version}/vue-i18n.': resources.vueI18N,
             'vue-resource/{version}/vue-resource.': resources.vueResource,
+            'vuex/{version}/vuex.min.': resources.vuex,
             'waypoints/{version}/noframework.waypoints.': resources.jQueryWaypoints,
             'waypoints/{version}/jquery.waypoints.': resources.jQueryWaypoints,
             'waypoints/{version}/waypoints.debug.': resources.jQueryWaypoints,
@@ -475,6 +490,8 @@ mappings.cdn = {
             'bluebird@{version}/js/browser/bluebird.': resources.bluebird,
             'bootstrap@{version}/dist/js/bootstrap.': resources.bootstrapJS,
             'bootstrap@{version}/dist/css/bootstrap.': resources.bootstrapCSS,
+            'bootstrap-icons@{version}/font/bootstrap-icons.css': resources.bootstrapIcons,
+            'bootstrap-icons@{version}/font/bootstrap-icons.min.css': resources.bootstrapIcons,
             'bootstrap-select@{version}/dist/js/bootstrap-select.': resources.bootstrapSelectJS,
             'bootstrap-table@{version}/dist/bootstrap-table.min.js': resources.bootstrapTableJS,
             'bootstrap-table@{version}/dist/bootstrap-table.js': resources.bootstrapTableJS,
@@ -491,6 +508,7 @@ mappings.cdn = {
             'bxslider/{version}/jquery.bxslider.min.css': resources.bxsliderCSS,
             'bxslider/{version}/jquery.bxslider.css': resources.bxsliderCSS,
             'chart.js@{version}': resources.chartJs,
+            'clappr@{version}/dist/clappr.': resources.clappr,
             'clipboard@{version}/dist/clipboard.': resources.clipboardJS,
             'cookieconsent@{version}/build/cookieconsent.min.js': resources.cookieconsent2JS,
             'cookieconsent@{version}/build/cookieconsent.js': resources.cookieconsent2JS,
@@ -521,6 +539,8 @@ mappings.cdn = {
             'history@{version}/umd/history.min.js': resources.history,
             'hls.js@{version}': resources.hlsJS,
             'instantsearch.js@{version}/dist/instantsearch.production.': resources.InstantSearchJS,
+            'instantsearch.js@{version}': resources.InstantSearchJS,
+            'instantsearch.css@{version}': resources.InstantSearchCSS,
             'jquery@{version}/dist/jquery.': resources.jQuery,
             'jquery@{version}/dist/jquery.min.': resources.jQuery,
             'jquery-ui@{version}/jquery-ui.js': resources.jQueryUI,
@@ -589,6 +609,7 @@ mappings.cdn = {
         },
         '/': {
             'algoliasearch/3/algoliasearch.': resources.algoliaSearch,
+            'algoliasearch/{version}/algoliasearchLite.min.js': resources.algoliaSearch,
             'angularjs/{version}/angular.': resources.angular,
             'autocomplete.js/0/autocomplete.': resources.autocompleteJS,
             'backbonejs/{version}/backbone.': resources.backbone,
@@ -952,7 +973,8 @@ mappings.cdn = {
             '{version}/css/bootstrap.min.': resources.bootstrapCSS
         },
         '/font-awesome/': {
-            '{version}/css/font-awesome.': resources.fontawesome
+            '{version}/css/font-awesome.': resources.fontawesome,
+            '{version}/fonts/': resources.fontawesomeFontsOnly
         },
         '/twitter-bootstrap/': {
             '{version}/css/bootstrap.': resources.bootstrapCSS,
@@ -1043,6 +1065,12 @@ mappings.cdn = {
     'mathjax.rstudio.com': {
         '/': {
             '{version}': resources.mathJax,
+        }
+    },
+    // MathJax CDN
+    'cdn.mathjax.org': {
+        '/': {
+            'mathjax/{version}/': resources.mathJax,
         }
     }
 };

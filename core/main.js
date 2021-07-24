@@ -72,6 +72,13 @@ main._initializeSettings = function () {
             'path': stateManager.selectedIcon
         }, 'Enabled');
 
+        storageManager.amountInjected = items.amountInjected || 0;
+        interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
+        interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
+        interceptor.blockMissing = items.blockMissing === undefined ? false : items.blockMissing;
+        interceptor.blockGoogleFonts = items.blockGoogleFonts === undefined ? true : items.blockGoogleFonts;
+        requestAnalyzer.allowlistedDomains = items.allowlistedDomains || {};
+
         storageManager.type.set(items);
     });
 };

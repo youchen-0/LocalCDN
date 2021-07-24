@@ -211,6 +211,10 @@ var resources = {
     'bootstrapDatepickerBundle': {
         'path': 'resources/bootstrap-datepicker/{version}/'
     },
+    // Bootstrap Icons
+    'bootstrapIcons': {
+        'path': 'resources/bootstrap-icons/{version}/font/bootstrap-icons.min.css'
+    },
     // bootstrap-multiselect
     'bootstrapMultiselectJS': {
         'path': 'resources/bootstrap-multiselect/{version}/bootstrap-multiselect.min.jsm'
@@ -285,6 +289,10 @@ var resources = {
     // chosen
     'chosen': {
         'path': 'resources/chosen/{version}/chosen.jquery.min.jsm'
+    },
+    // clappr
+    'clappr': {
+        'path': 'resources/clappr/{version}/clappr.min.jsm'
     },
     // clipboard.js
     'clipboardJS': {
@@ -425,6 +433,10 @@ var resources = {
     'InstantSearchJS': {
         'path': 'resources/instantsearch.js/{version}/instantsearch.production.min.jsm'
     },
+    // InstantSearch.css
+    'InstantSearchCSS': {
+        'path': 'resources/instantsearch.css/{version}/algolia-min.css'
+    },
     // iScroll [Deprecated]
     'iScroll': {
         'path': 'resources/iScroll/{version}/iscroll.min.jsm'
@@ -455,6 +467,10 @@ var resources = {
     // jQuery BlockUI [Deprecated]
     'jQueryBlockUI': {
         'path': 'resources/jquery.blockUI/{version}/jquery.blockUI.min.jsm'
+    },
+    // jquery-ajax-unobtrusive
+    'jqueryAjaxUnobtrusive': {
+        'path': 'resources/jquery-ajax-unobtrusive/{version}/jquery.unobtrusive-ajax.min.jsm'
     },
     // jquery.cookie [Deprecated]
     'jqueryCookie': {
@@ -510,6 +526,10 @@ var resources = {
     // jQuery Tooltipster
     'jQueryTooltipster': {
         'path': 'resources/tooltipster/{version}/js/jquery.tooltipster.min.jsm'
+    },
+    // Unobtrusive scripting adapter for jQuery
+    'jqueryUJS': {
+        'path': 'resources/jquery-ujs/{version}/rails.min.jsm'
     },
     // jQuery UI
     'jQueryUI': {
@@ -799,6 +819,10 @@ var resources = {
     'cfRocketLoader': {
         'path': 'resources/rocket-loader/latest/rocket-loader.min.jsm'
     },
+    // script.js [Deprecated]
+    'scriptJS': {
+        'path': 'resources/script.js/{version}/script.min.jsm'
+    },
     // Scriptaculous [Deprecated]
     'scriptaculous': {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm'
@@ -814,6 +838,13 @@ var resources = {
     // showdown [Deprecated?]
     'showdown': {
         'path': 'resources/showdown/{version}/showdown.min.jsm'
+    },
+    // simplebar
+    'simplebarJS': {
+        'path': 'resources/simplebar/{version}/simplebar.min.jsm'
+    },
+    'simplebarCSS': {
+        'path': 'resources/simplebar/{version}/simplebar.min.css'
     },
     // simplemde [Deprecated]
     'simplemdeJS': {
@@ -854,6 +885,10 @@ var resources = {
     // spin.js
     'spinJS': {
         'path': 'resources/spin.js/{version}/spin.min.jsm'
+    },
+    // sticky-js
+    'stickyJS': {
+        'path': 'resources/sticky-js/{version}/sticky.min.jsm'
     },
     // stickyfill [Deprecated]
     'stickyfill': {
@@ -922,6 +957,10 @@ var resources = {
     // vue-resource
     'vueResource': {
         'path': 'resources/vue-resource/{version}/vue-resource.min.jsm'
+    },
+    // vuex
+    'vuex': {
+        'path': 'resources/vuex/{version}/vuex.min.jsm'
     },
     // Waypoints (bundle) [Deprecated]
     'jQueryWaypoints': {

@@ -579,6 +579,8 @@ function create_url() {
     elif [ "$folder" = "twitter-bootstrap" ] && [ "$version" = "2.3.2" ]; then
         if [[ "$subfile" =~ \.css$ ]]; then
             url="$NETDNA_BOOTSTRAPCDN/$folder/$version/css/bootstrap-combined.no-icons.min.css"
+        else
+            url="$NETDNA_BOOTSTRAPCDN/$folder/$version/js/bootstrap.min.js"
         fi
     elif [ "$folder" = "webcomponentsjs" ]; then
         url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"
@@ -673,10 +675,14 @@ function create_url() {
         url="$CLOUDFLARE/$folder/$version/lightgallery.min.js"
     elif [ "$folder" = "alpinejs" ] && [ "$version" != "2.8.2" ];then
         url="$CLOUDFLARE/$folder/$version/cdn.min.js"
+    elif [ "$folder" = "vuex" ] && [ "$version" != "3.6.2" ];then
+        url="$CLOUDFLARE/$folder/$version/vuex.cjs.min.js"
+    elif [ "$folder" = "instantsearch.css" ]; then
+        url="$JSDELIVR/npm/$folder@$version/themes/algolia-min.css"
+    elif [ "$folder" = "bootstrap-icons" ] && [ "$subfile" = "bootstrap-icons.woff" ]; then
+        url="$CLOUDFLARE/$folder/$version/font/fonts/$subfile"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
-    elif [ "$folder" = "hls.js" ]; then
-        url="$JSDELIVR/npm/$folder@$version/dist/$jfile"
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
         url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
     elif [ "$folder" = "autocomplete.js" ] && [ "$version" != "0.38.0" ]; then

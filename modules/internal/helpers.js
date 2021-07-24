@@ -77,7 +77,7 @@ helpers.languageIsFullySupported = function (language) {
     supportedLanguages = [
         'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en_CA', 'en_US', 'eo', 'es', 'et', 'fi',
         'fr', 'he', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'kn', 'ko', 'lb', 'lt',
-        'nb_NO', 'nl', 'pl', 'pt', 'pt_BR', 'pt_PT', 'ro', 'ru', 'sk', 'si', 'sr', 'sv', 'tl',
+        'nb_NO', 'nl', 'pl', 'pt', 'pt_BR', 'pt_PT', 'ro', 'ru', 'sco', 'sk', 'si', 'sr', 'sv', 'tl',
         'tr', 'uk', 'zh_Hans', 'zh_Hant'
     ];
 
@@ -135,6 +135,10 @@ helpers.getWildcard = function (initiatorDomain) {
 
 helpers.checkAllowlisted = function (domain) {
     let domainWithoutPrefix, wildcard, list;
+
+    if (domain === null) {
+        return false;
+    }
 
     if (domain.startsWith(Address.WWW_PREFIX)) {
         domainWithoutPrefix = domain.slice(Address.WWW_PREFIX.length);

@@ -56,7 +56,7 @@ const Resource = {
     'MAPPING_EXPRESSION': /\.map$/i,
     'VERSION_EXPRESSION': /(?:\d{1,2}\.){1,3}\d{1,2}(?:-\d)?|latest/,
     'SINGLE_NUMBER_EXPRESSION': /^\D+\d\D+$/,
-    'MATHJAX': /\/\w.*(?:\d{1,2}\.){1,3}\d{1,2}(?:-\d)?\/|\/latest\//,
+    'MATHJAX': /\/\w.*(?:\d{1,2}\.){1,3}\d{1,2}(?:-\d)?\/|\/(mathjax\/)?latest\//,
     'VERSION_PLACEHOLDER': '{version}'
 };
 
@@ -269,6 +269,7 @@ const CDNs = {
     'cdn.embed.ly': 'embedly',
     'cdn.datatables.net': 'DataTables',
     'mathjax.rstudio.com': 'MathJax RStudio',
+    'cdn.mathjax.org': 'MathJax CDN',
 };
 
 const IgnoredHost = {
@@ -284,15 +285,30 @@ const IgnoredHost = {
  */
 const MathJaxFiles = {
     'config/TeX-AMS_HTML-full.js': true,
-    'config/TeX-MML-AM_CHTML.js': true,
     'config/TeX-AMS-MML_HTMLorMML.js': true,
+    'config/TeX-MML-AM_CHTML.js': true,
     'extensions/TeX/begingroup.js': true,
+    'extensions/TeX/cancel.js': true,
     'extensions/TeX/mhchem3/mhchem.js': true,
     'extensions/MathMenu.js': true,
     'extensions/MathZoom.js': true,
-    'jax/output/HTML-CSS/imageFonts.js': true,
-    'jax/output/HTML-CSS/fonts/TeX/fontdata-extra.js': true,
-    'jax/output/HTML-CSS/fonts/TeX/fontdata.js': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff': true,
+    'fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff': true,
+    'jax/element/mml/optable/BasicLatin.js': true,
+    'jax/element/mml/optable/GeneralPunctuation.js': true,
+    'jax/element/mml/optable/Latin1Supplement.js': true,
+    'jax/element/mml/optable/MathOperators.js': true,
+    'jax/element/mml/optable/SuppMathOperators.js': true,
+    'jax/output/CommonHTML/fonts/TeX/fontdata.js': true,
+    'jax/output/CommonHTML/autoload/mtable.js': true,
+    'jax/output/CommonHTML/jax.js': true,
+    'jax/output/HTML-CSS/autoload/menclose.js': true,
+    'jax/output/HTML-CSS/autoload/mtable.js': true,
+    'jax/output/HTML-CSS/autoload/multiline.js': true,
+    'jax/output/HTML-CSS/config.js': true,
     'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Latin1Supplement.js': true,
     'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscSymbols.js': true,
     'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/SuppMathOperators.js': true,
@@ -313,22 +329,12 @@ const MathJaxFiles = {
     'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/SpacingModLetters.js': true,
     'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscMathSymbolsB.js': true,
     'jax/output/HTML-CSS/fonts/TeX/AMS/Regular/GreekAndCoptic.js': true,
-    'jax/output/HTML-CSS/autoload/multiline.js': true,
-    'jax/output/HTML-CSS/autoload/menclose.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/fontdata-extra.js': true,
+    'jax/output/HTML-CSS/fonts/TeX/fontdata.js': true,
+    'jax/output/HTML-CSS/imageFonts.js': true,
     'jax/output/HTML-CSS/jax.js': true,
-    'jax/output/HTML-CSS/config.js': true,
-    'jax/output/CommonHTML/fonts/TeX/fontdata.js': true,
-    'jax/output/CommonHTML/autoload/mtable.js': true,
-    'jax/output/CommonHTML/jax.js': true,
-    'jax/element/mml/optable/Latin1Supplement.js': true,
-    'jax/element/mml/optable/MathOperators.js': true,
-    'jax/element/mml/optable/BasicLatin.js': true,
-    'fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff': true,
-    'fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff': true,
-    'fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff': true,
-    'fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff': true,
-    'fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff': true,
 };
+
 
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder

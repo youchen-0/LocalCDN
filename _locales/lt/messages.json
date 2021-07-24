@@ -352,7 +352,7 @@
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "Šios taisyklės yra aktualios tik „vidutiniam“ arba „griežtam“ režimams, nes jie blokuoja visus trečiųjų šalių resursus. Jie nėra būtini „numatytajam“, „lengvam“ ar „lengviausiam“ režimams. Norėdami gauti daugiau informacijos, apsilankykite „uBlock Origin Wiki“.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
@@ -380,19 +380,19 @@
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "Yra dvi galimos priežastys: reikalinga sistema / biblioteka, kurios „LocalCDN“ (dar) nepateikia, arba SOP. SOP (tos pačios kilmės politika) yra saugos mechanizmas, nustatantis, kokius duomenis naršyklei leidžiama įkelti. Tai padeda izoliuoti kenkėjiškus dokumentus ir taip sumažinti galimus atakų vektorius. Ši politika neleidžia naršyklei įkelti išorinių „LocalCDN“ rėmų (frameworks). Deja, šiuo metu tam sprendimų nėra.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "„LocalCDN“ gali pakeisti „Google Material Icons“. Norint pagauti ryšį, Jūsų turinio blokavimo programa (pvz., „UBlock Origin“, „uMatrix“ ar „AdGuard“) turi leisti užklausą. „LocalCDN“ klauso šių užklausų ir, jei užklausoje yra „Google Material Icons“, šaltinis bus pakeistas. Jei atžymėsite parinktį „Blokuoti trūkstamo turinio užklausas“, bus leidžiama perduoti neegzistuojančius išteklius ir bus įkelta „Google Fonts“, nes „Google Material Icons“ ir „Google Fonts“ naudoja tą patį domeną. Jei to nenorite, galite užblokuoti „Google“ šriftus „LocalCDN“.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "Neišsigąskite, niekas nebus perduota. Tai prieštarautų visiems mano principams. Statistikoje (JSON formatas) yra tokia informacija: data, CDN + skaitiklis ir karkasas (framework) + skaitiklis. Tai viskas. Pateikiu čia pavyzdį:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "Statistikoje nėra jokios informacijos apie naršyklę, operacinę sistemą, tinklalapio užklausą, IP adresus ar kitą informaciją. Tiesiog data, CDN + skaitiklis ir karkasas (framework) + skaitiklis. Tai parodo, kurios sistemos yra pakeistos „LocalCDN“, kaip dažnai ir kokių CDN buvo prašoma.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
@@ -400,27 +400,27 @@
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "Plėtinio saugyklą galima peržiūrėti tiesiogiai naudojant „Firefox“ naršyklę. Atidarykite URL 'about: debugging', pereikite į „Storage“ ir pasirinkite „Extension Storage“. Surinktus duomenis rasite po raktu „internalStatisticsData“. Tiesiog nukopijuokite ir įdėkite į „JSON PrettyPrinter“, kad būtų lengviau įskaityti. Atkreipkite dėmesį, kad turite pašalinti pirmą ir paskutinę kabutę bei jos raktą. Šiame vaizdo įraše turėtumėte tai aiškiai matyti.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "Kas bus sinchronizuojama, kai pasirenku 'sinchronizuoti' kaip saugyklos tipą?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "Sinchronizavimas veiks tik tuo atveju, jei įrenginyje esate prisijungę prie „Firefox“ paskyros ir nustatymuose leidote sinchronizuoti priedus. Taip pat veiks atskiras jūsų valdomas sinchronizavimo serveris. Tai sinchronizuos daugumą „LocalCDN“ nustatymų visuose įrenginiuose.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "Jei neturite sinchronizavimo paskyros, niekas nebus sinchronizuojama. Tokiu atveju nėra jokio skirtumo, kokį saugyklos tipą pasirinkote.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Niekada nesinchronizuojami dalykai:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Įterpimų skaičius",
         "description": "Numbers of injections"
     },
     "helpYes": {
@@ -436,15 +436,15 @@
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Sinchronizuojami nustatymai:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Numatytasis, Šviesus, Mėlynas/Pilkas",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Daugiau informacijos apie „Firefox Sync“:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
@@ -468,7 +468,7 @@
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Tai nėra „LocalCDN“ apribojimas, tačiau trūksta API palaikymo „Chromium“ paremtose naršyklėse.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     }
 }

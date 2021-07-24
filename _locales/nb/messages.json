@@ -276,7 +276,7 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "Regel generator",
+        "message": "Regel-generator",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
@@ -284,15 +284,15 @@
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "Hvorfor er det alternativet »Blokkere Google Fonter«?",
+        "message": "Hvorfor er det et alternativ »Blokker Google Fonts«?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "Hva med statistikken? Overføres noe til noen servere?",
+        "message": "Hva med statistikken? Overføres noe til servere?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "Hva blir synkronisert når jeg velger »sync« som lagringstype?",
+        "message": "Hva blir synkronisert når jeg velger »Synkronisert« som lagringstype?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
@@ -300,7 +300,7 @@
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "LocalCDN er en nettleserutvidelse som etterligner Content Delivery Networks for å forbedre personvernet ditt på nettet. Den avlytter trafikk, finner støttede rammer/biblioteker lokalt, og injiserer dem inn på nettstedet. Bruk gjerne følgende testverktøy for å finne ut om du er riktig beskyttet. For mer informasjon, les opplæringen eller våre Wiki-sider.",
+        "message": "LocalCDN er en nettleserutvidelse som etterligner Content Delivery Network for å forbedre personvernet ditt på nettet. Den snapper opp trafikk, finner støttede rammeverk/biblioteker lokalt, og injiserer dem inn på nettstedet. Bruk gjerne følgende testverktøy for å finne ut om du er ordentlig beskyttet. For mer informasjon, les bruksanvisningen eller våre Wiki-sider.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
@@ -308,7 +308,7 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "Opplæringen",
+        "message": "Bruksanvisning",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
@@ -316,7 +316,7 @@
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "I de fleste tilfeller kan LocalCDN enkelt erstatte innebygde rammer og forbedrer personvernet. I noen tilfeller kan nettstedet prøve å forhindre dette ved å angi visse alternativer i HTML-kildekoden. LocalCDN leser HTML-kildekoden før den vises i nettleseren og fjerner denne delen (rød).",
+        "message": "I de fleste tilfeller kan LocalCDN enkelt erstatte innebygde rammeverk og forbedre personvernet. I noen tilfeller kan nettstedet prøve å forhindre dette ved å sette visse alternativer i HTML-kildekoden. LocalCDN leser HTML-kildekoden før den vises i nettleseren og fjerner denne delen (rød).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
@@ -328,7 +328,7 @@
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "Hvorfor er det nødvendig å fjerne attributter for opprinnelse og integritet?",
+        "message": "Hvorfor er det nødvendig å fjerne crossorigin- og integritetsattributter?",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
@@ -336,7 +336,7 @@
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "For å spare diskplass og levere flere rammer, oppgraderer LocalCDN et rammeverk. En integritetsmerke er hash-verdien til en fil. Hvis sjekken mislykkes, vil nettleseren ikke inkludere et rammeverk. Integritetskontrollen vil mislykkes fordi hashverdiene for f.eks. jQuery 1.10.1 og jQuery 1.12.4 er forskjellige.",
+        "message": "For å spare diskplass og levere flere rammeverk oppgraderer LocalCDN et rammeverk. Et integritetsmerke er hash-verdien til en fil. Hvis sjekken mislykkes, vil nettleseren ikke inkludere et rammeverk. Integritetskontrollen vil mislykkes fordi hash-verdiene for f.eks. jQuery 1.10.1 og jQuery 1.12.4 er forskjellige.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
@@ -352,7 +352,7 @@
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "Disse reglene er bare relevante i \"medium\" eller \"hard\" modus, fordi det blokkerer alle tredjepartsressurser. De er ikke nødvendige i »standard«, »lett« eller »veldig lett« modus. For mer informasjon, besøk uBlock Origin Wiki.",
+        "message": "Disse reglene er bare relevante i modusene »medium« eller »hard«, fordi de blokkerer alle tredjepartsressurser. De er ikke nødvendige i modusene »standard«, »lett« eller »veldig lett«. For mer informasjon, besøk uBlock Origin Wiki.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
@@ -376,11 +376,11 @@
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "Vanskelig",
+        "message": "Hard",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "Det er to mulige årsaker: Det kreves enten et rammeverk/bibliotek som LocalCDN ikke (ennå) leverer eller en SOP. En SOP (samme opprinnelsespolicy) er en sikkerhetsmekanisme som bestemmer hvilke data nettleseren har lov til å laste inn. Det hjelper å isolere ondsinnede dokumenter og dermed redusere mulige angrepsvektorer. Denne policyen forhindrer nettleseren fra å laste inn de eksterne rammene til LocalCDN. Dessverre er det ingen løsning på dette for øyeblikket.",
+        "message": "Det er to mulige årsaker: Det kreves enten et rammeverk/bibliotek som LocalCDN ikke (ennå) leverer eller en SOP. En SOP (Same origin policy) er en sikkerhetsmekanisme som bestemmer hvilke data nettleseren har lov til å laste inn. Det hjelper til å isolere ondsinnede dokumenter og dermed redusere mulige angrepsvektorer. Denne praksisen forhindrer nettleseren å laste inn de eksterne rammeverkene fra LocalCDN. Dessverre er det ingen løsning på dette for øyeblikket.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
@@ -392,7 +392,7 @@
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "Statistikken inneholder ingen informasjon om nettleseren, operativsystemet, forespørsel om nettsted, IP-adresser eller annen informasjon. Bare date, CDN+teller og framework+teller. Den viser deg hvilke rammer som erstattes av LocalCDNs hvor ofte og hvilke CDNer som ble bedt om.",
+        "message": "Statistikken inneholder ingen informasjon om nettleseren, operativsystemet, forespørsel om nettsted, IP-adresser eller annen informasjon. Bare dato, CDN+teller og framework+teller. Den viser deg hvilke framework som erstattes av LocalCDN, hvor ofte og hvilke CDN-er som ble forespurt.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
@@ -400,15 +400,15 @@
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "Utvidelseslageret kan vises direkte med Firefox-nettleseren. Åpne URL-en »om: feilsøking«, bytt til »Lagring« og velg »Utvidelseslagring«. Under nøkkelen »internalStatisticsData« finner du de innsamlede dataene. Bare kopier den og legg den i en JSON PrettyPrinter for å gjøre den mer lesbar. Vær oppmerksom på at du må fjerne det første og siste anførselstegnet og nøkkelen til det. Du bør kunne se dette tydelig i denne videoen.",
+        "message": "Utvidelseslageret kan vises direkte med Firefox-nettleseren. Åpne siden »about:debugging«, skift til »Storage« og velg »Extension Storage«. Under nøkkelen »internalStatisticsData« finner du de innsamlede dataene. Bare kopier disse og legg de i en JSON PrettyPrinter for å gjøre den mer lesbar. Vær oppmerksom på at du må fjerne det første og siste anførselstegnet og nøkkelen. Du bør kunne se dette tydelig i denne videoen.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "Hva blir synkronisert når jeg velger »sync« som lagringstype?",
+        "message": "Hva blir synkronisert når jeg velger »Synkronisert« som lagringstype?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "Synkronisering fungerer bare hvis du er logget på med en Firefox-konto på enheten og har tillatt tillegg til å synkronisere i innstillingene. En egen synkroniseringsserver under din kontroll vil også fungere. Dette vil synkronisere de fleste innstillingene til LocalCDN på alle enheter.",
+        "message": "Synkronisering fungerer bare hvis du er logget inn med en Firefox-konto på enheten og har tillatt tillegg å synkronisere i innstillingene. En egen synkroniseringsserver under din kontroll vil også fungere. Dette vil synkronisere de fleste innstillingene til LocalCDN på alle enheter.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
@@ -456,7 +456,7 @@
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "Bytt ut andre ressurser",
+        "message": "Erstatt andre ressurser",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
@@ -468,7 +468,7 @@
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "Dette er ikke en begrensning av LocalCDN, men mangler API-støtte for Chromium-baserte nettlesere.",
+        "message": "Dette er ikke en begrensning av LocalCDN, men manglende API-støtte for Chromium-baserte nettlesere.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     }
 }
