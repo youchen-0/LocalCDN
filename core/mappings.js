@@ -604,6 +604,7 @@ mappings.cdn = {
             'vue-resource@{version}/dist/vue-resource.': resources.vueResource,
             'vue@{version}/dist/vue.min.js': resources.vueJs,
             'vue@{version}/dist/vue.js': resources.vueJs,
+            'vuex@{version}/dist/vuex.': resources.vuex,
             '@webcomponents/webcomponentsjs/webcomponents-loader.js': resources.webcomponentsJS,
             'webfontloader@{version}/webfontloader.': resources.webfontloader
         },
