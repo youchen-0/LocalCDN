@@ -1583,7 +1583,7 @@ https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js
 https://cdn.jsdelivr.net/npm/angular-stripe-checkout@5.1.0/angular-stripe-checkout.min.js
 https://cdn.jsdelivr.net/npm/appboy-web-sdk@3.3.0/appboy.min.js
 https://cdn.jsdelivr.net/npm/@babel/standalone@7.14.6/babel.min.js
-https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js
+https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js
 https://cdn.jsdelivr.net/npm/ethjs@0.4.0/dist/ethjs.min.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@6.17.0/dist/autocomplete.js
 https://cdn.jsdelivr.net/npm/@findify/bundle@6.17.0/dist/bundle.js

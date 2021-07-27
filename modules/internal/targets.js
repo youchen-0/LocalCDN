@@ -226,7 +226,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/Chart.js/2.')) {
         return '2.9.4';
     } else if (type.startsWith('/Chart.js/3.')) {
-        return '3.4.1';
+        return '3.5.0';
     } else if (type.startsWith('/clappr/0.') || type.startsWith('/clappr/latest/')) {
         return '0.4.5';
     } else if (type.startsWith('/chosen/1.')) {
