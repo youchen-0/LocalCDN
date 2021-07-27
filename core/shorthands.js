@@ -204,6 +204,9 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
     } else if (/cdn\.jsdelivr\.net\/npm\/vue@(2|3)/.test(CompleteURL)) {
         let version = CompleteURL.slice(-1);
         lastVersion = targets.setLastVersion(`/vue/${version}.`);
+        if (lastVersion === false) {
+            return false;
+        }
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
