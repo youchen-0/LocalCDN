@@ -264,11 +264,11 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Ajutor",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introducere",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -308,7 +308,7 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Tutorial",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
