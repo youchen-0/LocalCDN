@@ -594,7 +594,7 @@ targets.setLastVersion = function (type, version) {
         return '3.3.0';
     } else if (type.startsWith('/tooltipster/4.')) {
         return '4.2.8';
-    } else if (type.startsWith('/toastr.js/2.')) {
+    } else if (type.startsWith('/toastr.js/2.') || type.startsWith('/toastr.js/latest/')) {
         return '2.1.4';
     } else if (type.startsWith('/twitter-bootstrap/2.')) {
         return '2.3.2';

@@ -430,6 +430,8 @@ mappings.cdn = {
             'tooltipster/{version}/js/jquery.tooltipster.': resources.jQueryTooltipster,
             'toastr.js/{version}/toastr.min.css': resources.toastrCSS,
             'toastr.js/{version}/toastr.min.js': resources.toastrJS,
+            'toastr.js/{version}/js/toastr.': resources.toastrJS,
+            'toastr.js/{version}/css/toastr.': resources.toastrCSS,
             'twitter-bootstrap/{version}/js/bootstrap.min.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}-alpha.3/js/bootstrap.min.js': resources.bootstrapJS,
             'twitter-bootstrap/{version}-alpha.3/css/bootstrap.min.css': resources.bootstrapCSS,
