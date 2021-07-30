@@ -2,14 +2,13 @@
     font-weight: bold;
 }
 
-.subtle-hint > ul,
+#history-release-notes {
+    display: none;
+}
+
 #history-release-notes > ul {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
-}
-
-#history-release-notes {
-    display: none;
 }
 
 input[type=radio] {
@@ -45,4 +44,17 @@ input[type=radio], label {
     border: 2px solid red;
     border-radius: 5px;
     color: #555;
+}
+.release-notes-area {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+.release-notes-area > p {
+    font-size: larger;
+    font-weight: bold;
+    margin: 0;
+}
+
+.release-notes-area > ul {
+    margin: 0 0 20px 0;
 }
