@@ -359,6 +359,10 @@ var resources = {
     'ethJs': {
         'path': 'resources/ethjs/{version}/ethjs.min.jsm'
     },
+    // exif-js
+    'exifJS': {
+        'path': 'resources/exif-js/{version}/exif.min.jsm'
+    },
     // Ext Core
     'extCore': {
         'path': 'resources/ext-core/{version}/ext-core.jsm'

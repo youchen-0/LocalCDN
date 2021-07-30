@@ -273,6 +273,8 @@ targets.setLastVersion = function (type, version) {
         return '3.27.5';
     } else if (type.startsWith('/ethjs')) {
         return '0.4.0';
+    } else if (type.startsWith('/exif-js/2.')) {
+        return '2.3.0';
     } else if (type.startsWith('/ext-core/3.')) {
         return '3.1.0';
     } else if (type.startsWith('/fastclick/1.')) {
@@ -660,6 +662,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'exif.min.jsm': 'Exif.js',
     'bootstrap-icons.min.css': 'Bootstrap Icons',
     'clappr.min.jsm': 'clappr',
     'script.min.jsm': 'script.js',

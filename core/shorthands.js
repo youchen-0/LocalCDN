@@ -214,6 +214,15 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/vue/${lastVersion}/vue.min.jsm`,
             'bundle': ''
         };
+    } else if (CompleteURL.startsWith('cdn.jsdelivr.net/npm/exif-js')) {
+        lastVersion = targets.setLastVersion('/exif-js/2.');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'versionRequested': lastVersion,
+            'path': `resources/exif-js/${lastVersion}/exif.min.jsm`,
+            'bundle': ''
+        };
     } else {
         return false;
     }

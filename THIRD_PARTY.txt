@@ -363,6 +363,7 @@ https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.15.3/theme-chalk/index.min.c
 https://cdnjs.cloudflare.com/ajax/libs/ember.js/1.13.13/ember.debug.js
 https://cdnjs.cloudflare.com/ajax/libs/ember.js/2.18.2/ember.debug.js
 https://cdnjs.cloudflare.com/ajax/libs/ember.js/3.27.5/ember.debug.js
+https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js
 https://cdnjs.cloudflare.com/ajax/libs/ext-core/3.1.0/ext-core.js
 https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/css/jquery.fancybox.min.css
 https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js
