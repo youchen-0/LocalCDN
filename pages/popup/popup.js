@@ -395,15 +395,13 @@ popup._filterDuplicates = function (array, key) {
      * Ignore empty values of the 'key'
      *
      */
-    let filtered = array
+    return array
         .map((e) => e[key])
         .map(function (value, index, newArray) {
             return value !== '' ? newArray.indexOf(value) === index && index : index;
         })
         .filter((e) => array[e])
         .map((e) => array[e]);
-
-    return filtered;
 };
 
 popup._renderLocaleNotice = function () {
@@ -444,10 +442,6 @@ popup._onTestingUtilityLinkClicked = function (event) {
         }, function (tab) {
             popup._injectDomain(tab.id);
         });
-    }
-
-    if (event.button === 0) {
-        window.close();
     }
 };
 
@@ -510,6 +504,9 @@ popup._injectDomain = function (tabId) {
     };
 
     chrome.runtime.sendMessage(message);
+    setTimeout(function () {
+        popup._close();
+    }, 200);
 };
 
 popup._onOptionsButtonClicked = function () {

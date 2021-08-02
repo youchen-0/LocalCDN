@@ -204,7 +204,7 @@ helpers.determineActiveTab = function () {
             } else {
                 opt = {'active': true};
 
-                chrome.tabs.query(opt, function (tabs) {
+                chrome.tabs.query(opt, function () {
                     resolve(tabs[0]);
                 });
             }

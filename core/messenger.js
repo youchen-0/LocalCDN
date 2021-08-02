@@ -49,9 +49,9 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
                 'code': `window.addEventListener('load', () => {
                     document.getElementById('domain').value = '${message.url}';
                 });`,
-                'runAt': 'document_start'
+                'runAt': 'document_idle'
             });
-            break;
+            return MessageResponse.SYNCHRONOUS;
 
         case 'domain:fetch-is-allowlisted':
             sendResponse({'value': Boolean(helpers.checkAllowlisted(value))});
