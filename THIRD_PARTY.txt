@@ -1572,7 +1572,7 @@ https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/waypoints.debug.js
 https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/zepto.waypoints.min.js
-https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.5.0/webcomponents-loader.min.js
+https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.6.0/webcomponents-loader.min.js
 https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js
 https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.8/adapter.min.js
 https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.7.1/adapter.min.js
