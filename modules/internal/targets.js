@@ -162,6 +162,8 @@ targets.setLastVersion = function (type, version) {
         return '1.2.3';
     } else if (type.startsWith('/angular-translate/2.')) {
         return '2.18.4';
+    } else if (type.startsWith('/aos/2.')) {
+        return '2.3.4';
     } else if (type.startsWith('/appboy-web-sdk/3.')) {
         return '3.3.0';
     } else if (type.startsWith('/axios/0.')) {
@@ -442,7 +444,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/markdown-it/')) {
         return '12.1.0';
     } else if (type.startsWith('/mdbootstrap/4.')) {
-        return '4.19.2';
+        return '4.20.0';
     } else if (type.startsWith('/material-design-icons/2.')) {
         return '2.8.94';
     } else if (type.startsWith('/material-design-icons/3.')) {
@@ -662,6 +664,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'aos.css': 'aos (CSS)',
+    'aos.jsm': 'aos (JS)',
     'exif.min.jsm': 'Exif.js',
     'bootstrap-icons.min.css': 'Bootstrap Icons',
     'clappr.min.jsm': 'clappr',

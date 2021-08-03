@@ -202,7 +202,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': 'Materialize'
         };
     } else if (/cdn\.jsdelivr\.net\/npm\/vue@(2|3)$/.test(CompleteURL)) {
-        let version = CompleteURL.slice(-1);
+        let version = CompleteURL.match(Resource.VERSION_EXPRESSION);
         lastVersion = targets.setLastVersion(`/vue/${version}.`);
         if (lastVersion === false) {
             return false;

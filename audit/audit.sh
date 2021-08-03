@@ -583,7 +583,7 @@ function create_url() {
             url="$NETDNA_BOOTSTRAPCDN/$folder/$version/js/bootstrap.min.js"
         fi
     elif [ "$folder" = "webcomponentsjs" ]; then
-        url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"
+        url="$CLOUDFLARE/$folder/2.6.0/webcomponents-loader.min.js"
     elif [ "$folder" = "vue-i18n" ] && [[ "$version" != 8* ]]; then
         url="$CLOUDFLARE/$folder/$version/vue-i18n.cjs.min.js"
     elif [ "$path" = "../resources/twitter-bootstrap/fonts/glyphicons-halflings-regular.woff2" ]; then
