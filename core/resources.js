@@ -146,6 +146,13 @@ var resources = {
     'animejs': {
         'path': 'resources/animejs/{version}/anime.min.jsm'
     },
+    // aos [Deprecated]
+    'aosCSS': {
+        'path': 'resources/aos/{version}/aos.css',
+    },
+    'aosJS': {
+        'path': 'resources/aos/{version}/aos.jsm',
+    },
     // Appboy/Braze Web SDK
     'appboyWebSdk': {
         'path': 'resources/appboy-web-sdk/{version}/appboy.min.jsm'

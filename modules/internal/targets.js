@@ -162,6 +162,8 @@ targets.setLastVersion = function (type, version) {
         return '1.2.3';
     } else if (type.startsWith('/angular-translate/2.')) {
         return '2.18.4';
+    } else if (type.startsWith('/aos/2.')) {
+        return '2.3.4';
     } else if (type.startsWith('/appboy-web-sdk/3.')) {
         return '3.3.0';
     } else if (type.startsWith('/axios/0.')) {
@@ -662,6 +664,8 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'aos.css': 'aos (CSS)',
+    'aos.jsm': 'aos (JS)',
     'exif.min.jsm': 'Exif.js',
     'bootstrap-icons.min.css': 'Bootstrap Icons',
     'clappr.min.jsm': 'clappr',
