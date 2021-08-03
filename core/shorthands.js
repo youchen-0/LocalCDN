@@ -201,7 +201,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/materialize/1.0.0/${channelPath}`,
             'bundle': 'Materialize'
         };
-    } else if (/cdn\.jsdelivr\.net\/npm\/vue@(2|3)/.test(CompleteURL)) {
+    } else if (/cdn\.jsdelivr\.net\/npm\/vue@(2|3)$/.test(CompleteURL)) {
         let version = CompleteURL.slice(-1);
         lastVersion = targets.setLastVersion(`/vue/${version}.`);
         if (lastVersion === false) {
