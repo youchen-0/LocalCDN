@@ -442,7 +442,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/magnific-popup.js/1.')) {
         return '1.1.0';
     } else if (type.startsWith('/markdown-it/')) {
-        return '12.1.0';
+        return '12.2.0';
     } else if (type.startsWith('/mdbootstrap/4.')) {
         return '4.20.0';
     } else if (type.startsWith('/material-design-icons/2.')) {
