@@ -298,7 +298,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/font-awesome/4.')) {
         return '4.7.0';
     } else if (type.startsWith('/font-awesome/5.')) {
-        return '5.15.3';
+        return '5.15.4';
     } else if (type.startsWith('/gsap/1.')) {
         return '1.20.5';
     } else if (type.startsWith('/gsap/2.')) {
