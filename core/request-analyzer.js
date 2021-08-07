@@ -39,7 +39,7 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
         initiatorDomain = Address.EXAMPLE;
     }
 
-    isAllowlisted = helpers.checkAllowlisted(initiatorDomain);
+    isAllowlisted = helpers.checkAllowlisted(initiatorDomain, requestAnalyzer.allowlistedDomains);
     if (isAllowlisted) {
         return false;
     }

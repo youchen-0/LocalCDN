@@ -46,13 +46,16 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
 
 
     if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
-        let initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
+        let initiatorDomain, isListed;
+
+        initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
+        isListed = helpers.checkAllowlisted(initiatorDomain, interceptor.allowedDomainsGoogleFonts);
         // Check if the website is allowed to load Google Fonts
-        if (interceptor.blockGoogleFonts === true && !interceptor.allowedDomainsGoogleFonts[initiatorDomain]) {
+        if (interceptor.blockGoogleFonts === true && isListed === false) {
             return {
                 'cancel': true
             };
-        } else if (interceptor.blockGoogleFonts === false || interceptor.allowedDomainsGoogleFonts[initiatorDomain]) {
+        } else if (interceptor.blockGoogleFonts === false || isListed === true) {
             return {
                 'cancel': false
             };

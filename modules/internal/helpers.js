@@ -133,8 +133,8 @@ helpers.getWildcard = function (initiatorDomain) {
 
 };
 
-helpers.checkAllowlisted = function (domain) {
-    let domainWithoutPrefix, wildcard, list;
+helpers.checkAllowlisted = function (domain, list) {
+    let domainWithoutPrefix, wildcard;
 
     if (domain === null) {
         return false;
@@ -144,7 +144,6 @@ helpers.checkAllowlisted = function (domain) {
         domainWithoutPrefix = domain.slice(Address.WWW_PREFIX.length);
     }
     wildcard = helpers.getWildcard(domain);
-    list = requestAnalyzer.allowlistedDomains;
 
     return Boolean(list[domain] || list[domainWithoutPrefix] || list[wildcard] || list[domainWithoutPrefix]);
 };

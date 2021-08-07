@@ -54,11 +54,11 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
             return MessageResponse.SYNCHRONOUS;
 
         case 'domain:fetch-is-allowlisted':
-            sendResponse({'value': Boolean(helpers.checkAllowlisted(value))});
+            sendResponse({'value': Boolean(helpers.checkAllowlisted(value, requestAnalyzer.allowlistedDomains))});
             return MessageResponse.SYNCHRONOUS;
 
         case 'domain:fetch-is-manipulateDOM':
-            sendResponse({'value': Boolean(requestAnalyzer.domainsManipulateDOM[value])});
+            sendResponse({'value': Boolean(helpers.checkAllowlisted(value, requestAnalyzer.domainsManipulateDOM))});
             return MessageResponse.SYNCHRONOUS;
 
         case 'allowlist:add-domain':
