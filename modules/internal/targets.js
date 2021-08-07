@@ -203,7 +203,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootstrap-multiselect/0.')) {
         return '0.9.16';
     } else if (type.startsWith('/bootstrap-multiselect/1.')) {
-        return '1.1.0';
+        return '1.1.1';
     } else if (type.startsWith('/bootstrap-slider/10.')) {
         return '10.6.2';
     } else if (type.startsWith('/bootstrap-slider/11.')) {
