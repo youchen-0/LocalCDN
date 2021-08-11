@@ -397,6 +397,8 @@ targets.setLastVersion = function (type, version) {
         return '3.2.12';
     } else if (type.startsWith('/jquery.tablesorter/2.')) {
         return '2.31.3';
+    } else if (type.startsWith('/jquery-timeago/1.')) {
+        return '1.6.7';
     } else if (type.startsWith('/jquery-tiny-pubsub/0.')) {
         return '0.7.0';
     } else if (type.startsWith('/jquery-ujs/1.')) {
@@ -666,6 +668,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.timeago.min.jsm': 'jquery-timeago',
     'jquery.fittext.min.jsm': 'FitText.js',
     'aos.css': 'aos (CSS)',
     'aos.jsm': 'aos (JS)',

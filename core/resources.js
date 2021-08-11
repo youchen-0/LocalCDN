@@ -534,6 +534,10 @@ var resources = {
     'jQueryTablesorter': {
         'path': 'resources/jquery.tablesorter/{version}/jquery.tablesorter.min.jsm'
     },
+    // jquery-timeago
+    'jqueryTimeago': {
+        'path': 'resources/jquery-timeago/{version}/jquery.timeago.min.jsm'
+    },
     // jQuery Tiny Pub/Sub
     'jQueryTinyPubsub': {
         'path': 'resources/jquery-tiny-pubsub/{version}/ba-tiny-pubsub.min.jsm'
