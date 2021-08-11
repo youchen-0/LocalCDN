@@ -396,6 +396,10 @@ var resources = {
     'findifyBundle': {
         'path': 'resources/findify-bundle/{version}/'
     },
+    // FitText.js [Deprecated]
+    'fitTextJs': {
+        'path': 'resources/FitText.js/{version}/jquery.fittext.min.jsm'
+    },
     // flv.js [Deprecated]
     'flvJS': {
         'path': 'resources/flv.js/{version}/flv.min.jsm'

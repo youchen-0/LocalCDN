@@ -291,6 +291,8 @@ targets.setLastVersion = function (type, version) {
         return '3.5.7';
     } else if (type.startsWith('/feather-icons/4.')) {
         return '4.28.0';
+    } else if (type.startsWith('/FitText.js/1.')) {
+        return '1.2.0';
     } else if (type.startsWith('/flv.js/')) {
         return '1.6.1';
     } else if (type.startsWith('/font-awesome/3.')) {
@@ -664,6 +666,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'jquery.fittext.min.jsm': 'FitText.js',
     'aos.css': 'aos (CSS)',
     'aos.jsm': 'aos (JS)',
     'exif.min.jsm': 'Exif.js',
