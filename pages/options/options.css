@@ -69,7 +69,7 @@ body {
 
 .div-selected-icon {
     margin-top: 10px;
-    min-width: 113px;
+    width: 100%;
     padding-right: 25px;
 }
 
@@ -183,21 +183,20 @@ body {
 
 .div-icons-badge-colors {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .div-badge {
-    border-left: 1px solid #bbb;
     margin-top: 10px;
-    padding-left: 30px;
+    padding: 0 30px 0 0;
 }
 
-#badge-preview-top {
+#badge-preview-top, #html-badge-preview-top {
     position: relative;
     width: 38px;
 }
 
-#counter-preview-badge {
+#counter-preview-badge, #html-counter-preview-badge {
     background: black;
     border-radius: 5px;
     color: white;
@@ -208,13 +207,14 @@ body {
     top: 0;
 }
 
-#pre-badged-background-color, #pre-badged-text-color {
+#pre-badged-background-color, #pre-badged-text-color,
+#html-pre-badged-background-color, #html-pre-badged-text-color {
     height: 30px;
     margin-right: 5px;
     width: 30px;
 }
 
-#icon-badge-preview {
+#icon-badge-preview, #html-icon-badge-preview {
     margin-top: 5px;
 }
 
@@ -237,7 +237,8 @@ div[class="color-picker:a"] {
     color: red;
 }
 
-#badged-background-color, #badged-text-color {
+#badged-background-color, #badged-text-color,
+#html-badged-background-color, #html-badged-text-color {
     max-width: 150px;
 }
 
@@ -393,21 +394,16 @@ body[dir="rtl"] .input-text {
     padding-bottom: 0.5rem;
 }
 
-@media only screen and (max-width: 500px) {
-    .option-group {
-        padding: 0.7rem;
-    }
-}
-
-@media only screen and (max-width: 435px) {
-    .div-icons-badge-colors {
-        flex-wrap: wrap;
-    }
-
+@media only screen and (max-width: 760px) {
     .div-badge {
         border: none;
         padding-left: 0;
-        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .option-group {
+        padding: 0.7rem;
     }
 }
 

@@ -79,8 +79,10 @@ storageManager.migrateData = function (target) {
             [Setting.STRIP_METADATA]: data.stripMetadata,
             [Setting.ALLOWLISTED_DOMAINS]: data.allowlistedDomains,
             [Setting.XHR_TEST_DOMAIN]: data.xhrTestDomain,
-            [Setting.BADGE_COLOR]: data.badgeColor,
-            [Setting.BADGE_TEXT_COLOR]: data.badgeTextColor
+            [Setting.BADGE_DEFAULT_BACKGROUND_COLOR]: data.badgeDefaultBackgroundColor,
+            [Setting.BADGE_DEFAULT_TEXT_COLOR]: data.badgeDefaultTextColor,
+            [Setting.BADGE_HTML_FILTER_BACKGROUND_COLOR]: data.badgeHTMLFilterBackgroundColor,
+            [Setting.BADGE_HTML_FILTER_TEXT_COLOR]: data.badgeHTMLfilterTextColor
         });
     });
 };
@@ -167,6 +169,14 @@ storageManager._validation = function (content) {
     // Convert type of updateNotification
     if (typeof content.updateNotification === 'string') {
         content.updateNotification = parseInt(content.updateNotification);
+    }
+
+    // Migrate badge colors
+    if (content.badgeDefaultBackgroundColor === undefined) {
+        content.badgeDefaultBackgroundColor = content.badgeColor;
+    }
+    if (content.badgeDefaultTextColor === undefined) {
+        content.badgeDefaultTextColor = content.badgeTextColor;
     }
 
     for (const [key, value] of Object.entries(SettingDefaults)) {

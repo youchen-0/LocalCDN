@@ -94,10 +94,10 @@ interceptor._handleMissingCandidate = function (requestUrl, tabIdentifier) {
         if (stateManager.changeBadgeColorMissingResources === true) {
             missingCount = stateManager.tabs[tabIdentifier].missing || 0;
             if (missingCount > 0 && injectionCount === 0) {
-                wrappers.setBadgeMissing(tabIdentifier, injectionCount);
+                wrappers.setBadgeText(tabIdentifier, injectionCount);
             }
         } else {
-            wrappers.defaultBadge(tabIdentifier, injectionCount);
+            wrappers.setBadgeText(tabIdentifier, injectionCount);
         }
     }
 

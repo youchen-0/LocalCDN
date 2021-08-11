@@ -30,27 +30,36 @@ var wrappers = {};
  */
 
 wrappers.setBadgeBackgroundColor = function (details) {
-    if (chrome.browserAction.setBadgeBackgroundColor !== undefined) {
-        chrome.browserAction.setBadgeBackgroundColor(details);
-
-        storageManager.type.set({
-            [Setting.BADGE_COLOR]: details.color
-        });
+    if (chrome.browserAction.setBadgeBackgroundColor === undefined) {
+        return;
     }
-};
-
-wrappers.setBadgeText = function (details) {
-    if (chrome.browserAction.setBadgeText !== undefined) {
-        chrome.browserAction.setBadgeText(details);
+    if (details.type === 'default') {
+        storageManager.type.set({[Setting.BADGE_DEFAULT_BACKGROUND_COLOR]: details.color});
+        wrappers.badgeDefaultBackgroundColor = details.color;
+    } else if (details.type === 'html-filter') {
+        storageManager.type.set({[Setting.BADGE_HTML_FILTER_BACKGROUND_COLOR]: details.color});
+        wrappers.badgeColorHTMLfilter = details.color;
     }
 };
 
 wrappers.setBadgeTextColor = function (details) {
-    if (chrome.browserAction.setBadgeTextColor !== undefined) {
-        chrome.browserAction.setBadgeTextColor(details);
+    if (chrome.browserAction.setBadgeTextColor === undefined) {
+        return;
+    }
+    if (details.type === 'default') {
+        storageManager.type.set({[Setting.BADGE_DEFAULT_TEXT_COLOR]: details.color});
+        wrappers.badgeDefaultTextColor = details.color;
+    } else if (details.type === 'html-filter') {
+        storageManager.type.set({[Setting.BADGE_HTML_FILTER_TEXT_COLOR]: details.color});
+        wrappers.badgeDefaultTextColorHTMLfilter = details.color;
+    }
+};
 
-        storageManager.type.set({
-            [Setting.BADGE_TEXT_COLOR]: details.color
+wrappers.setBadgeText = function (tabId, text) {
+    if (chrome.browserAction.setBadgeText !== undefined) {
+        chrome.browserAction.setBadgeText({
+            'tabId': tabId,
+            'text': `${text}`
         });
     }
 };
@@ -62,49 +71,33 @@ wrappers.setIcon = function (details, type) {
     }
 };
 
-wrappers.setBadgeMissing = function (tabIdentifier, counter) {
-    chrome.browserAction.setBadgeText({
-        'tabId': tabIdentifier,
-        'text': `${counter}`,
-    });
-    if (BrowserType.FIREFOX) {
-        chrome.browserAction.setBadgeTextColor({
-            'tabId': tabIdentifier,
-            'color': 'black',
-        });
-        chrome.browserAction.setBadgeBackgroundColor({
-            'tabId': tabIdentifier,
-            'color': 'yellow',
-        });
+wrappers.setBadgeColoring = function (tabId, value) {
+    let textColor, backgroundColor;
+
+    if (chrome.browserAction.setBadgeBackgroundColor === undefined ||
+        chrome.browserAction.setBadgeTextColor === undefined) {
+        return;
+    }
+
+    if (value === 'htmlFilterOn') {
+        textColor = wrappers.badgeHTMLfilterTextColor;
+        backgroundColor = wrappers.badgeHTMLFilterBackgroundColor;
+    } else if (value === 'default') {
+        textColor = wrappers.badgeDefaultTextColor;
+        backgroundColor = wrappers.badgeDefaultBackgroundColor;
+    } else if (value === 'missing') {
+        textColor = 'white';
+        backgroundColor = 'blue';
     } else {
-        chrome.browserAction.setBadgeBackgroundColor({
-            'tabId': tabIdentifier,
-            'color': 'red',
-        });
+        return;
     }
-};
 
-wrappers.defaultBadge = function (tabIdentifier, counter) {
-    chrome.browserAction.setBadgeText({
-        'tabId': tabIdentifier,
-        'text': `${counter}`,
+    chrome.browserAction.setBadgeTextColor({
+        'tabId': tabId,
+        'color': textColor
     });
-    if (BrowserType.FIREFOX) {
-        chrome.browserAction.setBadgeTextColor({
-            'tabId': tabIdentifier,
-            'color': wrappers.textColor
-        });
-    }
     chrome.browserAction.setBadgeBackgroundColor({
-        'tabId': tabIdentifier,
-        'color': wrappers.backgroundColor
+        'tabId': tabId,
+        'color': backgroundColor
     });
 };
-
-storageManager.type.get([Setting.BADGE_COLOR, Setting.BADGE_TEXT_COLOR], function (items) {
-    wrappers.textColor = items.badgeTextColor || '#FFFFFF';
-    wrappers.backgroundColor = items.badgeColor || '#4A826C';
-
-    wrappers.setBadgeTextColor({'color': wrappers.textColor});
-    wrappers.setBadgeBackgroundColor({'color': wrappers.backgroundColor});
-});
