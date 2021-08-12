@@ -470,5 +470,17 @@
     "helpLimitation": {
         "message": "これはLocalCDN側の制限ではなく、ChromiumベースブラウザのAPIサポートが不足しているためです。",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
+    },
+    "titleBadgeDefault": {
+        "message": "",
+        "description": "Default badge"
+    },
+    "titleBadgeHTMLFilter": {
+        "message": "",
+        "description": "HTML filter badge"
+    },
+    "titleBadgeMissingResource": {
+        "message": "",
+        "description": "Missing resource badge"
     }
 }

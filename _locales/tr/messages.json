@@ -470,5 +470,17 @@
     "helpLimitation": {
         "message": "Bu, LocalCDN'nin bir sınırlaması değildir, ancak Chromium tabanlı tarayıcılar için API desteği eksiktir.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
+    },
+    "titleBadgeDefault": {
+        "message": "",
+        "description": "Default badge"
+    },
+    "titleBadgeHTMLFilter": {
+        "message": "",
+        "description": "HTML filter badge"
+    },
+    "titleBadgeMissingResource": {
+        "message": "",
+        "description": "Missing resource badge"
     }
 }
