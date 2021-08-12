@@ -272,7 +272,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/ember.js/2.')) {
         return '2.18.2';
     } else if (type.startsWith('/ember.js/3.')) {
-        return '3.27.5';
+        return '3.28.0';
     } else if (type.startsWith('/ethjs')) {
         return '0.4.0';
     } else if (type.startsWith('/exif-js/2.')) {
