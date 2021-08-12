@@ -33,12 +33,16 @@ wrappers.setBadgeBackgroundColor = function (details) {
     if (chrome.browserAction.setBadgeBackgroundColor === undefined) {
         return;
     }
-    if (details.type === 'default') {
+
+    if (details.type === BadgeSetting.TYPE) {
         storageManager.type.set({[Setting.BADGE_DEFAULT_BACKGROUND_COLOR]: details.color});
         wrappers.badgeDefaultBackgroundColor = details.color;
-    } else if (details.type === 'html-filter') {
+    } else if (details.type === BadgeSettingHTMLFilter.TYPE) {
         storageManager.type.set({[Setting.BADGE_HTML_FILTER_BACKGROUND_COLOR]: details.color});
         wrappers.badgeColorHTMLfilter = details.color;
+    } else if (details.type === BadgeSettingMissingResource.TYPE) {
+        storageManager.type.set({[Setting.BADGE_MISSING_RESOURCE_BACKGROUND_COLOR]: details.color});
+        wrappers.badgeMissingResourceBackgroundColor = details.color;
     }
 };
 
@@ -46,12 +50,16 @@ wrappers.setBadgeTextColor = function (details) {
     if (chrome.browserAction.setBadgeTextColor === undefined) {
         return;
     }
-    if (details.type === 'default') {
+
+    if (details.type === BadgeSetting.TYPE) {
         storageManager.type.set({[Setting.BADGE_DEFAULT_TEXT_COLOR]: details.color});
         wrappers.badgeDefaultTextColor = details.color;
-    } else if (details.type === 'html-filter') {
+    } else if (details.type === BadgeSettingHTMLFilter.TYPE) {
         storageManager.type.set({[Setting.BADGE_HTML_FILTER_TEXT_COLOR]: details.color});
         wrappers.badgeDefaultTextColorHTMLfilter = details.color;
+    } else if (details.type === BadgeSettingMissingResource.TYPE) {
+        storageManager.type.set({[Setting.BADGE_MISSING_RESOURCE_TEXT_COLOR]: details.color});
+        wrappers.badgeMissingResourceTextColor = details.color;
     }
 };
 
@@ -79,15 +87,15 @@ wrappers.setBadgeColoring = function (tabId, value) {
         return;
     }
 
-    if (value === 'htmlFilterOn') {
+    if (value === BadgeSettingHTMLFilter.TYPE) {
         textColor = wrappers.badgeHTMLfilterTextColor;
         backgroundColor = wrappers.badgeHTMLFilterBackgroundColor;
-    } else if (value === 'default') {
+    } else if (value === BadgeSetting.TYPE) {
         textColor = wrappers.badgeDefaultTextColor;
         backgroundColor = wrappers.badgeDefaultBackgroundColor;
-    } else if (value === 'missing') {
-        textColor = 'white';
-        backgroundColor = 'blue';
+    } else if (value === BadgeSettingMissingResource.TYPE) {
+        textColor = wrappers.badgeMissingResourceTextColor;
+        backgroundColor = wrappers.badgeMissingResourceBackgroundColor;
     } else {
         return;
     }

@@ -51,11 +51,11 @@ stateManager.registerInjection = function (tabIdentifier, injection, url) {
     }
     if (stateManager.showIconBadge === true) {
         if (missingCount > 0 && stateManager.changeBadgeColorMissingResources) {
-            wrappers.setBadgeColoring(tabIdentifier, 'missing');
+            wrappers.setBadgeColoring(tabIdentifier, BadgeSettingMissingResource.TYPE);
         } else if (listedToManipulateDOM) {
-            wrappers.setBadgeColoring(tabIdentifier, 'htmlFilterOn');
+            wrappers.setBadgeColoring(tabIdentifier, BadgeSettingHTMLFilter.TYPE);
         } else {
-            wrappers.setBadgeColoring(tabIdentifier, 'default');
+            wrappers.setBadgeColoring(tabIdentifier, BadgeSetting.TYPE);
         }
         wrappers.setBadgeText(tabIdentifier, injectionCount);
     }

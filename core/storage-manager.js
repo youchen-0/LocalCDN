@@ -200,15 +200,10 @@ storageManager._validation = function (content) {
         }
     }
 
-    // set values directly
-    wrappers.setIcon({'path': imported['selectedIcon']}, 'Enabled');
-    storageManager.amountInjected = imported['amountInjected'];
-    storageManager.statistics = imported['internalStatisticsData'];
-
     storageManager.type.set(imported);
 
     alert(chrome.i18n.getMessage('dialogImportSuccessful'));
-    chrome.tabs.reload();
+    chrome.runtime.reload();
 };
 
 storageManager._validateDomainsAndStatistics = function (type, obj) {

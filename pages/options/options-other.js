@@ -44,8 +44,9 @@ optionsOther._renderIconSection = function (opt) {
         document.getElementById('icon-light').checked = true;
     }
     url = chrome.runtime.getURL(`icons/action/${selectedIcon.toLowerCase()}/icon38-default.png`);
-    document.getElementById('icon-badge-preview').src = url;
-    document.getElementById('html-icon-badge-preview').src = url;
+    document.getElementById(BadgeSetting.HTML_ICON_BADGE_PREVIEW).src = url;
+    document.getElementById(BadgeSettingHTMLFilter.HTML_ICON_BADGE_PREVIEW).src = url;
+    document.getElementById(BadgeSettingMissingResource.HTML_ICON_BADGE_PREVIEW).src = url;
 
     bgColor = opt.badgeDefaultBackgroundColor;
     txtColor = opt.badgeDefaultTextColor;
@@ -54,6 +55,10 @@ optionsOther._renderIconSection = function (opt) {
     bgColor = opt.badgeHTMLFilterBackgroundColor;
     txtColor = opt.badgeHTMLfilterTextColor;
     optionsOther._createBadge(BadgeSettingHTMLFilter, bgColor, txtColor);
+
+    bgColor = opt.badgeMissingResourceBackgroundColor;
+    txtColor = opt.badgeMissingResourceTextColor;
+    optionsOther._createBadge(BadgeSettingMissingResource, bgColor, txtColor);
 };
 
 optionsOther._createBadge = function (element, bgColor, txtColor) {
@@ -87,8 +92,9 @@ optionsOther._renderStorageSection = function (opt) {
 optionsOther._setIcon = function (optionValue) {
     wrappers.setIcon({'path': optionValue}, 'Enabled');
     let url = chrome.runtime.getURL(`icons/action/${optionValue.toLowerCase()}/icon38-default.png`);
-    document.getElementById('icon-badge-preview').src = url;
-    document.getElementById('html-icon-badge-preview').src = url;
+    document.getElementById(BadgeSetting.HTML_ICON_BADGE_PREVIEW).src = url;
+    document.getElementById(BadgeSettingHTMLFilter.HTML_ICON_BADGE_PREVIEW).src = url;
+    document.getElementById(BadgeSettingMissingResource.HTML_ICON_BADGE_PREVIEW).src = url;
 };
 
 optionsOther._preSelectStorage = function (type) {
@@ -139,19 +145,17 @@ optionsOther._colorPicker = function (element) {
 };
 
 optionsOther._setDefaultColor = function ({target}) {
-    let element;
-    if (target.id === 'restore-text-color' || target.id === 'restore-background-color') {
-        element = BadgeSetting;
-    } else {
-        element = BadgeSettingHTMLFilter;
-    }
+    let element = optionsOther._getBadgeElement(target.id);
+
     if (target.id === element.RESTORE_TEXT_COLOR) {
-        let txtColor = '#FFFFFF';
+        let txtColor = element.HEX_TEXT_COLOR;
+        wrappers.setBadgeTextColor({'type': element.TYPE, 'color': txtColor});
         document.getElementById(element.COUNTER_PREVIEW_BADGE).style.color = txtColor;
         document.getElementById(element.PRE_BADGED_TEXT_COLOR).style.backgroundColor = txtColor;
         document.getElementById(element.BADGED_TEXT_COLOR).value = txtColor;
-    } else if (target.id === 'restore-background-color') {
-        let bgColor = '#4A826C';
+    } else if (target.id === element.RESTORE_BACKGROUND_COLOR) {
+        let bgColor = element.HEX_BACKGROUND_COLOR;
+        wrappers.setBadgeBackgroundColor({'type': element.TYPE, 'color': bgColor});
         document.getElementById(element.COUNTER_PREVIEW_BADGE).style.backgroundColor = bgColor;
         document.getElementById(element.PRE_BADGED_BACKGROUND_COLOR).style.backgroundColor = bgColor;
         document.getElementById(element.BADGED_BACKGROUND_COLOR).value = bgColor;
@@ -159,19 +163,15 @@ optionsOther._setDefaultColor = function ({target}) {
 };
 
 optionsOther._onChangedHexColor = function ({target}) {
-    let element;
-    if (target.id === 'badged-text-color' || target.id === 'badged-background-color') {
-        element = BadgeSetting;
-    } else {
-        element = BadgeSettingHTMLFilter;
-    }
+    let element = optionsOther._getBadgeElement(target.id);
+
     if (/#([a-f0-9]{3}){1,2}\b/i.test(target.value)) {
         target.classList.remove('color-error');
         if (target.id === element.BADGED_TEXT_COLOR) {
             let txtColor = target.value;
             document.getElementById(element.COUNTER_PREVIEW_BADGE).style.color = txtColor;
             document.getElementById(element.PRE_BADGED_TEXT_COLOR).style.backgroundColor = txtColor;
-        } else {
+        } else if (target.id === element.BADGED_BACKGROUND_COLOR) {
             let bgColor = target.value;
             document.getElementById(element.COUNTER_PREVIEW_BADGE).style.backgroundColor = bgColor;
             document.getElementById(element.PRE_BADGED_BACKGROUND_COLOR).style.backgroundColor = bgColor;
@@ -181,9 +181,27 @@ optionsOther._onChangedHexColor = function ({target}) {
     }
 };
 
+optionsOther._getBadgeElement = function (targetId) {
+    switch (targetId) {
+        case BadgeSetting.RESTORE_TEXT_COLOR:
+        case BadgeSetting.RESTORE_BACKGROUND_COLOR:
+            return BadgeSetting;
+        case BadgeSettingHTMLFilter.RESTORE_TEXT_COLOR:
+        case BadgeSettingHTMLFilter.RESTORE_BACKGROUND_COLOR:
+            return BadgeSettingHTMLFilter;
+        case BadgeSettingMissingResource.RESTORE_TEXT_COLOR:
+        case BadgeSettingMissingResource.RESTORE_BACKGROUND_COLOR:
+            return BadgeSettingMissingResource;
+        default:
+            return undefined;
+    }
+};
+
 optionsOther.init = function (opt) {
     if (BrowserType.CHROMIUM) {
         document.getElementById('div-badged-text-color').style.display = 'none';
+        document.getElementById('html-div-badged-text-color').style.display = 'none';
+        document.getElementById('missing-div-badged-text-color').style.display = 'none';
     }
 
     document.getElementById('icon-default').addEventListener('change', options.onOptionChanged);

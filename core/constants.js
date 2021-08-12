@@ -60,6 +60,48 @@ const Resource = {
     'VERSION_PLACEHOLDER': '{version}'
 };
 
+const BadgeSetting = {
+    'TYPE': 'default',
+    'COUNTER_PREVIEW_BADGE': 'counter-preview-badge',
+    'HTML_ICON_BADGE_PREVIEW': 'icon-badge-preview',
+    'PRE_BADGED_BACKGROUND_COLOR': 'pre-badged-background-color',
+    'BADGED_BACKGROUND_COLOR': 'badged-background-color',
+    'PRE_BADGED_TEXT_COLOR': 'pre-badged-text-color',
+    'BADGED_TEXT_COLOR': 'badged-text-color',
+    'RESTORE_BACKGROUND_COLOR': 'restore-background-color',
+    'RESTORE_TEXT_COLOR': 'restore-text-color',
+    'HEX_BACKGROUND_COLOR': '#4A826C',
+    'HEX_TEXT_COLOR': '#FFFFFF',
+};
+
+const BadgeSettingHTMLFilter = {
+    'TYPE': 'html-filter',
+    'COUNTER_PREVIEW_BADGE': 'html-counter-preview-badge',
+    'HTML_ICON_BADGE_PREVIEW': 'html-icon-badge-preview',
+    'PRE_BADGED_BACKGROUND_COLOR': 'html-pre-badged-background-color',
+    'BADGED_BACKGROUND_COLOR': 'html-badged-background-color',
+    'PRE_BADGED_TEXT_COLOR': 'html-pre-badged-text-color',
+    'BADGED_TEXT_COLOR': 'html-badged-text-color',
+    'RESTORE_BACKGROUND_COLOR': 'html-restore-background-color',
+    'RESTORE_TEXT_COLOR': 'html-restore-text-color',
+    'HEX_BACKGROUND_COLOR': '#FF0000',
+    'HEX_TEXT_COLOR': '#FFFFFF',
+};
+
+const BadgeSettingMissingResource = {
+    'TYPE': 'missing-resource',
+    'COUNTER_PREVIEW_BADGE': 'missing-counter-preview-badge',
+    'HTML_ICON_BADGE_PREVIEW': 'missing-icon-badge-preview',
+    'PRE_BADGED_BACKGROUND_COLOR': 'missing-pre-badged-background-color',
+    'BADGED_BACKGROUND_COLOR': 'missing-badged-background-color',
+    'PRE_BADGED_TEXT_COLOR': 'missing-pre-badged-text-color',
+    'BADGED_TEXT_COLOR': 'missing-badged-text-color',
+    'RESTORE_BACKGROUND_COLOR': 'missing-restore-background-color',
+    'RESTORE_TEXT_COLOR': 'missing-restore-text-color',
+    'HEX_BACKGROUND_COLOR': '#0000FF',
+    'HEX_TEXT_COLOR': '#FFFFFF',
+};
+
 const Setting = {
     'AMOUNT_INJECTED': 'amountInjected',
     'BLOCK_MISSING': 'blockMissing',
@@ -85,6 +127,8 @@ const Setting = {
     'BADGE_DEFAULT_TEXT_COLOR': 'badgeDefaultTextColor',
     'BADGE_HTML_FILTER_BACKGROUND_COLOR': 'badgeHTMLFilterBackgroundColor',
     'BADGE_HTML_FILTER_TEXT_COLOR': 'badgeHTMLfilterTextColor',
+    'BADGE_MISSING_RESOURCE_BACKGROUND_COLOR': 'badgeMissingResourceBackgroundColor',
+    'BADGE_MISSING_RESOURCE_TEXT_COLOR': 'badgeMissingResourceTextColor',
     'HIDE_DONATION_BUTTON': 'hideDonationButton',
     'CHANGE_BADGE_COLOR_MISSING_RESOURCES': 'changeBadgeColorMissingResources',
 };
@@ -110,10 +154,12 @@ const SettingDefaults = {
     [Setting.STRIP_METADATA]: true,
     [Setting.ALLOWLISTED_DOMAINS]: {},
     [Setting.XHR_TEST_DOMAIN]: Address.LOCALCDN,
-    [Setting.BADGE_DEFAULT_BACKGROUND_COLOR]: '#4A826C',
-    [Setting.BADGE_DEFAULT_TEXT_COLOR]: '#FFFFFF',
-    [Setting.BADGE_HTML_FILTER_BACKGROUND_COLOR]: '#4A826C',
-    [Setting.BADGE_HTML_FILTER_TEXT_COLOR]: '#FFFFFF',
+    [Setting.BADGE_DEFAULT_BACKGROUND_COLOR]: BadgeSetting.HEX_BACKGROUND_COLOR,
+    [Setting.BADGE_DEFAULT_TEXT_COLOR]: BadgeSetting.HEX_TEXT_COLOR,
+    [Setting.BADGE_HTML_FILTER_BACKGROUND_COLOR]: BadgeSettingHTMLFilter.HEX_BACKGROUND_COLOR,
+    [Setting.BADGE_HTML_FILTER_TEXT_COLOR]: BadgeSettingHTMLFilter.HEX_TEXT_COLOR,
+    [Setting.BADGE_MISSING_RESOURCE_BACKGROUND_COLOR]: BadgeSettingMissingResource.HEX_BACKGROUND_COLOR,
+    [Setting.BADGE_MISSING_RESOURCE_TEXT_COLOR]: BadgeSettingMissingResource.HEX_TEXT_COLOR,
     [Setting.HIDE_DONATION_BUTTON]: false,
     [Setting.CHANGE_BADGE_COLOR_MISSING_RESOURCES]: false,
 };
@@ -203,28 +249,6 @@ const IconType = {
             '64': chrome.runtime.getURL('icons/action/grey/icon64-disabled.png')
         }
     }
-};
-
-const BadgeSetting = {
-    'TYPE': 'default',
-    'COUNTER_PREVIEW_BADGE': 'counter-preview-badge',
-    'PRE_BADGED_BACKGROUND_COLOR': 'pre-badged-background-color',
-    'BADGED_BACKGROUND_COLOR': 'badged-background-color',
-    'PRE_BADGED_TEXT_COLOR': 'pre-badged-text-color',
-    'BADGED_TEXT_COLOR': 'badged-text-color',
-    'RESTORE_BACKGROUND_COLOR': 'restore-background-color',
-    'RESTORE_TEXT_COLOR': 'restore-text-color',
-};
-
-const BadgeSettingHTMLFilter = {
-    'TYPE': 'html-filter',
-    'COUNTER_PREVIEW_BADGE': 'html-counter-preview-badge',
-    'PRE_BADGED_BACKGROUND_COLOR': 'html-pre-badged-background-color',
-    'BADGED_BACKGROUND_COLOR': 'html-badged-background-color',
-    'PRE_BADGED_TEXT_COLOR': 'html-pre-badged-text-color',
-    'BADGED_TEXT_COLOR': 'html-badged-text-color',
-    'RESTORE_BACKGROUND_COLOR': 'html-restore-background-color',
-    'RESTORE_TEXT_COLOR': 'html-restore-text-color',
 };
 
 const Regex = {

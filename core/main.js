@@ -83,6 +83,8 @@ main._initializeSettings = function () {
         wrappers.badgeDefaultBackgroundColor = items.badgeDefaultBackgroundColor;
         wrappers.badgeHTMLfilterTextColor = items.badgeHTMLfilterTextColor;
         wrappers.badgeHTMLFilterBackgroundColor = items.badgeHTMLFilterBackgroundColor;
+        wrappers.badgeMissingResourceTextColor = items.badgeMissingResourceTextColor;
+        wrappers.badgeMissingResourceBackgroundColor = items.badgeMissingResourceBackgroundColor;
 
         wrappers.setBadgeTextColor({'color': items.badgeDefaultTextColor, 'type': 'default'});
         wrappers.setBadgeBackgroundColor({'color': items.badgeDefaultBackgroundColor, 'type': 'default'});

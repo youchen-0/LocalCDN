@@ -191,12 +191,16 @@ body {
     padding: 0 30px 0 0;
 }
 
-#badge-preview-top, #html-badge-preview-top {
+#badge-preview-top,
+#html-badge-preview-top,
+#missing-badge-preview-top {
     position: relative;
     width: 38px;
 }
 
-#counter-preview-badge, #html-counter-preview-badge {
+#counter-preview-badge,
+#html-counter-preview-badge,
+#missing-counter-preview-badge {
     background: black;
     border-radius: 5px;
     color: white;
@@ -208,13 +212,16 @@ body {
 }
 
 #pre-badged-background-color, #pre-badged-text-color,
-#html-pre-badged-background-color, #html-pre-badged-text-color {
+#html-pre-badged-background-color, #html-pre-badged-text-color,
+#missing-pre-badged-background-color, #missing-pre-badged-text-color  {
     height: 30px;
     margin-right: 5px;
     width: 30px;
 }
 
-#icon-badge-preview, #html-icon-badge-preview {
+#icon-badge-preview,
+#html-icon-badge-preview,
+#missing-icon-badge-preview {
     margin-top: 5px;
 }
 
@@ -238,7 +245,8 @@ div[class="color-picker:a"] {
 }
 
 #badged-background-color, #badged-text-color,
-#html-badged-background-color, #html-badged-text-color {
+#html-badged-background-color, #html-badged-text-color,
+#missing-badged-background-color, #missing-badged-text-color {
     max-width: 150px;
 }
 
