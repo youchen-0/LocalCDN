@@ -472,15 +472,15 @@
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "既定のバッジ",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "HTMLフィルターバッジ",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "紛失したリソースバッジ",
         "description": "Missing resource badge"
     }
 }
