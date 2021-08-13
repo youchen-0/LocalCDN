@@ -260,7 +260,7 @@
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "Cambia el color de la insignia si faltan recursos.",
+        "message": "Cambia el color del icono si faltan recursos.",
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
@@ -472,15 +472,15 @@
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "Icono predeterminado",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "Icono en filtro HTML",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "Icono en recursos que faltan",
         "description": "Missing resource badge"
     }
 }
