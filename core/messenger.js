@@ -61,6 +61,10 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
             sendResponse({'value': Boolean(helpers.checkAllowlisted(value, requestAnalyzer.domainsManipulateDOM))});
             return MessageResponse.SYNCHRONOUS;
 
+        case 'domain:fetch-is-google-fonts':
+            sendResponse({'value': Boolean(helpers.checkAllowlisted(value, interceptor.allowedDomainsGoogleFonts))});
+            return MessageResponse.SYNCHRONOUS;
+
         case 'allowlist:add-domain':
             stateManager.addDomainToAllowlist(value).then(function () {
                 sendResponse({'value': true});
@@ -85,6 +89,18 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
             });
             return MessageResponse.ASYNCHRONOUS;
 
+        case 'google-fonts:add-domain':
+            stateManager.addDomainToGoogleFontsList(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
+
+        case 'google-fonts:remove-domain':
+            stateManager.removeDomainFromGoogleFontsList(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
+
         case 'statistic:delete':
             storageManager.statistics = {};
             break;
@@ -103,6 +119,7 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
             popup.negateHtmlFilterList = stateManager.getInvertOption;
             popup.loggingStatus = stateManager.logging;
             popup.hideDonationButton = stateManager.hideDonationButton;
+            popup.blockGoogleFonts = interceptor.blockGoogleFonts;
             sendResponse({'data': popup});
             return MessageResponse.ASYNCHRONOUS;
     }

@@ -270,7 +270,7 @@ footer {
 /**
  * Toggles
  */
-#protection-toggle, #manipulateDOM-toggle {
+#protection-toggle, #manipulateDOM-toggle, #google-fonts-toggle {
     cursor: pointer;
     float: right;
     -moz-user-select: none;

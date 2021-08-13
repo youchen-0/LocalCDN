@@ -43,6 +43,7 @@ popup._renderContents = function () {
     popup._determineTargetTab()
         .then(popup._determineDomainAllowlistStatus)
         .then(popup._determineStatusManipulateDOM)
+        .then(popup._determineStatusGoogleFonts)
         .then(popup._determineResourceInjections)
         .then(popup._determineNegateHtmlFilterOption)
         .then(popup._renderContextualContents);
@@ -101,9 +102,11 @@ popup._renderContextualContents = function () {
 
 popup._renderDomainAllowlistPanel = function () {
     let websiteContextElement, protectionToggleElement, domainIndicatorElement,
-        manipulateDOMToggleElement, manipulateDOMToggleStyle;
+        manipulateDOMToggleElement, manipulateDOMToggleStyle, googleFontsToggleElement, googleFontsToggleStyle;
 
     websiteContextElement = document.getElementById('website-context');
+    websiteContextElement.setAttribute('class', 'panel');
+
     protectionToggleElement = document.getElementById('protection-toggle-switch');
     domainIndicatorElement = document.getElementById('domain-indicator');
 
@@ -112,35 +115,55 @@ popup._renderDomainAllowlistPanel = function () {
     manipulateDOMToggleElement = document.getElementById('manipulateDOM-toggle-switch');
     manipulateDOMToggleStyle = document.getElementById('toggle-switch-manipulateDOM');
 
+    googleFontsToggleElement = document.getElementById('google-fonts-toggle-switch');
+    googleFontsToggleStyle = document.getElementById('toggle-switch-google-fonts');
+
     if (popup._domainIsAllowlisted === true) {
         manipulateDOMToggleElement.disabled = true;
-        protectionToggleElement.checked = false;
-
         manipulateDOMToggleStyle.setAttribute('class', 'slider-disabled');
+
+        googleFontsToggleElement.disabled = true;
+        googleFontsToggleStyle.setAttribute('class', 'slider-disabled');
+
+        protectionToggleElement.checked = false;
         protectionToggleElement.addEventListener('click', popup._enableProtection);
-    } else {
-        manipulateDOMToggleElement.disabled = false;
-        manipulateDOMToggleStyle.setAttribute('class', 'slider');
-
-        protectionToggleElement.checked = true;
-        protectionToggleElement.addEventListener('click', popup._disableProtection);
-
-        if (popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
-            manipulateDOMToggleElement.checked = true;
-            manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
-        } else if (!popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
-            manipulateDOMToggleElement.checked = false;
-            manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
-        } else if (popup.negateHtmlFilterList && popup._domainManipulateDOM) {
-            manipulateDOMToggleElement.checked = false;
-            manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
-        } else if (!popup.negateHtmlFilterList && popup._domainManipulateDOM) {
-            manipulateDOMToggleElement.checked = true;
-            manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
-        }
+        return;
     }
 
-    websiteContextElement.setAttribute('class', 'panel');
+    if (popup._blockGoogleFonts === false) {
+        document.getElementById('div-google-fonts').hidden = true;
+    }
+
+    googleFontsToggleStyle.setAttribute('class', 'slider');
+    googleFontsToggleElement.disabled = false;
+
+    if (popup._domainGoogleFonts) {
+        googleFontsToggleElement.checked = true;
+        googleFontsToggleElement.addEventListener('click', popup._disableGoogleFonts);
+    } else {
+        googleFontsToggleElement.checked = false;
+        googleFontsToggleElement.addEventListener('click', popup._enableGoogleFonts);
+    }
+
+    manipulateDOMToggleElement.disabled = false;
+    manipulateDOMToggleStyle.setAttribute('class', 'slider');
+
+    protectionToggleElement.checked = true;
+    protectionToggleElement.addEventListener('click', popup._disableProtection);
+
+    if (popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
+        manipulateDOMToggleElement.checked = true;
+        manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
+    } else if (!popup.negateHtmlFilterList && !popup._domainManipulateDOM) {
+        manipulateDOMToggleElement.checked = false;
+        manipulateDOMToggleElement.addEventListener('click', popup._enableManipulateDOM);
+    } else if (popup.negateHtmlFilterList && popup._domainManipulateDOM) {
+        manipulateDOMToggleElement.checked = false;
+        manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
+    } else if (!popup.negateHtmlFilterList && popup._domainManipulateDOM) {
+        manipulateDOMToggleElement.checked = true;
+        manipulateDOMToggleElement.addEventListener('click', popup._disableManipulateDOM);
+    }
 };
 
 popup._renderInjectionPanel = function (groupedInjections) {
@@ -196,6 +219,28 @@ popup._disableManipulateDOM = function () {
     });
 };
 
+popup._enableGoogleFonts = function () {
+    let message = {
+        'topic': 'google-fonts:add-domain',
+        'value': popup._domain,
+    };
+
+    chrome.runtime.sendMessage(message, function () {
+        popup._onToggled();
+    });
+};
+
+popup._disableGoogleFonts = function () {
+    let message = {
+        'topic': 'google-fonts:remove-domain',
+        'value': popup._domain,
+    };
+
+    chrome.runtime.sendMessage(message, function () {
+        popup._onToggled();
+    });
+};
+
 popup._determineDomainAllowlistStatus = function () {
     return new Promise((resolve) => {
         let message = {
@@ -223,6 +268,20 @@ popup._determineStatusManipulateDOM = function () {
 
         chrome.runtime.sendMessage(message, function (response) {
             popup._domainManipulateDOM = response.value;
+            resolve();
+        });
+    });
+};
+
+popup._determineStatusGoogleFonts = function () {
+    return new Promise((resolve) => {
+        let message = {
+            'topic': 'domain:fetch-is-google-fonts',
+            'value': popup._domain,
+        };
+
+        chrome.runtime.sendMessage(message, function (response) {
+            popup._domainGoogleFonts = response.value;
             resolve();
         });
     });
@@ -266,6 +325,7 @@ popup._getData = function () {
             popup.negateHtmlFilterList = items.data.negateHtmlFilterList;
             popup._loggingStatus = items.data.loggingStatus;
             popup.hideDonationButton = items.data.hideDonationButton;
+            popup._blockGoogleFonts = items.data.blockGoogleFonts;
             resolve();
         });
     });
@@ -558,5 +618,6 @@ popup._onLoggingButtonClicked = function () {
 popup.negateHtmlFilterList = false;
 popup._statisticsStatus = false;
 popup._loggingStatus = false;
+popup._blockGoogleFonts = true;
 
 document.addEventListener('DOMContentLoaded', popup._onDocumentLoaded);

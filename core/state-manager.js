@@ -123,6 +123,25 @@ stateManager.removeDomainFromManipulateDOMlist = function (domain) {
     });
 };
 
+stateManager.addDomainToGoogleFontsList = function (domain) {
+    return new Promise((resolve) => {
+        let allowedDomainsGoogleFonts = interceptor.allowedDomainsGoogleFonts;
+
+        allowedDomainsGoogleFonts[domain] = true;
+
+        storageManager.type.set({allowedDomainsGoogleFonts}, resolve);
+    });
+};
+
+stateManager.removeDomainFromGoogleFontsList = function (domain) {
+    return new Promise((resolve) => {
+        let allowedDomainsGoogleFonts = interceptor.allowedDomainsGoogleFonts;
+
+        delete allowedDomainsGoogleFonts[domain];
+
+        storageManager.type.set({allowedDomainsGoogleFonts}, resolve);
+    });
+};
 
 /**
  * Private Methods
