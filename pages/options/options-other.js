@@ -147,6 +147,10 @@ optionsOther._colorPicker = function (element) {
 optionsOther._setDefaultColor = function ({target}) {
     let element = optionsOther._getBadgeElement(target.id);
 
+    if (element === undefined) {
+        return;
+    }
+
     if (target.id === element.RESTORE_TEXT_COLOR) {
         let txtColor = element.HEX_TEXT_COLOR;
         wrappers.setBadgeTextColor({'type': element.TYPE, 'color': txtColor});
@@ -164,6 +168,10 @@ optionsOther._setDefaultColor = function ({target}) {
 
 optionsOther._onChangedHexColor = function ({target}) {
     let element = optionsOther._getBadgeElement(target.id);
+
+    if (element === undefined) {
+        return;
+    }
 
     if (/#([a-f0-9]{3}){1,2}\b/i.test(target.value)) {
         target.classList.remove('color-error');
@@ -183,12 +191,18 @@ optionsOther._onChangedHexColor = function ({target}) {
 
 optionsOther._getBadgeElement = function (targetId) {
     switch (targetId) {
+        case BadgeSetting.BADGED_TEXT_COLOR:
+        case BadgeSetting.BADGED_BACKGROUND_COLOR:
         case BadgeSetting.RESTORE_TEXT_COLOR:
         case BadgeSetting.RESTORE_BACKGROUND_COLOR:
             return BadgeSetting;
+        case BadgeSettingHTMLFilter.BADGED_TEXT_COLOR:
+        case BadgeSettingHTMLFilter.BADGED_BACKGROUND_COLOR:
         case BadgeSettingHTMLFilter.RESTORE_TEXT_COLOR:
         case BadgeSettingHTMLFilter.RESTORE_BACKGROUND_COLOR:
             return BadgeSettingHTMLFilter;
+        case BadgeSettingMissingResource.BADGED_TEXT_COLOR:
+        case BadgeSettingMissingResource.BADGED_BACKGROUND_COLOR:
         case BadgeSettingMissingResource.RESTORE_TEXT_COLOR:
         case BadgeSettingMissingResource.RESTORE_BACKGROUND_COLOR:
             return BadgeSettingMissingResource;
