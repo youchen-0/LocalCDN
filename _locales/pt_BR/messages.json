@@ -470,5 +470,17 @@
     "helpLimitation": {
         "message": "Isso não é uma limitação do LocalCDN, mas à falta de suporte à API em navegadores baseado em Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
+    },
+    "titleBadgeDefault": {
+        "message": "Ícone padrão",
+        "description": "Default badge"
+    },
+    "titleBadgeHTMLFilter": {
+        "message": "Ícone de filtro HTML",
+        "description": "HTML filter badge"
+    },
+    "titleBadgeMissingResource": {
+        "message": "Ícone de recursos ausentes",
+        "description": "Missing resource badge"
     }
 }

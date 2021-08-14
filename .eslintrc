@@ -28,6 +28,9 @@
         "EncodingTypes": true,
         "ExtraInfoSpec": true,
         "MathJaxFiles": true,
+        "BadgeSetting": true,
+        "BadgeSettingHTMLFilter": true,
+        "BadgeSettingMissingResource": true,
 
         "fileGuard": true,
         "files": true,

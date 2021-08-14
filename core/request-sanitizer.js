@@ -63,7 +63,7 @@ requestSanitizer._stripMetadata = function (requestDetails) {
 
     sensitiveHeaders = [Header.COOKIE, Header.ORIGIN, Header.REFERER];
     initiatorDomain = helpers.extractDomainFromUrl(requestDetails.initiator, true);
-    allowlistedDomains = helpers.checkAllowlisted(initiatorDomain);
+    allowlistedDomains = helpers.checkAllowlisted(initiatorDomain, requestAnalyzer.allowlistedDomains);
 
     if (allowlistedDomains) {
         return {

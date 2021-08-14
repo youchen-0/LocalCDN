@@ -84,8 +84,12 @@ options._renderOptionsPanel = function () {
 
     other = {
         'selectedIcon': options._optionValues.selectedIcon,
-        'badgeColor': options._optionValues.badgeColor,
-        'badgeTextColor': options._optionValues.badgeTextColor,
+        'badgeDefaultBackgroundColor': options._optionValues.badgeDefaultBackgroundColor,
+        'badgeDefaultTextColor': options._optionValues.badgeDefaultTextColor,
+        'badgeHTMLFilterBackgroundColor': options._optionValues.badgeHTMLFilterBackgroundColor,
+        'badgeHTMLfilterTextColor': options._optionValues.badgeHTMLfilterTextColor,
+        'badgeMissingResourceBackgroundColor': options._optionValues.badgeMissingResourceBackgroundColor,
+        'badgeMissingResourceTextColor': options._optionValues.badgeMissingResourceTextColor,
         'storageType': options._optionValues.storageType
     };
 

@@ -54,8 +54,8 @@ updates._onDocumentLoaded = function () {
         ['copyRuleSet']: document.getElementById('button-copy-rule-set'),
     };
 
-    for (let i = 0; i < updateElements.ruleSets.length; i++) {
-        updateElements.ruleSets[i].addEventListener('change', ruleGenerator.openRuleSet);
+    for (let ruleSets of updateElements.ruleSets) {
+        ruleSets.addEventListener('change', ruleGenerator.openRuleSet);
     }
 
     updateElements.copyRuleSet.addEventListener('click', ruleGenerator.copyRuleSet);

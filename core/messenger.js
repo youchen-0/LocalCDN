@@ -49,16 +49,20 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
                 'code': `window.addEventListener('load', () => {
                     document.getElementById('domain').value = '${message.url}';
                 });`,
-                'runAt': 'document_start'
+                'runAt': 'document_idle'
             });
-            break;
+            return MessageResponse.SYNCHRONOUS;
 
         case 'domain:fetch-is-allowlisted':
-            sendResponse({'value': Boolean(helpers.checkAllowlisted(value))});
+            sendResponse({'value': Boolean(helpers.checkAllowlisted(value, requestAnalyzer.allowlistedDomains))});
             return MessageResponse.SYNCHRONOUS;
 
         case 'domain:fetch-is-manipulateDOM':
-            sendResponse({'value': Boolean(requestAnalyzer.domainsManipulateDOM[value])});
+            sendResponse({'value': Boolean(helpers.checkAllowlisted(value, requestAnalyzer.domainsManipulateDOM))});
+            return MessageResponse.SYNCHRONOUS;
+
+        case 'domain:fetch-is-google-fonts':
+            sendResponse({'value': Boolean(helpers.checkAllowlisted(value, interceptor.allowedDomainsGoogleFonts))});
             return MessageResponse.SYNCHRONOUS;
 
         case 'allowlist:add-domain':
@@ -85,6 +89,18 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
             });
             return MessageResponse.ASYNCHRONOUS;
 
+        case 'google-fonts:add-domain':
+            stateManager.addDomainToGoogleFontsList(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
+
+        case 'google-fonts:remove-domain':
+            stateManager.removeDomainFromGoogleFontsList(value).then(function () {
+                sendResponse({'value': true});
+            });
+            return MessageResponse.ASYNCHRONOUS;
+
         case 'statistic:delete':
             storageManager.statistics = {};
             break;
@@ -103,6 +119,7 @@ messenger._handleMessageReceived = function (message, sender, sendResponse) {
             popup.negateHtmlFilterList = stateManager.getInvertOption;
             popup.loggingStatus = stateManager.logging;
             popup.hideDonationButton = stateManager.hideDonationButton;
+            popup.blockGoogleFonts = interceptor.blockGoogleFonts;
             sendResponse({'data': popup});
             return MessageResponse.ASYNCHRONOUS;
     }

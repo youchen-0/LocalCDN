@@ -72,12 +72,22 @@ main._initializeSettings = function () {
             'path': stateManager.selectedIcon
         }, 'Enabled');
 
-        storageManager.amountInjected = items.amountInjected || 0;
-        interceptor.xhrTestDomain = items.xhrTestDomain || Address.LOCALCDN;
-        interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts || {};
-        interceptor.blockMissing = items.blockMissing === undefined ? false : items.blockMissing;
-        interceptor.blockGoogleFonts = items.blockGoogleFonts === undefined ? true : items.blockGoogleFonts;
-        requestAnalyzer.allowlistedDomains = items.allowlistedDomains || {};
+        storageManager.amountInjected = items.amountInjected;
+        interceptor.xhrTestDomain = items.xhrTestDomain;
+        interceptor.allowedDomainsGoogleFonts = items.allowedDomainsGoogleFonts;
+        interceptor.blockMissing = items.blockMissing;
+        interceptor.blockGoogleFonts = items.blockGoogleFonts;
+        requestAnalyzer.allowlistedDomains = items.allowlistedDomains;
+
+        wrappers.badgeDefaultTextColor = items.badgeDefaultTextColor;
+        wrappers.badgeDefaultBackgroundColor = items.badgeDefaultBackgroundColor;
+        wrappers.badgeHTMLfilterTextColor = items.badgeHTMLfilterTextColor;
+        wrappers.badgeHTMLFilterBackgroundColor = items.badgeHTMLFilterBackgroundColor;
+        wrappers.badgeMissingResourceTextColor = items.badgeMissingResourceTextColor;
+        wrappers.badgeMissingResourceBackgroundColor = items.badgeMissingResourceBackgroundColor;
+
+        wrappers.setBadgeTextColor({'color': items.badgeDefaultTextColor, 'type': 'default'});
+        wrappers.setBadgeBackgroundColor({'color': items.badgeDefaultBackgroundColor, 'type': 'default'});
 
         storageManager.type.set(items);
     });
@@ -101,9 +111,21 @@ main._showReleaseNotes = function (details) {
         storageManager.type.get(null, function (items) {
             let mappingUpdate = items.lastMappingUpdate !== mappings.lastMappingUpdate;
 
+            // Migrate old keys to new keys https://codeberg.org/nobody/LocalCDN/issues/613
+            if (items.badgeDefaultBackgroundColor === undefined) {
+                items.badgeDefaultBackgroundColor = items.badgeColor;
+                delete items.badgeColor;
+            }
+
+            // Migrate old keys to new keys https://codeberg.org/nobody/LocalCDN/issues/613
+            if (items.badgeDefaultTextColor === undefined) {
+                items.badgeDefaultTextColor = items.badgeTextColor;
+                delete items.badgeTextColor;
+            }
+
             // Remove old keys
             for (const key of Object.keys(items)) {
-                if (!(key in SettingDefaults)) {
+                if (!(key in SettingDefaults) && key !== undefined) {
                     delete items[key];
                 }
             }
@@ -113,7 +135,6 @@ main._showReleaseNotes = function (details) {
             // Updated mappings.js
             if (mappingUpdate) {
                 items.lastMappingUpdate = mappings.lastMappingUpdate;
-                storageManager.type.set(items);
             }
 
             if ((mappingUpdate && items.updateNotification === 1) || items.updateNotification === 2) {
@@ -123,8 +144,8 @@ main._showReleaseNotes = function (details) {
                 });
             } else {
                 // No mappings.js update
-
             }
+            storageManager.type.set(items);
         });
     }
 };

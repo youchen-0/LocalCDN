@@ -30,12 +30,15 @@ var stateManager = {};
  * Public Methods
  */
 
-stateManager.registerInjection = function (tabIdentifier, injection) {
-    let injectionIdentifier, registeredTab, injectionCount, missingCount;
+stateManager.registerInjection = function (tabIdentifier, injection, url) {
+    let injectionIdentifier, registeredTab, injectionCount, missingCount, initiatorDomain, listedToManipulateDOM;
 
     injectionIdentifier = injection.source + injection.path + injection.version;
     registeredTab = stateManager.tabs[tabIdentifier];
     registeredTab.injections[injectionIdentifier] = injection;
+
+    initiatorDomain = helpers.extractDomainFromUrl(url, true) || Address.EXAMPLE;
+    listedToManipulateDOM = stateManager._domainIsListed(initiatorDomain, 'manipulate-dom');
 
     injectionCount = Object.keys(registeredTab.injections).length || 0;
     missingCount = registeredTab.missing || 0;
@@ -48,10 +51,13 @@ stateManager.registerInjection = function (tabIdentifier, injection) {
     }
     if (stateManager.showIconBadge === true) {
         if (missingCount > 0 && stateManager.changeBadgeColorMissingResources) {
-            wrappers.setBadgeMissing(tabIdentifier, injectionCount);
+            wrappers.setBadgeColoring(tabIdentifier, BadgeSettingMissingResource.TYPE);
+        } else if (listedToManipulateDOM) {
+            wrappers.setBadgeColoring(tabIdentifier, BadgeSettingHTMLFilter.TYPE);
         } else {
-            wrappers.defaultBadge(tabIdentifier, injectionCount);
+            wrappers.setBadgeColoring(tabIdentifier, BadgeSetting.TYPE);
         }
+        wrappers.setBadgeText(tabIdentifier, injectionCount);
     }
     if (isNaN(storageManager.amountInjected)) {
         storageManager.type.get(Setting.AMOUNT_INJECTED, function (items) {
@@ -117,6 +123,25 @@ stateManager.removeDomainFromManipulateDOMlist = function (domain) {
     });
 };
 
+stateManager.addDomainToGoogleFontsList = function (domain) {
+    return new Promise((resolve) => {
+        let allowedDomainsGoogleFonts = interceptor.allowedDomainsGoogleFonts;
+
+        allowedDomainsGoogleFonts[domain] = true;
+
+        storageManager.type.set({allowedDomainsGoogleFonts}, resolve);
+    });
+};
+
+stateManager.removeDomainFromGoogleFontsList = function (domain) {
+    return new Promise((resolve) => {
+        let allowedDomainsGoogleFonts = interceptor.allowedDomainsGoogleFonts;
+
+        delete allowedDomainsGoogleFonts[domain];
+
+        storageManager.type.set({allowedDomainsGoogleFonts}, resolve);
+    });
+};
 
 /**
  * Private Methods
@@ -208,14 +233,19 @@ stateManager._handleStorageChanged = function (changes) {
         stateManager.changeBadgeColorMissingResources = changes.changeBadgeColorMissingResources.newValue;
     } else if (Setting.LOGGING in changes) {
         stateManager.logging = changes.enableLogging.newValue;
+    } else if (Setting.BADGE_DEFAULT_TEXT_COLOR in changes) {
+        wrappers.badgeDefaultTextColor = changes.badgeDefaultTextColor.newValue;
+    } else if (Setting.BADGE_DEFAULT_BACKGROUND_COLOR in changes) {
+        wrappers.badgeDefaultBackgroundColor = changes.badgeDefaultBackgroundColor.newValue;
+    } else if (Setting.BADGE_HTML_FILTER_TEXT_COLOR in changes) {
+        wrappers.badgeHTMLfilterTextColor = changes.badgeHTMLfilterTextColor.newValue;
+    } else if (Setting.BADGE_HTML_FILTER_BACKGROUND_COLOR in changes) {
+        wrappers.badgeHTMLFilterBackgroundColor = changes.badgeHTMLFilterBackgroundColor.newValue;
     }
 };
 
 stateManager._clearBadgeText = function (tabIdentifier) {
-    wrappers.setBadgeText({
-        'tabId': tabIdentifier,
-        'text': ''
-    });
+    wrappers.setBadgeText(tabIdentifier, '');
 };
 
 stateManager._removeIconBadgeFromTab = function (tab) {
@@ -230,7 +260,7 @@ stateManager._domainIsListed = function (domain, listname) {
             allowlistRecord = requestAnalyzer.domainsManipulateDOM[domain];
             isAllowlisted = Boolean(allowlistRecord);
         } else {
-            allowlistRecord = helpers.checkAllowlisted(domain);
+            allowlistRecord = helpers.checkAllowlisted(domain, requestAnalyzer.allowlistedDomains);
             isAllowlisted = Boolean(allowlistRecord);
         }
         return isAllowlisted;
@@ -328,7 +358,11 @@ chrome.webRequest.onErrorOccurred.addListener(function (requestDetails) {
 chrome.webRequest.onBeforeRedirect.addListener(function (requestDetails) {
     let knownRequest = stateManager.requests[requestDetails.requestId];
     if (knownRequest) {
-        stateManager.registerInjection(knownRequest.tabIdentifier, knownRequest.targetDetails);
+        stateManager.registerInjection(
+            knownRequest.tabIdentifier,
+            knownRequest.targetDetails,
+            requestDetails.originUrl
+        );
         delete stateManager.requests[requestDetails.requestId];
     }
 }, {'urls': [Address.ANY]});

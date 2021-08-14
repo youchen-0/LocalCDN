@@ -202,13 +202,25 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'bundle': 'Materialize'
         };
     } else if (/cdn\.jsdelivr\.net\/npm\/vue@(2|3)/.test(CompleteURL)) {
-        let version = CompleteURL.slice(-1);
+        let version = CompleteURL.match(Resource.VERSION_EXPRESSION);
         lastVersion = targets.setLastVersion(`/vue/${version}.`);
+        if (lastVersion === false) {
+            return false;
+        }
         return {
             'source': channelHost,
             'versionDelivered': lastVersion,
             'versionRequested': lastVersion,
             'path': `resources/vue/${lastVersion}/vue.min.jsm`,
+            'bundle': ''
+        };
+    } else if (CompleteURL.startsWith('cdn.jsdelivr.net/npm/exif-js')) {
+        lastVersion = targets.setLastVersion('/exif-js/2.');
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'versionRequested': lastVersion,
+            'path': `resources/exif-js/${lastVersion}/exif.min.jsm`,
             'bundle': ''
         };
     } else {

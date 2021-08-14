@@ -146,6 +146,13 @@ var resources = {
     'animejs': {
         'path': 'resources/animejs/{version}/anime.min.jsm'
     },
+    // aos [Deprecated]
+    'aosCSS': {
+        'path': 'resources/aos/{version}/aos.css',
+    },
+    'aosJS': {
+        'path': 'resources/aos/{version}/aos.jsm',
+    },
     // Appboy/Braze Web SDK
     'appboyWebSdk': {
         'path': 'resources/appboy-web-sdk/{version}/appboy.min.jsm'
@@ -359,6 +366,10 @@ var resources = {
     'ethJs': {
         'path': 'resources/ethjs/{version}/ethjs.min.jsm'
     },
+    // exif-js
+    'exifJS': {
+        'path': 'resources/exif-js/{version}/exif.min.jsm'
+    },
     // Ext Core
     'extCore': {
         'path': 'resources/ext-core/{version}/ext-core.jsm'
@@ -384,6 +395,10 @@ var resources = {
     // Finify bundle
     'findifyBundle': {
         'path': 'resources/findify-bundle/{version}/'
+    },
+    // FitText.js [Deprecated]
+    'fitTextJs': {
+        'path': 'resources/FitText.js/{version}/jquery.fittext.min.jsm'
     },
     // flv.js [Deprecated]
     'flvJS': {
@@ -518,6 +533,10 @@ var resources = {
     // jQuery Tablesorter
     'jQueryTablesorter': {
         'path': 'resources/jquery.tablesorter/{version}/jquery.tablesorter.min.jsm'
+    },
+    // jquery-timeago
+    'jqueryTimeago': {
+        'path': 'resources/jquery-timeago/{version}/jquery.timeago.min.jsm'
     },
     // jQuery Tiny Pub/Sub
     'jQueryTinyPubsub': {

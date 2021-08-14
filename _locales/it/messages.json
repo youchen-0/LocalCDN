@@ -264,211 +264,223 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Aiuto",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introduzione",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Che cos'è »filtro HTML«?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Generatore di regole",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Alcuni siti appaiono strani o non sono facili da usare",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Perché c'è l'opzione »Blocca i font di Google«?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Riguardo alle statistiche: c'è qualcosa che viene inviato a qualche server?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Che cosa verrà sincronizzato quando seleziono »Sincronizza« come tipo di archiviazione?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Compatibilità dei browser",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN è una estensione per browser web che emula i Content Delivery Networks per aumentare la tua privacy online. Intercetta il traffico, trova i framework/librerie supportate in locale e le inietta nel sito web. Sentiti libero di usare la seguente utility per testare e scoprire se sei protetto adeguatamente. Per ulteriori informazioni leggi i tutorial o le nostre pagine Wiki.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Utility per fare test",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Tutorial",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Pagine Wiki",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "Nella maggior parte dei casi LocalCDN può facilmente sostituire i framework incorporati nelle pagine e aumentare la privacy. In alcuni casi i siti web potrebbero prevenire ciò impostando certe opzioni nel sorgente HTML della pagina. LocalCDN legge il sorgente HTML della pagina prima che venga mostrata nel browser e rimuove queste parti (rosso).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "Il filtro HTML rimuove i caratteri in rosso da questo esempio:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Il risultato appare così:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "Perché è necessario rimuovere gli attributi di crossorigin e di integrità?",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "Gli attributi di crossorigin impediscono la sostituzione perché la destinazione non coincide con quella richiesta.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "Per salvare spazio sul disco e distribuire più framework, LocalCDN aggiorna un framework. Un tag di integrità è il valore di hash di un file. Se il controllo fallisce, il browser non includerà il framwork. Il controllo di integrità fallirà perché il valore di hash, per esempio, di jQuery 1.10.1 e jQuery 1.12.4 sono differenti.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "Sfortunatamente, a volte capita che alcuni caratteri speciali vengano visualizzati incorrettamente. In questo caso puoi disattivare l'impostazione nuovamente, per mostrare le dieresi correttamente.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "Se vuoi reindirizzare automaticamente tutti le connessioni verso i CDN supportati a LocalCDN, puoi aggiungere queste regole al tuo adblocker per permettere questi indirizzamenti. Se non vuoi aggiungere queste regole devi per forza abilitare ogni connessione verso i CDN manualmente per ogni sito web.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Solo uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "Queste regole sono rilevanti sono in modalità »medium« o »hard«, perché bloccano tutte le risorse di terze parti. Non sono necessarie in modalità »default«, »easy« o »very-easy«. Per ulteriori informazioni prego visitare la Wiki di uBlock Origin.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Icona",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Modalità",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "Regole utili",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "Default/Facile",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Medio",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "Difficile",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "Ci sono due possibili ragioni: sia una framework/liberia è necessaria che non è (ancora) supportata da LocalCDN o un SOP. Un SOP (Same origin policy) è un meccanismo di sicurezza che determina cosa un browser ha il permesso di caricare. Aiuta ad isolare documenti malevoli e quindi reduce i possibili vettori d'attacco. Queste regole impediscono al browser di caricare i framework esterni di LocalCDN. Sfortunatamente non c'è soluzione a questo problema al momento.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "LocalCDN può rimpiazzare le »Icone di Google Material«. Per catturare la connessione il tuo adblocker (es: uBlock Origin, uMatrix o AdGuard) deve permettere la richiesta. LocalCDN ascolta per queste richieste e se la query contiene le »Icone di Google Material«, la risorsa verrà sostituita. Se tu disattivi l'ozione »Blocca le richieste per le risorse mancanti«, le risorse non-esistenti verranno autorizzate a passare e i »Font di Google« verranno caricati, perché le »Icone di Google Material« e »Font di Google« usa lo stesso dominio. Se non vuoi tutto ciò, puoi bloccare i »Font di Google« su LocalCDN.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "Niente panico, nulla verrà trasmesso. Sarebbe contro tutti i miei principi. Le statistiche (in formato JSON) contengono le seguenti informazioni: data, CDN+contatore e framework+contatore. Questo è tutto. Ho un esempio qui:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "Le statistiche non contengono informazioni riguardo al browser, sistema operativo, pagina web richiesta, indirizzi IP o alcuna altra informazione. Solo data, CDN+contatore e framwork+contatore. Ti dicono solamente quali framework sono stati sostituiti da LocalCDN, quanto spesso e quali CDN sono stati richiesti.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Come so che è vero?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "Lo spazio di archiviazione dell'estensione può venire visualizzato direttamente in Firefox. Apri l'URL »about:debugging«, clicca su »Storage« e seleziona »Extension Storage«. Sotto la chiave »internalStatisticsData« troverai i dati collezionati. Semplicemente copiali e mettili in un JSON PrettyPrinter per renderli più leggibili. Nota che devi rimuovere la prima e l'ultima virgoletta e la sua chiave. Dovresti vedere tutto ciò chiaramente in questo video.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "Che cosa verrà sincronizzato quando seleziono »Sincronizza« come tipo di archiviazione?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "Sync funzionerà solo se sei loggato in un account Firefox sul dispositivo e hai abilitato la sincronizzazione dei componenti aggiuntivi nelle impostazioni. Un server per la sincronizzazione di tua proprietà funzionerà ugualmente. Questo sincronizzerà la maggior parte delle impostazioni di LocalCDN fra tutti i dispositivi.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "Se non hai un account sync, nulla verrà sincronizzato. In questo caso non fa alcuna differenza il tipo di archiviazione che hai selezionato.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Cose che non verranno mai sincronizzate:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Numeri di iniezioni",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Sì",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "No",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Data",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Impostazioni che verranno sincronizzare:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Default, Chiaro, Blu/Grigio",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Più informazioni su Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Compatibilità con i browser",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Sostituisci",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Sostituisci altre risorse",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Aggiorna tutte le risorse",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "Tutti i browser basati su Chromium",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Questa non è una limitazione di LocalCDN, ma della mancanza del supporti di certe API da parte dei browser basati su Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
+    },
+    "titleBadgeDefault": {
+        "message": "",
+        "description": "Default badge"
+    },
+    "titleBadgeHTMLFilter": {
+        "message": "",
+        "description": "HTML filter badge"
+    },
+    "titleBadgeMissingResource": {
+        "message": "",
+        "description": "Missing resource badge"
     }
 }

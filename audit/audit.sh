@@ -583,7 +583,7 @@ function create_url() {
             url="$NETDNA_BOOTSTRAPCDN/$folder/$version/js/bootstrap.min.js"
         fi
     elif [ "$folder" = "webcomponentsjs" ]; then
-        url="$CLOUDFLARE/$folder/2.5.0/webcomponents-loader.min.js"
+        url="$CLOUDFLARE/$folder/2.6.0/webcomponents-loader.min.js"
     elif [ "$folder" = "vue-i18n" ] && [[ "$version" != 8* ]]; then
         url="$CLOUDFLARE/$folder/$version/vue-i18n.cjs.min.js"
     elif [ "$path" = "../resources/twitter-bootstrap/fonts/glyphicons-halflings-regular.woff2" ]; then
@@ -596,8 +596,8 @@ function create_url() {
         url="$GITHUB/jquery-validation/jquery-validation/$version/dist/jquery.validate.min.js"
     elif [ "$folder" = "jquery-validate" ]; then
         url="$GITHUB/jquery-validation/jquery-validation/$version/dist/jquery.validate.min.js"
-    elif [ "$folder" = "history" ] && [ "$version" = "5.0.0" ] && [ "$jfile" = "history.min.js" ]; then
-        url="$CLOUDFLARE/history/5.0.0/history.production.min.js"
+    elif [ "$folder" = "history" ] && [ "$version" != "4.10.1" ]; then
+        url="$CLOUDFLARE/history/$version/history.production.min.js"
     elif [ "$folder" = "ember.js" ] && [ "$version" = "3.24.2" ] && [ "$jfile" = "ember.min.js" ]; then
         url="$CLOUDFLARE/ember.js/3.24.2/ember.debug.js"
     elif [ "$folder" = "dojo" ]; then

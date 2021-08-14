@@ -470,5 +470,17 @@
     "helpLimitation": {
         "message": "Tai nėra „LocalCDN“ apribojimas, tačiau trūksta API palaikymo „Chromium“ paremtose naršyklėse.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
+    },
+    "titleBadgeDefault": {
+        "message": "Numatytasis ženklelis",
+        "description": "Default badge"
+    },
+    "titleBadgeHTMLFilter": {
+        "message": "HTML filtro ženklelis",
+        "description": "HTML filter badge"
+    },
+    "titleBadgeMissingResource": {
+        "message": "Trūksta ištekliaus ženklelio",
+        "description": "Missing resource badge"
     }
 }
