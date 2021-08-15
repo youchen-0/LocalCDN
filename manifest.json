@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "LocalCDN",
-  "version": "2.6.12",
+  "version": "2.6.13",
   "browser_specific_settings": {
     "gecko": {
       "id": "{b86e4813-687a-43e6-ab65-0bde4ab75758}",
@@ -25,6 +25,7 @@
     "privacy",
     "storage",
     "webNavigation",
+    "tabs",
     "webRequest",
     "webRequestBlocking"
   ],
@@ -56,6 +57,14 @@
     "resources/*"
   ],
 
-  "content_security_policy": "default-src 'self'; img-src 'self' data:"
+  "content_security_policy": "default-src 'self'; img-src 'self' data:",
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L"
+      }
+    }
+  }
 
 }

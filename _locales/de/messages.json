@@ -472,7 +472,7 @@
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "Standardsymbol",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {

@@ -476,11 +476,11 @@
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "HTMLフィルターバッジ",
+        "message": "HTMLフィルター時のバッジ",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "紛失したリソースバッジ",
+        "message": "リソース不足時のバッジ",
         "description": "Missing resource badge"
     }
 }

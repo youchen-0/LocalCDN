@@ -138,10 +138,10 @@ popup._renderDomainAllowlistPanel = function () {
     googleFontsToggleElement.disabled = false;
 
     if (popup._domainGoogleFonts) {
-        googleFontsToggleElement.checked = true;
+        googleFontsToggleElement.checked = false;
         googleFontsToggleElement.addEventListener('click', popup._disableGoogleFonts);
     } else {
-        googleFontsToggleElement.checked = false;
+        googleFontsToggleElement.checked = true;
         googleFontsToggleElement.addEventListener('click', popup._enableGoogleFonts);
     }
 

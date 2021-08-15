@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "Zgodność z przeglądarkami",
+        "message": "Zgodność z przeglądarką",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -308,63 +308,63 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "Samouczek",
+        "message": "Instruktaż",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "Strony Wiki",
+        "message": "Wiki strony",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "W większości przypadków LocalCDN może łatwo zastąpić embedowane frameworki i poprawić prywatność. W niektórych przypadkach witryna może próbować temu zapobiec, ustawiając pewne opcje w kodzie źródłowym HTML. LocalCDN odczytuje kod źródłowy HTML przed wyświetleniem go w przeglądarce i usuwa te elementy (kolor czerwony).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "Filtr HTML usuwa czerwone znaki z tego przykładu:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Wynikiem tego jest:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "Dlaczego konieczne jest usunięcie atrybutów crossorigin i integrity?",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "Atrybut crossorigin zapobiega podmianie, ponieważ miejsce docelowe nie jest zgodne z żądanym.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "Aby zaoszczędzić miejsce na dysku i dostarczyć więcej frameworków LocalCDN aktualizuje framework. Znacznik integralności jest wartością hash pliku. Jeśli sprawdzenie nie powiedzie się, przeglądarka nie będzie zawierała frameworka. Sprawdzenie integralności nie powiedzie się, ponieważ wartości hash np. dla jQuery 1.10.1 i jQuery 1.12.4 są różne.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "Niestety, czasami zdarza się, że znaki specjalne są wyświetlane nieprawidłowo. W takim przypadku można dezaktywować to ustawienie, aby umlauty były wyświetlane poprawnie.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "Jeśli chcesz automatycznie przekierować wszystkie obsługiwane połączenia CDN do LocalCDN, możesz dodać te reguły do swojego adblockera w celu zezwolenia na nie. Jeśli nie chcesz dodawać tych reguł, musisz zezwolić na każde połączenie CDN indywidualnie dla każdej witryny.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Tylko uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "Zasady te są przydatne tylko w trybie \"medium\" lub \"hard\", ponieważ blokuje on wszystkie zasoby stron trzecich. Nie są one konieczne w trybie \"default\", \"easy\" lub \"very-easy\". Aby uzyskać więcej informacji, odwiedź wikię uBlock Origin.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Ikona",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Tryb",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "Przydatne reguły",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
@@ -380,107 +380,107 @@
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "Istnieją dwa możliwe powody: Albo wymagany jest framework/biblioteka, której LocalCDN (jeszcze) nie dostarcza, albo jest włączony SOP. SOP (Same origin policy) to mechanizm bezpieczeństwa, który określa, jakie dane przeglądarka może wczytać. Pomaga on odizolować złośliwe dokumenty i w ten sposób ograniczyć możliwe wektory ataku. Polityka ta uniemożliwia przeglądarce ładowanie zewnętrznych frameworków LocalCDN. Niestety w chwili obecnej nie ma na to żadnego rozwiązania.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "LocalCDN może zastąpić \"Google Material Icons\". Aby złapać połączenie, Twój adblocker (np. uBlock Origin, uMatrix lub AdGuard) musi zezwolić na to żądanie. LocalCDN nasłuchuje tych żądań i jeśli żądanie zawiera \"Google Material Icons\", zasób zostanie zastąpiony. Jeśli odznaczysz opcję \"Block requests for missing content\", nieistniejące zasoby zostaną przepuszczone i \"Google Fonts\" zostanie załadowany, ponieważ \"Google Material Icons\" i \"Google Fonts\" używają tej samej domeny. Jeśli tego nie chcesz, możesz zablokować \"Google Fonts\" w LocalCDN.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "Bez paniki, nic nie zostanie przesłane. Byłoby to wbrew moim zasadom. Statystyki (format JSON) zawierają następujące informacje: Data, CDN+licznik oraz framework+licznik. To wszystko. Przykład mam tutaj:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "Statystyki nie zawierają żadnych informacji na temat przeglądarki, systemu operacyjnego, żądanej strony, adresów IP ani żadnych innych informacji. Po prostu data, CDN+licznik i framework+licznik. Pokazuje ci, które frameworki są zastępowane przez LocalCDNs, jak często i które CDNy były żądane.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Skąd mam wiedzieć, że to prawda?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "Magazyn rozszerzeń może być przeglądany bezpośrednio w przeglądarce Firefox. Otwórz adres URL \"about:debugging\", przejdź do \"Storage\" i wybierz \"Extension Storage\". Pod kluczem \"internalStatisticsData\" znajdziesz zebrane dane. Po prostu skopiuj je i umieść w JSON PrettyPrinter, aby uczynić je bardziej czytelnymi. Zwróć uwagę, że musisz usunąć pierwszy i ostatni cudzysłów oraz klucz do niego. Powinieneś być w stanie zobaczyć to wyraźnie na tym filmie.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "Co będzie synchronizowane, gdy jako typ magazynu wybiorę \"synchronizacja\"?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "Synchronizacja będzie działać tylko wtedy, gdy jesteś zalogowany na koncie Firefoksa na urządzeniu i zezwoliłeś w ustawieniach na synchronizację dodatków. Można również skorzystać z oddzielnego serwera synchronizacji, który znajduje się pod Twoją kontrolą. Dzięki temu większość ustawień LocalCDN zostanie zsynchronizowana na wszystkich urządzeniach.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "Jeśli nie masz konta to nic nie zostanie zsynchronizowane. W takim przypadku nie ma znaczenia, jaki typ pamięci masowej został wybrany.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Rzeczy, które nigdy nie są synchronizowane:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Liczba wstrzyknięć",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Tak",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Nie",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Dane",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Ustawienia, które będą synchronizowane:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Domyślna, Jasna, Niebieska/Szara",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Więcej informacji o Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Zgodność z przeglądarką",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Zamień",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Zastępowanie innych zasobów",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Aktualizowanie wszystkich zasobów",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "Wszystkie przeglądarki bazujące na silniku Chromium",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "To nie jest ograniczenie LocalCDN, ale brak obsługi API w przeglądarkach opartych na Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "Domyślna plakietka",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "Plakietka filtru HTML",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "Plakietka brakującego zasobu",
         "description": "Missing resource badge"
     }
 }
