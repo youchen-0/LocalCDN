@@ -256,11 +256,11 @@
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "Indicar os recursos ausentes no ícone",
+        "message": "Mostrar recursos ausentes no ícone",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "Altera a cor do contador se houver recursos ausentes.",
+        "message": "Altera a cor do ícone se houver recursos ausentes.",
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
