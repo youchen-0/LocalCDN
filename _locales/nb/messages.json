@@ -472,15 +472,15 @@
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "Standard-tellermerke",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "HTML-filter tellermerke",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "Tellermerke for manglende ressurser",
         "description": "Missing resource badge"
     }
 }
