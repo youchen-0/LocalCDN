@@ -25,6 +25,7 @@
     "privacy",
     "storage",
     "webNavigation",
+    "tabs",
     "webRequest",
     "webRequestBlocking"
   ],
