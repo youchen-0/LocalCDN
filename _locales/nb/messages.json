@@ -480,7 +480,7 @@
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "Tellermerke for manglende ressurser",
+        "message": "Manglende ressurs tellermerke",
         "description": "Missing resource badge"
     }
 }
