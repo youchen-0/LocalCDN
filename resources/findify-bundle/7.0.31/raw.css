@@ -576,9 +576,18 @@
     width: 100%;
 }
 
+.findify-components-search--lazy-results__button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .findify-components-search--lazy-results__next-button {
     margin: 50px auto 0 auto;
-    display: block;
+    text-decoration: none;
     padding: 0 85px;
     height: 40px;
     background: var(--color-grey-1);
@@ -593,7 +602,7 @@
 
 .findify-components-search--lazy-results__prev-button {
     margin: 0 auto 50px auto;
-    display: block;
+    text-decoration: none;
     padding: 0 85px;
     height: 40px;
     background: var(--color-grey-1);
