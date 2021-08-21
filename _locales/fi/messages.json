@@ -264,67 +264,67 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Apua",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Johdanto",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Mikä on HTML-suodatin?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Sääntöjen laatija",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Jotkut verkkosivut saattavat näyttää oudoilta tai eivät ole helppoja käyttää",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Miksi Google-fonttien estäminen on mahdollista valita?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Entä tilastotiedot? Siirretäänkö mitään tietoa millekään palvelimelle?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Mitä synkronoidaan, kun valitsen Sync:n tallennustavaksi?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Selaimen yhteensopivuus",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN on selaimen lisäosa, joka jäljittelee sisällönjakeluverkkoja parantaakseen sinun yksityisyyttäsi verkossa. Se pysäyttää liikenteen, etsii tuetut kehykset/kirjastot paikallisesti, ja syöttää ne verkkosivustolle. Kokeile vapaasti testityökalua kokeillaksesi, oletko asianmukaisesti suojattu. Lue lisätietoja ohjekirjasta tai Wiki-sivuiltamme.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Testityökalu",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Ohjeet",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wiki-sivut",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "Suurimmassa osassa tapauksista LocalCDN voi helposti korvata sulautetut kehykset ja parantaa yksityisyyttä. Joissain tapauksissa verkkosivu voi yrittää estää tämän asettamalla tiettyjä vaihtoehtoja HTML-lähdekoodiin. LocalCDN lukee HTML-lähdekoodin ennen kuin se näytetään verkkoselaimessa ja poistaa nämä (punaisella).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "HTML-suodatin poistaa punaiset merkit tästä esimerkistä:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Tulos näyttää sen jälkeen tältä:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
@@ -340,27 +340,27 @@
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "Valitettavasti joskus erikoismerkit näkyvät väärin. Tässä tapauksessa voit deaktivoida asetukset uudelleen, jotta kirjainten yläpuolella olevat pisteet näkyvät oikein.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "Jos haluat automaattisesti ohjata kaikki tuetut CDN-yhteydet LocalCDN:ään, voit lisätä nämä säännöt mainostenesto-ohjelmaasi salliaksesi nämä uudelleenohjaukset. Jos et halua lisätä näitä sääntöjä, sinun täytyy sallia jokainen CDN-yhteys yksitellen joka verkkosivustolle.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "Vain uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "Nämä säännöt ovat relevantteja vain \"keskitaso\" tai \"kova\" tilassa, koska se estää kaikki kolmannen osapuolen resurssit. Ne eivät ole välttämättä \"oletus\", \"kevyt\" tai \"erittäin kevyt\" tilassa. Lisätietoja varten tutustu uBlock Origin Wikiin.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "Kuvake",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Tila",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
@@ -368,15 +368,15 @@
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "Oletus/Kevyt",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Keskitaso",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "Kova",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
@@ -384,19 +384,19 @@
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "LocalCDN voi korvata Google Material -ikonit. Napataksesi yhteyden mainostenesto-ohjelmasi (esim. uBlock Origin, uMatrix tai AdGuard) täytyy sallia pyyntö. LocalCDN kuuntelee näitä pyyntöjä, ja jos kysely sisältää maininnan \"Google Material Icons\", resurssi korvataan. Jos poissuljet valinnan, olemassaolemattomat resurssit sallitaan läpi ja Google-fontit ladataan, koska Google Material Icons ja Google Fonts käyttävät samaa domainia. Jos et halua tätä, voit estää Google-fontit LocalCDN:ssa.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "Ei hätää, mitään ei lähetetä eteenpäin. Se olisi vastoin kaikkia periaatteitani. Tilastotiedot (JSON-muodossa) sisältävät seuraavia tietoja: Päivämäärä, CDN+counter ja kehys+counter. Siinä kaikki. Minulla on tässä esimerkki:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "Tilastot eivät sisällä mitään tietoa selaimesta, käyttöjärjestelmästä, verkkosivupyynnöistä, IP-osoitteista tai mistään muusta tiedosta. Pelkästään päivämäärä, CDN+counter ja kehys+counter. Se näyttää, mitkä kehykset LocalCDN on korvannut, kuinka usein, ja mitä sisältöjenjakeluverkkoja on pyydetty.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Mistä tiedän, onko se totta?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
@@ -404,83 +404,83 @@
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "Mitä synkronoidaan, kun valitsen Sync:n tallennustavaksi?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "Sync toimii vain, jos olet kirjautuneena Firefox-tilillä samassa laitteessa ja olet sallinut lisäosien synkronoida asetukset. Hallinnassasi oleva erillinen synkronointipalvelin toimii myös. Tämä synkronoi suurimman osan LocalCDN:n asetuksista kaikkiin laitteisiin.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "Jos sinulla ei ole Sync-tiliä, mitään ei voida synkronoida. Tässä tapauksessa ei ole merkitystä, minkä tallennustilan olet valinnut.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "Asiat, joita ei koskaan synkronoida:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "Injektioiden määrä",
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Kyllä",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Ei",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Data",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Asetukset, jotka synkronoidaan:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Oletus, Vaalea, Sininen/Harmaa",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Lisätietoja Firefox Sync:sta:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Selaimen yhteensopivuus",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Korvaa",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Korvaa muut resurssit",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Päivitä kaikki resurssit",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "Kaikki Chromium-pohjaiset selaimet",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Tämä ei ole LocalCDN:n rajoitus, vaan rajapintatuen puuttuminen Chromium-pohjaisissa selaimissa.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "Oletuskuvake",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "HTML-suodattimen kuvake",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "Puuttuvan resurssin kuvake",
         "description": "Missing resource badge"
     }
 }
