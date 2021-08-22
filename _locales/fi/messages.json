@@ -328,15 +328,15 @@
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "Miksi on välttämätöntä poistaa crossorigin- ja eheysattribuutit?",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "Crossorigin-attribuutti estää korvaamisen, koska kohde ei ole yhteensopiva pyydetyn kanssa.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "Säästääkseen levytilaa ja toimittaakseen enemmän kehyksiä LocalCDN päivittää kehyksen. Eheystunniste on tiedoston tiivistearvo. Jos tarkastus epäonnistuu, selain ei sisällytä kehystä. Eheystarkastus epäonnistuu, koska tiivistearvot esimerkiksi jQuery 1.10.1:lle sekä jQuery 1.12.4:lle ovat erilaisia.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
@@ -364,7 +364,7 @@
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "Hyödyllisiä sääntöjä",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
@@ -380,7 +380,7 @@
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "On kaksi mahdollista syytä: Joko kehys/kirjasto on vaadittu, jota LocalCDN ei (vielä) toimita tai SOP (Same origin policy). Se on turvallisuusmekanismi, joka määrittelee, mitä dataa selain saa ladata. Se helpottaa eristämään haitalliset asiakirjat ja siten vähentämän mahdollisia hyökkäysvektoreita. Tämä linjaus estää selainta lataamasta LocalCDN:n ulkopuolisia kehyksiä. Valitettavasti tähän ei ole vielä kehitetty ratkaisua.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
@@ -400,7 +400,7 @@
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "Liitännäisten tallennustilaa voi tarkastella suoraan Firefox-selaimesta. Avaa osoite »about:debugging«, siirry kohtaan »Tallennustila« ja valitse »Liitännäisten tallennustila«. Tunnuksen »internalStatisticsData« alta löydät kerätyt tiedot. Kopioi se ja lisää se JSON PrettyPrinteriin tehdäksesi siitä helpommin luettavan. Huomioithan, että sinun täytyy poistaa ensimmäinen ja viimeinen lainausmerkki ja avain siihen. Sinun tulisi nähdä tämä selkeästi tältä videolta.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
