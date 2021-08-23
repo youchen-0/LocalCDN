@@ -268,7 +268,7 @@
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "Johdanto",
+        "message": "Esittely",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -276,7 +276,7 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "Sääntöjen laatija",
+        "message": "Sääntöjen luonti",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
@@ -284,7 +284,7 @@
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "Miksi Google-fonttien estäminen on mahdollista valita?",
+        "message": "Miksi \"Block Google Fonts\" -valinta on olemassa?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "Selaimen yhteensopivuus",
+        "message": "Selainyhteensopivuus",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -308,7 +308,7 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "Ohjeet",
+        "message": "Ohjekirja",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
@@ -352,7 +352,7 @@
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "Nämä säännöt ovat relevantteja vain \"keskitaso\" tai \"kova\" tilassa, koska se estää kaikki kolmannen osapuolen resurssit. Ne eivät ole välttämättä \"oletus\", \"kevyt\" tai \"erittäin kevyt\" tilassa. Lisätietoja varten tutustu uBlock Origin Wikiin.",
+        "message": "Nämä säännöt ovat relevantteja vain \"medium\" tai \"hard\" tilassa, koska se estää kaikki kolmannen osapuolen resurssit. Ne eivät ole välttämättä \"default\", \"easy\" tai \"very-easy\" tiloissa. Lisätietoja varten tutustu uBlock Origin Wikiin.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
