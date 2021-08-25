@@ -565,7 +565,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/slider-pro/1.')) {
         return '1.6.0';
     } else if (type.startsWith('/snowplow/2.')) {
-        return '2.18.1';
+        return '2.18.2';
     } else if (type.startsWith('/socket.io/2.')) {
         return '2.4.0';
     } else if (type.startsWith('/socket.io/3.')) {
