@@ -342,7 +342,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/jquery/1.')) {
         if (helpers.compareVersion('1.7.1', version)) return '1.7.1'; // <= v1.7.1
         else if (helpers.compareVersion('1.8.3', version)) return '1.8.3'; // > 1.7.1 to <= 1.8.3
-        else if (helpers.compareVersion('1.11.2', version)) return '1.11.2'; // > 1.8.3 to <= 1.11.2
+        else if (helpers.compareVersion('1.9.1', version)) return '1.9.1'; // > 1.8.3 to <= 1.9.1
+        else if (helpers.compareVersion('1.11.2', version)) return '1.11.2'; // > 1.9.1 to <= 1.11.2
         else if (version === '1.11.3') return '1.11.3'; // = 1.11.3
         else return '1.12.4'; // > 1.11.3
     } else if (type.startsWith('/jquery/2.')) {
