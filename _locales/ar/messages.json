@@ -64,11 +64,11 @@
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "آخر تحديث:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "نسخ",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
@@ -92,7 +92,7 @@
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "تبرع",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
@@ -104,7 +104,7 @@
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "من الممكن ان توجد مشاكل فى بعض المواقع . المزيد من المعلومات علي صفحة wiki",
+        "message": "من الممكن أن توجد مشاكل فى بعض المواقع. يمكن قراءة المزيد من المعلومات على صفحة الويكي.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
@@ -132,7 +132,7 @@
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "إحصائيات داخلية",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
@@ -140,27 +140,27 @@
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "إحصائيات",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "اليوم",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "الأسبوع الماضي",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "الشهر الماضي",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "العام الماضي",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "حذف",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
@@ -192,15 +192,15 @@
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "معلومات",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "نوع التخزين",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "محليّ",
         "description": "Local"
     },
     "labelStorageTypeSync": {
@@ -208,7 +208,7 @@
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "استيراد/تصدير",
         "description": "Import/Export"
     },
     "labelExportData": {
@@ -220,7 +220,7 @@
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "تم الاستيراد بنجاح",
         "description": "Import successful"
     },
     "dialogImportFailed": {
@@ -240,7 +240,7 @@
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "دائمًا",
         "description": "Always"
     },
     "websiteBroken": {
@@ -248,7 +248,7 @@
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "إخفاء زر التبرّع",
         "description": "Hide donation button"
     },
     "betaLabel": {
@@ -264,11 +264,11 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "مساعدة",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "مقدّمة",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -312,7 +312,7 @@
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "صفحات الويكي",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -356,11 +356,11 @@
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "أيقونة",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "الوضع",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
@@ -396,7 +396,7 @@
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "كيف أعرف أن هذا الكلام صحيح؟",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
@@ -424,11 +424,11 @@
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "نعم",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "لا",
         "description": "No"
     },
     "helpData": {

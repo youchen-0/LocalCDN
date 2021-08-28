@@ -476,11 +476,11 @@
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "HTML-Filtersymbol",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "Symbol für fehlende Resourcen",
         "description": "Missing resource badge"
     }
 }
