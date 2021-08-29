@@ -252,7 +252,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
     } else if (type.startsWith('/datatables/1.')) {
-        return '1.10.25';
+        return '1.11.0';
     } else if (type.startsWith('/dayjs/1.')) {
         return '1.10.6';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest')) {
