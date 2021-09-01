@@ -599,7 +599,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/Swiper/6.')) {
         return '6.8.4';
     } else if (type.startsWith('/Swiper/7.') || type.startsWith('/Swiper/')) {
-        return '7.0.1';
+        return '7.0.2';
     } else if (type.startsWith('/tether/1.')) {
         return '1.4.7';
     } else if (type.startsWith('/tooltipster/3.')) {
