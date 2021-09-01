@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Zadajte domény na ktorých chcete vypnúť LocalCDN rozšírenie. Oddeľte jednotlivé položky bodkočiadkami (;).",
+        "message": "Zadajte domény na ktorých chcete vypnúť LocalCDN rozšírenie. Jedna položka na riadok.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -72,11 +72,11 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Zapnúť záznam v konzole prehliadača",
+        "message": "Zapnúť záznamovanie",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Otvorte \"Konzolu prehliadača\" (CTRL + SHIFT + J) na zobrazenie chýbajúcich zdrojov.",
+        "message": "Záznam môžete otvoriť pomocou ikony v menu. Záznam bude vymazaný, ak zavriete prehliadač alebo vypnete záznamovanie.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Vložte domény, s ktorými má narábať, alebo ich ignorovať, HTML filter. Oddeľte jednotlivé položky bodkočiarkami (;).",
+        "message": "Vložte domény, s ktorými má narábať, alebo ich ignorovať, HTML filter. Jedna položka na riadok.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Tieto domény majú povolené sťahovanie Google Fontov. Oddeľte jednotlivé položky bodkočiarkami (;).",
+        "message": "Tieto domény majú povolené sťahovanie Google Fontov. Jedna položka na riadok.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -244,15 +244,15 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Stránka pokazená?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Skryť tlačidlo darovania",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
@@ -264,7 +264,7 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Pomoc",
         "description": "Help"
     },
     "helpIntroductionTitle": {
@@ -276,7 +276,7 @@
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Generátor pravidiel",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
@@ -424,11 +424,11 @@
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Áno",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Nie",
         "description": "No"
     },
     "helpData": {
@@ -452,7 +452,7 @@
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Nahradiť",
         "description": "Replace"
     },
     "helpReplaceOther": {
