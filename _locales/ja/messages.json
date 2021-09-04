@@ -80,7 +80,7 @@
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "この機能はウェブサイトの機能を妨げる場合があります。影響を受けたサイトのドメインをその都度許可リストに追加できない限りは、この機能を有効化したままにしないでください。",
+        "message": "この機能はウェブサイトの機能を妨げる場合があります。影響を受けたドメインをその都度許可リストに追加できない限り、この機能は有効にしないでください。",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "HTMLフィルターを有効化もしくは無効化するドメインを入力します。1行につき1件入力できます。",
+        "message": "HTMLフィルターを有効化もしくは無効化するドメインを入力してください。1行につき1件入力できます。",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -124,7 +124,7 @@
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "不足しているリソースへのリクエストが許可されている場合、「fonts.googleapis.com」への接続はブロックされません。このオプションを有効にすると、これらのリクエストをブロックすることができます。",
+        "message": "不足しているリソースへのリクエストが許可されている場合、\"fonts.googleapis.com\" への接続はブロックされません。このオプションを有効にすると、これらのリクエストをブロックすることができます。",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
@@ -176,7 +176,7 @@
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "これらのドメインでは、Google Fontsの読み込みを許可しています。1行につき1件入力できます。",
+        "message": "これらのドメインではGoogle Fontsの読み込みを許可しています。1行につき1件入力できます。",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
