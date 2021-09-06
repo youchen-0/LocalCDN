@@ -161,7 +161,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular-material/1.') || type.startsWith('/angular-material/0.')) {
         return '1.2.3';
     } else if (type.startsWith('/angular-translate/2.')) {
-        return '2.18.4';
+        return '2.19.0';
     } else if (type.startsWith('/aos/2.')) {
         return '2.3.4';
     } else if (type.startsWith('/appboy-web-sdk/3.')) {
