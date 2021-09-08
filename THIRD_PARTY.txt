@@ -49,7 +49,7 @@ https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.5/js/ajax-boots
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.10.5/algoliasearch.umd.min.js
 https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js
-https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.1/cdn.min.js
+https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.3.2/cdn.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angucomplete-alt/3.0.0/angucomplete-alt.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-aria/1.8.2/angular-aria.min.js
