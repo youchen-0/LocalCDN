@@ -119,7 +119,7 @@ https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular-sanitize.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular-touch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.7.0/rzslider.min.js
-https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/7.0.0/rzslider.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/7.0.1/rzslider.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.18/toaster.min.css
 https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.18/toaster.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.2.0/toaster.min.css
