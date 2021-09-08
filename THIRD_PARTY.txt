@@ -164,7 +164,7 @@ https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
 https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css
 https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js
 https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.min.js
-https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.2/axios.min.js
+https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js
 https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js
 https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js
 https://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js
