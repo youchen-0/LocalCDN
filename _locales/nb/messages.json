@@ -376,7 +376,7 @@
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "Hardt",
+        "message": "Hard",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
@@ -476,11 +476,11 @@
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "HTML-filter tellermerke",
+        "message": "HTML-filter-tellermerke",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "Manglende ressurs tellermerke",
+        "message": "Manglende ressurs-tellermerke",
         "description": "Missing resource badge"
     }
 }

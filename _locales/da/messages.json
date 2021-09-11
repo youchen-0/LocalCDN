@@ -72,7 +72,7 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "Aktiver logning i browser konsollen",
+        "message": "Aktiver logning",
         "description": "Enable logging"
     },
     "loggingDescription": {
@@ -112,7 +112,7 @@
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "Indtast de domæner som skal håndteres eller ignoreres af HTML-filteret. Separer flere domæner med semikolon (;).",
+        "message": "Indtast de domæner som skal håndteres eller ignoreres af HTML-filteret. En indtastning per linje.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
@@ -172,11 +172,11 @@
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "Er du sikker på, at du vil slette statistikken?",
+        "message": "Er du sikker på, at du vil slette alle statistikker?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "Disse domæner har tilladelse til at indlæse Google-skrifttyper. Adskil flere poster med semikolon (;).",
+        "message": "Disse domæner har tilladelse til at indlæse Google-skrifttyper. En indtastning per linje.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
@@ -244,15 +244,15 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Virker hjemmeside ikke ?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Skjul donations knap",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
@@ -268,23 +268,23 @@
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introduktion",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Hvad er \"HTML filter\" ?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "regel generator",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "nogle hjemmesider ser underlige ud, eller er ikke nemme at bruge",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "hvorfor er \"bloker Google skrifttyper\" en mulighed ?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Browser kompatibilitet",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -308,11 +308,11 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Tutorial",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "Wiki side",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
