@@ -494,64 +494,64 @@ popup._onDocumentLoaded = function () {
     popup._getData().then(popup._renderContents);
 };
 
-popup._onTestingUtilityLinkClicked = function (event) {
-    if (event.button === 0 || event.button === 1) {
+popup._onTestingUtilityLinkClicked = function (ev) {
+    if (ev.button === 0 || ev.button === 1) {
         chrome.tabs.create({
             'url': Links.LOCALCDN_TEST_WEBSITE,
-            'active': event.button === 0,
+            'active': ev.button === 0,
         }, function (tab) {
             popup._injectDomain(tab.id);
         });
     }
 };
 
-popup._onDonationButtonClicked = function () {
-    if (event.button === 0 || event.button === 1) {
+popup._onDonationButtonClicked = function (ev) {
+    if (ev.button === 0 || ev.button === 1) {
         chrome.tabs.create({
             'url': Links.DONATE,
-            'active': event.button === 0,
+            'active': ev.button === 0,
         });
     }
 
-    if (event.button === 0) {
+    if (ev.button === 0) {
         window.close();
     }
 };
 
-popup._onInfoButtonClicked = function () {
-    if (event.button === 0 || event.button === 1) {
+popup._onInfoButtonClicked = function (ev) {
+    if (ev.button === 0 || ev.button === 1) {
         chrome.tabs.create({
             'url': Links.FAQ_HTML_FILTER,
-            'active': event.button === 0,
+            'active': ev.button === 0,
         });
     }
 
-    if (event.button === 0) {
+    if (ev.button === 0) {
         window.close();
     }
 };
 
-popup._onIncompleteTranslation = function () {
-    if (event.button === 0 || event.button === 1) {
+popup._onIncompleteTranslation = function (ev) {
+    if (ev.button === 0 || ev.button === 1) {
         chrome.tabs.create({
             'url': Links.WEBLATE,
-            'active': event.button === 0,
+            'active': ev.button === 0,
         });
     }
 
-    if (event.button === 0) {
+    if (ev.button === 0) {
         window.close();
     }
 };
 
-popup._onStatisticsButtonClicked = function () {
-    if (event.button === 0 || event.button === 1) {
+popup._onStatisticsButtonClicked = function (ev) {
+    if (ev.button === 0 || ev.button === 1) {
         chrome.tabs.create({
             'url': Links.STATISTICS,
-            'active': event.button === 0,
+            'active': ev.button === 0,
         });
     }
-    if (event.button === 0) {
+    if (ev.button === 0) {
         window.close();
     }
 };
@@ -599,14 +599,14 @@ popup._close = function () {
     });
 };
 
-popup._onLoggingButtonClicked = function () {
-    if (event.button === 0 || event.button === 1) {
+popup._onLoggingButtonClicked = function (ev) {
+    if (ev.button === 0 || ev.button === 1) {
         chrome.tabs.create({
             'url': Links.LOGGING,
-            'active': event.button === 0,
+            'active': ev.button === 0,
         });
     }
-    if (event.button === 0) {
+    if (ev.button === 0) {
         window.close();
     }
 };
