@@ -294,7 +294,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/FitText.js/1.')) {
         return '1.2.0';
     } else if (type.startsWith('/flv.js/')) {
-        return '1.6.1';
+        return '1.6.2';
     } else if (type.startsWith('/font-awesome/3.')) {
         return '3.2.1';
     } else if (type.startsWith('/font-awesome/4.')) {
