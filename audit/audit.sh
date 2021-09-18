@@ -681,6 +681,12 @@ function create_url() {
         url="$JSDELIVR/npm/$folder@$version/themes/algolia-min.css"
     elif [ "$folder" = "bootstrap-icons" ] && [ "$subfile" = "bootstrap-icons.woff" ]; then
         url="$CLOUDFLARE/$folder/$version/font/fonts/$subfile"
+    elif [ "$folder" = "vex-js" ]; then
+        if [[ "$subfile" =~ \.css$ ]]; then
+            url="$CLOUDFLARE/$folder/$version/css/$subfile"
+        elif [[ "$subfile" =~ \.js$ ]]; then
+            url="$CLOUDFLARE/$folder/$version/js/$subfile"
+        fi
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
