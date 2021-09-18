@@ -1625,6 +1625,16 @@ https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min
 https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js
 https://cdnjs.cloudflare.com/ajax/libs/urlive/1.1.1/jquery.urlive.min.js
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-bottom-right-corner.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-default.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-flat-attack.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-os.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-plain.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-top.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-wireframe.min.css
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/js/vex.combined.min.js
+https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/js/vex.min.js
 https://cdnjs.cloudflare.com/ajax/libs/video.js/5.20.5/video-js.min.css
 https://cdnjs.cloudflare.com/ajax/libs/video.js/5.20.5/video.min.js
 https://cdnjs.cloudflare.com/ajax/libs/video.js/6.13.0/video-js.min.css

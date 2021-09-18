@@ -63,6 +63,8 @@ targets.determineBundle = function (path) {
         val = 'MathJax';
     } else if (path.startsWith('/pure/')) {
         val = 'Pure CSS';
+    } else if (path.startsWith('/vex-js/')) {
+        val = 'vex';
     }
 
     return val === '' ? val : `${val} (Bundle)`;
@@ -632,6 +634,8 @@ targets.setLastVersion = function (type, version) {
         return '1.1.1';
     } else if (type.startsWith('/vanilla-lazyload')) {
         return '17.4.0';
+    } else if (type.startsWith('/vex-js/3.')) {
+        return '3.1.1';
     } else if (type.startsWith('/videojs-seek-buttons/1.')) {
         return '1.6.0';
     } else if (type.startsWith('/videojs-seek-buttons/2.')) {

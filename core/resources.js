@@ -955,6 +955,10 @@ var resources = {
     'vanillaLazyload': {
         'path': 'resources/vanilla-lazyload/{version}/lazyload.min.jsm'
     },
+    // vex-js (Bundle)
+    'vexJS': {
+        'path': 'resources/vex-js/{version}/'
+    },
     // videojs-seek-buttons
     'videojsSeekButtonsJS': {
         'path': 'resources/videojs-seek-buttons/{version}/videojs-seek-buttons.min.jsm'
