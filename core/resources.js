@@ -792,6 +792,10 @@ var resources = {
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.min.jsm'
     },
+    // purecss
+    'pureCSS': {
+        'path': 'resources/pure/{version}/'
+    },
     // Raven.js
     'ravenJS': {
         'path': 'resources/raven.js/{version}/raven.min.jsm'

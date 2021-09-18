@@ -61,6 +61,8 @@ targets.determineBundle = function (path) {
         val = 'DataTables';
     } else if (path.startsWith('/mathjax/')) {
         val = 'MathJax';
+    } else if (path.startsWith('/pure/')) {
+        val = 'Pure CSS';
     }
 
     return val === '' ? val : `${val} (Bundle)`;
@@ -519,6 +521,8 @@ targets.setLastVersion = function (type, version) {
         return '1.1.2';
     } else if (type.startsWith('/prototype/1.')) {
         return '1.7.3';
+    } else if (type.startsWith('/pure/0.')) {
+        return '0.6.2';
     } else if (type.startsWith('/raven.js/3.')) {
         return '3.27.2';
     } else if (type.startsWith('/react/16.')) {
