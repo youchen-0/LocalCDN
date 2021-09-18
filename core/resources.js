@@ -792,7 +792,7 @@ var resources = {
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.min.jsm'
     },
-    // purecss
+    // purecss (Bundle)
     'pureCSS': {
         'path': 'resources/pure/{version}/'
     },
