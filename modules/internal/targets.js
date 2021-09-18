@@ -636,6 +636,8 @@ targets.setLastVersion = function (type, version) {
         return '17.4.0';
     } else if (type.startsWith('/vex-js/3.')) {
         return '3.1.1';
+    } else if (type.startsWith('/vex-js/4.')) {
+        return '4.1.0';
     } else if (type.startsWith('/videojs-seek-buttons/1.')) {
         return '1.6.0';
     } else if (type.startsWith('/videojs-seek-buttons/2.')) {
