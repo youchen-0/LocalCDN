@@ -525,6 +525,8 @@ targets.setLastVersion = function (type, version) {
         return '0.6.2';
     } else if (type.startsWith('/pure/1.')) {
         return '1.0.1';
+    } else if (type.startsWith('/pure/2.')) {
+        return '2.0.6';
     } else if (type.startsWith('/raven.js/3.')) {
         return '3.27.2';
     } else if (type.startsWith('/react/16.')) {
