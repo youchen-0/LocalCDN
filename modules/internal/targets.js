@@ -305,6 +305,8 @@ targets.setLastVersion = function (type, version) {
         return '4.7.0';
     } else if (type.startsWith('/font-awesome/5.')) {
         return '5.15.4';
+    } else if (type.startsWith('/foundicons/3.')) {
+        return '3.0.0';
     } else if (type.startsWith('/gsap/1.')) {
         return '1.20.5';
     } else if (type.startsWith('/gsap/2.')) {
@@ -686,6 +688,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'foundation-icons.min.css': 'Foundation Icon Fonts',
     'jquery.timeago.min.jsm': 'jquery-timeago',
     'jquery.fittext.min.jsm': 'FitText.js',
     'aos.css': 'aos (CSS)',

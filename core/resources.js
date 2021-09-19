@@ -420,6 +420,10 @@ var resources = {
     'fontawesomeFontsOnly': {
         'path': 'resources/font-awesome/{version}/fonts/'
     },
+    // Foundation Icon Font Sets
+    'foundationIconsCSS': {
+        'path': 'resources/foundicons/{version}/foundation-icons.min.css'
+    },
     // GSAP
     'gsapBundle': {
         'path': 'resources/gsap/{version}/'
