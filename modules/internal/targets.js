@@ -124,6 +124,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular-parse-ext/1.')) {
         return '1.8.2';
     } else if (type.startsWith('/angular-resource/1.')) {
+        if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // <= v1.2.32
         return '1.8.2';
     } else if (type.startsWith('/angular-route/1.')) {
         if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // <= v1.2.32
