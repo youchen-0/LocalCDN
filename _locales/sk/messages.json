@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Chráni Vás proti sledovaniu cez CDN siete (siete na doručovanie obsahu) presmerovaním na lokálne zdroje.",
+        "message": "Chráni Vás proti sledovaniu cez siete CDN (siete na doručovanie obsahu) presmerovaním na lokálne zdroje.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
@@ -268,7 +268,7 @@
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Úvod",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
@@ -308,7 +308,7 @@
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "Návod",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
@@ -436,7 +436,7 @@
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Nastavenia ktoré budú synchronizované:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
@@ -468,7 +468,7 @@
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Toto nie je obmedzenie LocalCDN, ale chýbajúca API podpora prehliadačov založených na Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
