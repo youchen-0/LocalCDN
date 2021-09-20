@@ -687,6 +687,8 @@ function create_url() {
         elif [[ "$subfile" =~ \.js$ ]]; then
             url="$CLOUDFLARE/$folder/$version/js/$subfile"
         fi
+    elif [ "$folder" = "angular-route" ]; then
+        url="$JSDELIVR/npm/$folder@$version/angular-route.min.js"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
