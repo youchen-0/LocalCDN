@@ -271,6 +271,10 @@ var resources = {
     'bootstrapVueCSS': {
         'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css'
     },
+    // bootswatch
+    'bootswatchFlatly': {
+        'path': 'resources/bootswatch/{version}/flatly/bootstrap.min.css'
+    },
     // Bowser.js
     'bowserJS': {
         'path': 'resources/bowser/{version}/bowser.min.jsm'
