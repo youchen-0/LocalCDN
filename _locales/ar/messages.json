@@ -12,7 +12,7 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "عرض مجموع الحقن على الأيقونة",
+        "message": "عرض مجموع الحُقَن على الأيقونة",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
@@ -44,11 +44,11 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "لا تتفحص النطاقات",
+        "message": "لا تتفحص النطاقات:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "حدد النطاقات التي سوف يتم تجاهلها. إفصل المداخل المتعددة بـفاصلة منقوطة (;).",
+        "message": "حدد النطاقات التي سوف يتم تجاهلها. إفصل المداخل المتعددة بفاصلة منقوطة (;).",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "قم بإنشاء مجموعات قواعد لـ uBlock أو uMatrix",
+        "message": "أنشِئ مجموعات قواعد لمانع الإعلانات",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "إن كنتَ تستخدم مانع إعلانات، يمكنك إنشاء قواعد له هنا. تجب عليك إضافة هذه القواعد إلى مانع الإعلانات يدوياً.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -72,23 +72,23 @@
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "تفعيل السّجلات",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "يمكنك فتح السجل بالأيقونة في القائمة. سيُمسح السجل عندما تغلق المتصفح أو توقف التسجيل.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "تخرّب هذه الخاصية المواقع الإلكترونية. لا تدعها مشغلة، ألا إن كنت مستعداً لإضافة النطاقات المتأثرة بها إلى قائمة السّماح.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "أطفِئ",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "رشّح كود المصدر HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -96,11 +96,11 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "اعكس مرشّح HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "شغّل هذا الخيار لإبقاء مرشّح الـ HTML مشغّلاً دائماً. عندها ستُتجاهل النطاقات في القائمة. إن كان هذا الخيار مطفأً، سيطبق مرشّح الـ HTML على النطاقات التي في القائمة فقط.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -108,19 +108,19 @@
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "لا تطبق مرشّح الـ HTML على هذه النطاقات:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "أدخل النطاقات التي سيتعامل معها أو يتجاهلها مرشح الـ HTML. مُدخلة واحد لكل سطر فقط.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "طبق مرشح الـ HTML على هذه النطاقات:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "امنع خطوط قوقل",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
