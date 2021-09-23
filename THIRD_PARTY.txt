@@ -285,6 +285,7 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap-toggl
 https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.css
 https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css
+https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/flatly/bootstrap.min.css
 https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bowser/2.11.0/bundled.min.js
 https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css
