@@ -288,7 +288,7 @@
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Bagaimana dengan statistiknya? Apakah ada yang ditransfer ke server mana pun?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
@@ -300,7 +300,7 @@
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN adalah sebuah ekstensi peramban jaringan yang mengemulasikan Content Delivery Networks untuk meningkatkan privasi daring Anda. Ia akan mencegat lalu lintas, mencari kerangka kerja/pustaka yang didukung secara lokal, dan menginjeksikannya ke dalam situs jaringan. Gunakan alat uji berikut untuk melihat apakah Anda sudah terlindungi dengan baik. Informasi lebih lanjut silakan baca tutorial atau halaman Wiki kami.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {

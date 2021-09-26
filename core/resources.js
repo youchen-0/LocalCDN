@@ -50,37 +50,37 @@ var resources = {
         'path': 'resources/angular.js/{version}/angular.min.jsm'
     },
     'angularAnimate': {
-        'path': 'resources/angular-animate/{version}/angular-animate.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-animate.min.jsm'
     },
     'angularAria': {
-        'path': 'resources/angular-aria/{version}/angular-aria.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-aria.min.jsm'
     },
     'angularCookies': {
-        'path': 'resources/angular-cookies/{version}/angular-cookies.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-cookies.min.jsm'
     },
     'angularLoader': {
-        'path': 'resources/angular-loader/{version}/angular-loader.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-loader.min.jsm'
     },
     'angularMessageFormat': {
-        'path': 'resources/angular-message-format/{version}/angular-message-format.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-message-format.min.jsm'
     },
     'angularMessages': {
-        'path': 'resources/angular-messages/{version}/angular-messages.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-messages.min.jsm'
     },
     'angularParseExt': {
-        'path': 'resources/angular-parse-ext/{version}/angular-parse-ext.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-parse-ext.min.jsm'
     },
     'angularResource': {
-        'path': 'resources/angular-resource/{version}/angular-resource.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-resource.min.jsm'
     },
     'angularRoute': {
-        'path': 'resources/angular-route/{version}/angular-route.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-route.min.jsm'
     },
     'angularSanitize': {
-        'path': 'resources/angular-sanitize/{version}/angular-sanitize.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-sanitize.min.jsm'
     },
     'angularTouch': {
-        'path': 'resources/angular-touch/{version}/angular-touch.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-touch.min.jsm'
     },
     // angularMaterialDesign
     'angularMaterialDesignJS': {
@@ -271,6 +271,10 @@ var resources = {
     'bootstrapVueCSS': {
         'path': 'resources/bootstrap-vue/{version}/bootstrap-vue.min.css'
     },
+    // bootswatch
+    'bootswatchFlatly': {
+        'path': 'resources/bootswatch/{version}/flatly/bootstrap.min.css'
+    },
     // Bowser.js
     'bowserJS': {
         'path': 'resources/bowser/{version}/bowser.min.jsm'
@@ -419,6 +423,10 @@ var resources = {
     },
     'fontawesomeFontsOnly': {
         'path': 'resources/font-awesome/{version}/fonts/'
+    },
+    // Foundation Icon Font Sets
+    'foundationIconsCSS': {
+        'path': 'resources/foundicons/{version}/foundation-icons.min.css'
     },
     // GSAP
     'gsapBundle': {
@@ -792,6 +800,10 @@ var resources = {
     'prototypeJS': {
         'path': 'resources/prototype/{version}/prototype.min.jsm'
     },
+    // purecss (Bundle)
+    'pureCSS': {
+        'path': 'resources/pure/{version}/'
+    },
     // Raven.js
     'ravenJS': {
         'path': 'resources/raven.js/{version}/raven.min.jsm'
@@ -950,6 +962,10 @@ var resources = {
     // vanilla-lazyload
     'vanillaLazyload': {
         'path': 'resources/vanilla-lazyload/{version}/lazyload.min.jsm'
+    },
+    // vex-js (Bundle)
+    'vexJS': {
+        'path': 'resources/vex-js/{version}/'
     },
     // videojs-seek-buttons
     'videojsSeekButtonsJS': {
