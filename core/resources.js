@@ -50,37 +50,37 @@ var resources = {
         'path': 'resources/angular.js/{version}/angular.min.jsm'
     },
     'angularAnimate': {
-        'path': 'resources/angular-animate/{version}/angular-animate.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-animate.min.jsm'
     },
     'angularAria': {
-        'path': 'resources/angular-aria/{version}/angular-aria.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-aria.min.jsm'
     },
     'angularCookies': {
-        'path': 'resources/angular-cookies/{version}/angular-cookies.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-cookies.min.jsm'
     },
     'angularLoader': {
-        'path': 'resources/angular-loader/{version}/angular-loader.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-loader.min.jsm'
     },
     'angularMessageFormat': {
-        'path': 'resources/angular-message-format/{version}/angular-message-format.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-message-format.min.jsm'
     },
     'angularMessages': {
-        'path': 'resources/angular-messages/{version}/angular-messages.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-messages.min.jsm'
     },
     'angularParseExt': {
-        'path': 'resources/angular-parse-ext/{version}/angular-parse-ext.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-parse-ext.min.jsm'
     },
     'angularResource': {
-        'path': 'resources/angular-resource/{version}/angular-resource.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-resource.min.jsm'
     },
     'angularRoute': {
-        'path': 'resources/angular-route/{version}/angular-route.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-route.min.jsm'
     },
     'angularSanitize': {
-        'path': 'resources/angular-sanitize/{version}/angular-sanitize.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-sanitize.min.jsm'
     },
     'angularTouch': {
-        'path': 'resources/angular-touch/{version}/angular-touch.min.jsm'
+        'path': 'resources/angular.js/{version}/angular-touch.min.jsm'
     },
     // angularMaterialDesign
     'angularMaterialDesignJS': {

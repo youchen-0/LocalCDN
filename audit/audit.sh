@@ -80,7 +80,7 @@ readonly DATATABLES="https://cdn.datatables.net"
 readonly FONTAWESOME="https://use.fontawesome.com"
 readonly UNPKG="https://unpkg.com"
 readonly FONTSGSTATIC="https://fonts.gstatic.com"
-
+readonly GOOGLEAPIS="ajax.googleapis.com/ajax/libs"
 
 # =============================================================================
 # GLOBALS
@@ -687,8 +687,8 @@ function create_url() {
         elif [[ "$subfile" =~ \.js$ ]]; then
             url="$CLOUDFLARE/$folder/$version/js/$subfile"
         fi
-    elif [ "$folder" = "angular-route" ]; then
-        url="$JSDELIVR/npm/$folder@$version/angular-route.min.js"
+    elif [ "$folder" = "angular.js" ]; then
+        url="$GOOGLEAPIS/angularjs/$version/$subfile"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then

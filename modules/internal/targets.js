@@ -109,31 +109,6 @@ targets.setLastVersion = function (type, version) {
         return '2.2.0';
     } else if (type.startsWith('/angularjs-toaster/3.')) {
         return '3.0.0';
-    } else if (type.startsWith('/angular-animate/1.')) {
-        return '1.8.2';
-    } else if (type.startsWith('/angular-aria/1.')) {
-        return '1.8.2';
-    } else if (type.startsWith('/angular-cookies/1.')) {
-        return '1.8.2';
-    } else if (type.startsWith('/angular-loader/1.')) {
-        return '1.8.2';
-    } else if (type.startsWith('/angular-message-format/1.')) {
-        return '1.8.2';
-    } else if (type.startsWith('/angular-messages/1.')) {
-        return '1.8.2';
-    } else if (type.startsWith('/angular-parse-ext/1.')) {
-        return '1.8.2';
-    } else if (type.startsWith('/angular-resource/1.')) {
-        if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // <= v1.2.32
-        return '1.8.2';
-    } else if (type.startsWith('/angular-route/1.')) {
-        if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // <= v1.2.32
-        return '1.8.2';
-    } else if (type.startsWith('/angular-sanitize/1.')) {
-        if (helpers.compareVersion('1.6.10', version)) return '1.6.10';
-        return '1.8.2';
-    } else if (type.startsWith('/angular-touch/1.')) {
-        return '1.8.2';
     } else if (type.startsWith('/angular-bootstrap-colorpicker/3.')) {
         return '3.0.32';
     } else if (type.startsWith('/zumper-angular-payments/1.')) {
