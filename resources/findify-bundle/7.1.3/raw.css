@@ -27,6 +27,14 @@
     --components-cards-product-description-font-size: 1;
     --components-cards-product-description-color: #b2b2b2;
     --components-cards-product-description-font-family: var(--font-base);
+    --components-autocomplete-blocktitle-font-size: 12px;
+    --components-cards-content-title-font-size: 1;
+    --components-cards-content-title-font-family: var(--font-base);
+    --components-cards-content-title-text-transform: none;
+    --components-cards-content-title-color: var(--color-black);
+    --components-cards-content-description-font-size: 1;
+    --components-cards-content-description-color: #b2b2b2;
+    --components-cards-content-description-font-family: var(--font-base);
     --components-categoryfacet-item-font-size: var(--font-size-medium);
     --components-categoryfacet-item-padding: 3px 0;
     --components-search-desktopfacets-padding: 25px;
@@ -35,18 +43,13 @@
     --components-dropdown-select-height: 40px;
     --components-dropdown-dropdown-background: var(--color-white);
     --components-dropdown-highlighted-background: var(--color-grey-1);
+    --components-autocomplete-suggestionitem-suggestion-color: var(--color-black);
+    --components-autocomplete-suggestionitem-suggestion-font-family: var(--font-base);
+    --components-autocomplete-suggestionitem-suggestion-font-size: 1;
     --components-cards-promo-title-font-size: var(--font-size-huge);
     --components-pagination-height: 40px;
     --components-pagination-text-transform: uppercase;
     --components-search-desktopactions-padding: 25px;
-    --components-cards-content-title-font-size: 1;
-    --components-cards-content-title-font-family: var(--font-base);
-    --components-cards-content-title-color: var(--color-black);
-    --components-cards-content-title-text-transform: none;
-    --components-cards-content-title-text-align: left;
-    --components-cards-content-description-font-size: 1;
-    --components-cards-content-description-color: #b2b2b2;
-    --components-cards-content-description-font-family: var(--font-base);
     --components-checkboxfacet-search-padding-bottom: 11px;
     --components-facet-min-width: 250px;
     --components-facet-vertical-title-padding: 25px;
@@ -62,9 +65,6 @@
     --components-cards-product-price-price-font-size: var(--font-size-medium);
     --components-cards-product-price-sale-price-color: var(--color-red);
     --components-cards-product-price-sale-price-font-size: var(--font-size-medium);
-    --components-autocomplete-suggestionitem-suggestion-color: var(--color-black);
-    --components-autocomplete-suggestionitem-suggestion-font-family: var(--font-base);
-    --components-autocomplete-suggestionitem-suggestion-font-size: 1;
     --swiper-theme-color: #333;
     --swiper-navigation-size: 44px;
     --components-rangefacet-height: 30px;
@@ -216,6 +216,8 @@
 
 .findify-components-common--grid__column,
 .findify-components-common--grid__placeholder {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
     -webkit-box-flex: 1;
@@ -225,8 +227,6 @@
     flex-shrink: 0;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
     list-style: none;
 }
 
@@ -359,6 +359,7 @@
     padding-bottom: 15px;
 }
 
+.findify-components--cards--product.findify-components--cards--product__highlighted:after,
 .findify-components--cards--product:focus-within:after {
     content: ' ';
     position: absolute;
@@ -370,6 +371,7 @@
     border-color: -webkit-focus-ring-color;
 }
 
+.findify-components--cards--product.findify-components--cards--product__highlighted a:focus,
 .findify-components--cards--product:focus-within a:focus {
     text-decoration: none;
 }
@@ -487,88 +489,24 @@
 
 /*  imported from styles.css  */
 
-.findify-components-autocomplete--search-suggestions {
+.findify-components-autocomplete--layout__column {
     vertical-align: top;
     background: #fff;
-    padding: 0 27px;
-    margin-top: 20px;
-}
-
-.findify-components-autocomplete--search-suggestions__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-
-.findify-components-autocomplete--search-suggestions__list li {
-    display: block;
-}
-
-.findify-components-autocomplete--search-suggestions__horizontal {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding-bottom: 25px;
-}
-
-.findify-components-autocomplete--search-suggestions__title {
-    margin-top: 0;
-    margin-bottom: 17px;
-    color: var(--color-grey-3);
-    font-size: var(--font-size-small);
-    line-height: var(--font-size-small);
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: var(--font-base);
+    padding: 0 32px;
 }
 
 /*  imported from styles.css  */
 
-.findify-components-autocomplete--product-matches {
-    vertical-align: top;
-    padding: 0 27px;
-    background: #fff;
-    margin-top: 20px;
-}
-
-.findify-components-autocomplete--product-matches__title {
-    margin-top: 0;
-    margin-bottom: 17px;
-    color: var(--color-grey-3);
-    font-size: var(--font-size-small);
-    line-height: var(--font-size-small);
+.findify-components-autocomplete--block-title {
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 32px;
+    color: var(--color-black);
+    font-size: var(--components-autocomplete-blocktitle-font-size);
+    line-height: var(--components-autocomplete-blocktitle-font-size);
     font-weight: bold;
     text-transform: uppercase;
     font-family: var(--font-base);
-}
-
-.findify-components-autocomplete--product-matches__grid-column-class:not(:last-child):after {
-    content: ' ';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: var(--color-grey-2);
-    margin-bottom: 16px;
-}
-
-.findify-components-autocomplete--product-matches__view-more-button {
-    margin: 0 auto 0 auto;
-    display: block;
-    padding: 0 85px;
-    height: 40px;
-    background: var(--color-grey-1);
-    -webkit-transition: background .1s linear;
-            transition: background .1s linear;
-    font-size: var(--font-size-small);
-    width: 300px;
-}
-
-.findify-components-autocomplete--product-matches__view-more-button:hover,
-.findify-components-autocomplete--product-matches__view-more-button:focus {
-    background: var(--color-grey-2);
 }
 
 /*  imported from styles.css  */
@@ -614,6 +552,146 @@
 .findify-components-search--lazy-results__prev-button:hover,
 .findify-components-search--lazy-results__prev-button:focus {
     background: var(--color-grey-2);
+}
+
+/*  imported from styles.css  */
+
+.findify-components--cards--content {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.findify-components--cards--content.findify-components--cards--content__vertical {
+    text-align: var(--text-align-vertical);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    min-width: 100px;
+}
+
+.findify-components--cards--content.findify-components--cards--content__horizontal {
+    text-align: var(--text-align-horizontal);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    border-radius: 2px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: -10px;
+}
+
+.findify-components--cards--content.findify-components--cards--content__bubble {
+    padding: 8px 15px;
+    margin: 0 12px 12px 0;
+    background: var(--color-grey-1);
+    display: inline-block;
+    width: auto;
+    border-radius: 17px;
+}
+
+.findify-components--cards--content.findify-components--cards--content__bubble:hover,
+.findify-components--cards--content.findify-components--cards--content__bubble:focus {
+    background: var(--color-grey-2);
+}
+
+.findify-components--cards--content.findify-components--cards--content__bubble .findify-components--cards--content__title {
+    line-height: 1;
+}
+
+.findify-components--cards--content.findify-components--cards--content__highlighted:after,
+.findify-components--cards--content:focus-within:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: 2px solid Highlight;
+    border-color: -webkit-focus-ring-color;
+}
+
+.findify-components--cards--content.findify-components--cards--content__highlighted a:focus,
+.findify-components--cards--content:focus-within a:focus {
+    text-decoration: none;
+}
+
+.findify-components--cards--content:hover,
+.findify-components--cards--content:focus {
+    background: var(--color-grey-1);
+}
+
+.findify-components--cards--content__content {
+    font-size: 14px;
+}
+
+.findify-components--cards--content__image {
+    cursor: pointer;
+    margin-bottom: 12px;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+.findify-components--cards--content__horizontal .findify-components--cards--content__image {
+    min-width: 60px;
+    margin: 0 16px 0 0;
+}
+
+.findify-components--cards--content__title {
+    color: var(--components-cards-content-title-color);
+    font-family: var(--components-cards-content-title-font-family);
+    text-transform: var(--components-cards-content-title-text-transform);
+    font-size: calc(var(--font-size-medium) * var(--components-cards-content-title-font-size)) !important; /* FIXME: figure out issue with import order of styles */
+    line-height: calc(var(--font-size-medium) * var(--components-cards-content-title-font-size) * 1.6);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.findify-components--cards--content__title-link {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.findify-components--cards--content__title-link:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.findify-components--cards--content__title-link:focus {
+    text-decoration: underline;
+}
+
+.findify-components--cards--content__description {
+    font-family: var(--components-cards-content-description-font-family);
+    font-size: calc(var(--font-size-medium) * var(--components-cards-content-description-font-size));
+    color: var(--components-cards-content-description-color);
+    margin: 5px 0;
+}
+
+/*  imported from styles.css  */
+
+.findify-components-search--static-results {
+    padding-top: 0;
+}
+
+.findify-components-search--static-results__column {
+    display: table;
 }
 
 /*  imported from styles.css  */
@@ -893,25 +971,77 @@
 
 /*  imported from styles.css  */
 
-.findify-components-autocomplete--tip__tip {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+.findify-components-autocomplete--suggestion-item__suggestion {
+    color: var(--components-autocomplete-suggestionitem-suggestion-color);
+    font-family: var(--components-autocomplete-suggestionitem-suggestion-font-family);
+    font-size: calc(var(--font-size-medium) * var(--components-autocomplete-suggestionitem-suggestion-font-size));
     cursor: pointer;
-    text-align: center;
-    padding: 16px 20px;
-    font-family: var(--font-base);
-    font-size: var(--font-size-large);
-    color: #b2b2b2;
-    background: var(--color-grey-1);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    border-radius: 2px;
+    text-align: left;
+    padding: 10px;
+    margin: 0 -10px;
+    text-transform: capitalize;
+    position: relative;
 }
 
-.findify-components-autocomplete--tip__highlight {
-    color: #404040;
+.findify-components-autocomplete--suggestion-item__suggestion.findify-components-autocomplete--suggestion-item__horizontal {
+    padding: 8px 15px;
+    margin: 0 22px 12px -10px;
+    background: var(--color-grey-1);
+    display: inline-block;
+    width: auto;
+    border-radius: 17px;
+}
+
+.findify-components-autocomplete--suggestion-item__suggestion.findify-components-autocomplete--suggestion-item__horizontal:hover,
+.findify-components-autocomplete--suggestion-item__suggestion.findify-components-autocomplete--suggestion-item__horizontal:focus {
+    background: var(--color-grey-2);
+}
+
+.findify-components-autocomplete--suggestion-item__suggestion:before {
+    content: ' ';
+    display: table;
+}
+
+.findify-components-autocomplete--suggestion-item__suggestion:hover,
+.findify-components-autocomplete--suggestion-item__suggestion:focus {
+    background: var(--color-grey-1);
+}
+
+.findify-components-autocomplete--suggestion-item__highlightedText {
+    font-weight: bolder;
+}
+
+.findify-components-autocomplete--suggestion-item__highlighted:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: 2px solid Highlight;
+    border-color: -webkit-focus-ring-color;
+}
+
+.findify-components-autocomplete--suggestion-item__icon {
+    margin-right: 8px;
+    min-width: 14px;
+}
+
+.findify-components-autocomplete--suggestion-item__withIcon {
+    /*
+  padding-right: 3px;
+  padding-left: 3px;*/
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.findify-components-autocomplete--suggestion-item__trending {
+    font-style: italic;
 }
 
 /*  imported from styles.css  */
@@ -1160,69 +1290,6 @@ p.findify-layouts--recommendation--grid__title {
 
 /*  imported from styles.css  */
 
-.findify-components--cards--content {
-    padding-top: 10px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 10px;
-    width: calc(100% - 24px);
-    display: table;
-    background-color: transparent;
-    -webkit-transition: background-color .1s ease-in-out;
-            transition: background-color .1s ease-in-out;
-    text-decoration: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    border: none !important;
-    vertical-align: bottom;
-}
-
-.findify-components--cards--content:hover,
-.findify-components--cards--content:focus {
-    background-color: var(--color-grey-1);
-}
-
-.findify-components--cards--content__linkIcon {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    color: white;
-}
-
-.findify-components--cards--content__image-wrap {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.findify-components--cards--content__image {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.findify-components--cards--content__title {
-    width: 100%;
-    color: var(--components-cards-content-title-color);
-    font-family: var(--components-cards-content-title-font-family);
-    text-transform: var(--components-cards-content-title-text-transform);
-    text-align: var(--components-cards-content-title-text-align);
-    font-size: calc(var(--font-size-medium) * var(--components-cards-content-title-font-size)) !important; /* FIXME: figure out issue with import order of styles */
-    line-height: calc(var(--font-size-medium) * var(--components-cards-content-title-font-size) * 1.6);
-}
-
-.findify-components--cards--content__description {
-    font-family: var(--components-cards-content-description-font-family);
-    font-size: calc(var(--font-size-medium) * var(--components-cards-content-description-font-size));
-    color: var(--components-cards-content-description-color);
-    margin: 5px 0;
-}
-
-/*  imported from styles.css  */
-
 .findify-components-common--sticky__container {
     overflow: hidden;
     overflow-y: auto;
@@ -1242,16 +1309,6 @@ p.findify-layouts--recommendation--grid__title {
 .findify-components-common--sticky__sticky {
     position: fixed;
     top: 0;
-}
-
-/*  imported from styles.css  */
-
-.findify-components-search--static-results {
-    padding-top: 0;
-}
-
-.findify-components-search--static-results__column {
-    display: table;
 }
 
 /*  imported from styles.css  */
@@ -1364,6 +1421,27 @@ p.findify-layouts--recommendation--grid__title {
 
 .findify-components--breadcrumbs__star.findify-components--breadcrumbs__unfilled {
     color: var(--color-grey-3);
+}
+
+/*  imported from styles.css  */
+
+.findify-components-autocomplete--suggestions__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.findify-components-autocomplete--suggestions__list li {
+    display: block;
+}
+
+.findify-components-autocomplete--suggestions__horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 /*  imported from styles.css  */
@@ -1585,59 +1663,31 @@ p.findify-layouts--recommendation--grid__title {
 
 /*  imported from styles.css  */
 
-.findify-components-autocomplete--suggestion-item__suggestion {
-    color: var(--components-autocomplete-suggestionitem-suggestion-color);
-    font-family: var(--components-autocomplete-suggestionitem-suggestion-font-family);
-    font-size: calc(var(--font-size-large) * var(--components-autocomplete-suggestionitem-suggestion-font-size));
+.findify-components-autocomplete--content__container {
+    margin: 0 -10px;
+}
+
+/*  imported from styles.css  */
+
+.findify-components-autocomplete--tip__tip {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     cursor: pointer;
-    border-radius: 2px;
-    text-align: left;
-    padding: 10px 17px;
-    margin: 0 -17px;
-    text-transform: capitalize;
-}
-
-.findify-components-autocomplete--suggestion-item__suggestion.findify-components-autocomplete--suggestion-item__horizontal {
-    margin: 0 2px;
-}
-
-.findify-components-autocomplete--suggestion-item__suggestion:before {
-    content: ' ';
-    display: table;
-}
-
-.findify-components-autocomplete--suggestion-item__suggestion:hover,
-.findify-components-autocomplete--suggestion-item__suggestion:focus {
+    text-align: center;
+    padding: 16px 20px;
+    font-family: var(--font-base);
+    font-size: var(--font-size-large);
+    color: #b2b2b2;
     background: var(--color-grey-1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.findify-components-autocomplete--suggestion-item__highlightedText {
-    font-weight: bolder;
-}
-
-.findify-components-autocomplete--suggestion-item__highlighted {
-    background: var(--color-grey-1);
-}
-
-.findify-components-autocomplete--suggestion-item__icon {
-    margin-right: 16px;
-    min-width: 14px;
-}
-
-.findify-components-autocomplete--suggestion-item__withIcon {
-    /*
-  padding-right: 3px;
-  padding-left: 3px;*/
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.findify-components-autocomplete--suggestion-item__trending {
-    font-style: italic;
+.findify-components-autocomplete--tip__highlight {
+    color: #404040;
 }
 
 /*  imported from styles.css  */
@@ -2305,6 +2355,43 @@ body {
 
 .findify-components--tabs__disabled {
     opacity: .3;
+}
+
+/*  imported from styles.css  */
+
+.findify-components-autocomplete--products__view-all {
+    float: right;
+    color: var(--color-black);
+}
+
+.findify-components-autocomplete--products__list {
+    margin-top: 10px;
+}
+
+.findify-components-autocomplete--products__grid-column-class:not(:last-child):after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--color-grey-2);
+    margin-bottom: 16px;
+}
+
+.findify-components-autocomplete--products__view-more-button {
+    margin: 0 auto 0 auto;
+    display: block;
+    padding: 0 85px;
+    height: 40px;
+    background: var(--color-grey-1);
+    -webkit-transition: background .1s linear;
+            transition: background .1s linear;
+    font-size: var(--font-size-small);
+    width: 300px;
+}
+
+.findify-components-autocomplete--products__view-more-button:hover,
+.findify-components-autocomplete--products__view-more-button:focus {
+    background: var(--color-grey-2);
 }
 
 /*  imported from styles.css  */
@@ -3118,13 +3205,9 @@ body {
 
 .findify-layouts--autocomplete--dropdown {
     background: white;
-    border: 1px solid var(--color-grey-2);
-    -webkit-box-shadow: 0 5px 10px 0 rgba(71, 89, 113, .5);
-            box-shadow: 0 5px 10px 0 rgba(71, 89, 113, .5);
     position: absolute;
     z-index: 9999;
-    padding-bottom: 0;
-    width: 600px;
+    width: 860px;
     max-width: 100vw;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -3159,27 +3242,12 @@ body {
     padding-left: 25px;
 }
 
-.findify-layouts--autocomplete--dropdown__tip {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    text-align: center;
-    border-bottom: 1px solid #e2e2e2;
-}
-
 .findify-layouts--autocomplete--dropdown__highlight {
     color: var(--layouts-autocomplete-dropdown-highlight-highlight-color);
 }
 
 .findify-layouts--autocomplete--dropdown__container {
-    width: 100%;
-    margin-top: 18px;
-    margin-bottom: 38px;
-}
-
-.findify-layouts--autocomplete--dropdown__container > *:first-child {
-    border-right: 1px solid #e2e2e2;
+    margin-bottom: 32px;
 }
 
 .findify-layouts--autocomplete--dropdown__fullscreen {
