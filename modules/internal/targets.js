@@ -552,7 +552,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/showdown/0.')) {
         return '0.5.1';
     } else if (type.startsWith('/simplebar/')) {
-        return '5.3.5';
+        return '5.3.6';
     } else if (type.startsWith('/simplemde/')) {
         return '1.11.2';
     } else if (type.startsWith('/slick-carousel/1.')) {
