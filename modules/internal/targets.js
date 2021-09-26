@@ -92,7 +92,8 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/angular.js/1.')) {
         if (helpers.compareVersion('1.2.19', version)) return '1.2.19'; // <= v1.2.19
         else if (helpers.compareVersion('1.2.32', version)) return '1.2.32'; // > 1.2.19 to <= v1.2.32
-        else if (helpers.compareVersion('1.3.20', version)) return '1.3.20'; // > 1.2.32 to <= 1.3.20
+        else if (helpers.compareVersion('1.3.0', version)) return '1.3.0'; // > 1.2.32 to <= 1.3.0
+        else if (helpers.compareVersion('1.3.20', version)) return '1.3.20'; // > 1.3.0 to <= 1.3.20
         else if (helpers.compareVersion('1.4.14', version)) return '1.4.14'; // > 1.3.20 to <= 1.4.14
         else if (helpers.compareVersion('1.5.11', version)) return '1.5.11'; // > 1.4.14 to <= 1.5.11
         else if (helpers.compareVersion('1.6.10', version)) return '1.6.10'; // > 1.5.11 to <= 1.6.10

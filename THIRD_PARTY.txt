@@ -14,6 +14,16 @@ ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-resource.min.js
 ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.min.js
 ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-sanitize.min.js
 ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-touch.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-aria.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-cookies.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-loader.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-messages.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-resource.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-sanitize.min.js
+ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-touch.min.js
 ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-animate.min.js
 ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-aria.min.js
 ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-cookies.min.js
