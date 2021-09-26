@@ -320,6 +320,10 @@
     flex-direction: column;
   }
 }
+.bs-datepicker .bs-timepicker-in-datepicker-container {
+  display: flex;
+  justify-content: space-around;
+}
 .bs-datepicker-custom-range {
   padding: 15px;
   background: #eee;

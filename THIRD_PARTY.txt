@@ -1726,7 +1726,7 @@ https://cdn.jsdelivr.net/npm/@findify/bundle@7.1.3/dist/styles.css
 https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/algolia-min.css
 https://cdn.jsdelivr.net/npm/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
 https://cdn.jsdelivr.net/npm/ngx-bootstrap@6.2.0/datepicker/bs-datepicker.css
-https://cdn.jsdelivr.net/npm/ngx-bootstrap@7.1.1/datepicker/bs-datepicker.css
+https://cdn.jsdelivr.net/npm/ngx-bootstrap@7.1.2/datepicker/bs-datepicker.css
 https://cdn.jsdelivr.net/npm/nouislider@15.4.0/dist/nouislider.min.js
 https://cdn.jsdelivr.net/npm/object-assign@4.1.1/index.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-core@0.6.2/build/p2p-media-loader-core.min.js
