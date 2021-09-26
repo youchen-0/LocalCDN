@@ -344,11 +344,11 @@
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "만약 지원되는 모든 CDN 연결을 LocalCDN으로 리다이렉트 하고싶다면, 이 규칙을 광고 차단기에 추가하여 리다이렉트를 허용할 수 있습니다. 만약 규칙을 추가하고 싶지 않다면, 웹사이트마다 CDN 연결을 각각 허용해야 합니다.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "uBlock Origin만:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
@@ -356,11 +356,11 @@
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "아이콘",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "모드",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
@@ -396,7 +396,7 @@
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "내가 그것이 정말인지 어떻게 아나요?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
