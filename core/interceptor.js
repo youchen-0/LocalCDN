@@ -41,8 +41,8 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         };
     }
 
-    if (!interceptor.blockMissing && interceptor._isBadResource(requestDetails.url)) {
-        console.warn(`[ LocalCDN ] Evil resource blocked: ${requestDetails.url}`);
+    if (interceptor._isBadResource(requestDetails.url)) {
+        console.log(`[ LocalCDN ] Evil resource blocked: ${requestDetails.url}`);
         log.append(tab.url, requestDetails.url, '-', true);
         return {
             'cancel': true
