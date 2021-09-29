@@ -8,7 +8,7 @@
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "",
+        "message": "ഓപ്ഷനുകൾ",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
@@ -52,7 +52,7 @@
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
-        "message": "",
+        "message": "വിപുലമായ",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
@@ -68,7 +68,7 @@
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "പകർത്തുക",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
@@ -120,7 +120,7 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "ഗൂഗുൾ ഫോണ്ടുകൾ തടയുക",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
@@ -144,23 +144,23 @@
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "ഇന്ന്",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "കഴിഞ്ഞ ആഴ്ച",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "കഴിഞ്ഞ മാസം",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "കഴിഞ്ഞ വർഷം",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "ഇല്ലാതാക്കുക",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
@@ -180,31 +180,31 @@
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "അടിസ്ഥാന ഓപഷനുകൾ",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "വിപുലമായ",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "മറ്റുള്ളവ",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "വിവരം",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "സ്റ്റോറേജ് തരം",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "ലോക്കൽ",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "സമന്വയം",
         "description": "Sync"
     },
     "headerImportExport": {
@@ -240,7 +240,7 @@
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "എപ്പോഴും",
         "description": "Always"
     },
     "websiteBroken": {
@@ -252,7 +252,7 @@
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "ബീറ്റ്",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
@@ -264,7 +264,7 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "സഹായം",
         "description": "Help"
     },
     "helpIntroductionTitle": {
@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "ബ്രൗസർ അനുയോജ്യത",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -312,7 +312,7 @@
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "",
+        "message": "വിക്കി പേജുകൾ",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
@@ -356,11 +356,11 @@
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
-        "message": "",
+        "message": "ചിഹ്നം",
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "മോഡ്",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
@@ -368,7 +368,7 @@
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "സാധാരണ/എളുപ്പം",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
@@ -424,15 +424,15 @@
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "അതെ",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "ഇല്ല",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "ഡാറ്റ",
         "description": "Data"
     },
     "helpSyncContentEver": {
@@ -448,7 +448,7 @@
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "ബ്രൗസർ അനുയോജ്യത",
         "description": "Browser compatibility"
     },
     "helpReplace": {
@@ -464,7 +464,7 @@
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "ക്രോമിയം അടിസ്ഥനമായ എല്ലാ ബ്രൗസറുകളും",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
