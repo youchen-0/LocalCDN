@@ -41,6 +41,14 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         };
     }
 
+    if (!interceptor.blockMissing && interceptor._isBadResource(requestDetails.url)) {
+        console.warn(`[ LocalCDN ] Evil resource blocked: ${requestDetails.url}`);
+        log.append(tab.url, requestDetails.url, '-', true);
+        return {
+            'cancel': true
+        };
+    }
+
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails, tab.url);
     targetPath = targetDetails.path;
 
@@ -141,6 +149,10 @@ interceptor._handleStorageChanged = function (changes) {
     }
 };
 
+interceptor._isBadResource = function (requestUrl) {
+    requestUrl = requestUrl.replace(/(^\w+:|^)\/\//, '');
+    return Object.keys(BadResources).filter((path) => requestUrl.startsWith(path)).length !== 0;
+};
 
 /**
  * Event Handlers

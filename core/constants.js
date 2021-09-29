@@ -391,6 +391,20 @@ const MathJaxFiles = {
     'jax/output/HTML-CSS/jax.js': true,
 };
 
+/**
+ * To block bad resources, e.g. fingerprint
+ *
+ * Necessary if the user has selected the option "Block requests for missing
+ * resources Advanced" option is not enabled.
+ *
+ * https://codeberg.org/nobody/LocalCDN/issues/703
+ */
+const BadResources = {
+    'cdn.jsdelivr.net/npm/@fingerprintjs/': true,
+    'cdnjs.cloudflare.com/ajax/libs/fingerprintjs/': true,
+    'cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/': true,
+    'cdnjs.cloudflare.com/ajax/libs/ClientJS/': true,
+};
 
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder
