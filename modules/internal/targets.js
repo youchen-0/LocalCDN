@@ -236,7 +236,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/d3/6.')) {
         return '6.7.0';
     } else if (type.startsWith('/d3/7.')) {
-        return '7.0.4';
+        return '7.1.1';
     } else if (type.startsWith('/d3-legend/2.')) {
         return '2.25.6';
     } else if (type.startsWith('/datatables/1.')) {
