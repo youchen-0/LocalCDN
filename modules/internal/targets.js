@@ -316,7 +316,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/hls.js/0.')) {
         return '0.14.17';
     } else if (type.startsWith('/hls.js/1.')) {
-        return '1.0.10';
+        return '1.0.11';
     } else if (type.startsWith('/hogan.js/')) {
         return '3.0.2';
     } else if (type.startsWith('/instantsearch.css/7.')) {
