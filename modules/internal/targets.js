@@ -631,7 +631,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/video.js/')) {
         if (helpers.compareVersion('5.20.5', version)) return '5.20.5'; // <= 5.20.5
         else if (helpers.compareVersion('6.13.0', version)) return '6.13.0'; // > 5.20.5 to <= 6.13.0
-        else return '7.15.6';
+        else return '7.16.0';
     } else if (type.startsWith('/vue/1.')) {
         return '1.0.28';
     } else if (type.startsWith('/vue/2.')) {
