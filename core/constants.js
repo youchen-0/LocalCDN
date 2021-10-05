@@ -70,7 +70,7 @@ const BadgeSetting = {
     'BADGED_TEXT_COLOR': 'badged-text-color',
     'RESTORE_BACKGROUND_COLOR': 'restore-background-color',
     'RESTORE_TEXT_COLOR': 'restore-text-color',
-    'HEX_BACKGROUND_COLOR': '#4A826C',
+    'HEX_BACKGROUND_COLOR': '#666666',
     'HEX_TEXT_COLOR': '#FFFFFF',
 };
 
