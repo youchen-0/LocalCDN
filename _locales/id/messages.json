@@ -60,7 +60,7 @@
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Jika Anda menggunakan pemblokir iklan, Anda bisa membuat aturannya di sini. Anda harus manambahkan aturan ini secara manual ke pemblokir iklan Anda.",
+        "message": "Jika Anda menggunakan pemblokir iklan, Anda bisa membuat aturannya di sini. Anda harus menambahkan aturan ini secara manual ke pemblokir iklan Anda.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -368,15 +368,15 @@
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "Bawaan/Mudah",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "Sedang",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "Sulit",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
@@ -396,7 +396,7 @@
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
-        "message": "",
+        "message": "Bagaimana saya tahu bahwa itu benar?",
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
@@ -468,11 +468,11 @@
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "Ini bukanlah sebuah limitasi dari LocalCDN, melainkan tidak ada dukungan API dari peramban berbasis Chromium.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "Lencana bawaan",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
