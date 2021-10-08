@@ -268,11 +268,11 @@
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Introduktion",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Vad är »HTML-filter«?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
@@ -280,7 +280,7 @@
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Vissa webbplatser ser konstiga ut eller är inte lätta att använda",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
@@ -296,7 +296,7 @@
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Webbläsarkompatibilitet",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
@@ -304,7 +304,7 @@
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "Testverktyg",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
@@ -324,7 +324,7 @@
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "Resultatet ser då ut så här:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
@@ -360,7 +360,7 @@
         "description": "Icon"
     },
     "helpRuleGeneratorUblockTableMode": {
-        "message": "",
+        "message": "Läge",
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
@@ -432,7 +432,7 @@
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Data",
         "description": "Data"
     },
     "helpSyncContentEver": {
@@ -440,31 +440,31 @@
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "Standard, Ljus, Blå/Grå",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "Mer information om Firefox Sync:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "Webbläsarkompatibilitet",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "Ersätt",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "Ersätt andra resurser",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "Uppgradera alla resurser",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "Alla Chromium-baserade webbläsare",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
