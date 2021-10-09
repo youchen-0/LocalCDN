@@ -288,7 +288,7 @@ const CDNs = {
     'ajax.aspnetcdn.com': 'Microsoft Ajax CDN',
     'ajax.microsoft.com': 'Microsoft Ajax CDN [Deprecated]',
     'cdnjs.cloudflare.com': 'CDNJS (Cloudflare)',
-    'code.jquery.com': 'jQuery CDN (MaxCDN)',
+    'code.jquery.com': 'jQuery CDN (StackPath)',
     'cdn.jsdelivr.net': 'jsDelivr (Cloudflare)',
     'yastatic.net': 'Yandex CDN',
     'yandex.st': 'Yandex CDN [Deprecated]',
