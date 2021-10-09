@@ -205,7 +205,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootswatch/4.')) {
         return '4.6.0';
     } else if (type.startsWith('/bootswatch/5.')) {
-        return '5.1.1';
+        return '5.1.2';
     } else if (type.startsWith('/bowser/')) {
         if (version !== 'latest' && helpers.compareVersion('1.9.4', version)) return '1.9.4';
         return '2.11.0';
