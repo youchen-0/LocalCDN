@@ -359,6 +359,10 @@
     padding-bottom: 15px;
 }
 
+.findify-components--cards--product.findify-components--cards--product__autocomplete {
+    padding-bottom: 0;
+}
+
 .findify-components--cards--product.findify-components--cards--product__highlighted:after,
 .findify-components--cards--product:focus-within:after {
     content: ' ';
@@ -577,6 +581,10 @@
     min-width: 100px;
 }
 
+.findify-components--cards--content.findify-components--cards--content__vertical.findify-components--cards--content__autocomplete {
+    margin-bottom: 20px;
+}
+
 .findify-components--cards--content.findify-components--cards--content__horizontal {
     text-align: var(--text-align-horizontal);
     -webkit-box-orient: horizontal;
@@ -599,11 +607,6 @@
     border-radius: 17px;
 }
 
-.findify-components--cards--content.findify-components--cards--content__bubble:hover,
-.findify-components--cards--content.findify-components--cards--content__bubble:focus {
-    background: var(--color-grey-2);
-}
-
 .findify-components--cards--content.findify-components--cards--content__bubble .findify-components--cards--content__title {
     line-height: 1;
 }
@@ -623,11 +626,6 @@
 .findify-components--cards--content.findify-components--cards--content__highlighted a:focus,
 .findify-components--cards--content:focus-within a:focus {
     text-decoration: none;
-}
-
-.findify-components--cards--content:hover,
-.findify-components--cards--content:focus {
-    background: var(--color-grey-1);
 }
 
 .findify-components--cards--content__content {
