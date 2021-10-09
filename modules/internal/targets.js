@@ -627,7 +627,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/videojs-seek-buttons/1.')) {
         return '1.6.0';
     } else if (type.startsWith('/videojs-seek-buttons/2.')) {
-        return '2.1.0';
+        return '2.2.0';
     } else if (type.startsWith('/video.js/')) {
         if (helpers.compareVersion('5.20.5', version)) return '5.20.5'; // <= 5.20.5
         else if (helpers.compareVersion('6.13.0', version)) return '6.13.0'; // > 5.20.5 to <= 6.13.0
