@@ -1,22 +1,22 @@
 {
     "extensionDescription": {
-        "message": "",
+        "message": "Ščiti vas pred sledenjem prek CDN-jev (omrežja za dostavo vsebine) tako, da preusmerja na lokalne vire.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "",
+        "message": "Količina virov posredovanih iz lokalnega omrežja za dostavo vsebine od namestitve dalje.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "",
+        "message": "Možnosti",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "",
+        "message": "Prikaz števila menjav virov na ikoni",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "",
+        "message": "Prikažite število spremenjenih  virov na ikono razširitve.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
