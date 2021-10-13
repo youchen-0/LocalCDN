@@ -474,7 +474,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/noUiSlider/14.')) {
         return '14.7.0';
     } else if (type.startsWith('/noUiSlider/15.')) {
-        return '15.4.0';
+        return '15.5.0';
     } else if (type.startsWith('/nvd3/1.')) {
         return '1.8.6';
     } else if (type.startsWith('/object-assign@4.')) {
