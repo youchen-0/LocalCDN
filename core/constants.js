@@ -70,7 +70,7 @@ const BadgeSetting = {
     'BADGED_TEXT_COLOR': 'badged-text-color',
     'RESTORE_BACKGROUND_COLOR': 'restore-background-color',
     'RESTORE_TEXT_COLOR': 'restore-text-color',
-    'HEX_BACKGROUND_COLOR': '#4A826C',
+    'HEX_BACKGROUND_COLOR': '#666666',
     'HEX_TEXT_COLOR': '#FFFFFF',
 };
 
@@ -288,7 +288,7 @@ const CDNs = {
     'ajax.aspnetcdn.com': 'Microsoft Ajax CDN',
     'ajax.microsoft.com': 'Microsoft Ajax CDN [Deprecated]',
     'cdnjs.cloudflare.com': 'CDNJS (Cloudflare)',
-    'code.jquery.com': 'jQuery CDN (MaxCDN)',
+    'code.jquery.com': 'jQuery CDN (StackPath)',
     'cdn.jsdelivr.net': 'jsDelivr (Cloudflare)',
     'yastatic.net': 'Yandex CDN',
     'yandex.st': 'Yandex CDN [Deprecated]',
@@ -335,15 +335,20 @@ const IgnoredHost = {
  */
 const MathJaxFiles = {
     'config/default.js': true,
+    'config/MML_HTMLorMML.js': true,
     'config/TeX-AMS_HTML-full.js': true,
     'config/TeX-AMS-MML_HTMLorMML.js': true,
     'config/TeX-MML-AM_CHTML.js': true,
     'extensions/TeX/begingroup.js': true,
     'extensions/TeX/cancel.js': true,
     'extensions/TeX/mhchem3/mhchem.js': true,
+    'extensions/asciimath2jax.js': true,
     'extensions/MathEvents.js': true,
     'extensions/MathMenu.js': true,
+    'extensions/MathML/content-mathml.js': true,
+    'extensions/MathML/mml3.js': true,
     'extensions/MathZoom.js': true,
+    'extensions/mml2jax.js': true,
     'extensions/tex2jax.js': true,
     'fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff': true,
     'fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff': true,
@@ -361,6 +366,7 @@ const MathJaxFiles = {
     'jax/output/CommonHTML/fonts/TeX/fontdata.js': true,
     'jax/output/CommonHTML/autoload/mtable.js': true,
     'jax/output/CommonHTML/jax.js': true,
+    'jax/output/CommonHTML/config.js': true,
     'jax/output/HTML-CSS/autoload/menclose.js': true,
     'jax/output/HTML-CSS/autoload/mtable.js': true,
     'jax/output/HTML-CSS/autoload/multiline.js': true,
@@ -391,6 +397,20 @@ const MathJaxFiles = {
     'jax/output/HTML-CSS/jax.js': true,
 };
 
+/**
+ * To block bad resources, e.g. fingerprint
+ *
+ * Necessary if the user has selected the option "Block requests for missing
+ * resources Advanced" option is not enabled.
+ *
+ * https://codeberg.org/nobody/LocalCDN/issues/703
+ */
+const BadResources = {
+    'cdn.jsdelivr.net/npm/@fingerprintjs/': true,
+    'cdnjs.cloudflare.com/ajax/libs/fingerprintjs/': true,
+    'cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/': true,
+    'cdnjs.cloudflare.com/ajax/libs/ClientJS/': true,
+};
 
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder

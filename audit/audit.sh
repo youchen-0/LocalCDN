@@ -80,7 +80,7 @@ readonly DATATABLES="https://cdn.datatables.net"
 readonly FONTAWESOME="https://use.fontawesome.com"
 readonly UNPKG="https://unpkg.com"
 readonly FONTSGSTATIC="https://fonts.gstatic.com"
-readonly GOOGLEAPIS="ajax.googleapis.com/ajax/libs"
+readonly GOOGLEAPIS="https://ajax.googleapis.com/ajax/libs"
 
 # =============================================================================
 # GLOBALS
