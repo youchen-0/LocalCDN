@@ -16,7 +16,7 @@
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Prikažite število spremenjenih  virov na ikono razširitve.",
+        "message": "Prikažite število spremenjenih virov na ikono razširitve.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
