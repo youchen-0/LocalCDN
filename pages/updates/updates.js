@@ -49,6 +49,8 @@ updates._onDocumentLoaded = function () {
     document.getElementById('generate-umatrix-rules').checked = false;
     document.getElementById('generate-adguard-rules').checked = false;
 
+    updates._openHistoryReleaseNotes();
+
     updateElements = {
         ['ruleSets']: document.getElementsByName('rule-sets'),
         ['copyRuleSet']: document.getElementById('button-copy-rule-set'),
