@@ -32,7 +32,7 @@
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "防止无法被屏蔽的请求到 CDN。",
+        "message": "防止被拒绝的请求泄漏到 CDN。",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
