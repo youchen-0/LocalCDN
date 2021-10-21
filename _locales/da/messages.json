@@ -48,7 +48,7 @@
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "Tilføj domæner der ikke skal inspiceres. Separer flere med semikolon (;).",
+        "message": "Tilføj domæner der ikke skal inspiceres. Et domæne per linje.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
@@ -76,7 +76,7 @@
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "Åben \"Browser konsollen\" ( CTRL + SHIFT + J ) for at vise manglende ressourcer.",
+        "message": "Klik på ikonet i menuen. Loggen vil bliver slettet, når browseren lukkes, eller logning bliver slået fra.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
@@ -256,11 +256,11 @@
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Angiv manglende ressourcer på ikonet",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Ændre farven af skiltet, hvis der mangles ressourcer.",
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
