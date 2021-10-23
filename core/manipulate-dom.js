@@ -117,6 +117,9 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                     }
                     str += decoder.decode(); // end-of-stream
 
+                    // set UTF-8 in document
+                    str = str.replace(new RegExp(`charset=["']?${charset}["']?`), 'charset="utf8"');
+
                     // remove crossorigin and integrity attributes
                     str = str.replace(/<(link|script)[^>]+>/ig, (m) => {
                         // eslint-disable-next-line no-use-before-define
