@@ -149,7 +149,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/appboy-web-sdk/3.')) {
         return '3.4.1';
     } else if (type.startsWith('/axios/0.')) {
-        return '0.23.0';
+        return '0.24.0';
     } else if (type.startsWith('/babel-polyfill/')) {
         return '7.12.1';
     } else if (type.startsWith('/babel-standalone/6.')) {
