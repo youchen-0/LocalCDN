@@ -534,7 +534,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/react-lifecycles-compat/')) {
         return '3.0.4';
     } else if (type.startsWith('/redux/4.')) {
-        return '4.1.1';
+        return '4.1.2';
     } else if (type.startsWith('/rickshaw/1.')) {
         return '1.7.1';
     } else if (type.startsWith('/script.js/2.')) {
