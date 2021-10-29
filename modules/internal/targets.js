@@ -611,7 +611,7 @@ targets.setLastVersion = function (type, version) {
         else if (helpers.compareVersion('3.3.7', version)) return '3.3.7'; // <= 3.3.7
         else return '3.4.1';
     } else if (type.startsWith('/twitter-bootstrap/4.')) {
-        return '4.6.0';
+        return '4.6.1';
     } else if (type.startsWith('/twitter-bootstrap/5.')) {
         return '5.1.3';
     } else if (type.startsWith('/underscore.js/1.')) {
