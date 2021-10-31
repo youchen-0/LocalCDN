@@ -436,7 +436,7 @@
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Sinkronigotaj agordoj:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
@@ -472,15 +472,15 @@
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "Implicita insigno",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "HTML-filtrila insigno",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "Insigno pri mankantaj resursoj",
         "description": "Missing resource badge"
     }
 }
