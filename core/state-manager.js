@@ -270,7 +270,7 @@ stateManager._domainIsListed = function (domain, listname) {
 
 stateManager._setIconDisabled = function (tabIdentifier) {
     wrappers.setIcon({
-        'path': stateManager.selectedIcon,
+        'path': stateManager.selectedIcon || 'Default',
         'tabId': tabIdentifier
     }, 'Disabled');
 };
