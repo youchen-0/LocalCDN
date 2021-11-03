@@ -1131,7 +1131,7 @@ https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.5/styles/xcode.min.css
 https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.5/styles/xt256.min.css
 https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.5/styles/zenburn.min.css
 https://cdnjs.cloudflare.com/ajax/libs/history/4.10.1/history.min.js
-https://cdnjs.cloudflare.com/ajax/libs/history/5.0.1/history.production.min.js
+https://cdnjs.cloudflare.com/ajax/libs/history/5.1.0/history.production.min.js
 https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.14.17/hls.min.js
 https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.0.12/hls.min.js
 https://cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js
