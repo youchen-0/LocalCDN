@@ -181,7 +181,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootstrap-datepicker/1.')) {
         return '1.9.0';
     } else if (type.startsWith('/bootstrap-icons/1.')) {
-        return '1.6.1';
+        return '1.7.0';
     } else if (type.startsWith('/bootstrap-multiselect/0.')) {
         return '0.9.16';
     } else if (type.startsWith('/bootstrap-multiselect/1.')) {
