@@ -529,6 +529,8 @@ targets.setLastVersion = function (type, version) {
         return '7.2.6';
     } else if (type.startsWith('/react-router/5.')) {
         return '5.2.1';
+    } else if (type.startsWith('/react-router/6.')) {
+        return '6.0.1';
     } else if (type.startsWith('/react-side-effect/')) {
         return '2.1.1';
     } else if (type.startsWith('/react-lifecycles-compat/')) {
