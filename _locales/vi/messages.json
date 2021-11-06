@@ -1,302 +1,302 @@
 {
     "extensionDescription": {
-        "message": "",
+        "message": "Bảo vệ bạn khỏi sự theo dõi bằng các CDN (Mạng phân phối nội dung) bằng cách chuyển hướng về tài nguyên có sẵn.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "",
+        "message": "Số lượng mạng phân phối nội dung có sẵn được sử dụng từ khi cài đặt.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "",
+        "message": "Cài đặt",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "",
+        "message": "Hiện số lần sử dụng trên biểu tượng",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "",
+        "message": "Hiện số lần đã sử dụng tài nguyên có sẵn trên biểu tượng của chương trình mở rộng.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "",
+        "message": "Chặn các yêu cầu với tài nguyên không có sẵn",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
-        "message": "",
+        "message": "Huỷ bỏ yêu cầu bị chặn nếu tài nguyên cần thiết không có sẵn.",
         "description": "Block requests for missing resources description."
     },
     "disablePrefetchTitle": {
-        "message": "",
+        "message": "Vô hiệu hoá nạp trước đường dẫn",
         "description": "Disable prefetch title"
     },
     "disablePrefetchDescription": {
-        "message": "",
+        "message": "Ngăn những yêu cầu bị cấm để không bị lộ ra cho các mạng phân phối.",
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "",
+        "message": "Loại bỏ siêu dữ liệu từ những yêu cầu được cho phép",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {
-        "message": "",
+        "message": "Xoá bỏ dữ liệu nhạy cảm từ những yêu cầu tới mạng phân phối nội dung được cho phép để tăng cường bảo mật.",
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "",
+        "message": "Không sử dụng LocalCDN đối với những tên miền sau:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
-        "message": "",
+        "message": "Nhập các tên miền không sử dụng LocalCDN. Mỗi dòng một tên.",
         "description": "Enter domains to disable LocalCDN there. One entry per line."
     },
     "advancedLabel": {
-        "message": "",
+        "message": "Nâng cao",
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "",
+        "message": "Tạo luật cho trình chặn quảng cáo của bạn",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "",
+        "message": "Trong trường hợp bạn sử dụng trình chặn quảng cáo thì có thể tạo ra luật ở đây. Bạn phải thêm những luật này vào trình chặn quảng cáo bằng tay.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
-        "message": "",
+        "message": "Lần cập nhật cuối:",
         "description": "Last update:"
     },
     "copyRuleSet": {
-        "message": "",
+        "message": "Sao chép",
         "description": "Text of button to copy ruleset"
     },
     "loggingTitle": {
-        "message": "",
+        "message": "Kích hoạt ghi chép",
         "description": "Enable logging"
     },
     "loggingDescription": {
-        "message": "",
+        "message": "Bạn có thể mở bản ghi chép từ biểu tượng trong trình đơn. Bản ghi chép sẽ bị xoá khi bạn đóng trình duyệt hoặc tắt ghi chép.",
         "description": "You can open the log with the icon in the menu. The log will be deleted when you close the browser or disable logging."
     },
     "featureBreaksWebsitesDescription": {
-        "message": "",
+        "message": "Tính năng này có thể làm hỏng các trang web. Không nên bật, trừ khi bạn sẵn sàng thêm các tên miền bị ảnh hưởng vào danh sách cho phép.",
         "description": "This feature breaks websites. Do not leave it enabled, unless you are prepared to manually add affected domains to the allow list."
     },
     "featureBreaksWebsitesButton": {
-        "message": "",
+        "message": "Tắt",
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "Lọc mã nguồn HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "Quyên góp",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "",
+        "message": "Đảo ngược bộ lọc HTML",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "",
+        "message": "Bật tính năng này để luôn luôn sử dụng bộ lọc HTML. Các tên miền trong danh sách khi đó sẽ bị bỏ qua. Nếu tính năng này tắt, bộ lọc HTML chỉ được sử dụng đối với các tên miền trong danh sách.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
-        "message": "",
+        "message": "Tính năng này có thể làm hỏng các trang web. Xem thông tin ở trên trang Wiki.",
         "description": "This function can break websites. Please note the information on the Wiki page."
     },
     "htmlFilterDomainsTitleExclude": {
-        "message": "",
+        "message": "Không sử dụng bộ lọc HTML đối với những tên miền sau:",
         "description": "Do not apply HTML filter to these domains:"
     },
     "htmlFilterDomainsDescription": {
-        "message": "",
+        "message": "Nhập các tên miền để được bộ lọc HTML áp dụng hoặc bỏ qua. Mỗi dòng một tên.",
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "",
+        "message": "Sử dụng bộ lọc HTML đối với các tên miền sau:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "Chặn các phông chữ Google",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
-        "message": "",
+        "message": "Nếu các yêu cầu tới tài nguyên không có sẵn được cho phép, các kết nối tới \"fonts.googleapis.com\" sẽ không bị chặn. Bật tính năng này để chặn các yêu cầu đó.",
         "description": "If requests for missing resources are allowed, connections to \"fonts.googleapis.com\" are not blocked. Enable this option to block these requests."
     },
     "chooseIconStyle": {
-        "message": "",
+        "message": "Chọn biểu tượng cho phần mở rộng",
         "description": "Choose an icon for this extension"
     },
     "internalStatisticsTitle": {
-        "message": "",
+        "message": "Số liệu nội bộ",
         "description": "Internal statistics"
     },
     "internalStatisticsDescription": {
-        "message": "",
+        "message": "Chức năng này hiện đang được thử nghiệm. Không chuyển giao dữ liệu. Tất cả được lưu trên thiết bị của bạn.",
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "Số liệu",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
-        "message": "",
+        "message": "Hôm nay",
         "description": "Statistics view for today."
     },
     "labelPastWeek": {
-        "message": "",
+        "message": "Tuần trước",
         "description": "Statistics view for past week."
     },
     "labelPastMonth": {
-        "message": "",
+        "message": "Tháng trước",
         "description": "Statistics view for past month."
     },
     "labelPastYear": {
-        "message": "",
+        "message": "Năm trước",
         "description": "Statistics view for past year."
     },
     "labelDelete": {
-        "message": "",
+        "message": "Xoá",
         "description": "Button to delete all statistics data."
     },
     "labelAvg": {
-        "message": "",
+        "message": "Trung bình (Số lần thay thế trong một ngày)",
         "description": "Followed by a number of average injections per day within a specific period."
     },
     "labelInjectedFrameworks": {
-        "message": "",
+        "message": "Các bộ khung được thay thế",
         "description": "Followed by a number of injections within a specific period."
     },
     "dialogConfirmDeleteStatistics": {
-        "message": "",
+        "message": "Bạn có chắc muốn xoá tất cả số liệu không?",
         "description": "Are you sure you want to delete all the statistics?"
     },
     "labelDomainsAllowlistGoogleFonts": {
-        "message": "",
+        "message": "Những tên miền này được phép tải Google Fonts. Mỗi dòng một tên.",
         "description": "These domains are allowed to load Google Fonts. One entry per line."
     },
     "btnGeneral": {
-        "message": "",
+        "message": "Cơ bản",
         "description": "Basic"
     },
     "btnAdvanced": {
-        "message": "",
+        "message": "Nâng cao",
         "description": "Advanced"
     },
     "btnOther": {
-        "message": "",
+        "message": "Khác",
         "description": "Other"
     },
     "btnInfo": {
-        "message": "",
+        "message": "Thông tin",
         "description": "Info"
     },
     "headerStorageType": {
-        "message": "",
+        "message": "Dạng lưu trữ",
         "description": "Storage type"
     },
     "labelStorageTypeLocal": {
-        "message": "",
+        "message": "Có sẵn",
         "description": "Local"
     },
     "labelStorageTypeSync": {
-        "message": "",
+        "message": "Đồng bộ hoá",
         "description": "Sync"
     },
     "headerImportExport": {
-        "message": "",
+        "message": "Nhập/Xuất",
         "description": "Import/Export"
     },
     "labelExportData": {
-        "message": "",
+        "message": "Lưu vào tệp",
         "description": "Back up to file"
     },
     "labelImportData": {
-        "message": "",
+        "message": "Nhập từ tệp",
         "description": "Restore from file"
     },
     "dialogImportSuccessful": {
-        "message": "",
+        "message": "Nhập thành công",
         "description": "Import successful"
     },
     "dialogImportFailed": {
-        "message": "",
+        "message": "Nhập không thành công",
         "description": "Import failed"
     },
     "updateNotificationTitle": {
-        "message": "",
+        "message": "Thông báo sau khi cập nhật",
         "description": "Notification after an update"
     },
     "updateNotificationNever": {
-        "message": "",
+        "message": "Không bao giờ (Cập nhật câm)",
         "description": "Never (Silent Updates)"
     },
     "updateNotificationOnlyRules": {
-        "message": "",
+        "message": "Chỉ khi có mạng phân phối nội dung và luật mới",
         "description": "Only if new CDNs and rules"
     },
     "updateNotificationAlways": {
-        "message": "",
+        "message": "Luôn luôn",
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "Trang web bị hỏng?",
         "description": "Website broken?"
     },
     "hideDonationButton": {
-        "message": "",
+        "message": "Ẩn nút quyên góp",
         "description": "Hide donation button"
     },
     "betaLabel": {
-        "message": "",
+        "message": "Beta",
         "description": "beta"
     },
     "changeBadgeColorMissingResourcesTitle": {
-        "message": "",
+        "message": "Hiện tài nguyên không có sẵn trên biểu tượng",
         "description": "Indicate missing resources on the icon"
     },
     "changeBadgeColorMissingResourcesDescription": {
-        "message": "",
+        "message": "Thay đổi màu biểu tượng nếu tài nguyên không có sẵn.",
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Trợ giúp",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Giới thiệu",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Bộ lọc HTML là gì?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Tạo ra luật",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Một vài trang web nhìn lạ hoặc khó sử dụng",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
-        "message": "",
+        "message": "Tại sao lại có tính năng chặn Google Fonts?",
         "description": "Why is there a »Block Google Fonts« option?"
     },
     "helpStatisticsTitle": {
-        "message": "",
+        "message": "Vậy còn số liệu thì sao? Có cái gì được chuyển tới máy chủ nào không?",
         "description": "What about the statistics? Is anything transferred to any servers?"
     },
     "helpWhatWillBeSynchronizedTitle": {
-        "message": "",
+        "message": "Những gì sẽ được đồng bộ hoá khi tôi chọn đồng bộ hoá làm loại lưu trữ?",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpBrowserCompatibilityTitle": {
-        "message": "",
+        "message": "Tính tương thích trình duyệt",
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
