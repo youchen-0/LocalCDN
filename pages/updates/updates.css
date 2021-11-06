@@ -6,9 +6,17 @@
     display: none;
 }
 
+#history-release-notes > p {
+    margin-bottom: 0;
+}
+
 #history-release-notes > ul {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
+    margin: 0;
+}
+
+.release-date:not(:first-child) {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
 }
 
 input[type=radio] {
@@ -53,8 +61,4 @@ input[type=radio], label {
     font-size: larger;
     font-weight: bold;
     margin: 0;
-}
-
-.release-notes-area > ul {
-    margin: 0 0 20px 0;
 }

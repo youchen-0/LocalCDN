@@ -689,6 +689,8 @@ function create_url() {
         fi
     elif [ "$folder" = "angular.js" ]; then
         url="$GOOGLEAPIS/angularjs/$version/$subfile"
+    elif [ "$folder" = "react-router" ] && [ "$version" != "5.2.1" ];then
+        url="$CLOUDFLARE/$folder/$version/react-router.production.min.js"
     # --------------------------------------------------------------------------
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
