@@ -4,11 +4,11 @@
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "",
+        "message": "حجم تزریقات شبکهٔ توزیع محتوای محلّی از زمان نصب.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
-        "message": "",
+        "message": "ترجیحات",
         "description": "Options title"
     },
     "showIconBadgeTitle": {
@@ -88,11 +88,11 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "",
+        "message": "فیلتر کد منبع HTML",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
-        "message": "",
+        "message": "حمایت مالی",
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
@@ -120,7 +120,7 @@
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
-        "message": "",
+        "message": "مسدودیت قلم‌های گوگل",
         "description": "Block Google Fonts"
     },
     "blockGoogleFontsDescription": {
@@ -140,7 +140,7 @@
         "description": "No data transmission. It’s all local on your device."
     },
     "headerStatistics": {
-        "message": "",
+        "message": "آمار",
         "description": "Statistics. The header of a statistics page."
     },
     "labelToday": {
@@ -244,7 +244,7 @@
         "description": "Always"
     },
     "websiteBroken": {
-        "message": "",
+        "message": "وبگاه خراب شده؟",
         "description": "Website broken?"
     },
     "hideDonationButton": {
