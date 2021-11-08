@@ -289,6 +289,8 @@ targets.setLastVersion = function (type, version) {
         return '4.7.0';
     } else if (type.startsWith('/font-awesome/5.')) {
         return '5.15.4';
+    } else if (type.startsWith('/fork-awesome/1.')) {
+        return '1.2.0';
     } else if (type.startsWith('/foundicons/3.')) {
         return '3.0.0';
     } else if (type.startsWith('/gsap/1.')) {
@@ -674,6 +676,7 @@ targets.determineResourceName = function (filename) {
 };
 
 const ListOfFiles = {
+    'fork-awesome.min.css': 'Fork Awesome',
     'foundation-icons.min.css': 'Foundation Icon Fonts',
     'jquery.timeago.min.jsm': 'jquery-timeago',
     'jquery.fittext.min.jsm': 'FitText.js',

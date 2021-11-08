@@ -424,6 +424,10 @@ var resources = {
     'fontawesomeFontsOnly': {
         'path': 'resources/font-awesome/{version}/fonts/'
     },
+    // Fork Awesome
+    'forkawesome': {
+        'path': 'resources/fork-awesome/{version}/css/fork-awesome.min.css'
+    },
     // Foundation Icon Font Sets
     'foundationIconsCSS': {
         'path': 'resources/foundicons/{version}/foundation-icons.min.css'
