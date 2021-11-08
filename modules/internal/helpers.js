@@ -88,6 +88,7 @@ helpers.languageIsFullySupported = function (language) {
         'eo',
         'es',
         'et',
+        'fa',
         'fi',
         'fr',
         'he',
