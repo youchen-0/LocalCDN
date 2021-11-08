@@ -120,6 +120,7 @@ helpers.languageIsFullySupported = function (language) {
         'tl',
         'tr',
         'uk',
+        'vi',
         'zh_Hans',
         'zh_Hant'
     ];
