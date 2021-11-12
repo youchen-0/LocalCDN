@@ -12,11 +12,11 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Näytä kohteiden määrä kuvakkeessa",
+        "message": "Näytä korvattujen kohteiden määrä kuvakkeessa",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Näyttää turvattujen kohteiden määrän lisäosan kuvakkeessa.",
+        "message": "Näyttää korvattujen kohteiden määrän lisäosan kuvakkeessa.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "Poista LocalDNS käytöstä näillä verkkosivuilla:",
+        "message": "Poista LocalCDN käytöstä näillä verkkosivuilla:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
