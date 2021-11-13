@@ -300,7 +300,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/gsap/3.')) {
         return '3.8.0';
     } else if (type.startsWith('/google-material-design-icons/')) {
-        return 'v114';
+        return 'v115';
     } else if (type.startsWith('/highlight.js/7.')) {
         return '9.18.5';
     } else if (type.startsWith('/highlight.js/8.')) {
