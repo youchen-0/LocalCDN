@@ -738,7 +738,13 @@ third_party=()
 # Find files in /resource/
 while IFS=  read -r -d $'\0'; do
     array+=("$REPLY")
-done < <(find ../resources/ -type f \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) ! -iname "fa-loader.css" ! -iname "google-material-design-icons.css" -print0)
+done < <(find ../resources/ \
+    -type f \
+    \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) \
+    ! -iname "fa-loader.css" \
+    ! -iname "google-material-design-icons.css" \
+    ! -iname "google-fonts-placeholder.css" \
+    -print0)
 
 
 for i in "${array[@]}"; do
