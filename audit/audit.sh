@@ -62,6 +62,10 @@
 #                                   file in this extension is used and not an
 #                                   external one.
 #
+# google-fonts-placeholder.css      This is a placeholder which is used for
+#                                   Google Fonts redirects. Only used
+#                                   when "Block Google Fonts" is enabled.
+#
 # /resources/*/note                 These files contain notes if a file has
 #                                   been renamed.
 # =============================================================================
