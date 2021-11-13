@@ -193,7 +193,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/bootstrap-select/1.')) {
         return '1.13.18';
     } else if (type.startsWith('/bootstrap-table/1.')) {
-        return '1.18.3';
+        return '1.19.1';
     } else if (type.startsWith('/bootstrap-toggle/2.')) {
         return '2.2.2';
     } else if (type.startsWith('/bootstrap-vue/2.')) {
