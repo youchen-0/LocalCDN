@@ -244,7 +244,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/dayjs/1.')) {
         return '1.10.7';
     } else if (type.startsWith('/dexie/3.') || type.startsWith('/dexie/latest')) {
-        return '3.0.3';
+        return '3.2.0';
     } else if (type.startsWith('/docsearch.js/2.')) {
         return '2.6.3';
     } else if (type.startsWith('/dojo/1.')) {
