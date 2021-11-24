@@ -118,7 +118,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                     str += decoder.decode(); // end-of-stream
 
                     // set UTF-8 in document
-                    str = str.replace(new RegExp(`charset=["']?${charset}["']?`), 'charset="utf8"');
+                    str = manipulateDOM._searchCharset(str, charset);
 
                     // remove crossorigin and integrity attributes
                     str = str.replace(/<(link|script)[^>]+>/ig, (m) => {
@@ -138,6 +138,17 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
     }
 };
 
+manipulateDOM._searchCharset = function (str, charset) {
+    if (str.indexOf(`charset="${charset}"`) > 0) {
+        return str.replace(`charset="${charset}"`, 'charset="utf8"');
+    } else if (str.indexOf(`charset='${charset}'`) > 0) {
+        return str.replace(`charset='${charset}'`, 'charset=\'utf8\'');
+    } else if (str.indexOf(`charset=${charset}`) > 0) {
+        return str.replace(`charset=${charset}`, 'charset=utf8');
+    } else {
+        return str;
+    }
+};
 
 /**
  * Initializations
