@@ -28,6 +28,9 @@
     --components-cards-product-description-color: #b2b2b2;
     --components-cards-product-description-font-family: var(--font-base);
     --components-autocomplete-blocktitle-font-size: 12px;
+    --components-cards-promo-title-font-size: var(--font-size-huge);
+    --components-pagination-height: 40px;
+    --components-pagination-text-transform: uppercase;
     --components-cards-content-title-font-size: 1;
     --components-cards-content-title-font-family: var(--font-base);
     --components-cards-content-title-text-transform: none;
@@ -46,9 +49,6 @@
     --components-autocomplete-suggestionitem-suggestion-color: var(--color-black);
     --components-autocomplete-suggestionitem-suggestion-font-family: var(--font-base);
     --components-autocomplete-suggestionitem-suggestion-font-size: 1;
-    --components-cards-promo-title-font-size: var(--font-size-huge);
-    --components-pagination-height: 40px;
-    --components-pagination-text-transform: uppercase;
     --components-search-desktopactions-padding: 25px;
     --components-checkboxfacet-search-padding-bottom: 11px;
     --components-facet-min-width: 250px;
@@ -493,28 +493,6 @@
 
 /*  imported from styles.css  */
 
-.findify-components-autocomplete--layout__column {
-    vertical-align: top;
-    background: #fff;
-    padding: 0 32px;
-}
-
-/*  imported from styles.css  */
-
-.findify-components-autocomplete--block-title {
-    margin: 0;
-    margin-bottom: 15px;
-    margin-top: 32px;
-    color: var(--color-black);
-    font-size: var(--components-autocomplete-blocktitle-font-size);
-    line-height: var(--components-autocomplete-blocktitle-font-size);
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: var(--font-base);
-}
-
-/*  imported from styles.css  */
-
 .findify-components-search--lazy-results {
     width: 100%;
 }
@@ -556,6 +534,198 @@
 .findify-components-search--lazy-results__prev-button:hover,
 .findify-components-search--lazy-results__prev-button:focus {
     background: var(--color-grey-2);
+}
+
+/*  imported from styles.css  */
+
+.findify-components-autocomplete--layout__column {
+    vertical-align: top;
+    background: #fff;
+    padding: 0 32px;
+}
+
+/*  imported from styles.css  */
+
+.findify-components-autocomplete--block-title {
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 32px;
+    color: var(--color-black);
+    font-size: var(--components-autocomplete-blocktitle-font-size);
+    line-height: var(--components-autocomplete-blocktitle-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--font-base);
+}
+
+/*  imported from styles.css  */
+
+.findify-components--cards--promo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: var(--font-base);
+    cursor: pointer;
+}
+
+.findify-components--cards--promo__content {
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.findify-components--cards--promo__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    color: white;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+    margin: 0 12%;
+}
+
+.findify-components--cards--promo__button {
+    display: block;
+    width: 100%;
+    border: none;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-transorm: uppercase;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.findify-components--cards--promo__button:hover,
+.findify-components--cards--promo__button:focus {
+    background-color: var(--color-grey-2);
+}
+
+.findify-components--cards--promo__button-container {
+    text-align: center;
+    padding: 30px 12% 12% 12%;
+}
+
+.findify-components--cards--promo__title {
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: var(--components-cards-promo-title-font-size);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.findify-components--cards--promo__description {
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+}
+
+.findify-components--cards--promo__footer {
+    margin: 0;
+    padding: 10px 12% 5px 12%;
+    font-size: var(--font-size-small);
+    text-decoration: none;
+}
+
+/*  imported from styles.css  */
+
+.findify-components--pagination {
+    padding-top: 30px;
+    border-top: 1px solid var(--color-grey-2);
+    margin-top: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.findify-components--pagination:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.findify-components--pagination__prev, .findify-components--pagination__next,
+.findify-components--pagination__first, .findify-components--pagination__last,
+.findify-components--pagination__page, .findify-components--pagination__dots {
+    height: var(--components-pagination-height);
+    padding: 0 16px;
+    color: var(--color-black);
+    font-size: var(--font-size-medium);
+    font-weight: normal;
+}
+
+.findify-components--pagination__prev:hover,
+.findify-components--pagination__prev:focus,
+.findify-components--pagination__next:hover,
+.findify-components--pagination__next:focus,
+.findify-components--pagination__first:hover,
+.findify-components--pagination__first:focus,
+.findify-components--pagination__last:hover,
+.findify-components--pagination__last:focus,
+.findify-components--pagination__page:hover,
+.findify-components--pagination__page:focus,
+.findify-components--pagination__dots:hover,
+.findify-components--pagination__dots:focus {
+    text-decoration: underline;
+}
+
+.findify-components--pagination__prev, .findify-components--pagination__next {
+    text-transform: var(--components-pagination-text-transform);
+}
+
+.findify-components--pagination__prev svg,
+.findify-components--pagination__next svg {
+    vertical-align: -3px;
+}
+
+.findify-components--pagination__dots {
+    cursor: default;
+    pointer-events: none;
+    padding: 0;
+}
+
+.findify-components--pagination__active,
+.findify-components--pagination__active:focus {
+    background-color: var(--color-grey-1);
+    text-decoration: none;
 }
 
 /*  imported from styles.css  */
@@ -680,16 +850,6 @@
     font-size: calc(var(--font-size-medium) * var(--components-cards-content-description-font-size));
     color: var(--components-cards-content-description-color);
     margin: 5px 0;
-}
-
-/*  imported from styles.css  */
-
-.findify-components-search--static-results {
-    padding-top: 0;
-}
-
-.findify-components-search--static-results__column {
-    display: table;
 }
 
 /*  imported from styles.css  */
@@ -1044,110 +1204,6 @@
 
 /*  imported from styles.css  */
 
-.findify-components--cards--promo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    padding-bottom: 50px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: var(--font-base);
-    cursor: pointer;
-}
-
-.findify-components--cards--promo__content {
-    height: 100%;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-        flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-}
-
-.findify-components--cards--promo__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    color: white;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-        flex: 1;
-    margin: 0 12%;
-}
-
-.findify-components--cards--promo__button {
-    display: block;
-    width: 100%;
-    border: none;
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
-    text-transorm: uppercase;
-    font-size: var(--font-size-medium);
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.findify-components--cards--promo__button:hover,
-.findify-components--cards--promo__button:focus {
-    background-color: var(--color-grey-2);
-}
-
-.findify-components--cards--promo__button-container {
-    text-align: center;
-    padding: 30px 12% 12% 12%;
-}
-
-.findify-components--cards--promo__title {
-    margin: 0;
-    margin-bottom: 5px;
-    margin-top: 30px;
-    text-align: center;
-    font-size: var(--components-cards-promo-title-font-size);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.findify-components--cards--promo__description {
-    text-align: center;
-    margin: 0;
-    text-decoration: none;
-}
-
-.findify-components--cards--promo__footer {
-    margin: 0;
-    padding: 10px 12% 5px 12%;
-    font-size: var(--font-size-small);
-    text-decoration: none;
-}
-
-/*  imported from styles.css  */
-
 .findify-components--cards--product--variants__variants {
     color: var(--color-grey-3);
     font-family: var(--font-base);
@@ -1155,72 +1211,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-}
-
-/*  imported from styles.css  */
-
-.findify-components--pagination {
-    padding-top: 30px;
-    border-top: 1px solid var(--color-grey-2);
-    margin-top: 22px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.findify-components--pagination:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.findify-components--pagination__prev, .findify-components--pagination__next,
-.findify-components--pagination__first, .findify-components--pagination__last,
-.findify-components--pagination__page, .findify-components--pagination__dots {
-    height: var(--components-pagination-height);
-    padding: 0 16px;
-    color: var(--color-black);
-    font-size: var(--font-size-medium);
-    font-weight: normal;
-}
-
-.findify-components--pagination__prev:hover,
-.findify-components--pagination__prev:focus,
-.findify-components--pagination__next:hover,
-.findify-components--pagination__next:focus,
-.findify-components--pagination__first:hover,
-.findify-components--pagination__first:focus,
-.findify-components--pagination__last:hover,
-.findify-components--pagination__last:focus,
-.findify-components--pagination__page:hover,
-.findify-components--pagination__page:focus,
-.findify-components--pagination__dots:hover,
-.findify-components--pagination__dots:focus {
-    text-decoration: underline;
-}
-
-.findify-components--pagination__prev, .findify-components--pagination__next {
-    text-transform: var(--components-pagination-text-transform);
-}
-
-.findify-components--pagination__prev svg,
-.findify-components--pagination__next svg {
-    vertical-align: -3px;
-}
-
-.findify-components--pagination__dots {
-    cursor: default;
-    pointer-events: none;
-    padding: 0;
-}
-
-.findify-components--pagination__active,
-.findify-components--pagination__active:focus {
-    background-color: var(--color-grey-1);
-    text-decoration: none;
 }
 
 /*  imported from styles.css  */
@@ -1307,6 +1297,16 @@ p.findify-layouts--recommendation--grid__title {
 .findify-components-common--sticky__sticky {
     position: fixed;
     top: 0;
+}
+
+/*  imported from styles.css  */
+
+.findify-components-search--static-results {
+    padding-top: 0;
+}
+
+.findify-components-search--static-results__column {
+    display: table;
 }
 
 /*  imported from styles.css  */
