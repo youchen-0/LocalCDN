@@ -223,7 +223,7 @@ requestAnalyzer._getPathOfBundle = function (initiator, channelPath, targetPath,
                 filename.endsWith('.js')
                 ? `${targetPath + filename}m`
                 : targetPath + filename);
-}
+};
 
 requestAnalyzer._applyAllowlistedDomains = function () {
     storageManager.type.get(Setting.ALLOWLISTED_DOMAINS, function (items) {
