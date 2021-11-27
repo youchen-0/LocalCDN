@@ -62,6 +62,10 @@
 #                                   file in this extension is used and not an
 #                                   external one.
 #
+# google-fonts-placeholder.css      This is a placeholder which is used for
+#                                   Google Fonts redirects. Only used
+#                                   when "Block Google Fonts" is enabled.
+#
 # /resources/*/note                 These files contain notes if a file has
 #                                   been renamed.
 # =============================================================================
@@ -738,7 +742,13 @@ third_party=()
 # Find files in /resource/
 while IFS=  read -r -d $'\0'; do
     array+=("$REPLY")
-done < <(find ../resources/ -type f \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) ! -iname "fa-loader.css" ! -iname "google-material-design-icons.css" -print0)
+done < <(find ../resources/ \
+    -type f \
+    \( -iname "*.jsm" -or -iname "*.css" -or -iname "*.woff" -or -iname "*.woff2" \) \
+    ! -iname "fa-loader.css" \
+    ! -iname "google-material-design-icons.css" \
+    ! -iname "google-fonts-placeholder.css" \
+    -print0)
 
 
 for i in "${array[@]}"; do

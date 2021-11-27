@@ -4,7 +4,7 @@
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Quantidade de injeções de recurso Content Delivery Network locais desde a instalação.",
+        "message": "Número de injeções de recursos Content Delivery Network locais desde a instalação.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -12,15 +12,15 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Mostrar contagem de injeções no ícone",
+        "message": "Mostrar número de injeções no ícone",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Mostrar a quantidade de recursos injetados no ícone da extensão.",
+        "message": "Mostrar número de recursos injetados no ícone da extensão.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "Bloquear pedidos por falta de recursos",
+        "message": "Bloquear pedidos para recursos em falta",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -36,7 +36,7 @@
         "description": "Disable prefetch description."
     },
     "stripMetadataTitle": {
-        "message": "Retirar metadados dos pedidos permitidos",
+        "message": "Retirar meta dados dos pedidos permitidos",
         "description": "Strip metadata title"
     },
     "stripMetadataDescription": {

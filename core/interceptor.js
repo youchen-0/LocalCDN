@@ -61,7 +61,7 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         // Check if the website is allowed to load Google Fonts
         if (interceptor.blockGoogleFonts === true && isListed === false) {
             return {
-                'cancel': true
+                'redirectUrl': chrome.runtime.getURL('resources/google-fonts-placeholder.css')
             };
         } else if (interceptor.blockGoogleFonts === false || isListed === true) {
             return {

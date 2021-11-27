@@ -223,7 +223,8 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/exif-js/${lastVersion}/exif.min.jsm`,
             'bundle': ''
         };
-    } else if (CompleteURL.startsWith('ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')) {
+    } else if (CompleteURL.startsWith('ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js') ||
+               CompleteURL.startsWith('code.jquery.com/jquery-latest.')) {
         return {
             'source': channelHost,
             'versionDelivered': '1.11.2',

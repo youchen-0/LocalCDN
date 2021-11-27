@@ -184,6 +184,9 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
                         log.append(initiator, channelHost + channelPath, '-', true);
                         break;
                     }
+                    if (filename === 'config/TeX-AMS_HTML.js') {
+                        filename = 'config/TeX-AMS_HTML-full.js';
+                    }
                 }
                 targetPath = (filename.endsWith('.js')) ? `${targetPath + filename}m` : targetPath + filename;
                 targetPath = helpers.formatFilename(targetPath);
