@@ -336,6 +336,7 @@ const IgnoredHost = {
 const MathJaxFiles = {
     'config/default.js': true,
     'config/MML_HTMLorMML.js': true,
+    'config/TeX-AMS_HTML.js': true,
     'config/TeX-AMS_HTML-full.js': true,
     'config/TeX-AMS-MML_HTMLorMML.js': true,
     'config/TeX-MML-AM_CHTML.js': true,
