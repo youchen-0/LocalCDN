@@ -643,7 +643,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/vue/2.')) {
         return '2.6.14';
     } else if (type.startsWith('/vue/3.')) {
-        return '3.2.22';
+        return '3.2.23';
     } else if (type.startsWith('/vue-i18n/8.')) {
         return '8.26.7';
     } else if (type.startsWith('/vue-i18n/9.')) {
