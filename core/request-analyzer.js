@@ -47,20 +47,20 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
     if (BrowserType.CHROMIUM) {
         if (/(font-awesome|fontawesome)/.test(requestDetails.url)) {
-            console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
-            log.append(tabDetails.url, requestDetails.url, 'Font Awesome is not fully supported by your browser', true);
+            console.warn(`${LogString.PREFIX} ${LogString.FONT_AWESOME}`);
+            log.append(tabDetails.url, requestDetails.url, LogString.FONT_AWESOME, true);
             return false;
         } else if (requestDetails.url.startsWith('https://fonts.googleapis.com')) {
             // also valid for Google Material icons
-            console.warn('[ LocalCDN ] Google Material Icons are not fully supported by your browser.');
-            log.append(tabDetails.url, requestDetails.url, 'Google Material Icons are not fully supported by your browser', true);
+            console.warn(`${LogString.PREFIX} ${LogString.GOOGLE_MATERIAL_ICONS}`);
+            log.append(tabDetails.url, requestDetails.url, LogString.GOOGLE_MATERIAL_ICONS, true);
             return false;
         }
     }
 
     // Disable LocalCDN if website is 'yandex.com' and CDN is 'yastatic.net', because website and CDN are the same.
     if (tabDetails.url.includes('yandex.com') && requestDetails.url.includes('yastatic.net')) {
-        log.append(tabDetails.url, requestDetails.url, 'Workaround. Disable LocalCDN if website and CDN are the same', true);
+        log.append(tabDetails.url, requestDetails.url, LogString.YANDEX, true);
         return false;
     }
 
@@ -98,7 +98,13 @@ requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
 
     // Return either the local target's path or false.
     // eslint-disable-next-line max-len
-    return requestAnalyzer._findLocalTarget(resourceMappings, basePath, destinationHost, destinationPath, destinationSearchString, initiator);
+    return requestAnalyzer._findLocalTarget(
+        resourceMappings,
+        basePath,
+        destinationHost,
+        destinationPath,
+        destinationSearchString,
+        initiator);
 };
 
 
@@ -130,12 +136,10 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
 
     // Handle weird version expressions
-    if (!versionNumber) {
-        if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
-            versionNumber = channelPath.match(/\d/);
-            resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
-            versionNumber = [`${versionNumber}.0`];
-        }
+    if (!versionNumber && Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
+        versionNumber = channelPath.match(/\d/);
+        resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
+        versionNumber = [`${versionNumber}.0`];
     } else {
         resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
     }
@@ -143,7 +147,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     shorthandResource = shorthands.specialFiles(channelHost, channelPath, destinationSearchString);
     if (shorthandResource) {
         if (requestAnalyzer.logging) {
-            console.log(`[ LocalCDN ] Replaced resource: ${shorthandResource.path}`);
+            console.log(`${LogString.PREFIX} ${LogString.REPLACED_RESOURCE} ${shorthandResource.path}`);
             log.append(initiator, channelHost + channelPath, shorthandResource.path, false);
         }
         return shorthandResource;
@@ -154,65 +158,72 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     }
 
     for (let resourceMold of Object.keys(resourceMappings)) {
-        if (resourcePattern.startsWith(resourceMold)) {
-            let targetPath, versionDelivered, versionRequested, bundle;
-            targetPath = resourceMappings[resourceMold].path;
-            targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
-            // Replace the requested version with the latest depending on major version
-            versionDelivered = targets.setLastVersion(targetPath, versionNumber);
-            if (versionDelivered === false) {
-                return false;
-            }
-            versionDelivered = versionDelivered.toString();
-            targetPath = targetPath.replace(versionNumber, versionDelivered);
-
-            if (versionNumber === null) {
-                versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
-                versionRequested = 'latest';
-            } else {
-                versionRequested = versionNumber[0];
-            }
-
-            // Get bundle name
-            bundle = targets.determineBundle(targetPath);
-            if (bundle !== '') {
-                filename = channelPath.split('/').pop();
-                if (bundle === 'MathJax (Bundle)' && filename !== 'MathJax.js') {
-                    filename = channelPath.replace(Resource.MATHJAX, '');
-                    if (!MathJaxFiles[filename]) {
-                        console.warn(`[ LocalCDN ] Missing resource: ${channelHost + channelPath}`);
-                        log.append(initiator, channelHost + channelPath, '-', true);
-                        break;
-                    }
-                    if (filename === 'config/TeX-AMS_HTML.js') {
-                        filename = 'config/TeX-AMS_HTML-full.js';
-                    }
-                }
-                targetPath = (filename.endsWith('.js')) ? `${targetPath + filename}m` : targetPath + filename;
-                targetPath = helpers.formatFilename(targetPath);
-            }
-
-            if (requestAnalyzer.logging) {
-                console.log(`[ LocalCDN ] Replaced resource: ${targetPath}`);
-                log.append(initiator, channelHost + channelPath, targetPath, false);
-            }
-            // Prepare and return a local target.
-            return {
-                'source': channelHost,
-                'versionRequested': versionRequested,
-                'versionDelivered': versionDelivered,
-                'path': targetPath,
-                'bundle': bundle
-            };
+        if (!resourcePattern.startsWith(resourceMold)) {
+            continue;
         }
+        let targetPath, versionDelivered, versionRequested, bundle;
+        targetPath = resourceMappings[resourceMold].path;
+        targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
+        // Replace the requested version with the latest depending on major version
+        versionDelivered = targets.setLastVersion(targetPath, versionNumber);
+        if (versionDelivered === false) {
+            return false;
+        }
+        versionDelivered = versionDelivered.toString();
+        targetPath = targetPath.replace(versionNumber, versionDelivered);
+
+        if (versionNumber === null) {
+            versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
+            versionRequested = 'latest';
+        } else {
+            versionRequested = versionNumber[0];
+        }
+
+        // Get bundle name
+        bundle = targets.determineBundle(targetPath);
+        if (bundle !== '') {
+            targetPath = requestAnalyzer._getPathOfBundle(initiator, channelPath, targetPath, bundle);
+        }
+        if (targetPath === false) {
+            break;
+        }
+
+        if (requestAnalyzer.logging) {
+            console.log(`${LogString.PREFIX} ${LogString.REPLACED_RESOURCE} ${targetPath}`);
+            log.append(initiator, channelHost + channelPath, targetPath, false);
+        }
+        // Prepare and return a local target.
+        return {
+            'source': channelHost,
+            'versionRequested': versionRequested,
+            'versionDelivered': versionDelivered,
+            'path': targetPath,
+            'bundle': bundle
+        };
     }
 
     if (requestAnalyzer.logging && !IgnoredHost[channelHost]) {
-        console.warn(`[ LocalCDN ] Missing resource: ${channelHost}${channelPath}`);
+        console.warn(`${LogString.PREFIX} ${LogString.MISSING_RESOURCE} ${channelHost}${channelPath}`);
         log.append(initiator, channelHost + channelPath, '-', true);
     }
     return false;
 };
+
+requestAnalyzer._getPathOfBundle = function (initiator, channelPath, targetPath, bundle) {
+    let filename = channelPath.split('/').pop();
+    if (bundle === 'MathJax (Bundle)' && filename !== 'MathJax.js') {
+        filename = channelPath.replace(Resource.MATHJAX, '');
+        if (!MathJaxFiles[filename]) {
+            console.warn(`${LogString.PREFIX} ${LogString.MISSING_RESOURCE} ${channelHost + channelPath}`);
+            log.append(initiator, channelHost + channelPath, '-', true);
+            return false;
+        }
+    }
+    return helpers.formatFilename(
+                filename.endsWith('.js')
+                ? `${targetPath + filename}m`
+                : targetPath + filename);
+}
 
 requestAnalyzer._applyAllowlistedDomains = function () {
     storageManager.type.get(Setting.ALLOWLISTED_DOMAINS, function (items) {

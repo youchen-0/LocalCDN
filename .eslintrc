@@ -32,6 +32,7 @@
         "BadgeSettingHTMLFilter": true,
         "BadgeSettingMissingResource": true,
         "BadResources": true,
+        "LogString": true,
 
         "fileGuard": true,
         "files": true,

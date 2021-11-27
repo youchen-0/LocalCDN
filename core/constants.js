@@ -413,6 +413,15 @@ const BadResources = {
     'cdnjs.cloudflare.com/ajax/libs/ClientJS/': true,
 };
 
+const LogString = {
+    'PREFIX': '[ LocalCDN ]',
+    'FONT_AWESOME': 'Font Awesome is not fully supported by your browser.',
+    'GOOGLE_MATERIAL_ICONS': 'Google Material Icons are not fully supported by your browser.',
+    'YANDEX': 'Workaround. Disable LocalCDN if website and CDN are the same',
+    'REPLACED_RESOURCE': 'Replaced resource:',
+    'MISSING_RESOURCE': 'Missing resource:',
+};
+
 // Supported charsets for TextDecoder()
 // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder
 const EncodingTypes = {
