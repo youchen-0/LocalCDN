@@ -104,7 +104,8 @@ requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
         destinationHost,
         destinationPath,
         destinationSearchString,
-        initiator);
+        initiator
+    );
 };
 
 
@@ -124,7 +125,7 @@ requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
 
 // eslint-disable-next-line max-len
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString, initiator) {
-    let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
+    let resourcePath, versionNumber, resourcePattern, shorthandResource;
 
     storageManager.type.get(Setting.LOGGING, function (items) {
         requestAnalyzer.logging = items.enableLogging;
@@ -158,48 +159,47 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     }
 
     for (let resourceMold of Object.keys(resourceMappings)) {
-        if (!resourcePattern.startsWith(resourceMold)) {
-            continue;
-        }
-        let targetPath, versionDelivered, versionRequested, bundle;
-        targetPath = resourceMappings[resourceMold].path;
-        targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
-        // Replace the requested version with the latest depending on major version
-        versionDelivered = targets.setLastVersion(targetPath, versionNumber);
-        if (versionDelivered === false) {
-            return false;
-        }
-        versionDelivered = versionDelivered.toString();
-        targetPath = targetPath.replace(versionNumber, versionDelivered);
+        if (resourcePattern.startsWith(resourceMold)) {
+            let targetPath, versionDelivered, versionRequested, bundle;
+            targetPath = resourceMappings[resourceMold].path;
+            targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
+            // Replace the requested version with the latest depending on major version
+            versionDelivered = targets.setLastVersion(targetPath, versionNumber);
+            if (versionDelivered === false) {
+                return false;
+            }
+            versionDelivered = versionDelivered.toString();
+            targetPath = targetPath.replace(versionNumber, versionDelivered);
 
-        if (versionNumber === null) {
-            versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
-            versionRequested = 'latest';
-        } else {
-            versionRequested = versionNumber[0];
-        }
+            if (versionNumber === null) {
+                versionDelivered = targetPath.match(Resource.VERSION_EXPRESSION).toString();
+                versionRequested = 'latest';
+            } else {
+                versionRequested = versionNumber[0];
+            }
 
-        // Get bundle name
-        bundle = targets.determineBundle(targetPath);
-        if (bundle !== '') {
-            targetPath = requestAnalyzer._getPathOfBundle(initiator, channelPath, targetPath, bundle);
-        }
-        if (targetPath === false) {
-            break;
-        }
+            // Get bundle name
+            bundle = targets.determineBundle(targetPath);
+            if (bundle !== '') {
+                targetPath = requestAnalyzer._getPathOfBundle(initiator, channelHost, channelPath, targetPath, bundle);
+            }
+            if (targetPath === false) {
+                break;
+            }
 
-        if (requestAnalyzer.logging) {
-            console.log(`${LogString.PREFIX} ${LogString.REPLACED_RESOURCE} ${targetPath}`);
-            log.append(initiator, channelHost + channelPath, targetPath, false);
+            if (requestAnalyzer.logging) {
+                console.log(`${LogString.PREFIX} ${LogString.REPLACED_RESOURCE} ${targetPath}`);
+                log.append(initiator, channelHost + channelPath, targetPath, false);
+            }
+            // Prepare and return a local target.
+            return {
+                'source': channelHost,
+                'versionRequested': versionRequested,
+                'versionDelivered': versionDelivered,
+                'path': targetPath,
+                'bundle': bundle
+            };
         }
-        // Prepare and return a local target.
-        return {
-            'source': channelHost,
-            'versionRequested': versionRequested,
-            'versionDelivered': versionDelivered,
-            'path': targetPath,
-            'bundle': bundle
-        };
     }
 
     if (requestAnalyzer.logging && !IgnoredHost[channelHost]) {
@@ -209,7 +209,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     return false;
 };
 
-requestAnalyzer._getPathOfBundle = function (initiator, channelPath, targetPath, bundle) {
+requestAnalyzer._getPathOfBundle = function (initiator, channelHost, channelPath, targetPath, bundle) {
     let filename = channelPath.split('/').pop();
     if (bundle === 'MathJax (Bundle)' && filename !== 'MathJax.js') {
         filename = channelPath.replace(Resource.MATHJAX, '');
@@ -219,10 +219,9 @@ requestAnalyzer._getPathOfBundle = function (initiator, channelPath, targetPath,
             return false;
         }
     }
-    return helpers.formatFilename(
-                filename.endsWith('.js')
-                ? `${targetPath + filename}m`
-                : targetPath + filename);
+    return helpers.formatFilename(filename.endsWith('.js')
+        ? `${targetPath + filename}m`
+        : targetPath + filename);
 };
 
 requestAnalyzer._applyAllowlistedDomains = function () {
