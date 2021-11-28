@@ -58,7 +58,7 @@
         "targets": true,
         "wrappers": true,
     },
-    "overrides": {
+    "overrides": [{
         "files": [
             "core/constants.js",
             "core/files.js",
@@ -69,7 +69,7 @@
         "rules": {
             "no-unused-vars": "off"
         }
-    },
+    }],
     "rules": {
         "array-bracket-newline": "error",
         "array-bracket-spacing": "error",
