@@ -971,6 +971,7 @@ mappings.cdn = {
     'stackpath.bootstrapcdn.com': {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
+            'bootstrap/{version}/js/bootstrap.bundle.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
