@@ -46,7 +46,7 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 
     // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
     if (BrowserType.CHROMIUM) {
-        if (/(font-awesome|fontawesome)/.test(requestDetails.url)) {
+        if ((/(font-awesome|fontawesome)/).test(requestDetails.url)) {
             console.warn(`${LogString.PREFIX} ${LogString.FONT_AWESOME}`);
             log.append(tabDetails.url, requestDetails.url, LogString.FONT_AWESOME, true);
             return false;

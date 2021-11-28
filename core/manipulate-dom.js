@@ -65,7 +65,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                 charset = (/charset\s*=/).test(header.value) && header.value.replace(/^.*?charset\s*=\s*/, '').replace(/["']?/g, '');
 
                 // Check if charset is supported by TextDecoder()
-                if (/charset\s*=/.test(header.value) && !EncodingTypes[charset.toString().toLowerCase()]) {
+                if ((/charset\s*=/).test(header.value) && !EncodingTypes[charset.toString().toLowerCase()]) {
                     console.error(`[ LocalCDN ] Unsupported charset: ${charset}`);
                     log.append(details.url, '-', `Unsupported charset: ${charset}`, true);
                     return;

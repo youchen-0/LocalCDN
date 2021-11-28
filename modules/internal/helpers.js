@@ -139,7 +139,7 @@ helpers.normalizeDomain = function (domain) {
 };
 
 helpers.extractDomainFromUrl = function (url, normalize) {
-    if (/^(?!(http[s]?|file):\/\/).*/.test(url)) {
+    if ((/^(?!(http[s]?|file):\/\/).*/).test(url)) {
         return null;
     }
 
