@@ -300,59 +300,59 @@
         "description": "Browser compatibility"
     },
     "helpIntroductionDescription": {
-        "message": "",
+        "message": "LocalCDN هو مُلحَق لمتصفح الويب يُحاكي شبكات توصيل المُحتوى لتعزيز الخصوصية على الإنترنت. إنَّهُ يعترض حركة مرور الاتصالات فيجد أُطُر العمل أو المكتبات المدعومة محليًا ثُمَّ يحقنهم في الموقع الإلكتروني. لا تتردد في استخدام أداة الاختبار التالية لمعرفة ما إذا كنت محميًا بشكل صحيح. لمزيد من المعلومات، اقرأ التعليمات أو صفحات موسوعتنا.",
         "description": "LocalCDN is a web browser extension that emulates Content Delivery Networks to improve your online privacy. It intercepts traffic, finds supported frameworks/libraries locally, and injects them into the website. Feel free to use the following testing utility to find out if you are properly protected. For more information read the tutorial or our Wiki pages."
     },
     "helpLinkTestUtility": {
-        "message": "",
+        "message": "أداة الاختبار",
         "description": "Testing utility"
     },
     "helpLinkTutorial": {
-        "message": "",
+        "message": "التعليمات",
         "description": "Tutorial"
     },
     "helpLinkWikiPages": {
-        "message": "صفحات الويكي",
+        "message": "صفحات الموسوعة",
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "في معظم الحالات، يمكن لـLocalCDN استبدال أُطُر العمل المضمنة بسهولة وتحسين الخصوصية. لكن في بعض الحالات، قد يحاول موقع الويب منع ذلك عن طريق تعيين خيارات معينة في شفرة مصدر HTML. يقرأ LocalCDN شفرة مصدر HTML قبل عرضها في المستعرض ويزيل هذا الجزء (الأحمر).",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "يزيل مُرشِّح HTML الأحرف الحمراء من هذا المثال:",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
-        "message": "",
+        "message": "سوف تبدوا النتيجة كما يلي:",
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "لماذا من الضروري إزالة صفات crossorigin وَintegrity؟",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
-        "message": "",
+        "message": "تمنع صفة crossorigin الاستبدال لأن الوجهة لا تتطابق مع الوجهة المطلوبة.",
         "description": "The crossorigin attribute prevents the replacement because the destination does not match the requested one."
     },
     "helpHtmlFilterIntegrity": {
-        "message": "",
+        "message": "لتوفير مساحة القرص وتقديم المزيد من الأطر، يُرَقِّي LocalCDN أُطُر العمل. صفة integrity هي قيمة تجزئة الملف. إذا فشل الفحص، فلن يُضمِّن المتصفح إطار العمل. يفشل اختبار التكامل لأن قيم التجزئة على سبيل المثال مختلفة لكل من jQuery 1.10.1 و jQuery 1.12.4.",
         "description": "To save disk space and to deliver more frameworks LocalCDN upgrades a framework. An integrity tag is the hash value of a file. If the check fails, the browser won‘t include a framework. The integrity check will fail because the hash values for e.g. jQuery 1.10.1 and jQuery 1.12.4 are different."
     },
     "helpHtmlFilterErrors": {
-        "message": "",
+        "message": "لسوء الحظ، تُعرض أحيانًا الأحرف الخاصة بشكل غير صحيح. في هذه الحالة، يمكنك إلغاء تنشيط الإعداد مرة أخرى، لعرض علامات تغير التشكيل بشكل صحيح.",
         "description": "Unfortunately, it sometimes happens that special characters are then displayed incorrectly. In this case you can deactivate the setting again, to display the umlauts correctly."
     },
     "helpRuleGeneratorDescription": {
-        "message": "",
+        "message": "إذا كنت تريد إعادة توجيه جميع اتصالات شبكات توصيل المحتوى المدعومة تلقائيًا إلى LocalCDN ، فيمكنك إضافة هذه القواعد إلى أداة الحجب الخاصة بك للسماح بعمليات إعادة التوجيه هذه. إذا كنت لا ترغب في إضافة هذه القواعد، يجب أن تسمح لكل اتصال شبكة توصيل محتوى على حدة لكل موقع ويب.",
         "description": "If you want to automatically redirect all supported CDN connections to LocalCDN, you can add these rules to your adblocker to allow these redirections. If you do not want to add these rules, you must allow each CDN connection individually for each website."
     },
     "helpRuleGeneratorUblockTitle": {
-        "message": "",
+        "message": "فقط uBlock Origin:",
         "description": "Only uBlock Origin:"
     },
     "helpRuleGeneratorUblockDescription": {
-        "message": "",
+        "message": "هذه القواعد ذات صلة فقط في الوضع »المتوسط« أو »الصعب«، لأنها تحظر جميع موارد الجهات الخارجية. فهي ليست ضرورية في الوضع »الافتراضي« أو »السهل« أو »السهل جدًا«. لمزيد من المعلومات، يرجى زيارة موسوعة uBlock Origin.",
         "description": "These rules are only relevant in »medium« or »hard« mode, because it blocks all 3rd-party resources. They are not necessary in »default«, »easy« or »very-easy« mode. For more information, please visit the uBlock Origin Wiki."
     },
     "helpRuleGeneratorUblockTableIcon": {
@@ -364,23 +364,23 @@
         "description": "Mode"
     },
     "helpRuleGeneratorUblockTableUseful": {
-        "message": "",
+        "message": "قواعد مفيدة",
         "description": "Rules useful"
     },
     "helpRuleGeneratorUblockTableDefaultEasy": {
-        "message": "",
+        "message": "افتراضي/سهل",
         "description": "Default/Easy"
     },
     "helpRuleGeneratorUblockTableMedium": {
-        "message": "",
+        "message": "متوسط",
         "description": "Medium"
     },
     "helpRuleGeneratorUblockTableHard": {
-        "message": "",
+        "message": "صعب",
         "description": "Hard"
     },
     "helpWebsiteIssuesDescription": {
-        "message": "",
+        "message": "هناك سببان محتملان: إما أن يكون إطار العمل/المكتبة مطلوبين بحيث أن LocalCDN لم يُقدمهم(حتى الآن أو بسبب إجراء SOP.SOP (مثل سياسة الأصل) هي آلية أمنية تحدد البيانات التي يُسمح للمتصفح بتحميلها. تساعد على عزل المستندات الضارة وبالتالي تقليل نواقل الهجوم المحتملة. تمنع هذه السياسة المتصفح من تحميل الأُطُر الخارجية لـLocalCDN. للأسف لا يوجد حل لهذا في الوقت الحالي.",
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
