@@ -401,8 +401,7 @@ const MathJaxFiles = {
 /**
  * To block bad resources, e.g. fingerprint
  *
- * Necessary if the user has selected the option "Block requests for missing
- * resources Advanced" option is not enabled.
+ * Required if the user has not enabled the "Block requests for missing resources" option.
  *
  * https://codeberg.org/nobody/LocalCDN/issues/703
  */
@@ -420,6 +419,7 @@ const LogString = {
     'YANDEX': 'Workaround. Disable LocalCDN if website and CDN are the same',
     'REPLACED_RESOURCE': 'Replaced resource:',
     'MISSING_RESOURCE': 'Missing resource:',
+    'EVIL_RESOURCE_BLOCKED': 'Evil resource blocked:',
 };
 
 // Supported charsets for TextDecoder()
