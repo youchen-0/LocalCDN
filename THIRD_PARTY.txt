@@ -304,7 +304,7 @@ https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js
 https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css
 https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
-https://cdnjs.cloudflare.com/ajax/libs/clappr/0.4.6/clappr.min.js
+https://cdnjs.cloudflare.com/ajax/libs/clappr/0.4.7/clappr.min.js
 https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js
 https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js
 https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css
