@@ -260,7 +260,7 @@ targets.setLastVersion = function (type, version) {
     } else if (type.startsWith('/ember.js/2.')) {
         return '2.18.2';
     } else if (type.startsWith('/ember.js/3.')) {
-        return '3.28.6';
+        return '3.28.8';
     } else if (type.startsWith('/ember.js/4.')) {
         return '4.0.1';
     } else if (type.startsWith('/ethjs')) {
