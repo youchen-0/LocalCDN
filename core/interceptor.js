@@ -67,7 +67,6 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     }
 
     targetDetails = requestAnalyzer.getLocalTarget(requestDetails, tab.url);
-    console.log(targetDetails['result']);
 
     if (targetDetails['result'] === false) {
         if (!IgnoredHost[targetDomain]) {
