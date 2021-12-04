@@ -101,14 +101,18 @@ requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
 
     // Resource mapping files are never locally available.
     if (Resource.MAPPING_EXPRESSION.test(destinationPath)) {
-        return false;
+        return {
+            'result': false,
+        };
     }
 
     basePath = requestAnalyzer._matchBasePath(hostMappings, destinationPath);
     resourceMappings = hostMappings[basePath];
 
     if (!resourceMappings) {
-        return false;
+        return {
+            'result': false,
+        };
     }
 
     // Return either the local target's path or false.
