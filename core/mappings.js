@@ -299,6 +299,7 @@ mappings.cdn = {
             'foundicons/{version}/foundation-icons.min.css': resources.foundationIconsCSS,
             'gsap/{version}/': resources.gsapBundle,
             'highlight.js/{version}/': resources.highlightJS,
+            'hls.js/{version}/hls.': resources.hlsJS,
             'hogan.js/{version}/hogan.': resources.hoganJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'iScroll/{version}/iscroll.min.js': resources.iScroll,
