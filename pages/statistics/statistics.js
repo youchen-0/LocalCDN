@@ -95,16 +95,18 @@ statistics._filterAndSortData = function () {
 
 statistics._mergeObjects = function (obj, arr) {
     for (let [key, value] of Object.entries(obj)) {
-        let bundle = targets.determineBundle(key);
+        let domain, bundle;
+        domain = key;
+        bundle = targets.determineBundle(domain);
         if (bundle !== '') {
-            bundle = key.split('/');
-            key = `${bundle[0]}/${bundle[1]}/${bundle[2]}/`;
+            bundle = domain.split('/');
+            domain = `${bundle[0]}/${bundle[1]}/${bundle[2]}/`;
         }
         // If CDN/Framework exists, add it, otherwise create new one
-        if (arr[key]) {
-            arr[key] += value;
+        if (arr[domain]) {
+            arr[domain] += value;
         } else {
-            arr[key] = value;
+            arr[domain] = value;
         }
     }
 };

@@ -204,8 +204,10 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
     } else if ((/cdn\.jsdelivr\.net\/npm\/vue@(2|3)/).test(CompleteURL)) {
         let version = CompleteURL.match(Resource.VERSION_EXPRESSION);
         lastVersion = targets.setLastVersion(`/vue/${version}.`);
-        if (lastVersion === false) {
-            return false;
+        if (lastVersion === '') {
+            return {
+                'result': false,
+            };
         }
         return {
             'source': channelHost,
@@ -232,7 +234,8 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/jquery/1.11.2/jquery.min.jsm',
             'bundle': ''
         };
-    } else {
-        return false;
     }
+    return {
+        'result': false,
+    };
 };

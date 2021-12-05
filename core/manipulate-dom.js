@@ -141,13 +141,14 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 manipulateDOM._searchCharset = function (str, charset) {
     if (str.indexOf(`charset="${charset}"`) > 0) {
         return str.replace(`charset="${charset}"`, 'charset="utf8"');
-    } else if (str.indexOf(`charset='${charset}'`) > 0) {
-        return str.replace(`charset='${charset}'`, 'charset=\'utf8\'');
-    } else if (str.indexOf(`charset=${charset}`) > 0) {
-        return str.replace(`charset=${charset}`, 'charset=utf8');
-    } else {
-        return str;
     }
+    if (str.indexOf(`charset='${charset}'`) > 0) {
+        return str.replace(`charset='${charset}'`, 'charset=\'utf8\'');
+    }
+    if (str.indexOf(`charset=${charset}`) > 0) {
+        return str.replace(`charset=${charset}`, 'charset=utf8');
+    }
+    return str;
 };
 
 /**

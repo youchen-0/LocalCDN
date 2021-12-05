@@ -106,7 +106,7 @@ requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
         };
     }
 
-    basePath = requestAnalyzer._matchBasePath(hostMappings, destinationPath);
+    basePath = requestAnalyzer._matchBasePath(hostMappings, destinationPath)['result'];
     resourceMappings = hostMappings[basePath];
 
     if (!resourceMappings) {
@@ -135,11 +135,15 @@ requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
 requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
     for (let basePath of Object.keys(hostMappings)) {
         if (channelPath.startsWith(basePath)) {
-            return basePath;
+            return {
+                'result': basePath,
+            };
         }
     }
 
-    return false;
+    return {
+        'result': false,
+    };
 };
 
 // eslint-disable-next-line max-len
@@ -165,7 +169,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     }
 
     shorthandResource = shorthands.specialFiles(channelHost, channelPath, destinationSearchString);
-    if (shorthandResource) {
+    if (shorthandResource['result'] !== false) {
         if (requestAnalyzer.logging) {
             console.log(`${LogString.PREFIX} ${LogString.REPLACED_RESOURCE} ${shorthandResource.path}`);
             log.append(initiator, channelHost + channelPath, shorthandResource.path, false);
@@ -186,12 +190,12 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
             // Replace the requested version with the latest depending on major version
             versionDelivered = targets.setLastVersion(targetPath, versionNumber);
-            if (versionDelivered === false) {
+            if (versionDelivered === '') {
                 return {
                     'result': false,
                 };
             }
-            versionDelivered = versionDelivered.toString();
+
             targetPath = targetPath.replace(versionNumber, versionDelivered);
 
             if (versionNumber === null) {
@@ -206,7 +210,7 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             if (bundle !== '') {
                 targetPath = requestAnalyzer._getPathOfBundle(initiator, channelHost, channelPath, targetPath, bundle);
             }
-            if (targetPath === false) {
+            if (targetPath['result'] === false) {
                 break;
             }
 
@@ -241,7 +245,9 @@ requestAnalyzer._getPathOfBundle = function (initiator, channelHost, channelPath
         if (!MathJaxFiles[filename]) {
             console.warn(`${LogString.PREFIX} ${LogString.MISSING_RESOURCE} ${channelHost + channelPath}`);
             log.append(initiator, channelHost + channelPath, '-', true);
-            return false;
+            return {
+                'result': false,
+            };
         }
     }
     return helpers.formatFilename(filename.endsWith('.js')
