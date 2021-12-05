@@ -399,6 +399,7 @@ mappings.cdn = {
             'plyr/{version}/plyr.min.css': resources.plyrCSS,
             'plyr/{version}/plyr.js': resources.plyrJS,
             'plyr/{version}/plyr.min.js': resources.plyrJS,
+            'plyr/{version}/plyr.svg': resources.plyrSVG,
             'plyr/{version}/plyr.polyfilled.js': resources.plyrJS,
             'plyr/{version}/plyr.polyfilled.min.js': resources.plyrJS,
             'popper.js/{version}/umd/popper.min.js': resources.popperJS,
