@@ -669,7 +669,7 @@ targets.setLastVersion = function (type, version) {
     } else if (version === null) {
         return 'latest';
     }
-    return false;
+    return '';
 };
 
 targets.determineResourceName = function (filename) {
