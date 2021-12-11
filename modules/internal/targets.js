@@ -285,7 +285,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/lodash.js/4.')) return '4.17.21';
     if (type.startsWith('/lozad')) return '1.16.0';
     if (type.startsWith('/magnific-popup.js/1.')) return '1.1.0';
-    if (type.startsWith('/markdown-it/')) return '12.2.0';
+    if (type.startsWith('/markdown-it/')) return '12.3.0';
     if (type.startsWith('/mdbootstrap/4.')) return '4.20.0';
     if (type.startsWith('/material-design-icons/2.')) return '2.8.94';
     if (type.startsWith('/material-design-icons/3.')) return '3.9.97';
