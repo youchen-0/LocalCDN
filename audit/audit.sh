@@ -699,7 +699,7 @@ function create_url() {
     # TODO: REMOVE WHEN CDNJS.COM AUTO UPDATE BOT IS FULLY FUNCTIONAL AGAIN
     elif [ "$folder" = "noUiSlider" ] && [ "$version" != "14.7.0" ];then
         url="$JSDELIVR/npm/nouislider@$version/dist/nouislider.min.js"
-    elif [ "$folder" = "autocomplete.js" ] && [ "$version" != "0.38.0" ]; then
+    elif [ "$folder" = "autocomplete.js" ] && [ "$version" != "0.38.1" ]; then
         url="$JSDELIVR/npm/@algolia/autocomplete-js@$version/dist/umd/index.production.min.js"
     elif [ "$folder" = "babel-standalone" ] && [ "$version" != "6.26.0" ]; then
         url="$JSDELIVR/npm/@babel/standalone@$version/babel.min.js"

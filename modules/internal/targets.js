@@ -117,7 +117,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/animate.css/3.')) return '3.7.2';
     if (type.startsWith('/animate.css/4.')) return '4.1.1';
     if (type.startsWith('/animejs/3.')) return '3.2.1';
-    if (type.startsWith('/autocomplete.js/0.')) return '0.38.0';
+    if (type.startsWith('/autocomplete.js/0.')) return '0.38.1';
     if (type.startsWith('/autocomplete.js/1.')) return '1.1.0';
     if (type.startsWith('/angular-material/1.') || type.startsWith('/angular-material/0.')) return '1.2.3';
     if (type.startsWith('/angular-translate/2.')) return '2.19.0';
