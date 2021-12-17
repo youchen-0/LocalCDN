@@ -1741,8 +1741,8 @@ https://cdn.jsdelivr.net/npm/nouislider@15.5.0/dist/nouislider.min.js
 https://cdn.jsdelivr.net/npm/object-assign@4.1.1/index.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-core@0.6.2/build/p2p-media-loader-core.min.js
 https://cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@0.6.2/build/p2p-media-loader-hlsjs.min.js
-https://cdn.jsdelivr.net/npm/plyr@3.6.9/dist/plyr.css
-https://cdn.jsdelivr.net/npm/plyr@3.6.9/dist/plyr.min.js
+https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.css
+https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js
 https://cdn.jsdelivr.net/npm/raven-js@3.27.2/dist/raven.min.js
 https://cdn.jsdelivr.net/npm/react-lifecycles-compat@3.0.4/react-lifecycles-compat.min.js
 https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css

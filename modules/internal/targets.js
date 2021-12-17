@@ -318,7 +318,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/p5.js/1.')) return '1.4.0';
     if (type.startsWith('/page.js/1.')) return '1.11.6';
     if (type.startsWith('/paginationjs/2.')) return '2.1.5';
-    if (type.startsWith('/plyr/3.')) return '3.6.9';
+    if (type.startsWith('/plyr/3.')) return '3.6.12';
     if (type.startsWith('/popper.js/1.')) return '1.16.1';
     if (type.startsWith('/popper.js/2.')) return '2.11.0';
     if (type.startsWith('/prop-types/15.')) return '15.7.2';
