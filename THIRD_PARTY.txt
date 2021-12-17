@@ -146,8 +146,8 @@ https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.2.0/toaster.min.css
 https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.2.0/toaster.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.css
 https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.js
-https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.3/angular-material.min.css
-https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.3/angular-material.min.js
+https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.4/angular-material.min.css
+https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.4/angular-material.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.19.0/angular-translate-handler-log/angular-translate-handler-log.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.19.0/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.19.0/angular-translate-loader-partial/angular-translate-loader-partial.min.js
