@@ -51,13 +51,13 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
     }
 
     // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
-    if (BrowserType.CHROMIUM) {
+    if (!BrowserType.FIREFOX) {
         if (requestDetails.url.includes('font-awesome') || requestDetails.url.includes('fontawesome')) {
             console.warn(`${LogString.PREFIX} ${LogString.FONT_AWESOME}`);
             log.append(tabDetails.url, requestDetails.url, LogString.FONT_AWESOME, true);
             return false;
         }
-        if (requestAnalyzer._isGoogleMaterialIcons(requestedDomain, requestDetails.url)) {
+        if (requestAnalyzer.isGoogleMaterialIcons(requestedDomain, requestDetails.url)) {
             // also valid for Google Material icons
             console.warn(`${LogString.PREFIX} ${LogString.GOOGLE_MATERIAL_ICONS}`);
             log.append(tabDetails.url, requestDetails.url, LogString.GOOGLE_MATERIAL_ICONS, true);
