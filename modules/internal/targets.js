@@ -212,7 +212,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/highlight.js/10.')) return '10.7.3';
     if (type.startsWith('/highlight.js/11.')) return '11.3.1';
     if (type.startsWith('/history/4.')) return '4.10.1';
-    if (type.startsWith('/history/5.')) return '5.1.0';
+    if (type.startsWith('/history/5.')) return '5.2.0';
     if (type.startsWith('/hls.js/0.')) return '0.14.17';
     if (type.startsWith('/hls.js/1.')) return '1.1.2';
     if (type.startsWith('/hogan.js/')) return '3.0.2';
