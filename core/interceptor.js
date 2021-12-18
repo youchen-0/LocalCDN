@@ -31,10 +31,9 @@ var interceptor = {};
  */
 
 interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
-    let validCandidate, targetDetails, targetPath, targetDetailURL;
+    let validCandidate, targetDetails, targetDomain;
 
     validCandidate = requestAnalyzer.isValidCandidate(requestDetails, tab);
-
     if (!validCandidate) {
         return {
             'cancel': false
@@ -42,20 +41,17 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     }
 
     if (interceptor._isBadResource(requestDetails.url)) {
-        console.log(`[ LocalCDN ] Evil resource blocked: ${requestDetails.url}`);
+        console.log(`${LogString.PREFIX} ${LogString.EVIL_RESOURCE_BLOCKED} ${requestDetails.url}`);
         log.append(tab.url, requestDetails.url, '-', true);
         return {
             'cancel': true
         };
     }
 
-    targetDetails = requestAnalyzer.getLocalTarget(requestDetails, tab.url);
-    targetPath = targetDetails.path;
+    targetDomain = helpers.extractDomainFromUrl(requestDetails.url, true);
 
-
-    if (Regex.GOOGLE_FONTS.test(requestDetails.url)) {
+    if (requestAnalyzer.isGoogleFont(targetDomain) && !requestAnalyzer.isGoogleMaterialIcons(requestDetails.url)) {
         let initiatorDomain, isListed;
-
         initiatorDomain = helpers.extractDomainFromUrl(tab.url, true);
         isListed = helpers.checkAllowlisted(initiatorDomain, interceptor.allowedDomainsGoogleFonts);
         // Check if the website is allowed to load Google Fonts
@@ -70,13 +66,12 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
         }
     }
 
-    targetDetailURL = helpers.extractDomainFromUrl(requestDetails.url, true);
+    targetDetails = requestAnalyzer.getLocalTarget(requestDetails, tab.url);
 
-    if (targetDetails === false && !IgnoredHost[targetDetailURL]) {
-        ++stateManager.tabs[tabIdentifier].missing;
-    }
-
-    if (!targetDetails) {
+    if (targetDetails['result'] === false) {
+        if (!IgnoredHost[targetDomain]) {
+            ++stateManager.tabs[tabIdentifier].missing;
+        }
         return interceptor._handleMissingCandidate(requestDetails.url, tabIdentifier);
     }
 
@@ -85,7 +80,7 @@ interceptor.handleRequest = function (requestDetails, tabIdentifier, tab) {
     };
 
     return {
-        'redirectUrl': chrome.runtime.getURL(targetPath + fileGuard.secret)
+        'redirectUrl': chrome.runtime.getURL(targetDetails.path + fileGuard.secret)
     };
 };
 

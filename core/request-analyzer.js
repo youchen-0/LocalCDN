@@ -31,12 +31,18 @@ var requestAnalyzer = {};
  */
 
 requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
-    let initiatorDomain, isAllowlisted;
+    let initiatorDomain, requestedDomain, isAllowlisted;
 
     initiatorDomain = helpers.extractDomainFromUrl(tabDetails.url, true);
 
     if (initiatorDomain === null) {
         initiatorDomain = Address.EXAMPLE;
+    }
+
+    // If requested Domain not in mappings.js it is not relevant
+    requestedDomain = helpers.extractDomainFromUrl(requestDetails.url, true);
+    if (mappings['cdn'][requestedDomain] === undefined) {
+        return false;
     }
 
     isAllowlisted = helpers.checkAllowlisted(initiatorDomain, requestAnalyzer.allowlistedDomains);
@@ -46,26 +52,35 @@ requestAnalyzer.isValidCandidate = function (requestDetails, tabDetails) {
 
     // Font Awesome injections in Chromium deactivated  (https://gitlab.com/nobody42/localcdn/-/issues/67)
     if (BrowserType.CHROMIUM) {
-        if (/(font-awesome|fontawesome)/.test(requestDetails.url)) {
-            console.warn('[ LocalCDN ] Font Awesome is not fully supported by your browser.');
-            log.append(tabDetails.url, requestDetails.url, 'Font Awesome is not fully supported by your browser', true);
+        if (requestDetails.url.includes('font-awesome') || requestDetails.url.includes('fontawesome')) {
+            console.warn(`${LogString.PREFIX} ${LogString.FONT_AWESOME}`);
+            log.append(tabDetails.url, requestDetails.url, LogString.FONT_AWESOME, true);
             return false;
-        } else if (requestDetails.url.startsWith('https://fonts.googleapis.com')) {
+        }
+        if (requestAnalyzer._isGoogleMaterialIcons(requestedDomain, requestDetails.url)) {
             // also valid for Google Material icons
-            console.warn('[ LocalCDN ] Google Material Icons are not fully supported by your browser.');
-            log.append(tabDetails.url, requestDetails.url, 'Google Material Icons are not fully supported by your browser', true);
+            console.warn(`${LogString.PREFIX} ${LogString.GOOGLE_MATERIAL_ICONS}`);
+            log.append(tabDetails.url, requestDetails.url, LogString.GOOGLE_MATERIAL_ICONS, true);
             return false;
         }
     }
 
-    // Disable LocalCDN if website is 'yandex.com' and CDN is 'yastatic.net', because website and CDN are the same.
+    // Ignore requests if website is 'yandex.com' and CDN is 'yastatic.net', because website and CDN are the same.
     if (tabDetails.url.includes('yandex.com') && requestDetails.url.includes('yastatic.net')) {
-        log.append(tabDetails.url, requestDetails.url, 'Workaround. Disable LocalCDN if website and CDN are the same', true);
+        log.append(tabDetails.url, requestDetails.url, LogString.YANDEX, true);
         return false;
     }
 
     // Only requests of type GET can be valid candidates.
     return requestDetails.method === WebRequest.GET;
+};
+
+requestAnalyzer.isGoogleMaterialIcons = function (url) {
+    return url.includes('Material+Icons') || url.includes('materialicons');
+};
+
+requestAnalyzer.isGoogleFont = function (domain) {
+    return domain.includes('fonts.googleapis.com') || domain.includes('fonts.gstatic.com');
 };
 
 requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
@@ -86,19 +101,30 @@ requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
 
     // Resource mapping files are never locally available.
     if (Resource.MAPPING_EXPRESSION.test(destinationPath)) {
-        return false;
+        return {
+            'result': false,
+        };
     }
 
-    basePath = requestAnalyzer._matchBasePath(hostMappings, destinationPath);
+    basePath = requestAnalyzer._matchBasePath(hostMappings, destinationPath)['result'];
     resourceMappings = hostMappings[basePath];
 
     if (!resourceMappings) {
-        return false;
+        return {
+            'result': false,
+        };
     }
 
     // Return either the local target's path or false.
     // eslint-disable-next-line max-len
-    return requestAnalyzer._findLocalTarget(resourceMappings, basePath, destinationHost, destinationPath, destinationSearchString, initiator);
+    return requestAnalyzer._findLocalTarget(
+        resourceMappings,
+        basePath,
+        destinationHost,
+        destinationPath,
+        destinationSearchString,
+        initiator
+    );
 };
 
 
@@ -109,16 +135,20 @@ requestAnalyzer.getLocalTarget = function (requestDetails, initiator) {
 requestAnalyzer._matchBasePath = function (hostMappings, channelPath) {
     for (let basePath of Object.keys(hostMappings)) {
         if (channelPath.startsWith(basePath)) {
-            return basePath;
+            return {
+                'result': basePath,
+            };
         }
     }
 
-    return false;
+    return {
+        'result': false,
+    };
 };
 
 // eslint-disable-next-line max-len
 requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channelHost, channelPath, destinationSearchString, initiator) {
-    let resourcePath, versionNumber, resourcePattern, filename, shorthandResource;
+    let resourcePath, versionNumber, resourcePattern, shorthandResource;
 
     storageManager.type.get(Setting.LOGGING, function (items) {
         requestAnalyzer.logging = items.enableLogging;
@@ -130,27 +160,27 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     versionNumber = resourcePath.match(Resource.VERSION_EXPRESSION);
 
     // Handle weird version expressions
-    if (!versionNumber) {
-        if (Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
-            versionNumber = channelPath.match(/\d/);
-            resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
-            versionNumber = [`${versionNumber}.0`];
-        }
+    if (!versionNumber && Resource.SINGLE_NUMBER_EXPRESSION.test(channelPath)) {
+        versionNumber = channelPath.match(/\d/);
+        resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
+        versionNumber = [`${versionNumber}.0`];
     } else {
         resourcePattern = resourcePath.replace(versionNumber, Resource.VERSION_PLACEHOLDER);
     }
 
     shorthandResource = shorthands.specialFiles(channelHost, channelPath, destinationSearchString);
-    if (shorthandResource) {
+    if (shorthandResource['result'] !== false) {
         if (requestAnalyzer.logging) {
-            console.log(`[ LocalCDN ] Replaced resource: ${shorthandResource.path}`);
+            console.log(`${LogString.PREFIX} ${LogString.REPLACED_RESOURCE} ${shorthandResource.path}`);
             log.append(initiator, channelHost + channelPath, shorthandResource.path, false);
         }
         return shorthandResource;
     }
 
     if (resourcePattern === undefined) {
-        return false;
+        return {
+            'result': false,
+        };
     }
 
     for (let resourceMold of Object.keys(resourceMappings)) {
@@ -160,10 +190,12 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             targetPath = targetPath.replace(Resource.VERSION_PLACEHOLDER, versionNumber);
             // Replace the requested version with the latest depending on major version
             versionDelivered = targets.setLastVersion(targetPath, versionNumber);
-            if (versionDelivered === false) {
-                return false;
+            if (versionDelivered === '') {
+                return {
+                    'result': false,
+                };
             }
-            versionDelivered = versionDelivered.toString();
+
             targetPath = targetPath.replace(versionNumber, versionDelivered);
 
             if (versionNumber === null) {
@@ -176,24 +208,14 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
             // Get bundle name
             bundle = targets.determineBundle(targetPath);
             if (bundle !== '') {
-                filename = channelPath.split('/').pop();
-                if (bundle === 'MathJax (Bundle)' && filename !== 'MathJax.js') {
-                    filename = channelPath.replace(Resource.MATHJAX, '');
-                    if (!MathJaxFiles[filename]) {
-                        console.warn(`[ LocalCDN ] Missing resource: ${channelHost + channelPath}`);
-                        log.append(initiator, channelHost + channelPath, '-', true);
-                        break;
-                    }
-                    if (filename === 'config/TeX-AMS_HTML.js') {
-                        filename = 'config/TeX-AMS_HTML-full.js';
-                    }
-                }
-                targetPath = (filename.endsWith('.js')) ? `${targetPath + filename}m` : targetPath + filename;
-                targetPath = helpers.formatFilename(targetPath);
+                targetPath = requestAnalyzer._getPathOfBundle(initiator, channelHost, channelPath, targetPath, bundle);
+            }
+            if (targetPath['result'] === false) {
+                break;
             }
 
             if (requestAnalyzer.logging) {
-                console.log(`[ LocalCDN ] Replaced resource: ${targetPath}`);
+                console.log(`${LogString.PREFIX} ${LogString.REPLACED_RESOURCE} ${targetPath}`);
                 log.append(initiator, channelHost + channelPath, targetPath, false);
             }
             // Prepare and return a local target.
@@ -208,10 +230,29 @@ requestAnalyzer._findLocalTarget = function (resourceMappings, basePath, channel
     }
 
     if (requestAnalyzer.logging && !IgnoredHost[channelHost]) {
-        console.warn(`[ LocalCDN ] Missing resource: ${channelHost}${channelPath}`);
+        console.warn(`${LogString.PREFIX} ${LogString.MISSING_RESOURCE} ${channelHost}${channelPath}`);
         log.append(initiator, channelHost + channelPath, '-', true);
     }
-    return false;
+    return {
+        'result': false,
+    };
+};
+
+requestAnalyzer._getPathOfBundle = function (initiator, channelHost, channelPath, targetPath, bundle) {
+    let filename = channelPath.split('/').pop();
+    if (bundle === 'MathJax (Bundle)' && filename !== 'MathJax.js') {
+        filename = channelPath.replace(Resource.MATHJAX, '');
+        if (!MathJaxFiles[filename]) {
+            console.warn(`${LogString.PREFIX} ${LogString.MISSING_RESOURCE} ${channelHost + channelPath}`);
+            log.append(initiator, channelHost + channelPath, '-', true);
+            return {
+                'result': false,
+            };
+        }
+    }
+    return helpers.formatFilename(filename.endsWith('.js')
+        ? `${targetPath + filename}m`
+        : targetPath + filename);
 };
 
 requestAnalyzer._applyAllowlistedDomains = function () {

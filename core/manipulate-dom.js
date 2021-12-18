@@ -65,7 +65,7 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
                 charset = (/charset\s*=/).test(header.value) && header.value.replace(/^.*?charset\s*=\s*/, '').replace(/["']?/g, '');
 
                 // Check if charset is supported by TextDecoder()
-                if (/charset\s*=/.test(header.value) && !EncodingTypes[charset.toString().toLowerCase()]) {
+                if ((/charset\s*=/).test(header.value) && !EncodingTypes[charset.toString().toLowerCase()]) {
                     console.error(`[ LocalCDN ] Unsupported charset: ${charset}`);
                     log.append(details.url, '-', `Unsupported charset: ${charset}`, true);
                     return;
@@ -141,13 +141,14 @@ manipulateDOM._removeCrossOriginAndIntegrityAttr = function (details) {
 manipulateDOM._searchCharset = function (str, charset) {
     if (str.indexOf(`charset="${charset}"`) > 0) {
         return str.replace(`charset="${charset}"`, 'charset="utf8"');
-    } else if (str.indexOf(`charset='${charset}'`) > 0) {
-        return str.replace(`charset='${charset}'`, 'charset=\'utf8\'');
-    } else if (str.indexOf(`charset=${charset}`) > 0) {
-        return str.replace(`charset=${charset}`, 'charset=utf8');
-    } else {
-        return str;
     }
+    if (str.indexOf(`charset='${charset}'`) > 0) {
+        return str.replace(`charset='${charset}'`, 'charset=\'utf8\'');
+    }
+    if (str.indexOf(`charset=${charset}`) > 0) {
+        return str.replace(`charset=${charset}`, 'charset=utf8');
+    }
+    return str;
 };
 
 /**

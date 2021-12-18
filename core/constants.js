@@ -401,8 +401,7 @@ const MathJaxFiles = {
 /**
  * To block bad resources, e.g. fingerprint
  *
- * Necessary if the user has selected the option "Block requests for missing
- * resources Advanced" option is not enabled.
+ * Required if the user has not enabled the "Block requests for missing resources" option.
  *
  * https://codeberg.org/nobody/LocalCDN/issues/703
  */
@@ -411,6 +410,16 @@ const BadResources = {
     'cdnjs.cloudflare.com/ajax/libs/fingerprintjs/': true,
     'cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/': true,
     'cdnjs.cloudflare.com/ajax/libs/ClientJS/': true,
+};
+
+const LogString = {
+    'PREFIX': '[ LocalCDN ]',
+    'FONT_AWESOME': 'Font Awesome is not fully supported by your browser.',
+    'GOOGLE_MATERIAL_ICONS': 'Google Material Icons are not fully supported by your browser.',
+    'YANDEX': 'Workaround. Disable LocalCDN if website and CDN are the same',
+    'REPLACED_RESOURCE': 'Replaced resource:',
+    'MISSING_RESOURCE': 'Missing resource:',
+    'EVIL_RESOURCE_BLOCKED': 'Evil resource blocked:',
 };
 
 // Supported charsets for TextDecoder()

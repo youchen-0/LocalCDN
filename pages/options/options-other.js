@@ -173,7 +173,7 @@ optionsOther._onChangedHexColor = function ({target}) {
         return;
     }
 
-    if (/#([a-f0-9]{3}){1,2}\b/i.test(target.value)) {
+    if ((/#([a-f0-9]{3}){1,2}\b/i).test(target.value)) {
         target.classList.remove('color-error');
         if (target.id === element.BADGED_TEXT_COLOR) {
             let txtColor = target.value;

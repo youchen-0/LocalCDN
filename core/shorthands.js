@@ -168,7 +168,7 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/twitter-bootstrap/fonts/${helpers.extractFilenameFromPath(channelPath)}`,
             'bundle': 'Bootstrap (Fonts)'
         };
-    } else if (/cdnjs\.cloudflare\.com\/ajax\/libs\/jquery\.cycle2\/[\d.]+\//.test(CompleteURL)) {
+    } else if ((/cdnjs\.cloudflare\.com\/ajax\/libs\/jquery\.cycle2\/[\d.]+\//).test(CompleteURL)) {
         if (channelPath.endsWith('js')) {
             channelPath += 'm';
         }
@@ -201,11 +201,13 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/materialize/1.0.0/${channelPath}`,
             'bundle': 'Materialize'
         };
-    } else if (/cdn\.jsdelivr\.net\/npm\/vue@(2|3)/.test(CompleteURL)) {
+    } else if ((/cdn\.jsdelivr\.net\/npm\/vue@(2|3)/).test(CompleteURL)) {
         let version = CompleteURL.match(Resource.VERSION_EXPRESSION);
         lastVersion = targets.setLastVersion(`/vue/${version}.`);
-        if (lastVersion === false) {
-            return false;
+        if (lastVersion === '') {
+            return {
+                'result': false,
+            };
         }
         return {
             'source': channelHost,
@@ -232,7 +234,8 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': 'resources/jquery/1.11.2/jquery.min.jsm',
             'bundle': ''
         };
-    } else {
-        return false;
     }
+    return {
+        'result': false,
+    };
 };

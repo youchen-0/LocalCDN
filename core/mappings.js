@@ -299,6 +299,7 @@ mappings.cdn = {
             'foundicons/{version}/foundation-icons.min.css': resources.foundationIconsCSS,
             'gsap/{version}/': resources.gsapBundle,
             'highlight.js/{version}/': resources.highlightJS,
+            'hls.js/{version}/hls.': resources.hlsJS,
             'hogan.js/{version}/hogan.': resources.hoganJS,
             'instantsearch.js/{version}/instantsearch.production.': resources.InstantSearchJS,
             'iScroll/{version}/iscroll.min.js': resources.iScroll,
@@ -399,6 +400,7 @@ mappings.cdn = {
             'plyr/{version}/plyr.min.css': resources.plyrCSS,
             'plyr/{version}/plyr.js': resources.plyrJS,
             'plyr/{version}/plyr.min.js': resources.plyrJS,
+            'plyr/{version}/plyr.svg': resources.plyrSVG,
             'plyr/{version}/plyr.polyfilled.js': resources.plyrJS,
             'plyr/{version}/plyr.polyfilled.min.js': resources.plyrJS,
             'popper.js/{version}/umd/popper.min.js': resources.popperJS,
@@ -971,6 +973,7 @@ mappings.cdn = {
     'stackpath.bootstrapcdn.com': {
         '/': {
             'bootstrap/{version}/js/bootstrap.min.': resources.bootstrapJS,
+            'bootstrap/{version}/js/bootstrap.bundle.min.': resources.bootstrapJS,
             'bootstrap/{version}/css/bootstrap.min.': resources.bootstrapCSS,
             'font-awesome/{version}/css/font-awesome': resources.fontawesome
         }
