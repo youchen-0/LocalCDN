@@ -1118,11 +1118,6 @@ mappings.cdn['pagecdn.io'] = {
     '/lib/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
 };
 
-// loli.net [Mirror]
-mappings.cdn['cdn.css.net'] = {
-    '/lib/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
-};
-
 mappings.cdn['cdnjs.loli.net'] = mappings.cdn['cdnjs.cloudflare.com'];
 
 mappings.cdn['ajax.loli.net'] = mappings.cdn['ajax.googleapis.com'];
