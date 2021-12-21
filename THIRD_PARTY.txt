@@ -132,7 +132,7 @@ https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.5/js/ajax-boots
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
 https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.11.0/algoliasearch.umd.min.js
 https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js
-https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.7.0/cdn.min.js
+https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.7.1/cdn.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angucomplete-alt/3.0.0/angucomplete-alt.min.js
 https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-colorpicker/3.0.32/css/colorpicker.min.css
 https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-colorpicker/3.0.32/js/bootstrap-colorpicker-module.min.js
