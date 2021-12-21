@@ -13,7 +13,6 @@ cdn.bootcdn.net
 cdn.bootcdn.net.maoyundns.com
 cdn.bootcss.com
 cdn.bootcss.com.maoyundns.com
-cdn.css.net
 cdn.datatables.net
 cdn.embed.ly
 cdn.embed.ly.cdn.cloudflare.net
