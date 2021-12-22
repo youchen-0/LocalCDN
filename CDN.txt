@@ -50,7 +50,6 @@ materialdesignicons.b-cdn.net
 mathjax.rstudio.com
 maxcdn.bootstrapcdn.com
 mscomajax.vo.msecnd.net
-mscomajax.vo.msecnd.net
 netdna.bootstrapcdn.com
 pagecdn.io
 sdn.geekzu.org
