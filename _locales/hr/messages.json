@@ -424,19 +424,19 @@
         "description": "Numbers of injections"
     },
     "helpYes": {
-        "message": "",
+        "message": "Da",
         "description": "Yes"
     },
     "helpNo": {
-        "message": "",
+        "message": "Ne",
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "Podaci",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "Postavke koje će se sinkronizirati:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
