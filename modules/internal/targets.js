@@ -182,7 +182,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/ember.js/1.')) return '1.13.13';
     if (type.startsWith('/ember.js/2.')) return '2.18.2';
     if (type.startsWith('/ember.js/3.')) return '3.28.8';
-    if (type.startsWith('/ember.js/4.')) return '4.0.1';
+    if (type.startsWith('/ember.js/4.')) return '4.1.0';
     if (type.startsWith('/ethjs')) return '0.4.0';
     if (type.startsWith('/exif-js/2.')) return '2.3.0';
     if (type.startsWith('/ext-core/3.')) return '3.1.0';
