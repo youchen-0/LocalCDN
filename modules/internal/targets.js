@@ -370,7 +370,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/Swiper/4.')) return '4.5.1';
     if (type.startsWith('/Swiper/5.')) return '5.4.5';
     if (type.startsWith('/Swiper/6.')) return '6.8.4';
-    if (type.startsWith('/Swiper/7.') || type.startsWith('/Swiper/')) return '7.3.4';
+    if (type.startsWith('/Swiper/7.') || type.startsWith('/Swiper/')) return '7.4.1';
     if (type.startsWith('/tether/1.')) return '1.4.7';
     if (type.startsWith('/tooltipster/3.')) return '3.3.0';
     if (type.startsWith('/tooltipster/4.')) return '4.2.8';
