@@ -201,9 +201,22 @@ shorthands.specialFiles = function (channelHost, channelPath, searchString) {
             'path': `resources/materialize/1.0.0/${channelPath}`,
             'bundle': 'Materialize'
         };
-    } else if ((/cdn\.jsdelivr\.net\/npm\/vue@(2|3)/).test(CompleteURL)) {
-        let version = CompleteURL.match(Resource.VERSION_EXPRESSION);
-        lastVersion = targets.setLastVersion(`/vue/${version}.`);
+    } else if (CompleteURL === 'cdn.jsdelivr.net/npm/vue@2') {
+        lastVersion = targets.setLastVersion('/vue/2.');
+        if (lastVersion === '') {
+            return {
+                'result': false,
+            };
+        }
+        return {
+            'source': channelHost,
+            'versionDelivered': lastVersion,
+            'versionRequested': lastVersion,
+            'path': `resources/vue/${lastVersion}/vue.min.jsm`,
+            'bundle': ''
+        };
+    } else if (CompleteURL === 'cdn.jsdelivr.net/npm/vue@3') {
+        lastVersion = targets.setLastVersion('/vue/3.');
         if (lastVersion === '') {
             return {
                 'result': false,

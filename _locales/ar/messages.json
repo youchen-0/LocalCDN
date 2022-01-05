@@ -20,7 +20,7 @@
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
-        "message": "حظر الطلبات للموارد المفقودة",
+        "message": "حظر طلبات الموارد غير المتوفِّرَة",
         "description": "Block requests for missing resources title"
     },
     "blockMissingDescription": {
@@ -44,7 +44,7 @@
         "description": "Strip metadata description."
     },
     "allowlistedDomainsTitle": {
-        "message": "تعطيل LocalCDN تحت المجالات التالية:",
+        "message": "تعطيل LocalCDN تحت النطاقات التالية:",
         "description": "Deactivate LocalCDN for these domains:"
     },
     "allowlistedDomainsDescription": {
@@ -384,15 +384,15 @@
         "description": "There are two possible reasons: Either a framework/library is required that LocalCDN doesn‘t (yet) deliver or an SOP. A SOP (Same origin policy) is a security mechanism that determines what data the browser is allowed to load. It helps to isolate malicious documents and thus reduce possible attack vectors. This policy prevents the browser from loading the external frameworks of LocalCDN. Unfortunately there is no solution for this at the moment."
     },
     "helpBlockGoogleFontsDescription": {
-        "message": "",
+        "message": "يمكن لِـLocalCDN أن يستبدل »أيقونات جوجل الماديَّة«. للإمساك بالاتصال، يجب أن تسمح أداة الحجب (مثل uBlock Origin أو uMatrix أو AdGuard) بالطلب. يستمع LocalCDN إلى هذه الطلبات وإذا كان أحدهم يحتوي على »أيقونات جوجل الماديَّة«، فسوف يُستبدل المَورِد. إذا ألغيت تحديد خيار »حظر طلبات الموارد غير المتوفِّرَة«، فسوف يُسمح بمرور الموارد غير المتوفرة وسوف تُحمَّل »خطوط جوجل«، لأن »أيقونات جوجل المادية« وَ»خطوط جوجل« تستخدم نفس النطاق. إذا كنت لا تريد ذلك، يمكنك حظر »خطوط جوجل« في LocalCDN.",
         "description": "LocalCDN can replace »Google Material Icons«. To catch the connection your adblocker (e.g. uBlock Origin, uMatrix or AdGuard) must allow the request. LocalCDN listens on these requests and if the query contains »Google Material Icons«, the resource will be replaced. If you uncheck the »Block requests for missing content« option, non-existent resources will be allowed to pass and »Google Fonts« will be loaded, because »Google Material Icons« and »Google Fonts« use the same domain. If you don‘t want this, you can block »Google Fonts« on LocalCDN."
     },
     "helpStatisticsDescription": {
-        "message": "",
+        "message": "لا داعي للذعر، لن تُنقَل أي معلومات. وإلا سيكون هذا ضد كل مبادئي. تحتوي الإحصائيات (بتنسيق JSON) على المعلومات التالية: التاريخ، عدَّاد شبكات توصيل المحتوى وعدَّاد أُطُر العمل. هذا كل شئ. لدي مثال على ذلك هُنا:",
         "description": "Don‘t panic, nothing will be transmitted. It would be against all my principles. The statistics (JSON format) contains the following information: Date, CDN+counter and framework+counter. That‘s all. I‘ve an example here:"
     },
     "helpStatisticsContent": {
-        "message": "",
+        "message": "لا تحتوي الإحصائيات على معلومات حول المتصفح، نظام التشغيل، موقع الويب صاحِب الطلب، عناوين IP أو أي معلومات أخرى. مُجَرَّد تاريخ، عدَّاد شبكات توصيل المحتوى وعدَّاد أُطُر العمل. يُظهر لك أي إطارات تم استبدالها بواسطة LocalCDNs وكم مرة تم طلب شبكات توصيل المحتوى.",
         "description": "The statistics contain no information about the browser, operating system, requesting website, IP addresses or any other information. Just date, CDN+counter and framework+counter. It shows you which frameworks are replaced by LocalCDNs how often and which CDNs were requested."
     },
     "helpStatisticsTruthTitle": {
@@ -400,27 +400,27 @@
         "description": "How do I know that‘s true?"
     },
     "helpStatisticsTruthDescription": {
-        "message": "",
+        "message": "يمكن عرض مساحة التخزين الإضافية مباشرة من خلال متصفح فَيَرفُوكس. افتح عنوان »about:debugging« ، انتقل إلى »التخزين« وحدِّد »مَخزَن المُلحَق«. تحت مفتاح \"InternalStatisticsData\" ستجد البيانات التي تم جمعها. ما عليك سوى نسخها ووضعها في JSON PrettyPrinter على سبيل المثال لجعلها أكثر قابلية للقراءة. يرجى ملاحظة أنه يجب عليك إزالة علامة الاقتباس الأولى والأخيرة والمفتاح الخاص بها. يجب أن تكون قادرًا على رؤية هذا بوضوح في هذا المقطع المرئي.",
         "description": "The extension storage can be viewed directly with the Firefox browser. Open the URL »about:debugging«, switch to »Storage« and select »Extension Storage«. Under the key »internalStatisticsData« you will find the collected data. Just copy it and put it into a JSON PrettyPrinter to make it more readable. Please note that you have to remove the first and last quotation mark and the key to it. You should be able to see this clearly in this video."
     },
     "helpSyncTitle": {
-        "message": "",
+        "message": "ما الذي سيُزامَن عندما أُحدِّد »مُتزامن« كنوع تخزين؟",
         "description": "What will be synchronized when I select »sync« as storage type?"
     },
     "helpSyncDescription": {
-        "message": "",
+        "message": "لن تعمل المزامنة إلا إذا سجلت الدخول باستخدام حساب فَيَرفُوكس على الجهاز وسمحت بمزامنة المُلحقات من الإعدادات. سوف يعمل الأمر أيضًا إن استخدمت خادم مزامنة منفصل تحت سيطرتك. سيؤدي هذا إلى مزامنة معظم إعدادات LocalCDN عبر جميع الأجهزة.",
         "description": "Sync will only work if you are logged in with a Firefox account on the device and have allowed add-ons to sync in the settings. A separate sync server under your control will also work. This will synchronize most of the settings of LocalCDN across all devices."
     },
     "helpSyncAccount": {
-        "message": "",
+        "message": "إذا لم يكن لديك حساب للمُزامَنَة، لن يُزامن أي شيء. في هذه الحالة، لا فرق في نوع التخزين الذي حددته.",
         "description": "If you don‘t have a sync account, nothing will be synchronized. In that case it makes no difference what type of storage you have selected."
     },
     "helpSyncContentNever": {
-        "message": "",
+        "message": "الأشياء التي لا تُزامَن أبدًا:",
         "description": "Things that are never synchronized:"
     },
     "helpNumberOfInjections": {
-        "message": "",
+        "message": "عدد عمليات الحقن",
         "description": "Numbers of injections"
     },
     "helpYes": {
@@ -432,55 +432,55 @@
         "description": "No"
     },
     "helpData": {
-        "message": "",
+        "message": "بيانات",
         "description": "Data"
     },
     "helpSyncContentEver": {
-        "message": "",
+        "message": "الإعدادات الَّتي ستُزامَن:",
         "description": "Settings that will be synchronized:"
     },
     "helpIcons": {
-        "message": "",
+        "message": "افتراضي، فاتح، أزرق/رمادي",
         "description": "Default, Light, Blue/Grey"
     },
     "helpSyncContentLinks": {
-        "message": "",
+        "message": "مزيد من المعلومات حول مُزامَنَة فَيَرفُوكس:",
         "description": "More information about Firefox Sync:"
     },
     "helpBrowserCompatibility": {
-        "message": "",
+        "message": "توافُق المتصفح",
         "description": "Browser compatibility"
     },
     "helpReplace": {
-        "message": "",
+        "message": "استبدال",
         "description": "Replace"
     },
     "helpReplaceOther": {
-        "message": "",
+        "message": "استبدل الموارد الأُخرى",
         "description": "Replace other resources"
     },
     "helpUpgradeAllResources": {
-        "message": "",
+        "message": "ترقية كافَّة الموارِد",
         "description": "Upgrade all resources"
     },
     "helpExplanationChrome": {
-        "message": "",
+        "message": "جميع المتصفحات المبنيَّة على كروميوم",
         "description": "All Chromium based Browser"
     },
     "helpLimitation": {
-        "message": "",
+        "message": "هذا ليس قيدًا مِن LocalCDN، ولكنه يفتقد إلى دعم واجهة برمجة التطبيقات للمتصفحات المنية على كروميوم.",
         "description": "This is not a limitation of LocalCDN, but missing API support of Chromium based browsers."
     },
     "titleBadgeDefault": {
-        "message": "",
+        "message": "الشارة الافتراضية",
         "description": "Default badge"
     },
     "titleBadgeHTMLFilter": {
-        "message": "",
+        "message": "شارة مُرَشِّح HTML",
         "description": "HTML filter badge"
     },
     "titleBadgeMissingResource": {
-        "message": "",
+        "message": "شارة المورد غير المتوفر",
         "description": "Missing resource badge"
     }
 }

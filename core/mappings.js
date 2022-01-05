@@ -30,7 +30,7 @@ var mappings = {};
  * This only needs to be updated when new domains are added.
  * It's not necessary for subdirectories!
  */
-mappings.lastMappingUpdate = '2021-07-14';
+mappings.lastMappingUpdate = '2021-12-21';
 
 mappings.cdn = {
 
@@ -1118,11 +1118,6 @@ mappings.cdn['pagecdn.io'] = {
     '/lib/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
 };
 
-// loli.net [Mirror]
-mappings.cdn['cdn.css.net'] = {
-    '/lib/': mappings.cdn['cdnjs.cloudflare.com']['/ajax/libs/']
-};
-
 mappings.cdn['cdnjs.loli.net'] = mappings.cdn['cdnjs.cloudflare.com'];
 
 mappings.cdn['ajax.loli.net'] = mappings.cdn['ajax.googleapis.com'];
@@ -1139,3 +1134,33 @@ mappings.cdn['cdn.bootcdn.net'] = mappings.cdn['cdnjs.cloudflare.com'];
 
 // CDN for the "Block Google Fonts" option (see: https://codeberg.org/nobody/LocalCDN/issues/269)
 mappings.cdn['fonts.gstatic.com'] = mappings.cdn['fonts.googleapis.com'];
+
+/**
+ * List of CNAME CDNs
+ * https://codeberg.org/nobody/LocalCDN/issues/816
+ *
+ */
+mappings.cdn['ajax.loli.net.cdn.cloudflare.net'] = mappings.cdn['ajax.loli.net'];
+mappings.cdn['akamai-webcdn.kgstatic.net.edgesuite.net'] = mappings.cdn['akamai-webcdn.kgstatic.net'];
+mappings.cdn['apps.bdimg.jomodns.com'] = mappings.cdn['apps.bdimg.com'];
+mappings.cdn['cdn.bootcdn.net.maoyundns.com'] = mappings.cdn['cdn.bootcdn.net'];
+mappings.cdn['cdn.bootcss.com.maoyundns.com'] = mappings.cdn['cdn.bootcss.com'];
+mappings.cdn['cdn.embed.ly.cdn.cloudflare.net'] = mappings.cdn['cdn.embed.ly'];
+mappings.cdn['cdn.jsdelivr.net.cdn.cloudflare.net'] = mappings.cdn['cdn.jsdelivr.net'];
+mappings.cdn['cdnjs.loli.net.cdn.cloudflare.net'] = mappings.cdn['cdnjs.loli.net'];
+mappings.cdn['cds.s5x3j6q5.hwcdn.net'] = mappings.cdn['code.jquery.com'];
+mappings.cdn['developer.n.shifen.com'] = mappings.cdn['libs.baidu.com'];
+mappings.cdn['dualstack.osff.map.fastly.net'] = mappings.cdn['vjs.zencdn.net'];
+mappings.cdn['fonts.loli.net.cdn.cloudflare.net'] = mappings.cdn['fonts.loli.net'];
+mappings.cdn['gateway.cname.ustclug.org'] = mappings.cdn['ajax.proxy.ustclug.org'];
+mappings.cdn['gstaticadssl.l.google.com'] = mappings.cdn['fonts.gstatic.com'];
+mappings.cdn['iduwdjf.qiniudns.com'] = mappings.cdn['cdn.staticfile.org'];
+mappings.cdn['lb.sae.sina.com.cn'] = mappings.cdn['lib.sinaapp.com'];
+mappings.cdn['lib.baomitu.com.qh-cdn.com'] = mappings.cdn['lib.baomitu.com'];
+mappings.cdn['mat1.gtimg.com.tegsea.tc.qq.com'] = mappings.cdn['mat1.gtimg.com'];
+mappings.cdn['materialdesignicons.b-cdn.net'] = mappings.cdn['cdn.materialdesignicons.com'];
+mappings.cdn['mscomajax.vo.msecnd.net'] = mappings.cdn['ajax.aspnetcdn.com'];
+mappings.cdn['mscomajax.vo.msecnd.net'] = mappings.cdn['ajax.microsoft.com'];
+mappings.cdn['sdn.inbond.gslb.geekzu.org'] = mappings.cdn['sdn.geekzu.org'];
+mappings.cdn['use.fontawesome.com.cdn.cloudflare.net'] = mappings.cdn['use.fontawesome.com'];
+mappings.cdn['vo.aicdn.com'] = mappings.cdn['upcdn.b0.upaiyun.com'];
