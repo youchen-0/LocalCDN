@@ -316,11 +316,11 @@
         "description": "Wiki pages"
     },
     "helpHtmlFilterDescription": {
-        "message": "",
+        "message": "在大多數情況下，LocalCDN 可以輕鬆替換嵌入式框架並提高隱私性。 在某些情況下，網站可能會嘗試通過在 HTML 源代碼中設置某些選項來防止這種情況發生。 LocalCDN 在 HTML 源代碼顯示在瀏覽器中之前讀取它並刪除這些部分（紅色）。",
         "description": "In most cases LocalCDN can easily replace embedded frameworks and improves privacy. In some cases the website may try to prevent this by setting certain options in the HTML source code. LocalCDN reads the HTML source code before it is displayed in the browser and removes these part (red)."
     },
     "helpHtmlFilterBefore": {
-        "message": "",
+        "message": "HTML 過濾器從此示例中刪除紅色字符：",
         "description": "The HTML filter removes the red characters from this example:"
     },
     "helpHtmlFilterAfter": {
@@ -328,7 +328,7 @@
         "description": "The result then looks like this:"
     },
     "helpHtmlFilterWhyTitle": {
-        "message": "",
+        "message": "為什麼需要刪除跨域和完整性屬性？",
         "description": "Why is it necessary to remove crossorigin and integrity attributes?"
     },
     "helpHtmlFilterCrossorigin": {
