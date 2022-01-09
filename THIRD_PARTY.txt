@@ -1616,7 +1616,7 @@ https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.6.0/js/jquery.sliderPro.min.
 https://cdnjs.cloudflare.com/ajax/libs/snowplow/2.18.2/sp.min.js
 https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.4.0/socket.io.min.js
 https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js
-https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.min.js
+https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js
 https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js
 https://cdnjs.cloudflare.com/ajax/libs/spin.js/3.1.0/spin.min.js
 https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.1/spin.min.js

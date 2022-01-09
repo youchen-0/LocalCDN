@@ -357,7 +357,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/snowplow/2.')) return '2.18.2';
     if (type.startsWith('/socket.io/2.')) return '2.4.0';
     if (type.startsWith('/socket.io/3.')) return '3.1.3';
-    if (type.startsWith('/socket.io/4.')) return '4.4.0';
+    if (type.startsWith('/socket.io/4.')) return '4.4.1';
     if (type.startsWith('/spin.js/2.')) return '2.3.2';
     if (type.startsWith('/spin.js/3.')) return '3.1.0';
     if (type.startsWith('/spin.js/4.')) return '4.1.1';
