@@ -593,6 +593,7 @@ mappings.cdn = {
             'p5@{version}/lib/p5.': resources.p5JS,
             'p5@{version}/lib/addons/p5.sound.': resources.p5JSsound,
             'popper.js@{version}/dist/umd/popper.': resources.popperJS,
+            '@popperjs/core@{version}/dist/umd/popper.': resources.popperJS,
             'prop-types@{version}/prop-types.': resources.propTypes,
             'purecss@{version}/build/': resources.pureCSS,
             'redux@{version}/dist/redux.': resources.redux,
