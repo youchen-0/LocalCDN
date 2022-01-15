@@ -490,6 +490,7 @@ mappings.cdn = {
         '/npm/': {
             'anchor-js@{version}/anchor.': resources.anchorJS,
             'algoliasearch@{version}/dist/algoliasearch.': resources.algoliaSearch,
+            'algoliasearch@{version}/dist/algoliasearch-lite.': resources.algoliaSearch,
             'angular@{version}/angular.': resources.angular,
             'angular@{version}/angular.min.': resources.angular,
             'angular-payments@{version}/lib/angular-payments.js': resources.angularPayments,
