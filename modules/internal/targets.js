@@ -205,7 +205,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/gsap/1.')) return '1.20.5';
     if (type.startsWith('/gsap/2.')) return '2.1.3';
     if (type.startsWith('/gsap/3.')) return '3.9.1';
-    if (type.startsWith('/google-material-design-icons/')) return 'v120';
+    if (type.startsWith('/google-material-design-icons/')) return 'v121';
     if (type.startsWith('/highlight.js/7.')) return '9.18.5';
     if (type.startsWith('/highlight.js/8.')) return '9.18.5';
     if (type.startsWith('/highlight.js/9.')) return '9.18.5';
