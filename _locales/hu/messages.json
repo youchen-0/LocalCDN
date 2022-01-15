@@ -264,23 +264,23 @@
         "description": "Change the badge color if resources are missing."
     },
     "titleHelp": {
-        "message": "",
+        "message": "Segítség",
         "description": "Help"
     },
     "helpIntroductionTitle": {
-        "message": "",
+        "message": "Bemutatkozás",
         "description": "Introduction"
     },
     "helpHtmlFilterTitle": {
-        "message": "",
+        "message": "Mi a HTML szűrő?",
         "description": "What is »HTML filter«?"
     },
     "helpRuleGeneratorTitle": {
-        "message": "",
+        "message": "Szabály készítő",
         "description": "Rule generator"
     },
     "helpWebsiteIssuesTitle": {
-        "message": "",
+        "message": "Néhány weboldal furán nézhet ki vagy nehezen használható",
         "description": "Some websites look strange or are not easy to use"
     },
     "helpBlockGoogleFontsTitle": {
