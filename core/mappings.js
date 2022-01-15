@@ -601,6 +601,7 @@ mappings.cdn = {
             'redux@{version}/dist/redux.': resources.redux,
             'react-dom@{version}/umd/react-dom.production.min.js': resources.reactDOM,
             'react@{version}/umd/react.production.min.js': resources.react,
+            'search-insights@{version}/dist/search-insights.': resources.searchInsights,
             'select2@{version}/': resources.select2,
             'swiper@{version}/swiper-bundle.css': resources.swiperCSS,
             'swiper@{version}/swiper-bundle.min.css': resources.swiperCSS,

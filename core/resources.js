@@ -862,6 +862,10 @@ var resources = {
     'scriptaculous': {
         'path': 'resources/scriptaculous/{version}/scriptaculous.jsm'
     },
+    // Search Insights
+    'searchInsights': {
+        'path': 'resources/search-insights/{version}/search-insights.min.jsm'
+    },
     // Select2 (Bundle)
     'select2': {
         'path': 'resources/select2/{version}/'
