@@ -559,6 +559,7 @@ mappings.cdn = {
             'hls.js/dist/hls.min.js': resources.hlsJS,
             'history@{version}/umd/history.min.js': resources.history,
             'hls.js@{version}': resources.hlsJS,
+            'hogan.js@{version}/dist/hogan': resources.hoganJS,
             'instantsearch.js@{version}/dist/instantsearch.production.': resources.InstantSearchJS,
             'instantsearch.js@{version}': resources.InstantSearchJS,
             'instantsearch.css@{version}': resources.InstantSearchCSS,
