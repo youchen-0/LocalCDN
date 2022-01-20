@@ -1,10 +1,10 @@
 {
     "extensionDescription": {
-        "message": "Suojaa sinua sisällön jakeluverkkojen jäljitykseltä uudelleenohjaamalla pyynnöt paikallisiin resursseihin.",
+        "message": "Suojaa sinua CDN:ien (sisällön jakeluverkkojen) jäljitykseltä uudelleenohjaamalla pyynnöt paikallisiin resursseihin.",
         "description": "Protects you against tracking through CDNs (Content Delivery Networks) by redirecting to local resources."
     },
     "amountInjectedDescription": {
-        "message": "Korvatut sisältöpyynnöt lisäosan asennuksen jälkeen.",
+        "message": "Korvatut resurssipyynnöt lisäosan asennuksen jälkeen.",
         "description": "Amount injected description."
     },
     "optionsTitle": {
@@ -12,11 +12,11 @@
         "description": "Options title"
     },
     "showIconBadgeTitle": {
-        "message": "Näytä korvattujen kohteiden määrä kuvakkeessa",
+        "message": "Näytä korvattujen resurssien määrä kuvakkeessa",
         "description": "Show icon badge title"
     },
     "showIconBadgeDescription": {
-        "message": "Näyttää korvattujen kohteiden määrän lisäosan kuvakkeessa.",
+        "message": "Näytä korvattujen kohteiden määrä lisäosan kuvakkeessa.",
         "description": "Show icon badge description."
     },
     "blockMissingTitle": {
@@ -56,11 +56,11 @@
         "description": "Advanced label"
     },
     "generateRuleSetTitle": {
-        "message": "Luo säännöt mainostentorjujallesi",
+        "message": "Luo säännöt mainostenestäjällesi",
         "description": "Generate rule sets for your adblocker"
     },
     "generateRuleSetDescription": {
-        "message": "Jos käytät mainostentorjujaa, voit luoda säännöt täällä. Sinun täytyy lisätä nämä säännöt manuaalisesti mainostentorjujaan.",
+        "message": "Jos käytät mainostenestäjää, voit luoda säännöt täällä. Sinun täytyy lisätä nämä säännöt manuaalisesti mainostenestäjään.",
         "description": "In case you are using an adblocker you can generate the rules here. You have to add these rules manually in your adblocker."
     },
     "lastUpdate": {
@@ -88,7 +88,7 @@
         "description": "Disable"
     },
     "labelManipulateDOM": {
-        "message": "Suodata HTML lähdekoodi",
+        "message": "Suodata HTML-lähdekoodi",
         "description": "Filter HTML source code"
     },
     "labelDonate": {
@@ -96,11 +96,11 @@
         "description": "Donate"
     },
     "negateHtmlFilterListTitle": {
-        "message": "Käännä HTML-Suodatin",
+        "message": "Käännä HTML-suodatin",
         "description": "Invert HTML filter"
     },
     "negateHtmlFilterListDescription": {
-        "message": "Ota tämä asetus käyttöön, jos haluat aina käyttää HTML-suodatinta. Listan verkkotunnukset jätetään huomioimatta. Jos tämä valinta on pois päältä, HTML-Suodatin on vain käytössä listan verkkotunnuksiin.",
+        "message": "Ota tämä asetus käyttöön, jos haluat aina käyttää HTML-suodatinta. Listan verkkotunnukset jätetään huomioimatta. Jos tämä valinta on pois päältä, HTML-suodatin on vain käytössä listan verkkotunnuksiin.",
         "description": "Enable this option to always apply the HTML filter. The domains in the list will be ignored then. If this option is disabled, the HTML filter is only applied to domains in the list."
     },
     "negateHtmlFilterListWarning": {
@@ -116,7 +116,7 @@
         "description": "Enter the domains to be handled or ignored by the HTML filter. One entry per line."
     },
     "htmlFilterDomainsTitleInclude": {
-        "message": "Aseta HTML-Suodatin näille verkkotunnuksille:",
+        "message": "Aseta HTML-suodatin näille verkkotunnuksille:",
         "description": "Apply HTML filter for these domains:"
     },
     "blockGoogleFontsTitle": {
