@@ -307,7 +307,7 @@ targets.setLastVersion = function (type, version) {
     if (type.startsWith('/ngx-bootstrap/7.')) return '7.1.2';
     if (type.startsWith('/ngx-bootstrap/8.')) return '8.0.0';
     if (type.startsWith('/noUiSlider/14.')) return '14.7.0';
-    if (type.startsWith('/noUiSlider/15.')) return '15.5.0';
+    if (type.startsWith('/noUiSlider/15.')) return '15.5.1';
     if (type.startsWith('/nvd3/1.')) return '1.8.6';
     if (type.startsWith('/object-assign@4.')) return '4.1.1';
     if (type.startsWith('/oclazyload/1.')) return '1.1.0';
